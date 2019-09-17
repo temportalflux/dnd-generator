@@ -1,0 +1,14 @@
+[
+	{
+		"w": 1,
+    "name": "Class",
+    "table":"class",
+		"v": "{class}"
+	},
+	{
+		"w": 4,
+    "name": "Profession",
+    "table":"profession",
+		"v": "{profession}"
+	}
+]

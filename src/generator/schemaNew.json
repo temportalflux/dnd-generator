@@ -1,0 +1,53 @@
+{
+	"name": "${name}",
+	"description": {
+		"age": "${age}",
+		"physical": {
+			"race": "${race}",
+			"hair": "${hair}",
+			"eyes": "${eyes}",
+			"skin": "${skin}",
+			"face": "${face}",
+			"height": "${height}",
+			"weight": "${weight}",
+			"build": "${build}",
+			"special": []
+		},
+		"occupation": "${occupation}"
+	},
+	"identity": {
+		"genderIdentity": "${genderIdentity}",
+		"pronoun": {
+			"singular": "${pronounSingular}",
+			"possessive": "${pronounPossessive}",
+			"thirdPerson": "${pronounThirdPerson}",
+			"isPlural": "${pronounIsPlural"
+		},
+		"genderExpression": "${genderExpression}",
+		"sex": "${sex}",
+		"sexualOrientation": "${sexualOrientation}"
+	},
+	"religion": "${religion}",
+	"alignment": {
+		"ethical": {
+			"positive": "${ethicalPositive}",
+			"neutral": "${ethicalNeutral}",
+			"negative": "${ethicalNegative}"
+		},
+		"moral": {
+			"positive": "${moralPositive}",
+			"neutral": "${moralNeutral}",
+			"negative": "${moralNegative}"
+		}
+	},
+	"abilityScores": {
+		"strength": "${strength}",
+		"dexterity": "${dexterity}",
+		"constitution": "${constitution}",
+		"intelligence": "${intelligence}",
+		"wisdom": "${wisdom}",
+		"charisma": "${charisma}"
+	},
+	"plotHooks": [],
+	"relationships": []
+}

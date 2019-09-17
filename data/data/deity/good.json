@@ -1,0 +1,166 @@
+{
+	"rows": [
+		{
+			"value": "Akadi"
+		},
+		{
+			"value": "Chauntea"
+		},
+		{
+			"value": "Grumbar"
+		},
+		{
+			"value": "Istishia"
+		},
+		{
+			"value": "Kelemvor"
+		},
+		{
+			"value": "Kossuth"
+		},
+		{
+			"value": "Lathander"
+		},
+		{
+			"value": "Mystra"
+		},
+		{
+			"value": "Oghma"
+		},
+		{
+			"value": "Selune"
+		},
+		{
+			"value": "Silvanus"
+		},
+		{
+			"value": "Sune"
+		},
+		{
+			"value": "Tempus"
+		},
+		{
+			"value": "Torm"
+		},
+		{
+			"value": "Tyr"
+		},
+		{
+			"value": "Ubtao"
+		}
+	],
+	"values": {
+		"Akadi": {
+			"value": "Akadi, Goddess of air, movement and speed (True Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Chauntea": {
+			"value": "Chauntea, Goddess of agriculture, farmers, gardeners and summer (Neutral Good)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		"Grumbar": {
+			"value": "Grumbar, God of earth, solidity, changelessness, oaths (True Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Istishia": {
+			"value": "Istishia, God of water, purification, wetness (True Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Kelemvor": {
+			"value": "Kelemvor, God of death and the dead (Lawful Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Kossuth": {
+			"value": "Kossuth, God of fire, purification through fire (True Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Lathander": {
+			"value": "Lathander, God of spring, dawn, birth, youth, vitality, athletics (Neutral Good)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		"Mystra": {
+			"value": "Mystra, Goddess of magic, spells, the Weave (Neutral Good)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		"Oghma": {
+			"value": "Oghma, God of knowledge, invention, inspiration, bards (True Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Selune": {
+			"value": "Selune, Goddess of the moon, stars, navigation, prophecy, questers, lycanthropes (Neutral Good)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		"Silvanus": {
+			"value": "Silvanus, God of wild nature, druids (True Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Sune": {
+			"value": "Sune, Goddess of beauty, love, passion (Chaotic Good)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		"Tempus": {
+			"value": "Tempus, God of war, battle, warriors (Chaotic Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		"Torm": {
+			"value": "Torm, God of duty, loyalty, obedience, paladins (Lawful Good)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		"Tyr": {
+			"value": "Tyr, God of justice (Lawful Good)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		"Ubtao": {
+			"value": "Ubtao, God of creation, jungles, Chult, the Chultans, dinosaurs (True Neutral)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		}
+	}
+}

@@ -1,0 +1,291 @@
+{
+	"rows": [
+		{
+			"value": "Aasimar"
+		},
+		{
+			"value": "Dragonborn"
+		},
+		{
+			"value": "Dwarf"
+		},
+		{
+			"value": "Elf"
+		},
+		{
+			"value": "Firbolg"
+		},
+		{
+			"value": "Gnome"
+		},
+		{
+			"value": "Goblin"
+		},
+		{
+			"value": "Goliath"
+		},
+		{
+			"value": "Halfling"
+		},
+		{
+			"value": "Half-Elf"
+		},
+		{
+			"value": "Half-Orc"
+		},
+		{
+			"value": "Human"
+		},
+		{
+			"value": "Kenku"
+		},
+		{
+			"value": "Lizardfolk"
+		},
+		{
+			"value": "Medusa"
+		},
+		{
+			"value": "Orc"
+		},
+		{
+			"value": "Tabaxi"
+		},
+		{
+			"value": "Tiefling"
+		},
+		{
+			"value": "Triton"
+		},
+		{
+			"value": "Troglodyte"
+		}
+	],
+	"values": {
+		"Aasimar": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 3
+			},
+			"override": {
+				"description.skin": "{roll:common/skin}",
+				"personality.religion": "{roll:deity/human}"
+			},
+			"v": "{humangender}{humangod}{aasimargoodorevil}"
+		},
+		"Dragonborn": {
+			"modifiers": {
+				"stats.abilityScores.strength": 3,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 2,
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": -1,
+				"stats.abilityScores.charisma": 2,
+				"description.height": 20
+			},
+			"generators": {
+			},
+			"v": "{strongweight}{goodorevil}{dragongod}{dragonskin}{$beard=}{dragonhair}{dragonborngender}{dragonquirks}"
+		},
+		"Dwarf": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{racedwarf}{%height-38}{strongweight}{dwarfgod}{nonhumanskin}{longbeard}{dwarfgender}{ageBonus}{dwarfquirks}"
+		},
+		"Elf": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{elfgender}{raceelf}{%height-5}{lightweight}{goodface}{$beard=}{ageBonus}"
+		},
+		"Firbolg": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+3}{%dex-2}{%con+2}{%wis+2}{%height+60}{%chaotic+3}{%good+2}{%moralneutral+2}{strongweight}{elfgod}{firbolgskin}{elfgender}{ageBonus}{naturequirk}{firbolgquirk}"
+		},
+		"Gnome": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{racegnome}{%height-58}{gnomegod}{nonhumanskin}{beard}{gnomegender}{ageBonus}{gnomequirks}"
+		},
+		"Goblin": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str-2}{%dex+2}{%con-2}{%int-4}{%wis-3}{%cha-1}{%height-50}{%ethicalneutral+2}{%lawful-2}{%evil+3}{humangod}{orcskin}{$beard=}{gender}{goblinname}"
+		},
+		"Goliath": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+3}{%dex-2}{%con+3}{%int-2}{%height+60}{%lawful+3}{%chaotic-2}{%good-2}{%evil-2}{%moralneutral+2}{elfgod}{nonhumanskin}{gender}{goliathhair}{strongweight}{goliathtraits1}{goliathname}"
+		},
+		"Halfling": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{racehalfling}{%height-63}{halflinggod}{nonhumanskin}{beard}{halflinggender}{halfquirks}"
+		},
+		"Half-Elf": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%dex+1}{%int+1}{%cha+2}{%height-5}{%chaotic+2}{humangod}{halfelfskin}{beard}{halfelfgender}"
+		},
+		"Half-Orc": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+4}{%dex-1}{%con+3}{%int-3}{%wis-3}{%cha-1}{%height+15}{%chaotic+3}{%good-2}{strongweight}{humangod}{halforcskin}{beard}{halforcgender}"
+		},
+		"Human": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+1}{%dex+1}{%con+1}{%int+1}{%wis+1}{%cha+1}{humangod}{humanskin}{beard}{humangender}"
+		},
+		"Kenku": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str-2}{%dex+3}{%int+1}{%wis+1}{%cha+1}{%height-28}{%lawful-2}{%chaotic+3}{%good-1}{%evil-1}{%moralneutral+2}{humangod}{kenkuskin}{%age-6}{gender}{kenkuquirks}{$beard=}{$hair=}{kenkuname}{$name=$kenkuname}"
+		},
+		"Lizardfolk": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+2}{%int+2}{%con+1}{%wis+2}{%cha-2}{%height+15}{%lawful+2}{%chaotic-3}{%good-1}{%evil-1}{%moralneutral+2}{dragongod}{lizardskin}{%age-4}{lizardgender}{lizardtraits1}{lizardquirks}{$beard=}{dragonhair}"
+		},
+		"Medusa": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%dex+3}{%con+2}{%int+1}{%wis+2}{%cha+3}{medusa}{%lawful+2}{lightweight}{goodface}{humangod}{orcskin}{ageBonus}{medusaname}{medusaveil}"
+		},
+		"Orc": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+5}{%dex-1}{%con+5}{%int-4}{%wis-3}{%height+20}{%good-2}{%chaotic+3}{%evil+2}{strongweight}{orcgod}{orcskin}{beard}{orcgender}"
+		},
+		"Tabaxi": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str-1}{%dex+4}{%con+1}{%int+2}{%wis-2}{%cha+1}{%height+10}{%good+1}{%chaotic+3}{lightweight}{humangod}{$hair=}{$beard=}{gender}{$name=}{tabaxiname}{tabaxiskin}{tabaxiobsession}{tabaxiquirks}"
+		},
+		"Tiefling": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%con-1}{%int+2}{%cha+3}{%chaotic+3}{lightweight}{humangod}{tieflinggoodorevil}{tieflingskin}{beard}{gender}{ageBonus}"
+		},
+		"Triton": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+2}{%con+2}{%cha+1}{%lawful+2}{%good+3}{%evil-3}{humangod}{tritonskin}{tritonhair}{tritongender}{$beard=}{%age+%age}{tritonquirks}"
+		},
+		"Troglodyte": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"v": "{%str+1}{%con+1}{%int-4}{%cha-4}{%good-2}{%chaotic+3}{%evil+2}{humangod}{lizardskin}{$beard=}{dragonhair}{gender}{goblinname}"
+		}
+	}
+}

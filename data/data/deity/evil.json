@@ -1,0 +1,80 @@
+{
+	"rows": [
+		{
+			"weight": 1,
+			"value": "Talos"
+		},
+		{
+			"weight": 1,
+			"value": "Asmodeus"
+		},
+		{
+			"weight": 1,
+			"value": "Bane"
+		},
+		{
+			"weight": 1,
+			"value": "Cyric"
+		},
+		{
+			"weight": 1,
+			"value": "Lolth"
+		},
+		{
+			"weight": 1,
+			"value": "Shar"
+		},
+		{
+			"weight": 2,
+			"value": "{roll:deity/demon}"
+		},
+		{
+			"weight": 2,
+			"value": "{roll:deity/devil}"
+		}
+	],
+	"values": {
+		"Talos": {
+			"value": "Talos, God of storms, destruction, rebellion, conflagration, earthquakes, vortices (Chaotic Evil)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		"Asmodeus": {
+			"value": "Asmodeus, God of sin, King of the Nine Hells (Lawful Evil)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		"Bane": {
+			"value": "Bane, God of hatred, fear and tiranny (Lawful Evil)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		"Cyric": {
+			"value": "Cyric, God of murder, lies, intrigue, strife, deception, illusion (Chaotic Evil)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		"Lolth": {
+			"value": "Lolth, Goddess of drows, spiders, darkness, chaos, evil, assassination (Chaotic Evil)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		"Shar": {
+			"value": "Shar, Goddess of dark, night, loss, forgetfulness, unrevealed secrets, caverns, dungeons, the Underdark (NE)}",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		}
+	}
+}
