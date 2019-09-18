@@ -1,0 +1,116 @@
+{
+	"rows": [
+		{
+			"value": "vampire",
+			"weight": 2
+		},
+		{
+			"value": "dragon",
+			"weight": 2
+		},
+		{
+			"value": "troll",
+			"weight": 2
+		},
+		{
+			"value": "lycanthrope",
+			"weight": 2
+		},
+		{
+			"value": "basilisk",
+			"weight": 2
+		},
+		{
+			"value": "medusa",
+			"weight": 2
+		},
+		{
+			"value": "beholder",
+			"weight": 2
+		},
+		{
+			"value": "chimera",
+			"weight": 2
+		},
+		{
+			"value": "cloaker",
+			"weight": 2
+		},
+		{
+			"value": "doppelganger",
+			"weight": 2
+		},
+		{
+			"value": "gnoll",
+			"weight": 2
+		},
+		{
+			"value": "griffon",
+			"weight": 2
+		},
+		{
+			"value": "cockatrice",
+			"weight": 2
+		},
+		{
+			"value": "demon",
+			"weight": 2
+		},
+		{
+			"value": "devil",
+			"weight": 2
+		},
+		{
+			"value": "golem",
+			"weight": 2
+		},
+		{
+			"value": "water elemental",
+			"weight": 1
+		},
+		{
+			"value": "fire elemental",
+			"weight": 1
+		},
+		{
+			"value": "earth elemental",
+			"weight": 1
+		},
+		{
+			"value": "air elemental",
+			"weight": 1
+		},
+		{
+			"value": "hydra",
+			"weight": 2
+		},
+		{
+			"value": "minotaur",
+			"weight": 2
+		},
+		{
+			"value": "naga",
+			"weight": 2
+		},
+		{
+			"value": "ankheg",
+			"weight": 1
+		},
+		{
+			"value": "angel",
+			"weight": 1
+		},
+		{
+			"value": "unicorn",
+			"weight": 1
+		}
+	],
+	"values": {
+		"{regex:[^aeiou]{1}.*}": {
+			"value": "a ${value}"
+		},
+		"{regex:[aeiou]{1}.*}": {
+			"value": "an ${value}"
+		}
+	}
+}

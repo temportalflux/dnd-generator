@@ -1,0 +1,45 @@
+{
+    "rows": [
+        {
+            "value": "black", 
+            "weight": 1
+        }, 
+        {
+            "value": "blue", 
+            "weight": 1
+        }, 
+        {
+            "value": "brass", 
+            "weight": 1
+        }, 
+        {
+            "value": "bronze", 
+            "weight": 1
+        }, 
+        {
+            "value": "copper", 
+            "weight": 1
+        }, 
+        {
+            "value": "gold", 
+            "weight": 1
+        }, 
+        {
+            "value": "green", 
+            "weight": 1
+        }, 
+        {
+            "value": "red", 
+            "weight": 1
+        }, 
+        {
+            "value": "silver", 
+            "weight": 1
+        }, 
+        {
+            "value": "white", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

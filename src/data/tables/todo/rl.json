@@ -1,0 +1,13 @@
+{
+    "rows": [
+        {
+            "value": "left ", 
+            "weight": 1
+        }, 
+        {
+            "value": "right ", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,21 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 5
+        }, 
+        {
+            "value": ", spotted,", 
+            "weight": 1
+        }, 
+        {
+            "value": ", patterned,", 
+            "weight": 1
+        }, 
+        {
+            "value": ", striped,", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

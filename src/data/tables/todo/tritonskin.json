@@ -1,0 +1,29 @@
+{
+    "rows": [
+        {
+            "value": "light blue", 
+            "weight": 1
+        }, 
+        {
+            "value": "dark blue", 
+            "weight": 1
+        }, 
+        {
+            "value": "blue", 
+            "weight": 1
+        }, 
+        {
+            "value": "green", 
+            "weight": 1
+        }, 
+        {
+            "value": "cyan", 
+            "weight": 1
+        }, 
+        {
+            "value": "aqua", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

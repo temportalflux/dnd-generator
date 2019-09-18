@@ -1,0 +1,23 @@
+{
+    "rows": [
+        {
+            "value": "a bald head and ", 
+            "weight": 8
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{hairLength}{$hair+, }{hairType}{$hair+, white }{$hair+hair and }", 
+            "w": 30
+        }, 
+        {
+            "v": "{hairLength}{$hair+, }{hairType}{$hair+, white }{$hair+hair shaved on }{rlb}{$hair+$rl}{$hair+side and }", 
+            "w": 3
+        }, 
+        {
+            "v": "{hairLength}{$hair+, white }{$hair+mohawk and }", 
+            "w": 2
+        }
+    ], 
+    "values": {}
+}

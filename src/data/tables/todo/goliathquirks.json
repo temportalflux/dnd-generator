@@ -1,0 +1,47 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 15
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "$majPro": "{$quirks+maintains a friendly relationships with nearby giants. }"
+    }
+}

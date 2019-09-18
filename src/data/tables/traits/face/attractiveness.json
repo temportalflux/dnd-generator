@@ -1,0 +1,48 @@
+{
+	"rows": [
+		{
+			"value": "good-mod",
+			"weight": 6
+		},
+		{
+			"value": "good",
+			"weight": 14
+		},
+		{
+			"value": "bad-mod",
+			"weight": 4
+		},
+		{
+			"value": "bad",
+			"weight": 10
+		},
+		{
+			"value": "normal-mod",
+			"weight": 8
+		},
+		{
+			"value": "normal",
+			"weight": 30
+		}
+	],
+	"values": {
+		"good": {
+			"value": "{roll:traits/looks/good}"
+		},
+		"good-mod": {
+			"value": "{roll:traits/looks/goodModifier} {roll:traits/looks/good}"
+		},
+		"bad": {
+			"value": "{roll:traits/looks/bad}"
+		},
+		"bad-mod": {
+			"value": "{roll:traits/looks/badModifier} {roll:traits/looks/bad}"
+		},
+		"normal": {
+			"value": "{roll:traits/looks/normal}"
+		},
+		"normal-mod": {
+			"value": "{roll:traits/looks/normalModifier} {roll:traits/looks/normal}"
+		}
+	}
+}

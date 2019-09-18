@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {
+            "value": "light crossbow", 
+            "weight": 1
+        }, 
+        {
+            "value": "shortbow", 
+            "weight": 1
+        }, 
+        {
+            "value": "sling", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,15 @@
+{
+    "rows": [
+        {
+            "value": "a bald head and ", 
+            "weight": 8
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{hairLength}{$hair+, }{hairType}{$hair+, }{tritonhaircolor}{$hair+hair and }", 
+            "w": 35
+        }
+    ], 
+    "values": {}
+}

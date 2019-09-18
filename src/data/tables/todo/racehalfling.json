@@ -1,0 +1,13 @@
+{
+    "rows": [
+        {
+            "value": "Lightfoot Halfling", 
+            "weight": 4
+        }, 
+        {
+            "value": "Stout Halfling", 
+            "weight": 4
+        }
+    ], 
+    "values": {}
+}

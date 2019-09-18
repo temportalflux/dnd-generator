@@ -1,0 +1,44 @@
+{
+	"rows": [
+		{
+			"value": "bravery"
+		},
+		{
+			"value": "fear"
+		},
+		{
+			"value": "pain"
+		},
+		{
+			"value": "freedom"
+		},
+		{
+			"value": "happiness"
+		},
+		{
+			"value": "joy"
+		},
+		{
+			"value": "death"
+		},
+		{
+			"value": "life"
+		},
+		{
+			"value": "daylight"
+		},
+		{
+			"value": "night"
+		},
+		{
+			"value": "philosophy"
+		},
+		{
+			"value": "music"
+		},
+		{
+			"value": "love"
+		}
+	],
+	"values": {}
+}

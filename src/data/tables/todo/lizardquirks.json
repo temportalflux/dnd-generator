@@ -1,0 +1,63 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 12
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 4
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 4
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }
+    ], 
+    "values": {
+        "$majPro": "{$quirks+has a hard time understanding and remembering names that aren't descriptive. }"
+    }
+}

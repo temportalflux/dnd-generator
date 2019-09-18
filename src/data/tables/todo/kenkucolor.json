@@ -1,0 +1,21 @@
+{
+    "rows": [
+        {
+            "value": "black", 
+            "weight": 1
+        }, 
+        {
+            "value": "dark blue", 
+            "weight": 1
+        }, 
+        {
+            "value": "dark gray", 
+            "weight": 1
+        }, 
+        {
+            "value": "dark brown", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,21 @@
+{
+    "rows": [
+        {
+            "value": "rapier", 
+            "weight": 1
+        }, 
+        {
+            "value": "scimitar", 
+            "weight": 1
+        }, 
+        {
+            "value": "short sword", 
+            "weight": 1
+        }, 
+        {
+            "value": "whip", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

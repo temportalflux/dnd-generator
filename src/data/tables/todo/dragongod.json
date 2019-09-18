@@ -1,0 +1,67 @@
+{
+    "rows": [
+        {
+            "value": "Asgorath", 
+            "weight": 5
+        }, 
+        {
+            "value": "Astilabor", 
+            "weight": 1
+        }, 
+        {
+            "value": "Bahamut", 
+            "weight": 1
+        }, 
+        {
+            "value": "Faluzure", 
+            "weight": 1
+        }, 
+        {
+            "value": "Garyx", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hlal", 
+            "weight": 1
+        }, 
+        {
+            "value": "Kereska", 
+            "weight": 1
+        }, 
+        {
+            "value": "Lendys", 
+            "weight": 1
+        }, 
+        {
+            "value": "Tamara", 
+            "weight": 1
+        }, 
+        {
+            "value": "Task", 
+            "weight": 1
+        }, 
+        {
+            "value": "Zorquan", 
+            "weight": 4
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{humangod}", 
+            "w": 15
+        }
+    ], 
+    "values": {
+        "Asgorath": "{$goddescr=, the Ninefold Dragon, head deity of dragonkind.(All alignments)}", 
+        "Astilabor": "{%moralneutral+2}{%lawful+2}{$goddescr=, Goddess of acquisitiveness, status, wealth. (Lawful Neutral)}", 
+        "Bahamut": "{%lawful+2}{%good+2}{$goddescr=, God of good dragons, wind, wisdom, justice. (Lawful Good)}", 
+        "Faluzure": "{%chaotic+2}{%evil+2}{$goddescr=, God of decay, undeath, exhaustion. (Chaotic Evil)}", 
+        "Garyx": "{%chaotic+2}{%evil+2}{$goddescr=, God of fire, destruction, renewal. (Chaotic Evil)}", 
+        "Hlal": "{%chaotic+2}{%moralneutral+2}{$goddescr=, Goddess of humor, tricks, messages. (Chaotic Neutral)}", 
+        "Kereska": "{%good+2}{%ethicalneutral+2}{$goddescr=, Goddess of dragon magic and magical creativity. (Neutral Good)}", 
+        "Lendys": "{%moralneutral+2}{%lawful+2}{$goddescr=, God of balance, justice. (Lawful Neutral)}", 
+        "Tamara": "{%lawful+2}{%good+2}{$goddescr=, Goddess of life, light, mercy. (Lawful Good)}", 
+        "Task": "{%chaotic+2}{%moralneutral+2}{$goddescr=, God of greed, selfishness. (Chaotic Neutral)}", 
+        "Zorquan": "{$goddescr=, God of the essence of dragons.(All alignments)}"
+    }
+}

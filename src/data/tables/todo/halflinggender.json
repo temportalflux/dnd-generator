@@ -1,0 +1,14 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{male}{malehalflingname}{halflingsurname}", 
+            "w": 1
+        }, 
+        {
+            "v": "{female}{femalehalflingname}{halflingsurname}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

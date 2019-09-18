@@ -1,0 +1,41 @@
+{
+    "rows": [
+        {
+            "value": "Acrobat", 
+            "weight": 1
+        }, 
+        {
+            "value": "Actor", 
+            "weight": 1
+        }, 
+        {
+            "value": "Clown", 
+            "weight": 1
+        }, 
+        {
+            "value": "Dancer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Fortune-Teller", 
+            "weight": 1
+        }, 
+        {
+            "value": "Juggler", 
+            "weight": 1
+        }, 
+        {
+            "value": "Prestidigitator", 
+            "weight": 1
+        }, 
+        {
+            "value": "Funambulist", 
+            "weight": 1
+        }, 
+        {
+            "value": "Storyteller", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

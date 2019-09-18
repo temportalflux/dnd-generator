@@ -1,0 +1,77 @@
+{
+    "rows": [
+        {
+            "value": "an annoying", 
+            "weight": 1
+        }, 
+        {
+            "value": "a patronizing", 
+            "weight": 1
+        }, 
+        {
+            "value": "a sarcastic", 
+            "weight": 1
+        }, 
+        {
+            "value": "an impetuous", 
+            "weight": 1
+        }, 
+        {
+            "value": "a sardonic", 
+            "weight": 1
+        }, 
+        {
+            "value": "a stoic", 
+            "weight": 1
+        }, 
+        {
+            "value": "a fabulous", 
+            "weight": 1
+        }, 
+        {
+            "value": "a critical", 
+            "weight": 1
+        }, 
+        {
+            "value": "a seductive", 
+            "weight": 1
+        }, 
+        {
+            "value": "an inquisitive", 
+            "weight": 1
+        }, 
+        {
+            "value": "a lascivious", 
+            "weight": 1
+        }, 
+        {
+            "value": "an ironic", 
+            "weight": 1
+        }, 
+        {
+            "value": "a shy", 
+            "weight": 1
+        }, 
+        {
+            "value": "an aggressive", 
+            "weight": 1
+        }, 
+        {
+            "value": "a passive aggressive", 
+            "weight": 1
+        }, 
+        {
+            "value": "a confrontational", 
+            "weight": 1
+        }, 
+        {
+            "value": "an apathetic", 
+            "weight": 1
+        }, 
+        {
+            "value": "a sailor-mouthed", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

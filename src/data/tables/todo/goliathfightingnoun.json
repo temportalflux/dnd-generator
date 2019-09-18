@@ -1,0 +1,25 @@
+{
+    "rows": [
+        {
+            "value": "Heart", 
+            "weight": 1
+        }, 
+        {
+            "value": "Bone", 
+            "weight": 1
+        }, 
+        {
+            "value": "Skull", 
+            "weight": 1
+        }, 
+        {
+            "value": "Fort", 
+            "weight": 1
+        }, 
+        {
+            "value": "Earth", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

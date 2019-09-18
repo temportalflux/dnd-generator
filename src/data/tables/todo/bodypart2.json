@@ -1,0 +1,23 @@
+{
+    "rows": [
+        {
+            "value": "neck", 
+            "weight": 2
+        }, 
+        {
+            "value": "chest", 
+            "weight": 3
+        }, 
+        {
+            "value": "back", 
+            "weight": 3
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{head}", 
+            "w": 4
+        }
+    ], 
+    "values": {}
+}

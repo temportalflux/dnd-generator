@@ -1,0 +1,49 @@
+{
+    "rows": [
+        {
+            "value": "of sweat", 
+            "weight": 8
+        }, 
+        {
+            "value": "of dogs", 
+            "weight": 2
+        }, 
+        {
+            "value": "of garbage", 
+            "weight": 2
+        }, 
+        {
+            "value": "of horses", 
+            "weight": 2
+        }, 
+        {
+            "value": "of sewage", 
+            "weight": 2
+        }, 
+        {
+            "value": "of cabbage", 
+            "weight": 1
+        }, 
+        {
+            "value": "of sour milk", 
+            "weight": 1
+        }, 
+        {
+            "value": "of dirt", 
+            "weight": 2
+        }, 
+        {
+            "value": "of unwashed clothes", 
+            "weight": 4
+        }, 
+        {
+            "value": "of tobacco", 
+            "weight": 4
+        }, 
+        {
+            "value": "of alcohol", 
+            "weight": 4
+        }
+    ], 
+    "values": {}
+}

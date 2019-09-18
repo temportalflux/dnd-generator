@@ -1,0 +1,15 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 3
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{beardlength}{beardshape}", 
+            "w": 2
+        }
+    ], 
+    "values": {}
+}

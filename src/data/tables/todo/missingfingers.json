@@ -1,0 +1,31 @@
+{
+    "rows": [
+        {
+            "value": "is missing a single finger from ", 
+            "weight": 4
+        }, 
+        {
+            "value": "is missing two fingers from ", 
+            "weight": 3
+        }, 
+        {
+            "value": "is missing three fingers from ", 
+            "weight": 3
+        }, 
+        {
+            "value": "is missing four fingers from ", 
+            "weight": 1
+        }, 
+        {
+            "value": "is missing all the fingers from ", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "is missing a single finger from ": "{%dex-1}", 
+        "is missing all the fingers from ": "{%dex-4}", 
+        "is missing four fingers from ": "{%dex-2}", 
+        "is missing three fingers from ": "{%dex-2}", 
+        "is missing two fingers from ": "{%dex-1}"
+    }
+}

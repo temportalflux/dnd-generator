@@ -1,0 +1,89 @@
+{
+    "rows": [
+        {
+            "value": "a pet zombie ", 
+            "weight": 1
+        }, 
+        {
+            "value": "a pet dragon hatchling ", 
+            "weight": 1
+        }, 
+        {
+            "value": "a pet kobold ", 
+            "weight": 1
+        }, 
+        {
+            "value": "a tiny pet golem ", 
+            "weight": 1
+        }, 
+        {
+            "value": "a tiny pet ooze ", 
+            "weight": 1
+        }, 
+        {
+            "value": "a pet pidgeon ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet mouse ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet dog ", 
+            "weight": 18
+        }, 
+        {
+            "value": "a pet cat ", 
+            "weight": 14
+        }, 
+        {
+            "value": "a pet fox ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet turtle ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet rat ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet rock ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet falcon ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet guinea pig ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet hamster ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet gecko ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet rabbit ", 
+            "weight": 5
+        }, 
+        {
+            "value": "a pet parrot ", 
+            "weight": 6
+        }, 
+        {
+            "value": "a pet ferret ", 
+            "weight": 4
+        }, 
+        {
+            "value": "a pet pseudodragon ", 
+            "weight": 2
+        }
+    ], 
+    "values": {}
+}

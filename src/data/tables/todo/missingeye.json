@@ -1,0 +1,20 @@
+{
+    "rows": [
+        {
+            "value": "wears an eyepatch on ", 
+            "weight": 1
+        }, 
+        {
+            "value": "has a glass ", 
+            "weight": 1
+        }, 
+        {
+            "value": "is blind from ", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "is blind from ": "{$sphy1+$minPoss}", 
+        "wears an eyepatch on ": "{$sphy1+$minPoss}"
+    }
+}

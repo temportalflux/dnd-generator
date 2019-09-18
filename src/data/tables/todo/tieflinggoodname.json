@@ -1,0 +1,229 @@
+{
+    "rows": [
+        {
+            "value": "Acceptance", 
+            "weight": 1
+        }, 
+        {
+            "value": "Beauty", 
+            "weight": 1
+        }, 
+        {
+            "value": "Benevolence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Bravery", 
+            "weight": 1
+        }, 
+        {
+            "value": "Caring", 
+            "weight": 1
+        }, 
+        {
+            "value": "Caution", 
+            "weight": 1
+        }, 
+        {
+            "value": "Charity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Compassion", 
+            "weight": 1
+        }, 
+        {
+            "value": "Cooperation", 
+            "weight": 1
+        }, 
+        {
+            "value": "Courage", 
+            "weight": 1
+        }, 
+        {
+            "value": "Creativity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Curiosity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Eloquence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Empathy", 
+            "weight": 1
+        }, 
+        {
+            "value": "Enthusiasm", 
+            "weight": 1
+        }, 
+        {
+            "value": "Faithfulness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Flexibility", 
+            "weight": 1
+        }, 
+        {
+            "value": "Forbearance", 
+            "weight": 1
+        }, 
+        {
+            "value": "Forgiveness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Friendliness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Frugality", 
+            "weight": 1
+        }, 
+        {
+            "value": "Generosity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Gentleness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Gratitude", 
+            "weight": 1
+        }, 
+        {
+            "value": "Helpfulness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Honesty", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hope", 
+            "weight": 1
+        }, 
+        {
+            "value": "Humbleness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Humility", 
+            "weight": 1
+        }, 
+        {
+            "value": "Humor", 
+            "weight": 1
+        }, 
+        {
+            "value": "Innocence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Integrity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Joyfulness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Life", 
+            "weight": 1
+        }, 
+        {
+            "value": "Love", 
+            "weight": 1
+        }, 
+        {
+            "value": "Meekness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Mercy", 
+            "weight": 1
+        }, 
+        {
+            "value": "Moderation", 
+            "weight": 1
+        }, 
+        {
+            "value": "Modesty", 
+            "weight": 1
+        }, 
+        {
+            "value": "Peace", 
+            "weight": 1
+        }, 
+        {
+            "value": "Piety", 
+            "weight": 1
+        }, 
+        {
+            "value": "Purity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Restraint", 
+            "weight": 1
+        }, 
+        {
+            "value": "Reverance", 
+            "weight": 1
+        }, 
+        {
+            "value": "Righteousness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Simplicity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Sincerity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Sobriety", 
+            "weight": 1
+        }, 
+        {
+            "value": "Temperance", 
+            "weight": 1
+        }, 
+        {
+            "value": "Tolerance", 
+            "weight": 1
+        }, 
+        {
+            "value": "Tranquility", 
+            "weight": 1
+        }, 
+        {
+            "value": "Trust", 
+            "weight": 1
+        }, 
+        {
+            "value": "Glee", 
+            "weight": 1
+        }, 
+        {
+            "value": "Sanctity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Bliss", 
+            "weight": 1
+        }, 
+        {
+            "value": "Cherish", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

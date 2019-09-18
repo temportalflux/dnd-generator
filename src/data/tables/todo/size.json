@@ -1,0 +1,25 @@
+{
+    "rows": [
+        {
+            "value": "a very small ", 
+            "weight": 1
+        }, 
+        {
+            "value": "a small ", 
+            "weight": 3
+        }, 
+        {
+            "value": "a ", 
+            "weight": 10
+        }, 
+        {
+            "value": "a large ", 
+            "weight": 3
+        }, 
+        {
+            "value": "a very large ", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

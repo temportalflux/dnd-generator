@@ -1,0 +1,33 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 12
+        }, 
+        {
+            "value": "Bang", 
+            "weight": 1
+        }, 
+        {
+            "value": "Clang", 
+            "weight": 1
+        }, 
+        {
+            "value": "Scissor", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hammer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Click", 
+            "weight": 1
+        }, 
+        {
+            "value": "Anvil", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

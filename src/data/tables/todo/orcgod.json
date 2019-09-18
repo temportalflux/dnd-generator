@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {
+            "value": "Gruumsh", 
+            "weight": 4
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{humangod}", 
+            "w": 2
+        }
+    ], 
+    "values": {
+        "Gruumsh": "{$goddescr=, God of orcs, conquest, survival, strength, territory. (Chaotic Evil)}"
+    }
+}

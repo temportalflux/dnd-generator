@@ -1,0 +1,45 @@
+{
+	"rows": [
+		{
+			"value": "cute",
+			"weight": 4
+		},
+		{
+			"value": "attractive",
+			"weight": 5
+		},
+		{
+			"value": "beautiful",
+			"weight": 5
+		},
+		{
+			"value": "glamorous",
+			"weight": 3
+		},
+		{
+			"value": "innocent",
+			"weight": 3
+		},
+		{
+			"value": "stunning",
+			"weight": 2
+		},
+		{
+			"value": "fanciable",
+			"weight": 3
+		},
+		{
+			"value": "pretty",
+			"weight": 3
+		},
+		{
+			"value": "magnificent",
+			"weight": 2
+		},
+		{
+			"value": "sightly",
+			"weight": 3
+		}
+	],
+	"values": {}
+}

@@ -1,0 +1,75 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 30
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }
+    ], 
+    "values": {
+        "$majPro": "{frequency}{$quirks+$fr}{$quirks+ changes name. }"
+    }
+}

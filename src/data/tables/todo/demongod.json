@@ -1,0 +1,51 @@
+{
+    "rows": [
+        {
+            "value": "the demon prince Baphomet", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Demogorgon, the Iron Duke", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Eltab", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Graz'zt", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Kostchtchie", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Orcus", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Pazrael, the Archduchess ", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Sess'Innek, the Slug Archduke", 
+            "weight": 1
+        }, 
+        {
+            "value": "the demon prince Yeenoghu", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "the demon prince Baphomet": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of minotaurs, beasts, vengeance. (Chaotic Evil)}", 
+        "the demon prince Demogorgon, the Iron Duke": "{%chaotic+3}{%evil+3}{$goddescr=, Prince of Demons. (Chaotic Evil)}", 
+        "the demon prince Eltab": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of hatred, retribution. (Chaotic Evil)}", 
+        "the demon prince Graz'zt": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of darkness, seduction, guilde, debauchery. (Chaotic Evil)}", 
+        "the demon prince Kostchtchie": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of frost giants, wrath, rage. (Chaotic Evil)}", 
+        "the demon prince Orcus": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of undeath. (Chaotic Evil)}", 
+        "the demon prince Pazrael, the Archduchess ": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of evil flying creatures, corruption. (Chaotic Evil)}", 
+        "the demon prince Sess'Innek, the Slug Archduke": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of khaastas, lizard kings, civilization, domination. (Chaotic Evil)}", 
+        "the demon prince Yeenoghu": "{%chaotic+3}{%evil+3}{$goddescr=, Demon lord of gnolls. (Chaotic Evil)}"
+    }
+}

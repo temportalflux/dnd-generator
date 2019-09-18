@@ -1,0 +1,185 @@
+{
+    "rows": [
+        {
+            "value": "Axeblade", 
+            "weight": 1
+        }, 
+        {
+            "value": "Battlefury", 
+            "weight": 1
+        }, 
+        {
+            "value": "Blackarm", 
+            "weight": 1
+        }, 
+        {
+            "value": "Blackblade", 
+            "weight": 1
+        }, 
+        {
+            "value": "Bloodbasher", 
+            "weight": 1
+        }, 
+        {
+            "value": "Burningarm", 
+            "weight": 1
+        }, 
+        {
+            "value": "Burningsong", 
+            "weight": 1
+        }, 
+        {
+            "value": "Clanfang", 
+            "weight": 1
+        }, 
+        {
+            "value": "Clanripper", 
+            "weight": 1
+        }, 
+        {
+            "value": "Clansword", 
+            "weight": 1
+        }, 
+        {
+            "value": "Darkhorn", 
+            "weight": 1
+        }, 
+        {
+            "value": "Deathhammer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Deathsong", 
+            "weight": 1
+        }, 
+        {
+            "value": "Doomhorn", 
+            "weight": 1
+        }, 
+        {
+            "value": "Doommaul", 
+            "weight": 1
+        }, 
+        {
+            "value": "Dreamslayer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Forebinder", 
+            "weight": 1
+        }, 
+        {
+            "value": "Foreeye", 
+            "weight": 1
+        }, 
+        {
+            "value": "Gorecleaver", 
+            "weight": 1
+        }, 
+        {
+            "value": "Gorefang", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hellaxe", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hellfang", 
+            "weight": 1
+        }, 
+        {
+            "value": "Ironfury", 
+            "weight": 1
+        }, 
+        {
+            "value": "Ironscream", 
+            "weight": 1
+        }, 
+        {
+            "value": "Ironseeker", 
+            "weight": 1
+        }, 
+        {
+            "value": "Laughingfang", 
+            "weight": 1
+        }, 
+        {
+            "value": "Laughingseeker", 
+            "weight": 1
+        }, 
+        {
+            "value": "Ragemaw", 
+            "weight": 1
+        }, 
+        {
+            "value": "Redbleeder", 
+            "weight": 1
+        }, 
+        {
+            "value": "Redrage", 
+            "weight": 1
+        }, 
+        {
+            "value": "Rockbasher", 
+            "weight": 1
+        }, 
+        {
+            "value": "Shadowslayer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Skullbinder", 
+            "weight": 1
+        }, 
+        {
+            "value": "Steelfang", 
+            "weight": 1
+        }, 
+        {
+            "value": "Steelslayer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Steelsplitter", 
+            "weight": 1
+        }, 
+        {
+            "value": "Stonesplitter", 
+            "weight": 1
+        }, 
+        {
+            "value": "Thunderbasher", 
+            "weight": 1
+        }, 
+        {
+            "value": "Thundersword", 
+            "weight": 1
+        }, 
+        {
+            "value": "Tuskhorn", 
+            "weight": 1
+        }, 
+        {
+            "value": "Tusksnarl", 
+            "weight": 1
+        }, 
+        {
+            "value": "Tuskwolf", 
+            "weight": 1
+        }, 
+        {
+            "value": "Wareye", 
+            "weight": 1
+        }, 
+        {
+            "value": "Warmaw", 
+            "weight": 1
+        }, 
+        {
+            "value": "Wolfripper", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

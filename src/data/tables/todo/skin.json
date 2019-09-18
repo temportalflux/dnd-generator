@@ -1,0 +1,10 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{skinTone}{skinTexture}{$skin=$skintexture}{$skin+$skintone}{$skintype= skin}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

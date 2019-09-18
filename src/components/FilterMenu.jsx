@@ -1,7 +1,7 @@
 import React from 'react';
 import { Segment, Grid, Form } from 'semantic-ui-react';
 import lodash from 'lodash';
-const { randomEntry, makeEntry, categories } = require('../Data');
+const { randomEntry, categories } = require('../Data');
 
 export default class FilterMenu extends React.Component
 {
@@ -11,127 +11,88 @@ export default class FilterMenu extends React.Component
 		super(props);
 
 		this.onChangeField = this.onChangeField.bind(this);
-		this.onFilter = this.onFilter.bind(this);
+		this.onGenerate = this.onGenerate.bind(this);
+		this.makeCategoryRow = this.makeCategoryRow.bind(this);
+		this.makeFieldColumn = this.makeFieldColumn.bind(this);
 
 		this.state = {
-			categories: categories.map((category) => ({
-				key: category.key,
-				name: category.name,
-				fields: category.filters.map((filter) =>
+			categories: categories,
+			data: categories.reduce((accum, category) =>
+			{
+				return category.fields.reduce((accumField, field) =>
 				{
-					return {
-						name: `${category.key}.${filter.key}`,
-						text: filter.name,
-						value: randomEntry.value,
-						options: Array.isArray(filter.values)
-							? filter.values.map((entry) => makeEntry(entry, entry))
-							: lodash.mapValues(filter.values, (values) => values.map((entry) => makeEntry(entry, entry)))
-					};
-				})
-			}))
+					lodash.set(accumField, field.key, randomEntry.value);
+					return accumField;
+				}, accum);
+			}, {})
 		};
 	}
 
-	onChangeField(field, value)
+	onChangeField(evt, { name, value })
 	{
-		/*
-		let delta = { [field]: value };
+		let data = this.state.data;
+		lodash.set(data, name, value);
 
-		delta = lodash.mapValues(delta, (value) => ({ value: value }));
-		delta[field].options = Data.tables[field];
+		this.state.categories.forEach((category) =>
+		{
+			category.fields.forEach((field) =>
+			{
+				if (field.dependsOn.includes(name))
+				{
+					lodash.set(data, field.key, randomEntry.value);
+				}
+			});
+		});
 
-		const newState = lodash.assignIn({}, this.state, delta);
-		newState.subrace.options = Data.tables.subrace[newState.race.value] || [Data.randomEntry];
-		newState.professionTypes.options = Data.tables.professionTypes[newState.profession.value] || [Data.randomEntry];
-		this.setState(newState);
-		//*/
+		this.setState({ data: data });
 	}
 
-	onFilter()
+	onGenerate()
 	{
-		//this.props.generate(lodash.mapValues(this.state, (value) => value.value));
-	}
-
-	makeField(text, name)
-	{
-		const field = this.state[name];
-		return (
-			<Form.Select
-				label={text}
-				fluid search selection
-				value={field.value}
-				options={field.options}
-				onChange={(evt, { value }) => this.onChangeField(name, value)}
-			/>
-		);
+		this.props.generate(this.state.data);
 	}
 
 	makeCategoryRow(category)
 	{
-		//{category.fields.map(this.makeFieldColumn)}
 		return (
-			<Grid.Row id={category.key} name={category.name}>
-				
+			<Grid.Row key={category.key} id={category.key}>
+				{category.fields.map(this.makeFieldColumn)}
 			</Grid.Row>
 		);
 	}
 
 	makeFieldColumn(field)
 	{
+		const fieldOptions = field.getOptions(this.state.data);
+		const options = [randomEntry, ...fieldOptions];
 		return (
-			<Grid.Column>
-				<Form.Select
-					name={field.name}
-					value={field.value}
-					label={field.text}
-					fluid search selection
-					options={field.options}
-					onChange={(evt, { value }) => this.onChangeField(name, value)}
-				/>
+			<Grid.Column key={field.key}>
+				{fieldOptions.length > 0 &&
+					<Form.Select
+						fluid search selection
+						name={field.key}
+						label={field.text}
+						options={options}
+						onChange={this.onChangeField}
+						value={lodash.get(this.state.data, field.key)}
+					/>
+				}
 			</Grid.Column>
 		);
 	}
 
 	render()
 	{
-		/*
-		<Grid.Row>
-			<Grid.Column>{this.makeField('Race', 'race')}</Grid.Column>
-			<Grid.Column
-				style={{ display: this.state.race.value == 'random' || this.state.subrace.options.length <= 0 ? 'none' : 'block' }}
-			>{this.makeField('Subrace', 'subrace')}</Grid.Column>
-		</Grid.Row>
-
-		<Grid.Row>
-			<Grid.Column>{this.makeField('Sex', 'sex')}</Grid.Column>
-			<Grid.Column>{this.makeField('Alignment', 'forcealign')}</Grid.Column>
-			<Grid.Column>{this.makeField('Plot Hooks', 'hooks')}</Grid.Column>
-		</Grid.Row>
-
-		<Grid.Row>
-			<Grid.Column>{this.makeField('Occupation', 'occupation')}</Grid.Column>
-			<Grid.Column
-				style={{ display: this.state.occupation.value == 'class' ? 'block' : 'none' }}
-			>{this.makeField('Class', 'class')}</Grid.Column>
-			<Grid.Column
-				style={{ display: this.state.occupation.value == 'profession' ? 'block' : 'none' }}
-			>{this.makeField('Social Class', 'profession')}</Grid.Column>
-			<Grid.Column
-				style={{ display: this.state.profession.value == 'random' ? 'none' : 'block' }}
-			>{this.makeField('Profession', 'professionTypes')}</Grid.Column>
-		</Grid.Row>
-
-		<Grid.Row>
-			<Grid.Column>
-				<Form.Button>Generate</Form.Button>
-			</Grid.Column>
-		</Grid.Row>
-		*/
 		return (
 			<Segment>
-				<Form onSubmit={this.onFilter}>
-					<Grid columns={this.state.categories.length}>
+				<Form onSubmit={this.onGenerate}>
+					<Grid columns={this.state.categories.length + 1}>
 						{this.state.categories.map(this.makeCategoryRow)}
+						<Grid.Row>
+							<Grid.Column>
+								<Form.Button>Generate</Form.Button>
+							</Grid.Column>
+						</Grid.Row>
 					</Grid>
 				</Form>
 			</Segment>

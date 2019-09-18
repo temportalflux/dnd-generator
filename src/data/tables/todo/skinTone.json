@@ -1,0 +1,21 @@
+{
+    "rows": [
+        {
+            "value": " ", 
+            "weight": 20
+        }, 
+        {
+            "value": ", sunburned, ", 
+            "weight": 3
+        }, 
+        {
+            "value": ", dirty, ", 
+            "weight": 1
+        }, 
+        {
+            "value": ", pockmarked, ", 
+            "weight": 3
+        }
+    ], 
+    "values": {}
+}

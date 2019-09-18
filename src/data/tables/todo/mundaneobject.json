@@ -1,0 +1,73 @@
+{
+    "rows": [
+        {
+            "value": "gloves. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "hats. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "belts. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "feathers. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "fruits. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "leaves. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "branches. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "coins. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "rocks. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "pens. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "scarves. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "weapons. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "small animals. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "books. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "kitchenware. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "grass. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "weird clothes. ", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

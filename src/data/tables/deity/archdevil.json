@@ -1,0 +1,49 @@
+{
+	"rows": [
+		{
+			"value": "Bel",
+			"weight": 1
+		},
+		{
+			"value": "Dispater",
+			"weight": 1
+		},
+		{
+			"value": "Mammon",
+			"weight": 1
+		},
+		{
+			"value": "Fierna",
+			"weight": 1
+		},
+		{
+			"value": "Belial",
+			"weight": 1
+		},
+		{
+			"value": "Prince Levistus",
+			"weight": 1
+		},
+		{
+			"value": "Glasya",
+			"weight": 1
+		},
+		{
+			"value": "Baalzebul",
+			"weight": 1
+		},
+		{
+			"value": "Mephistopheles",
+			"weight": 1
+		},
+		{
+			"value": "Asmodeus",
+			"weight": 1
+		}
+	],
+	"values": {
+		"{regex:.*}": {
+			"value": "the archdevil ${value}"
+		}
+	}
+}

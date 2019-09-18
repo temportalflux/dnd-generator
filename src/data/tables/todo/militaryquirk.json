@@ -1,0 +1,55 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 7
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "$majPro": "{$quirks+always has a battle story to tell. }"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "rows": [
+        {
+            "value": "female", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "female": "{$majPoss=Her }{$minPoss=her }{$majPro=She }{$minPro=she }{$workGender=woman}{$minHim=her}{$beard=}{medusahair}"
+    }
+}

@@ -1,16 +1,33 @@
-const Execs = require('./modules/index');
+import lodash from 'lodash';
+import Execs from './modules/index';
+
+console.log(Execs);
+
 const ExecKeys = Object.keys(Execs);
 
-module.exports = function parseField(field)
+export default function parseField(field, data)
 {
-	for (let execKey of ExecKeys)
+	if (typeof field === 'string')
 	{
-		const regex = new RegExp(`^\\{${execKey}:(.*)\\}$`);
-		const match = field.match(regex);
-		if (match)
+		for (let execKey of ExecKeys)
 		{
-			return Execs[execKey](match);
+			const regex = new RegExp(`^\\{${execKey}:(.*)\\}$`);
+			const match = field.match(regex);
+			if (match)
+			{
+				console.log('Calculating value of field', field, 'using exec', execKey);
+				return Execs[execKey](match, data);
+			}
 		}
+		return field;
+	}
+	else if (Array.isArray(field))
+	{
+		return field.map((entry) => parseField(entry, data));
+	}
+	else if (typeof field === 'object')
+	{
+		return lodash.mapValues(field, (entry) => parseField(entry, data));
 	}
 	return field;
 }

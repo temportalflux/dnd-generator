@@ -1,0 +1,53 @@
+{
+    "rows": [
+        {
+            "value": "battleaxe", 
+            "weight": 1
+        }, 
+        {
+            "value": "flail", 
+            "weight": 1
+        }, 
+        {
+            "value": "greataxe", 
+            "weight": 1
+        }, 
+        {
+            "value": "glaive", 
+            "weight": 1
+        }, 
+        {
+            "value": "greatsword", 
+            "weight": 1
+        }, 
+        {
+            "value": "lance", 
+            "weight": 1
+        }, 
+        {
+            "value": "longsword", 
+            "weight": 1
+        }, 
+        {
+            "value": "maul", 
+            "weight": 1
+        }, 
+        {
+            "value": "morningstar", 
+            "weight": 1
+        }, 
+        {
+            "value": "pike", 
+            "weight": 1
+        }, 
+        {
+            "value": "trident", 
+            "weight": 1
+        }, 
+        {
+            "value": "warhammer", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,11 @@
+{
+    "rows": [
+        {
+            "value": "claims to worship ", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "claims to worship ": "{$worship+$god}{$worship+, but secretly}"
+    }
+}

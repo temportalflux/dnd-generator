@@ -1,0 +1,25 @@
+{
+    "rows": [
+        {
+            "value": "white", 
+            "weight": 1
+        }, 
+        {
+            "value": "pink", 
+            "weight": 1
+        }, 
+        {
+            "value": "brown", 
+            "weight": 1
+        }, 
+        {
+            "value": "gray", 
+            "weight": 1
+        }, 
+        {
+            "value": "golden", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

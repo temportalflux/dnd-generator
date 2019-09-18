@@ -1,4 +1,7 @@
-module.exports = {
-	roll: require('./roll'),
-	randInt: require('./randInt'),
+import roll from './roll';
+import randInt from './randInt';
+
+export default {
+	roll: roll,
+	randInt: randInt,
 };

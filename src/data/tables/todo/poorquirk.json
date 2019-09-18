@@ -1,0 +1,67 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 20
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }
+    ], 
+    "values": {
+        "$majPro": "{$quirks+doesn't bathe. }{%cha-2}"
+    }
+}

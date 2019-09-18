@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{ "value": "{randInt:0,9}" }
+	],
+	"values": {
+        "{range:0,9}": {
+            "modifiers": {
+                "age": "{add:${value}}"
+            }
+        }
+    }
+}

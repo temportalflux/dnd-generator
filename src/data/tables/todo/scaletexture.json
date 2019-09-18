@@ -1,0 +1,37 @@
+{
+    "rows": [
+        {
+            "value": "rough", 
+            "weight": 1
+        }, 
+        {
+            "value": "smooth", 
+            "weight": 1
+        }, 
+        {
+            "value": "shiny", 
+            "weight": 1
+        }, 
+        {
+            "value": "rugged", 
+            "weight": 1
+        }, 
+        {
+            "value": "dirty", 
+            "weight": 1
+        }, 
+        {
+            "value": "pointy", 
+            "weight": 1
+        }, 
+        {
+            "value": "broad", 
+            "weight": 1
+        }, 
+        {
+            "value": "ridged", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,41 @@
+{
+    "rows": [
+        {
+            "value": " with a very short", 
+            "weight": 6
+        }, 
+        {
+            "value": " with a short", 
+            "weight": 8
+        }, 
+        {
+            "value": " with a medium", 
+            "weight": 6
+        }, 
+        {
+            "value": " with a long", 
+            "weight": 3
+        }, 
+        {
+            "value": " with a long, braided", 
+            "weight": 2
+        }, 
+        {
+            "value": " with a very long", 
+            "weight": 1
+        }, 
+        {
+            "value": " with a very long, braided", 
+            "weight": 1
+        }, 
+        {
+            "value": " with a gigantic", 
+            "weight": 1
+        }, 
+        {
+            "value": " with a gigantic, braided", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

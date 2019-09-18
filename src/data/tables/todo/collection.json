@@ -1,0 +1,60 @@
+{
+    "rows": [
+        {
+            "value": "old pennies. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "teeth from cadavers. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "cute rocks. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "weird bones. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "bottle corks. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "iridescent feathers. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "sea shells. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "dried rose petals. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "tiny animal skulls. ", 
+            "weight": 1
+        }, 
+        {
+            "value": "handkerchiefs. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "buttons. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "thimbles. ", 
+            "weight": 2
+        }, 
+        {
+            "value": "labels. ", 
+            "weight": 2
+        }
+    ], 
+    "values": {
+        "teeth from cadavers. ": "{%evil+1}", 
+        "tiny animal skulls. ": "{%evil+1}"
+    }
+}

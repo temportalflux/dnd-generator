@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {
+            "value": "Drow", 
+            "weight": 2
+        }, 
+        {
+            "value": "High Elf", 
+            "weight": 6
+        }, 
+        {
+            "value": "Wood Elf", 
+            "weight": 8
+        }
+    ], 
+    "values": {}
+}

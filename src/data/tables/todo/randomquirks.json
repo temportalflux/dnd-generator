@@ -1,0 +1,259 @@
+{
+    "rows": [
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 4
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 4
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 4
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 4
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 5
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 8
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "$majPro": "{$quirks+is heavily addicted to an exotic drug}{%str-2}{%dex-2}{%con-2}{%int-2}{%wis-2}{%cha-2}"
+    }
+}

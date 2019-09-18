@@ -1,0 +1,19 @@
+{
+    "rows": [
+        {
+            "value": "red", 
+            "weight": 4
+        }, 
+        {
+            "value": "purple", 
+            "weight": 2
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{humanskin}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

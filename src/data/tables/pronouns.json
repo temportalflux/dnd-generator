@@ -1,0 +1,39 @@
+{
+	"rows": [
+		{
+			"text": "Masculine",
+			"value": "masculine"
+		},
+		{
+			"text": "Feminine",
+			"value": "feminine"
+		},
+		{
+			"text": "Non-Binary",
+			"value": "nonbinary"
+		}
+	],
+	"values": {
+		"masculine": {
+			"value": {
+				"singular": "he",
+				"thirdPerson": "him",
+				"possessive": "his"
+			}
+		},
+		"feminine": {
+			"value": {
+				"singular": "she",
+				"thirdPerson": "her",
+				"possessive": "hers"
+			}
+		},
+		"nonbinary": {
+			"value": {
+				"singular": "they",
+				"thirdPerson": "them",
+				"possessive": "theirs"
+			}
+		}
+	}
+}

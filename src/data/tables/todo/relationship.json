@@ -1,0 +1,37 @@
+{
+    "rows": [
+        {
+            "value": "brother", 
+            "weight": 1
+        }, 
+        {
+            "value": "sister", 
+            "weight": 1
+        }, 
+        {
+            "value": "daughter", 
+            "weight": 1
+        }, 
+        {
+            "value": "son", 
+            "weight": 1
+        }, 
+        {
+            "value": "cousin", 
+            "weight": 1
+        }, 
+        {
+            "value": "friend", 
+            "weight": 1
+        }, 
+        {
+            "value": "childhood friend", 
+            "weight": 1
+        }, 
+        {
+            "value": "partner", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

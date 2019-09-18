@@ -1,0 +1,85 @@
+{
+    "rows": [
+        {
+            "value": "Aasimar", 
+            "weight": 2
+        }, 
+        {
+            "value": "Dragonborn", 
+            "weight": 4
+        }, 
+        {
+            "value": "Dwarf", 
+            "weight": 11
+        }, 
+        {
+            "value": "Elf", 
+            "weight": 16
+        }, 
+        {
+            "value": "Firbolg", 
+            "weight": 2
+        }, 
+        {
+            "value": "Gnome", 
+            "weight": 7
+        }, 
+        {
+            "value": "Goblin", 
+            "weight": 1
+        }, 
+        {
+            "value": "Goliath", 
+            "weight": 2
+        }, 
+        {
+            "value": "Halfling", 
+            "weight": 8
+        }, 
+        {
+            "value": "Half-Elf", 
+            "weight": 25
+        }, 
+        {
+            "value": "Half-Orc", 
+            "weight": 5
+        }, 
+        {
+            "value": "Human", 
+            "weight": 70
+        }, 
+        {
+            "value": "Kenku", 
+            "weight": 2
+        }, 
+        {
+            "value": "Lizardfolk", 
+            "weight": 2
+        }, 
+        {
+            "value": "Medusa", 
+            "weight": 1
+        }, 
+        {
+            "value": "Orc", 
+            "weight": 3
+        }, 
+        {
+            "value": "Tabaxi", 
+            "weight": 2
+        }, 
+        {
+            "value": "Tiefling", 
+            "weight": 4
+        }, 
+        {
+            "value": "Triton", 
+            "weight": 4
+        }, 
+        {
+            "value": "Troglodyte", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

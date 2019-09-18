@@ -1,0 +1,81 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 30
+        }, 
+        {
+            "value": "Meow", 
+            "weight": 1
+        }, 
+        {
+            "value": "Purr", 
+            "weight": 1
+        }, 
+        {
+            "value": "Rat Scratch", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hoot", 
+            "weight": 1
+        }, 
+        {
+            "value": "Raven", 
+            "weight": 1
+        }, 
+        {
+            "value": "Bark", 
+            "weight": 1
+        }, 
+        {
+            "value": "Growl", 
+            "weight": 1
+        }, 
+        {
+            "value": "Squeak", 
+            "weight": 1
+        }, 
+        {
+            "value": "Batwing", 
+            "weight": 1
+        }, 
+        {
+            "value": "Howl", 
+            "weight": 1
+        }, 
+        {
+            "value": "Falcon", 
+            "weight": 1
+        }, 
+        {
+            "value": "Eagle", 
+            "weight": 1
+        }, 
+        {
+            "value": "Bleat", 
+            "weight": 1
+        }, 
+        {
+            "value": "Squawk", 
+            "weight": 1
+        }, 
+        {
+            "value": "Cluck", 
+            "weight": 1
+        }, 
+        {
+            "value": "Moo", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hiss", 
+            "weight": 1
+        }, 
+        {
+            "value": "Fox", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

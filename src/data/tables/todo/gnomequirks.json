@@ -1,0 +1,75 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 6
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "$majPro": "{$quirks+talks so fast that }{$quirks+$minPro}{$quirks+is very difficult to understand. }"
+    }
+}

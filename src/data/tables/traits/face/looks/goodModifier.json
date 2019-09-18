@@ -1,0 +1,29 @@
+{
+	"rows": [
+		{
+			"value": "{roll:traits/modifier}"
+		}
+	],
+	"values": {
+		"slightly": {
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		"very": {
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		"incredibly": {
+			"modifiers": {
+				"stats.abilityScores.charisma": 3
+			}
+		},
+		"extremely": {
+			"modifiers": {
+				"stats.abilityScores.charisma": 5
+			}
+		}
+	}
+}

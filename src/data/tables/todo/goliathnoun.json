@@ -1,0 +1,45 @@
+{
+    "rows": [
+        {
+            "value": "killer", 
+            "weight": 1
+        }, 
+        {
+            "value": "eye", 
+            "weight": 1
+        }, 
+        {
+            "value": "hunter", 
+            "weight": 1
+        }, 
+        {
+            "value": "stalker", 
+            "weight": 1
+        }, 
+        {
+            "value": "wolf", 
+            "weight": 1
+        }, 
+        {
+            "value": "bear", 
+            "weight": 1
+        }, 
+        {
+            "value": "dragon", 
+            "weight": 1
+        }, 
+        {
+            "value": "fighter", 
+            "weight": 1
+        }, 
+        {
+            "value": "arm", 
+            "weight": 1
+        }, 
+        {
+            "value": "heart", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

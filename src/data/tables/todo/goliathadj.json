@@ -1,0 +1,26 @@
+{
+    "rows": [
+        {
+            "value": "Keen", 
+            "weight": 1
+        }, 
+        {
+            "value": "Strong", 
+            "weight": 1
+        }, 
+        {
+            "value": "Lone", 
+            "weight": 1
+        }, 
+        {
+            "value": "Wise", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "Keen": "{%wis+2}", 
+        "Lone": "{%con+2}", 
+        "Strong": "{%str+2}", 
+        "Wise": "{%wis+2}"
+    }
+}

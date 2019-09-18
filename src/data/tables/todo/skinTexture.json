@@ -1,0 +1,29 @@
+{
+    "rows": [
+        {
+            "value": "smooth", 
+            "weight": 4
+        }, 
+        {
+            "value": "soft", 
+            "weight": 4
+        }, 
+        {
+            "value": "rough", 
+            "weight": 5
+        }, 
+        {
+            "value": "rugged", 
+            "weight": 3
+        }, 
+        {
+            "value": "silky", 
+            "weight": 2
+        }, 
+        {
+            "value": "veiny", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

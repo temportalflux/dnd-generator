@@ -1,0 +1,37 @@
+{
+    "rows": [
+        {
+            "value": "elvish", 
+            "weight": 8
+        }, 
+        {
+            "value": "celestial", 
+            "weight": 2
+        }, 
+        {
+            "value": "draconic", 
+            "weight": 5
+        }, 
+        {
+            "value": "dwarvish", 
+            "weight": 6
+        }, 
+        {
+            "value": "infernal", 
+            "weight": 2
+        }, 
+        {
+            "value": "sylvan", 
+            "weight": 2
+        }, 
+        {
+            "value": "orcish", 
+            "weight": 2
+        }, 
+        {
+            "value": "deep speech", 
+            "weight": 2
+        }
+    ], 
+    "values": {}
+}

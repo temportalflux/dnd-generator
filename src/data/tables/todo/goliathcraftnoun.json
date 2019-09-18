@@ -1,0 +1,33 @@
+{
+    "rows": [
+        {
+            "value": "House", 
+            "weight": 1
+        }, 
+        {
+            "value": "Flint", 
+            "weight": 1
+        }, 
+        {
+            "value": "Gold", 
+            "weight": 1
+        }, 
+        {
+            "value": "Diamond", 
+            "weight": 1
+        }, 
+        {
+            "value": "Tool", 
+            "weight": 1
+        }, 
+        {
+            "value": "Fort", 
+            "weight": 1
+        }, 
+        {
+            "value": "Horn", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

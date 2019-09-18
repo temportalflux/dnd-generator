@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {
+            "value": "Yondalla", 
+            "weight": 3
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{humangod}", 
+            "w": 2
+        }
+    ], 
+    "values": {
+        "Yondalla": "{$goddescr=, Goddess of halflings, bounty, protection, children, security, leadership, wisdom, creation and family. (Lawful Good)}"
+    }
+}

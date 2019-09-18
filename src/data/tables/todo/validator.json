@@ -1,0 +1,18 @@
+[
+	{
+		"key": "npc",
+		"schema": "npc.json",
+		"data": [
+			"npc.json"
+		]
+	},
+	{
+		"key": "table",
+		"schema": "table.json",
+		"data": [
+			"race.json",
+			"race/Elf.json",
+			"pronouns.json"
+		]
+	}
+]

@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {
+            "value": "has an extra finger on ", 
+            "weight": 5
+        }, 
+        {
+            "value": "has two extra fingers on ", 
+            "weight": 1
+        }, 
+        {
+            "value": "has an extra thumb on ", 
+            "weight": 4
+        }
+    ], 
+    "values": {}
+}

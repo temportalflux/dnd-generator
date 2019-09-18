@@ -1,0 +1,33 @@
+{
+	"rows": [
+		{
+			"value": "average",
+			"weight": 1
+		},
+		{
+			"value": "bland",
+			"weight": 1
+		},
+		{
+			"value": "unremarkable",
+			"weight": 1
+		},
+		{
+			"value": "forgettable",
+			"weight": 1
+		},
+		{
+			"value": "typical",
+			"weight": 1
+		},
+		{
+			"value": "common",
+			"weight": 1
+		},
+		{
+			"value": "ordinary",
+			"weight": 1
+		}
+	],
+	"values": {}
+}

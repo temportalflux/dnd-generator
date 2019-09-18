@@ -1,0 +1,169 @@
+{
+    "rows": [
+        {
+            "value": "Abomination", 
+            "weight": 1
+        }, 
+        {
+            "value": "Agony", 
+            "weight": 1
+        }, 
+        {
+            "value": "Barbary", 
+            "weight": 1
+        }, 
+        {
+            "value": "Battle", 
+            "weight": 1
+        }, 
+        {
+            "value": "Conflict", 
+            "weight": 1
+        }, 
+        {
+            "value": "Corruption", 
+            "weight": 1
+        }, 
+        {
+            "value": "Death", 
+            "weight": 1
+        }, 
+        {
+            "value": "Defiance", 
+            "weight": 1
+        }, 
+        {
+            "value": "Demise", 
+            "weight": 1
+        }, 
+        {
+            "value": "Destruction", 
+            "weight": 1
+        }, 
+        {
+            "value": "Dissenssion", 
+            "weight": 1
+        }, 
+        {
+            "value": "Distress", 
+            "weight": 1
+        }, 
+        {
+            "value": "Fear", 
+            "weight": 1
+        }, 
+        {
+            "value": "Filth", 
+            "weight": 1
+        }, 
+        {
+            "value": "Fright", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hate", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hatred", 
+            "weight": 1
+        }, 
+        {
+            "value": "Horror", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hurt", 
+            "weight": 1
+        }, 
+        {
+            "value": "Misery", 
+            "weight": 1
+        }, 
+        {
+            "value": "Pain", 
+            "weight": 1
+        }, 
+        {
+            "value": "Panic", 
+            "weight": 1
+        }, 
+        {
+            "value": "Ruination", 
+            "weight": 1
+        }, 
+        {
+            "value": "Stifle", 
+            "weight": 1
+        }, 
+        {
+            "value": "Strife", 
+            "weight": 1
+        }, 
+        {
+            "value": "Terror", 
+            "weight": 1
+        }, 
+        {
+            "value": "Trouble", 
+            "weight": 1
+        }, 
+        {
+            "value": "War", 
+            "weight": 1
+        }, 
+        {
+            "value": "Torment", 
+            "weight": 1
+        }, 
+        {
+            "value": "Grief", 
+            "weight": 1
+        }, 
+        {
+            "value": "Despair", 
+            "weight": 1
+        }, 
+        {
+            "value": "Anguish", 
+            "weight": 1
+        }, 
+        {
+            "value": "Gloom", 
+            "weight": 1
+        }, 
+        {
+            "value": "Melancholy", 
+            "weight": 1
+        }, 
+        {
+            "value": "Woe", 
+            "weight": 1
+        }, 
+        {
+            "value": "Sorrow", 
+            "weight": 1
+        }, 
+        {
+            "value": "Misfortune", 
+            "weight": 1
+        }, 
+        {
+            "value": "Deceit", 
+            "weight": 1
+        }, 
+        {
+            "value": "Extreme", 
+            "weight": 1
+        }, 
+        {
+            "value": "End", 
+            "weight": 1
+        }, 
+        {
+            "value": "Trickery", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

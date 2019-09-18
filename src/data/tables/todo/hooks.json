@@ -1,0 +1,13 @@
+{
+    "rows": [
+        {
+            "value": "Classic", 
+            "weight": 4
+        }, 
+        {
+            "value": "Funky", 
+            "weight": 2
+        }
+    ], 
+    "values": {}
+}

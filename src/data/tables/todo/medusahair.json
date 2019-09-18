@@ -1,0 +1,11 @@
+{
+    "rows": [
+        {
+            "value": "hair made of ", 
+            "weight": 19
+        }
+    ], 
+    "values": {
+        "hair made of ": "{snakecolor}{$hair+snakes and }"
+    }
+}

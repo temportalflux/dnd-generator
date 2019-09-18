@@ -1,0 +1,29 @@
+{
+    "rows": [
+        {
+            "value": "Explorer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Diplomat", 
+            "weight": 2
+        }, 
+        {
+            "value": "Knight", 
+            "weight": 2
+        }, 
+        {
+            "value": "Minister", 
+            "weight": 1
+        }, 
+        {
+            "value": "Page", 
+            "weight": 1
+        }, 
+        {
+            "value": "Squire", 
+            "weight": 2
+        }
+    ], 
+    "values": {}
+}

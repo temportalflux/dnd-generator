@@ -1,0 +1,33 @@
+{
+    "rows": [
+        {
+            "value": "desk", 
+            "weight": 1
+        }, 
+        {
+            "value": "table", 
+            "weight": 1
+        }, 
+        {
+            "value": "chair", 
+            "weight": 1
+        }, 
+        {
+            "value": "ladder", 
+            "weight": 1
+        }, 
+        {
+            "value": "couch", 
+            "weight": 1
+        }, 
+        {
+            "value": "bed", 
+            "weight": 1
+        }, 
+        {
+            "value": "rocking chair", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

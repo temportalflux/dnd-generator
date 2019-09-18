@@ -1,0 +1,216 @@
+{
+    "rows": [
+        {
+            "value": "Ambition", 
+            "weight": 1
+        }, 
+        {
+            "value": "Confidence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Diligence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Detachment", 
+            "weight": 1
+        }, 
+        {
+            "value": "Determination", 
+            "weight": 1
+        }, 
+        {
+            "value": "Devotion", 
+            "weight": 1
+        }, 
+        {
+            "value": "Discernment", 
+            "weight": 1
+        }, 
+        {
+            "value": "Discretion", 
+            "weight": 1
+        }, 
+        {
+            "value": "Discipline", 
+            "weight": 1
+        }, 
+        {
+            "value": "Faith", 
+            "weight": 1
+        }, 
+        {
+            "value": "Chaos", 
+            "weight": 1
+        }, 
+        {
+            "value": "Fortitude", 
+            "weight": 1
+        }, 
+        {
+            "value": "Focus", 
+            "weight": 1
+        }, 
+        {
+            "value": "Grace", 
+            "weight": 1
+        }, 
+        {
+            "value": "Idealism", 
+            "weight": 1
+        }, 
+        {
+            "value": "Honor", 
+            "weight": 1
+        }, 
+        {
+            "value": "Impartiality", 
+            "weight": 1
+        }, 
+        {
+            "value": "Justice", 
+            "weight": 1
+        }, 
+        {
+            "value": "Knowledge", 
+            "weight": 1
+        }, 
+        {
+            "value": "Liberality", 
+            "weight": 1
+        }, 
+        {
+            "value": "Loyalty", 
+            "weight": 1
+        }, 
+        {
+            "value": "Magnanimity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Majesty", 
+            "weight": 1
+        }, 
+        {
+            "value": "Obedience", 
+            "weight": 1
+        }, 
+        {
+            "value": "Perseverance", 
+            "weight": 1
+        }, 
+        {
+            "value": "Persistence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Patience", 
+            "weight": 1
+        }, 
+        {
+            "value": "Reliability", 
+            "weight": 1
+        }, 
+        {
+            "value": "Resolution", 
+            "weight": 1
+        }, 
+        {
+            "value": "Silence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Toughness", 
+            "weight": 1
+        }, 
+        {
+            "value": "Strength", 
+            "weight": 1
+        }, 
+        {
+            "value": "Truth", 
+            "weight": 1
+        }, 
+        {
+            "value": "Unity", 
+            "weight": 1
+        }, 
+        {
+            "value": "Vigor", 
+            "weight": 1
+        }, 
+        {
+            "value": "Vitality", 
+            "weight": 1
+        }, 
+        {
+            "value": "Wisdom", 
+            "weight": 1
+        }, 
+        {
+            "value": "Wonder", 
+            "weight": 1
+        }, 
+        {
+            "value": "Zeal", 
+            "weight": 1
+        }, 
+        {
+            "value": "Desire", 
+            "weight": 1
+        }, 
+        {
+            "value": "Possession", 
+            "weight": 1
+        }, 
+        {
+            "value": "Reverence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Song", 
+            "weight": 1
+        }, 
+        {
+            "value": "Atonement", 
+            "weight": 1
+        }, 
+        {
+            "value": "Art", 
+            "weight": 1
+        }, 
+        {
+            "value": "Skilled", 
+            "weight": 1
+        }, 
+        {
+            "value": "Order", 
+            "weight": 1
+        }, 
+        {
+            "value": "Prudence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Wit", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "Chaos": "{%chaotic+2}", 
+        "Discipline": "{%wis+1}", 
+        "Discretion": "{%dex+1}", 
+        "Impartiality": "{%moralneutral+5}{%ethicalneutral+5}", 
+        "Justice": "{%lawful+2}", 
+        "Knowledge": "{%int+2}", 
+        "Order": "{%lawful+2}", 
+        "Prudence": "{%wis+2}", 
+        "Strength": "{%str+2}", 
+        "Toughness": "{%con+2}", 
+        "Vigor": "{%con+2}", 
+        "Vitality": "{%con+2}", 
+        "Wisdom": "{%wis+2}", 
+        "Wit": "{%int+2}"
+    }
+}

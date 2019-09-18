@@ -1,0 +1,108 @@
+{
+    "rows": [
+        {
+            "value": "has ", 
+            "weight": 4
+        }, 
+        {
+            "value": "has ", 
+            "weight": 1
+        }, 
+        {
+            "value": "has ", 
+            "weight": 4
+        }, 
+        {
+            "value": "has ", 
+            "weight": 2
+        }, 
+        {
+            "value": "has ", 
+            "weight": 1
+        }, 
+        {
+            "value": "has ", 
+            "weight": 3
+        }, 
+        {
+            "value": "has ", 
+            "weight": 2
+        }, 
+        {
+            "value": "has ", 
+            "weight": 2
+        }, 
+        {
+            "value": "has ", 
+            "weight": 1
+        }, 
+        {
+            "value": "has ", 
+            "weight": 5
+        }, 
+        {
+            "value": "has ", 
+            "weight": 2
+        }, 
+        {
+            "value": "has ", 
+            "weight": 1
+        }, 
+        {
+            "value": "is branded as a ", 
+            "weight": 2
+        }, 
+        {
+            "value": "has ", 
+            "weight": 1
+        }, 
+        {
+            "value": "smells ", 
+            "weight": 3
+        }, 
+        {
+            "value": "smells ", 
+            "weight": 3
+        }, 
+        {
+            "value": "is very nimble", 
+            "weight": 2
+        }, 
+        {
+            "value": "is very clumsy", 
+            "weight": 2
+        }, 
+        {
+            "value": "gestures profusely during a conversation", 
+            "weight": 3
+        }, 
+        {
+            "value": "has a high-pitched voice", 
+            "weight": 2
+        }, 
+        {
+            "value": "has a low-toned voice", 
+            "weight": 2
+        }, 
+        {
+            "value": "is easily out of breath", 
+            "weight": 3
+        }, 
+        {
+            "value": "has a sunken breastbone", 
+            "weight": 1
+        }, 
+        {
+            "value": "cannot whistle", 
+            "weight": 2
+        }
+    ], 
+    "values": {
+        "has ": "{degree}{$sphy1+$degree}{$sphy1+scoliose}{%dex-1}", 
+        "is branded as a ": "{brand}{$sphy1+ on }{$sphy1+$minPoss}{bodypart}{$sphy1+$bp}", 
+        "is easily out of breath": "{%con-2}", 
+        "is very clumsy": "{%dex-3}", 
+        "is very nimble": "{%dex+2}", 
+        "smells ": "{degree2}{$sphy1+$degree}{goodsmell}{%cha+1}"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{faceshape}{highattractiveness}{$face=$faceshape}{$face+$attractiveness}", 
+            "w": 5
+        }, 
+        {
+            "v": "{face}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

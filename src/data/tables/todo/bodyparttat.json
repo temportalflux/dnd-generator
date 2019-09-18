@@ -1,0 +1,14 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{rl}{$bp=$rl}{bodypart1}", 
+            "w": 3
+        }, 
+        {
+            "v": "{bodypart2}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

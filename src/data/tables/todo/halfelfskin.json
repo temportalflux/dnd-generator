@@ -1,0 +1,14 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{humanskin}", 
+            "w": 1
+        }, 
+        {
+            "v": "{elfskin}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,33 @@
+{
+    "rows": [
+        {
+            "value": "discretely", 
+            "weight": 7
+        }, 
+        {
+            "value": "quietly", 
+            "weight": 4
+        }, 
+        {
+            "value": "openly", 
+            "weight": 3
+        }, 
+        {
+            "value": "proudly", 
+            "weight": 2
+        }, 
+        {
+            "value": "loudly", 
+            "weight": 1
+        }, 
+        {
+            "value": "zealously", 
+            "weight": 1
+        }, 
+        {
+            "value": "fervently", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,31 @@
+{
+    "rows": [
+        {
+            "value": "lip", 
+            "weight": 2
+        }, 
+        {
+            "value": "forehead", 
+            "weight": 1
+        }, 
+        {
+            "value": "nose", 
+            "weight": 2
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{rl}{$bp=$rl}{$bp+cheek}", 
+            "w": 1
+        }, 
+        {
+            "v": "{rl}{$bp=$rl}{$bp+eyebrow}", 
+            "w": 3
+        }, 
+        {
+            "v": "{rl}{$bp=$rl}{$bp+ear}", 
+            "w": 5
+        }
+    ], 
+    "values": {}
+}

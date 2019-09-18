@@ -1,0 +1,56 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 5
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 5
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 5
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 2
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }, 
+        {
+            "value": "$majPro", 
+            "weight": 3
+        }
+    ], 
+    "values": {
+        "": "{monster1}{$quirks+is currently obsessed by }{$quirks+$monster}{$quirks+s. }", 
+        "$majPro": "{abstractword}{$quirks+is currently obsessed by a book about }{$quirks+$aword}{$quirks+. }"
+    }
+}

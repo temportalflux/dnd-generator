@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{ "value": "{randInt:1,5}" }
+	],
+	"values": {
+        "{range:1,5}": {
+            "modifiers": {
+                "age": "{multiply:${value}}"
+            }
+        }
+    }
+}

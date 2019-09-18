@@ -1,0 +1,65 @@
+{
+    "rows": [
+        {
+            "value": "Astrologer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Cartographer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Historian", 
+            "weight": 1
+        }, 
+        {
+            "value": "Poet", 
+            "weight": 1
+        }, 
+        {
+            "value": "Philosopher", 
+            "weight": 1
+        }, 
+        {
+            "value": "Hermit", 
+            "weight": 1
+        }, 
+        {
+            "value": "Wandering Pilgrim", 
+            "weight": 1
+        }, 
+        {
+            "value": "Barber", 
+            "weight": 2
+        }, 
+        {
+            "value": "Doctor", 
+            "weight": 1
+        }, 
+        {
+            "value": "Medic", 
+            "weight": 1
+        }, 
+        {
+            "value": "Barrister", 
+            "weight": 1
+        }, 
+        {
+            "value": "Herald", 
+            "weight": 1
+        }, 
+        {
+            "value": "Scribe", 
+            "weight": 2
+        }, 
+        {
+            "value": "Acolyte", 
+            "weight": 2
+        }, 
+        {
+            "value": "Neophyte", 
+            "weight": 2
+        }
+    ], 
+    "values": {}
+}

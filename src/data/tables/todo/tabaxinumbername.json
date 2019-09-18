@@ -1,0 +1,69 @@
+{
+    "rows": [
+        {
+            "value": "Two", 
+            "weight": 3
+        }, 
+        {
+            "value": "Three", 
+            "weight": 5
+        }, 
+        {
+            "value": "Four", 
+            "weight": 4
+        }, 
+        {
+            "value": "Five", 
+            "weight": 5
+        }, 
+        {
+            "value": "Six", 
+            "weight": 3
+        }, 
+        {
+            "value": "Seven", 
+            "weight": 5
+        }, 
+        {
+            "value": "Eight", 
+            "weight": 5
+        }, 
+        {
+            "value": "Nine", 
+            "weight": 5
+        }, 
+        {
+            "value": "Eleven", 
+            "weight": 5
+        }, 
+        {
+            "value": "Twelve", 
+            "weight": 5
+        }, 
+        {
+            "value": "Fourteen", 
+            "weight": 5
+        }, 
+        {
+            "value": "Eighteen", 
+            "weight": 5
+        }, 
+        {
+            "value": "Twenty", 
+            "weight": 4
+        }, 
+        {
+            "value": "Fourty", 
+            "weight": 3
+        }, 
+        {
+            "value": "A Hundred", 
+            "weight": 2
+        }, 
+        {
+            "value": "One Thousand", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

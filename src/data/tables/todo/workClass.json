@@ -1,0 +1,57 @@
+{
+    "rows": [
+        {
+            "value": "Boat", 
+            "weight": 1
+        }, 
+        {
+            "value": "Coach", 
+            "weight": 1
+        }, 
+        {
+            "value": "Farmer", 
+            "weight": 3
+        }, 
+        {
+            "value": "Fisher", 
+            "weight": 3
+        }, 
+        {
+            "value": "Gravedigger", 
+            "weight": 1
+        }, 
+        {
+            "value": "Sheppard", 
+            "weight": 1
+        }, 
+        {
+            "value": "Trapper", 
+            "weight": 2
+        }, 
+        {
+            "value": "Messenger", 
+            "weight": 1
+        }, 
+        {
+            "value": "Miller", 
+            "weight": 2
+        }, 
+        {
+            "value": "Miner", 
+            "weight": 2
+        }, 
+        {
+            "value": "Peddler", 
+            "weight": 1
+        }, 
+        {
+            "value": "Ratcatcher", 
+            "weight": 1
+        }, 
+        {
+            "value": "Sailor", 
+            "weight": 3
+        }
+    ], 
+    "values": {}
+}

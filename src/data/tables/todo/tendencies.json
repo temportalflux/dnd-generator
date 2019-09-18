@@ -1,0 +1,10 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{alignment}{%good=%align}{alignment}{%moralneutral=%align}{alignment}{%evil=%align}{alignment}{%lawful=%align}{alignment}{%ethicalneutral=%align}{alignment}{%chaotic=%align}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

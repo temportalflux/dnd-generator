@@ -1,0 +1,53 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 12
+        }, 
+        {
+            "value": "fresh ", 
+            "weight": 1
+        }, 
+        {
+            "value": "small ", 
+            "weight": 1
+        }, 
+        {
+            "value": "large ", 
+            "weight": 1
+        }, 
+        {
+            "value": "tiny ", 
+            "weight": 1
+        }, 
+        {
+            "value": "elaborate ", 
+            "weight": 1
+        }, 
+        {
+            "value": "badly done ", 
+            "weight": 1
+        }, 
+        {
+            "value": "complicated ", 
+            "weight": 1
+        }, 
+        {
+            "value": "shocking ", 
+            "weight": 1
+        }, 
+        {
+            "value": "provocative ", 
+            "weight": 1
+        }, 
+        {
+            "value": "bland ", 
+            "weight": 1
+        }, 
+        {
+            "value": "exceptional ", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

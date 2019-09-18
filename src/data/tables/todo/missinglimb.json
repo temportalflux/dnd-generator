@@ -1,0 +1,21 @@
+{
+    "rows": [
+        {
+            "value": "hand", 
+            "weight": 1
+        }, 
+        {
+            "value": "arm", 
+            "weight": 1
+        }, 
+        {
+            "value": "foot", 
+            "weight": 1
+        }, 
+        {
+            "value": "leg", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

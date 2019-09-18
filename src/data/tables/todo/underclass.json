@@ -1,0 +1,37 @@
+{
+    "rows": [
+        {
+            "value": "Bandit", 
+            "weight": 3
+        }, 
+        {
+            "value": "Beggar", 
+            "weight": 3
+        }, 
+        {
+            "value": "Fence", 
+            "weight": 1
+        }, 
+        {
+            "value": "Pickpocket", 
+            "weight": 2
+        }, 
+        {
+            "value": "Procurer", 
+            "weight": 1
+        }, 
+        {
+            "value": "Prostitute", 
+            "weight": 2
+        }, 
+        {
+            "value": "Slaver", 
+            "weight": 1
+        }, 
+        {
+            "value": "Smuggler", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

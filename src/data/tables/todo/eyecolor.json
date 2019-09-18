@@ -1,0 +1,37 @@
+{
+    "rows": [
+        {
+            "value": "brown", 
+            "weight": 8
+        }, 
+        {
+            "value": "blue", 
+            "weight": 4
+        }, 
+        {
+            "value": "green", 
+            "weight": 4
+        }, 
+        {
+            "value": "golden", 
+            "weight": 2
+        }, 
+        {
+            "value": "cyan", 
+            "weight": 1
+        }, 
+        {
+            "value": "gray", 
+            "weight": 2
+        }, 
+        {
+            "value": "black", 
+            "weight": 2
+        }, 
+        {
+            "value": "red", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,10 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{petname1}{$quirks+. }", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,14 @@
+{
+    "rows": [], 
+    "todo": [
+        {
+            "v": "{male}{maledwarfname}{dwarfsurname}", 
+            "w": 1
+        }, 
+        {
+            "v": "{female}{femaledwarfname}{dwarfsurname}", 
+            "w": 1
+        }
+    ], 
+    "values": {}
+}

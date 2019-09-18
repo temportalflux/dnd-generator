@@ -1,0 +1,41 @@
+{
+    "rows": [
+        {
+            "value": "wizards' guild", 
+            "weight": 3
+        }, 
+        {
+            "value": "fighters' club", 
+            "weight": 3
+        }, 
+        {
+            "value": "thiefs' guild", 
+            "weight": 3
+        }, 
+        {
+            "value": "witchs' coven", 
+            "weight": 3
+        }, 
+        {
+            "value": "assassins' guild", 
+            "weight": 2
+        }, 
+        {
+            "value": "cult's hideout", 
+            "weight": 1
+        }, 
+        {
+            "value": "clergy", 
+            "weight": 3
+        }, 
+        {
+            "value": "monks' monastery", 
+            "weight": 3
+        }, 
+        {
+            "value": "traders' guild", 
+            "weight": 3
+        }
+    ], 
+    "values": {}
+}

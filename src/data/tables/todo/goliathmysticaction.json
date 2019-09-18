@@ -1,0 +1,21 @@
+{
+    "rows": [
+        {
+            "value": "caller", 
+            "weight": 1
+        }, 
+        {
+            "value": "watcher", 
+            "weight": 1
+        }, 
+        {
+            "value": "seer", 
+            "weight": 1
+        }, 
+        {
+            "value": "walker", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

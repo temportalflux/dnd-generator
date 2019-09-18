@@ -1,0 +1,11 @@
+{
+    "rows": [
+        {
+            "value": "male", 
+            "weight": 1
+        }
+    ], 
+    "values": {
+        "male": "{$majPro=He }{$minPro=he }{$workGender=man}{$majPoss=His }{$minPoss=his }{$minHim=him}"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "rows": [
+        {
+            "value": "precious ", 
+            "weight": 5
+        }, 
+        {
+            "value": "magical ", 
+            "weight": 2
+        }
+    ], 
+    "values": {
+        "magical ": "{precious}", 
+        "precious ": "{precious}"
+    }
+}

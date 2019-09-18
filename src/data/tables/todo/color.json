@@ -1,0 +1,45 @@
+{
+    "rows": [
+        {
+            "value": "blue", 
+            "weight": 1
+        }, 
+        {
+            "value": "red", 
+            "weight": 1
+        }, 
+        {
+            "value": "green", 
+            "weight": 1
+        }, 
+        {
+            "value": "yellow", 
+            "weight": 1
+        }, 
+        {
+            "value": "pink", 
+            "weight": 1
+        }, 
+        {
+            "value": "brown", 
+            "weight": 1
+        }, 
+        {
+            "value": "black", 
+            "weight": 2
+        }, 
+        {
+            "value": "white", 
+            "weight": 2
+        }, 
+        {
+            "value": "gray", 
+            "weight": 1
+        }, 
+        {
+            "value": "purple", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

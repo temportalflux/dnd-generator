@@ -1,0 +1,29 @@
+{
+    "rows": [
+        {
+            "value": "a slight ", 
+            "weight": 2
+        }, 
+        {
+            "value": "a light ", 
+            "weight": 2
+        }, 
+        {
+            "value": "a ", 
+            "weight": 5
+        }, 
+        {
+            "value": "an impressive ", 
+            "weight": 2
+        }, 
+        {
+            "value": "a heavy ", 
+            "weight": 2
+        }, 
+        {
+            "value": "a severe ", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

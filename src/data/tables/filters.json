@@ -1,0 +1,37 @@
+{
+	"categories": [
+		{
+			"key": "identity",
+			"fields": [
+				{
+					"key": "pronouns",
+					"text": "Pronouns",
+					"table": "pronouns"
+				},
+				{
+					"key": "sex",
+					"text": "Sex",
+					"table": "sex"
+				}
+			]
+		},
+		{
+			"key": "description",
+			"fields": [
+				{
+					"key": "race",
+					"text": "Race",
+					"table": "race"
+				},
+				{
+					"key": "subrace",
+					"text": "Subrace",
+					"options": {
+						"keys": ["description.race"],
+						"folder": "race"
+					}
+				}
+			]
+		}
+	]
+}

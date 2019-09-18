@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {
+            "value": "", 
+            "weight": 1
+        }, 
+        {
+            "value": "Good", 
+            "weight": 0
+        }, 
+        {
+            "value": "Evil", 
+            "weight": 0
+        }
+    ], 
+    "values": {}
+}

@@ -1,0 +1,73 @@
+{
+    "rows": [
+        {
+            "value": "of cheap cologne", 
+            "weight": 3
+        }, 
+        {
+            "value": "of cologne", 
+            "weight": 3
+        }, 
+        {
+            "value": "of expensive cologne", 
+            "weight": 2
+        }, 
+        {
+            "value": "of cedar wood", 
+            "weight": 3
+        }, 
+        {
+            "value": "of lavender", 
+            "weight": 3
+        }, 
+        {
+            "value": "of honey", 
+            "weight": 3
+        }, 
+        {
+            "value": "of flowers", 
+            "weight": 3
+        }, 
+        {
+            "value": "of incense", 
+            "weight": 3
+        }, 
+        {
+            "value": "of baking", 
+            "weight": 3
+        }, 
+        {
+            "value": "like rain", 
+            "weight": 3
+        }, 
+        {
+            "value": "like a forest", 
+            "weight": 3
+        }, 
+        {
+            "value": "of the sea", 
+            "weight": 3
+        }, 
+        {
+            "value": "of cookies", 
+            "weight": 3
+        }, 
+        {
+            "value": "of spices", 
+            "weight": 3
+        }, 
+        {
+            "value": "of autumn leaves", 
+            "weight": 3
+        }, 
+        {
+            "value": "of soap", 
+            "weight": 4
+        }, 
+        {
+            "value": "of roses", 
+            "weight": 4
+        }
+    ], 
+    "values": {}
+}

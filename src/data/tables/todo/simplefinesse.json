@@ -1,0 +1,13 @@
+{
+    "rows": [
+        {
+            "value": "dagger", 
+            "weight": 1
+        }, 
+        {
+            "value": "shortsword", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

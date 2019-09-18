@@ -12,47 +12,54 @@ function makeEntry(name, value)
 
 function getTable(tablePath)
 {
-	return require(path.join('../data/tables', tablePath));
+	return require(`./data/tables/${tablePath}.json`);
+}
+
+function getEntriesFromTable(table)
+{
+	return table.rows.map((row) => makeEntry(row.text || row.value, row.value));
+}
+
+function getOptions(currentData)
+{
+	if (this.table)
+	{
+		return getEntriesFromTable(getTable(this.table));
+	}
+	else if (this.options)
+	{
+		const tablePath = this.options.keys.reduce((accum, key) => `${accum}/${lodash.get(currentData, key)}`, this.options.folder);
+		try
+		{
+			const table = getTable(tablePath);
+			return getEntriesFromTable(table);
+		}
+		catch (e)
+		{
+			return [];
+		}
+	}
+	return 2;
+}
+
+function createFieldInfo(categoryKey, fieldData)
+{
+	return {
+		key: `${categoryKey}.${fieldData.key}`,
+		text: fieldData.text,
+		getOptions: getOptions.bind(fieldData),
+		dependsOn: fieldData.options ? fieldData.options.keys || [] : [],
+	};
 }
 
 module.exports = {
 	randomEntry: makeEntry("Random", 'random'),
 	getTable: getTable,
 	makeEntry: makeEntry,
-	categories: [
-		{
-			"name": "Identity",
-			"key": "identity",
-			"filters": [
-				{
-					"key": "sex",
-					"name": "Sex",
-					"values": [
-						'male', 'female', 'intersex'
-					]
-				}
-			]
-		},
-		{
-			"name": "Description",
-			"key": "description",
-			"filters": [
-				{
-					"name": "Race",
-					"key": "race",
-					"values": [
-						"A", "B", "C"
-					]
-				},
-				{
-					"name": "Subrace",
-					"key": "subrace",
-					"values": {
-						"{description.race=A}": ["A1", "A2", "A3"],
-						"{description.race=B}": ["B1", "B2", "B3"]
-					}
-				}
-			]
-		}
-	]
+	categories: getTable('filters').categories.map(
+		(category) => ({
+			key: category.key,
+			fields: category.fields.map((field) => createFieldInfo(category.key, field)),
+		})
+	)
 };

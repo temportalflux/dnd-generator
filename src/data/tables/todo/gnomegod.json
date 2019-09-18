@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {
+            "value": "Garl Glittergold", 
+            "weight": 3
+        }
+    ], 
+    "todo": [
+        {
+            "v": "{humangod}", 
+            "w": 2
+        }
+    ], 
+    "values": {
+        "Garl Glittergold": "{$goddescr=, God of gnomes, protection, humour, trickery, gem cutting. (Neutral Good)}"
+    }
+}

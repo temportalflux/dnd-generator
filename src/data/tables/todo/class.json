@@ -1,0 +1,61 @@
+{
+    "rows": [
+        {
+            "value": "Artificier", 
+            "weight": 3
+        }, 
+        {
+            "value": "Barbarian", 
+            "weight": 3
+        }, 
+        {
+            "value": "Bard", 
+            "weight": 4
+        }, 
+        {
+            "value": "Cleric", 
+            "weight": 9
+        }, 
+        {
+            "value": "Druid", 
+            "weight": 2
+        }, 
+        {
+            "value": "Fighter", 
+            "weight": 12
+        }, 
+        {
+            "value": "Monk", 
+            "weight": 6
+        }, 
+        {
+            "value": "Mystic", 
+            "weight": 3
+        }, 
+        {
+            "value": "Paladin", 
+            "weight": 8
+        }, 
+        {
+            "value": "Ranger", 
+            "weight": 3
+        }, 
+        {
+            "value": "Rogue", 
+            "weight": 5
+        }, 
+        {
+            "value": "Sorcerer", 
+            "weight": 2
+        }, 
+        {
+            "value": "Warlock", 
+            "weight": 2
+        }, 
+        {
+            "value": "Wizard", 
+            "weight": 3
+        }
+    ], 
+    "values": {}
+}

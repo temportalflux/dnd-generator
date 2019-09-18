@@ -1,3 +1,6 @@
+import lodash from 'lodash';
+const { getTable } = require('../../Data');
+const { formatWithData } = require('./utils');
 
 function chooseRandomWithWeight(entries)
 {
@@ -28,25 +31,53 @@ function testFrequency(entries)
 	return frequency;
 }
 
-module.exports = function exec(match)
+export default function exec(match, npcData)
 {
-	const tablePath = match[1];
-	console.log(`Rolling on '${tablePath}'`);
+	const tablePath = formatWithData(match[1], npcData);
+	let table = undefined;
 	try
 	{
-		const table = require(`../../../data/data/${tablePath}`);
-
-		if (!table.rows)
-		{
-			console.error(`Table '${tablePath}' is missing field 'rows'. This field is enforced by the schema for tables.`, table);
-			return undefined;
-		}
-		
-		return chooseRandomWithWeight(table.rows);
+		table = getTable(tablePath);
 	}
 	catch (e)
 	{
-		console.error(e);
+		console.warn('No such table at path', tablePath, '\n', e);
 		return undefined;
 	}
+
+	if (!table.rows)
+	{
+		console.error(`Table '${tablePath}' is missing field 'rows'. This field is enforced by the schema for tables.`, table);
+		return undefined;
+	}
+	
+	let currentValue = chooseRandomWithWeight(table.rows);
+	console.log('Roll on table', tablePath, 'resulted in', currentValue);
+
+	if (table.values && table.values[currentValue])
+	{
+		const valueEntry = table.values[currentValue];
+		// Overwrite the value for the key 'value'
+		// The writer has defined a more descriptive value
+		if (valueEntry.value)
+		{
+			currentValue = valueEntry.value;
+		}
+		// Overrides mean that more data is being generated from here
+		if (valueEntry.override)
+		{
+
+		}
+		// Values with modifiers are adding numerical data to other entries
+		if (valueEntry.modifiers)
+		{
+			lodash.toPairs(valueEntry.modifiers).forEach(([key, modifier]) => {
+				const prevValue = lodash.get(npcData, key);
+				lodash.set(npcData, key, prevValue + modifier);
+				console.log(`(${key}) ${prevValue} += ${modifier} => ${lodash.get(npcData, key)}`);
+			});
+		}
+	}
+
+	return currentValue;
 }

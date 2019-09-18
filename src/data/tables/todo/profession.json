@@ -1,0 +1,33 @@
+{
+    "rows": [
+        {
+            "value": "Learned", 
+            "weight": 1
+        }, 
+        {
+            "value": "Lesser Nobility", 
+            "weight": 2
+        }, 
+        {
+            "value": "Professional", 
+            "weight": 3
+        }, 
+        {
+            "value": "Working Class", 
+            "weight": 5
+        }, 
+        {
+            "value": "Martial", 
+            "weight": 3
+        }, 
+        {
+            "value": "Underclass", 
+            "weight": 3
+        }, 
+        {
+            "value": "Entertainer", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

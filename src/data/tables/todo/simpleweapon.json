@@ -1,0 +1,33 @@
+{
+    "rows": [
+        {
+            "value": "club", 
+            "weight": 1
+        }, 
+        {
+            "value": "greatclub", 
+            "weight": 1
+        }, 
+        {
+            "value": "javelin", 
+            "weight": 1
+        }, 
+        {
+            "value": "light hammer", 
+            "weight": 1
+        }, 
+        {
+            "value": "mace", 
+            "weight": 1
+        }, 
+        {
+            "value": "quarterstaff", 
+            "weight": 1
+        }, 
+        {
+            "value": "spear", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

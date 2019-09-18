@@ -1,0 +1,29 @@
+{
+    "rows": [
+        {
+            "value": "castle", 
+            "weight": 3
+        }, 
+        {
+            "value": "farm", 
+            "weight": 4
+        }, 
+        {
+            "value": "manor", 
+            "weight": 2
+        }, 
+        {
+            "value": "small forest", 
+            "weight": 2
+        }, 
+        {
+            "value": "creepy house", 
+            "weight": 2
+        }, 
+        {
+            "value": "palace", 
+            "weight": 1
+        }
+    ], 
+    "values": {}
+}

@@ -1,4 +1,5 @@
-module.exports = function exec(match)
+export default function exec(match)
 {
-	return require('../../lib/randInt')(match[1], match[2]);
+	const params = match[1].split(',').map(str => parseInt(str, 10));
+	return require('../../lib/randInt')(params[0], params[1]);
 }

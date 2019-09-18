@@ -1,0 +1,57 @@
+{
+	"rows": [
+		{
+			"value": "asymmetrical",
+			"weight": 1
+		},
+		{
+			"value": "ugly",
+			"weight": 1
+		},
+		{
+			"value": "repulsive",
+			"weight": 1
+		},
+		{
+			"value": "pockmarked",
+			"weight": 1
+		},
+		{
+			"value": "hideous",
+			"weight": 1
+		},
+		{
+			"value": "repugnant",
+			"weight": 1
+		},
+		{
+			"value": "bulbous",
+			"weight": 1
+		},
+		{
+			"value": "awful",
+			"weight": 1
+		},
+		{
+			"value": "disfigured",
+			"weight": 1
+		},
+		{
+			"value": "revolting",
+			"weight": 1
+		},
+		{
+			"value": "disgusting",
+			"weight": 1
+		},
+		{
+			"value": "creepy",
+			"weight": 2
+		},
+		{
+			"value": "mediocre",
+			"weight": 3
+		}
+	],
+	"values": {}
+}

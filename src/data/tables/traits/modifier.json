@@ -1,0 +1,21 @@
+{
+	"rows": [
+		{
+			"value": "slightly",
+			"weight": 6
+		},
+		{
+			"value": "very",
+			"weight": 3
+		},
+		{
+			"value": "incredibly",
+			"weight": 1
+		},
+		{
+			"value": "extremely",
+			"weight": 1
+		}
+	],
+	"values": {}
+}
