@@ -13,6 +13,9 @@
 		"description.race",
 		"description.subrace",
 
+		"occupation.type",
+		"occupation.profession",
+
 		"relationships",
 		"hooks"
 	],
@@ -76,6 +79,14 @@
 		"personality": {
 			"religion": {
 				"default": ""
+			}
+		},
+		"occupation": {
+			"type": {
+				"default": "TODO: class || job"
+			},
+			"profession": {
+				"default": "TODO: selection for (class || job)"
 			}
 		},
 		"relationships": {
