@@ -16,7 +16,9 @@ export default function parseField(field, data)
 			if (match)
 			{
 				console.log('Calculating value of field', field, 'using exec', execKey);
-				return Execs[execKey](match, data);
+				const result = Execs[execKey](match, data);
+				console.log('result:', result);
+				return parseField(result, data);
 			}
 		}
 		return field;

@@ -1,0 +1,20 @@
+{
+	"rows": [
+		{
+			"text": "Masculine",
+			"value": "masculine",
+			"weight": 2
+		},
+		{
+			"text": "Feminine",
+			"value": "feminine",
+			"weight": 2
+		},
+		{
+			"text": "Androgynous",
+			"value": "androgynous",
+			"weight": 1
+		}
+	],
+	"values": {}
+}

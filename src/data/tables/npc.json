@@ -50,19 +50,19 @@
 					"thirdPerson": "",
 					"possessive": ""
 				},
-				"value": "{roll:pronouns}"
+				"value": "{roll:identity/pronouns}"
 			},
 			"genderIdentity": {
-				"value": ""
+				"value": "{roll:identity/genderIdentity}"
 			},
 			"genderExpression": {
-				"value": ""
+				"value": "{roll:identity/genderExpression}"
 			},
 			"sex": {
-				"value": ""
+				"value": "{roll:identity/sex}"
 			},
 			"sexualOrientation": {
-				"value": ""
+				"value": "{roll:identity/sexualOrientation}"
 			}
 		},
 		"description": {

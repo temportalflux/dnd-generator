@@ -6,12 +6,27 @@
 				{
 					"key": "pronouns",
 					"text": "Pronouns",
-					"table": "pronouns"
+					"table": "identity/pronouns"
 				},
 				{
 					"key": "sex",
 					"text": "Sex",
-					"table": "sex"
+					"table": "identity/sex"
+				},
+				{
+					"key": "genderExpression",
+					"text": "Gender Expression",
+					"table": "identity/genderExpression"
+				},
+				{
+					"key": "genderIdentity",
+					"text": "Gender Identity",
+					"table": "identity/genderIdentity"
+				},
+				{
+					"key": "sexualOrientation",
+					"text": "Orientation",
+					"table": "identity/sexualOrientation"
 				}
 			]
 		},

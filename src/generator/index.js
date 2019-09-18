@@ -11,7 +11,7 @@ export function generate(filter)
 			.filter(([_, value]) => value !== 'random')
 			.reduce((categoryData, [fieldKey, value]) =>
 			{
-				categoryData[`${categoryKey}.${fieldKey}`] = value;
+				lodash.set(categoryData, `${categoryKey}.${fieldKey}`, value);
 				return categoryData;
 			}, allData);
 	}, {});
