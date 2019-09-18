@@ -1,0 +1,77 @@
+{
+	"rows": [
+		{
+			"value": "brown",
+			"weight": 25
+		},
+		{
+			"value": "auburn",
+			"weight": 20
+		},
+		{
+			"value": "blond",
+			"weight": 12
+		},
+		{
+			"value": "red",
+			"weight": 14
+		},
+		{
+			"value": "golden",
+			"weight": 8
+		},
+		{
+			"value": "silver",
+			"weight": 5
+		},
+		{
+			"value": "gray",
+			"weight": 16
+		},
+		{
+			"value": "white",
+			"weight": 8
+		},
+		{
+			"value": "black",
+			"weight": 20
+		},
+		{
+			"value": "dyed black",
+			"weight": 5
+		},
+		{
+			"value": "dyed blue",
+			"weight": 1
+		},
+		{
+			"value": "dyed purple",
+			"weight": 1
+		},
+		{
+			"value": "dyed pink",
+			"weight": 1
+		},
+		{
+			"value": "dyed yellow",
+			"weight": 1
+		},
+		{
+			"value": "dyed red",
+			"weight": 1
+		},
+		{
+			"value": "dyed orange",
+			"weight": 1
+		},
+		{
+			"value": "dyed green",
+			"weight": 1
+		},
+		{
+			"value": "dyed teal",
+			"weight": 1
+		}
+	],
+	"values": {}
+}

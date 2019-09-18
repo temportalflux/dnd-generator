@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"value": {},
+			"weight": 3
+		},
+		{
+			"value": {
+				"length": "{roll:traits/face/beard/length}",
+				"shape": "{roll:traits/face/beard/shape}"
+			},
+			"weight": 2
+		}
+	],
+	"values": {}
+}

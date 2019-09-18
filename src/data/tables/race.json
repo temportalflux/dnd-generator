@@ -68,12 +68,7 @@
 				"stats.abilityScores.constitution": 1,
 				"stats.abilityScores.wisdom": 1,
 				"stats.abilityScores.charisma": 3
-			},
-			"override": {
-				"description.skin": "{roll:common/skin}",
-				"personality.religion": "{roll:deity/human}"
-			},
-			"v": "{humangender}{humangod}{aasimargoodorevil}"
+			}
 		},
 		"Dragonborn": {
 			"modifiers": {
@@ -87,7 +82,7 @@
 			},
 			"generators": {
 			},
-			"v": "{strongweight}{goodorevil}{dragongod}{dragonskin}{$beard=}{dragonhair}{dragonborngender}{dragonquirks}"
+			"v": "{dragonskin}{$beard=}{dragonhair}{dragonborngender}{dragonquirks}"
 		},
 		"Dwarf": {
 			"modifiers": {

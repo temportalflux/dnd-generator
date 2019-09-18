@@ -1,0 +1,73 @@
+{
+	"rows": [
+		{
+			"value": "chinstrap beard",
+			"weight": 1
+		},
+		{
+			"value": "neckbeard",
+			"weight": 1
+		},
+		{
+			"value": "beard",
+			"weight": 12
+		},
+		{
+			"value": "squared beard",
+			"weight": 2
+		},
+		{
+			"value": "goatee",
+			"weight": 2
+		},
+		{
+			"value": "spotty beard",
+			"weight": 2
+		},
+		{
+			"value": "sideburns",
+			"weight": 2
+		},
+		{
+			"value": "goat patch beard",
+			"weight": 1
+		},
+		{
+			"value": "soul patch",
+			"weight": 1
+		},
+		{
+			"value": "german goatee",
+			"weight": 1
+		},
+		{
+			"value": "mutton chops beard",
+			"weight": 1
+		},
+		{
+			"value": "chin strap",
+			"weight": 1
+		},
+		{
+			"value": "van dyke beard",
+			"weight": 1
+		},
+		{
+			"value": "handlebar moustache",
+			"weight": 1
+		},
+		{
+			"value": "pencil moustache",
+			"weight": 1
+		},
+		{
+			"value": "fu manchu moustache",
+			"weight": 1
+		},
+		{
+			"value": "moustache",
+			"weight": 5
+		}
+	],
+	"values": {}
+}

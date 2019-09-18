@@ -4,8 +4,8 @@ let ajv = new Ajv();
 
 function getFullPath(dataType, fileName)
 {
-	if (dataType) return path.join(__dirname, './data', dataType, fileName);
-	else return path.join(__dirname, './data', fileName);
+	if (dataType) return path.join(__dirname, './src/data', dataType, fileName);
+	else return path.join(__dirname, './src/data', fileName);
 }
 
 function validate(schema, dataType, fileName)
@@ -15,16 +15,16 @@ function validate(schema, dataType, fileName)
 	const valid = ajv.validate(schema, dataJson);
 	if (valid)
 	{
-		console.log(fileName, 'passed');
+		console.log('PASSED:', fileName);
 	}
 	else
 	{
-		console.log(fileName, 'failed\n', ajv.errorsText());
+		console.log('FAILED:', fileName, '\n', ajv.errorsText());
 	}
 	return dataJson;
 }
 
-const validatorJson = validate(require('./data/validator-schema.json'), undefined, 'validator.json');
+const validatorJson = validate(require('./src/data/validator-schema.json'), undefined, 'validator.json');
 
 const dataToValidate = {};
 for (entry of validatorJson)

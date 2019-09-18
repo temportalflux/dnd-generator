@@ -1,0 +1,96 @@
+{
+	"rows": [
+		{
+			"value": "Baphomet"
+		},
+		{
+			"value": "Demogorgon"
+		},
+		{
+			"value": "Eltab"
+		},
+		{
+			"value": "Graz'zt"
+		},
+		{
+			"value": "Kostchtchie"
+		},
+		{
+			"value": "Orcus"
+		},
+		{
+			"value": "Pazrael"
+		},
+		{
+			"value": "Sess'Innek"
+		},
+		{
+			"value": "Yeenoghu"
+		}
+	],
+	"values": {
+		"Baphomet": {
+			"value": "Baphomet, Demon lord of minotaurs, beasts, vengeance. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Demogorgon": {
+			"value": "Demogorgon, the Iron Duke, Prince of Demons. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Eltab": {
+			"value": "Eltab, Demon lord of hatred, retribution. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Graz'zt": {
+			"value": "Graz'zt, Demon lord of darkness, seduction, guilde, debauchery. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Kostchtchie": {
+			"value": "Kostchtchie, Demon lord of frost giants, wrath, rage. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Orcus": {
+			"value": "Orcus, Demon lord of undeath. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Pazrael": {
+			"value": "Pazrael, the Archduchess, Demon lord of evil flying creatures, corruption. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Sess'Innek": {
+			"value": "Sess'Innek, the Slug Archduke, Demon lord of khaastas, lizard kings, civilization, domination. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		"Yeenoghu": {
+			"value": "Yeenoghu, Demon lord of gnolls. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		}
+	}
+}

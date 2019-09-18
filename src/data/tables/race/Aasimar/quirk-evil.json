@@ -1,0 +1,15 @@
+{
+	"rows": [
+		{
+			"value": "mindlessDestruction"
+		}
+	],
+	"values": {
+		"mindlessDestruction": {
+			"value": "$(identity.pronouns.singular) seeks mindless desctruction.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3
+			}
+		}
+	}
+}

@@ -7,11 +7,19 @@
 		"identity.genderExpression",
 		"identity.sex",
 		"identity.sexualOrientation",
-
+		
 		"stats.alignmentTendancies",
+		"personality.alignmentMoral",
+		
+		"description.age",
+		"description.height",
+		"description.weight",
 
 		"description.race",
 		"description.subrace",
+
+		"description.skin",
+		"personality.deity",
 
 		"occupation.type",
 		"occupation.profession",
@@ -56,29 +64,44 @@
 				"value": "{roll:identity/pronouns}"
 			},
 			"genderIdentity": {
-				"value": "{roll:identity/genderIdentity}"
+				"default": "{roll:identity/genderIdentity}"
 			},
 			"genderExpression": {
-				"value": "{roll:identity/genderExpression}"
+				"default": "{roll:identity/genderExpression}"
 			},
 			"sex": {
-				"value": "{roll:identity/sex}"
+				"default": "{roll:identity/sex}"
 			},
 			"sexualOrientation": {
-				"value": "{roll:identity/sexualOrientation}"
+				"default": "{roll:identity/sexualOrientation}"
 			}
 		},
 		"description": {
+			"age": {
+				"default": "{roll:traits/age}"
+			},
+			"height": {
+				"default": "{roll:traits/height}"
+			},
+			"weight": {
+				"default": "{roll:traits/weight}"
+			},
 			"race": {
-				"value": "{roll:race}"
+				"default": "{roll:race}"
 			},
 			"subrace": {
 				"value": "{roll:race/$(description.race)}"
+			},
+			"skin": {
+				"value": "{roll:race/$(description.race)/skin}"
 			}
 		},
 		"personality": {
+			"alignmentMoral": {
+				"default": "{roll:traits/alignmentMoral}"
+			},
 			"religion": {
-				"default": ""
+				"value": "{roll:race/$(description.race)/deity}"
 			}
 		},
 		"occupation": {
@@ -86,7 +109,7 @@
 				"default": "TODO: class || job"
 			},
 			"profession": {
-				"default": "TODO: selection for (class || job)"
+				"value": "TODO: selection for (class || job)"
 			}
 		},
 		"relationships": {

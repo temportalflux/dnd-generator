@@ -1,0 +1,15 @@
+{
+	"rows": [
+		{
+			"value": "undoEvil"
+		}
+	],
+	"values": {
+		"undoEvil": {
+			"value": "$(identity.pronouns.singular) seeks to undo all of evil's misdeeds.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 3
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+{
+	"rows": [
+		{
+			"value": "anorexic",
+			"weight": 1
+		},
+		{
+			"value": "skinny",
+			"weight": 5
+		},
+		{
+			"value": "lean",
+			"weight": 12
+		},
+		{
+			"value": "athletic",
+			"weight": 10
+		},
+		{
+			"value": "muscular",
+			"weight": 12
+		},
+		{
+			"value": "regular",
+			"weight": 18
+		},
+		{
+			"value": "beefy",
+			"weight": 10
+		},
+		{
+			"value": "massive",
+			"weight": 4
+		},
+		{
+			"value": "round",
+			"weight": 18
+		},
+		{
+			"value": "fat",
+			"weight": 4
+		},
+		{
+			"value": "overweight",
+			"weight": 2
+		},
+		{
+			"value": "obese",
+			"weight": 1
+		}
+	],
+	"values": {
+		"beefy": {
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.dexterity": -1,
+				"stats.abilityScores.constitution": 2,
+				"description.height": 3
+			}
+		},
+		"fat": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": -1
+			}
+		},
+		"lean": {
+			"modifiers": {
+				"stats.abilityScores.strength": -1,
+				"stats.abilityScores.dexterity": 1
+			}
+		},
+		"massive": {
+			"modifiers": {
+				"stats.abilityScores.strength": 3,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 3,
+				"description.height": 5
+			}
+		},
+		"muscular": {
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.constitution": 1
+			}
+		},
+		"round": {
+			"modifiers": {
+				"stats.abilityScores.dexterity": -1,
+				"stats.abilityScores.constitution": 1
+			}
+		},
+		"skinny": {
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": -2
+			}
+		},
+		"anorexic": {
+			"modifiers": {
+				"stats.abilityScores.strength": -3,
+				"stats.abilityScores.constitution": -2
+			}
+		},
+		"athletic": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1
+			}
+		},
+		"obese": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": -4,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.charisma": -2
+			}
+		},
+		"overweight": {
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": -1,
+				"stats.abilityScores.charisma": -1
+			}
+		}
+	}
+}

@@ -3,12 +3,12 @@
 		{ "weight":70, "value":"{roll:diety/good}"},
 		{ "weight":5, "value":"{roll:diety/evil}"},
 		{ "weight":1, "value":"{roll:diety/dragon}"},
-		
 		{ "weight":1, "value":"{roll:diety/drow}"},
 		{ "weight":1, "value":"{roll:diety/dwarf}"},
 		{ "weight":2, "value":"{roll:diety/elf}"},
 		{ "weight":1, "value":"{roll:diety/gnome}"},
 		{ "weight":1, "value":"{roll:diety/halfing}"},
 		{ "weight":1, "value":"{roll:diety/orc}"}
-	]
+	],
+	"values": {}
 }

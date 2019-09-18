@@ -1,0 +1,61 @@
+{
+	"rows": [
+		{
+			"value": "a bald head",
+			"weight": 8
+		},
+		{
+			"value": "styled",
+			"weight": 35,
+			"generationOrder": [
+				"description.hair.length",
+				"description.hair.style",
+				"description.hair.color"
+			],
+			"fields": {
+				"description.hair.length": "{roll:traits/hair/length}",
+				"description.hair.style": "{roll:traits/hair/style}",
+				"description.hair.color": "{roll:traits/hair/color}"
+			}
+		},
+		{
+			"value": "shaved",
+			"weight": 4,
+			"generationOrder": [
+				"description.hair.length",
+				"description.hair.style",
+				"description.hair.color",
+				"description.hair.side"
+			],
+			"fields": {
+				"description.hair.length": "{roll:traits/hair/length}",
+				"description.hair.style": "{roll:traits/hair/style}",
+				"description.hair.color": "{roll:traits/hair/color}",
+				"description.hair.side": "{roll:common/rightLeft}"
+			}
+		},
+		{
+			"value": "mohawk",
+			"weight": 3,
+			"generationOrder": [
+				"description.hair.length",
+				"description.hair.color"
+			],
+			"fields": {
+				"description.hair.length": "{roll:traits/hair/length}",
+				"description.hair.color": "{roll:traits/hair/color}"
+			}
+		}
+	],
+	"values": {
+		"styled": {
+			"value": "$(description.hair.length), $(description.hair.style), $(description.hair.color) hair"
+		},
+		"shaved": {
+			"value": "$(description.hair.length), $(description.hair.style), $(description.hair.color) hair shaved on the $(description.hair.side) side"
+		},
+		"mohawk": {
+			"value": "$(description.hair.length), $(description.hair.color) mohawk"
+		}
+	}
+}
