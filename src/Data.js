@@ -1,12 +1,6 @@
 const path = require('path');
 const lodash = require('lodash');
 
-const filterFields = [
-	'race',
-	'sex', 'forcealign', 'hooks',
-	'occupation', 'class', 'profession',
-];
-
 function makeEntry(name, value)
 {
 	return {
@@ -16,48 +10,49 @@ function makeEntry(name, value)
 	};
 }
 
-class DataHandler
+function getTable(tablePath)
 {
-
-	constructor()
-	{
-		this.randomEntry = makeEntry("Random", 'random');
-
-		this.tables = filterFields.reduce((accum, field) => {
-			accum[field] = this.getRowsForTable(field);
-			accum[field].unshift(this.randomEntry);
-			return accum;
-		}, {});
-		
-		this.tables.subrace = this.tables.race.filter((entry) => entry.value !== 'random').reduce((accum, entry) => {
-			accum[entry.value] = this.getRowsForTable(`race${entry.value}`);
-			if (accum[entry.value].length > 0)
-				accum[entry.value].unshift(this.randomEntry);
-			return accum;
-		}, {});
-		
-		this.tables.professionTypes = this.tables.profession.filter((entry) => entry.value !== 'random').reduce((accum, entry) => {
-			accum[entry.value] = this.getRowsForTable(`${entry.value}`);
-			accum[entry.value].unshift(this.randomEntry);
-			return accum;
-		}, {});
-	}
-
-	getRowsForTable(field)
-	{
-		try
-		{
-			return require(`./data/${field}.json`)
-				.filter((entry) => entry.name)
-				.map((entry) => makeEntry(entry.name, entry.table || entry.value || entry.name));
-		}
-		catch(e)
-		{
-			return [];
-		}
-	}
-
+	return require(path.join('../data/tables', tablePath));
 }
 
-const Data = new DataHandler();
-export default Data;
+module.exports = {
+	randomEntry: makeEntry("Random", 'random'),
+	getTable: getTable,
+	makeEntry: makeEntry,
+	categories: [
+		{
+			"name": "Identity",
+			"key": "identity",
+			"filters": [
+				{
+					"key": "sex",
+					"name": "Sex",
+					"values": [
+						'male', 'female', 'intersex'
+					]
+				}
+			]
+		},
+		{
+			"name": "Description",
+			"key": "description",
+			"filters": [
+				{
+					"name": "Race",
+					"key": "race",
+					"values": [
+						"A", "B", "C"
+					]
+				},
+				{
+					"name": "Subrace",
+					"key": "subrace",
+					"values": {
+						"{description.race=A}": ["A1", "A2", "A3"],
+						"{description.race=B}": ["B1", "B2", "B3"]
+					}
+				}
+			]
+		}
+	]
+};

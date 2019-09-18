@@ -15,7 +15,6 @@ export default class Home extends React.Component
 
 	generate(filter)
 	{
-		console.log(filter);
 		console.log(generate(filter));
 	}
 

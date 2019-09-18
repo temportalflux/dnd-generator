@@ -40,6 +40,6 @@ for (key of Object.keys(dataToValidate))
 {
 	for (dataFile of dataToValidate[key])
 	{
-		validate(key, 'data', dataFile);
+		validate(key, 'tables', dataFile);
 	}
 }

@@ -1,4 +1,4 @@
-import Execs from './modules/index';
+const Execs = require('./modules/index');
 const ExecKeys = Object.keys(Execs);
 
 module.exports = function parseField(field)
