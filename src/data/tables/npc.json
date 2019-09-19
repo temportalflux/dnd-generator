@@ -1,25 +1,42 @@
 {
 	"generationOrder": [
 		"stats.abilityScores",
+		"description.height",
+		"description.weight",
 
+		"stats.alignmentTendancies",
+		"personality.alignmentMoral",
+
+		"description.race",
+		"description.subrace",
+		"description.eyeColor",
+		"description.skin",
+		"description.face",
+		"description.hair",
+		"description.beard",
+
+		"personality.deity",
+		
 		"identity.pronouns",
 		"identity.genderIdentity",
 		"identity.genderExpression",
 		"identity.sex",
 		"identity.sexualOrientation",
-		
-		"stats.alignmentTendancies",
-		"personality.alignmentMoral",
-		
+
+		"identity.name",
 		"description.age",
-		"description.height",
-		"description.weight",
 
-		"description.race",
-		"description.subrace",
+		"TODO occupation",
+		"TODO hooks",
+		"TODO traits",
+		"TODO special physical",
+		"TODO quirks",
+		"personality.quirks",
 
-		"description.skin",
-		"personality.deity",
+
+
+
+
 
 		"occupation.type",
 		"occupation.profession",
@@ -42,19 +59,25 @@
 			"alignmentTendancies": {
 				"default": {
 					"ethical": {
-						"positive": "{randInt:0,10}",
-						"neutral": "{randInt:0,10}",
-						"negative": "{randInt:0,10}"
+						"positive": "{roll:traits/alignment/tendancy}",
+						"neutral": "{roll:traits/alignment/tendancy}",
+						"negative": "{roll:traits/alignment/tendancy}"
 					},
 					"moral": {
-						"positive": "{randInt:0,10}",
-						"neutral": "{randInt:0,10}",
-						"negative": "{randInt:0,10}"
+						"positive": "{roll:traits/alignment/tendancy}",
+						"neutral": "{roll:traits/alignment/tendancy}",
+						"negative": "{roll:traits/alignment/tendancy}"
 					}
 				}
 			}
 		},
 		"identity": {
+			"name": {
+				"value": [
+					"{roll:race/$(description.race)/name-$(identity.genderIdentity)}",
+					"{roll:race/$(description.race)/surname}"
+				]
+			},
 			"pronouns": {
 				"default": {
 					"singular": "",
@@ -94,14 +117,32 @@
 			},
 			"skin": {
 				"value": "{roll:race/$(description.race)/skin}"
+			},
+			"eyeColor": {
+				"value": "{roll:traits/eyeColor}"
+			},
+			"face": {
+				"value": "{roll:traits/face}"
+			},
+			"hair": {
+				"value": "{roll:traits/$(description.race)/hair}"
+			},
+			"beard": {
+				"value": "{roll:traits/$(description.race)/beard}"
 			}
 		},
 		"personality": {
 			"alignmentMoral": {
 				"default": "{roll:traits/alignmentMoral}"
 			},
-			"religion": {
+			"deity": {
 				"value": "{roll:race/$(description.race)/deity}"
+			},
+			"quirks": {
+				"default": [],
+				"value": [
+					"{roll:race/$(description.race)/quirks}"
+				]
 			}
 		},
 		"occupation": {

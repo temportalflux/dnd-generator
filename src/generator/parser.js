@@ -11,6 +11,9 @@ export default function parseField(field, data)
 	{
 		for (let execKey of ExecKeys)
 		{
+			// TODO: Replace $(...) with evals for { ...data, value=generated value from roll}
+			// https://stackoverflow.com/questions/8403108/calling-eval-in-particular-context
+			// use gnome names as an example of complex rolls with field fetches
 			const regex = new RegExp(`^\\{${execKey}:(.*)\\}$`);
 			const match = field.match(regex);
 			if (match)

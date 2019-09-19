@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "Moradin",
+			"weight": 3
+		}
+	],
+	"todo": [
+		{
+			"v": "{roll:race/Human/deity}",
+			"w": 2
+		}
+	],
+	"values": {
+		"Moradin": "Moradin, God of dwarves, creation, smithing, protection, metalcraft, stonework. (Lawful Good)"
+	}
+}

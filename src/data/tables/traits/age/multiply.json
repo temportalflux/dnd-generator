@@ -1,12 +1,14 @@
 {
 	"rows": [
-		{ "value": "{randInt:1,5}" }
+		{
+			"value": "{randInt:1,5}"
+		}
 	],
 	"values": {
-        "{range:1,5}": {
-            "modifiers": {
-                "age": "{multiply:${value}}"
-            }
-        }
-    }
+		"{range:1,5}": {
+			"modifiers": {
+				"age": "{multiply:$(value)}"
+			}
+		}
+	}
 }

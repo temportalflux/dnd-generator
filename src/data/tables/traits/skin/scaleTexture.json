@@ -1,0 +1,29 @@
+{
+	"rows": [
+		{
+			"value": "rough"
+		},
+		{
+			"value": "smooth"
+		},
+		{
+			"value": "shiny"
+		},
+		{
+			"value": "rugged"
+		},
+		{
+			"value": "dirty"
+		},
+		{
+			"value": "pointy"
+		},
+		{
+			"value": "broad"
+		},
+		{
+			"value": "ridged"
+		}
+	],
+	"values": {}
+}

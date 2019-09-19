@@ -1,10 +1,12 @@
 {
-    "rows": [], 
-    "todo": [
-        {
-            "v": "{dragons}{scaletexture}{$skin=$scaletexture}{$skin+ }{$skin+$dragon}{$skintype= scales}", 
-            "w": 1
-        }
-    ], 
-    "values": {}
+    "rows": [
+			{
+				"value": "{roll:traits/skin/scaleTexture}"
+			}
+		],
+    "values": {
+			".*": {
+				"value": "$(value) $(description.race.subrace) scales"
+			}
+		}
 }

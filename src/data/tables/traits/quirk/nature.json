@@ -1,0 +1,21 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 50
+		},
+		{
+			"value": "valuesLife",
+			"weight": 2
+		}
+	],
+	"values": {
+		"valuesLife": {
+			"value": "$(identity.pronouns.singular) will never take a life if given the choice.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 2,
+				"stats.alignmentTendancies.moral.negative": -2
+			}
+		}
+	}
+}

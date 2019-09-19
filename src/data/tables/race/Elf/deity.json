@@ -1,0 +1,24 @@
+{
+	"rows": [
+		{
+			"value": "Angharradh",
+			"weight": 3
+		},
+		{
+			"value": "Corellon Larethian",
+			"weight": 3
+		},
+		{
+			"value": "{roll:race/Human/deity}",
+			"weight": 3
+		}
+	],
+	"values": {
+		"Angharradh": {
+			"value": "Angharradh, Goddess of spring, fertility, planting, birth, defense, wisdom. (Chaotic Good)"
+		},
+		"Corellon Larethian": {
+			"value": "Corellon Larethian, God of elves, magic, music, arts, crafts, war, poetry, bards, warriors. (Chaotic Good)"
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 18
+		},
+		{
+			"value": "valuesClan",
+			"weight": 3
+		}
+	],
+	"values": {
+		"valuesClan": {
+			"value": "$(identity.pronouns.singular) value $(identity.pronouns.possessive) clan above anything else."
+		}
+	}
+}

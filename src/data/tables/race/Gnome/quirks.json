@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 6
+		},
+		{
+			"value": "fastTalker",
+			"weight": 16
+		}
+	],
+	"values": {
+		"fastTalker": {
+			"value": "$(identity.pronouns.singular) talks so fast that $(identity.pronouns.singular) is very difficult to understand."
+		}
+	}
+}

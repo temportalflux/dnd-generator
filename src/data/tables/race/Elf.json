@@ -1,15 +1,17 @@
 {
 	"rows": [
-		{ "value": "High-Elf" },
-		{ "value": "Wood-Elf" },
-		{ "value": "Drow" }
-	],
-	"values": {
-		"High-Elf": {
+		{
+			"value": "High-Elf",
+			"weight": 6
 		},
-		"Wood-Elf": {
+		{
+			"value": "Wood-Elf",
+			"weight": 8
 		},
-		"Drow": {
+		{
+			"value": "Drow",
+			"weight": 2
 		}
-	}
+	],
+	"values": {}
 }

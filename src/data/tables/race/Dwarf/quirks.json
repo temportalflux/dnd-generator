@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 40
+		},
+		{
+			"value": "secretlyCaptivated",
+			"weight": 3
+		}
+	],
+	"values": {
+		"secretlyCaptivated": {
+			"value": "$(identity.pronouns.singular) is secretly captivated by elves."
+		}
+	}
+}

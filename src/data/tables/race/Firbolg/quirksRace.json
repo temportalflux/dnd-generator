@@ -1,0 +1,23 @@
+{
+	"rows": [
+		{
+			"value": "crowds",
+			"weight": 4
+		},
+		{
+			"value": "omens",
+			"weight": 7
+		}
+	],
+	"values": {
+		"crowds": {
+			"value": "$(identity.pronouns.singular) tries to keep away from crowds."
+		},
+		"omens": {
+			"value": "$(identity.pronouns.singular) follows omens to determine $(identity.pronouns.possessive) daily actions.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 1
+			}
+		}
+	}
+}

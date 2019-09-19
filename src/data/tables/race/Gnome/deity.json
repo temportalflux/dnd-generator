@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "Garl Glittergold",
+			"weight": 3
+		},
+		{
+			"v": "{roll:race/Human/deity}",
+			"w": 2
+		}
+	],
+	"values": {
+		"Garl Glittergold": {
+			"value": "Garl Glittergold, God of gnomes, protection, humour, trickery, gem cutting. (Neutral Good)"
+		}
+	}
+}
