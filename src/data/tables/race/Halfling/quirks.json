@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 12
+		},
+		{
+			"value": "valuesCommunity",
+			"weight": 11
+		}
+	],
+	"values": {
+		"valuesCommunity": {
+			"value": "$(identity.pronouns.singular) values $(identity.pronouns.possessive) community very highly."
+		}
+	}
+}

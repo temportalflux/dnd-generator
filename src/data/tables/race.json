@@ -114,36 +114,36 @@
 		},
 		"Goblin": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str-2}{%dex+2}{%con-2}{%int-4}{%wis-3}{%cha-1}{%height-50}{%ethicalneutral+2}{%lawful-2}{%evil+3}{humangod}{orcskin}{$beard=}{gender}{goblinname}"
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": -4,
+				"stats.abilityScores.wisdom": -3,
+				"stats.abilityScores.charisma": -1,
+				"description.height": -50,
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.ethical.positive": -2,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
 		},
 		"Goliath": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str+3}{%dex-2}{%con+3}{%int-2}{%height+60}{%lawful+3}{%chaotic-2}{%good-2}{%evil-2}{%moralneutral+2}{elfgod}{nonhumanskin}{gender}{goliathhair}{strongweight}{goliathtraits1}{goliathname}"
+				"stats.abilityScores.strength": 3,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 3,
+				"stats.abilityScores.intelligence": -2,
+				"description.height": 60,
+				"stats.alignmentTendancies.ethical.positive": 3,
+				"stats.alignmentTendancies.ethical.negative": -2,
+				"stats.alignmentTendancies.moral.positive": -2,
+				"stats.alignmentTendancies.moral.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": -2
+			}
 		},
 		"Halfling": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{racehalfling}{%height-63}{halflinggod}{nonhumanskin}{beard}{halflinggender}{halfquirks}"
+				"description.height": -63
+			}
 		},
 		"Half-Elf": {
 			"modifiers": {

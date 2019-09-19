@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 15
+		},
+		{
+			"value": "giantFriendly",
+			"weight": 17
+		}
+	],
+	"values": {
+		"giantFriendly": {
+			"value": "$(identity.pronouns.singular) maintains a friendly relationships with nearby giants."
+		}
+	}
+}

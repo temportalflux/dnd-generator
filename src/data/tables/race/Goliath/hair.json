@@ -1,0 +1,33 @@
+{
+	"rows": [
+		{
+			"value": "a bald head",
+			"weight": 8
+		},
+		{
+			"value": "a bald head with tribal tatoos",
+			"weight": 5
+		},
+		{
+			"value": "a bald head with abstract tatoos",
+			"weight": 2
+		},
+		{
+			"value": "a bald head with fancy tatoos",
+			"weight": 2
+		},
+		{
+			"value": "a bald head with vivid tatoos",
+			"weight": 2
+		},
+		{
+			"value": "a bald head with bulky tatoos",
+			"weight": 2
+		},
+		{
+			"value": "a bald head with gorgeous tatoos",
+			"weight": 2
+		}
+	],
+	"values": {}
+}

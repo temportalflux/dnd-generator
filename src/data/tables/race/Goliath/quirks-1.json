@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{
+			"value": "fightingChance"
+		}
+	],
+	"values": {
+		"fightingChance": {
+			"value": "$(identity.pronouns.singular) will always give a fighting chance to $(identity.pronouns.possessive) opponents."
+		}
+	}
+}
