@@ -1,0 +1,13 @@
+{
+	"rows": [
+		{
+			"value": "{roll:race/Orc/skin}",
+			"weight": 3
+		},
+		{
+			"value": "{roll:race/Human/skin}",
+			"weight": 2
+		}
+	],
+	"values": {}
+}

@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "Gruumsh",
+			"weight": 4
+		},
+		{
+			"value": "{roll:race/Human/deity}",
+			"weight": 2
+		}
+	],
+	"values": {
+		"Gruumsh": {
+			"value": "Gruumsh, God of orcs, conquest, survival, strength, territory. (Chaotic Evil)"
+		}
+	}
+}

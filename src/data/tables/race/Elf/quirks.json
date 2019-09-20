@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 35
+		},
+		{
+			"value": "xeno",
+			"weight": 15
+		}
+	],
+	"values": {
+		"xeno": {
+			"value": "$(identity.pronouns.singular) is deeply xenophobic."
+		}
+	}
+}

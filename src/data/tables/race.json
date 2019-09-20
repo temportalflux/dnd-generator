@@ -1,64 +1,84 @@
 {
 	"rows": [
 		{
-			"value": "Aasimar"
+			"value": "Aasimar",
+			"weight": 2
 		},
 		{
-			"value": "Dragonborn"
+			"value": "Dragonborn",
+			"weight": 4
 		},
 		{
-			"value": "Dwarf"
+			"value": "Dwarf",
+			"weight": 11
 		},
 		{
-			"value": "Elf"
+			"value": "Elf",
+			"weight": 16
 		},
 		{
-			"value": "Firbolg"
+			"value": "Firbolg",
+			"weight": 2
 		},
 		{
-			"value": "Gnome"
+			"value": "Gnome",
+			"weight": 7
 		},
 		{
-			"value": "Goblin"
+			"value": "Goblin",
+			"weight": 1
 		},
 		{
-			"value": "Goliath"
+			"value": "Goliath",
+			"weight": 2
 		},
 		{
-			"value": "Halfling"
+			"value": "Halfling",
+			"weight": 8
 		},
 		{
-			"value": "Half-Elf"
+			"value": "Half-Dwarf",
+			"weight": 20
 		},
 		{
-			"value": "Half-Orc"
+			"value": "Half-Elf",
+			"weight": 25
 		},
 		{
-			"value": "Human"
+			"value": "Half-Orc",
+			"weight": 5
 		},
 		{
-			"value": "Kenku"
+			"value": "Human",
+			"weight": 70
 		},
 		{
-			"value": "Lizardfolk"
+			"value": "Kenku",
+			"weight": 2
 		},
 		{
-			"value": "Medusa"
+			"value": "Lizardfolk",
+			"weight": 2
 		},
 		{
-			"value": "Orc"
+			"value": "Orc",
+			"weight": 3
 		},
 		{
-			"value": "Tabaxi"
+			"value": "Tabaxi",
+			"weight": 2
 		},
 		{
-			"value": "Tiefling"
+			"value": "Tiefling",
+			"weight": 4
 		},
 		{
-			"value": "Triton"
+			"value": "Triton",
+			"weight": 4
 		},
 		{
-			"value": "Troglodyte"
+			"value": "Troglodyte",
+			"weight": 1
 		}
 	],
 	"values": {
@@ -145,27 +165,36 @@
 				"description.height": -63
 			}
 		},
-		"Half-Elf": {
+		"Half-Dwarf": {
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.constitution": 2,
 				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%dex+1}{%int+1}{%cha+2}{%height-5}{%chaotic+2}{humangod}{halfelfskin}{beard}{halfelfgender}"
+				"description.height": -25,
+				"stats.alignmentTendancies.ethical.positive": 2
+			}
+		},
+		"Half-Elf": {
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.charisma": 2,
+				"description.height": -5,
+				"stats.alignmentTendancies.ethical.negative": 2
+			}
 		},
 		"Half-Orc": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str+4}{%dex-1}{%con+3}{%int-3}{%wis-3}{%cha-1}{%height+15}{%chaotic+3}{%good-2}{strongweight}{humangod}{halforcskin}{beard}{halforcgender}"
+				"stats.abilityScores.strength": 4,
+				"stats.abilityScores.dexterity": -1,
+				"stats.abilityScores.constitution": 3,
+				"stats.abilityScores.intelligence": -3,
+				"stats.abilityScores.wisdom": -3,
+				"stats.abilityScores.charisma": -1,
+				"description.height": 15,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -2
+			}
 		},
 		"Human": {
 			"modifiers": {
@@ -175,96 +204,97 @@
 				"stats.abilityScores.intelligence": 1,
 				"stats.abilityScores.wisdom": 1,
 				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str+1}{%dex+1}{%con+1}{%int+1}{%wis+1}{%cha+1}{humangod}{humanskin}{beard}{humangender}"
+			}
 		},
 		"Kenku": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 3,
 				"stats.abilityScores.intelligence": 1,
 				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str-2}{%dex+3}{%int+1}{%wis+1}{%cha+1}{%height-28}{%lawful-2}{%chaotic+3}{%good-1}{%evil-1}{%moralneutral+2}{humangod}{kenkuskin}{%age-6}{gender}{kenkuquirks}{$beard=}{$hair=}{kenkuname}{$name=$kenkuname}"
+				"stats.abilityScores.charisma": 1,
+				"description.height": -28,
+				"stats.alignmentTendancies.ethical.positive": -2,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -1,
+				"stats.alignmentTendancies.moral.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": -1,
+				"description.age": -6
+			}
 		},
 		"Lizardfolk": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.dexterity": 1,
 				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str+2}{%int+2}{%con+1}{%wis+2}{%cha-2}{%height+15}{%lawful+2}{%chaotic-3}{%good-1}{%evil-1}{%moralneutral+2}{dragongod}{lizardskin}{%age-4}{lizardgender}{lizardtraits1}{lizardquirks}{$beard=}{dragonhair}"
-		},
-		"Medusa": {
-			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%dex+3}{%con+2}{%int+1}{%wis+2}{%cha+3}{medusa}{%lawful+2}{lightweight}{goodface}{humangod}{orcskin}{ageBonus}{medusaname}{medusaveil}"
+				"stats.abilityScores.intelligence": -2,
+				"stats.abilityScores.wisdom": 2,
+				"stats.abilityScores.charisma": -2,
+				"description.height": 15,
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.ethical.negative": -3,
+				"stats.alignmentTendancies.moral.positive": -1,
+				"stats.alignmentTendancies.moral.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": -1,
+				"description.age": -4
+			}
 		},
 		"Orc": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str+5}{%dex-1}{%con+5}{%int-4}{%wis-3}{%height+20}{%good-2}{%chaotic+3}{%evil+2}{strongweight}{orcgod}{orcskin}{beard}{orcgender}"
+				"stats.abilityScores.strength": 5,
+				"stats.abilityScores.dexterity": -1,
+				"stats.abilityScores.constitution": 5,
+				"stats.abilityScores.intelligence": -4,
+				"stats.abilityScores.wisdom": -3,
+				"description.height": 20,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
 		},
 		"Tabaxi": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.strength": -1,
+				"stats.abilityScores.dexterity": 4,
 				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str-1}{%dex+4}{%con+1}{%int+2}{%wis-2}{%cha+1}{%height+10}{%good+1}{%chaotic+3}{lightweight}{humangod}{$hair=}{$beard=}{gender}{$name=}{tabaxiname}{tabaxiskin}{tabaxiobsession}{tabaxiquirks}"
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": -2,
+				"stats.abilityScores.charisma": 1,
+				"description.height": 10,
+				"stats.alignmentTendancies.moral.positive": 1,
+				"stats.alignmentTendancies.ethical.negative": 3
+			}
 		},
 		"Tiefling": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%con-1}{%int+2}{%cha+3}{%chaotic+3}{lightweight}{humangod}{tieflinggoodorevil}{tieflingskin}{beard}{gender}{ageBonus}"
+				"stats.abilityScores.constitution": -1,
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.charisma": 3,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"description.age": "{roll:traits/age/bonus}"
+			}
 		},
 		"Triton": {
 			"modifiers": {
-				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str+2}{%con+2}{%cha+1}{%lawful+2}{%good+3}{%evil-3}{humangod}{tritonskin}{tritonhair}{tritongender}{$beard=}{%age+%age}{tritonquirks}"
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.constitution": 2,
+				"stats.abilityScores.charisma": 1,
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.negative": -3,
+				"description.age": "$(description.age*description.age)"
+			}
 		},
 		"Troglodyte": {
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
-				"stats.abilityScores.dexterity": 1,
 				"stats.abilityScores.constitution": 1,
-				"stats.abilityScores.intelligence": 1,
-				"stats.abilityScores.wisdom": 1,
-				"stats.abilityScores.charisma": 1
-			},
-			"v": "{%str+1}{%con+1}{%int-4}{%cha-4}{%good-2}{%chaotic+3}{%evil+2}{humangod}{lizardskin}{$beard=}{dragonhair}{gender}{goblinname}"
+				"stats.abilityScores.intelligence": -4,
+				"stats.abilityScores.charisma": -4,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
 		}
 	}
 }

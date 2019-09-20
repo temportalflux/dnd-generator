@@ -1,0 +1,11 @@
+{
+	"rows": [
+		{
+			"value": "{roll:race/Human/name-$(identity.genderIdentity)}"
+		},
+		{
+			"value": "{roll:race/Dwarf/name-$(identity.genderIdentity)}"
+		}
+	],
+	"values": {}
+}

@@ -1,44 +1,34 @@
 {
 	"rows": [
 		{
-			"value": "black",
-			"weight": 1
+			"value": "black"
 		},
 		{
-			"value": "blue",
-			"weight": 1
+			"value": "blue"
 		},
 		{
-			"value": "brass",
-			"weight": 1
+			"value": "brass"
 		},
 		{
-			"value": "bronze",
-			"weight": 1
+			"value": "bronze"
 		},
 		{
-			"value": "copper",
-			"weight": 1
+			"value": "copper"
 		},
 		{
-			"value": "gold",
-			"weight": 1
+			"value": "gold"
 		},
 		{
-			"value": "green",
-			"weight": 1
+			"value": "green"
 		},
 		{
-			"value": "red",
-			"weight": 1
+			"value": "red"
 		},
 		{
-			"value": "silver",
-			"weight": 1
+			"value": "silver"
 		},
 		{
-			"value": "white",
-			"weight": 1
+			"value": "white"
 		}
 	],
 	"values": {}

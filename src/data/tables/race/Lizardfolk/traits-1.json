@@ -1,0 +1,17 @@
+{
+	"rows": [
+		{
+			"value": "",
+			"weight": 12
+		},
+		{
+			"value": "memory",
+			"weight": 31
+		}
+	],
+	"values": {
+		"memory": {
+			"value": "$(identity.pronouns.singular) has a hard time understanding and remembering names that aren't descriptive."
+		}
+	}
+}

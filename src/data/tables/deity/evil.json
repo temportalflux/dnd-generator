@@ -1,36 +1,30 @@
 {
 	"rows": [
 		{
-			"weight": 1,
 			"value": "Talos"
 		},
 		{
-			"weight": 1,
 			"value": "Asmodeus"
 		},
 		{
-			"weight": 1,
 			"value": "Bane"
 		},
 		{
-			"weight": 1,
 			"value": "Cyric"
 		},
 		{
-			"weight": 1,
 			"value": "Lolth"
 		},
 		{
-			"weight": 1,
 			"value": "Shar"
 		},
 		{
-			"weight": 2,
-			"value": "{roll:deity/demon}"
+			"value": "{roll:deity/demon}",
+			"weight": 2
 		},
 		{
-			"weight": 2,
-			"value": "{roll:deity/devil}"
+			"value": "{roll:deity/devil}",
+			"weight": 2
 		}
 	],
 	"values": {

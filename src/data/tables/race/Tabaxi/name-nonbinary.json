@@ -1,0 +1,51 @@
+{
+	"rows": [
+		{
+			"value": [
+				"{roll:race/Tabaxi/name/first}",
+				"{roll:race/Tabaxi/name/noun}"
+			],
+			"weight": 10
+		},
+		{
+			"value": [
+				"{roll:race/Tabaxi/name/noun}",
+				"{roll:race/Tabaxi/name/last}"
+			],
+			"weight": 4
+		},
+		{
+			"value": [
+				"{roll:race/Tabaxi/name/number}",
+				"{roll:race/Tabaxi/name/noun}"
+			],
+			"weight": 6
+		},
+		{
+			"value": [
+				"{roll:race/Tabaxi/name/number}",
+				"{roll:race/Tabaxi/name/noun}",
+				"{roll:race/Tabaxi/name/last}"
+			],
+			"weight": 4
+		},
+		{
+			"value": [
+				"{roll:race/Tabaxi/name/number}",
+				"{roll:race/Tabaxi/name/first}",
+				"{roll:race/Tabaxi/name/noun}"
+			],
+			"weight": 4
+		},
+		{
+			"value": [
+				"{roll:race/Tabaxi/name/number}",
+				"{roll:race/Tabaxi/name/first}",
+				"{roll:race/Tabaxi/name/noun}",
+				"{roll:race/Tabaxi/name/last}"
+			],
+			"weight": 1
+		}
+	],
+	"values": {}
+}

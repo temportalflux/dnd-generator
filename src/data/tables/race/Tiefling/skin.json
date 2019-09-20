@@ -1,0 +1,21 @@
+{
+	"rows": [
+		{
+			"value": "red",
+			"weight": 4
+		},
+		{
+			"value": "purple",
+			"weight": 2
+		},
+		{
+			"value": "blue",
+			"weight": 3
+		},
+		{
+			"value": "{roll:race/Human/skin}",
+			"weight": 1
+		}
+	],
+	"values": {}
+}

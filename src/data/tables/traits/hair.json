@@ -5,57 +5,32 @@
 			"weight": 8
 		},
 		{
-			"value": "styled",
 			"weight": 35,
-			"generationOrder": [
-				"description.hair.length",
-				"description.hair.style",
-				"description.hair.color"
-			],
-			"fields": {
-				"description.hair.length": "{roll:traits/hair/length}",
-				"description.hair.style": "{roll:traits/hair/style}",
-				"description.hair.color": "{roll:traits/hair/color}"
-			}
+			"generators": {
+				"length": "{roll:traits/hair/length}",
+				"style": "{roll:traits/hair/style}",
+				"color": "{roll:traits/hair/color}"
+			},
+			"value": "$(length), $(style), $(color) hair"
 		},
 		{
-			"value": "shaved",
 			"weight": 4,
-			"generationOrder": [
-				"description.hair.length",
-				"description.hair.style",
-				"description.hair.color",
-				"description.hair.side"
-			],
-			"fields": {
-				"description.hair.length": "{roll:traits/hair/length}",
-				"description.hair.style": "{roll:traits/hair/style}",
-				"description.hair.color": "{roll:traits/hair/color}",
-				"description.hair.side": "{roll:common/rightLeft}"
-			}
+			"generators": {
+				"length": "{roll:traits/hair/length}",
+				"style": "{roll:traits/hair/style}",
+				"color": "{roll:traits/hair/color}",
+				"side": "{roll:common/rightLeft}"
+			},
+			"value": "$(length), $(style), $(color) hair shaved on the $(side) side"
 		},
 		{
-			"value": "mohawk",
 			"weight": 3,
-			"generationOrder": [
-				"description.hair.length",
-				"description.hair.color"
-			],
-			"fields": {
-				"description.hair.length": "{roll:traits/hair/length}",
-				"description.hair.color": "{roll:traits/hair/color}"
-			}
+			"generators": {
+				"length": "{roll:traits/hair/length}",
+				"color": "{roll:traits/hair/color}"
+			},
+			"value": "$(length), $(color) mohawk"
 		}
 	],
-	"values": {
-		"styled": {
-			"value": "$(description.hair.length), $(description.hair.style), $(description.hair.color) hair"
-		},
-		"shaved": {
-			"value": "$(description.hair.length), $(description.hair.style), $(description.hair.color) hair shaved on the $(description.hair.side) side"
-		},
-		"mohawk": {
-			"value": "$(description.hair.length), $(description.hair.color) mohawk"
-		}
-	}
+	"values": {}
 }

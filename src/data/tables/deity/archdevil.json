@@ -1,44 +1,34 @@
 {
 	"rows": [
 		{
-			"value": "Bel",
-			"weight": 1
+			"value": "Bel"
 		},
 		{
-			"value": "Dispater",
-			"weight": 1
+			"value": "Dispater"
 		},
 		{
-			"value": "Mammon",
-			"weight": 1
+			"value": "Mammon"
 		},
 		{
-			"value": "Fierna",
-			"weight": 1
+			"value": "Fierna"
 		},
 		{
-			"value": "Belial",
-			"weight": 1
+			"value": "Belial"
 		},
 		{
-			"value": "Prince Levistus",
-			"weight": 1
+			"value": "Prince Levistus"
 		},
 		{
-			"value": "Glasya",
-			"weight": 1
+			"value": "Glasya"
 		},
 		{
-			"value": "Baalzebul",
-			"weight": 1
+			"value": "Baalzebul"
 		},
 		{
-			"value": "Mephistopheles",
-			"weight": 1
+			"value": "Mephistopheles"
 		},
 		{
-			"value": "Asmodeus",
-			"weight": 1
+			"value": "Asmodeus"
 		}
 	],
 	"values": {

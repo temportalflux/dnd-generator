@@ -43,13 +43,13 @@
         {
             "value": "Zorquan", 
             "weight": 4
+        },
+        {
+            "value": "{roll:race/Human/deity}", 
+            "weight": 15
         }
     ], 
     "todo": [
-        {
-            "v": "{humangod}", 
-            "w": 15
-        }
     ], 
     "values": {
         "Asgorath": "{$goddescr=, the Ninefold Dragon, head deity of dragonkind.(All alignments)}", 

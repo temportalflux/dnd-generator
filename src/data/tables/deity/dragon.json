@@ -1,48 +1,39 @@
 {
 	"rows": [
 		{
-			"weight": 5,
-			"value": "Asgorath"
+			"value": "Asgorath",
+			"weight": 5
 		},
 		{
-			"weight": 1,
 			"value": "Astilabor"
 		},
 		{
-			"weight": 1,
 			"value": "Bahamut"
 		},
 		{
-			"weight": 1,
 			"value": "Faluzure"
 		},
 		{
-			"weight": 1,
 			"value": "Garyx"
 		},
 		{
-			"weight": 1,
 			"value": "Hlal"
 		},
 		{
-			"weight": 1,
 			"value": "Kereska"
 		},
 		{
-			"weight": 1,
 			"value": "Lendys"
 		},
 		{
-			"weight": 1,
 			"value": "Tamara"
 		},
 		{
-			"weight": 1,
 			"value": "Task"
 		},
 		{
-			"weight": 4,
-			"value": "Zorquan"
+			"value": "Zorquan",
+			"weight": 4
 		}
 	],
 	"values": {
