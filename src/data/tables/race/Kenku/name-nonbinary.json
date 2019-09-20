@@ -1,111 +1,111 @@
 {
 	"rows": [
 		{
-			"value": "Wind",
+			"value": ["Wind"],
 			"weight": 3
 		},
 		{
-			"value": "Gust",
+			"value": ["Gust"],
 			"weight": 3
 		},
 		{
-			"value": "Stream",
+			"value": ["Stream"],
 			"weight": 3
 		},
 		{
-			"value": "Coins",
+			"value": ["Coins"],
 			"weight": 3
 		},
 		{
-			"value": "Keys",
+			"value": ["Keys"],
 			"weight": 3
 		},
 		{
-			"value": "Laugh",
+			"value": ["Laugh"],
 			"weight": 3
 		},
 		{
-			"value": "Thunder",
+			"value": ["Thunder"],
 			"weight": 3
 		},
 		{
-			"value": "Door Slam",
+			"value": ["Door Slam"],
 			"weight": 3
 		},
 		{
-			"value": "Knock Knock",
+			"value": ["Knock Knock"],
 			"weight": 3
 		},
 		{
-			"value": "Small Bell",
+			"value": ["Small Bell"],
 			"weight": 3
 		},
 		{
-			"value": "Big Bell",
+			"value": ["Big Bell"],
 			"weight": 3
 		},
 		{
-			"value": "Yawn",
+			"value": ["Yawn"],
 			"weight": 3
 		},
 		{
-			"value": "Waterfall",
+			"value": ["Waterfall"],
 			"weight": 3
 		},
 		{
-			"value": "Applause",
+			"value": ["Applause"],
 			"weight": 3
 		},
 		{
-			"value": "Clap",
+			"value": ["Clap"],
 			"weight": 3
 		},
 		{
-			"value": "Shatter",
+			"value": ["Shatter"],
 			"weight": 3
 		},
 		{
-			"value": "Fog Horn",
+			"value": ["Fog Horn"],
 			"weight": 1
 		},
 		{
-			"value": "Crickets",
+			"value": ["Crickets"],
 			"weight": 3
 		},
 		{
-			"value": "Fart",
+			"value": ["Fart"],
 			"weight": 2
 		},
 		{
-			"value": "Tap Tap",
+			"value": ["Tap Tap"],
 			"weight": 3
 		},
 		{
-			"value": "Whirr",
+			"value": ["Whirr"],
 			"weight": 3
 		},
 		{
-			"value": "Grill",
+			"value": ["Grill"],
 			"weight": 3
 		},
 		{
-			"value": "Bubble",
+			"value": ["Bubble"],
 			"weight": 3
 		},
 		{
-			"value": "Steam",
+			"value": ["Steam"],
 			"weight": 3
 		},
 		{
-			"value": "Crash",
+			"value": ["Crash"],
 			"weight": 3
 		},
 		{
-			"value": "Cough",
+			"value": ["Cough"],
 			"weight": 3
 		},
 		{
-			"value": "Rattle",
+			"value": ["Rattle"],
 			"weight": 3
 		}
 	],

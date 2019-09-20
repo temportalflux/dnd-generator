@@ -6,12 +6,12 @@
 		},
 		{
 			"weight": 35,
-			"generators": {
+			"default": {
+				"type": "normal",
 				"length": "{roll:traits/hair/length}",
 				"style": "{roll:traits/hair/style}",
 				"color": "{roll:race/Triton/hair-color.json}"
-			},
-			"value": "$(length), $(style), $(color) hair"
+			}
 		}
 	],
 	"values": {}

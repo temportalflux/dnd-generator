@@ -1,151 +1,151 @@
 {
 	"rows": [
 		{
-			"value": "Ambition"
+			"value": ["Ambition"]
 		},
 		{
-			"value": "Confidence"
+			"value": ["Confidence"]
 		},
 		{
-			"value": "Diligence"
+			"value": ["Diligence"]
 		},
 		{
-			"value": "Detachment"
+			"value": ["Detachment"]
 		},
 		{
-			"value": "Determination"
+			"value": ["Determination"]
 		},
 		{
-			"value": "Devotion"
+			"value": ["Devotion"]
 		},
 		{
-			"value": "Discernment"
+			"value": ["Discernment"]
 		},
 		{
-			"value": "Discretion"
+			"value": ["Discretion"]
 		},
 		{
-			"value": "Discipline"
+			"value": ["Discipline"]
 		},
 		{
-			"value": "Faith"
+			"value": ["Faith"]
 		},
 		{
-			"value": "Chaos"
+			"value": ["Chaos"]
 		},
 		{
-			"value": "Fortitude"
+			"value": ["Fortitude"]
 		},
 		{
-			"value": "Focus"
+			"value": ["Focus"]
 		},
 		{
-			"value": "Grace"
+			"value": ["Grace"]
 		},
 		{
-			"value": "Idealism"
+			"value": ["Idealism"]
 		},
 		{
-			"value": "Honor"
+			"value": ["Honor"]
 		},
 		{
-			"value": "Impartiality"
+			"value": ["Impartiality"]
 		},
 		{
-			"value": "Justice"
+			"value": ["Justice"]
 		},
 		{
-			"value": "Knowledge"
+			"value": ["Knowledge"]
 		},
 		{
-			"value": "Liberality"
+			"value": ["Liberality"]
 		},
 		{
-			"value": "Loyalty"
+			"value": ["Loyalty"]
 		},
 		{
-			"value": "Magnanimity"
+			"value": ["Magnanimity"]
 		},
 		{
-			"value": "Majesty"
+			"value": ["Majesty"]
 		},
 		{
-			"value": "Obedience"
+			"value": ["Obedience"]
 		},
 		{
-			"value": "Perseverance"
+			"value": ["Perseverance"]
 		},
 		{
-			"value": "Persistence"
+			"value": ["Persistence"]
 		},
 		{
-			"value": "Patience"
+			"value": ["Patience"]
 		},
 		{
-			"value": "Reliability"
+			"value": ["Reliability"]
 		},
 		{
-			"value": "Resolution"
+			"value": ["Resolution"]
 		},
 		{
-			"value": "Silence"
+			"value": ["Silence"]
 		},
 		{
-			"value": "Toughness"
+			"value": ["Toughness"]
 		},
 		{
-			"value": "Strength"
+			"value": ["Strength"]
 		},
 		{
-			"value": "Truth"
+			"value": ["Truth"]
 		},
 		{
-			"value": "Unity"
+			"value": ["Unity"]
 		},
 		{
-			"value": "Vigor"
+			"value": ["Vigor"]
 		},
 		{
-			"value": "Vitality"
+			"value": ["Vitality"]
 		},
 		{
-			"value": "Wisdom"
+			"value": ["Wisdom"]
 		},
 		{
-			"value": "Wonder"
+			"value": ["Wonder"]
 		},
 		{
-			"value": "Zeal"
+			"value": ["Zeal"]
 		},
 		{
-			"value": "Desire"
+			"value": ["Desire"]
 		},
 		{
-			"value": "Possession"
+			"value": ["Possession"]
 		},
 		{
-			"value": "Reverence"
+			"value": ["Reverence"]
 		},
 		{
-			"value": "Song"
+			"value": ["Song"]
 		},
 		{
-			"value": "Atonement"
+			"value": ["Atonement"]
 		},
 		{
-			"value": "Art"
+			"value": ["Art"]
 		},
 		{
-			"value": "Skilled"
+			"value": ["Skilled"]
 		},
 		{
-			"value": "Order"
+			"value": ["Order"]
 		},
 		{
-			"value": "Prudence"
+			"value": ["Prudence"]
 		},
 		{
-			"value": "Wit"
+			"value": ["Wit"]
 		}
 	],
 	"values": {

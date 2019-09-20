@@ -1,16 +1,22 @@
 {
 	"rows": [
 		{
-			"value": "$(identity.pronouns.singular) has been outcast for a murder $(identity.pronouns.singular) was forced to commit. }"
+			"value": [
+				"$(identity.pronouns.singular) has been outcast for a murder $(identity.pronouns.singular) was forced to commit. }"
+			]
 		},
 		{
-			"value": "$(identity.pronouns.singular) has been outcast for a murder $(identity.pronouns.singular) committed.",
+			"value": [
+				"$(identity.pronouns.singular) has been outcast for a murder $(identity.pronouns.singular) committed."
+			],
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 2
 			}
 		},
 		{
-			"value": "$(identity.pronouns.singular) got lost years ago and could never find $(identity.pronouns.possessive) home.",
+			"value": [
+				"$(identity.pronouns.singular) got lost years ago and could never find $(identity.pronouns.possessive) home."
+			],
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2
 			}
@@ -19,25 +25,39 @@
 			"generators": {
 				"murdererRace": "{roll:race/allergy}"
 			},
-			"value": "$(identity.pronouns.possessive) clan was slain by $(murdererRace)."
+			"value": [
+				"$(identity.pronouns.possessive) clan was slain by $(murdererRace)."
+			]
 		},
 		{
-			"value": "$(identity.pronouns.possessive) homeland was destroyed by an earthquake."
+			"value": [
+				"$(identity.pronouns.possessive) homeland was destroyed by an earthquake."
+			]
 		},
 		{
-			"value": "$(identity.pronouns.possessive) homeland was destroyed by a tsunami."
+			"value": [
+				"$(identity.pronouns.possessive) homeland was destroyed by a tsunami."
+			]
 		},
 		{
-			"value": "$(identity.pronouns.possessive) homeland was destroyed by a viscious storm."
+			"value": [
+				"$(identity.pronouns.possessive) homeland was destroyed by a viscious storm."
+			]
 		},
 		{
-			"value": "$(identity.pronouns.possessive) can sit for hours watching plants grow."
+			"value": [
+				"$(identity.pronouns.possessive) can sit for hours watching plants grow."
+			]
 		},
 		{
-			"value": "$(identity.pronouns.possessive) tries to keep away from crowds."
+			"value": [
+				"$(identity.pronouns.possessive) tries to keep away from crowds."
+			]
 		},
 		{
-			"value": "$(identity.pronouns.singular) follows omens to determine $(identity.pronouns.possessive) daily actions.",
+			"value": [
+				"$(identity.pronouns.singular) follows omens to determine $(identity.pronouns.possessive) daily actions."
+			],
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}

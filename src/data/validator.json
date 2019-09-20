@@ -25,7 +25,7 @@
 	},
 	"tables.common.skin": {
 		"key": "table",
-		"type": "string"
+		"type": "object"
 	},
 	"tables.creatures.dragon.color": {
 		"key": "table",
@@ -108,52 +108,52 @@
 		"type": ""
 	},
 	"tables.race": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.age": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "number"
 	},
 	"tables.traits.alignment.tendancy": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "number"
 	},
 	"tables.traits.alignmentMoral": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "number"
 	},
 	"tables.traits.eyecolor": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "number"
 	},
 	"tables.traits.face": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.traits.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.traits.height": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "number"
 	},
 	"tables.traits.modifier": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.quirk.nature": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.skin.nonhuman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.traits.skin.scaleTexture": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.tattoo.adjective": {
 		"key": "",
@@ -164,8 +164,8 @@
 		"type": ""
 	},
 	"tables.traits.weight": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.hooks.hooks1": {
 		"key": "",
@@ -176,16 +176,16 @@
 		"type": ""
 	},
 	"tables.identity.sexualOrientation.gayLesbian.man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.identity.sexualOrientation.gayLesbian.nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.identity.sexualOrientation.gayLesbian.woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.occupation.Job.Entertainer": {
 		"key": "",
@@ -216,68 +216,68 @@
 		"type": ""
 	},
 	"tables.race.Aasimar.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Aasimar.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Aasimar.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Aasimar.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Aasimar.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Aasimar.quirk-evil": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Aasimar.quirk-good": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Aasimar.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.common.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dragonborn.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Dragonborn.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Dragonborn.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dragonborn.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dragonborn.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dragonborn.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dragonborn.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Dragonborn": {
 		"key": "",
@@ -288,404 +288,400 @@
 		"type": ""
 	},
 	"tables.race.Dwarf.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Dwarf.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Dwarf.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dwarf.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dwarf.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dwarf.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dwarf.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Dwarf.surname": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Dwarf": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Elf.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Elf.Drow.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Elf.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Elf.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Elf.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Elf.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Elf.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Elf.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Elf.surname": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Elf": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Firbolg.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Firbolg.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Firbolg.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Firbolg.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Firbolg.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Firbolg.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Firbolg.quirksRace": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Firbolg.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Gnome.beard": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Gnome.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Gnome.name.man-1": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name.man-2": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name.man-3": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name.man-4": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name.woman-1": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name.woman-2": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name.woman-3": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name.woman-4": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Gnome.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Gnome.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Gnome.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Gnome.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Gnome.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Gnome": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Goblin.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goblin.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Goblin.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goblin.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goblin.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goblin.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Goliath.deity": {
-		"key": "",
-		"type": ""
-	},
-	"tables.race.Goliath.hair copy": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Goliath.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goliath.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goliath.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goliath.names.adjective": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.animal-action": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.animal-noun": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.craft-action": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.craft-noun": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.fighting-action": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.fighting-noun": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.mystic-action": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.mystic-noun": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.names.noun": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goliath.quirks-1": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goliath.quirks-2": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goliath.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Goliath.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Dwarf.beard": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Half-Dwarf.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Half-Dwarf.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Dwarf.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Dwarf.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Dwarf.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Dwarf.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Elf.beard": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Half-Elf.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Half-Elf.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Elf.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Elf.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Elf.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Elf.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Orc.beard": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Half-Orc.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Half-Orc.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Orc.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Orc.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Orc.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Half-Orc.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Halfling.beard": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Halfling.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Halfling.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Halfling.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Halfling.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Halfling.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Halfling.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Halfling.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Halfling.surname": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Halfling": {
 		"key": "",
@@ -696,52 +692,52 @@
 		"type": ""
 	},
 	"tables.race.Human.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Human.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Human.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Human.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Human.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Human.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Human.surname": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Kenku.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Kenku.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Kenku.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Kenku.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Kenku.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Kenku.names.kenkunameanimal": {
 		"key": "",
@@ -760,52 +756,52 @@
 		"type": ""
 	},
 	"tables.race.Kenku.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Kenku.skin.color": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Kenku.skin.featherTexture": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Kenku.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Lizardfolk.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Lizardfolk.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Lizardfolk.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Lizardfolk.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Lizardfolk.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Lizardfolk.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Lizardfolk.skin.color": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Lizardfolk.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Lizardfolk.traits-1": {
 		"key": "",
@@ -820,80 +816,80 @@
 		"type": ""
 	},
 	"tables.race.Orc.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Orc.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Orc.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Orc.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Orc.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Orc.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Orc.surname": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tabaxi.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Tabaxi.name.first": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.name.last": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.name.noun": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.name.number": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tabaxi.quirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tabaxi.skin.color": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.skin.pattern": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.skin.texture": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tabaxi.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Tabaxi.trait-1": {
 		"key": "",
@@ -908,112 +904,112 @@
 		"type": ""
 	},
 	"tables.race.Tiefling.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Tiefling.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Tiefling.name.evil": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name.good": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name.neutral": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name.unaligned": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name-evil": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name-good": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Tiefling.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Triton.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Triton.hair-color": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Triton.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Triton.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Triton.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Triton.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Triton.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Triton.surname": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Triton.tritonquirks": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Troglodyte.deity": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Troglodyte.hair": {
 		"key": "",
 		"type": ""
 	},
 	"tables.race.Troglodyte.name-man": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Troglodyte.name-nonbinary": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Troglodyte.name-woman": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "array"
 	},
 	"tables.race.Troglodyte.skin": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.traits.age.add": {
 		"key": "",

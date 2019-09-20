@@ -1,136 +1,136 @@
 {
 	"rows": [
 		{
-			"value": "Akchar"
+			"value": ["Akchar"]
 		},
 		{
-			"value": "Ammeros"
+			"value": ["Ammeros"]
 		},
 		{
-			"value": "Andlech"
+			"value": ["Andlech"]
 		},
 		{
-			"value": "Aradani"
+			"value": ["Aradani"]
 		},
 		{
-			"value": "Arkzer"
+			"value": ["Arkzer"]
 		},
 		{
-			"value": "Arrias"
+			"value": ["Arrias"]
 		},
 		{
-			"value": "Ashes"
+			"value": ["Ashes"]
 		},
 		{
-			"value": "Beldani"
+			"value": ["Beldani"]
 		},
 		{
-			"value": "Damthos"
+			"value": ["Damthos"]
 		},
 		{
-			"value": "Dharxes"
+			"value": ["Dharxes"]
 		},
 		{
-			"value": "Dibis"
+			"value": ["Dibis"]
 		},
 		{
-			"value": "Dimwure"
+			"value": ["Dimwure"]
 		},
 		{
-			"value": "Ekthor"
+			"value": ["Ekthor"]
 		},
 		{
-			"value": "Euphoria"
+			"value": ["Euphoria"]
 		},
 		{
-			"value": "Grilia"
+			"value": ["Grilia"]
 		},
 		{
-			"value": "Iathor"
+			"value": ["Iathor"]
 		},
 		{
-			"value": "Karzire"
+			"value": ["Karzire"]
 		},
 		{
-			"value": "Kosus"
+			"value": ["Kosus"]
 		},
 		{
-			"value": "Kyris"
+			"value": ["Kyris"]
 		},
 		{
-			"value": "Lokeus"
+			"value": ["Lokeus"]
 		},
 		{
-			"value": "Magoria"
+			"value": ["Magoria"]
 		},
 		{
-			"value": "Maledos"
+			"value": ["Maledos"]
 		},
 		{
-			"value": "Maloth"
+			"value": ["Maloth"]
 		},
 		{
-			"value": "Mavrakas"
+			"value": ["Mavrakas"]
 		},
 		{
-			"value": "Natari"
+			"value": ["Natari"]
 		},
 		{
-			"value": "Nephira"
+			"value": ["Nephira"]
 		},
 		{
-			"value": "Nithyis"
+			"value": ["Nithyis"]
 		},
 		{
-			"value": "Pescyra"
+			"value": ["Pescyra"]
 		},
 		{
-			"value": "Reakas"
+			"value": ["Reakas"]
 		},
 		{
-			"value": "Royola"
+			"value": ["Royola"]
 		},
 		{
-			"value": "Salthor"
+			"value": ["Salthor"]
 		},
 		{
-			"value": "Seirilypsis"
+			"value": ["Seirilypsis"]
 		},
 		{
-			"value": "Shalech"
+			"value": ["Shalech"]
 		},
 		{
-			"value": "Shazer"
+			"value": ["Shazer"]
 		},
 		{
-			"value": "Skaros"
+			"value": ["Skaros"]
 		},
 		{
-			"value": "Urakos"
+			"value": ["Urakos"]
 		},
 		{
-			"value": "Uricis"
+			"value": ["Uricis"]
 		},
 		{
-			"value": "Urixikas"
+			"value": ["Urixikas"]
 		},
 		{
-			"value": "Valshoon"
+			"value": ["Valshoon"]
 		},
 		{
-			"value": "Yorazis"
+			"value": ["Yorazis"]
 		},
 		{
-			"value": "Yuzis"
+			"value": ["Yuzis"]
 		},
 		{
-			"value": "Zorcius"
+			"value": ["Zorcius"]
 		},
 		{
-			"value": "Zorris"
+			"value": ["Zorris"]
 		},
 		{
-			"value": "Zorrut"
+			"value": ["Zorrut"]
 		}
 	],
 	"values": {}

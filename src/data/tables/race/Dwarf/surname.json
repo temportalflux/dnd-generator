@@ -1,154 +1,254 @@
 {
 	"rows": [
 		{
-			"value": "Strongmaster"
+			"value": [
+				"Strongmaster"
+			]
 		},
 		{
-			"value": "Brightmaker"
+			"value": [
+				"Brightmaker"
+			]
 		},
 		{
-			"value": "Minebreaker"
+			"value": [
+				"Minebreaker"
+			]
 		},
 		{
-			"value": "Earthdelver"
+			"value": [
+				"Earthdelver"
+			]
 		},
 		{
-			"value": "Brightmaster"
+			"value": [
+				"Brightmaster"
+			]
 		},
 		{
-			"value": "Forgemaul"
+			"value": [
+				"Forgemaul"
+			]
 		},
 		{
-			"value": "Bonegrip"
+			"value": [
+				"Bonegrip"
+			]
 		},
 		{
-			"value": "Forgegrog"
+			"value": [
+				"Forgegrog"
+			]
 		},
 		{
-			"value": "Brickbrow"
+			"value": [
+				"Brickbrow"
+			]
 		},
 		{
-			"value": "Frostmail"
+			"value": [
+				"Frostmail"
+			]
 		},
 		{
-			"value": "Metalbreaker"
+			"value": [
+				"Metalbreaker"
+			]
 		},
 		{
-			"value": "Sapphirebraids"
+			"value": [
+				"Sapphirebraids"
+			]
 		},
 		{
-			"value": "Magmabrew"
+			"value": [
+				"Magmabrew"
+			]
 		},
 		{
-			"value": "Hammermail"
+			"value": [
+				"Hammermail"
+			]
 		},
 		{
-			"value": "Underfury"
+			"value": [
+				"Underfury"
+			]
 		},
 		{
-			"value": "Kegshaper"
+			"value": [
+				"Kegshaper"
+			]
 		},
 		{
-			"value": "Mountainriver"
+			"value": [
+				"Mountainriver"
+			]
 		},
 		{
-			"value": "Merrybringer"
+			"value": [
+				"Merrybringer"
+			]
 		},
 		{
-			"value": "Goldback"
+			"value": [
+				"Goldback"
+			]
 		},
 		{
-			"value": "Drakegut"
+			"value": [
+				"Drakegut"
+			]
 		},
 		{
-			"value": "Steelback"
+			"value": [
+				"Steelback"
+			]
 		},
 		{
-			"value": "Wraithmail"
+			"value": [
+				"Wraithmail"
+			]
 		},
 		{
-			"value": "Noblebringer"
+			"value": [
+				"Noblebringer"
+			]
 		},
 		{
-			"value": "Reddigger"
+			"value": [
+				"Reddigger"
+			]
 		},
 		{
-			"value": "Wyvernflayer"
+			"value": [
+				"Wyvernflayer"
+			]
 		},
 		{
-			"value": "Hardhelm"
+			"value": [
+				"Hardhelm"
+			]
 		},
 		{
-			"value": "Bottlehelm"
+			"value": [
+				"Bottlehelm"
+			]
 		},
 		{
-			"value": "Smeltmaster"
+			"value": [
+				"Smeltmaster"
+			]
 		},
 		{
-			"value": "Coalgrog"
+			"value": [
+				"Coalgrog"
+			]
 		},
 		{
-			"value": "Thunderhead"
+			"value": [
+				"Thunderhead"
+			]
 		},
 		{
-			"value": "Lavashield"
+			"value": [
+				"Lavashield"
+			]
 		},
 		{
-			"value": "Bittershaper"
+			"value": [
+				"Bittershaper"
+			]
 		},
 		{
-			"value": "Thunderdelver"
+			"value": [
+				"Thunderdelver"
+			]
 		},
 		{
-			"value": "Largegut"
+			"value": [
+				"Largegut"
+			]
 		},
 		{
-			"value": "Whitestone"
+			"value": [
+				"Whitestone"
+			]
 		},
 		{
-			"value": "Hardcloak"
+			"value": [
+				"Hardcloak"
+			]
 		},
 		{
-			"value": "Rubyminer"
+			"value": [
+				"Rubyminer"
+			]
 		},
 		{
-			"value": "Frosthand"
+			"value": [
+				"Frosthand"
+			]
 		},
 		{
-			"value": "Pebbleback"
+			"value": [
+				"Pebbleback"
+			]
 		},
 		{
-			"value": "Blackbender"
+			"value": [
+				"Blackbender"
+			]
 		},
 		{
-			"value": "Flintmace"
+			"value": [
+				"Flintmace"
+			]
 		},
 		{
-			"value": "Shadowhand"
+			"value": [
+				"Shadowhand"
+			]
 		},
 		{
-			"value": "Mudbelt"
+			"value": [
+				"Mudbelt"
+			]
 		},
 		{
-			"value": "Flintgranite"
+			"value": [
+				"Flintgranite"
+			]
 		},
 		{
-			"value": "Graybelt"
+			"value": [
+				"Graybelt"
+			]
 		},
 		{
-			"value": "Barrelchin"
+			"value": [
+				"Barrelchin"
+			]
 		},
 		{
-			"value": "Bronzehide"
+			"value": [
+				"Bronzehide"
+			]
 		},
 		{
-			"value": "Bloodgrip"
+			"value": [
+				"Bloodgrip"
+			]
 		},
 		{
-			"value": "Bluntchin"
+			"value": [
+				"Bluntchin"
+			]
 		},
 		{
-			"value": "Brightbeard"
+			"value": [
+				"Brightbeard"
+			]
 		}
 	],
 	"values": {}

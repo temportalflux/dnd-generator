@@ -1,16 +1,13 @@
 {
 	"rows": [
 		{
-			"value": [
-				"{roll:race/Tabaxi/skin/texture}",
-				"{roll:race/Tabaxi/skin/pattern}",
-				"{roll:race/Tabaxi/skin/color}"
-			]
+			"default": {
+				"texture": "{roll:race/Tabaxi/skin/texture}",
+				"pattern": "{roll:race/Tabaxi/skin/pattern}",
+				"color": "{roll:race/Tabaxi/skin/color}",
+				"type": "fur"
+			}
 		}
 	],
-	"values": {
-		".*": {
-			"value": "$(value[0]) $(value[1]) $(value[2]) fur"
-		}
-	}
+	"values": {}
 }

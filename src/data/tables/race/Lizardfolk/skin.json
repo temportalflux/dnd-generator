@@ -1,15 +1,12 @@
 {
 	"rows": [
 		{
-			"value": [
-				"{roll:traits/skin/scaleTexture}",
-				"{roll:race/Lizardfolk/skin/color}"
-			]
+			"default": {
+				"texture": "{roll:traits/skin/scaleTexture}",
+				"color": "{roll:race/Lizardfolk/skin/color}",
+				"type": "scales"
+			}
 		}
 	],
-	"values": {
-		".*": {
-			"value": "$(value[0]) $(value[1]) scales"
-		}
-	}
+	"values": {}
 }

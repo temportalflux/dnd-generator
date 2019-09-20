@@ -1,15 +1,24 @@
 {
 	"rows": [
 		{
-			"value": "red",
+			"value": {
+				"color": "red",
+				"type": "skin"
+			},
 			"weight": 4
 		},
 		{
-			"value": "purple",
+			"value": {
+				"color": "purple",
+				"type": "skin"
+			},
 			"weight": 2
 		},
 		{
-			"value": "blue",
+			"value": {
+				"color": "blue",
+				"type": "skin"
+			},
 			"weight": 3
 		},
 		{

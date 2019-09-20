@@ -1,154 +1,154 @@
 {
 	"rows": [
 		{
-			"value": "Adald"
+			"value": ["Adald"]
 		},
 		{
-			"value": "Algast"
+			"value": ["Algast"]
 		},
 		{
-			"value": "Ancin"
+			"value": ["Ancin"]
 		},
 		{
-			"value": "Ardic"
+			"value": ["Ardic"]
 		},
 		{
-			"value": "Arryn"
+			"value": ["Arryn"]
 		},
 		{
-			"value": "Artin"
+			"value": ["Artin"]
 		},
 		{
-			"value": "Baldo"
+			"value": ["Baldo"]
 		},
 		{
-			"value": "Cottolm"
+			"value": ["Cottolm"]
 		},
 		{
-			"value": "Daso"
+			"value": ["Daso"]
 		},
 		{
-			"value": "Falco"
+			"value": ["Falco"]
 		},
 		{
-			"value": "Fastinbr"
+			"value": ["Fastinbr"]
 		},
 		{
-			"value": "Fastolph"
+			"value": ["Fastolph"]
 		},
 		{
-			"value": "Fastrard"
+			"value": ["Fastrard"]
 		},
 		{
-			"value": "Feric"
+			"value": ["Feric"]
 		},
 		{
-			"value": "Ferim"
+			"value": ["Ferim"]
 		},
 		{
-			"value": "Fosco"
+			"value": ["Fosco"]
 		},
 		{
-			"value": "Gariad"
+			"value": ["Gariad"]
 		},
 		{
-			"value": "Gauwis"
+			"value": ["Gauwis"]
 		},
 		{
-			"value": "George"
+			"value": ["George"]
 		},
 		{
-			"value": "Gery"
+			"value": ["Gery"]
 		},
 		{
-			"value": "Giles"
+			"value": ["Giles"]
 		},
 		{
-			"value": "Gorme"
+			"value": ["Gorme"]
 		},
 		{
-			"value": "Griffin"
+			"value": ["Griffin"]
 		},
 		{
-			"value": "Gyleon"
+			"value": ["Gyleon"]
 		},
 		{
-			"value": "Halfo"
+			"value": ["Halfo"]
 		},
 		{
-			"value": "Halfroc"
+			"value": ["Halfroc"]
 		},
 		{
-			"value": "Hamfo"
+			"value": ["Hamfo"]
 		},
 		{
-			"value": "Harand"
+			"value": ["Harand"]
 		},
 		{
-			"value": "Hardo"
+			"value": ["Hardo"]
 		},
 		{
-			"value": "Herim"
+			"value": ["Herim"]
 		},
 		{
-			"value": "Hildo"
+			"value": ["Hildo"]
 		},
 		{
-			"value": "Holfo"
+			"value": ["Holfo"]
 		},
 		{
-			"value": "Holme"
+			"value": ["Holme"]
 		},
 		{
-			"value": "Igoc"
+			"value": ["Igoc"]
 		},
 		{
-			"value": "Johny"
+			"value": ["Johny"]
 		},
 		{
-			"value": "Lasym"
+			"value": ["Lasym"]
 		},
 		{
-			"value": "Mado"
+			"value": ["Mado"]
 		},
 		{
-			"value": "Perin"
+			"value": ["Perin"]
 		},
 		{
-			"value": "Phames"
+			"value": ["Phames"]
 		},
 		{
-			"value": "Phomas"
+			"value": ["Phomas"]
 		},
 		{
-			"value": "Pinas"
+			"value": ["Pinas"]
 		},
 		{
-			"value": "Reward"
+			"value": ["Reward"]
 		},
 		{
-			"value": "Rewilh"
+			"value": ["Rewilh"]
 		},
 		{
-			"value": "Rime"
+			"value": ["Rime"]
 		},
 		{
-			"value": "Sengras"
+			"value": ["Sengras"]
 		},
 		{
-			"value": "Tinbrand"
+			"value": ["Tinbrand"]
 		},
 		{
-			"value": "Tiny"
+			"value": ["Tiny"]
 		},
 		{
-			"value": "Tolme"
+			"value": ["Tolme"]
 		},
 		{
-			"value": "Vigo"
+			"value": ["Vigo"]
 		},
 		{
-			"value": "Wilhye"
+			"value": ["Wilhye"]
 		}
 	],
 	"values": {}

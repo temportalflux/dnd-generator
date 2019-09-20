@@ -22,5 +22,12 @@
 			"value": "chocolate"
 		}
 	],
-	"values": {}
+	"values": {
+		"{regex:.*}": {
+			"value": {
+				"color": "$(value)",
+				"type": "skin"
+			}
+		}
+	}
 }

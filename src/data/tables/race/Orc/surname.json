@@ -1,139 +1,139 @@
 {
 	"rows": [
 		{
-			"value": "Axeblade"
+			"value": ["Axeblade"]
 		},
 		{
-			"value": "Battlefury"
+			"value": ["Battlefury"]
 		},
 		{
-			"value": "Blackarm"
+			"value": ["Blackarm"]
 		},
 		{
-			"value": "Blackblade"
+			"value": ["Blackblade"]
 		},
 		{
-			"value": "Bloodbasher"
+			"value": ["Bloodbasher"]
 		},
 		{
-			"value": "Burningarm"
+			"value": ["Burningarm"]
 		},
 		{
-			"value": "Burningsong"
+			"value": ["Burningsong"]
 		},
 		{
-			"value": "Clanfang"
+			"value": ["Clanfang"]
 		},
 		{
-			"value": "Clanripper"
+			"value": ["Clanripper"]
 		},
 		{
-			"value": "Clansword"
+			"value": ["Clansword"]
 		},
 		{
-			"value": "Darkhorn"
+			"value": ["Darkhorn"]
 		},
 		{
-			"value": "Deathhammer"
+			"value": ["Deathhammer"]
 		},
 		{
-			"value": "Deathsong"
+			"value": ["Deathsong"]
 		},
 		{
-			"value": "Doomhorn"
+			"value": ["Doomhorn"]
 		},
 		{
-			"value": "Doommaul"
+			"value": ["Doommaul"]
 		},
 		{
-			"value": "Dreamslayer"
+			"value": ["Dreamslayer"]
 		},
 		{
-			"value": "Forebinder"
+			"value": ["Forebinder"]
 		},
 		{
-			"value": "Foreeye"
+			"value": ["Foreeye"]
 		},
 		{
-			"value": "Gorecleaver"
+			"value": ["Gorecleaver"]
 		},
 		{
-			"value": "Gorefang"
+			"value": ["Gorefang"]
 		},
 		{
-			"value": "Hellaxe"
+			"value": ["Hellaxe"]
 		},
 		{
-			"value": "Hellfang"
+			"value": ["Hellfang"]
 		},
 		{
-			"value": "Ironfury"
+			"value": ["Ironfury"]
 		},
 		{
-			"value": "Ironscream"
+			"value": ["Ironscream"]
 		},
 		{
-			"value": "Ironseeker"
+			"value": ["Ironseeker"]
 		},
 		{
-			"value": "Laughingfang"
+			"value": ["Laughingfang"]
 		},
 		{
-			"value": "Laughingseeker"
+			"value": ["Laughingseeker"]
 		},
 		{
-			"value": "Ragemaw"
+			"value": ["Ragemaw"]
 		},
 		{
-			"value": "Redbleeder"
+			"value": ["Redbleeder"]
 		},
 		{
-			"value": "Redrage"
+			"value": ["Redrage"]
 		},
 		{
-			"value": "Rockbasher"
+			"value": ["Rockbasher"]
 		},
 		{
-			"value": "Shadowslayer"
+			"value": ["Shadowslayer"]
 		},
 		{
-			"value": "Skullbinder"
+			"value": ["Skullbinder"]
 		},
 		{
-			"value": "Steelfang"
+			"value": ["Steelfang"]
 		},
 		{
-			"value": "Steelslayer"
+			"value": ["Steelslayer"]
 		},
 		{
-			"value": "Steelsplitter"
+			"value": ["Steelsplitter"]
 		},
 		{
-			"value": "Stonesplitter"
+			"value": ["Stonesplitter"]
 		},
 		{
-			"value": "Thunderbasher"
+			"value": ["Thunderbasher"]
 		},
 		{
-			"value": "Thundersword"
+			"value": ["Thundersword"]
 		},
 		{
-			"value": "Tuskhorn"
+			"value": ["Tuskhorn"]
 		},
 		{
-			"value": "Tusksnarl"
+			"value": ["Tusksnarl"]
 		},
 		{
-			"value": "Tuskwolf"
+			"value": ["Tuskwolf"]
 		},
 		{
-			"value": "Wareye"
+			"value": ["Wareye"]
 		},
 		{
-			"value": "Warmaw"
+			"value": ["Warmaw"]
 		},
 		{
-			"value": "Wolfripper"
+			"value": ["Wolfripper"]
 		}
 	],
 	"values": {}

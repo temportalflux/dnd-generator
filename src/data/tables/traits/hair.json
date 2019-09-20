@@ -1,35 +1,37 @@
 {
 	"rows": [
 		{
-			"value": "a bald head",
+			"default": {
+				"type": "bald"
+			},
 			"weight": 8
 		},
 		{
 			"weight": 35,
-			"generators": {
+			"default": {
+				"type": "normal",
 				"length": "{roll:traits/hair/length}",
 				"style": "{roll:traits/hair/style}",
 				"color": "{roll:traits/hair/color}"
-			},
-			"value": "$(length), $(style), $(color) hair"
+			}
 		},
 		{
 			"weight": 4,
-			"generators": {
+			"default": {
+				"type": "shaved",
 				"length": "{roll:traits/hair/length}",
 				"style": "{roll:traits/hair/style}",
 				"color": "{roll:traits/hair/color}",
-				"side": "{roll:common/rightLeft}"
-			},
-			"value": "$(length), $(style), $(color) hair shaved on the $(side) side"
+				"side": "{roll:common/rightLeftBoth}"
+			}
 		},
 		{
 			"weight": 3,
-			"generators": {
+			"default": {
+				"type": "mohawk",
 				"length": "{roll:traits/hair/length}",
 				"color": "{roll:traits/hair/color}"
-			},
-			"value": "$(length), $(color) mohawk"
+			}
 		}
 	],
 	"values": {}

@@ -1,15 +1,12 @@
 {
 	"rows": [
 		{
-			"value": [
-				"{roll:race/Kenku/skin/featherTexture}",
-				"{roll:race/Kenku/skin/color}"
-			]
+			"default": {
+				"texture": "{roll:race/Kenku/skin/featherTexture}",
+				"color": "{roll:race/Kenku/skin/color}",
+				"type": "feathers"
+			}
 		}
 	],
-	"values": {
-		".*": {
-			"value": "$(value[0]) $(value[1]) feathers"
-		}
-	}
+	"values": {}
 }

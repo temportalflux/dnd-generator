@@ -1,172 +1,172 @@
 {
 	"rows": [
 		{
-			"value": "Acceptance"
+			"value": ["Acceptance"]
 		},
 		{
-			"value": "Beauty"
+			"value": ["Beauty"]
 		},
 		{
-			"value": "Benevolence"
+			"value": ["Benevolence"]
 		},
 		{
-			"value": "Bravery"
+			"value": ["Bravery"]
 		},
 		{
-			"value": "Caring"
+			"value": ["Caring"]
 		},
 		{
-			"value": "Caution"
+			"value": ["Caution"]
 		},
 		{
-			"value": "Charity"
+			"value": ["Charity"]
 		},
 		{
-			"value": "Compassion"
+			"value": ["Compassion"]
 		},
 		{
-			"value": "Cooperation"
+			"value": ["Cooperation"]
 		},
 		{
-			"value": "Courage"
+			"value": ["Courage"]
 		},
 		{
-			"value": "Creativity"
+			"value": ["Creativity"]
 		},
 		{
-			"value": "Curiosity"
+			"value": ["Curiosity"]
 		},
 		{
-			"value": "Eloquence"
+			"value": ["Eloquence"]
 		},
 		{
-			"value": "Empathy"
+			"value": ["Empathy"]
 		},
 		{
-			"value": "Enthusiasm"
+			"value": ["Enthusiasm"]
 		},
 		{
-			"value": "Faithfulness"
+			"value": ["Faithfulness"]
 		},
 		{
-			"value": "Flexibility"
+			"value": ["Flexibility"]
 		},
 		{
-			"value": "Forbearance"
+			"value": ["Forbearance"]
 		},
 		{
-			"value": "Forgiveness"
+			"value": ["Forgiveness"]
 		},
 		{
-			"value": "Friendliness"
+			"value": ["Friendliness"]
 		},
 		{
-			"value": "Frugality"
+			"value": ["Frugality"]
 		},
 		{
-			"value": "Generosity"
+			"value": ["Generosity"]
 		},
 		{
-			"value": "Gentleness"
+			"value": ["Gentleness"]
 		},
 		{
-			"value": "Gratitude"
+			"value": ["Gratitude"]
 		},
 		{
-			"value": "Helpfulness"
+			"value": ["Helpfulness"]
 		},
 		{
-			"value": "Honesty"
+			"value": ["Honesty"]
 		},
 		{
-			"value": "Hope"
+			"value": ["Hope"]
 		},
 		{
-			"value": "Humbleness"
+			"value": ["Humbleness"]
 		},
 		{
-			"value": "Humility"
+			"value": ["Humility"]
 		},
 		{
-			"value": "Humor"
+			"value": ["Humor"]
 		},
 		{
-			"value": "Innocence"
+			"value": ["Innocence"]
 		},
 		{
-			"value": "Integrity"
+			"value": ["Integrity"]
 		},
 		{
-			"value": "Joyfulness"
+			"value": ["Joyfulness"]
 		},
 		{
-			"value": "Life"
+			"value": ["Life"]
 		},
 		{
-			"value": "Love"
+			"value": ["Love"]
 		},
 		{
-			"value": "Meekness"
+			"value": ["Meekness"]
 		},
 		{
-			"value": "Mercy"
+			"value": ["Mercy"]
 		},
 		{
-			"value": "Moderation"
+			"value": ["Moderation"]
 		},
 		{
-			"value": "Modesty"
+			"value": ["Modesty"]
 		},
 		{
-			"value": "Peace"
+			"value": ["Peace"]
 		},
 		{
-			"value": "Piety"
+			"value": ["Piety"]
 		},
 		{
-			"value": "Purity"
+			"value": ["Purity"]
 		},
 		{
-			"value": "Restraint"
+			"value": ["Restraint"]
 		},
 		{
-			"value": "Reverance"
+			"value": ["Reverance"]
 		},
 		{
-			"value": "Righteousness"
+			"value": ["Righteousness"]
 		},
 		{
-			"value": "Simplicity"
+			"value": ["Simplicity"]
 		},
 		{
-			"value": "Sincerity"
+			"value": ["Sincerity"]
 		},
 		{
-			"value": "Sobriety"
+			"value": ["Sobriety"]
 		},
 		{
-			"value": "Temperance"
+			"value": ["Temperance"]
 		},
 		{
-			"value": "Tolerance"
+			"value": ["Tolerance"]
 		},
 		{
-			"value": "Tranquility"
+			"value": ["Tranquility"]
 		},
 		{
-			"value": "Trust"
+			"value": ["Trust"]
 		},
 		{
-			"value": "Glee"
+			"value": ["Glee"]
 		},
 		{
-			"value": "Sanctity"
+			"value": ["Sanctity"]
 		},
 		{
-			"value": "Bliss"
+			"value": ["Bliss"]
 		},
 		{
-			"value": "Cherish"
+			"value": ["Cherish"]
 		}
 	],
 	"values": {}

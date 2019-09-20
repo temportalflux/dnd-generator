@@ -1,31 +1,51 @@
 {
 	"rows": [
 		{
-			"value": "a bald head",
+			"default": {
+				"type": "bald"
+			},
 			"weight": 8
 		},
 		{
-			"value": "a bald head with tribal tatoos",
+			"default": {
+				"type": "bald",
+				"tattoos": "tribal"
+			},
 			"weight": 5
 		},
 		{
-			"value": "a bald head with abstract tatoos",
+			"default": {
+				"type": "bald",
+				"tattoos": "abstract"
+			},
 			"weight": 2
 		},
 		{
-			"value": "a bald head with fancy tatoos",
+			"default": {
+				"type": "bald",
+				"tattoos": "fancy"
+			},
 			"weight": 2
 		},
 		{
-			"value": "a bald head with vivid tatoos",
+			"default": {
+				"type": "bald",
+				"tattoos": "vivid"
+			},
 			"weight": 2
 		},
 		{
-			"value": "a bald head with bulky tatoos",
+			"default": {
+				"type": "bald",
+				"tattoos": "bulky"
+			},
 			"weight": 2
 		},
 		{
-			"value": "a bald head with gorgeous tatoos",
+			"default": {
+				"type": "bald",
+				"tattoos": "gorgeous"
+			},
 			"weight": 2
 		}
 	],

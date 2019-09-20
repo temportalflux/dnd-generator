@@ -1,127 +1,127 @@
 {
 	"rows": [
 		{
-			"value": "Abomination"
+			"value": ["Abomination"]
 		},
 		{
-			"value": "Agony"
+			"value": ["Agony"]
 		},
 		{
-			"value": "Barbary"
+			"value": ["Barbary"]
 		},
 		{
-			"value": "Battle"
+			"value": ["Battle"]
 		},
 		{
-			"value": "Conflict"
+			"value": ["Conflict"]
 		},
 		{
-			"value": "Corruption"
+			"value": ["Corruption"]
 		},
 		{
-			"value": "Death"
+			"value": ["Death"]
 		},
 		{
-			"value": "Defiance"
+			"value": ["Defiance"]
 		},
 		{
-			"value": "Demise"
+			"value": ["Demise"]
 		},
 		{
-			"value": "Destruction"
+			"value": ["Destruction"]
 		},
 		{
-			"value": "Dissenssion"
+			"value": ["Dissenssion"]
 		},
 		{
-			"value": "Distress"
+			"value": ["Distress"]
 		},
 		{
-			"value": "Fear"
+			"value": ["Fear"]
 		},
 		{
-			"value": "Filth"
+			"value": ["Filth"]
 		},
 		{
-			"value": "Fright"
+			"value": ["Fright"]
 		},
 		{
-			"value": "Hate"
+			"value": ["Hate"]
 		},
 		{
-			"value": "Hatred"
+			"value": ["Hatred"]
 		},
 		{
-			"value": "Horror"
+			"value": ["Horror"]
 		},
 		{
-			"value": "Hurt"
+			"value": ["Hurt"]
 		},
 		{
-			"value": "Misery"
+			"value": ["Misery"]
 		},
 		{
-			"value": "Pain"
+			"value": ["Pain"]
 		},
 		{
-			"value": "Panic"
+			"value": ["Panic"]
 		},
 		{
-			"value": "Ruination"
+			"value": ["Ruination"]
 		},
 		{
-			"value": "Stifle"
+			"value": ["Stifle"]
 		},
 		{
-			"value": "Strife"
+			"value": ["Strife"]
 		},
 		{
-			"value": "Terror"
+			"value": ["Terror"]
 		},
 		{
-			"value": "Trouble"
+			"value": ["Trouble"]
 		},
 		{
-			"value": "War"
+			"value": ["War"]
 		},
 		{
-			"value": "Torment"
+			"value": ["Torment"]
 		},
 		{
-			"value": "Grief"
+			"value": ["Grief"]
 		},
 		{
-			"value": "Despair"
+			"value": ["Despair"]
 		},
 		{
-			"value": "Anguish"
+			"value": ["Anguish"]
 		},
 		{
-			"value": "Gloom"
+			"value": ["Gloom"]
 		},
 		{
-			"value": "Melancholy"
+			"value": ["Melancholy"]
 		},
 		{
-			"value": "Woe"
+			"value": ["Woe"]
 		},
 		{
-			"value": "Sorrow"
+			"value": ["Sorrow"]
 		},
 		{
-			"value": "Misfortune"
+			"value": ["Misfortune"]
 		},
 		{
-			"value": "Deceit"
+			"value": ["Deceit"]
 		},
 		{
-			"value": "Extreme"
+			"value": ["Extreme"]
 		},
 		{
-			"value": "End"
+			"value": ["End"]
 		},
 		{
-			"value": "Trickery"
+			"value": ["Trickery"]
 		}
 	],
 	"values": {}

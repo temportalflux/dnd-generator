@@ -16,5 +16,12 @@
 			"value": "golden"
 		}
 	],
-	"values": {}
+	"values": {
+		"{regex:.*}": {
+			"value": {
+				"color": "$(value)",
+				"type": "skin"
+			}
+		}
+	}
 }

@@ -17,5 +17,12 @@
 			"weight": 4
 		}
 	],
-	"values": {}
+	"values": {
+		"{regex:.*}": {
+			"value": {
+				"color": "$(value)",
+				"type": "skin"
+			}
+		}
+	}
 }
