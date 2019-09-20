@@ -1,48 +1,44 @@
 {
 	"rows": [
 		{
-			"value": "good-mod",
+			"default": {
+				"modifier": "{roll:traits/looks/goodModifier}",
+				"quality": "{roll:traits/looks/good}"
+			},
 			"weight": 6
 		},
 		{
-			"value": "good",
+			"default": {
+				"quality": "{roll:traits/looks/good}"
+			},
 			"weight": 14
 		},
 		{
-			"value": "bad-mod",
+			"default": {
+				"modifier": "{roll:traits/looks/badModifier}",
+				"quality": "{roll:traits/looks/bad}"
+			},
 			"weight": 4
 		},
 		{
-			"value": "bad",
+			"default": {
+				"quality": "{roll:traits/looks/bad}"
+			},
 			"weight": 10
 		},
 		{
-			"value": "normal-mod",
+			"default": {
+				"modifier": "{roll:traits/looks/normalModifier}",
+				"quality": "{roll:traits/looks/normal}"
+			},
 			"weight": 8
 		},
 		{
-			"value": "normal",
+			"default": {
+				"quality": "{roll:traits/looks/normal}"
+			},
 			"weight": 30
 		}
 	],
-	"values": {
-		"good": {
-			"value": "{roll:traits/looks/good}"
-		},
-		"good-mod": {
-			"value": "{roll:traits/looks/goodModifier} {roll:traits/looks/good}"
-		},
-		"bad": {
-			"value": "{roll:traits/looks/bad}"
-		},
-		"bad-mod": {
-			"value": "{roll:traits/looks/badModifier} {roll:traits/looks/bad}"
-		},
-		"normal": {
-			"value": "{roll:traits/looks/normal}"
-		},
-		"normal-mod": {
-			"value": "{roll:traits/looks/normalModifier} {roll:traits/looks/normal}"
-		}
-	}
+	"values": {}
 }

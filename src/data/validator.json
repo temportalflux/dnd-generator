@@ -280,12 +280,12 @@
 		"type": "object"
 	},
 	"tables.race.Dragonborn": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Dwarf.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Dwarf.deity": {
 		"key": "table",
@@ -320,8 +320,8 @@
 		"type": "array"
 	},
 	"tables.race.Dwarf": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Elf.deity": {
 		"key": "table",
@@ -360,8 +360,8 @@
 		"type": "array"
 	},
 	"tables.race.Elf": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Firbolg.deity": {
 		"key": "table",
@@ -396,8 +396,8 @@
 		"type": "object"
 	},
 	"tables.race.Gnome.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Gnome.deity": {
 		"key": "table",
@@ -460,8 +460,8 @@
 		"type": "object"
 	},
 	"tables.race.Gnome": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Goblin.deity": {
 		"key": "table",
@@ -564,8 +564,8 @@
 		"type": "object"
 	},
 	"tables.race.Half-Dwarf.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Dwarf.deity": {
 		"key": "table",
@@ -592,8 +592,8 @@
 		"type": "object"
 	},
 	"tables.race.Half-Elf.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Elf.deity": {
 		"key": "table",
@@ -620,8 +620,8 @@
 		"type": "object"
 	},
 	"tables.race.Half-Orc.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Half-Orc.deity": {
 		"key": "table",
@@ -648,8 +648,8 @@
 		"type": "object"
 	},
 	"tables.race.Halfling.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Halfling.deity": {
 		"key": "table",
@@ -684,12 +684,12 @@
 		"type": "array"
 	},
 	"tables.race.Halfling": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Human.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Human.deity": {
 		"key": "table",
@@ -740,20 +740,20 @@
 		"type": "array"
 	},
 	"tables.race.Kenku.names.kenkunameanimal": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Kenku.names.kenkunamefighting": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Kenku.names.kenkunamemetal": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Kenku.names.kenkunamequiet": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Kenku.quirks": {
 		"key": "table",
@@ -812,8 +812,8 @@
 		"type": ""
 	},
 	"tables.race.Orc.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Orc.deity": {
 		"key": "table",
@@ -900,8 +900,8 @@
 		"type": ""
 	},
 	"tables.race.Tiefling.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Tiefling.deity": {
 		"key": "table",
@@ -956,8 +956,8 @@
 		"type": "string"
 	},
 	"tables.race.Triton.hair-color": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.race.Triton.hair": {
 		"key": "table",
@@ -992,8 +992,8 @@
 		"type": "string"
 	},
 	"tables.race.Troglodyte.hair": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.race.Troglodyte.name-man": {
 		"key": "table",
@@ -1011,72 +1011,64 @@
 		"key": "table",
 		"type": "object"
 	},
-	"tables.traits.age.add": {
-		"key": "",
-		"type": ""
-	},
 	"tables.traits.age.bonus": {
-		"key": "",
-		"type": ""
-	},
-	"tables.traits.age.multiply": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "number"
 	},
 	"tables.traits.face.attractiveness": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.traits.face.beard.length": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.beard.shape": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.beard": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "object"
 	},
 	"tables.traits.face.looks.bad": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.looks.badModifier": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.looks.good": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.looks.goodModifier": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.looks.normal": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.looks.normalModifier": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.face.shape": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.hair.color": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.hair.length": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	},
 	"tables.traits.hair.style": {
-		"key": "",
-		"type": ""
+		"key": "table",
+		"type": "string"
 	}
 }
