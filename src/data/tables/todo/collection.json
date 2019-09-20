@@ -1,60 +1,15 @@
-{
-    "rows": [
-        {
-            "value": "old pennies. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "teeth from cadavers. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "cute rocks. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "weird bones. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "bottle corks. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "iridescent feathers. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "sea shells. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "dried rose petals. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "tiny animal skulls. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "handkerchiefs. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "buttons. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "thimbles. ", 
-            "weight": 2
-        }, 
-        {
-            "value": "labels. ", 
-            "weight": 2
-        }
-    ], 
-    "values": {
-        "teeth from cadavers. ": "{%evil+1}", 
-        "tiny animal skulls. ": "{%evil+1}"
-    }
-}
+[
+  { "w":2, "v":"{$quirks+old pennies. }"},
+  { "w":1, "v":"{$quirks+teeth from cadavers. }{%evil+1}"},
+  { "w":2, "v":"{$quirks+cute rocks. }"},
+  { "w":2, "v":"{$quirks+weird bones. }"},
+  { "w":2, "v":"{$quirks+bottle corks. }"},
+  { "w":2, "v":"{$quirks+iridescent feathers. }"},
+  { "w":2, "v":"{$quirks+sea shells. }"},
+  { "w":2, "v":"{$quirks+dried rose petals. }"},
+  { "w":1, "v":"{$quirks+tiny animal skulls. }{%evil+1}"},
+  { "w":2, "v":"{$quirks+handkerchiefs. }"},
+  { "w":2, "v":"{$quirks+buttons. }"},
+  { "w":2, "v":"{$quirks+thimbles. }"},
+  { "w":2, "v":"{$quirks+labels. }"}
+]

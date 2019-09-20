@@ -1,53 +1,14 @@
-{
-    "rows": [
-        {
-            "value": "battleaxe", 
-            "weight": 1
-        }, 
-        {
-            "value": "flail", 
-            "weight": 1
-        }, 
-        {
-            "value": "greataxe", 
-            "weight": 1
-        }, 
-        {
-            "value": "glaive", 
-            "weight": 1
-        }, 
-        {
-            "value": "greatsword", 
-            "weight": 1
-        }, 
-        {
-            "value": "lance", 
-            "weight": 1
-        }, 
-        {
-            "value": "longsword", 
-            "weight": 1
-        }, 
-        {
-            "value": "maul", 
-            "weight": 1
-        }, 
-        {
-            "value": "morningstar", 
-            "weight": 1
-        }, 
-        {
-            "value": "pike", 
-            "weight": 1
-        }, 
-        {
-            "value": "trident", 
-            "weight": 1
-        }, 
-        {
-            "value": "warhammer", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$weapon=battleaxe}"},
+  { "w":1, "v":"{$weapon=flail}"},
+  { "w":1, "v":"{$weapon=greataxe}"},
+  { "w":1, "v":"{$weapon=glaive}"},
+  { "w":1, "v":"{$weapon=greatsword}"},
+  { "w":1, "v":"{$weapon=lance}"},
+  { "w":1, "v":"{$weapon=longsword}"},
+  { "w":1, "v":"{$weapon=maul}"},
+  { "w":1, "v":"{$weapon=morningstar}"},
+  { "w":1, "v":"{$weapon=pike}"},
+  { "w":1, "v":"{$weapon=trident}"},
+  { "w":1, "v":"{$weapon=warhammer}"}
+]

@@ -1,0 +1,25 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"value": "sporadically"
+		},
+		{
+			"weight": 2,
+			"value": "occasionally"
+		},
+		{
+			"weight": 2,
+			"value": "intermittently"
+		},
+		{
+			"weight": 2,
+			"value": "frequently"
+		},
+		{
+			"weight": 1,
+			"value": "constantly"
+		}
+	],
+	"values": {}
+}

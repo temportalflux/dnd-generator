@@ -1,77 +1,20 @@
-{
-    "rows": [
-        {
-            "value": "an annoying", 
-            "weight": 1
-        }, 
-        {
-            "value": "a patronizing", 
-            "weight": 1
-        }, 
-        {
-            "value": "a sarcastic", 
-            "weight": 1
-        }, 
-        {
-            "value": "an impetuous", 
-            "weight": 1
-        }, 
-        {
-            "value": "a sardonic", 
-            "weight": 1
-        }, 
-        {
-            "value": "a stoic", 
-            "weight": 1
-        }, 
-        {
-            "value": "a fabulous", 
-            "weight": 1
-        }, 
-        {
-            "value": "a critical", 
-            "weight": 1
-        }, 
-        {
-            "value": "a seductive", 
-            "weight": 1
-        }, 
-        {
-            "value": "an inquisitive", 
-            "weight": 1
-        }, 
-        {
-            "value": "a lascivious", 
-            "weight": 1
-        }, 
-        {
-            "value": "an ironic", 
-            "weight": 1
-        }, 
-        {
-            "value": "a shy", 
-            "weight": 1
-        }, 
-        {
-            "value": "an aggressive", 
-            "weight": 1
-        }, 
-        {
-            "value": "a passive aggressive", 
-            "weight": 1
-        }, 
-        {
-            "value": "a confrontational", 
-            "weight": 1
-        }, 
-        {
-            "value": "an apathetic", 
-            "weight": 1
-        }, 
-        {
-            "value": "a sailor-mouthed", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$personality=an annoying}"},
+  { "w":1, "v":"{$personality=a patronizing}"},
+  { "w":1, "v":"{$personality=a sarcastic}"},
+  { "w":1, "v":"{$personality=an impetuous}"},
+  { "w":1, "v":"{$personality=a sardonic}"},
+  { "w":1, "v":"{$personality=a stoic}"},
+  { "w":1, "v":"{$personality=a fabulous}"},
+  { "w":1, "v":"{$personality=a critical}"},
+  { "w":1, "v":"{$personality=a seductive}"},
+  { "w":1, "v":"{$personality=an inquisitive}"},
+  { "w":1, "v":"{$personality=a lascivious}"},
+  { "w":1, "v":"{$personality=an ironic}"},
+  { "w":1, "v":"{$personality=a shy}"},
+  { "w":1, "v":"{$personality=an aggressive}"},
+  { "w":1, "v":"{$personality=a passive aggressive}"},
+  { "w":1, "v":"{$personality=a confrontational}"},
+  { "w":1, "v":"{$personality=an apathetic}"},
+  { "w":1, "v":"{$personality=a sailor-mouthed}"}
+]

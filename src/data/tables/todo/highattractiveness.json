@@ -1,14 +1,4 @@
-{
-    "rows": [], 
-    "todo": [
-        {
-            "v": "{goodfacemod}{goodlooking}{$faceshape+$mod}", 
-            "w": 5
-        }, 
-        {
-            "v": "{goodlooking}", 
-            "w": 2
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":5, "v":"{goodfacemod}{goodlooking}{$faceshape+$mod}"},
+  { "w":2, "v":"{goodlooking}"}
+]

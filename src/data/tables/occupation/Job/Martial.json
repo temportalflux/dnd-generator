@@ -1,0 +1,29 @@
+{
+	"rows": [
+		{
+			"value": "Bodyguard",
+			"weight": 3
+		},
+		{
+			"value": "Bounty Hunter",
+			"weight": 1
+		},
+		{
+			"value": "Forester",
+			"weight": 1
+		},
+		{
+			"value": "Gladiator",
+			"weight": 1
+		},
+		{
+			"value": "Jailer",
+			"weight": 1
+		},
+		{
+			"value": "Soldier",
+			"weight": 3
+		}
+	],
+	"values": {}
+}

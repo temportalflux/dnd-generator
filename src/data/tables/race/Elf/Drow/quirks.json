@@ -1,0 +1,64 @@
+{
+	"rows": [
+		{
+			"weight": 30,
+			"value": ""
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is disgusted by human architecture."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) doesn't understand patriarchal society."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) feels more comfortable when away from the sun."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is secretly captivated by humans."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has a deep knowledge of ancient secrets."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has a deep knowledge of ancient magic."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) knows all the best ways to torture someone.{%evil+3}"
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) enjoys torturing small animals.{%evil+2}"
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) will only speak common if absolutely forced to."
+		},
+		{
+			"weight": 4,
+			"value": "$(identity.pronouns.singular) never knows the current time and date."
+		},
+		{
+			"weight": 4,
+			"value": "$(identity.pronouns.singular) is always late."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is deeply xenophobic."
+		},
+		{
+			"weight": 3,
+			"generators": {
+				"frequency": "{roll:common/frequency}"
+			},
+			"value": "$(identity.pronouns.singular) $(frequency) uses terms from a different language as $(identity.pronouns.singular) speaks."
+		}
+	],
+	"values": {}
+}

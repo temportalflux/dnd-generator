@@ -1,33 +1,9 @@
-{
-    "rows": [
-        {
-            "value": "desk", 
-            "weight": 1
-        }, 
-        {
-            "value": "table", 
-            "weight": 1
-        }, 
-        {
-            "value": "chair", 
-            "weight": 1
-        }, 
-        {
-            "value": "ladder", 
-            "weight": 1
-        }, 
-        {
-            "value": "couch", 
-            "weight": 1
-        }, 
-        {
-            "value": "bed", 
-            "weight": 1
-        }, 
-        {
-            "value": "rocking chair", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$furniture=desk}"},
+  { "w":1, "v":"{$furniture=table}"},
+  { "w":1, "v":"{$furniture=chair}"},
+  { "w":1, "v":"{$furniture=ladder}"},
+  { "w":1, "v":"{$furniture=couch}"},
+  { "w":1, "v":"{$furniture=bed}"},
+  { "w":1, "v":"{$furniture=rocking chair}"}
+]

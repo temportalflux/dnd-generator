@@ -1,21 +1,6 @@
-{
-    "rows": [
-        {
-            "value": " ", 
-            "weight": 20
-        }, 
-        {
-            "value": ", sunburned, ", 
-            "weight": 3
-        }, 
-        {
-            "value": ", dirty, ", 
-            "weight": 1
-        }, 
-        {
-            "value": ", pockmarked, ", 
-            "weight": 3
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":20, "v":"{$skintone= }"},
+  { "w":3, "v":"{$skintone=, sunburned, }"},
+  { "w":1, "v":"{$skintone=, dirty, }"},
+  { "w":3, "v":"{$skintone=, pockmarked, }"}
+]

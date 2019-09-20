@@ -1,29 +1,8 @@
-{
-    "rows": [
-        {
-            "value": "dark green ", 
-            "weight": 2
-        }, 
-        {
-            "value": "light green ", 
-            "weight": 2
-        }, 
-        {
-            "value": "black ", 
-            "weight": 3
-        }, 
-        {
-            "value": "brown ", 
-            "weight": 3
-        }, 
-        {
-            "value": "white ", 
-            "weight": 1
-        }, 
-        {
-            "value": "green ", 
-            "weight": 2
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":2, "v":"{$hair+dark green }"},
+  { "w":2, "v":"{$hair+light green }"},
+  { "w":3, "v":"{$hair+black }"},
+  { "w":3, "v":"{$hair+brown }"},
+  { "w":1, "v":"{$hair+white }"},
+  { "w":2, "v":"{$hair+green }"}
+]

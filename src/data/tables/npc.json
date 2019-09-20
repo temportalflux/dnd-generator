@@ -26,7 +26,9 @@
 		"identity.name",
 		"description.age",
 
-		"TODO occupation",
+		"occupation.type",
+		"occupation.profession",
+
 		"TODO hooks",
 		"TODO traits",
 		"TODO special physical",
@@ -38,8 +40,6 @@
 
 
 
-		"occupation.type",
-		"occupation.profession",
 
 		"relationships",
 		"hooks"
@@ -147,10 +147,10 @@
 		},
 		"occupation": {
 			"type": {
-				"default": "TODO: class || job"
+				"default": "{roll:occupation/type}"
 			},
 			"profession": {
-				"value": "TODO: selection for (class || job)"
+				"value": "{roll:occupation/$(occupation.type)}"
 			}
 		},
 		"relationships": {

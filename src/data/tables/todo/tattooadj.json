@@ -1,53 +1,14 @@
-{
-    "rows": [
-        {
-            "value": "", 
-            "weight": 12
-        }, 
-        {
-            "value": "fresh ", 
-            "weight": 1
-        }, 
-        {
-            "value": "small ", 
-            "weight": 1
-        }, 
-        {
-            "value": "large ", 
-            "weight": 1
-        }, 
-        {
-            "value": "tiny ", 
-            "weight": 1
-        }, 
-        {
-            "value": "elaborate ", 
-            "weight": 1
-        }, 
-        {
-            "value": "badly done ", 
-            "weight": 1
-        }, 
-        {
-            "value": "complicated ", 
-            "weight": 1
-        }, 
-        {
-            "value": "shocking ", 
-            "weight": 1
-        }, 
-        {
-            "value": "provocative ", 
-            "weight": 1
-        }, 
-        {
-            "value": "bland ", 
-            "weight": 1
-        }, 
-        {
-            "value": "exceptional ", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":12, "v":"{$tadj=}"},
+  { "w":1, "v":"{$tadj=fresh }"},
+  { "w":1, "v":"{$tadj=small }"},
+  { "w":1, "v":"{$tadj=large }"},
+  { "w":1, "v":"{$tadj=tiny }"},
+  { "w":1, "v":"{$tadj=elaborate }"},
+  { "w":1, "v":"{$tadj=badly done }"},
+  { "w":1, "v":"{$tadj=complicated }"},
+  { "w":1, "v":"{$tadj=shocking }"},
+  { "w":1, "v":"{$tadj=provocative }"},
+  { "w":1, "v":"{$tadj=bland }"},
+  { "w":1, "v":"{$tadj=exceptional }"}
+]

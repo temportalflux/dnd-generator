@@ -1,49 +1,13 @@
-{
-    "rows": [
-        {
-            "value": "dwarves", 
-            "weight": 2
-        }, 
-        {
-            "value": "elves", 
-            "weight": 2
-        }, 
-        {
-            "value": "tieflings", 
-            "weight": 2
-        }, 
-        {
-            "value": "dragonborns", 
-            "weight": 2
-        }, 
-        {
-            "value": "demons", 
-            "weight": 1
-        }, 
-        {
-            "value": "dragons", 
-            "weight": 1
-        }, 
-        {
-            "value": "gnomes", 
-            "weight": 2
-        }, 
-        {
-            "value": "halflings", 
-            "weight": 2
-        }, 
-        {
-            "value": "orcs", 
-            "weight": 1
-        }, 
-        {
-            "value": "goblins", 
-            "weight": 1
-        }, 
-        {
-            "value": "kobolds", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":2, "v":"{$racea=dwarves}"},
+  { "w":2, "v":"{$racea=elves}"},
+  { "w":2, "v":"{$racea=tieflings}"},
+  { "w":2, "v":"{$racea=dragonborns}"},
+  { "w":1, "v":"{$racea=demons}"},
+  { "w":1, "v":"{$racea=dragons}"},
+  { "w":2, "v":"{$racea=gnomes}"},
+  { "w":2, "v":"{$racea=halflings}"},
+  { "w":1, "v":"{$racea=orcs}"},
+  { "w":1, "v":"{$racea=goblins}"},
+  { "w":1, "v":"{$racea=kobolds}"}
+]

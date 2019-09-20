@@ -1,89 +1,23 @@
-{
-    "rows": [
-        {
-            "value": "a pet zombie ", 
-            "weight": 1
-        }, 
-        {
-            "value": "a pet dragon hatchling ", 
-            "weight": 1
-        }, 
-        {
-            "value": "a pet kobold ", 
-            "weight": 1
-        }, 
-        {
-            "value": "a tiny pet golem ", 
-            "weight": 1
-        }, 
-        {
-            "value": "a tiny pet ooze ", 
-            "weight": 1
-        }, 
-        {
-            "value": "a pet pidgeon ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet mouse ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet dog ", 
-            "weight": 18
-        }, 
-        {
-            "value": "a pet cat ", 
-            "weight": 14
-        }, 
-        {
-            "value": "a pet fox ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet turtle ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet rat ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet rock ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet falcon ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet guinea pig ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet hamster ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet gecko ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet rabbit ", 
-            "weight": 5
-        }, 
-        {
-            "value": "a pet parrot ", 
-            "weight": 6
-        }, 
-        {
-            "value": "a pet ferret ", 
-            "weight": 4
-        }, 
-        {
-            "value": "a pet pseudodragon ", 
-            "weight": 2
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$quirks+a pet zombie }"},
+  { "w":1, "v":"{$quirks+a pet dragon hatchling }"},
+  { "w":1, "v":"{$quirks+a pet kobold }"},
+  { "w":1, "v":"{$quirks+a tiny pet golem }"},
+  { "w":1, "v":"{$quirks+a tiny pet ooze }"},
+  { "w":4, "v":"{$quirks+a pet pidgeon }"},
+  { "w":4, "v":"{$quirks+a pet mouse }"},
+  { "w":18, "v":"{$quirks+a pet dog }"},
+  { "w":14, "v":"{$quirks+a pet cat }"},
+  { "w":4, "v":"{$quirks+a pet fox }"},
+  { "w":4, "v":"{$quirks+a pet turtle }"},
+  { "w":4, "v":"{$quirks+a pet rat }"},
+  { "w":4, "v":"{$quirks+a pet rock }"},
+  { "w":4, "v":"{$quirks+a pet falcon }"},
+  { "w":4, "v":"{$quirks+a pet guinea pig }"},
+  { "w":4, "v":"{$quirks+a pet hamster }"},
+  { "w":4, "v":"{$quirks+a pet gecko }"},
+  { "w":5, "v":"{$quirks+a pet rabbit }"},
+  { "w":6, "v":"{$quirks+a pet parrot }"},
+  { "w":4, "v":"{$quirks+a pet ferret }"},
+  { "w":2, "v":"{$quirks+a pet pseudodragon }"}
+]

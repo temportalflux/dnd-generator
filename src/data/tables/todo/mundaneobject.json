@@ -1,73 +1,19 @@
-{
-    "rows": [
-        {
-            "value": "gloves. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "hats. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "belts. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "feathers. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "fruits. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "leaves. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "branches. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "coins. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "rocks. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "pens. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "scarves. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "weapons. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "small animals. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "books. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "kitchenware. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "grass. ", 
-            "weight": 1
-        }, 
-        {
-            "value": "weird clothes. ", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$quirks+gloves. }"},
+  { "w":1, "v":"{$quirks+hats. }"},
+  { "w":1, "v":"{$quirks+belts. }"},
+  { "w":1, "v":"{$quirks+feathers. }"},
+  { "w":1, "v":"{$quirks+fruits. }"},
+  { "w":1, "v":"{$quirks+leaves. }"},
+  { "w":1, "v":"{$quirks+branches. }"},
+  { "w":1, "v":"{$quirks+coins. }"},
+  { "w":1, "v":"{$quirks+rocks. }"},
+  { "w":1, "v":"{$quirks+pens. }"},
+  { "w":1, "v":"{$quirks+scarves. }"},
+  { "w":1, "v":"{$quirks+weapons. }"},
+  { "w":1, "v":"{$quirks+small animals. }"},
+  { "w":1, "v":"{$quirks+books. }"},
+  { "w":1, "v":"{$quirks+kitchenware. }"},
+  { "w":1, "v":"{$quirks+grass. }"},
+  { "w":1, "v":"{$quirks+weird clothes. }"}
+]

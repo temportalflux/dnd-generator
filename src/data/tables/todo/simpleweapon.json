@@ -1,33 +1,9 @@
-{
-    "rows": [
-        {
-            "value": "club", 
-            "weight": 1
-        }, 
-        {
-            "value": "greatclub", 
-            "weight": 1
-        }, 
-        {
-            "value": "javelin", 
-            "weight": 1
-        }, 
-        {
-            "value": "light hammer", 
-            "weight": 1
-        }, 
-        {
-            "value": "mace", 
-            "weight": 1
-        }, 
-        {
-            "value": "quarterstaff", 
-            "weight": 1
-        }, 
-        {
-            "value": "spear", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$weapon=club}"},
+  { "w":1, "v":"{$weapon=greatclub}"},
+  { "w":1, "v":"{$weapon=javelin}"},
+  { "w":1, "v":"{$weapon=light hammer}"},
+  { "w":1, "v":"{$weapon=mace}"},
+  { "w":1, "v":"{$weapon=quarterstaff}"},
+  { "w":1, "v":"{$weapon=spear}"}
+]

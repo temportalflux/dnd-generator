@@ -1,29 +1,7 @@
-{
-    "rows": [
-        {
-            "value": "tattoo of a ", 
-            "weight": 1
-        }, 
-        {
-            "value": "abstract tattoo", 
-            "weight": 2
-        }, 
-        {
-            "value": "tribal tattoo", 
-            "weight": 3
-        }
-    ], 
-    "todo": [
-        {
-            "v": "{texttat}", 
-            "w": 3
-        }, 
-        {
-            "v": "{animaltat}", 
-            "w": 4
-        }
-    ], 
-    "values": {
-        "tattoo of a ": "{weapon}{$sphy1+$weapon}"
-    }
-}
+[
+  { "w":3, "v":"{texttat}"},
+  { "w":4, "v":"{animaltat}"},
+  { "w":1, "v":"{$sphy1+tattoo of a }{weapon}{$sphy1+$weapon}"},
+  { "w":2, "v":"{$sphy1+abstract tattoo}"},
+  { "w":3, "v":"{$sphy1+tribal tattoo}"}
+]

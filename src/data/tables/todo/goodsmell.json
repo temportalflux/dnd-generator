@@ -1,73 +1,19 @@
-{
-    "rows": [
-        {
-            "value": "of cheap cologne", 
-            "weight": 3
-        }, 
-        {
-            "value": "of cologne", 
-            "weight": 3
-        }, 
-        {
-            "value": "of expensive cologne", 
-            "weight": 2
-        }, 
-        {
-            "value": "of cedar wood", 
-            "weight": 3
-        }, 
-        {
-            "value": "of lavender", 
-            "weight": 3
-        }, 
-        {
-            "value": "of honey", 
-            "weight": 3
-        }, 
-        {
-            "value": "of flowers", 
-            "weight": 3
-        }, 
-        {
-            "value": "of incense", 
-            "weight": 3
-        }, 
-        {
-            "value": "of baking", 
-            "weight": 3
-        }, 
-        {
-            "value": "like rain", 
-            "weight": 3
-        }, 
-        {
-            "value": "like a forest", 
-            "weight": 3
-        }, 
-        {
-            "value": "of the sea", 
-            "weight": 3
-        }, 
-        {
-            "value": "of cookies", 
-            "weight": 3
-        }, 
-        {
-            "value": "of spices", 
-            "weight": 3
-        }, 
-        {
-            "value": "of autumn leaves", 
-            "weight": 3
-        }, 
-        {
-            "value": "of soap", 
-            "weight": 4
-        }, 
-        {
-            "value": "of roses", 
-            "weight": 4
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":3, "v":"{$sphy1+of cheap cologne}"},
+  { "w":3, "v":"{$sphy1+of cologne}"},
+  { "w":2, "v":"{$sphy1+of expensive cologne}"},
+  { "w":3, "v":"{$sphy1+of cedar wood}"},
+  { "w":3, "v":"{$sphy1+of lavender}"},
+  { "w":3, "v":"{$sphy1+of honey}"},
+  { "w":3, "v":"{$sphy1+of flowers}"},
+  { "w":3, "v":"{$sphy1+of incense}"},
+  { "w":3, "v":"{$sphy1+of baking}"},
+  { "w":3, "v":"{$sphy1+like rain}"},
+  { "w":3, "v":"{$sphy1+like a forest}"},
+  { "w":3, "v":"{$sphy1+of the sea}"},
+  { "w":3, "v":"{$sphy1+of cookies}"},
+  { "w":3, "v":"{$sphy1+of spices}"},
+  { "w":3, "v":"{$sphy1+of autumn leaves}"},
+  { "w":4, "v":"{$sphy1+of soap}"},
+  { "w":4, "v":"{$sphy1+of roses}"}
+]

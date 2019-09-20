@@ -1,16 +1,4 @@
-{
-    "rows": [
-        {
-            "value": "precious ", 
-            "weight": 5
-        }, 
-        {
-            "value": "magical ", 
-            "weight": 2
-        }
-    ], 
-    "values": {
-        "magical ": "{precious}", 
-        "precious ": "{precious}"
-    }
-}
+[
+  { "w":5, "v":"{$precious=precious }{precious}"},
+  { "w":2, "v":"{$precious=magical }{precious}"}
+]

@@ -1,49 +1,13 @@
-{
-    "rows": [
-        {
-            "value": "wolf", 
-            "weight": 15
-        }, 
-        {
-            "value": "bear", 
-            "weight": 1
-        }, 
-        {
-            "value": "rat", 
-            "weight": 1
-        }, 
-        {
-            "value": "boar", 
-            "weight": 1
-        }, 
-        {
-            "value": "bat", 
-            "weight": 1
-        }, 
-        {
-            "value": "cat", 
-            "weight": 1
-        }, 
-        {
-            "value": "owl", 
-            "weight": 1
-        }, 
-        {
-            "value": "pig", 
-            "weight": 1
-        }, 
-        {
-            "value": "badger", 
-            "weight": 1
-        }, 
-        {
-            "value": "eagle", 
-            "weight": 1
-        }, 
-        {
-            "value": "tiger", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":15, "v":"{$wb=wolf}"},
+  { "w":1, "v":"{$wb=bear}"},
+  { "w":1, "v":"{$wb=rat}"},
+  { "w":1, "v":"{$wb=boar}"},
+  { "w":1, "v":"{$wb=bat}"},
+  { "w":1, "v":"{$wb=cat}"},
+  { "w":1, "v":"{$wb=owl}"},
+  { "w":1, "v":"{$wb=pig}"},
+  { "w":1, "v":"{$wb=badger}"},
+  { "w":1, "v":"{$wb=eagle}"},
+  { "w":1, "v":"{$wb=tiger}"}
+]

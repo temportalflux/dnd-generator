@@ -1,37 +1,10 @@
-{
-    "rows": [
-        {
-            "value": "brother", 
-            "weight": 1
-        }, 
-        {
-            "value": "sister", 
-            "weight": 1
-        }, 
-        {
-            "value": "daughter", 
-            "weight": 1
-        }, 
-        {
-            "value": "son", 
-            "weight": 1
-        }, 
-        {
-            "value": "cousin", 
-            "weight": 1
-        }, 
-        {
-            "value": "friend", 
-            "weight": 1
-        }, 
-        {
-            "value": "childhood friend", 
-            "weight": 1
-        }, 
-        {
-            "value": "partner", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$rela=brother}"},
+  { "w":1, "v":"{$rela=sister}"},
+  { "w":1, "v":"{$rela=daughter}"},
+  { "w":1, "v":"{$rela=son}"},
+  { "w":1, "v":"{$rela=cousin}"},
+  { "w":1, "v":"{$rela=friend}"},
+  { "w":1, "v":"{$rela=childhood friend}"},
+  { "w":1, "v":"{$rela=partner}"}
+]

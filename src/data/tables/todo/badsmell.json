@@ -1,49 +1,13 @@
-{
-    "rows": [
-        {
-            "value": "of sweat", 
-            "weight": 8
-        }, 
-        {
-            "value": "of dogs", 
-            "weight": 2
-        }, 
-        {
-            "value": "of garbage", 
-            "weight": 2
-        }, 
-        {
-            "value": "of horses", 
-            "weight": 2
-        }, 
-        {
-            "value": "of sewage", 
-            "weight": 2
-        }, 
-        {
-            "value": "of cabbage", 
-            "weight": 1
-        }, 
-        {
-            "value": "of sour milk", 
-            "weight": 1
-        }, 
-        {
-            "value": "of dirt", 
-            "weight": 2
-        }, 
-        {
-            "value": "of unwashed clothes", 
-            "weight": 4
-        }, 
-        {
-            "value": "of tobacco", 
-            "weight": 4
-        }, 
-        {
-            "value": "of alcohol", 
-            "weight": 4
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":8, "v":"{$sphy1+of sweat}"},
+  { "w":2, "v":"{$sphy1+of dogs}"},
+  { "w":2, "v":"{$sphy1+of garbage}"},
+  { "w":2, "v":"{$sphy1+of horses}"},
+  { "w":2, "v":"{$sphy1+of sewage}"},
+  { "w":1, "v":"{$sphy1+of cabbage}"},
+  { "w":1, "v":"{$sphy1+of sour milk}"},
+  { "w":2, "v":"{$sphy1+of dirt}"},
+  { "w":4, "v":"{$sphy1+of unwashed clothes}"},
+  { "w":4, "v":"{$sphy1+of tobacco}"},
+  { "w":4, "v":"{$sphy1+of alcohol}"}
+]

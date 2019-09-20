@@ -1,21 +1,6 @@
-{
-    "rows": [
-        {
-            "value": "rapier", 
-            "weight": 1
-        }, 
-        {
-            "value": "scimitar", 
-            "weight": 1
-        }, 
-        {
-            "value": "short sword", 
-            "weight": 1
-        }, 
-        {
-            "value": "whip", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$weapon=rapier}"},
+  { "w":1, "v":"{$weapon=scimitar}"},
+  { "w":1, "v":"{$weapon=short sword}"},
+  { "w":1, "v":"{$weapon=whip}"}
+]

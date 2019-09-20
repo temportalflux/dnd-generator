@@ -1,21 +1,6 @@
-{
-    "rows": [
-        {
-            "value": "blowgun", 
-            "weight": 1
-        }, 
-        {
-            "value": "crossbow", 
-            "weight": 3
-        }, 
-        {
-            "value": "net", 
-            "weight": 1
-        }, 
-        {
-            "value": "longbow", 
-            "weight": 3
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$weapon=blowgun}"},
+  { "w":3, "v":"{$weapon=crossbow}"},
+  { "w":1, "v":"{$weapon=net}"},
+  { "w":3, "v":"{$weapon=longbow}"}
+]

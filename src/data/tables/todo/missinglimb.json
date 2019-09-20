@@ -1,21 +1,6 @@
-{
-    "rows": [
-        {
-            "value": "hand", 
-            "weight": 1
-        }, 
-        {
-            "value": "arm", 
-            "weight": 1
-        }, 
-        {
-            "value": "foot", 
-            "weight": 1
-        }, 
-        {
-            "value": "leg", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$sphy2+hand}"},
+  { "w":1, "v":"{$sphy2+arm}"},
+  { "w":1, "v":"{$sphy2+foot}"},
+  { "w":1, "v":"{$sphy2+leg}"}
+]

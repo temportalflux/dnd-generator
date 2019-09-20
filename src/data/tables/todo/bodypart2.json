@@ -1,23 +1,6 @@
-{
-    "rows": [
-        {
-            "value": "neck", 
-            "weight": 2
-        }, 
-        {
-            "value": "chest", 
-            "weight": 3
-        }, 
-        {
-            "value": "back", 
-            "weight": 3
-        }
-    ], 
-    "todo": [
-        {
-            "v": "{head}", 
-            "w": 4
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":2, "v":"{$bp=neck}"},
+  { "w":3, "v":"{$bp=chest}"},
+  { "w":4, "v":"{head}"},
+  { "w":3, "v":"{$bp=back}"}
+]

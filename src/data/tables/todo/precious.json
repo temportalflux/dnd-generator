@@ -1,51 +1,13 @@
-{
-    "rows": [
-        {
-            "value": "pendant", 
-            "weight": 1
-        }, 
-        {
-            "value": "ring", 
-            "weight": 1
-        }, 
-        {
-            "value": "robe", 
-            "weight": 1
-        }, 
-        {
-            "value": "trinket", 
-            "weight": 1
-        }, 
-        {
-            "value": "bracelet", 
-            "weight": 1
-        }, 
-        {
-            "value": "watch", 
-            "weight": 1
-        }, 
-        {
-            "value": "amulet", 
-            "weight": 1
-        }, 
-        {
-            "value": "tiara", 
-            "weight": 1
-        }, 
-        {
-            "value": "gem", 
-            "weight": 1
-        }, 
-        {
-            "value": "coin", 
-            "weight": 1
-        }
-    ], 
-    "todo": [
-        {
-            "v": "{weapon}{$precious+$weapon}", 
-            "w": 2
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$precious+pendant}"},
+  { "w":1, "v":"{$precious+ring}"},
+  { "w":1, "v":"{$precious+robe}"},
+  { "w":1, "v":"{$precious+trinket}"},
+  { "w":1, "v":"{$precious+bracelet}"},
+  { "w":1, "v":"{$precious+watch}"},
+  { "w":1, "v":"{$precious+amulet}"},
+  { "w":1, "v":"{$precious+tiara}"},
+  { "w":1, "v":"{$precious+gem}"},
+  { "w":1, "v":"{$precious+coin}"},
+  { "w":2, "v":"{weapon}{$precious+$weapon}"}
+]

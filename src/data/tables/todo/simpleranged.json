@@ -1,17 +1,5 @@
-{
-    "rows": [
-        {
-            "value": "light crossbow", 
-            "weight": 1
-        }, 
-        {
-            "value": "shortbow", 
-            "weight": 1
-        }, 
-        {
-            "value": "sling", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$weapon=light crossbow}"},
+  { "w":1, "v":"{$weapon=shortbow}"},
+  { "w":1, "v":"{$weapon=sling}"}
+]

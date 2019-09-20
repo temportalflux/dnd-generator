@@ -1,13 +1,4 @@
-{
-    "rows": [
-        {
-            "value": "dagger", 
-            "weight": 1
-        }, 
-        {
-            "value": "shortsword", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":1, "v":"{$weapon=dagger}"},
+  { "w":1, "v":"{$weapon=shortsword}"}
+]

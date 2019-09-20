@@ -1,29 +1,8 @@
-{
-    "rows": [
-        {
-            "value": "castle", 
-            "weight": 3
-        }, 
-        {
-            "value": "farm", 
-            "weight": 4
-        }, 
-        {
-            "value": "manor", 
-            "weight": 2
-        }, 
-        {
-            "value": "small forest", 
-            "weight": 2
-        }, 
-        {
-            "value": "creepy house", 
-            "weight": 2
-        }, 
-        {
-            "value": "palace", 
-            "weight": 1
-        }
-    ], 
-    "values": {}
-}
+[
+  { "w":3, "v":"{$quirks+castle}"},
+  { "w":4, "v":"{$quirks+farm}"},
+  { "w":2, "v":"{$quirks+manor}"},
+  { "w":2, "v":"{$quirks+small forest}"},
+  { "w":2, "v":"{$quirks+creepy house}"},
+  { "w":1, "v":"{$quirks+palace}"}
+]
