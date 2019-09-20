@@ -1,17 +1,51 @@
 {
 	"rows": [
 		{
-			"value": "",
-			"weight": 15
+			"weight": 15,
+			"value": ""
 		},
 		{
-			"value": "giantFriendly",
-			"weight": 17
-		}
-	],
-	"values": {
-		"giantFriendly": {
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) only respects powerful and competent leaders."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) openly mocks human society's structure."
+		},
+		{
+			"weight": 2,
+			"generators": {
+				"frequency": "{roll:common/frequency}"
+			},
+			"value": "$(identity.pronouns.singular) $(frequency) challenges others to duels to the death.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2
+			}
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) feels at home in high altitude."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) enjoys winter and cold temperatures."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) will turn anything into an opportunity for training."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) enjoys messing with other humanoids with $(identity.pronouns.possessive) stature."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) dislikes depending on others."
+		},
+		{
+			"weight": 1,
 			"value": "$(identity.pronouns.singular) maintains a friendly relationships with nearby giants."
 		}
-	}
+	],
+	"values": {}
 }
