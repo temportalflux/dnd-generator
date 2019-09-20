@@ -1,17 +1,14 @@
 {
 	"rows": [
 		{
-			"text": "Male",
 			"value": "male",
 			"weight": 100
 		},
 		{
-			"text": "Female",
 			"value": "female",
 			"weight": 100
 		},
 		{
-			"text": "Intersex",
 			"value": "intersex",
 			"weight": 1
 		}

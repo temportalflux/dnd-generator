@@ -1,12 +1,12 @@
 {
-    "rows": [
-			{
-				"value": "{roll:traits/skin/scaleTexture}"
-			}
-		],
-    "values": {
-			".*": {
-				"value": "$(value) $(description.race.subrace) scales"
+	"rows": [
+		{
+			"value": {
+				"texture": "{roll:traits/skin/scaleTexture}",
+				"color": "$(description.race.subrace)",
+				"type": "scales"
 			}
 		}
+	],
+	"values": {}
 }

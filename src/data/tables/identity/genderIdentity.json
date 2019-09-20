@@ -1,17 +1,14 @@
 {
 	"rows": [
 		{
-			"text": "Man",
 			"value": "man",
 			"weight": 5
 		},
 		{
-			"text": "Woman",
 			"value": "woman",
 			"weight": 5
 		},
 		{
-			"text": "Non-Binary",
 			"value": "nonbinary",
 			"weight": 1
 		}

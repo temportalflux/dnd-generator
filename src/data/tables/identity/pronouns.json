@@ -1,15 +1,12 @@
 {
 	"rows": [
 		{
-			"text": "Masculine",
 			"value": "masculine"
 		},
 		{
-			"text": "Feminine",
 			"value": "feminine"
 		},
 		{
-			"text": "Non-Binary",
 			"value": "nonbinary"
 		}
 	],
