@@ -17,7 +17,7 @@ function getTable(tablePath)
 
 function getEntriesFromTable(table)
 {
-	return table.rows.map((row) => makeEntry(row.text || row.value, row.value));
+	return table.rows.map((row) => makeEntry(row.text || row.value, row.value || row.default));
 }
 
 function getOptions(currentData)

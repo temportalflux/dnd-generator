@@ -16,10 +16,9 @@ function iterateGenerationOrder(schema, data, loop)
 	return data;
 }
 
-export function generate(filter)
+function createDefaultDataFromFilter(filter)
 {
-	const npc = getTable('npc');
-	const npcData = lodash.toPairs(filter).reduce((allData, [categoryKey, fieldsObj]) =>
+	return lodash.toPairs(filter).reduce((allData, [categoryKey, fieldsObj]) =>
 	{
 		return lodash.toPairs(fieldsObj)
 			.filter(([_, value]) => value !== 'random')
@@ -29,10 +28,17 @@ export function generate(filter)
 				return categoryData;
 			}, allData);
 	}, {});
+}
+
+export function generate(filter)
+{
+	const npc = getTable('npc');
+	let npcData = createDefaultDataFromFilter(filter);
 
 	console.log('Starting npc generation with default filter fields:', lodash.cloneDeep(npcData));
 
 	npcData = iterateGenerationOrder(npc, npcData, (data, key, field, currentValue) => {
+		if (!field) return data;
 		if (currentValue === undefined)
 		{
 			if (field.default)
@@ -50,6 +56,7 @@ export function generate(filter)
 	});
 
 	npcData = iterateGenerationOrder(npc, npcData, (data, key, field, currentValue) => {
+		if (!field) return data;
 		if (currentValue === undefined)
 		{
 			if (field.value)

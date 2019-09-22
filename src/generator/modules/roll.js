@@ -13,7 +13,7 @@ function chooseRandomWithWeight(entries)
 		weight_sum += entries[i].weight || 1;
 		if (randInt <= weight_sum)
 		{
-			return entries[i].value;
+			return entries[i].default || entries[i].value;
 		}
 	}
 
@@ -72,7 +72,7 @@ export default function exec(match, npcData)
 		if (valueEntry.modifiers)
 		{
 			lodash.toPairs(valueEntry.modifiers).forEach(([key, modifier]) => {
-				const prevValue = lodash.get(npcData, key);
+				const prevValue = lodash.get(npcData, key) || 0;
 				lodash.set(npcData, key, prevValue + modifier);
 				console.log(`(${key}) ${prevValue} += ${modifier} => ${lodash.get(npcData, key)}`);
 			});

@@ -7,6 +7,9 @@ const ExecKeys = Object.keys(Execs);
 
 export default function parseField(field, data)
 {
+	// TODO: tmp
+	return field;
+
 	if (typeof field === 'string')
 	{
 		for (let execKey of ExecKeys)
