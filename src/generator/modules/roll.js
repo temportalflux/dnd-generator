@@ -1,4 +1,5 @@
 import lodash from 'lodash';
+import parser from '../parser';
 const { getTable } = require('../../Data');
 const { formatWithData } = require('./utils');
 
@@ -13,7 +14,7 @@ function chooseRandomWithWeight(entries)
 		weight_sum += entries[i].weight || 1;
 		if (randInt <= weight_sum)
 		{
-			return entries[i].default || entries[i].value;
+			return entries[i].value;
 		}
 	}
 
@@ -31,9 +32,9 @@ function testFrequency(entries)
 	return frequency;
 }
 
-export default function exec(match, npcData)
+export default function exec(match, data)
 {
-	const tablePath = formatWithData(match[1], npcData);
+	const tablePath = formatWithData(match[1], data);
 	let table = undefined;
 	try
 	{
@@ -50,34 +51,47 @@ export default function exec(match, npcData)
 		console.error(`Table '${tablePath}' is missing field 'rows'. This field is enforced by the schema for tables.`, table);
 		return undefined;
 	}
-	
-	let currentValue = chooseRandomWithWeight(table.rows);
-	console.log('Roll on table', tablePath, 'resulted in', currentValue);
 
-	if (table.values && table.values[currentValue])
+	let result = {
+		value: chooseRandomWithWeight(table.rows),
+		modifiers: [],
+	};
+
+	const appendModifiers = (current, toAppend) => current.concat(lodash.toPairs(toAppend).map(
+		([key, modifier]) => ({ key: key, modifier: modifier })
+	));
+
+	// Modifiers which are determined based on scales or regexs on the generated value
+	if (table.modifiers)
 	{
-		const valueEntry = table.values[currentValue];
+		for (let globalModifierEntry of table.modifiers)
+		{
+			let matchResult = parser(globalModifierEntry.match, { ...data, value: result.value });
+			if (matchResult === true)
+			{
+				result.modifiers = appendModifiers(result.modifiers, globalModifierEntry.modifiers);
+			}
+		}
+	}
+
+	if (table.values && table.values[result.value])
+	{
+
+		const valueEntry = table.values[result.value];
 		// Overwrite the value for the key 'value'
 		// The writer has defined a more descriptive value
 		if (valueEntry.value)
 		{
-			currentValue = valueEntry.value;
-		}
-		// Overrides mean that more data is being generated from here
-		if (valueEntry.override)
-		{
-
+			result.value = valueEntry.value;
 		}
 		// Values with modifiers are adding numerical data to other entries
 		if (valueEntry.modifiers)
 		{
-			lodash.toPairs(valueEntry.modifiers).forEach(([key, modifier]) => {
-				const prevValue = lodash.get(npcData, key) || 0;
-				lodash.set(npcData, key, prevValue + modifier);
-				console.log(`(${key}) ${prevValue} += ${modifier} => ${lodash.get(npcData, key)}`);
-			});
+			result.modifiers = appendModifiers(result.modifiers, valueEntry.modifiers);
 		}
 	}
 
-	return currentValue;
+	console.log(result);
+
+	return result;
 }

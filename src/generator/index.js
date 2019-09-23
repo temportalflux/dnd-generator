@@ -1,5 +1,6 @@
 import lodash from 'lodash';
 import parser from './parser';
+import Generator from './Generator';
 const { getTable } = require('../Data');
 
 function iterateGenerationOrder(schema, data, loop)
@@ -33,44 +34,53 @@ function createDefaultDataFromFilter(filter)
 export function generate(filter)
 {
 	const npc = getTable('npc');
-	let npcData = createDefaultDataFromFilter(filter);
 
-	console.log('Starting npc generation with default filter fields:', lodash.cloneDeep(npcData));
+	const generator = new Generator();
+	npc.fieldOrder.forEach((key) => generator.addField(key, npc.fields));
 
-	npcData = iterateGenerationOrder(npc, npcData, (data, key, field, currentValue) => {
-		if (!field) return data;
-		if (currentValue === undefined)
+	let dataWithFilters = createDefaultDataFromFilter(filter);
+	console.log('Starting npc generation with default (filter) fields:', lodash.cloneDeep(dataWithFilters));
+
+	for (let key of npc.generationOrder)
+	{
+		generator.regenerate(key);
+	}
+
+	console.log(lodash.cloneDeep(generator));
+
+	return {
+		meta: {},
+		values: {}
+	};
+
+	let dataWithValues = iterateGenerationOrder(npc, dataWithFilters,
+		(data, key, field, _) =>
 		{
-			if (field.default)
+			// There is no item in the fields object of npc for this key - this is probably an error in the table
+			if (!field)
 			{
-				const parsedValue = parser(field.default);
-				if (parsedValue)
-					lodash.set(data, key, parsedValue);
+				console.warn(`Field ${key} exists in the generation order for 'npc.json' but does not have a corresponding entry in 'fields'. This will be ignored`);
+				return data;
 			}
-		}
-		else
-		{
-			console.log(`Skipping default generation for field "${key}".`, `\nIts value is already "${currentValue}".`);
-		}
-		return data;
-	});
 
-	npcData = iterateGenerationOrder(npc, npcData, (data, key, field, currentValue) => {
-		if (!field) return data;
-		if (currentValue === undefined)
-		{
-			if (field.value)
+			// Assume that all contents of the field are the field's properties
+
+			const parsedValue = parser(field, data);
+			// Parser could return an undefined value if the command didn't work.
+			// For example, a table like 'beard' is assumed to have an entry for every race,
+			// so races can opt-in by defining a beard.json table. If one is missing, this is not an error,
+			// but rather the race opting-out of generating beard data.
+			if (parsedValue !== undefined)
 			{
-				const parsedValue = parser(field.value, data);
-				if (parsedValue)
-					lodash.set(data, key, parsedValue);
+				lodash.set(data, key, parsedValue);
 			}
-		}
-		else
-		{
-			console.log(`Skipping value generation for field "${key}".`, `\nIts value is already "${currentValue}".`);
-		}
-	});
 
-	return npcData;
+			return data;
+		}
+	);
+
+	return {
+		meta: npc.metadata,
+		values: dataWithValues,
+	};
 }

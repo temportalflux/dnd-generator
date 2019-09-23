@@ -106,15 +106,13 @@ export default class Home extends React.Component
 		this.onRerollClicked = this.onRerollClicked.bind(this);
 
 		this.state = {
-			npc: undefined
+			npc: TEMP_NPC_DATA
 		};
 	}
 
 	generate(filter)
 	{
-		console.log(generate);
 		const data = generate(filter);
-		console.log(data);
 		this.setState({
 			npc: data
 		});
@@ -127,6 +125,14 @@ export default class Home extends React.Component
 
 	render()
 	{
+		/*
+		
+						<Grid.Column>
+							<DisplayNpc
+								data={this.state.npc}
+							/>
+						</Grid.Column>
+		*/
 		return (
 			<div>
 				<Grid columns={2}>
@@ -136,16 +142,11 @@ export default class Home extends React.Component
 								generate={this.generate}
 							/>
 						</Grid.Column>
-						<Grid.Column>
-							<DisplayNpc
-								data={this.state.npc}
-							/>
-						</Grid.Column>
 					</Grid.Row>
 				</Grid>
 
 				<NpcDataTree
-					data={TEMP_NPC_DATA}
+					data={this.state.npc}
 					onRerollClicked={this.onRerollClicked}
 				/>
 

@@ -3,7 +3,7 @@ import { Grid, Button } from 'semantic-ui-react';
 import Tree from 'react-animated-tree';
 
 import lodash from 'lodash';
-import inlineEval from '../generator/modules/eval';
+import inlineEval from '../generator/modules/evalAtCtx';
 
 export default class NpcDataTree extends React.Component
 {
@@ -28,7 +28,7 @@ export default class NpcDataTree extends React.Component
 			{
 				return data.join(' ');
 			}
-			else if (meta.stringify !== undefined)
+			else if (meta !== undefined && meta.stringify !== undefined)
 			{
 				return inlineEval(meta.stringify, data);
 			}
@@ -46,13 +46,17 @@ export default class NpcDataTree extends React.Component
 		const pathItems = path.split('.');
 		const key = pathItems[pathItems.length - 1];
 		const name = key.split(/(?=[A-Z])/).map((word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`).join(' ');
+		
+		if (meta !== undefined && meta.hideInlineValue) return name;
+		
 		const stringifiedValue = this.makeStringifiedValue(data, meta);
-		return `${name}${stringifiedValue ? ': ' : ''}${stringifiedValue}`;
+		if (stringifiedValue) return `${name}: ${stringifiedValue}`;
+
+		return name;
 	}
 
-	makeTitleContent(title, path, meta)
+	makeTitleContent(title, path, canReroll)
 	{
-		const canReroll = meta === undefined || meta.canReroll === undefined || meta.canReroll !== false;
 		return (
 			<span>
 				{title} {canReroll && <Button path={path} size='mini' icon='refresh' onClick={this.props.onRerollClicked} />}
@@ -60,21 +64,13 @@ export default class NpcDataTree extends React.Component
 		);
 	}
 
-	makeTreeContents(path, data, meta)
-	{
-		return lodash.toPairs(data)
-			// Prune all undefined values
-			.filter(([vk, v]) => v !== undefined)
-			// Convert to hierarchy of TreeNodes
-			.map(([valueKey, value]) => this.makeTreeNodeHierarchy(`${path !== undefined ? `${path}.` : ''}${valueKey}`, value, meta[valueKey]));
-	}
-
-	makeTreeNodeHierarchy(path, data, meta)
+	makeTreeNodeHierarchy(path, data, meta, canParentReroll)
 	{
 		const isStructuralObject = typeof data === 'object';
 		const isTrueObject = isStructuralObject && !Array.isArray(data);
 
-		const title = this.makeTitleContent(this.makeTitleText(path, data, meta), path, meta);
+		const canReroll = canParentReroll && (meta === undefined || meta.canReroll === undefined || meta.canReroll !== false);
+		const title = this.makeTitleContent(this.makeTitleText(path, data, meta), path, canReroll);
 
 		if (isTrueObject)
 		{
@@ -83,7 +79,7 @@ export default class NpcDataTree extends React.Component
 					key={path}
 					content={title}
 				>
-					{this.makeTreeContents(path, data, meta)}
+					{this.makeTreeContents(path, data, meta, canReroll)}
 				</Tree>
 			);
 		}
@@ -98,14 +94,29 @@ export default class NpcDataTree extends React.Component
 		}
 	}
 
+	makeTreeContents(path, data, meta, canParentReroll)
+	{
+		return lodash.toPairs(data)
+			// Prune all undefined values
+			.filter(([vk, v]) => v !== undefined)
+			// Convert to hierarchy of TreeNodes
+			.map(([valueKey, value]) => this.makeTreeNodeHierarchy(
+				`${path !== undefined ? `${path}.` : ''}${valueKey}`, 
+				value,
+				meta === undefined ? undefined : meta[valueKey],
+				canParentReroll
+			));
+	}
+
 	makeDataTree(data)
 	{
+		const canReroll = true;
 		return (
 			<Tree
-				content={this.makeTitleContent('NPC', 'npc', {})}
+				content={this.makeTitleContent('NPC', 'npc', canReroll)}
 				open
 			>
-				{this.makeTreeContents(undefined, data.values, data.meta)}
+				{this.makeTreeContents(undefined, data.values, data.meta, canReroll)}
 			</Tree>
 		);
 	}
