@@ -40,12 +40,17 @@ export default class NpcDataTree extends React.Component
 		return `${data}`;
 	}
 
+	convertCamelToTitleCase(text)
+	{
+		return text.split(/(?=[A-Z])/).map((word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`).join(' ');
+	}
+
 	makeTitleText(path, data, meta)
 	{
 		// Convert 'thisIsAMultiWordKey' to 'The Is A Multi Word Key'
 		const pathItems = path.split('.');
 		const key = pathItems[pathItems.length - 1];
-		const name = key.split(/(?=[A-Z])/).map((word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`).join(' ');
+		const name = this.convertCamelToTitleCase(key);
 		
 		if (meta !== undefined && meta.hideInlineValue) return name;
 		
@@ -64,8 +69,11 @@ export default class NpcDataTree extends React.Component
 		);
 	}
 
-	makeTreeNodeHierarchy(path, data, meta, canParentReroll)
+	makeTreeNodeHierarchy(generatorEntry)
 	{
+		console.log(generatorEntry);
+		return <div/>;
+
 		const isStructuralObject = typeof data === 'object';
 		const isTrueObject = isStructuralObject && !Array.isArray(data);
 
@@ -94,36 +102,45 @@ export default class NpcDataTree extends React.Component
 		}
 	}
 
-	makeTreeContents(path, data, meta, canParentReroll)
+	makeTreeContents(entries)
 	{
-		return lodash.toPairs(data)
+		return lodash.values(entries)
 			// Prune all undefined values
-			.filter(([vk, v]) => v !== undefined)
+			.filter((entry) => entry.hasValue())
 			// Convert to hierarchy of TreeNodes
-			.map(([valueKey, value]) => this.makeTreeNodeHierarchy(
-				`${path !== undefined ? `${path}.` : ''}${valueKey}`, 
-				value,
-				meta === undefined ? undefined : meta[valueKey],
-				canParentReroll
-			));
+			.map(this.makeTreeNodeHierarchy);
 	}
 
-	makeDataTree(data)
+	makeTreeCategories(categoryEntryMap)
 	{
-		const canReroll = true;
+		return lodash.toPairs(categoryEntryMap).map(([category, entries]) => {
+			const title = this.makeTitleContent(this.convertCamelToTitleCase(category), category, false);
+			return (
+				<Tree
+					key={category}
+					content={title}
+				>
+					{this.makeTreeContents(entries)}
+				</Tree>
+			);
+		});
+	}
+
+	makeDataTree(generator)
+	{
 		return (
 			<Tree
-				content={this.makeTitleContent('NPC', 'npc', canReroll)}
+				content={this.makeTitleContent('NPC', 'npc', true)}
 				open
 			>
-				{this.makeTreeContents(undefined, data.values, data.meta, canReroll)}
+				{this.makeTreeCategories(generator.categories)}
 			</Tree>
 		);
 	}
 
 	render()
 	{
-		return this.makeDataTree(this.props.data);
+		return this.makeDataTree(this.props.generator);
 	}
 
 }

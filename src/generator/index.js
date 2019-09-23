@@ -36,7 +36,10 @@ export function generate(filter)
 	const npc = getTable('npc');
 
 	const generator = new Generator();
-	npc.fieldOrder.forEach((key) => generator.addField(key, npc.fields));
+	npc.fieldOrder.forEach((fullKey) => {
+		const {category, keyInCategory} = generator.getCategoryAndSubkeyFrom(fullKey);
+		generator.addField(category, keyInCategory, npc.fields[category][keyInCategory]);
+	});
 
 	let dataWithFilters = createDefaultDataFromFilter(filter);
 	console.log('Starting npc generation with default (filter) fields:', lodash.cloneDeep(dataWithFilters));
@@ -48,10 +51,7 @@ export function generate(filter)
 
 	console.log(lodash.cloneDeep(generator));
 
-	return {
-		meta: {},
-		values: {}
-	};
+	return generator;
 
 	let dataWithValues = iterateGenerationOrder(npc, dataWithFilters,
 		(data, key, field, _) =>

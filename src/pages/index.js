@@ -4,6 +4,7 @@ import FilterMenu from '../components/FilterMenu';
 import DisplayNpc from '../components/DisplayNpc';
 import { generate } from '../generator/index';
 import NpcDataTree from '../components/NpcDataTree';
+import Generator from '../generator/Generator';
 
 const TEMP_NPC_DATA = {
 	"meta": {
@@ -106,15 +107,15 @@ export default class Home extends React.Component
 		this.onRerollClicked = this.onRerollClicked.bind(this);
 
 		this.state = {
-			npc: TEMP_NPC_DATA
+			npc: TEMP_NPC_DATA,
+			generator: new Generator()
 		};
 	}
 
 	generate(filter)
 	{
-		const data = generate(filter);
 		this.setState({
-			npc: data
+			generator: generate(filter)
 		});
 	}
 
@@ -147,6 +148,7 @@ export default class Home extends React.Component
 
 				<NpcDataTree
 					data={this.state.npc}
+					generator={this.state.generator}
 					onRerollClicked={this.onRerollClicked}
 				/>
 
