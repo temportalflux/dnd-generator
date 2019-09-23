@@ -37,8 +37,8 @@ export function generate(filter)
 
 	const generator = new Generator();
 	npc.fieldOrder.forEach((fullKey) => {
-		const {category, keyInCategory} = generator.getCategoryAndSubkeyFrom(fullKey);
-		generator.addField(category, keyInCategory, npc.fields[category][keyInCategory]);
+		const {items, remaining} = Generator.sever(fullKey);
+		generator.addField(items[0], remaining, npc.fields[items[0]][remaining]);
 	});
 
 	let dataWithFilters = createDefaultDataFromFilter(filter);

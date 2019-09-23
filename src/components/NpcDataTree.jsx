@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Button } from 'semantic-ui-react';
 import Tree from 'react-animated-tree';
+import Generator from '../generator/Generator';
 
 import lodash from 'lodash';
 import inlineEval from '../generator/modules/evalAtCtx';
@@ -40,21 +41,12 @@ export default class NpcDataTree extends React.Component
 		return `${data}`;
 	}
 
-	convertCamelToTitleCase(text)
+	makeTitleText(generatorEntry)
 	{
-		return text.split(/(?=[A-Z])/).map((word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`).join(' ');
-	}
-
-	makeTitleText(path, data, meta)
-	{
-		// Convert 'thisIsAMultiWordKey' to 'The Is A Multi Word Key'
-		const pathItems = path.split('.');
-		const key = pathItems[pathItems.length - 1];
-		const name = this.convertCamelToTitleCase(key);
+		const name = generatorEntry.getName();
+		if (generatorEntry.hideInlineValue) return name;
 		
-		if (meta !== undefined && meta.hideInlineValue) return name;
-		
-		const stringifiedValue = this.makeStringifiedValue(data, meta);
+		const stringifiedValue = generatorEntry.stringify();
 		if (stringifiedValue) return `${name}: ${stringifiedValue}`;
 
 		return name;
@@ -71,23 +63,20 @@ export default class NpcDataTree extends React.Component
 
 	makeTreeNodeHierarchy(generatorEntry)
 	{
-		console.log(generatorEntry);
-		return <div/>;
+		const title = this.makeTitleContent(
+			this.makeTitleText(generatorEntry),
+			generatorEntry.getKey(),
+			generatorEntry.canReroll()
+		);
 
-		const isStructuralObject = typeof data === 'object';
-		const isTrueObject = isStructuralObject && !Array.isArray(data);
-
-		const canReroll = canParentReroll && (meta === undefined || meta.canReroll === undefined || meta.canReroll !== false);
-		const title = this.makeTitleContent(this.makeTitleText(path, data, meta), path, canReroll);
-
-		if (isTrueObject)
+		if (generatorEntry.hasChildren())
 		{
 			return (
 				<Tree
-					key={path}
 					content={title}
+					key={generatorEntry.getKey()}
 				>
-					{this.makeTreeContents(path, data, meta, canReroll)}
+					{this.makeTreeContents(generatorEntry.childEntries)}
 				</Tree>
 			);
 		}
@@ -95,8 +84,8 @@ export default class NpcDataTree extends React.Component
 		{
 			return (
 				<Tree
-					key={path}
 					content={title}
+					key={generatorEntry.getKey()}
 				/>
 			);
 		}
@@ -114,7 +103,11 @@ export default class NpcDataTree extends React.Component
 	makeTreeCategories(categoryEntryMap)
 	{
 		return lodash.toPairs(categoryEntryMap).map(([category, entries]) => {
-			const title = this.makeTitleContent(this.convertCamelToTitleCase(category), category, false);
+			const title = this.makeTitleContent(
+				Generator.convertCamelToTitleCase(category),
+				category,
+				false
+			);
 			return (
 				<Tree
 					key={category}

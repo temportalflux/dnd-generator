@@ -5,10 +5,10 @@ import parser from './parser';
 class GenerationEntry
 {
 
-	constructor(category, keyInCategory, { source, dependencies, stringify, canReroll, children })
+	constructor(category, key, { source, dependencies, stringify, canReroll, children })
 	{
 		this.category = category;
-		this.keyInCategory = keyInCategory;
+		this.key = key;
 		this.source = source;
 		this.parent = undefined;
 
@@ -34,7 +34,17 @@ class GenerationEntry
 
 	getKey()
 	{
-		return `${this.category}.${this.keyInCategory}`;
+		return this.parent !== undefined ? `${this.parent.getKey()}.${this.key}` : `${this.category}.${this.key}`;
+	}
+
+	getName()
+	{
+		const path = lodash.toPath(this.getKey());
+		return path[path.length - 1]
+			.split(/(?=[A-Z])/)
+			.map(
+				(word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`
+			).join(' ');
 	}
 
 	setParent(parent)
@@ -75,6 +85,18 @@ class GenerationEntry
 		return Object.keys(this.getChildren()).map((key) => `${this.getKey()}.${key}`);
 	}
 
+	getEntry(subpath)
+	{
+		console.log(this.getKey(), subpath);
+		const { items, remaining } = Generator.sever(subpath);
+		if (this.childEntries.hasOwnProperty(items[0]))
+		{
+			const child = this.childEntries[items[0]];
+			return remaining.length > 0 ? child.getEntry(remaining) : child;
+		}
+		else return undefined;
+	}
+
 	getValue()
 	{
 		if (!this.hasChildren())
@@ -100,13 +122,41 @@ class GenerationEntry
 		});
 	}
 
+	getLocalData()
+	{
+		return lodash.values(this.childEntries).reduce((accum, entry) => ({
+			...accum,
+			...entry.getLocalData()
+		}), {
+			[this.key]: this.getValue()
+		});
+	}
+
 	stringify()
 	{
-		if (this.metadata.stringify)
+		if (typeof this.value === 'object')
 		{
-			return inlineEval(this.metadata.stringify, this.value);
+			if (Array.isArray(this.value))
+			{
+				return this.value.join(' ');
+			}
+			else if (this.metadata.stringify)
+			{
+				return inlineEval(this.metadata.stringify, this.getLocalData());
+			}
+			else
+			{
+				return '';
+			}
 		}
-		return JSON.stringify(this.value);
+		return `${this.value}`;
+	}
+
+	canReroll()
+	{
+		return (
+			this.metadata.canReroll === undefined || this.metadata.canReroll === true
+		) && (this.parent === undefined || this.parent.canReroll());
 	}
 
 	generate(data)
@@ -121,13 +171,14 @@ class GenerationEntry
 			}
 		}
 
-		console.log(this.source, lodash.cloneDeep(data));
+		//console.log(this.source, lodash.cloneDeep(data));
+
 		// Parser could return an undefined value if the command didn't work.
 		// For example, a table like 'beard' is assumed to have an entry for every race,
 		// so races can opt-in by defining a beard.json table. If one is missing, this is not an error,
 		// but rather the race opting-out of generating beard data.
 		const result = parser(this.source, data);
-		console.log(result);
+		//console.log(result);
 		if (typeof result === 'object' && !Array.isArray(result))
 		{
 			this.value = result.value;
@@ -145,6 +196,11 @@ class GenerationEntry
 export default class Generator
 {
 
+	static convertCamelToTitleCase(text)
+	{
+		return text.split(/(?=[A-Z])/).map((word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`).join(' ');
+	}
+
 	constructor()
 	{
 		this.categories = {};
@@ -155,12 +211,12 @@ export default class Generator
 		return this.categories.hasOwnProperty(category);
 	}
 
-	getCategoryAndSubkeyFrom(fullKey)
+	static sever(fullKey, itemCount=1)
 	{
-		const category = lodash.toPath(fullKey)[0];
+		const path = lodash.toPath(fullKey);
 		return {
-			category: category,
-			keyInCategory: fullKey.slice(category.length + 1),
+			items: path.slice(0, itemCount),
+			remaining: path.slice(itemCount).join('.'),
 		};
 	}
 
@@ -168,14 +224,14 @@ export default class Generator
 
 	hasEntry(fullKey)
 	{
-		const {category, keyInCategory} = this.getCategoryAndSubkeyFrom(fullKey);
-		return this.hasCategory(category) && this.categories[category].hasOwnProperty(keyInCategory)
+		return this.getEntry(fullKey) !== undefined;
 	}
 
 	getEntry(fullKey)
 	{
-		const {category, keyInCategory} = this.getCategoryAndSubkeyFrom(fullKey);
-		return this.categories[category][keyInCategory];
+		const {items, remaining} = Generator.sever(fullKey, 2);
+		const entry = this.categories[items[0]][items[1]];
+		return remaining.length > 0 ? entry.getEntry(remaining) : entry;
 	}
 
 	createField(category, key, field)
@@ -200,7 +256,7 @@ export default class Generator
 		{
 			for (const childKey of childrenKeys)
 			{
-				const childEntry = this.createField(category, `${entry.keyInCategory}.${childKey}`, children[childKey]);
+				const childEntry = this.createField(category, childKey, children[childKey]);
 				childEntry.setParent(entry);
 				entry.setChild(childKey, childEntry);
 			}
@@ -221,7 +277,7 @@ export default class Generator
 		{
 			this.categories[entry.category] = {};
 		}
-		this.categories[entry.category][entry.keyInCategory] = entry;
+		this.categories[entry.category][entry.key] = entry;
 
 		return entry;
 	}
@@ -244,15 +300,12 @@ export default class Generator
 	// causes a generation of the entry at key
 	regenerate(key, bGenerateDependencies = true)
 	{
-		const category = lodash.toPath(key)[0];
-		const keyInCategory = key.slice(category.length + 1);
-
-		if (!this.hasCategory(category) || !this.categories[category].hasOwnProperty(keyInCategory))
+		if (!this.hasEntry(key))
 		{
 			throw new Error(`Missing entry '${key}', please add it via 'addField'.`);
 		}
 
-		const entry = this.categories[category][keyInCategory];
+		const entry = this.getEntry(key);
 		entry.generate(this.compileData());
 
 		if (bGenerateDependencies)
