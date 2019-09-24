@@ -1,11 +1,11 @@
 {
 	"rows": [
 		{
-			"default": "straight",
+			"value": "straight",
 			"weight": 30
 		},
 		{
-			"default": "bisexual",
+			"value": "bisexual",
 			"weight": 25
 		},
 		{
@@ -13,7 +13,7 @@
 			"weight": 20
 		},
 		{
-			"default": "pansexual",
+			"value": "pansexual",
 			"weight": 15
 		}
 	],

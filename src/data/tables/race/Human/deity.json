@@ -1,14 +1,14 @@
 {
 	"rows": [
-		{ "weight":70, "value":"{roll:diety/good}"},
-		{ "weight":5, "value":"{roll:diety/evil}"},
-		{ "weight":1, "value":"{roll:diety/dragon}"},
-		{ "weight":1, "value":"{roll:diety/drow}"},
-		{ "weight":1, "value":"{roll:diety/dwarf}"},
-		{ "weight":2, "value":"{roll:diety/elf}"},
-		{ "weight":1, "value":"{roll:diety/gnome}"},
-		{ "weight":1, "value":"{roll:diety/halfing}"},
-		{ "weight":1, "value":"{roll:diety/orc}"}
+		{ "weight":70, "value":"{roll:deity/good}"},
+		{ "weight":5, "value":"{roll:deity/evil}"},
+		{ "weight":1, "value":"{roll:deity/dragon}"},
+		{ "weight":1, "value":"{roll:deity/drow}"},
+		{ "weight":1, "value":"{roll:deity/dwarf}"},
+		{ "weight":2, "value":"{roll:deity/elf}"},
+		{ "weight":1, "value":"{roll:deity/gnome}"},
+		{ "weight":1, "value":"{roll:deity/halfing}"},
+		{ "weight":1, "value":"{roll:deity/orc}"}
 	],
 	"values": {}
 }

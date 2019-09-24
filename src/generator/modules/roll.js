@@ -57,6 +57,8 @@ export default function exec(match, data)
 		modifiers: {},
 	};
 
+	console.log(match[1], lodash.cloneDeep(result), table.rows);
+
 	const appendModifiers = (current, toAppend) => {
 		return lodash.toPairs(toAppend).reduce((accum, [key, modifier]) => {
 			if (!accum.hasOwnProperty(key)) accum[key] = [];

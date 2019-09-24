@@ -1,40 +1,40 @@
 {
 	"rows": [
 		{
-			"default": {
+			"value": {
 				"modifier": "{roll:traits/face/looks/goodModifier}",
 				"quality": "{roll:traits/face/looks/good}"
 			},
 			"weight": 6
 		},
 		{
-			"default": {
+			"value": {
 				"quality": "{roll:traits/face/looks/good}"
 			},
 			"weight": 14
 		},
 		{
-			"default": {
+			"value": {
 				"modifier": "{roll:traits/face/looks/badModifier}",
 				"quality": "{roll:traits/face/looks/bad}"
 			},
 			"weight": 4
 		},
 		{
-			"default": {
+			"value": {
 				"quality": "{roll:traits/face/looks/bad}"
 			},
 			"weight": 10
 		},
 		{
-			"default": {
+			"value": {
 				"modifier": "{roll:traits/face/looks/normalModifier}",
 				"quality": "{roll:traits/face/looks/normal}"
 			},
 			"weight": 8
 		},
 		{
-			"default": {
+			"value": {
 				"quality": "{roll:traits/face/looks/normal}"
 			},
 			"weight": 30

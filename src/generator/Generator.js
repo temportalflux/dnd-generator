@@ -186,7 +186,6 @@ class GenerationEntry
 		// so races can opt-in by defining a beard.json table. If one is missing, this is not an error,
 		// but rather the race opting-out of generating beard data.
 		const result = parser(this.source, data);
-		//console.log(result);
 		if (typeof result === 'object' && !Array.isArray(result))
 		{
 			this.value = result.value;
@@ -249,6 +248,7 @@ class GenerationEntry
 					break;
 			}
 		}
+		console.warn('Encountered unimplemented modifier schema:', modToEval);
 		return 0;
 	}
 

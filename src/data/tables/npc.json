@@ -1,9 +1,21 @@
 {
 	"generationOrder": [
 		"stats.abilityScores",
+		
 		"stats.alignmentTendancies",
+		"personality.alignmentMoral",
+
 		"description.height",
-		"description.weight"
+		"description.weight",
+
+		"description.race",
+		"description.subrace",
+
+		"description.eyeColor",
+		"description.skin",
+		"description.face",
+		"description.hair",
+		"description.beard"
 	],
 	"fieldOrder": [
 		"stats.abilityScores",
@@ -145,19 +157,28 @@
 				]
 			},
 			"eyeColor": {
-				"source": "{roll:traits/eyeColor}"
+				"source": "{roll:traits/eyecolor}"
 			},
 			"face": {
-				"source": "{roll:traits/face}"
+				"stringify": "$(shape) $(attractiveness)",
+				"children": {
+					"shape": {
+						"source": "{roll:traits/face/shape}"
+					},
+					"attractiveness": {
+						"source": "{roll:traits/face/attractiveness}",
+						"stringify": "$(attractiveness.modifier || '') $(attractiveness.quality)"
+					}
+				}
 			},
 			"hair": {
-				"source": "{roll:traits/$(description.race)/hair}",
+				"source": "{roll:race/$(description.race)/hair}",
 				"dependencies": [
 					"description.race"
 				]
 			},
 			"beard": {
-				"source": "{roll:traits/$(description.race)/beard}",
+				"source": "{roll:race/$(description.race)/beard}",
 				"dependencies": [
 					"description.race"
 				]
