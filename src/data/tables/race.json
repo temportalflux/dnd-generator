@@ -83,6 +83,17 @@
 	],
 	"values": {
 		"Aasimar": {
+			"children": {
+				"deity": {
+					"source": "{roll:race/Human/deity}"
+				},
+				"hair": {
+					"source": "{roll:traits/hair}"
+				},
+				"skin": {
+					"source": "{roll:common/skin}"
+				}
+			},
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
 				"stats.abilityScores.constitution": 1,

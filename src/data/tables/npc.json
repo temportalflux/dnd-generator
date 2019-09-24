@@ -15,7 +15,9 @@
 		"description.skin",
 		"description.face",
 		"description.hair",
-		"description.beard"
+		"description.beard",
+
+		"personality.deity"
 	],
 	"fieldOrder": [
 		"stats.abilityScores",

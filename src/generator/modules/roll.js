@@ -57,8 +57,6 @@ export default function exec(match, data)
 		modifiers: {},
 	};
 
-	console.log(match[1], lodash.cloneDeep(result), table.rows);
-
 	const appendModifiers = (current, toAppend) => {
 		return lodash.toPairs(toAppend).reduce((accum, [key, modifier]) => {
 			if (!accum.hasOwnProperty(key)) accum[key] = [];
@@ -66,6 +64,18 @@ export default function exec(match, data)
 			return accum;
 		}, current);
 	};
+
+	if (typeof result.value === 'object' && !Array.isArray(result.value))
+	{
+		console.log(lodash.cloneDeep(result));
+		//result.value = result.value.value;
+		/*
+		if (result.value.hasOwnProperty('modifiers'))
+		{
+			result.modifiers = appendModifiers(result.modifiers, result.value.modifiers);
+		}
+		//*/
+	}
 
 	// Modifiers which are determined based on scales or regexs on the generated value
 	if (table.modifiers)
@@ -96,6 +106,8 @@ export default function exec(match, data)
 			result.modifiers = appendModifiers(result.modifiers, valueEntry.modifiers);
 		}
 	}
+
+	console.log(tablePath, result);
 
 	return result;
 }
