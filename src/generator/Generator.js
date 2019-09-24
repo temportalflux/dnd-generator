@@ -5,8 +5,9 @@ import parser from './parser';
 class GenerationEntry
 {
 
-	constructor(category, key, { source, dependencies, stringify, canReroll, children })
+	constructor(generator, category, key, { source, dependencies, stringify, canReroll, children })
 	{
+		this.generator = generator;
 		this.category = category;
 		this.key = key;
 		this.source = source;
@@ -24,12 +25,15 @@ class GenerationEntry
 		this.value = children ? {} : undefined;
 
 		// An object with keys to other fields and whose values are the addition/subtractions used to modify that value
-		this.modifiers = undefined;
+		this.modifiers = {};
 
 		this.metadata = {
 			stringify: stringify,
 			canReroll: canReroll,
 		};
+
+		// keys of other attributes which have modifiers for this entry
+		this.modifyingEntryKeys = [];
 	}
 
 	getKey()
@@ -87,7 +91,6 @@ class GenerationEntry
 
 	getEntry(subpath)
 	{
-		console.log(this.getKey(), subpath);
 		const { items, remaining } = Generator.sever(subpath);
 		if (this.childEntries.hasOwnProperty(items[0]))
 		{
@@ -101,6 +104,11 @@ class GenerationEntry
 	{
 		if (!this.hasChildren())
 		{
+			if (typeof this.value === 'number')
+			{
+				const totalModifier = this.generator.getModifications(this.modifyingEntryKeys, this.getKey());
+				return this.value + totalModifier;
+			}
 			return this.value;
 		}
 
@@ -187,8 +195,61 @@ class GenerationEntry
 		else
 		{
 			this.value = result;
-			this.modifiers = undefined;
+			this.modifiers = {};
 		}
+
+	}
+
+	subscribeModifyingEntry(entry)
+	{
+		this.modifyingEntryKeys.push(entry.getKey());
+	}
+
+	unsubscribeModifyingEntry(entry)
+	{
+		const entryKey = entry.getKey();
+		this.modifyingEntryKeys = this.modifyingEntryKeys.filter((key) => key !== entryKey);
+	}
+
+	getModifier(keyToModify)
+	{
+		return this.evalModifier(this.modifiers[keyToModify]);
+	}
+
+	evalModifier(modToEval)
+	{
+		if (typeof modToEval === 'number') return modToEval;
+		else if (Array.isArray(modToEval))
+		{
+			return modToEval.reduce((accum, mod) => accum + this.evalModifier(mod), 0);
+		}
+		else if (typeof modToEval === 'object')
+		{
+			switch (modToEval.type)
+			{
+				case 'curve':
+					switch (modToEval.curve)
+					{
+						case 'step':
+							const keyframes = Object.keys(modToEval.values);
+							let currentIndex = undefined;
+							let nextIndex = keyframes.length > 0 ? 0 : undefined;
+							while (nextIndex !== undefined && this.value > keyframes[nextIndex])
+							{
+								currentIndex = nextIndex;
+								nextIndex++;
+								if (nextIndex >= keyframes.length) nextIndex = undefined;
+							}
+							return currentIndex ? modToEval.values[keyframes[currentIndex]] : 0;
+						default:
+							break;
+					}
+					break;
+				default:
+					break;
+			}
+		}
+		return 0;
 	}
 
 }
@@ -236,7 +297,7 @@ export default class Generator
 
 	createField(category, key, field)
 	{
-		const entry = new GenerationEntry(category, key, field);
+		const entry = new GenerationEntry(this, category, key, field);
 
 		if (entry.dependencies)
 		{
@@ -306,7 +367,24 @@ export default class Generator
 		}
 
 		const entry = this.getEntry(key);
+		
+		Object.keys(entry.modifiers).forEach((keyModifier) => {
+			const entryToModify = this.getEntry(keyModifier);
+			if (entryToModify)
+			{
+				entryToModify.unsubscribeModifyingEntry(entry);
+			}
+		});
+		
 		entry.generate(this.compileData());
+
+		Object.keys(entry.modifiers).forEach((keyModifier) => {
+			const entryToModify = this.getEntry(keyModifier);
+			if (entryToModify)
+			{
+				entryToModify.subscribeModifyingEntry(entry);
+			}
+		});
 
 		if (bGenerateDependencies)
 		{
@@ -317,6 +395,19 @@ export default class Generator
 			}
 		}
 
+	}
+
+	getModifications(modifierEntryKeys, keyToModify)
+	{
+		return modifierEntryKeys.reduce((totalModifier, entryKey) => {
+			const entry = this.getEntry(entryKey);
+			if (entry)
+			{
+				const modifier = entry.getModifier(keyToModify);
+				if (typeof modifier === 'number') return totalModifier + modifier;
+			}
+			return totalModifier;
+		}, 0);
 	}
 
 }

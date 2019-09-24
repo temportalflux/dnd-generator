@@ -56,7 +56,7 @@ export default class NpcDataTree extends React.Component
 	{
 		return (
 			<span>
-				{title} {canReroll && <Button path={path} size='mini' icon='refresh' onClick={this.props.onRerollClicked} />}
+				{canReroll && <Button path={path} size='mini' icon='refresh' onClick={this.props.onRerollClicked} />} {title}
 			</span>
 		);
 	}

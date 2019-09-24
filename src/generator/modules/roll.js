@@ -54,12 +54,16 @@ export default function exec(match, data)
 
 	let result = {
 		value: chooseRandomWithWeight(table.rows),
-		modifiers: [],
+		modifiers: {},
 	};
 
-	const appendModifiers = (current, toAppend) => current.concat(lodash.toPairs(toAppend).map(
-		([key, modifier]) => ({ key: key, modifier: modifier })
-	));
+	const appendModifiers = (current, toAppend) => {
+		return lodash.toPairs(toAppend).reduce((accum, [key, modifier]) => {
+			if (!accum.hasOwnProperty(key)) accum[key] = [];
+			accum[key].push(modifier);
+			return accum;
+		}, current);
+	};
 
 	// Modifiers which are determined based on scales or regexs on the generated value
 	if (table.modifiers)
@@ -90,8 +94,6 @@ export default function exec(match, data)
 			result.modifiers = appendModifiers(result.modifiers, valueEntry.modifiers);
 		}
 	}
-
-	console.log(result);
 
 	return result;
 }

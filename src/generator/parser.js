@@ -2,7 +2,7 @@ import lodash from 'lodash';
 import Execs from './modules/index';
 import evalAtCtx from './modules/evalAtCtx';
 
-console.log(Execs);
+console.log('Parser valid executors', Execs);
 
 export default function parseField(field, data)
 {
@@ -16,11 +16,6 @@ export default function parseField(field, data)
 	}
 	else if (typeof field === 'string')
 	{
-		// 1. Parse string portions which are eval replacements
-		const contextualizedValue = evalAtCtx(field, data);
-
-		console.log(contextualizedValue);
-
 		for (let execKey of Object.keys(Execs))
 		{
 			// use gnome names as an example of complex rolls with field fetches

@@ -121,7 +121,9 @@ export default class Home extends React.Component
 
 	onRerollClicked(evt, { path })
 	{
-		console.log('TODO Reroll', path);
+		const generator = this.state.generator;
+		generator.regenerate(path);
+		this.setState({ generator: generator });
 	}
 
 	render()
