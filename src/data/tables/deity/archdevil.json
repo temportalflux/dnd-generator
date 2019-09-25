@@ -1,39 +1,44 @@
 {
 	"rows": [
 		{
-			"value": "Bel"
+			"value": "Bel",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Dispater"
+			"value": "Dispater",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Mammon"
+			"value": "Mammon",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Fierna"
+			"value": "Fierna",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Belial"
+			"value": "Belial",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Prince Levistus"
+			"value": "Prince Levistus",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Glasya"
+			"value": "Glasya",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Baalzebul"
+			"value": "Baalzebul",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Mephistopheles"
+			"value": "Mephistopheles",
+			"description": "the archdevil $(value)"
 		},
 		{
-			"value": "Asmodeus"
+			"value": "Asmodeus",
+			"description": "the archdevil $(value)"
 		}
-	],
-	"values": {
-		"{regex:.*}": {
-			"value": "the archdevil ${value}"
-		}
-	}
+	]
 }

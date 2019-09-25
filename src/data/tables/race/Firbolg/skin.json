@@ -1,21 +1,13 @@
 {
 	"rows": [
 		{
-			"value": "gray"
+			"value": "gray skin"
 		},
 		{
-			"value": "brown"
+			"value": "brown skin"
 		},
 		{
-			"value": "green"
+			"value": "green skin"
 		}
-	],
-	"values": {
-		"{regex:.*}": {
-			"value": {
-				"color": "$(value)",
-				"type": "skin"
-			}
-		}
-	}
+	]
 }

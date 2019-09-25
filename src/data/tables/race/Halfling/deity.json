@@ -1,17 +1,12 @@
 {
 	"rows": [
 		{
-			"value": "Yondalla",
+			"source": "{roll:deity/halfling}",
 			"weight": 3
 		},
 		{
-			"value": "{roll:race/Human/deity}",
+			"source": "{roll:race/Human/deity}",
 			"weight": 2
 		}
-	],
-	"values": {
-		"Yondalla": {
-			"value": "Yondalla, Goddess of halflings, bounty, protection, children, security, leadership, wisdom, creation and family. (Lawful Good)"
-		}
-	}
+	]
 }

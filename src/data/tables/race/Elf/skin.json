@@ -1,36 +1,28 @@
 {
 	"rows": [
 		{
-			"value": "blueish",
+			"value": "blueish skin",
 			"weight": 1
 		},
 		{
-			"value": "pink",
+			"value": "pink skin",
 			"weight": 2
 		},
 		{
-			"value": "golden",
+			"value": "golden skin",
 			"weight": 2
 		},
 		{
-			"value": "silver",
+			"value": "silver skin",
 			"weight": 2
 		},
 		{
-			"value": "green",
+			"value": "green skin",
 			"weight": 3
 		},
 		{
-			"value": "copper",
+			"value": "copper skin",
 			"weight": 2
 		}
-	],
-	"values": {
-		"{regex:.*}": {
-			"value": {
-				"color": "$(value)",
-				"type": "skin"
-			}
-		}
-	}
+	]
 }

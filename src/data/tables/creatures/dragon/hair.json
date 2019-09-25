@@ -1,75 +1,44 @@
 {
 	"rows": [
 		{
-			"default": {
-				"type": "head",
-				"style": "spiked"
-			},
-			"weight": 3
+			"weight": 3,
+			"value": "spiked head"
 		},
 		{
-			"default": {
-				"type": "head",
-				"style": "ridged"
-			},
-			"weight": 3
+			"weight": 3,
+			"value": "rigged head"
 		},
 		{
-			"default": {
-				"type": "head",
-				"style": "crested"
-			},
-			"weight": 3
+			"weight": 3,
+			"value": "crested head"
 		},
 		{
-			"default": {
-				"type": "head",
-				"style": "bumpy"
-			},
-			"weight": 3
+			"weight": 3,
+			"value": "bumpy head"
 		},
 		{
-			"default": {
-				"type": "head",
-				"style": "plated"
-			},
-			"weight": 3
+			"weight": 3,
+			"value": "plated head"
 		},
 		{
-			"default": {
-				"type": "frill",
-				"style": "bright"
-			},
-			"weight": 1
+			"weight": 1,
+			"value": "bright frill"
 		},
 		{
-			"default": {
-				"type": "frill",
-				"style": "colorful"
-			},
-			"weight": 1
+			"weight": 1,
+			"value": "colorful frill"
 		},
 		{
-			"default": {
-				"type": "frill",
-				"style": "dark"
-			},
-			"weight": 1
+			"weight": 1,
+			"value": "dark frill"
 		},
 		{
-			"default": {
-				"type": "frill",
-				"style": "bony"
-			},
-			"weight": 1
+			"weight": 1,
+			"value": "bony frill"
 		},
 		{
-			"default": {
-				"type": "frill",
-				"style": "smooth"
-			},
-			"weight": 8
+			"weight": 8,
+			"value": "smooth frill"
 		}
-	],
-	"values": {}
+	]
 }

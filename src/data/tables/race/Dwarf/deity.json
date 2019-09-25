@@ -1,15 +1,12 @@
 {
 	"rows": [
 		{
-			"value": "Moradin",
-			"weight": 3
+			"weight": 3,
+			"source": "{roll:deity/dwarf}"
 		},
 		{
-			"value": "{roll:race/Human/deity}",
-			"weight": 2
+			"weight": 2,
+			"source": "{roll:race/Human/deity}"
 		}
-	],
-	"values": {
-		"Moradin": "Moradin, God of dwarves, creation, smithing, protection, metalcraft, stonework. (Lawful Good)"
-	}
+	]
 }

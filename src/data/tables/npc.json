@@ -9,10 +9,10 @@
 		"identity.sex",
 		"identity.sexualOrientation",		
 		"description.height",
-		"description.weight"
+		"description.weight",
+		"description.race"
 	],
 	"generationOrderOld": [
-		"description.race",
 		"description.subrace",
 		"description.eyeColor",
 		"description.skin",
@@ -143,6 +143,11 @@
 			"category": "description",
 			"key": "weight",
 			"source": "{roll:traits/weight}"
+		},
+		{
+			"category": "description",
+			"key": "race",
+			"source": "{roll:race}"
 		}
 	],
 	"fieldOrderOld": [
@@ -178,9 +183,6 @@
 		"description": {
 			"age": {
 				"source": "{roll:traits/age}"
-			},
-			"race": {
-				"source": "{roll:race}"
 			},
 			"subrace": {
 				"source": "{roll:race/$(description.race)}",

@@ -1,107 +1,32 @@
 {
 	"rows": [
 		{
+			"weight": 2,
 			"value": "Aasimar",
-			"weight": 2
-		},
-		{
-			"value": "Dragonborn",
-			"weight": 4
-		},
-		{
-			"value": "Dwarf",
-			"weight": 11
-		},
-		{
-			"value": "Elf",
-			"weight": 16
-		},
-		{
-			"value": "Firbolg",
-			"weight": 2
-		},
-		{
-			"value": "Gnome",
-			"weight": 7
-		},
-		{
-			"value": "Goblin",
-			"weight": 1
-		},
-		{
-			"value": "Goliath",
-			"weight": 2
-		},
-		{
-			"value": "Halfling",
-			"weight": 8
-		},
-		{
-			"value": "Half-Dwarf",
-			"weight": 20
-		},
-		{
-			"value": "Half-Elf",
-			"weight": 25
-		},
-		{
-			"value": "Half-Orc",
-			"weight": 5
-		},
-		{
-			"value": "Human",
-			"weight": 70
-		},
-		{
-			"value": "Kenku",
-			"weight": 2
-		},
-		{
-			"value": "Lizardfolk",
-			"weight": 2
-		},
-		{
-			"value": "Orc",
-			"weight": 3
-		},
-		{
-			"value": "Tabaxi",
-			"weight": 2
-		},
-		{
-			"value": "Tiefling",
-			"weight": 4
-		},
-		{
-			"value": "Triton",
-			"weight": 4
-		},
-		{
-			"value": "Troglodyte",
-			"weight": 1
-		}
-	],
-	"values": {
-		"Aasimar": {
-			"children": {
-				"deity": {
-					"source": "{roll:race/Human/deity}"
-				},
-				"hair": {
-					"source": "{roll:traits/hair}"
-				},
-				"skin": {
-					"source": "{roll:common/skin}"
-				}
-			},
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
 				"stats.abilityScores.constitution": 1,
 				"stats.abilityScores.wisdom": 1,
 				"stats.abilityScores.charisma": 3
-			}
+			},
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:race/Human/deity}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:common/skin}"
+				}
+			]
 		},
-		"Dragonborn": {
+		{
+			"weight": 4,
+			"value": "Dragonborn",
 			"modifiers": {
 				"stats.abilityScores.strength": 3,
 				"stats.abilityScores.dexterity": -2,
@@ -110,21 +35,74 @@
 				"stats.abilityScores.wisdom": -1,
 				"stats.abilityScores.charisma": 2,
 				"description.height": 20
-			}
+			},
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:deity/dragon}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:creatures/dragon/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/scaleTexture}",
+					"stringify": "$(value) scales"
+				}
+			]
 		},
-		"Dwarf": {
+		{
+			"weight": 11,
+			"value": "Dwarf",
 			"modifiers": {
 				"description.height": -38,
 				"description.age": "{roll:traits/age/bonus}"
-			}
+			},
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:race/Dwarf/deity}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:race/Dwarf/beard}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/nonhuman}"
+				}
+			]
 		},
-		"Elf": {
+		{
+			"weight": 16,
+			"value": "Elf",
 			"modifiers": {
 				"description.height": -5,
 				"description.age": "{roll:traits/age/bonus}"
-			}
+			},
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:race/Elf/deity}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Elf/skin}"
+				}
+			]
 		},
-		"Firbolg": {
+		{
+			"weight": 2,
+			"value": "Firbolg",
 			"modifiers": {
 				"stats.abilityScores.strength": 3,
 				"stats.abilityScores.dexterity": -2,
@@ -135,15 +113,49 @@
 				"stats.alignmentTendancies.moral.good": 2,
 				"stats.alignmentTendancies.moral.neutral": 2,
 				"description.age": "{roll:traits/age/bonus}"
-			}
+			},
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:race/Elf/deity}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Firbolg/skin}"
+				}
+			]
 		},
-		"Gnome": {
+		{
+			"weight": 700,
+			"value": "Gnome",
 			"modifiers": {
 				"description.height": -58,
 				"description.age": "{roll:traits/age/bonus}"
-			}
-		},
-		"Goblin": {
+			},
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:race/Gnome/deity}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/nonhuman}"
+				}
+			]
+		}
+	],
+	"todoRows": [
+		{
+			"weight": 1,
+			"value": "Goblin",
 			"modifiers": {
 				"stats.abilityScores.strength": -2,
 				"stats.abilityScores.dexterity": 2,
@@ -157,7 +169,9 @@
 				"stats.alignmentTendancies.moral.negative": 3
 			}
 		},
-		"Goliath": {
+		{
+			"weight": 2,
+			"value": "Goliath",
 			"modifiers": {
 				"stats.abilityScores.strength": 3,
 				"stats.abilityScores.dexterity": -2,
@@ -171,12 +185,16 @@
 				"stats.alignmentTendancies.moral.negative": -2
 			}
 		},
-		"Halfling": {
+		{
+			"weight": 8,
+			"value": "Halfling",
 			"modifiers": {
 				"description.height": -63
 			}
 		},
-		"Half-Dwarf": {
+		{
+			"weight": 20,
+			"value": "Half-Dwarf",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
 				"stats.abilityScores.constitution": 2,
@@ -185,7 +203,9 @@
 				"stats.alignmentTendancies.ethical.positive": 2
 			}
 		},
-		"Half-Elf": {
+		{
+			"weight": 25,
+			"value": "Half-Elf",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 1,
 				"stats.abilityScores.intelligence": 1,
@@ -194,7 +214,9 @@
 				"stats.alignmentTendancies.ethical.negative": 2
 			}
 		},
-		"Half-Orc": {
+		{
+			"weight": 5,
+			"value": "Half-Orc",
 			"modifiers": {
 				"stats.abilityScores.strength": 4,
 				"stats.abilityScores.dexterity": -1,
@@ -207,7 +229,9 @@
 				"stats.alignmentTendancies.moral.positive": -2
 			}
 		},
-		"Human": {
+		{
+			"weight": 70,
+			"value": "Human",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
 				"stats.abilityScores.dexterity": 1,
@@ -217,7 +241,9 @@
 				"stats.abilityScores.charisma": 1
 			}
 		},
-		"Kenku": {
+		{
+			"weight": 2,
+			"value": "Kenku",
 			"modifiers": {
 				"stats.abilityScores.strength": -2,
 				"stats.abilityScores.dexterity": 3,
@@ -233,7 +259,9 @@
 				"description.age": -6
 			}
 		},
-		"Lizardfolk": {
+		{
+			"weight": 2,
+			"value": "Lizardfolk",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.dexterity": 1,
@@ -250,7 +278,9 @@
 				"description.age": -4
 			}
 		},
-		"Orc": {
+		{
+			"weight": 3,
+			"value": "Orc",
 			"modifiers": {
 				"stats.abilityScores.strength": 5,
 				"stats.abilityScores.dexterity": -1,
@@ -263,7 +293,9 @@
 				"stats.alignmentTendancies.moral.negative": 2
 			}
 		},
-		"Tabaxi": {
+		{
+			"weight": 2,
+			"value": "Tabaxi",
 			"modifiers": {
 				"stats.abilityScores.strength": -1,
 				"stats.abilityScores.dexterity": 4,
@@ -276,7 +308,9 @@
 				"stats.alignmentTendancies.ethical.negative": 3
 			}
 		},
-		"Tiefling": {
+		{
+			"weight": 4,
+			"value": "Tiefling",
 			"modifiers": {
 				"stats.abilityScores.constitution": -1,
 				"stats.abilityScores.intelligence": 2,
@@ -285,7 +319,9 @@
 				"description.age": "{roll:traits/age/bonus}"
 			}
 		},
-		"Triton": {
+		{
+			"weight": 4,
+			"value": "Triton",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.constitution": 2,
@@ -296,7 +332,9 @@
 				"description.age": "$(description.age*description.age)"
 			}
 		},
-		"Troglodyte": {
+		{
+			"weight": 1,
+			"value": "Troglodyte",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
 				"stats.abilityScores.constitution": 1,
@@ -307,5 +345,5 @@
 				"stats.alignmentTendancies.moral.negative": 2
 			}
 		}
-	}
+	]
 }
