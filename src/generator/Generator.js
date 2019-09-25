@@ -24,6 +24,7 @@ export class GenerationEntry
 
 			// LINEAGE
 			parent: null,
+			childrenAreGenerated: false,
 			children: [],
 
 			// METADATA
@@ -39,6 +40,12 @@ export class GenerationEntry
 			affects: [],
 		}, data);
 		this.createChildren();
+	}
+
+	deconstruct()
+	{
+		this.unsubscribeDependencies();
+		this.unsubscribeModifiers();
 	}
 
 	/*
@@ -132,6 +139,14 @@ export class GenerationEntry
 		) && (this.parent === null || this.parent.getCanReroll());
 	}
 
+	clearChildren()
+	{
+		Object.keys(this.children).forEach((childKey) => {
+			this.children[childKey].deconstruct();
+		});
+		this.children = {};
+	}
+
 	createChildren()
 	{
 		const childrenData = lodash.cloneDeep(this.children);
@@ -207,9 +222,47 @@ export class GenerationEntry
 		return this.dependencies;
 	}
 
+	subscribeDependencies()
+	{
+		if (this.hasDependencies())
+		{
+			for (const dependencyKey of this.getDependencies())
+			{
+				if (!this.generator.hasEntry(dependencyKey))
+				{
+					console.warn(`Cannot create dependency from '${this.getPath()}' on '${dependencyKey}', there is no entry for '${dependencyKey}'.`);
+					continue;
+				}
+				this.generator.getEntry(dependencyKey).addAffectedEntry(this);
+			}
+		}
+	}
+
+	unsubscribeDependencies()
+	{
+		if (this.hasDependencies())
+		{
+			for (const dependencyKey of this.getDependencies())
+			{
+				if (!this.generator.hasEntry(dependencyKey))
+				{
+					console.warn(`Cannot remove dependency for '${this.getPath()}' from '${dependencyKey}', there is no entry for '${dependencyKey}'.`);
+					continue;
+				}
+				this.generator.getEntry(dependencyKey).removeAffectedEntry(this);
+			}
+		}
+	}
+
 	addAffectedEntry(entry)
 	{
 		this.affects.push(entry.getPath());
+	}
+
+	removeAffectedEntry(entry)
+	{
+		const entryKey = entry.getPath();
+		this.affects = this.affects.filter((key) => key !== entryKey);
 	}
 
 	getAllAffectedEntryPaths()
@@ -229,6 +282,11 @@ export class GenerationEntry
 			}
 		}
 
+		if (this.childrenAreGenerated)
+		{
+			this.clearChildren();
+		}
+
 		this.unsubscribeModifiers();
 
 		// Parser could return an undefined value if the command didn't work.
@@ -245,11 +303,25 @@ export class GenerationEntry
 				entry.generate(data);
 				this.value = entry.getValue();
 				this.modifiers = entry.modifiers;
+				if (entry.hasChildren())
+				{
+					if (this.hasChildren())
+					{
+						console.error('Entry', lodash.cloneDeep(this), `has children, but has also generated a value with children`, lodash.cloneDeep(entry));
+					}
+					else
+					{
+						this.childrenAreGenerated = true;
+						this.children = lodash.mapValues(entry.children, (child) => {
+							child.setParent(this);
+							return child;
+						});
+					}
+				}
 			}
 			else
 			{
-				// TODO: What happens to these children when this entry is regenerated
-				//this.addChild(entry);
+				console.error('Generated result has a value for the "key" property. This is not okay.');
 			}
 		}
 		else
@@ -396,17 +468,7 @@ export class Generator
 	addEntry(entry)
 	{
 
-		if (entry.hasDependencies())
-		{
-			for (const dependencyKey of entry.getDependencies())
-			{
-				if (!this.hasEntry(dependencyKey))
-				{
-					console.warn(`Cannot create dependency from '${entry.getKey()}' on '${dependencyKey}', there is no entry for '${dependencyKey}'.`);
-				}
-				this.getEntry(dependencyKey).addAffectedEntry(entry);
-			}
-		}
+		entry.subscribeDependencies();
 
 		if (entry.category)
 		{
