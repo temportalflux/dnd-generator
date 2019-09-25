@@ -4,7 +4,10 @@ import FilterMenu from '../components/FilterMenu';
 import DisplayNpc from '../components/DisplayNpc';
 import { generate } from '../generator/index';
 import NpcDataTree from '../components/NpcDataTree';
-import Generator from '../generator/Generator';
+import lodash from 'lodash';
+import { Generator, GenerationEntry } from '../generator/Generator';
+
+const { getTable } = require('../Data');
 
 const TEMP_NPC_DATA = {
 	"meta": {
@@ -106,9 +109,94 @@ export default class Home extends React.Component
 		this.generate = this.generate.bind(this);
 		this.onRerollClicked = this.onRerollClicked.bind(this);
 
+		const npc = getTable('npc');
+		const generator = new Generator();
+
+		npc.fieldOrder.forEach((entryData) =>
+		{
+			generator.addEntry(new GenerationEntry(lodash.assign({}, entryData, { generator: generator })));
+		});
+
+		generator.setGenerationOrder(npc.generationOrder || []);
+		generator.generate();
+
+		
+		/*
+		const data = [
+			{
+				category: 'identity',
+				key: 'sex',
+				source: '{roll:identity/sex}'
+			},
+			{
+				category: 'identity',
+				key: 'genderIdentity',
+				source: '{roll:identity/genderIdentity}',
+			},
+			{
+				category: 'stats',
+				key: 'alignmentTendancies',
+				stringify: "$(ethical.positive)/$(ethical.neutral)/$(ethical.negative) - $(moral.positive)/$(moral.neutral)/$(moral.negative)",
+				children: [
+					{
+						key: 'ethical',
+						stringify: "$(positive)/$(neutral)/$(negative)",
+						dependencies: [
+							'identity.sex'
+						],
+						children: [
+							{
+								key: 'positive',
+								name: 'Lawful',
+								source: "{roll:traits/alignment/tendancy}",
+							},
+							{
+								key: 'neutral',
+								name: 'Neutral',
+								source: "{roll:traits/alignment/tendancy}",
+							},
+							{
+								key: 'negative',
+								name: 'Chaotic',
+								source: "{roll:traits/alignment/tendancy}",
+							}
+						]
+					},
+					{
+						key: 'moral',
+						stringify: "$(positive)/$(neutral)/$(negative)",
+						children: [
+							{
+								key: 'positive',
+								name: 'Good',
+								source: "{roll:traits/alignment/tendancy}",
+							},
+							{
+								key: 'neutral',
+								name: 'Neutral',
+								source: "{roll:traits/alignment/tendancy}",
+							},
+							{
+								key: 'negative',
+								name: 'Evil',
+								source: "{roll:traits/alignment/tendancy}",
+							}
+						]
+					}
+				]
+			},
+		];
+
+		data.forEach((entryData) => {
+			generator.addEntry(new GenerationEntry(lodash.assign({}, entryData, {generator: generator})));
+		})
+
+		console.log(generator);
+		//*/
+
 		this.state = {
 			npc: TEMP_NPC_DATA,
-			generator: new Generator()
+			generator: generator
 		};
 	}
 
@@ -122,22 +210,20 @@ export default class Home extends React.Component
 	onRerollClicked(evt, { path })
 	{
 		const generator = this.state.generator;
-		generator.regenerate(path);
+		if (path === 'npc')
+		{
+			generator.generate();
+		}
+		else
+		{
+			generator.regenerate(path);
+		}
 		this.setState({ generator: generator });
 	}
 
 	render()
 	{
 		/*
-		
-						<Grid.Column>
-							<DisplayNpc
-								data={this.state.npc}
-							/>
-						</Grid.Column>
-		*/
-		return (
-			<div>
 				<Grid columns={2}>
 					<Grid.Row>
 						<Grid.Column>
@@ -147,6 +233,15 @@ export default class Home extends React.Component
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>
+		
+						<Grid.Column>
+							<DisplayNpc
+								data={this.state.npc}
+							/>
+						</Grid.Column>
+		*/
+		return (
+			<div>
 
 				<NpcDataTree
 					data={this.state.npc}

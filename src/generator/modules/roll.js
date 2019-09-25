@@ -14,7 +14,7 @@ function chooseRandomWithWeight(entries)
 		weight_sum += entries[i].weight || 1;
 		if (randInt <= weight_sum)
 		{
-			return entries[i].value;
+			return entries[i];
 		}
 	}
 
@@ -57,6 +57,8 @@ export default function exec(match, data)
 		modifiers: {},
 	};
 
+	return chooseRandomWithWeight(table.rows);
+
 	const appendModifiers = (current, toAppend) => {
 		return lodash.toPairs(toAppend).reduce((accum, [key, modifier]) => {
 			if (!accum.hasOwnProperty(key)) accum[key] = [];
@@ -67,7 +69,6 @@ export default function exec(match, data)
 
 	if (typeof result.value === 'object' && !Array.isArray(result.value))
 	{
-		console.log(lodash.cloneDeep(result));
 		//result.value = result.value.value;
 		/*
 		if (result.value.hasOwnProperty('modifiers'))
@@ -90,6 +91,7 @@ export default function exec(match, data)
 		}
 	}
 
+	/*
 	if (table.values && table.values[result.value])
 	{
 
@@ -106,6 +108,7 @@ export default function exec(match, data)
 			result.modifiers = appendModifiers(result.modifiers, valueEntry.modifiers);
 		}
 	}
+	//*/
 
 	console.log(tablePath, result);
 

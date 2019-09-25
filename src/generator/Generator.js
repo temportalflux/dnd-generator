@@ -2,9 +2,46 @@ import lodash from 'lodash';
 import inlineEval from './modules/evalAtCtx';
 import parser from './parser';
 
-class GenerationEntry
+export class GenerationEntry
 {
 
+	constructor(data)
+	{
+		lodash.assign(this, {
+			generator: null,
+
+			// CORE DATA
+			category: undefined,
+			// entry is invalid if key is not defined
+			key: undefined,
+			name: undefined,
+			source: undefined,
+
+			// GENERATION OUTPUT
+			value: undefined,
+			// a dict of entry keys to modifications of those entries
+			modifiers: {},
+
+			// LINEAGE
+			parent: null,
+			children: [],
+
+			// METADATA
+			stringify: undefined,
+			canReroll: true,
+			// entry keys that cause regeneration of this entry
+			dependencies: [],
+
+			// DYNAMIC
+			// entry keys which have modifiers for this entry. Generated from `modifiers`
+			modifiedBy: [],
+			// entry keys which this value causes regeneration for. Generated from `dependencies`
+			affects: [],
+		}, data);
+		this.createChildren();
+	}
+
+	/*
 	constructor(generator, category, key, { source, dependencies, stringify, canReroll, children })
 	{
 		this.generator = generator;
@@ -35,20 +72,82 @@ class GenerationEntry
 		// keys of other attributes which have modifiers for this entry
 		this.modifyingEntryKeys = [];
 	}
+	//*/
+
+	getCategory()
+	{
+		return this.parent === null ? this.category : this.parent.getCategory();
+	}
 
 	getKey()
 	{
-		return this.parent !== undefined ? `${this.parent.getKey()}.${this.key}` : `${this.category}.${this.key}`;
+		return this.parent !== null ? `${this.parent.key}.${this.key}` : this.key;
+	}
+
+	getPath()
+	{
+		return this.parent !== null ? `${this.parent.getPath()}.${this.key}` : `${this.category ? `${this.category}.` : ''}${this.key}`;
+	}
+
+	isValid()
+	{
+		return this.key !== undefined;
 	}
 
 	getName()
 	{
+		if (this.name !== undefined) return this.name;
 		const path = lodash.toPath(this.getKey());
 		return path[path.length - 1]
 			.split(/(?=[A-Z])/)
 			.map(
 				(word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`
 			).join(' ');
+	}
+
+	toString()
+	{
+		if (this.stringify)
+		{
+			const lineageValues = lodash.get(this.getLineageValues(), this.getPath());
+			const value = this.getValue();
+			const isValueAnObject = typeof value === 'object' && !Array.isArray(value);
+			const context = lodash.assign({},
+				lineageValues,
+				isValueAnObject ? value : { value: value }
+			);
+			return inlineEval(this.stringify, context);
+		}
+		else if (Array.isArray(this.value))
+		{
+			return this.value.join(' ');
+		}
+		return `${this.value}`;
+	}
+
+	getCanReroll()
+	{
+		return (
+			this.canReroll === undefined || this.canReroll === true
+		) && (this.parent === null || this.parent.getCanReroll());
+	}
+
+	createChildren()
+	{
+		const childrenData = lodash.cloneDeep(this.children);
+		this.children = {};
+		childrenData.forEach((entryData) => this.addChild(this.createEntry(entryData)));
+	}
+
+	createEntry(entryData)
+	{
+		return new GenerationEntry(lodash.assign({}, entryData, { generator: this.generator }));
+	}
+
+	addChild(child)
+	{
+		child.setParent(this);
+		this.children[child.key] = this.generator.addEntry(child);
 	}
 
 	setParent(parent)
@@ -58,113 +157,64 @@ class GenerationEntry
 
 	hasChildren()
 	{
-		return Object.keys(this.childEntries).length > 0;
-	}
-
-	setChild(childKey, entry)
-	{
-		this.childEntries[childKey] = entry;
-	}
-
-	addAffectiveEntry(key)
-	{
-		this.affects.push(key);
-	}
-
-	getAffectiveEntries()
-	{
-		return [
-			...this.getChildrenKeysGlobal(),
-			...this.affects,
-		];
+		return Object.keys(this.children).length > 0;
 	}
 
 	getChildren()
 	{
-		return this.children;
+		return this.children || {};
 	}
 
-	getChildrenKeysGlobal()
-	{
-		return Object.keys(this.getChildren()).map((key) => `${this.getKey()}.${key}`);
-	}
-
-	getEntry(subpath)
+	getChild(subpath)
 	{
 		const { items, remaining } = Generator.sever(subpath);
-		if (this.childEntries.hasOwnProperty(items[0]))
+		const children = this.getChildren();
+		if (children.hasOwnProperty(items[0]))
 		{
-			const child = this.childEntries[items[0]];
-			return remaining.length > 0 ? child.getEntry(remaining) : child;
+			const child = children[items[0]];
+			return remaining.length > 0 ? child.getChild(remaining) : child;
 		}
 		else return undefined;
 	}
 
-	getValue()
+	getLineageValues(values)
 	{
+		values = values || {};
+
 		if (!this.hasChildren())
 		{
-			if (typeof this.value === 'number')
-			{
-				const totalModifier = this.generator.getModifications(this.modifyingEntryKeys, this.getKey());
-				return this.value + totalModifier;
-			}
-			return this.value;
+			lodash.set(values, this.getPath(),
+				this.getValue()
+			);
 		}
-
-		return lodash.mapValues(this.childEntries, (entry) => entry.getValue());
-	}
-
-	hasValue()
-	{
-		return this.value !== undefined;
-	}
-
-	compileData()
-	{
-		return lodash.values(this.childEntries).reduce((accum, entry) => ({
-			...accum,
-			...entry.compileData(),
-		}), {
-			[this.getKey()]: this.getValue(),
-		});
-	}
-
-	getLocalData()
-	{
-		return lodash.values(this.childEntries).reduce((accum, entry) => ({
-			...accum,
-			...entry.getLocalData()
-		}), {
-			[this.key]: this.getValue()
-		});
-	}
-
-	stringify()
-	{
-		if (typeof this.value === 'object')
+		else
 		{
-			if (Array.isArray(this.value))
-			{
-				return this.value.join(' ');
-			}
-			else if (this.metadata.stringify)
-			{
-				return inlineEval(this.metadata.stringify, this.getLocalData());
-			}
-			else
-			{
-				return '';
-			}
+			lodash.values(this.getChildren()).forEach(
+				(child) => child.getLineageValues(values)
+			);
 		}
-		return `${this.value}`;
+
+		return values;
 	}
 
-	canReroll()
+	hasDependencies()
 	{
-		return (
-			this.metadata.canReroll === undefined || this.metadata.canReroll === true
-		) && (this.parent === undefined || this.parent.canReroll());
+		return this.dependencies.length > 0;
+	}
+
+	getDependencies()
+	{
+		return this.dependencies;
+	}
+
+	addAffectedEntry(entry)
+	{
+		this.affects.push(entry.getPath());
+	}
+
+	getAllAffectedEntryPaths()
+	{
+		return lodash.values(this.children).map((child) => child.getPath()).concat(this.affects);
 	}
 
 	generate(data)
@@ -179,17 +229,28 @@ class GenerationEntry
 			}
 		}
 
-		//console.log(this.source, lodash.cloneDeep(data));
+		this.unsubscribeModifiers();
 
 		// Parser could return an undefined value if the command didn't work.
 		// For example, a table like 'beard' is assumed to have an entry for every race,
 		// so races can opt-in by defining a beard.json table. If one is missing, this is not an error,
 		// but rather the race opting-out of generating beard data.
 		const result = parser(this.source, data);
+		console.log(this.getPath(), lodash.cloneDeep(result));
 		if (typeof result === 'object' && !Array.isArray(result))
 		{
-			this.value = result.value;
-			this.modifiers = result.modifiers;
+			const entry = this.createEntry(result);
+			if (!entry.isValid())
+			{
+				entry.generate(data);
+				this.value = entry.getValue();
+				this.modifiers = entry.modifiers;
+			}
+			else
+			{
+				// TODO: What happens to these children when this entry is regenerated
+				//this.addChild(entry);
+			}
 		}
 		else
 		{
@@ -197,17 +258,66 @@ class GenerationEntry
 			this.modifiers = {};
 		}
 
+		this.subscribeModifiers();
+	}
+
+	getValue()
+	{
+		if (typeof this.value === 'number')
+		{
+			return this.value + this.getTotalModifier();
+		}
+		return this.value;
+	}
+
+	getTotalModifier()
+	{
+		const path = this.getPath();
+		return this.modifiedBy.reduce((totalModifier, entryKey) =>
+		{
+			const entry = this.generator.getEntry(entryKey);
+			if (entry)
+			{
+				const modifier = entry.getModifier(path);
+				if (typeof modifier === 'number') return totalModifier + modifier;
+			}
+			return totalModifier;
+		}, 0)
+	}
+
+	subscribeModifiers()
+	{
+		Object.keys(this.modifiers).forEach((path) =>
+		{
+			const entry = this.generator.getEntry(path);
+			if (entry)
+			{
+				entry.subscribeModifyingEntry(this);
+			}
+		});
+	}
+
+	unsubscribeModifiers()
+	{
+		Object.keys(this.modifiers).forEach((path) =>
+		{
+			const entry = this.generator.getEntry(path);
+			if (entry)
+			{
+				entry.unsubscribeModifyingEntry(this);
+			}
+		});
 	}
 
 	subscribeModifyingEntry(entry)
 	{
-		this.modifyingEntryKeys.push(entry.getKey());
+		this.modifiedBy.push(entry.getPath());
 	}
 
 	unsubscribeModifyingEntry(entry)
 	{
-		const entryKey = entry.getKey();
-		this.modifyingEntryKeys = this.modifyingEntryKeys.filter((key) => key !== entryKey);
+		const entryKey = entry.getPath();
+		this.modifiedBy = this.modifiedBy.filter((key) => key !== entryKey);
 	}
 
 	getModifier(keyToModify)
@@ -217,7 +327,8 @@ class GenerationEntry
 
 	evalModifier(modToEval)
 	{
-		if (typeof modToEval === 'number') return modToEval;
+		if (modToEval === undefined) return 0;
+		else if (typeof modToEval === 'number') return modToEval;
 		else if (Array.isArray(modToEval))
 		{
 			return modToEval.reduce((accum, mod) => accum + this.evalModifier(mod), 0);
@@ -254,7 +365,7 @@ class GenerationEntry
 
 }
 
-export default class Generator
+export class Generator
 {
 
 	static convertCamelToTitleCase(text)
@@ -262,17 +373,7 @@ export default class Generator
 		return text.split(/(?=[A-Z])/).map((word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`).join(' ');
 	}
 
-	constructor()
-	{
-		this.categories = {};
-	}
-
-	hasCategory(category)
-	{
-		return this.categories.hasOwnProperty(category);
-	}
-
-	static sever(fullKey, itemCount=1)
+	static sever(fullKey, itemCount = 1)
 	{
 		const path = lodash.toPath(fullKey);
 		return {
@@ -281,133 +382,123 @@ export default class Generator
 		};
 	}
 
-	// TODO: hasEntry and getEntry should query the parent entries for their children - entries with parents are no longer stored in the category hierarchy
+	constructor()
+	{
+		this.categories = {};
+		this.generationOrder = [];
+	}
+
+	hasCategory(category)
+	{
+		return this.categories.hasOwnProperty(category);
+	}
+
+	addEntry(entry)
+	{
+
+		if (entry.hasDependencies())
+		{
+			for (const dependencyKey of entry.getDependencies())
+			{
+				if (!this.hasEntry(dependencyKey))
+				{
+					console.warn(`Cannot create dependency from '${entry.getKey()}' on '${dependencyKey}', there is no entry for '${dependencyKey}'.`);
+				}
+				this.getEntry(dependencyKey).addAffectedEntry(entry);
+			}
+		}
+
+		if (entry.category)
+		{
+			if (!this.hasCategory(entry.category))
+			{
+				this.categories[entry.category] = {};
+			}
+			this.categories[entry.category][entry.key] = entry;
+		}
+		return entry;
+	}
+
+	getEntry(fullKey)
+	{
+		const { items, remaining } = Generator.sever(fullKey, 2);
+		const entry = this.categories[items[0]][items[1]];
+		return remaining.length > 0 ? entry.getChild(remaining) : entry;
+	}
 
 	hasEntry(fullKey)
 	{
 		return this.getEntry(fullKey) !== undefined;
 	}
 
-	getEntry(fullKey)
+	forAllEntries(loop)
 	{
-		const {items, remaining} = Generator.sever(fullKey, 2);
-		const entry = this.categories[items[0]][items[1]];
-		return remaining.length > 0 ? entry.getEntry(remaining) : entry;
-	}
-
-	createField(category, key, field)
-	{
-		const entry = new GenerationEntry(this, category, key, field);
-
-		if (entry.dependencies)
-		{
-			for (const dependencyKey of entry.dependencies)
-			{
-				if (!this.hasEntry(dependencyKey))
-				{
-					throw new Error(`Cannot create dependency from '${entry.getKey()}' on '${dependencyKey}', there is no entry for '${dependencyKey}'.`);
-				}
-				this.getEntry(dependencyKey).addAffectiveEntry(entry.getKey());
-			}
-		}
-
-		const children = entry.getChildren();
-		const childrenKeys = Object.keys(children);
-		if (childrenKeys.length > 0)
-		{
-			for (const childKey of childrenKeys)
-			{
-				const childEntry = this.createField(category, childKey, children[childKey]);
-				childEntry.setParent(entry);
-				entry.setChild(childKey, childEntry);
-			}
-		}
-
-		return entry;
-	}
-
-	// key - the key path i.e. 'a.b[3].c'
-	// template - the text in the json used to cause a generation i.e. "{roll:race/$(description.race)/hair}"
-	// dependencies - any other entries that would cause this entry to be regenerated by (i.e. ["description.race"])
-	// The fields this depends on must already exist in the generator
-	addField(category, key, field)
-	{
-		const entry = this.createField(category, key, field);
-		
-		if (!this.hasCategory(entry.category))
-		{
-			this.categories[entry.category] = {};
-		}
-		this.categories[entry.category][entry.key] = entry;
-
-		return entry;
-	}
-
-	compileData()
-	{
-		return lodash.values(this.categories).reduce(
-			(accum, categoryEntries) => ({
-				...accum,
-				...lodash.toPairs(categoryEntries)
-					.filter(([_, entry]) => entry.hasChildren() || entry.hasValue())
-					.reduce((accumCate, [_, entry]) => ({
-						...accumCate,
-						...entry.compileData()
-					}), {})
-			}), {}
+		lodash.values(this.categories).forEach(
+			(entryMap) => lodash.values(entryMap).forEach(loop)
 		);
 	}
 
-	// causes a generation of the entry at key
-	regenerate(key, bGenerateDependencies = true)
+	getAllValues()
 	{
-		if (!this.hasEntry(key))
+		const values = {}
+		this.forAllEntries((entry) => entry.getLineageValues(values));
+		return values;
+	}
+
+	setGenerationOrder(order)
+	{
+		this.generationOrder = order;
+	}
+
+	generate()
+	{
+		for (let key of this.generationOrder)
 		{
-			throw new Error(`Missing entry '${key}', please add it via 'addField'.`);
+			this.regenerate(key);
+		}
+	}
+
+	// causes a generation of the entry at key
+	regenerate(path, bGenerateDependencies = true)
+	{
+		if (!this.hasEntry(path))
+		{
+			throw new Error(`Missing entry '${path}', please add it via 'addEntry'.`);
 		}
 
-		const entry = this.getEntry(key);
-		
-		Object.keys(entry.modifiers).forEach((keyModifier) => {
+		const allData = this.getAllValues();
+
+		const entry = this.getEntry(path);
+
+		/*
+		Object.keys(entry.modifiers).forEach((keyModifier) =>
+		{
 			const entryToModify = this.getEntry(keyModifier);
 			if (entryToModify)
 			{
 				entryToModify.unsubscribeModifyingEntry(entry);
 			}
 		});
-		
-		entry.generate(this.compileData());
+		//*/
 
-		Object.keys(entry.modifiers).forEach((keyModifier) => {
+		entry.generate(allData);
+
+		/*
+		Object.keys(entry.modifiers).forEach((keyModifier) =>
+		{
 			const entryToModify = this.getEntry(keyModifier);
 			if (entryToModify)
 			{
 				entryToModify.subscribeModifyingEntry(entry);
 			}
 		});
+		//*/
 
 		if (bGenerateDependencies)
 		{
-			let affectiveEntryKeys = entry.getAffectiveEntries();
-			for (const affectedEntryKey of affectiveEntryKeys)
-			{
-				this.regenerate(affectedEntryKey, true);
-			}
+			entry.getAllAffectedEntryPaths().forEach((affectedEntryPath) => this.regenerate(affectedEntryPath, true));
 		}
 
-	}
-
-	getModifications(modifierEntryKeys, keyToModify)
-	{
-		return modifierEntryKeys.reduce((totalModifier, entryKey) => {
-			const entry = this.getEntry(entryKey);
-			if (entry)
-			{
-				const modifier = entry.getModifier(keyToModify);
-				if (typeof modifier === 'number') return totalModifier + modifier;
-			}
-			return totalModifier;
-		}, 0);
 	}
 
 }

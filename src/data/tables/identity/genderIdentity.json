@@ -2,16 +2,15 @@
 	"rows": [
 		{
 			"value": "man",
-			"weight": 5
+			"weight": 3
 		},
 		{
 			"value": "woman",
-			"weight": 5
+			"weight": 3
 		},
 		{
 			"value": "nonbinary",
-			"weight": 1
+			"weight": 2
 		}
-	],
-	"values": {}
+	]
 }

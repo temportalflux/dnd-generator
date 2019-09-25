@@ -1,33 +1,141 @@
 {
 	"generationOrder": [
 		"stats.abilityScores",
-		
-		"stats.alignmentTendancies",
-		"personality.alignmentMoral",
-
-		"description.height",
-		"description.weight",
-
-		"description.race",
-		"description.subrace",
-
-		"description.eyeColor",
-		"description.skin",
-		"description.face",
-		"description.hair",
-		"description.beard",
-
-		"personality.deity"
-	],
-	"fieldOrder": [
-		"stats.abilityScores",
 		"stats.alignmentTendancies",
 		"personality.alignmentMoral",
 		"identity.pronouns",
 		"identity.genderIdentity",
 		"identity.genderExpression",
 		"identity.sex",
-		"identity.sexualOrientation",
+		"identity.sexualOrientation"
+	],
+	"generationOrderOld": [
+		"description.height",
+		"description.weight",
+		"description.race",
+		"description.subrace",
+		"description.eyeColor",
+		"description.skin",
+		"description.face",
+		"description.hair",
+		"description.beard",
+		"personality.deity"
+	],
+	"fieldOrder": [
+		{
+			"category": "stats",
+			"key": "abilityScores",
+			"stringify": "STR($(strength)) DEX($(dexterity)) CON($(constitution)) INT($(intelligence)) WIS($(wisdom)) CHA($(charisma))",
+			"canReroll": false,
+			"children": [
+				{
+					"key": "strength",
+					"value": 9
+				},
+				{
+					"key": "dexterity",
+					"value": 9
+				},
+				{
+					"key": "constitution",
+					"value": 9
+				},
+				{
+					"key": "intelligence",
+					"value": 9
+				},
+				{
+					"key": "wisdom",
+					"value": 9
+				},
+				{
+					"key": "charisma",
+					"value": 9
+				}
+			]
+		},
+		{
+			"category": "stats",
+			"key": "alignmentTendancies",
+			"stringify": "($(ethical.positive)/$(ethical.neutral)/$(ethical.negative)) - ($(moral.positive)/$(moral.neutral)/$(moral.negative))",
+			"children": [
+				{
+					"key": "ethical",
+					"stringify": "$(positive)/$(neutral)/$(negative)",
+					"children": [
+						{
+							"key": "positive",
+							"name": "Lawful",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "neutral",
+							"name": "Neutral",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "negative",
+							"name": "Chaotic",
+							"source": "{roll:traits/alignment/tendancy}"
+						}
+					]
+				},
+				{
+					"key": "moral",
+					"stringify": "$(positive)/$(neutral)/$(negative)",
+					"children": [
+						{
+							"key": "positive",
+							"name": "Good",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "neutral",
+							"name": "Neutral",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "negative",
+							"name": "Evil",
+							"source": "{roll:traits/alignment/tendancy}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"category": "personality",
+			"key": "alignmentMoral",
+			"source": "{roll:traits/alignmentMoral}"
+		},
+		{
+			"category": "identity",
+			"key": "pronouns",
+			"source": "{roll:identity/pronouns}",
+			"stringify": "$(singular)/$(thirdPerson)/$(possessive)"
+		},
+		{
+			"category": "identity",
+			"key": "genderIdentity",
+			"source": "{roll:identity/genderIdentity}"
+		},
+		{
+			"category": "identity",
+			"key": "genderExpression",
+			"source": "{roll:identity/genderExpression}"
+		},
+		{
+			"category": "identity",
+			"key": "sex",
+			"source": "{roll:identity/sex}"
+		},
+		{
+			"category": "identity",
+			"key": "sexualOrientation",
+			"source": "{roll:identity/sexualOrientation}"
+		}
+	],
+	"fieldOrderOld": [
 		"description.height",
 		"description.weight",
 		"description.age",
@@ -43,65 +151,6 @@
 		"identity.surname"
 	],
 	"fields": {
-		"stats": {
-			"abilityScores": {
-				"stringify": "STR($(strength)) DEX($(dexterity)) CON($(constitution)) INT($(intelligence)) WIS($(wisdom)) CHA($(charisma))",
-				"canReroll": false,
-				"children": {
-					"strength": {
-						"source": 9
-					},
-					"dexterity": {
-						"source": 9
-					},
-					"constitution": {
-						"source": 9
-					},
-					"intelligence": {
-						"source": 9
-					},
-					"wisdom": {
-						"source": 9
-					},
-					"charisma": {
-						"source": 9
-					}
-				}
-			},
-			"alignmentTendancies": {
-				"stringify": "$(ethical.positive)/$(ethical.neutral)/$(ethical.negative) - $(moral.positive)/$(moral.neutral)/$(moral.negative)",
-				"children": {
-					"ethical": {
-						"stringify": "$(positive)/$(neutral)/$(negative)",
-						"children": {
-							"positive": {
-								"source": "{roll:traits/alignment/tendancy}"
-							},
-							"neutral": {
-								"source": "{roll:traits/alignment/tendancy}"
-							},
-							"negative": {
-								"source": "{roll:traits/alignment/tendancy}"
-							}
-						}
-					},
-					"moral": {
-						"stringify": "$(positive)/$(neutral)/$(negative)",
-						"children": {
-							"positive": {
-								"source": "{roll:traits/alignment/tendancy}"
-							},
-							"neutral": {
-								"source": "{roll:traits/alignment/tendancy}"
-							},
-							"negative": {
-								"source": "{roll:traits/alignment/tendancy}"
-							}
-						}
-					}
-				}
-			}
-		},
 		"identity": {
 			"name": {
 				"source": "{roll:race/$(description.race)/name-$(identity.genderIdentity)}",
@@ -115,22 +164,6 @@
 				"dependencies": [
 					"description.race"
 				]
-			},
-			"pronouns": {
-				"source": "{roll:identity/pronouns}",
-				"stringify": "$(singular)/$(thirdPerson)/$(possessive)"
-			},
-			"genderIdentity": {
-				"source": "{roll:identity/genderIdentity}"
-			},
-			"genderExpression": {
-				"source": "{roll:identity/genderExpression}"
-			},
-			"sex": {
-				"source": "{roll:identity/sex}"
-			},
-			"sexualOrientation": {
-				"source": "{roll:identity/sexualOrientation}"
 			}
 		},
 		"description": {
@@ -187,9 +220,6 @@
 			}
 		},
 		"personality": {
-			"alignmentMoral": {
-				"source": "{roll:traits/alignmentMoral}"
-			},
 			"deity": {
 				"source": "{roll:race/$(description.race)/deity}",
 				"dependencies": [

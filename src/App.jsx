@@ -1,6 +1,6 @@
 import React from 'react'
 import { Root, Routes } from 'react-static'
-import { Link, Router } from '@reach/router'
+import { Router } from '@reach/router'
 
 import 'semantic-ui-css/semantic.min.css';
 

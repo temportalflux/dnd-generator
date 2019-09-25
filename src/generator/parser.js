@@ -1,6 +1,5 @@
 import lodash from 'lodash';
 import Execs from './modules/index';
-import evalAtCtx from './modules/evalAtCtx';
 
 console.log('Parser valid executors', Execs);
 
@@ -23,8 +22,7 @@ export default function parseField(field, data)
 			const match = field.match(regex);
 			if (match)
 			{
-				const result = Execs[execKey](match, data);
-				return parseField(result, data);
+				return Execs[execKey](match, data);
 			}
 		}
 	}

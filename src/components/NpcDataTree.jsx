@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Button } from 'semantic-ui-react';
 import Tree from 'react-animated-tree';
-import Generator from '../generator/Generator';
+import {Generator} from '../generator/Generator';
 
 import lodash from 'lodash';
 import inlineEval from '../generator/modules/evalAtCtx';
@@ -46,7 +46,7 @@ export default class NpcDataTree extends React.Component
 		const name = generatorEntry.getName();
 		if (generatorEntry.hideInlineValue) return name;
 		
-		const stringifiedValue = generatorEntry.stringify();
+		const stringifiedValue = generatorEntry.toString();
 		if (stringifiedValue) return `${name}: ${stringifiedValue}`;
 
 		return name;
@@ -65,8 +65,8 @@ export default class NpcDataTree extends React.Component
 	{
 		const title = this.makeTitleContent(
 			this.makeTitleText(generatorEntry),
-			generatorEntry.getKey(),
-			generatorEntry.canReroll()
+			generatorEntry.getPath(),
+			generatorEntry.getCanReroll()
 		);
 
 		if (generatorEntry.hasChildren())
@@ -76,7 +76,7 @@ export default class NpcDataTree extends React.Component
 					content={title}
 					key={generatorEntry.getKey()}
 				>
-					{this.makeTreeContents(generatorEntry.childEntries)}
+					{this.makeTreeContents(generatorEntry.getChildren())}
 				</Tree>
 			);
 		}
@@ -91,13 +91,9 @@ export default class NpcDataTree extends React.Component
 		}
 	}
 
-	makeTreeContents(entries)
+	makeTreeContents(entryMap)
 	{
-		return lodash.values(entries)
-			// Prune all undefined values
-			.filter((entry) => entry.hasValue())
-			// Convert to hierarchy of TreeNodes
-			.map(this.makeTreeNodeHierarchy);
+		return lodash.values(entryMap).map(this.makeTreeNodeHierarchy);
 	}
 
 	makeTreeCategories(categoryEntryMap)

@@ -3,7 +3,15 @@
 // https://stackoverflow.com/questions/543533/restricting-eval-to-a-narrow-scope
 function evalAtCtx(code, ctx)
 {
-	return (new Function(`with(this) { return ${code}; }`).call(ctx))
+	try
+	{
+		return (new Function(`with(this) { return ${code}; }`).call(ctx));
+	}
+	catch (e)
+	{
+		console.error(e);
+		return undefined;
+	}
 }
 
 export default function exec(text, context)

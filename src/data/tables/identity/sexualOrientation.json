@@ -9,8 +9,8 @@
 			"weight": 25
 		},
 		{
-			"value": "{roll:identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)}",
-			"weight": 20
+			"source": "{roll:identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)}",
+			"weight": 100
 		},
 		{
 			"value": "pansexual",

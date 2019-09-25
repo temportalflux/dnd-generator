@@ -1,6 +1,6 @@
 import lodash from 'lodash';
 import parser from './parser';
-import Generator from './Generator';
+import {Generator} from './Generator';
 const { getTable } = require('../Data');
 
 function iterateGenerationOrder(schema, data, loop)
