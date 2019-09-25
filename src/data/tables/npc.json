@@ -7,7 +7,9 @@
 		"identity.genderIdentity",
 		"identity.genderExpression",
 		"identity.sex",
-		"identity.sexualOrientation",		
+		"identity.sexualOrientation",
+		"identity.sexualIdentity",
+		"identity.romanticIdentity",
 		"description.height",
 		"description.weight",
 		"description.race"
@@ -133,6 +135,16 @@
 			"category": "identity",
 			"key": "sexualOrientation",
 			"source": "{roll:identity/sexualOrientation}"
+		},
+		{
+			"category": "identity",
+			"key": "sexualIdentity",
+			"source": "{roll:identity/sexualIdentity}"
+		},
+		{
+			"category": "identity",
+			"key": "romanticIdentity",
+			"source": "{roll:identity/romanticIdentity}"
 		},
 		{
 			"category": "description",
