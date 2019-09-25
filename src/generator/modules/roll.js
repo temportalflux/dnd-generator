@@ -52,13 +52,6 @@ export default function exec(match, data)
 		return undefined;
 	}
 
-	let result = {
-		value: chooseRandomWithWeight(table.rows),
-		modifiers: {},
-	};
-
-	return chooseRandomWithWeight(table.rows);
-
 	const appendModifiers = (current, toAppend) => {
 		return lodash.toPairs(toAppend).reduce((accum, [key, modifier]) => {
 			if (!accum.hasOwnProperty(key)) accum[key] = [];
@@ -67,16 +60,8 @@ export default function exec(match, data)
 		}, current);
 	};
 
-	if (typeof result.value === 'object' && !Array.isArray(result.value))
-	{
-		//result.value = result.value.value;
-		/*
-		if (result.value.hasOwnProperty('modifiers'))
-		{
-			result.modifiers = appendModifiers(result.modifiers, result.value.modifiers);
-		}
-		//*/
-	}
+	let result = chooseRandomWithWeight(table.rows);
+	result.modifiers = result.modifiers || {};
 
 	// Modifiers which are determined based on scales or regexs on the generated value
 	if (table.modifiers)
@@ -110,7 +95,7 @@ export default function exec(match, data)
 	}
 	//*/
 
-	console.log(tablePath, result);
+	//console.log(tablePath, result);
 
 	return result;
 }

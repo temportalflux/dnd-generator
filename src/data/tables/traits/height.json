@@ -1,23 +1,23 @@
 {
 	"rows": [
 		{
-			"value": "{randInt:140,150}",
+			"source": "{randInt:140,150}",
 			"weight": 1
 		},
 		{
-			"value": "{randInt:151,161}",
+			"source": "{randInt:151,161}",
 			"weight": 3
 		},
 		{
-			"value": "{randInt:162,185}",
+			"source": "{randInt:162,185}",
 			"weight": 5
 		},
 		{
-			"value": "{randInt:186,195}",
+			"source": "{randInt:186,195}",
 			"weight": 2
 		},
 		{
-			"value": "{randInt:195,205}",
+			"source": "{randInt:195,205}",
 			"weight": 1
 		}
 	],

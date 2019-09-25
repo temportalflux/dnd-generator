@@ -7,11 +7,11 @@
 		"identity.genderIdentity",
 		"identity.genderExpression",
 		"identity.sex",
-		"identity.sexualOrientation"
+		"identity.sexualOrientation",		
+		"description.height",
+		"description.weight"
 	],
 	"generationOrderOld": [
-		"description.height",
-		"description.weight",
 		"description.race",
 		"description.subrace",
 		"description.eyeColor",
@@ -133,10 +133,19 @@
 			"category": "identity",
 			"key": "sexualOrientation",
 			"source": "{roll:identity/sexualOrientation}"
+		},
+		{
+			"category": "description",
+			"key": "height",
+			"source": "{roll:traits/height}"
+		},
+		{
+			"category": "description",
+			"key": "weight",
+			"source": "{roll:traits/weight}"
 		}
 	],
 	"fieldOrderOld": [
-		"description.height",
 		"description.weight",
 		"description.age",
 		"description.race",
@@ -169,12 +178,6 @@
 		"description": {
 			"age": {
 				"source": "{roll:traits/age}"
-			},
-			"height": {
-				"source": "{roll:traits/height}"
-			},
-			"weight": {
-				"source": "{roll:traits/weight}"
 			},
 			"race": {
 				"source": "{roll:race}"
