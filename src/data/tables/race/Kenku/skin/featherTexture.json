@@ -1,32 +1,26 @@
 {
 	"rows": [
 		{
-			"value": "rough",
-			"weight": 2
+			"weight": 2,
+			"value": "rough"
 		},
 		{
-			"value": "smooth",
-			"weight": 1
+			"value": "smooth"
 		},
 		{
-			"value": "shiny",
-			"weight": 1
+			"value": "shiny"
 		},
 		{
-			"value": "lustrous",
-			"weight": 1
+			"value": "lustrous"
 		},
 		{
-			"value": "soft",
-			"weight": 1
+			"value": "soft"
 		},
 		{
-			"value": "fluffy",
-			"weight": 1
+			"value": "fluffy"
 		},
 		{
-			"value": "fuzzy",
-			"weight": 1
+			"value": "fuzzy"
 		}
 	],
 	"values": {}

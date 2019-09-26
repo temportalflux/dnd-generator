@@ -1,11 +1,10 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/Human/skin}"
+			"source": "{roll:race/Human/skin}"
 		},
 		{
-			"value": "{roll:race/Elf/skin}"
+			"source": "{roll:race/Elf/skin}"
 		}
-	],
-	"values": {}
+	]
 }

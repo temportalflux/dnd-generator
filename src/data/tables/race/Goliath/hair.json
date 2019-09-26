@@ -1,53 +1,13 @@
 {
 	"rows": [
 		{
-			"default": {
-				"type": "bald"
-			},
-			"weight": 8
-		},
-		{
-			"default": {
-				"type": "bald",
-				"tattoos": "tribal"
-			},
-			"weight": 5
-		},
-		{
-			"default": {
-				"type": "bald",
-				"tattoos": "abstract"
-			},
-			"weight": 2
-		},
-		{
-			"default": {
-				"type": "bald",
-				"tattoos": "fancy"
-			},
-			"weight": 2
-		},
-		{
-			"default": {
-				"type": "bald",
-				"tattoos": "vivid"
-			},
-			"weight": 2
-		},
-		{
-			"default": {
-				"type": "bald",
-				"tattoos": "bulky"
-			},
-			"weight": 2
-		},
-		{
-			"default": {
-				"type": "bald",
-				"tattoos": "gorgeous"
-			},
-			"weight": 2
+			"value": "bald",
+			"children": [
+				{
+					"key": "tattoos",
+					"source": "{roll:race/Goliath/hairTattoos}"
+				}
+			]
 		}
-	],
-	"values": {}
+	]
 }
