@@ -1,7 +1,7 @@
 import React from 'react';
 import lodash from 'lodash';
 import { Container } from "semantic-ui-react";
-import Home from './pages/index';
+import {Npc} from './pages/Npc';
 
 class App extends React.Component
 {
@@ -10,7 +10,7 @@ class App extends React.Component
 	{
 		return (
 			<Container id={'App'} fluid>
-				<Home/>
+				<Npc/>
 			</Container>
 		);
 	}

@@ -534,6 +534,12 @@ export class Generator
 	// causes a generation of the entry at key
 	regenerate(path, bGenerateDependencies = true)
 	{
+		if (this.hasCategory(path))
+		{
+			lodash.values(this.categories[path]).forEach((entry) => this.regenerate(entry.getPath(), bGenerateDependencies));
+			return;
+		}
+
 		if (!this.hasEntry(path))
 		{
 			throw new Error(`Missing entry '${path}', please add it via 'addEntry'.`);

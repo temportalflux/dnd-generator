@@ -2,23 +2,22 @@ import React from 'react'
 //import { Grid } from 'semantic-ui-react';
 //import FilterMenu from '../components/FilterMenu';
 //import DisplayNpc from '../components/DisplayNpc';
-//import { generate } from '../generator/index';
-//import NpcDataTree from '../components/NpcDataTree';
-//import lodash from 'lodash';
-//import { Generator, GenerationEntry } from '../generator/Generator';
+import { generate } from '../generator/index';
+import NpcDataTree from '../components/NpcDataTree';
+import lodash from 'lodash';
+import { Generator, GenerationEntry } from '../generator/Generator';
 
-//const { getTable } = require('../Data');
+const { getTable } = require('../Data');
 
-export default class Home extends React.Component
+export class Npc extends React.Component
 {
 
 	constructor(props)
 	{
 		super(props);
-		//this.generate = this.generate.bind(this);
-		//this.onRerollClicked = this.onRerollClicked.bind(this);
+		this.generate = this.generate.bind(this);
+		this.onRerollClicked = this.onRerollClicked.bind(this);
 
-		/*
 		const npc = getTable('npc');
 		const generator = new Generator();
 
@@ -33,10 +32,8 @@ export default class Home extends React.Component
 		this.state = {
 			generator: generator
 		};
-		//*/
 	}
 
-	/*
 	generate(filter)
 	{
 		this.setState({
@@ -57,7 +54,6 @@ export default class Home extends React.Component
 		}
 		this.setState({ generator: generator });
 	}
-	//*/
 
 	render()
 	{
@@ -78,15 +74,14 @@ export default class Home extends React.Component
 							/>
 						</Grid.Column>
 
+		*/
+		return (
+			<div>
 				<NpcDataTree
 					data={this.state.npc}
 					generator={this.state.generator}
 					onRerollClicked={this.onRerollClicked}
 				/>
-		*/
-		return (
-			<div>
-				There is nothing here right now
 			</div>
 		);
 	}

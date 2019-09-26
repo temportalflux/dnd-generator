@@ -102,7 +102,7 @@ export default class NpcDataTree extends React.Component
 			const title = this.makeTitleContent(
 				Generator.convertCamelToTitleCase(category),
 				category,
-				false
+				lodash.values(entries).reduce((canRerollAny, entry) => canRerollAny || entry.getCanReroll(), false)
 			);
 			return (
 				<Tree
