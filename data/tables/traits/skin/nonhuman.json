@@ -1,0 +1,27 @@
+{
+	"rows": [
+		{
+			"value": "white"
+		},
+		{
+			"value": "pink"
+		},
+		{
+			"value": "brown"
+		},
+		{
+			"value": "gray"
+		},
+		{
+			"value": "golden"
+		}
+	],
+	"values": {
+		"{regex:.*}": {
+			"value": {
+				"color": "$(value)",
+				"type": "skin"
+			}
+		}
+	}
+}

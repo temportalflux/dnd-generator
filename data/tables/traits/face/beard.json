@@ -1,0 +1,23 @@
+{
+	"rows": [
+		{
+			"name": "no beard",
+			"weight": 3
+		},
+		{
+			"value": "beard",
+			"children": [
+				{
+					"key": "length",
+					"source": "{roll:traits/face/beard/length}"
+				},
+				{
+					"key": "shape",
+					"source": "{roll:traits/face/beard/shape}"
+				}
+			],
+			"weight": 2
+		}
+	],
+	"values": {}
+}

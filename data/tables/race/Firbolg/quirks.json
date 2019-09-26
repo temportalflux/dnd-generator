@@ -1,0 +1,11 @@
+{
+	"rows": [
+		{
+			"value": [
+				"{roll:traits/quirks/nature}",
+				"{roll:race/Firbolg/quirksRace}"
+			]
+		}
+	],
+	"values": {}
+}

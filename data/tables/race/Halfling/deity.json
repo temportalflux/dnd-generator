@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{
+			"source": "{roll:deity/halfling}",
+			"weight": 3
+		},
+		{
+			"source": "{roll:race/Human/deity}",
+			"weight": 2
+		}
+	]
+}

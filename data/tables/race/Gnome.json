@@ -1,0 +1,13 @@
+{
+	"rows": [
+		{
+			"value": "Forest Gnome",
+			"weight": 4
+		},
+		{
+			"value": "Rock Gnome",
+			"weight": 3
+		}
+	],
+	"values": {}
+}

@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"source": "{roll:deity/dwarf}"
+		},
+		{
+			"weight": 2,
+			"source": "{roll:race/Human/deity}"
+		}
+	]
+}

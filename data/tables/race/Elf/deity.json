@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"source": "{roll:deity/elf}"
+		},
+		{
+			"weight": 1,
+			"source": "{roll:race/Human/deity}"
+		}
+	]
+}

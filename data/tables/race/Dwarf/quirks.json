@@ -1,0 +1,102 @@
+{
+	"rows": [
+		{
+			"weight": 40,
+			"default": []
+		},
+		{
+			"weight": 3,
+			"value": [
+				"$(identity.pronouns.singular) always has a good ale at hand."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) feels ill at ease in open spaces."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) is more comfortable underground."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) misses the world as $(identity.pronouns.singular) used to know it."
+			]
+		},
+		{
+			"weight": 3,
+			"value": [
+				"$(identity.pronouns.singular) is strongly rooted within tradition."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) will take on any bet while drinking."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) is always covered in dirt."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) has almost never been above ground."
+			]
+		},
+		{
+			"weight": 1,
+			"value": [
+				"$(identity.pronouns.singular) doesn't feel comfortable when away from $(identity.pronouns.possessive) axe. }"
+			]
+		},
+		{
+			"weight": 1,
+			"value": [
+				"$(identity.pronouns.singular) is always seen sharpening $(identity.pronouns.possessive) axe. }"
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) cannot take a halfling seriously."
+			]
+		},
+		{
+			"weight": 5,
+			"value": [
+				"$(identity.pronouns.singular) harbours a deep hatred of orcs and goblins."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) has gemcutting as a hobby."
+			]
+		},
+		{
+			"weight": 2,
+			"value": [
+				"$(identity.pronouns.singular) is secretly captivated by elves."
+			]
+		},
+		{
+			"weight": 4,
+			"generators": {
+				"frequency": "{roll:common/frequency}"
+			},
+			"value": [
+				"$(identity.pronouns.singular) $(frequency) hums old dwarven songs."
+			]
+		}
+	],
+	"values": {}
+}

@@ -1,0 +1,38 @@
+{
+	"rows": [
+		{
+			"value": "Keen"
+		},
+		{
+			"value": "Strong"
+		},
+		{
+			"value": "Lone"
+		},
+		{
+			"value": "Wise"
+		}
+	],
+	"values": {
+		"Keen": {
+			"modifiers": {
+				"stats.abilityScores.widsom": 2
+			}
+		},
+		"Lone": {
+			"modifiers": {
+				"stats.abilityScores.constitution": 2
+			}
+		},
+		"Strong": {
+			"modifiers": {
+				"stats.abilityScores.strength": 2
+			}
+		},
+		"Wise": {
+			"modifiers": {
+				"stats.abilityScores.widsom": 2
+			}
+		}
+	}
+}

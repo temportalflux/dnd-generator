@@ -1,0 +1,23 @@
+{
+	"rows": [
+		{
+			"value": "killer"
+		},
+		{
+			"value": "tamer"
+		},
+		{
+			"value": "hunter"
+		},
+		{
+			"value": "stalker"
+		}
+	],
+	"values": {
+		"tamer": {
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
+		}
+	}
+}

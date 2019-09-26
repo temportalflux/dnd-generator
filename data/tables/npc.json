@@ -1,0 +1,267 @@
+{
+	"generationOrder": [
+		"stats.abilityScores",
+		"stats.alignmentTendancies",
+		"personality.alignmentMoral",
+		"identity.pronouns",
+		"identity.genderIdentity",
+		"identity.genderExpression",
+		"identity.sex",
+		"identity.sexualOrientation",
+		"identity.sexualIdentity",
+		"identity.romanticIdentity",
+		"description.height",
+		"description.weight",
+		"description.race"
+	],
+	"generationOrderOld": [
+		"description.subrace",
+		"description.eyeColor",
+		"description.skin",
+		"description.face",
+		"description.hair",
+		"description.beard",
+		"personality.deity"
+	],
+	"fieldOrder": [
+		{
+			"category": "stats",
+			"key": "abilityScores",
+			"stringify": "STR($(strength)) DEX($(dexterity)) CON($(constitution)) INT($(intelligence)) WIS($(wisdom)) CHA($(charisma))",
+			"canReroll": false,
+			"children": [
+				{
+					"key": "strength",
+					"value": 9
+				},
+				{
+					"key": "dexterity",
+					"value": 9
+				},
+				{
+					"key": "constitution",
+					"value": 9
+				},
+				{
+					"key": "intelligence",
+					"value": 9
+				},
+				{
+					"key": "wisdom",
+					"value": 9
+				},
+				{
+					"key": "charisma",
+					"value": 9
+				}
+			]
+		},
+		{
+			"category": "stats",
+			"key": "alignmentTendancies",
+			"stringify": "($(ethical.positive)/$(ethical.neutral)/$(ethical.negative)) - ($(moral.positive)/$(moral.neutral)/$(moral.negative))",
+			"children": [
+				{
+					"key": "ethical",
+					"stringify": "$(positive)/$(neutral)/$(negative)",
+					"children": [
+						{
+							"key": "positive",
+							"name": "Lawful",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "neutral",
+							"name": "Neutral",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "negative",
+							"name": "Chaotic",
+							"source": "{roll:traits/alignment/tendancy}"
+						}
+					]
+				},
+				{
+					"key": "moral",
+					"stringify": "$(positive)/$(neutral)/$(negative)",
+					"children": [
+						{
+							"key": "positive",
+							"name": "Good",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "neutral",
+							"name": "Neutral",
+							"source": "{roll:traits/alignment/tendancy}"
+						},
+						{
+							"key": "negative",
+							"name": "Evil",
+							"source": "{roll:traits/alignment/tendancy}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"category": "personality",
+			"key": "alignmentMoral",
+			"source": "{roll:traits/alignmentMoral}"
+		},
+		{
+			"category": "identity",
+			"key": "pronouns",
+			"source": "{roll:identity/pronouns}",
+			"stringify": "$(singular)/$(thirdPerson)/$(possessive)"
+		},
+		{
+			"category": "identity",
+			"key": "genderIdentity",
+			"source": "{roll:identity/genderIdentity}"
+		},
+		{
+			"category": "identity",
+			"key": "genderExpression",
+			"source": "{roll:identity/genderExpression}"
+		},
+		{
+			"category": "identity",
+			"key": "sex",
+			"source": "{roll:identity/sex}"
+		},
+		{
+			"category": "identity",
+			"key": "sexualOrientation",
+			"source": "{roll:identity/sexualOrientation}"
+		},
+		{
+			"category": "identity",
+			"key": "sexualIdentity",
+			"source": "{roll:identity/sexualIdentity}"
+		},
+		{
+			"category": "identity",
+			"key": "romanticIdentity",
+			"source": "{roll:identity/romanticIdentity}"
+		},
+		{
+			"category": "description",
+			"key": "height",
+			"source": "{roll:traits/height}"
+		},
+		{
+			"category": "description",
+			"key": "weight",
+			"source": "{roll:traits/weight}"
+		},
+		{
+			"category": "description",
+			"key": "race",
+			"source": "{roll:race}"
+		}
+	],
+	"fieldOrderOld": [
+		"description.weight",
+		"description.age",
+		"description.race",
+		"description.subrace",
+		"description.skin",
+		"description.eyeColor",
+		"description.face",
+		"description.hair",
+		"description.beard",
+		"personality.deity",
+		"identity.name",
+		"identity.surname"
+	],
+	"fields": {
+		"identity": {
+			"name": {
+				"source": "{roll:race/$(description.race)/name-$(identity.genderIdentity)}",
+				"dependencies": [
+					"description.race",
+					"identity.genderIdentity"
+				]
+			},
+			"surname": {
+				"source": "{roll:race/$(description.race)/surname}",
+				"dependencies": [
+					"description.race"
+				]
+			}
+		},
+		"description": {
+			"age": {
+				"source": "{roll:traits/age}"
+			},
+			"subrace": {
+				"source": "{roll:race/$(description.race)}",
+				"dependencies": [
+					"description.race"
+				]
+			},
+			"skin": {
+				"source": "{roll:race/$(description.race)/skin}",
+				"dependencies": [
+					"description.race"
+				]
+			},
+			"eyeColor": {
+				"source": "{roll:traits/eyecolor}"
+			},
+			"face": {
+				"stringify": "$(shape) $(attractiveness)",
+				"children": {
+					"shape": {
+						"source": "{roll:traits/face/shape}"
+					},
+					"attractiveness": {
+						"source": "{roll:traits/face/attractiveness}",
+						"stringify": "$(attractiveness.modifier || '') $(attractiveness.quality)"
+					}
+				}
+			},
+			"hair": {
+				"source": "{roll:race/$(description.race)/hair}",
+				"dependencies": [
+					"description.race"
+				]
+			},
+			"beard": {
+				"source": "{roll:race/$(description.race)/beard}",
+				"dependencies": [
+					"description.race"
+				]
+			}
+		},
+		"personality": {
+			"deity": {
+				"source": "{roll:race/$(description.race)/deity}",
+				"dependencies": [
+					"description.race"
+				]
+			},
+			"quirks": {
+				"source": "{roll:race/$(description.race)/quirks}",
+				"dependencies": [
+					"description.race"
+				]
+			}
+		},
+		"occupation": {
+			"type": {
+				"source": "{roll:occupation/type}"
+			},
+			"profession": {
+				"source": "{roll:occupation/$(occupation.type)}",
+				"dependencies": [
+					"occupation.type"
+				]
+			}
+		},
+		"relationships": {},
+		"hooks": {}
+	}
+}

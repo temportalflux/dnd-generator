@@ -1,0 +1,22 @@
+{
+	"rows": [
+		{
+			"value": [
+				["{rand:man,woman}", "{randInt:1,4}"],
+				["{rand:man,woman}", "{randInt:1,4}"],
+				["{rand:man,woman}", "{randInt:1,4}"],
+				["{rand:man,woman}", "{randInt:1,4}"]
+			]
+		}
+	],
+	"values": {
+		"\\[.*\\]": {
+			"value": [
+				"{roll:race/Gnome/name/$(value[0][0])-$(value[0][1])}",
+				"{roll:race/Gnome/name/$(value[1][0])-$(value[1][1])}",
+				"{roll:race/Gnome/name/$(value[2][0])-$(value[2][1])}",
+				"{roll:race/Gnome/name/$(value[3][0])-$(value[3][1])}"
+			]
+		}
+	}
+}

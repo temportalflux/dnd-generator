@@ -1,0 +1,22 @@
+{
+	"rows": [
+		{
+			"weight": 5,
+			"value": "good",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.neutral": -2,
+				"stats.alignmentTendancies.moral.negative": -3
+			}
+		},
+		{
+			"weight": 2,
+			"value": "evil",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": -3,
+				"stats.alignmentTendancies.moral.neutral": -2,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		}
+	]
+}
