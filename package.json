@@ -1,17 +1,17 @@
 {
-  "name": "npc-generator",
-  "version": "1.0.0",
+  "name": "dnd-generator",
+  "version": "0.0.2",
   "description": "",
   "author": "temportalflux",
   "license": "MIT",
-  "repository": "temportalflux/npcGenerator",
+  "repository": "temportalflux/dnd-generator",
+  "homepage": "https://temportalflux.github.io/dnd-generator",
   "scripts": {
-    "start": "react-static start",
-    "stage": "react-static build --staging",
-    "build": "react-static build",
-    "analyze": "react-static build --analyze",
-    "serve": "serve dist -p 3000",
-		"validate": "node validate.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deployManual": "gh-pages -d build",
+    "deploy": "gh-pages-with-token -d build",
+    "validate": "node validate.js"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
@@ -19,23 +19,13 @@
     "react": "^16.9.0",
     "react-animated-tree": "^1.0.10",
     "react-dom": "^16.9.0",
-    "react-static": "^7.2.0",
-    "react-static-plugin-reach-router": "^7.2.0",
-    "react-static-plugin-sitemap": "^7.2.0",
-    "react-static-plugin-source-filesystem": "^7.2.0",
+    "react-router-dom": "^5.1.0",
+    "react-scripts": "1.1.4",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1"
   },
   "devDependencies": {
-    "ajv": "^6.10.2",
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.4.0",
-    "eslint-config-react-app": "^5.0.2",
-    "eslint-config-react-tools": "^1.1.7",
-    "eslint-plugin-flowtype": "^4.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "serve": "^11.1.0"
+    "gh-pages": "^2.1.1",
+    "gh-pages-with-token": "^1.0.0"
   }
 }

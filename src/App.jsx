@@ -1,23 +1,17 @@
-import React from 'react'
-import { Root, Routes } from 'react-static'
-import { Router } from '@reach/router'
+import React from 'react';
+import { Container } from "semantic-ui-react";
+import Home from './pages/index';
 
-import 'semantic-ui-css/semantic.min.css';
-
-export default class App extends React.Component
+class App extends React.Component
 {
-
 	render()
 	{
 		return (
-			<Root>
-				<React.Suspense fallback={<em>Loading...</em>}>
-					<Router>
-						<Routes path="*" />
-					</Router>
-				</React.Suspense>
-			</Root>
+			<Container id={'App'} fluid>
+				<Home/>
+			</Container>
 		);
 	}
-
 }
+
+export default App;

@@ -1,0 +1,36 @@
+sudo: required
+dist: trusty
+
+language: c
+
+node_js:
+- 7
+
+cache:
+  directories:
+  - node_modules
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+    - icnsutils
+    - graphicsmagick
+    - libgnome-keyring-dev
+    - xz-utils
+    - xorriso
+    - xvfb
+
+install:
+- nvm install 7
+- npm install
+
+jobs:
+  include:
+  - stage: deploy
+    name: "Deploy to gh-pages"
+    script:
+    - npm run build
+    - npm run deploy
