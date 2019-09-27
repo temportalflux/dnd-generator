@@ -106,7 +106,6 @@ export class GenerationEntry
 		}
 		else if (Array.isArray(value))
 		{
-			console.log(this.getPath(), value);
 			return value.join(' ');
 		}
 		return `${value}`;
@@ -254,8 +253,6 @@ export class GenerationEntry
 
 	generate(data)
 	{
-		console.log(`Generating ${this.getPath()} with data`, lodash.cloneDeep(data));
-
 		if (this.source === undefined)
 		{
 			return;
@@ -285,9 +282,7 @@ export class GenerationEntry
 		// For example, a table like 'beard' is assumed to have an entry for every race,
 		// so races can opt-in by defining a beard.json table. If one is missing, this is not an error,
 		// but rather the race opting-out of generating beard data.
-		console.log(`Parsing generator ${this.getPath()} source ${this.source}.`);
 		const result = parser(this.source, data);
-		console.log(`Received result`, lodash.cloneDeep(result));
 		if (typeof result === 'object' && !Array.isArray(result))
 		{
 			const entry = this.createEntry(result);

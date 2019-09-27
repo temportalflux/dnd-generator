@@ -11,6 +11,5 @@ export default function exec(match)
 			1
 		)[0]);
 	}
-	console.log(result);
 	return result;
 }

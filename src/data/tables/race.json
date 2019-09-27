@@ -131,7 +131,7 @@
 			]
 		},
 		{
-			"weight": 700,
+			"weight": 7,
 			"value": "Gnome",
 			"modifiers": {
 				"description.height": -58

@@ -44,7 +44,7 @@ export default function exec(match, data)
 	}
 	catch (e)
 	{
-		console.warn('No such table at path', tablePath, '\n', e);
+		console.warn('No such table at path', tablePath);
 		return undefined;
 	}
 
@@ -82,7 +82,6 @@ export default function exec(match, data)
 			let matchResult = parser(globalModifierEntry.match, { ...data, value: result.value });
 			if (matchResult === true)
 			{
-				console.log(lodash.cloneDeep(result.modifiers));
 				result.modifiers = appendModifiers(result.modifiers, globalModifierEntry.modifiers);
 			}
 		}
