@@ -1,7 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/Tiefling/name-$(personality.alignmentMoral)}"
+			"source": "{roll:race/Tiefling/name-$(personality.alignmentMoral)}"
 		}
 	]
 }

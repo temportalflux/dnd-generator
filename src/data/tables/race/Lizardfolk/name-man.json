@@ -1,8 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/Dragonborn/name-nonbinary}"
+			"source": "{roll:race/Dragonborn/name-nonbinary}"
 		}
-	],
-	"values": {}
+	]
 }

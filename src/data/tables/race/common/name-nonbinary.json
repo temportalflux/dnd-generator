@@ -1,11 +1,10 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/$(description.race)/name-$(identity.genderIdentity)}"
+			"source": "{roll:race/$(description.race.value)/name-$(identity.genderIdentity)}"
 		},
 		{
-			"value": "{roll:race/$(description.race)/name-$(identity.genderIdentity)}"
+			"source": "{roll:race/$(description.race.value)/name-$(identity.genderIdentity)}"
 		}
-	],
-	"values": {}
+	]
 }

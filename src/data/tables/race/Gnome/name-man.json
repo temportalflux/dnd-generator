@@ -1,17 +1,25 @@
 {
 	"rows": [
 		{
-			"value": "{permutate:1,2,3,4}"
-		}
-	],
-	"values": {
-		"\\[[1-4]{1},[1-4]{1},[1-4]{1},[1-4]{1}\\]": {
-			"value": [
-				"{roll:race/Gnome/name/man-$(value[0])}",
-				"{roll:race/Gnome/name/man-$(value[1])}",
-				"{roll:race/Gnome/name/man-$(value[2])}",
-				"{roll:race/Gnome/name/man-$(value[3])}"
+			"source": "{permutate:1,2,3,4}",
+			"children": [
+				{
+					"key": "name1",
+					"source": "{roll:race/Gnome/name/man-$(value[0])}"
+				},
+				{
+					"key": "name2",
+					"source": "{roll:race/Gnome/name/man-$(value[1])}"
+				},
+				{
+					"key": "name3",
+					"source": "{roll:race/Gnome/name/man-$(value[2])}"
+				},
+				{
+					"key": "name4",
+					"source": "{roll:race/Gnome/name/man-$(value[3])}"
+				}
 			]
 		}
-	}
+	]
 }

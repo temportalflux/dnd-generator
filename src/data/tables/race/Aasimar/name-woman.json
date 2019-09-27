@@ -1,8 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/Human/name-woman}"
+			"source": "{roll:race/Human/name-woman}"
 		}
-	],
-	"values": {}
+	]
 }

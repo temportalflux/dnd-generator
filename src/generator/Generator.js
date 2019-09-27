@@ -51,39 +51,6 @@ export class GenerationEntry
 		this.unsubscribeModifiers();
 	}
 
-	/*
-	constructor(generator, category, key, { source, dependencies, stringify, canReroll, children })
-	{
-		this.generator = generator;
-		this.category = category;
-		this.key = key;
-		this.source = source;
-		this.parent = undefined;
-
-		// list of entries that regenerating this entry will cause to regenerate
-		this.affects = [];
-
-		this.dependencies = dependencies;
-
-		this.children = children || {};
-		this.childEntries = {};
-
-		// Whatever the current value of this object is
-		this.value = children ? {} : undefined;
-
-		// An object with keys to other fields and whose values are the addition/subtractions used to modify that value
-		this.modifiers = {};
-
-		this.metadata = {
-			stringify: stringify,
-			canReroll: canReroll,
-		};
-
-		// keys of other attributes which have modifiers for this entry
-		this.modifyingEntryKeys = [];
-	}
-	//*/
-
 	getCategory()
 	{
 		return this.parent === null ? this.category : this.parent.getCategory();
@@ -139,6 +106,7 @@ export class GenerationEntry
 		}
 		else if (Array.isArray(value))
 		{
+			console.log(this.getPath(), value);
 			return value.join(' ');
 		}
 		return `${value}`;
@@ -208,13 +176,15 @@ export class GenerationEntry
 	{
 		values = values || {};
 
-		if (!this.hasChildren())
+		const hasChildren = this.hasChildren();
+
+		const localValue = this.getValue();
+		if (localValue !== undefined)
 		{
-			lodash.set(values, this.getPath(),
-				this.getValue()
-			);
+			lodash.set(values, hasChildren ? `${this.getPath()}.value` : this.getPath(), localValue);
 		}
-		else
+
+		if (hasChildren)
 		{
 			lodash.values(this.getChildren()).forEach(
 				(child) => child.getLineageValues(values)
@@ -284,13 +254,22 @@ export class GenerationEntry
 
 	generate(data)
 	{
-		if (this.source === undefined) return;
+		console.log(`Generating ${this.getPath()} with data`, lodash.cloneDeep(data));
+
+		if (this.source === undefined)
+		{
+			return;
+		}
 
 		if (this.dependencies)
 		{
 			for (const dependencyKey of this.dependencies)
 			{
-				if (!data.hasOwnProperty(dependencyKey)) return;
+				if (!lodash.has(data, dependencyKey) || lodash.get(data, dependencyKey) === undefined)
+				{
+					console.warn(`Failed to generate ${this.getPath()}. Missing dependency ${dependencyKey} in`, lodash.cloneDeep(data));
+					return;
+				}
 			}
 		}
 
@@ -306,8 +285,9 @@ export class GenerationEntry
 		// For example, a table like 'beard' is assumed to have an entry for every race,
 		// so races can opt-in by defining a beard.json table. If one is missing, this is not an error,
 		// but rather the race opting-out of generating beard data.
+		console.log(`Parsing generator ${this.getPath()} source ${this.source}.`);
 		const result = parser(this.source, data);
-		console.log('path:', this.getPath(), lodash.cloneDeep(result));
+		console.log(`Received result`, lodash.cloneDeep(result));
 		if (typeof result === 'object' && !Array.isArray(result))
 		{
 			const entry = this.createEntry(result);

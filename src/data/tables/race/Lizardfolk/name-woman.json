@@ -1,8 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/Dragonborn/name-woman}"
+			"source": "{roll:race/Dragonborn/name-woman}"
 		}
-	],
-	"values": {}
+	]
 }

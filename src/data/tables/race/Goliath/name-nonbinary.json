@@ -2,10 +2,11 @@
 	"rows": [
 		{
 			"weight": 3,
-			"value": [
+			"source": [
 				"{roll:race/Goliath/names/mystic-noun}",
 				"{roll:race/Goliath/names/mystic-action}"
 			],
+			"stringify": "$(value[0])$(value[1])",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2,
 				"stats.abilityScores.wisdom": 2
@@ -13,10 +14,11 @@
 		},
 		{
 			"weight": 3,
-			"value": [
+			"source": [
 				"{roll:race/Goliath/names/fighting-noun}",
 				"{roll:race/Goliath/names/fighting-action}"
 			],
+			"stringify": "$(value[0])$(value[1])",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.constitution": 2
@@ -24,10 +26,11 @@
 		},
 		{
 			"weight": 2,
-			"value": [
+			"source": [
 				"{roll:race/Goliath/names/craft-noun}",
 				"{roll:race/Goliath/names/craft-action}"
 			],
+			"stringify": "$(value[0])$(value[1])",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2,
 				"stats.abilityScores.intelligence": 1
@@ -35,10 +38,11 @@
 		},
 		{
 			"weight": 3,
-			"value": [
+			"source": [
 				"{roll:race/Goliath/names/animal-noun}",
 				"{roll:race/Goliath/names/animal-action}"
 			],
+			"stringify": "$(value[0])$(value[1])",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.wisdom": 2
@@ -46,15 +50,11 @@
 		},
 		{
 			"weight": 3,
-			"value": [
+			"source": [
 				"{roll:race/Goliath/names/adjective}",
 				"{roll:race/Goliath/names/noun}"
-			]
+			],
+			"stringify": "$(value[0])$(value[1])"
 		}
-	],
-	"values": {
-		".*": {
-			"value": ["$(value[0])$(value[1])"]
-		}
-	}
+	]
 }

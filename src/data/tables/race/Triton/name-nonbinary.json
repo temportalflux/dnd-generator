@@ -1,8 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/common/name-nonbinary}"
+			"source": "{roll:race/common/name-nonbinary}"
 		}
-	],
-	"values": {}
+	]
 }

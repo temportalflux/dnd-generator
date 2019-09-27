@@ -1,17 +1,16 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/Tiefling/name/evil}",
+			"source": "{roll:race/Tiefling/name/evil}",
 			"weight": 3
 		},
 		{
-			"value": "{roll:race/Tiefling/name/neutral}",
+			"source": "{roll:race/Tiefling/name/neutral}",
 			"weight": 2
 		},
 		{
-			"value": "{roll:race/Tiefling/name/unaligned}",
+			"source": "{roll:race/Tiefling/name/unaligned}",
 			"weight": 5
 		}
-	],
-	"values": {}
+	]
 }

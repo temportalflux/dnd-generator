@@ -15,9 +15,6 @@
 		"description.eyeColor",
 		"description.age",
 		"description.race",
-		"description.face"
-	],
-	"generationOrderOld": [
 		"description.face",
 		"personality.deity",
 		"identity.name",
@@ -191,31 +188,35 @@
 					"source": "{roll:traits/face/attractiveness}"
 				}
 			]
+		},
+		{
+			"category": "personality",
+			"key": "deity",
+			"source": "{roll:race/$(description.race.value)/deity}",
+			"dependencies": [
+				"description.race"
+			]
+		},
+		{
+			"category": "identity",
+			"key": "name",
+			"source": "{roll:race/$(description.race.value)/name-$(identity.genderIdentity)}",
+			"dependencies": [
+				"description.race",
+				"identity.genderIdentity"
+			]
+		},
+		{
+			"category": "identity",
+			"key": "surname",
+			"source": "{roll:race/$(description.race.value)/surname}",
+			"dependencies": [
+				"description.race"
+			]
 		}
 	],
 	"fields": {
-		"identity": {
-			"name": {
-				"source": "{roll:race/$(description.race)/name-$(identity.genderIdentity)}",
-				"dependencies": [
-					"description.race",
-					"identity.genderIdentity"
-				]
-			},
-			"surname": {
-				"source": "{roll:race/$(description.race)/surname}",
-				"dependencies": [
-					"description.race"
-				]
-			}
-		},
 		"personality": {
-			"deity": {
-				"source": "{roll:race/$(description.race)/deity}",
-				"dependencies": [
-					"description.race"
-				]
-			},
 			"quirks": {
 				"source": "{roll:race/$(description.race)/quirks}",
 				"dependencies": [

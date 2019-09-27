@@ -1,5 +1,6 @@
 import lodash from 'lodash';
 import parser from '../parser';
+import inlineEval from './evalAtCtx';
 const { getTable } = require('../../Data');
 const { formatWithData } = require('./utils');
 
@@ -34,7 +35,8 @@ function testFrequency(entries)
 
 export default function exec(match, data)
 {
-	const tablePath = formatWithData(match[1], data);
+	const tablePath = inlineEval(match[1], data);
+
 	let table = undefined;
 	try
 	{
