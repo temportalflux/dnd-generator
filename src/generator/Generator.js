@@ -17,6 +17,8 @@ export class GenerationEntry
 			name: undefined,
 			description: undefined,
 			source: undefined,
+			// if value is a number, then this is the lowest possible value
+			minimum: undefined,
 
 			// GENERATION OUTPUT
 			value: undefined,
@@ -300,7 +302,7 @@ export class GenerationEntry
 		// so races can opt-in by defining a beard.json table. If one is missing, this is not an error,
 		// but rather the race opting-out of generating beard data.
 		const result = parser(this.source, data);
-		console.log(this.getPath(), lodash.cloneDeep(result));
+		console.log('path:', this.getPath(), lodash.cloneDeep(result));
 		if (typeof result === 'object' && !Array.isArray(result))
 		{
 			const entry = this.createEntry(result);
@@ -311,6 +313,7 @@ export class GenerationEntry
 
 				entry.generate(data);
 				this.value = entry.getValue();
+
 				if (entry.stringify !== undefined)
 					this.stringify = entry.stringify;
 				this.description = entry.description;
@@ -352,7 +355,9 @@ export class GenerationEntry
 	{
 		if (typeof this.value === 'number')
 		{
-			return this.value + this.getTotalModifier();
+			let modifiedValue = this.value + this.getTotalModifier();
+			if (typeof this.minimum === 'number') modifiedValue = Math.max(modifiedValue, this.minimum);
+			return modifiedValue;
 		}
 		return this.value;
 	}
@@ -365,11 +370,11 @@ export class GenerationEntry
 			const entry = this.generator.getEntry(entryKey);
 			if (entry)
 			{
-				const modifier = entry.getModifier(path);
+				const modifier = entry.getModifier(path, this.value);
 				if (typeof modifier === 'number') return totalModifier + modifier;
 			}
 			return totalModifier;
-		}, 0)
+		}, 0);
 	}
 
 	subscribeModifiers()
@@ -398,7 +403,6 @@ export class GenerationEntry
 
 	subscribeModifyingEntry(entry)
 	{
-		console.log(`Subscribing ${entry.getPath()}'s modifier for ${this.getPath()}`);
 		this.modifiedBy.push(entry.getPath());
 	}
 
@@ -408,18 +412,23 @@ export class GenerationEntry
 		this.modifiedBy = this.modifiedBy.filter((key) => key !== entryKey);
 	}
 
-	getModifier(keyToModify)
+	getModifier(keyToModify, value)
 	{
-		return this.evalModifier(this.modifiers[keyToModify]);
+		return this.evalModifier(this.modifiers[keyToModify], value);
 	}
 
-	evalModifier(modToEval)
+	evalModifier(modToEval, value)
 	{
 		if (modToEval === undefined) return 0;
 		else if (typeof modToEval === 'number') return modToEval;
 		else if (Array.isArray(modToEval))
 		{
-			return modToEval.reduce((accum, mod) => accum + this.evalModifier(mod), 0);
+			return modToEval.reduce((accum, mod) => accum + this.evalModifier(mod, value), 0);
+		}
+		else if (typeof modToEval === 'string')
+		{
+			// dont pass data to modifier evals, currently not required
+			return parser(modToEval, {});
 		}
 		else if (typeof modToEval === 'object')
 		{
@@ -429,20 +438,70 @@ export class GenerationEntry
 					switch (modToEval.curve)
 					{
 						case 'step':
-							const keyframes = Object.keys(modToEval.values);
-							let currentIndex = undefined;
-							let nextIndex = keyframes.length > 0 ? 0 : undefined;
-							while (nextIndex !== undefined && this.value > keyframes[nextIndex])
 							{
-								currentIndex = nextIndex;
-								nextIndex++;
-								if (nextIndex >= keyframes.length) nextIndex = undefined;
+								const keyframes = Object.keys(modToEval.values);
+								let currentIndex = undefined;
+								let nextIndex = keyframes.length > 0 ? 0 : undefined;
+								while (nextIndex !== undefined
+									&& parseInt(this.value, 10) > parseInt(keyframes[nextIndex], 10))
+								{
+									currentIndex = nextIndex;
+									nextIndex++;
+									if (nextIndex >= keyframes.length) nextIndex = undefined;
+								}
+								return currentIndex ? modToEval.values[keyframes[currentIndex]] : 0;
 							}
-							return currentIndex ? modToEval.values[keyframes[currentIndex]] : 0;
+						case 'lerp':
+							{
+								const valueInt = parseInt(this.value, 10);
+
+								const keyframes = Object.keys(modToEval.values);
+								const getInt = (i) => parseInt(keyframes[i], 10);
+								let lowerIndex = undefined;
+								let higherIndex = keyframes.length > 0 ? 0 : undefined;
+								while (higherIndex !== undefined
+									&& valueInt > getInt(higherIndex))
+								{
+									lowerIndex = higherIndex;
+									higherIndex++;
+									if (higherIndex >= keyframes.length) higherIndex = undefined;
+								}
+
+								if (lowerIndex === undefined)
+								{
+									lowerIndex = higherIndex;
+								}
+								else if (higherIndex === undefined)
+								{
+									higherIndex = lowerIndex;
+								}
+								
+								const lowerInput = getInt(lowerIndex);
+								const higherInput = getInt(higherIndex);
+								const lowerMod = modToEval.values[keyframes[lowerIndex]];
+								const higherMod = modToEval.values[keyframes[higherIndex]];
+
+								const t = (valueInt - lowerInput) / (higherInput !== lowerInput ? higherInput - lowerInput : higherInput);
+								const lerped = (1 - t) * lowerMod + (t * higherMod);
+
+								if (modToEval.toIntOp === undefined) return lerped;
+								const intOp = Math[modToEval.toIntOp];
+								if (intOp === undefined)
+								{
+									console.warn('Encountered unimplemented curve int cast operator:', modToEval.toIntOp);
+									return 0;
+								}
+								else
+								{
+									return intOp(lerped);
+								}
+							}
 						default:
 							break;
 					}
 					break;
+				case 'multiply':
+					return value * parser(modToEval.value, {});
 				default:
 					break;
 			}

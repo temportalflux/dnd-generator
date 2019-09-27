@@ -14,7 +14,7 @@ function chooseRandomWithWeight(entries)
 		weight_sum += entries[i].weight || 1;
 		if (randInt <= weight_sum)
 		{
-			return entries[i];
+			return lodash.cloneDeep(entries[i]);
 		}
 	}
 
@@ -54,13 +54,22 @@ export default function exec(match, data)
 
 	const appendModifiers = (current, toAppend) => {
 		return lodash.toPairs(toAppend).reduce((accum, [key, modifier]) => {
+			
 			if (!accum.hasOwnProperty(key)) accum[key] = [];
-			accum[key].push(modifier);
+			else if (!Array.isArray(accum[key])) accum[key] = [accum[key]];
+			
+			if (Array.isArray(modifier)) accum[key] = accum[key].concat(modifier);
+			else accum[key].push(modifier);
+
 			return accum;
 		}, current);
 	};
 
 	let result = chooseRandomWithWeight(table.rows);
+	if (typeof result.value === 'string')
+	{
+		result.value = parser(result.value, data);
+	}
 	result.modifiers = result.modifiers || {};
 
 	// Modifiers which are determined based on scales or regexs on the generated value
@@ -71,6 +80,7 @@ export default function exec(match, data)
 			let matchResult = parser(globalModifierEntry.match, { ...data, value: result.value });
 			if (matchResult === true)
 			{
+				console.log(lodash.cloneDeep(result.modifiers));
 				result.modifiers = appendModifiers(result.modifiers, globalModifierEntry.modifiers);
 			}
 		}

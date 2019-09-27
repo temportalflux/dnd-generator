@@ -12,6 +12,7 @@
 		"identity.romanticIdentity",
 		"description.height",
 		"description.weight",
+		"description.age",
 		"description.race"
 	],
 	"generationOrderOld": [
@@ -68,17 +69,20 @@
 						{
 							"key": "positive",
 							"name": "Lawful",
-							"source": "{roll:traits/alignment/tendancy}"
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
 						},
 						{
 							"key": "neutral",
 							"name": "Neutral",
-							"source": "{roll:traits/alignment/tendancy}"
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
 						},
 						{
 							"key": "negative",
 							"name": "Chaotic",
-							"source": "{roll:traits/alignment/tendancy}"
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
 						}
 					]
 				},
@@ -89,17 +93,20 @@
 						{
 							"key": "positive",
 							"name": "Good",
-							"source": "{roll:traits/alignment/tendancy}"
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
 						},
 						{
 							"key": "neutral",
 							"name": "Neutral",
-							"source": "{roll:traits/alignment/tendancy}"
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
 						},
 						{
 							"key": "negative",
 							"name": "Evil",
-							"source": "{roll:traits/alignment/tendancy}"
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
 						}
 					]
 				}
@@ -158,15 +165,16 @@
 		},
 		{
 			"category": "description",
+			"key": "age",
+			"source": "{roll:traits/age}"
+		},
+		{
+			"category": "description",
 			"key": "race",
 			"source": "{roll:race}"
 		}
 	],
 	"fieldOrderOld": [
-		"description.weight",
-		"description.age",
-		"description.race",
-		"description.subrace",
 		"description.skin",
 		"description.eyeColor",
 		"description.face",
@@ -193,9 +201,6 @@
 			}
 		},
 		"description": {
-			"age": {
-				"source": "{roll:traits/age}"
-			},
 			"subrace": {
 				"source": "{roll:race/$(description.race)}",
 				"dependencies": [

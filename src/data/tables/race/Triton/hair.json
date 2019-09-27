@@ -6,12 +6,21 @@
 		},
 		{
 			"weight": 35,
-			"default": {
-				"type": "normal",
-				"length": "{roll:traits/hair/length}",
-				"style": "{roll:traits/hair/style}",
-				"color": "{roll:race/Triton/hair-color.json}"
-			}
+			"value": "normal",
+			"children": [
+				{
+					"key": "length",
+					"source": "{roll:traits/hair/length}"
+				},
+				{
+					"key": "style",
+					"source": "{roll:traits/hair/style}"
+				},
+				{
+					"key": "color",
+					"source": "{roll:race/Triton/hair-color.json}"
+				}
+			]
 		}
 	],
 	"values": {}

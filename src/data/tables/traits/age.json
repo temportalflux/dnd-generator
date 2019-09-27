@@ -27,12 +27,12 @@
 			}
 		},
 		{
-			"match": "{all}",
+			"match": "{regex:.*}",
 			"modifiers": {
 				"description.height": {
 					"type": "curve",
 					"curve": "lerp",
-					"toIntOp": "round:up",
+					"toIntOp": "trunc",
 					"values": {
 						"14": -25,
 						"15": -8,
@@ -108,7 +108,5 @@
 				}
 			}
 		}
-	],
-	"values": {
-	}
+	]
 }

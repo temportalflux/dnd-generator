@@ -48,8 +48,7 @@
 			"weight": 11,
 			"value": "Dwarf",
 			"modifiers": {
-				"description.height": -38,
-				"description.age": "{roll:traits/age/bonus}"
+				"description.height": -38
 			},
 			"children": [
 				{
@@ -63,6 +62,10 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Dwarf/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
 				}
 			]
 		},
@@ -70,8 +73,7 @@
 			"weight": 16,
 			"value": "Elf",
 			"modifiers": {
-				"description.height": -5,
-				"description.age": "{roll:traits/age/bonus}"
+				"description.height": -5
 			},
 			"children": [
 				{
@@ -81,6 +83,10 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Elf/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
 				}
 			]
 		},
@@ -95,8 +101,7 @@
 				"description.height": 60,
 				"stats.alignmentTendancies.ethical.negative": 3,
 				"stats.alignmentTendancies.moral.good": 2,
-				"stats.alignmentTendancies.moral.neutral": 2,
-				"description.age": "{roll:traits/age/bonus}"
+				"stats.alignmentTendancies.moral.neutral": 2
 			},
 			"children": [
 				{
@@ -106,6 +111,10 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Firbolg/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
 				}
 			]
 		},
@@ -113,8 +122,7 @@
 			"weight": 7,
 			"value": "Gnome",
 			"modifiers": {
-				"description.height": -58,
-				"description.age": "{roll:traits/age/bonus}"
+				"description.height": -58
 			},
 			"children": [
 				{
@@ -128,6 +136,10 @@
 				{
 					"key": "skin",
 					"source": "{roll:traits/skin/nonhuman}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
 				}
 			]
 		},
@@ -394,9 +406,7 @@
 					"source": "{roll:race/Orc/skin}"
 				}
 			]
-		}
-	],
-	"todoRows": [
+		},
 		{
 			"weight": 2,
 			"value": "Tabaxi",
@@ -410,7 +420,17 @@
 				"description.height": 10,
 				"stats.alignmentTendancies.moral.positive": 1,
 				"stats.alignmentTendancies.ethical.negative": 3
-			}
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Tabaxi/skin}"
+				}
+			]
 		},
 		{
 			"weight": 4,
@@ -419,9 +439,26 @@
 				"stats.abilityScores.constitution": -1,
 				"stats.abilityScores.intelligence": 2,
 				"stats.abilityScores.charisma": 3,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"description.age": "{roll:traits/age/bonus}"
-			}
+				"stats.alignmentTendancies.ethical.negative": 3
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Tiefling/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
+				}
+			]
 		},
 		{
 			"weight": 4,
@@ -434,7 +471,17 @@
 				"stats.alignmentTendancies.moral.positive": 3,
 				"stats.alignmentTendancies.moral.negative": -3,
 				"description.age": "$(description.age*description.age)"
-			}
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Triton/skin}"
+				}
+			]
 		},
 		{
 			"weight": 1,
@@ -447,7 +494,17 @@
 				"stats.alignmentTendancies.ethical.negative": 3,
 				"stats.alignmentTendancies.moral.positive": -2,
 				"stats.alignmentTendancies.moral.negative": 2
-			}
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:creatures/dragon/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Lizardfolk/skin}"
+				}
+			]
 		}
 	]
 }

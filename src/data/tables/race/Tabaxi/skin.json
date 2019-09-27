@@ -1,13 +1,21 @@
 {
 	"rows": [
 		{
-			"default": {
-				"texture": "{roll:race/Tabaxi/skin/texture}",
-				"pattern": "{roll:race/Tabaxi/skin/pattern}",
-				"color": "{roll:race/Tabaxi/skin/color}",
-				"type": "fur"
-			}
+			"value": "fur",
+			"children": [
+				{
+					"key": "texture",
+					"source": "{roll:race/Tabaxi/skin/texture}"
+				},
+				{
+					"key": "pattern",
+					"source": "{roll:race/Tabaxi/skin/pattern}"
+				},
+				{
+					"key": "color",
+					"source": "{roll:race/Tabaxi/skin/color}"
+				}
+			]
 		}
-	],
-	"values": {}
+	]
 }

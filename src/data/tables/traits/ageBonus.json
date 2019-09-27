@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"description": "Modifies the age",
+			"modifiers": {
+				"description.age": [
+					{
+						"type": "multiply",
+						"value": "{randInt:1,6}"
+					},
+					"{randInt:0,9}"
+				]
+			}
+		}
+	]
+}
