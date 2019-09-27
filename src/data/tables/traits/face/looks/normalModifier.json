@@ -1,9 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:traits/modifier}"
+			"source": "{roll:traits/modifier}"
 		}
-	],
-	"values": {
-	}
+	]
 }

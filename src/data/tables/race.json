@@ -34,6 +34,10 @@
 			},
 			"children": [
 				{
+					"key": "color",
+					"source": "{roll:creatures/dragon/color}"
+				},
+				{
 					"key": "hair",
 					"source": "{roll:creatures/dragon/hair}"
 				},
@@ -51,6 +55,10 @@
 				"description.height": -38
 			},
 			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Dwarf}"
+				},
 				{
 					"key": "beard",
 					"source": "{roll:race/Dwarf/beard}"
@@ -76,6 +84,10 @@
 				"description.height": -5
 			},
 			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Elf}"
+				},
 				{
 					"key": "hair",
 					"source": "{roll:traits/hair}"
@@ -125,6 +137,10 @@
 				"description.height": -58
 			},
 			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Gnome}"
+				},
 				{
 					"key": "hair",
 					"source": "{roll:traits/hair}"
@@ -281,6 +297,10 @@
 				"description.height": -63
 			},
 			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Halfling}"
+				},
 				{
 					"key": "hair",
 					"source": "{roll:traits/hair}"
@@ -469,10 +489,13 @@
 				"stats.abilityScores.charisma": 1,
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.positive": 3,
-				"stats.alignmentTendancies.moral.negative": -3,
-				"description.age": "$(description.age*description.age)"
+				"stats.alignmentTendancies.moral.negative": -3
 			},
 			"children": [
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonusSmall}"
+				},
 				{
 					"key": "hair",
 					"source": "{roll:traits/hair}"

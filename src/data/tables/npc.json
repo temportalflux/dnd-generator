@@ -12,17 +12,16 @@
 		"identity.romanticIdentity",
 		"description.height",
 		"description.weight",
+		"description.eyeColor",
 		"description.age",
-		"description.race"
+		"description.race",
+		"description.face"
 	],
 	"generationOrderOld": [
-		"description.subrace",
-		"description.eyeColor",
-		"description.skin",
 		"description.face",
-		"description.hair",
-		"description.beard",
-		"personality.deity"
+		"personality.deity",
+		"identity.name",
+		"identity.surname"
 	],
 	"fieldOrder": [
 		{
@@ -172,17 +171,27 @@
 			"category": "description",
 			"key": "race",
 			"source": "{roll:race}"
+		},
+		{
+			"category": "description",
+			"key": "eyeColor",
+			"source": "{roll:traits/eyecolor}"
+		},
+		{
+			"category": "description",
+			"key": "face",
+			"stringify": "$(attractiveness.modifier || '') $(attractiveness.quality) $(shape)",
+			"children": [
+				{
+					"key": "shape",
+					"source": "{roll:traits/face/shape}"
+				},
+				{
+					"key": "attractiveness",
+					"source": "{roll:traits/face/attractiveness}"
+				}
+			]
 		}
-	],
-	"fieldOrderOld": [
-		"description.skin",
-		"description.eyeColor",
-		"description.face",
-		"description.hair",
-		"description.beard",
-		"personality.deity",
-		"identity.name",
-		"identity.surname"
 	],
 	"fields": {
 		"identity": {
@@ -195,47 +204,6 @@
 			},
 			"surname": {
 				"source": "{roll:race/$(description.race)/surname}",
-				"dependencies": [
-					"description.race"
-				]
-			}
-		},
-		"description": {
-			"subrace": {
-				"source": "{roll:race/$(description.race)}",
-				"dependencies": [
-					"description.race"
-				]
-			},
-			"skin": {
-				"source": "{roll:race/$(description.race)/skin}",
-				"dependencies": [
-					"description.race"
-				]
-			},
-			"eyeColor": {
-				"source": "{roll:traits/eyecolor}"
-			},
-			"face": {
-				"stringify": "$(shape) $(attractiveness)",
-				"children": {
-					"shape": {
-						"source": "{roll:traits/face/shape}"
-					},
-					"attractiveness": {
-						"source": "{roll:traits/face/attractiveness}",
-						"stringify": "$(attractiveness.modifier || '') $(attractiveness.quality)"
-					}
-				}
-			},
-			"hair": {
-				"source": "{roll:race/$(description.race)/hair}",
-				"dependencies": [
-					"description.race"
-				]
-			},
-			"beard": {
-				"source": "{roll:race/$(description.race)/beard}",
 				"dependencies": [
 					"description.race"
 				]

@@ -1,13 +1,12 @@
 {
 	"rows": [
 		{
-			"value": "Mountain Dwarf",
+			"value": "Mountain",
 			"weight": 5
 		},
 		{
-			"value": "Hill Dwarf",
+			"value": "Hill",
 			"weight": 6
 		}
-	],
-	"values": {}
+	]
 }

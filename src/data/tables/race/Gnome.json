@@ -1,13 +1,12 @@
 {
 	"rows": [
 		{
-			"value": "Forest Gnome",
+			"value": "Forest",
 			"weight": 4
 		},
 		{
-			"value": "Rock Gnome",
+			"value": "Rock",
 			"weight": 3
 		}
-	],
-	"values": {}
+	]
 }

@@ -93,7 +93,7 @@ export default class NpcDataTree extends React.Component
 
 	makeTreeContents(entryMap)
 	{
-		return lodash.values(entryMap).map(this.makeTreeNodeHierarchy);
+		return lodash.sortBy(lodash.values(entryMap), (e) => e.key).map(this.makeTreeNodeHierarchy);
 	}
 
 	makeTreeCategories(categoryEntryMap)

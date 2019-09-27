@@ -1,44 +1,76 @@
 {
 	"rows": [
 		{
-			"value": {
-				"modifier": "{roll:traits/face/looks/goodModifier}",
-				"quality": "{roll:traits/face/looks/good}"
-			},
-			"weight": 6
+			"children": [
+				{
+					"key": "modifier",
+					"source": "{roll:traits/face/looks/goodModifier}"
+				},
+				{
+					"key": "quality",
+					"source": "{roll:traits/face/looks/good}"
+				}
+			],
+			"weight": 6,
+			"stringify": "$(modifier) $(quality)"
 		},
 		{
-			"value": {
-				"quality": "{roll:traits/face/looks/good}"
-			},
-			"weight": 14
+			"children": [
+				{
+					"key": "quality",
+					"source": "{roll:traits/face/looks/good}"
+				}
+			],
+			"weight": 14,
+			"stringify": "$(quality)"
 		},
 		{
-			"value": {
-				"modifier": "{roll:traits/face/looks/badModifier}",
-				"quality": "{roll:traits/face/looks/bad}"
-			},
-			"weight": 4
+			"children": [
+				{
+					"key": "modifier",
+					"source": "{roll:traits/face/looks/badModifier}"
+				},
+				{
+					"key": "quality",
+					"source": "{roll:traits/face/looks/bad}"
+				}
+			],
+			"weight": 4,
+			"stringify": "$(modifier) $(quality)"
 		},
 		{
-			"value": {
-				"quality": "{roll:traits/face/looks/bad}"
-			},
-			"weight": 10
+			"children": [
+				{
+					"key": "quality",
+					"source": "{roll:traits/face/looks/bad}"
+				}
+			],
+			"weight": 10,
+			"stringify": "$(quality)"
 		},
 		{
-			"value": {
-				"modifier": "{roll:traits/face/looks/normalModifier}",
-				"quality": "{roll:traits/face/looks/normal}"
-			},
-			"weight": 8
+			"children": [
+				{
+					"key": "modifier",
+					"source": "{roll:traits/face/looks/normalModifier}"
+				},
+				{
+					"key": "quality",
+					"source": "{roll:traits/face/looks/normal}"
+				}
+			],
+			"weight": 8,
+			"stringify": "$(modifier) $(quality)"
 		},
 		{
-			"value": {
-				"quality": "{roll:traits/face/looks/normal}"
-			},
-			"weight": 30
+			"children": [
+				{
+					"key": "quality",
+					"source": "{roll:traits/face/looks/normal}"
+				}
+			],
+			"weight": 30,
+			"stringify": "$(quality)"
 		}
-	],
-	"values": {}
+	]
 }

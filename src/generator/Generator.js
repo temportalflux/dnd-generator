@@ -115,18 +115,23 @@ export class GenerationEntry
 			).join(' ');
 	}
 
+	getLocalContext()
+	{
+		const value = this.getValue();
+		const lineageValues = lodash.get(this.getLineageValues(), this.getPath());
+		const isValueAnObject = typeof value === 'object' && !Array.isArray(value);
+		return lodash.assign({},
+			lineageValues,
+			isValueAnObject ? value : { value: value }
+		);
+	}
+
 	toString()
 	{
 		const value = this.getValue();
 		if (this.stringify !== undefined)
 		{
-			const lineageValues = lodash.get(this.getLineageValues(), this.getPath());
-			const isValueAnObject = typeof value === 'object' && !Array.isArray(value);
-			const context = lodash.assign({},
-				lineageValues,
-				isValueAnObject ? value : { value: value }
-			);
-			return inlineEval(this.stringify, context);
+			return inlineEval(this.stringify, this.getLocalContext());
 		}
 		else if (this.description !== undefined)
 		{
@@ -372,6 +377,10 @@ export class GenerationEntry
 			{
 				const modifier = entry.getModifier(path, this.value);
 				if (typeof modifier === 'number') return totalModifier + modifier;
+				else
+				{
+					console.error('Found non-numerical modifier', modifier, `(${typeof modifier})`, 'for entry', this.getPath());
+				}
 			}
 			return totalModifier;
 		}, 0);
@@ -428,7 +437,8 @@ export class GenerationEntry
 		else if (typeof modToEval === 'string')
 		{
 			// dont pass data to modifier evals, currently not required
-			return parser(modToEval, {});
+			const modifier = inlineEval(modToEval, this.getLocalContext());
+			return parseInt(modifier, 10);
 		}
 		else if (typeof modToEval === 'object')
 		{
@@ -501,7 +511,8 @@ export class GenerationEntry
 					}
 					break;
 				case 'multiply':
-					return value * parser(modToEval.value, {});
+					const multiplier = inlineEval(modToEval.value, this.getLocalContext());
+					return value * parseInt(parser(multiplier, {}), 10);
 				default:
 					break;
 			}

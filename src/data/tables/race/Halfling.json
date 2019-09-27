@@ -1,11 +1,10 @@
 {
 	"rows": [
 		{
-			"value": "Lightfoot Halfling"
+			"value": "Lightfoot"
 		},
 		{
-			"value": "Stout Halfling"
+			"value": "Stout"
 		}
-	],
-	"values": {}
+	]
 }
