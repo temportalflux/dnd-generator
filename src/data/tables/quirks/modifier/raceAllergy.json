@@ -1,0 +1,48 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"value": "dwarves"
+		},
+		{
+			"weight": 2,
+			"value": "elves"
+		},
+		{
+			"weight": 2,
+			"value": "tieflings"
+		},
+		{
+			"weight": 2,
+			"value": "dragonborns"
+		},
+		{
+			"weight": 1,
+			"value": "demons"
+		},
+		{
+			"weight": 1,
+			"value": "dragons"
+		},
+		{
+			"weight": 2,
+			"value": "gnomes"
+		},
+		{
+			"weight": 2,
+			"value": "halflings"
+		},
+		{
+			"weight": 1,
+			"value": "orcs"
+		},
+		{
+			"weight": 1,
+			"value": "goblins"
+		},
+		{
+			"weight": 1,
+			"value": "kobolds"
+		}
+	]
+}

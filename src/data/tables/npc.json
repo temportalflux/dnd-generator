@@ -18,7 +18,8 @@
 		"description.face",
 		"personality.deity",
 		"identity.name",
-		"identity.surname"
+		"identity.surname",
+		"personality.quirks"
 	],
 	"fieldOrder": [
 		{
@@ -213,17 +214,29 @@
 			"dependencies": [
 				"description.race"
 			]
+		},
+		{
+			"category": "personality",
+			"key": "quirks",
+			"hideInlineValue": true,
+			"children": [
+				{
+					"key": "general",
+					"source": "{roll:quirks}",
+					"hideInlineValue": true
+				},
+				{
+					"key": "race",
+					"source": "TODO RACE QUIRKS {roll:race/$(description.race)/quirks}",
+					"hideInlineValue": true,
+					"dependencies": [
+						"description.race"
+					]
+				}
+			]
 		}
 	],
 	"fields": {
-		"personality": {
-			"quirks": {
-				"source": "{roll:race/$(description.race)/quirks}",
-				"dependencies": [
-					"description.race"
-				]
-			}
-		},
 		"occupation": {
 			"type": {
 				"source": "{roll:occupation/type}"

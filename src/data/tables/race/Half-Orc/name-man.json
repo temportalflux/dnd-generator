@@ -1,7 +1,10 @@
 {
 	"rows": [
 		{
-			"source": "{roll:race/$(description.race.value)/name-nonbinary}"
+			"source": "{roll:race/Human/name-man}"
+		},
+		{
+			"source": "{roll:race/Orc/name-man}"
 		}
 	]
 }

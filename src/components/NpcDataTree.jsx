@@ -1,7 +1,8 @@
 import React from 'react'
-import { Grid, Button } from 'semantic-ui-react';
+import { Grid, Button, Popup } from 'semantic-ui-react';
 import Tree from 'react-animated-tree';
 import {Generator} from '../generator/Generator';
+import GenerationEntryPopup from './GenerationEntryPopup';
 
 import lodash from 'lodash';
 import inlineEval from '../generator/modules/evalAtCtx';
@@ -52,11 +53,22 @@ export default class NpcDataTree extends React.Component
 		return name;
 	}
 
-	makeTitleContent(title, path, canReroll)
+	makeTitleContent(title, path, canReroll, popupComponent)
 	{
+		const titleOrPopup = popupComponent !== undefined
+			? (
+				<Popup
+					trigger={(
+						<span>
+							{title}
+						</span>
+					)}
+					content={popupComponent}
+			/>)
+			: title;
 		return (
 			<span>
-				{canReroll && <Button path={path} size='mini' icon='refresh' onClick={this.props.onRerollClicked} />} {title}
+				{canReroll && <Button path={path} size='mini' icon='refresh' onClick={this.props.onRerollClicked} />} {titleOrPopup}
 			</span>
 		);
 	}
@@ -66,7 +78,8 @@ export default class NpcDataTree extends React.Component
 		const title = this.makeTitleContent(
 			this.makeTitleText(generatorEntry),
 			generatorEntry.getPath(),
-			generatorEntry.getCanReroll()
+			generatorEntry.getCanReroll(),
+			(<GenerationEntryPopup entry={generatorEntry} />)
 		);
 
 		if (generatorEntry.hasChildren())

@@ -1,0 +1,26 @@
+{
+	"rows": [
+		{
+			"weight": 10,
+			"children": [
+				{
+					"key": 0,
+					"source": "{roll:quirks/general}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"children": [
+				{
+					"key": 0,
+					"source": "{roll:quirks/general}"
+				},
+				{
+					"key": 1,
+					"source": "{roll:quirks/general}"
+				}
+			]
+		}
+	]
+}

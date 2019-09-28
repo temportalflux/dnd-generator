@@ -1,8 +1,8 @@
 import lodash from 'lodash';
 import parser from '../parser';
 import inlineEval from './evalAtCtx';
+import appendModifiers from '../appendModifiers';
 const { getTable } = require('../../Data');
-const { formatWithData } = require('./utils');
 
 function chooseRandomWithWeight(entries)
 {
@@ -53,19 +53,6 @@ export default function exec(match, data)
 		console.error(`Table '${tablePath}' is missing field 'rows'. This field is enforced by the schema for tables.`, table);
 		return undefined;
 	}
-
-	const appendModifiers = (current, toAppend) => {
-		return lodash.toPairs(toAppend).reduce((accum, [key, modifier]) => {
-			
-			if (!accum.hasOwnProperty(key)) accum[key] = [];
-			else if (!Array.isArray(accum[key])) accum[key] = [accum[key]];
-			
-			if (Array.isArray(modifier)) accum[key] = accum[key].concat(modifier);
-			else accum[key].push(modifier);
-
-			return accum;
-		}, current);
-	};
 
 	let result = chooseRandomWithWeight(table.rows);
 	if (typeof result.value === 'string')
