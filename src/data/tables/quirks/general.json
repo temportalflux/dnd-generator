@@ -2,7 +2,6 @@
 	"rows": [
 		{
 			"weight": 3,
-			"value": "wanderlust",
 			"stringify": "$(identity.pronouns.singular) has a constant wanderlust and is unable to live at the same place for more than a few months.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
@@ -378,7 +377,7 @@
 		},
 		{
 			"weight": 8,
-			"stringify": "$(identity.pronouns.singular) has a $(petSize) $(petAnimal) companion named $(petName).",
+			"stringify": "$(identity.pronouns.singular) has a $(petSize) pet $(petAnimal) named $(petName).",
 			"children": [
 				{
 					"key": "petSize",

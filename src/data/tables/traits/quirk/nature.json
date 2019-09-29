@@ -1,12 +1,11 @@
 {
 	"rows": [
 		{
-			"weight": 16,
-			"value": ""
+			"weight": 16
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) spends every morning training.",
+			"stringify": "$(identity.pronouns.singular) spends every morning training.",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.dexterity": 2,
@@ -15,7 +14,7 @@
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) spends every morning meditating.",
+			"stringify": "$(identity.pronouns.singular) spends every morning meditating.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2,
 				"stats.abilityScores.wisdom": 2,
@@ -24,99 +23,101 @@
 		},
 		{
 			"weight": 4,
-			"value": "$(identity.pronouns.singular) likes animals more than people.",
+			"stringify": "$(identity.pronouns.singular) likes animals more than people.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
 			}
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) is a vocal vegetarian.",
+			"stringify": "$(identity.pronouns.singular) is a vocal vegetarian.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) is a vegetarian.",
+			"stringify": "$(identity.pronouns.singular) is a vegetarian.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) is a secret vegetarian.",
+			"stringify": "$(identity.pronouns.singular) is a secret vegetarian.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
 			"weight": 1,
-			"value": "$(identity.pronouns.singular) is a vegan.",
+			"stringify": "$(identity.pronouns.singular) is a vegan.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
 			"weight": 1,
-			"value": "$(identity.pronouns.singular) is a vocal vegan.",
+			"stringify": "$(identity.pronouns.singular) is a vocal vegan.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
 			"weight": 1,
-			"value": "$(identity.pronouns.singular) is a secret vegan.",
+			"stringify": "$(identity.pronouns.singular) is a secret vegan.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
 			"weight": 3,
-			"generators": {
-				"frequency": "{roll:common/frequency}"
-			},
-			"value": "$(identity.pronouns.singular) $(frequency) talks to plants."
+			"stringify": "$(identity.pronouns.singular) $(frequency) talks to plants.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
 		},
 		{
 			"weight": 4,
-			"value": "$(identity.pronouns.singular) feels uncomfortable in a urban setting."
+			"stringify": "$(identity.pronouns.singular) feels uncomfortable in a urban setting."
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) is a very proficient herbalist."
+			"stringify": "$(identity.pronouns.singular) is a very proficient herbalist."
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) can make a potion out of anything."
+			"stringify": "$(identity.pronouns.singular) can make a potion out of anything."
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) sleeps best in a tree."
+			"stringify": "$(identity.pronouns.singular) sleeps best in a tree."
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) can always find $(identity.pronouns.possessive) way in the woods."
+			"stringify": "$(identity.pronouns.singular) can always find $(identity.pronouns.possessive) way in the woods."
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) loves eating fresh aliments."
+			"stringify": "$(identity.pronouns.singular) loves eating fresh aliments."
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) can tame any animal.",
+			"stringify": "$(identity.pronouns.singular) can tame any animal.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1
 			}
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) will never take a life if given the choice.",
+			"stringify": "$(identity.pronouns.singular) will never take a life if given the choice.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 2,
 				"stats.alignmentTendancies.moral.negative": -2
 			}
 		}
-	],
-	"values": {}
+	]
 }

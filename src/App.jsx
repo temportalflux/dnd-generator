@@ -1,5 +1,4 @@
 import React from 'react';
-import lodash from 'lodash';
 import { Container } from "semantic-ui-react";
 import {Npc} from './pages/Npc';
 

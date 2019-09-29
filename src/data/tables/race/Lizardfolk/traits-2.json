@@ -1,8 +1,0 @@
-{
-	"rows": [
-		{
-			"value": "$(identity.pronouns.singular) values $(identity.pronouns.possessive) survival above everything else."
-		}
-	],
-	"values": {}
-}

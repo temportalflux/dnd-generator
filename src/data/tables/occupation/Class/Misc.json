@@ -1,0 +1,40 @@
+{
+	"rows": [
+		{
+			"weight": 4,
+			"value": "Bard",
+			"v": "{richquirk}",
+			"children": [
+				{
+					"key": "abilityBonus",
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/medium}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/high}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/medium}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/high}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/low}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/high}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

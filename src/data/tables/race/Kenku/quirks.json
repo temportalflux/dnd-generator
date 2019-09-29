@@ -1,24 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "",
-			"weight": 22
-		},
-		{
-			"value": "staringAtSky",
-			"weight": 18
-		},
-		{
-			"value": "randomSounds",
-			"weight": 3
+			"stringify": "none"
 		}
-	],
-	"values": {
-		"randomSounds": {
-			"value": "$(identity.pronouns.possessive) sentences are always ponctuated with seemingly random sounds."
-		},
-		"staringAtSky": {
-			"value": "$(identity.pronouns.singular) is often found staring at the sky."
-		}
-	}
+	]
 }

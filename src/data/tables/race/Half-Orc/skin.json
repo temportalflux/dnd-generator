@@ -5,8 +5,8 @@
 			"weight": 3
 		},
 		{
-			"value": "{roll:race/Human/skin}",
-			"source": 2
+			"source": "{roll:race/Human/skin}",
+			"weight": 2
 		}
 	]
 }

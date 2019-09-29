@@ -1,6 +1,9 @@
 {
 	"rows": [
 		{
+			"source": "{roll:race/Human/quirks}"
+		},
+		{
 			"source": "{roll:race/Elf/quirks}"
 		}
 	]

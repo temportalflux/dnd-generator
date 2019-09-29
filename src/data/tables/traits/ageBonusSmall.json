@@ -13,13 +13,11 @@
 				}
 			],
 			"modifiers": {
-				"description.age": [
-					{
-						"type": "multiply",
-						"value": "$(multiply)"
-					},
-					"$(add)"
-				]
+				"description.age": {
+					"type": "multiplyAdd",
+					"multiply": "$(multiply)",
+					"add": "$(add)"
+				}
 			}
 		}
 	]

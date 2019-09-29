@@ -2,6 +2,7 @@
 	"generationOrder": [
 		"stats.abilityScores",
 		"stats.alignmentTendancies",
+		"personality.quirks",
 		"personality.alignmentMoral",
 		"identity.pronouns",
 		"identity.genderIdentity",
@@ -19,7 +20,10 @@
 		"personality.deity",
 		"identity.name",
 		"identity.surname",
-		"personality.quirks"
+		"personality.generalQuirk",
+		"occupation.type",
+		"occupation.category",
+		"occupation.profession"
 	],
 	"fieldOrder": [
 		{
@@ -111,6 +115,13 @@
 		},
 		{
 			"category": "personality",
+			"key": "quirks",
+			"canReroll": false,
+			"hideInlineValue": true,
+			"value": []
+		},
+		{
+			"category": "personality",
 			"key": "alignmentMoral",
 			"source": "{roll:traits/alignmentMoral}"
 		},
@@ -178,7 +189,7 @@
 		{
 			"category": "description",
 			"key": "face",
-			"stringify": "$(attractiveness.modifier || '') $(attractiveness.quality) $(shape)",
+			"stringify": "$(shape) $(attractivenessString)",
 			"children": [
 				{
 					"key": "shape",
@@ -217,37 +228,34 @@
 		},
 		{
 			"category": "personality",
-			"key": "quirks",
-			"hideInlineValue": true,
-			"children": [
-				{
-					"key": "general",
-					"source": "{roll:quirks}",
-					"hideInlineValue": true
-				},
-				{
-					"key": "race",
-					"source": "TODO RACE QUIRKS {roll:race/$(description.race)/quirks}",
-					"hideInlineValue": true,
-					"dependencies": [
-						"description.race"
-					]
-				}
+			"key": "generalQuirk",
+			"source": "{roll:quirks}",
+			"hideInlineValue": true
+		},
+		{
+			"category": "occupation",
+			"key": "type",
+			"source": "{roll:occupation/type}"
+		},
+		{
+			"category": "occupation",
+			"key": "category",
+			"source": "{roll:occupation/$(occupation.type)/Category}",
+			"dependencies": [
+				"occupation.type"
+			]
+		},
+		{
+			"category": "occupation",
+			"key": "profession",
+			"source": "{roll:occupation/$(occupation.type)/$(occupation.category)}",
+			"dependencies": [
+				"occupation.type",
+				"occupation.category"
 			]
 		}
 	],
 	"fields": {
-		"occupation": {
-			"type": {
-				"source": "{roll:occupation/type}"
-			},
-			"profession": {
-				"source": "{roll:occupation/$(occupation.type)}",
-				"dependencies": [
-					"occupation.type"
-				]
-			}
-		},
 		"relationships": {},
 		"hooks": {}
 	}

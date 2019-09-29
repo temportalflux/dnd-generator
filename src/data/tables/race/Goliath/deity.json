@@ -1,8 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:race/Elf/deity}"
+			"source": "{roll:race/Elf/deity}"
 		}
-	],
-	"values": {}
+	]
 }

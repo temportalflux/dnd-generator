@@ -17,6 +17,11 @@
 				{
 					"key": "skin",
 					"source": "{roll:common/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Aasimar/quirk-$(personality.alignmentMoral)}"
 				}
 			]
 		},
@@ -45,6 +50,11 @@
 					"key": "skin",
 					"source": "{roll:traits/skin/scaleTexture}",
 					"stringify": "$(value) scales"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Dragonborn/quirks}"
 				}
 			]
 		},
@@ -74,6 +84,11 @@
 				{
 					"key": "ageBonus",
 					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Dwarf/quirks}"
 				}
 			]
 		},
@@ -99,6 +114,11 @@
 				{
 					"key": "ageBonus",
 					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Elf/quirks}"
 				}
 			]
 		},
@@ -127,6 +147,17 @@
 				{
 					"key": "ageBonus",
 					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Firbolg/quirks}"
+				},
+				{
+					"key": "quirkNature",
+					"name": "Nature Quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:traits/quirk/nature}"
 				}
 			]
 		},
@@ -156,6 +187,11 @@
 				{
 					"key": "ageBonus",
 					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Gnome/quirks}"
 				}
 			]
 		},
@@ -208,6 +244,16 @@
 				{
 					"key": "skin",
 					"source": "{roll:traits/skin/nonhuman}"
+				},
+				{
+					"key": "quirk1",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Goliath/quirks-1}"
+				},
+				{
+					"key": "quirk2",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Goliath/quirks-2}"
 				}
 			]
 		},
@@ -233,6 +279,11 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Half-Dwarf/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Half-Dwarf/quirks}"
 				}
 			]
 		},
@@ -258,6 +309,11 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Half-Elf/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Half-Elf/quirks}"
 				}
 			]
 		},
@@ -287,6 +343,11 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Half-Orc/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Half-Orc/quirks}"
 				}
 			]
 		},
@@ -312,6 +373,11 @@
 				{
 					"key": "skin",
 					"source": "{roll:traits/skin/nonhuman}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Halfling/quirks}"
 				}
 			]
 		},
@@ -366,6 +432,11 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Kenku/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Kenku/quirks}"
 				}
 			]
 		},
@@ -395,6 +466,16 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Lizardfolk/skin}"
+				},
+				{
+					"key": "quirk1",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Lizardfolk/quirks-1}"
+				},
+				{
+					"key": "quirk2",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Lizardfolk/quirks-2}"
 				}
 			]
 		},

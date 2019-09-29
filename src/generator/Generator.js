@@ -8,6 +8,53 @@ export class GenerationEntry
 
 	constructor(data)
 	{
+		{
+			this.deconstruct = this.deconstruct.bind(this);
+			this.getCategory = this.getCategory.bind(this);
+			this.getKey = this.getKey.bind(this);
+			this.getPath = this.getPath.bind(this);
+			this.isValid = this.isValid.bind(this);
+			this.getName = this.getName.bind(this);
+			this.getLocalContext = this.getLocalContext.bind(this);
+			this.getGlobalContext = this.getGlobalContext.bind(this);
+			this.getAllContext = this.getAllContext.bind(this);
+			this.makeString = this.makeString.bind(this);
+			this.updateString = this.updateString.bind(this);
+			this.toString = this.toString.bind(this);
+			this.getCanReroll = this.getCanReroll.bind(this);
+			this.clearChildren = this.clearChildren.bind(this);
+			this.createChildren = this.createChildren.bind(this);
+			this.createEntry = this.createEntry.bind(this);
+			this.addChild = this.addChild.bind(this);
+			this.setParent = this.setParent.bind(this);
+			this.hasChildren = this.hasChildren.bind(this);
+			this.getChildren = this.getChildren.bind(this);
+			this.getChild = this.getChild.bind(this);
+			this.getLineageValues = this.getLineageValues.bind(this);
+			this.hasDependencies = this.hasDependencies.bind(this);
+			this.getDependencies = this.getDependencies.bind(this);
+			this.subscribeDependencies = this.subscribeDependencies.bind(this);
+			this.unsubscribeDependencies = this.unsubscribeDependencies.bind(this);
+			this.addAffectedEntry = this.addAffectedEntry.bind(this);
+			this.removeAffectedEntry = this.removeAffectedEntry.bind(this);
+			this.getAllAffectedEntryPaths = this.getAllAffectedEntryPaths.bind(this);
+			this.subscribeToCollection = this.subscribeToCollection.bind(this);
+			this.unsubscribeFromCollection = this.unsubscribeFromCollection.bind(this);
+			this.subscribeAsCollectionEntry = this.subscribeAsCollectionEntry.bind(this);
+			this.unsubscribeAsCollectionEntry = this.unsubscribeAsCollectionEntry.bind(this);
+			this.hasCollectionEntries = this.hasCollectionEntries.bind(this);
+			this.getCollectionEntries = this.getCollectionEntries.bind(this);
+			this.generate = this.generate.bind(this);
+			this.getValue = this.getValue.bind(this);
+			this.modify = this.modify.bind(this);
+			this.subscribeModifiers = this.subscribeModifiers.bind(this);
+			this.unsubscribeModifiers = this.unsubscribeModifiers.bind(this);
+			this.subscribeModifyingEntry = this.subscribeModifyingEntry.bind(this);
+			this.unsubscribeModifyingEntry = this.unsubscribeModifyingEntry.bind(this);
+			this.modifyEntryValue = this.modifyEntryValue.bind(this);
+			this.applyModifier = this.applyModifier.bind(this);
+		}
+
 		lodash.assign(this, {
 			generator: null,
 
@@ -36,20 +83,28 @@ export class GenerationEntry
 			canReroll: true,
 			// entry keys that cause regeneration of this entry
 			dependencies: [],
+			// an entry key to another entry whose value is an array that this value contributes to
+			collection: undefined,
 
 			// DYNAMIC
 			// entry keys which have modifiers for this entry. Generated from `modifiers`
 			modifiedBy: [],
 			// entry keys which this value causes regeneration for. Generated from `dependencies`
 			affects: [],
+			// entry keys which have marked themselves as a part of this collection. Only used if value is an array.
+			collectionEntries: [],
 		}, data);
+
 		this.createChildren();
+
+		this.stringified = undefined;
 	}
 
 	deconstruct()
 	{
 		this.unsubscribeDependencies();
 		this.unsubscribeModifiers();
+		this.unsubscribeFromCollection();
 	}
 
 	getCategory()
@@ -86,7 +141,7 @@ export class GenerationEntry
 	getLocalContext()
 	{
 		const value = this.getValue();
-		
+
 		const lineageValues = this.getLineageValues();
 		const localizedValues = lodash.get(lineageValues, this.getPath());
 		const isValueAnObject = (v) => typeof v === 'object' && !Array.isArray(v);
@@ -100,13 +155,24 @@ export class GenerationEntry
 		return context;
 	}
 
-	toString()
+	getGlobalContext()
 	{
-		const value = this.getValue();
+		return this.generator.getAllValues();
+	}
+
+	getAllContext()
+	{
+		return lodash.assign({}, this.getGlobalContext(), this.getLocalContext());
+	}
+
+	makeString(value)
+	{
+		value = value || this.getValue();
 		if (this.stringify !== undefined)
 		{
-			const allContext = lodash.assign({}, this.generator.getAllValues(), this.getLocalContext());
-			return inlineEval(this.stringify, allContext);
+			const allContext = this.getAllContext();
+			const asString = inlineEval(this.stringify, allContext);
+			return asString === undefined ? value : asString;
 		}
 		else if (this.description !== undefined)
 		{
@@ -119,6 +185,31 @@ export class GenerationEntry
 		return `${value}`;
 	}
 
+	updateString(value)
+	{
+		this.stringified = this.makeString(value);
+
+		if (this.parent !== null)
+		{
+			this.parent.updateString();
+		}
+
+		Object.keys(this.modifiers).forEach((entryKey) =>
+		{
+			const entry = this.generator.getEntry(entryKey);
+			if (entry !== undefined)
+			{
+				entry.updateString();
+			}
+		})
+
+	}
+
+	toString()
+	{
+		return this.stringified;
+	}
+
 	getCanReroll()
 	{
 		return (
@@ -128,7 +219,8 @@ export class GenerationEntry
 
 	clearChildren()
 	{
-		Object.keys(this.children).forEach((childKey) => {
+		Object.keys(this.children).forEach((childKey) =>
+		{
 			this.children[childKey].deconstruct();
 		});
 		this.children = {};
@@ -192,6 +284,8 @@ export class GenerationEntry
 			lodash.set(values, valueLocation, localValue);
 		}
 
+		lodash.set(values, `${this.getPath()}String`, this.toString());
+		
 		if (hasChildren)
 		{
 			lodash.values(this.getChildren()).forEach(
@@ -209,7 +303,7 @@ export class GenerationEntry
 
 	getDependencies()
 	{
-		return this.dependencies;
+		return this.dependencies.sort();
 	}
 
 	subscribeDependencies()
@@ -257,10 +351,51 @@ export class GenerationEntry
 
 	getAllAffectedEntryPaths()
 	{
-		return lodash.values(this.children).map((child) => child.getPath()).concat(this.affects);
+		return lodash.values(this.children).map((child) => child.getPath()).concat(this.affects).sort();
 	}
 
-	generate(data, layer=0)
+	subscribeToCollection()
+	{
+		if (this.collection === undefined) return;
+		const entry = this.generator.getEntry(this.collection);
+		if (entry)
+		{
+			entry.subscribeAsCollectionEntry(this);
+		}
+	}
+
+	unsubscribeFromCollection()
+	{
+		if (this.collection === undefined) return;
+		const entry = this.generator.getEntry(this.collection);
+		if (entry)
+		{
+			entry.unsubscribeAsCollectionEntry(this);
+		}
+	}
+
+	subscribeAsCollectionEntry(entry)
+	{
+		this.collectionEntries.push(entry.getPath());
+	}
+
+	unsubscribeAsCollectionEntry(entry)
+	{
+		const entryKey = entry.getPath();
+		this.collectionEntries = this.collectionEntries.filter((key) => key !== entryKey);
+	}
+
+	hasCollectionEntries()
+	{
+		return this.collectionEntries.length > 0;
+	}
+
+	getCollectionEntries()
+	{
+		return this.collectionEntries.sort();
+	}
+
+	generate(data, layer = 0)
 	{
 		if (layer > 0)
 		{
@@ -269,6 +404,7 @@ export class GenerationEntry
 
 		if (this.source === undefined)
 		{
+			this.updateString();
 			return;
 		}
 
@@ -290,7 +426,10 @@ export class GenerationEntry
 		}
 
 		if (this.isValid())
+		{
 			this.unsubscribeModifiers();
+			this.unsubscribeFromCollection();
+		}
 
 		// Parser could return an undefined value if the command didn't work.
 		// For example, a table like 'beard' is assumed to have an entry for every race,
@@ -311,13 +450,13 @@ export class GenerationEntry
 				if (entry.stringify !== undefined)
 					this.stringify = entry.stringify;
 				this.description = entry.description;
-				
+
 				// copy over secondary generation modifiers
 				entryModifiers = appendModifiers(entryModifiers, lodash.cloneDeep(entry.modifiers));
 				entry.modifiers = {};
 
 				this.modifiers = entryModifiers;
-				
+
 				if (entry.hasChildren())
 				{
 					if (this.hasChildren())
@@ -327,7 +466,8 @@ export class GenerationEntry
 					else
 					{
 						this.childrenAreGenerated = true;
-						this.children = lodash.mapValues(entry.children, (child) => {
+						this.children = lodash.mapValues(entry.children, (child) =>
+						{
 							child.setParent(this);
 							return child;
 						});
@@ -345,37 +485,30 @@ export class GenerationEntry
 		}
 
 		if (this.isValid())
+		{
 			this.subscribeModifiers();
+			this.subscribeToCollection();
+			this.updateString();
+		}
+
 	}
 
 	getValue()
 	{
-		if (typeof this.value === 'number')
-		{
-			let modifiedValue = this.value + this.getTotalModifier();
-			if (typeof this.minimum === 'number') modifiedValue = Math.max(modifiedValue, this.minimum);
-			return modifiedValue;
-		}
-		return this.value;
+		let modifiedValue = this.modify(this.value);
+		if (typeof this.minimum === 'number' && typeof this.value === 'number')
+			modifiedValue = Math.max(modifiedValue, this.minimum);
+		return modifiedValue;
 	}
 
-	getTotalModifier()
+	modify(value)
 	{
 		const path = this.getPath();
-		return this.modifiedBy.reduce((totalModifier, entryKey) =>
+		return this.modifiedBy.reduce((modifiedValue, entryKey) =>
 		{
 			const entry = this.generator.getEntry(entryKey);
-			if (entry)
-			{
-				const modifier = entry.getModifier(path, this.value);
-				if (typeof modifier === 'number') return totalModifier + modifier;
-				else
-				{
-					console.error('Found non-numerical modifier', modifier, `(${typeof modifier})`, 'for entry', this.getPath());
-				}
-			}
-			return totalModifier;
-		}, 0);
+			return entry === undefined ? modifiedValue : entry.modifyEntryValue(path, modifiedValue);
+		}, value);
 	}
 
 	subscribeModifiers()
@@ -413,104 +546,135 @@ export class GenerationEntry
 		this.modifiedBy = this.modifiedBy.filter((key) => key !== entryKey);
 	}
 
-	getModifier(keyToModify, value)
+	modifyEntryValue(keyToModify, value)
 	{
-		return this.evalModifier(this.modifiers[keyToModify], value);
+		return this.applyModifier(this.modifiers[keyToModify], value);
 	}
 
-	evalModifier(modToEval, value)
+	applyModifier(modToEval, value)
 	{
-		if (modToEval === undefined) return 0;
-		else if (typeof modToEval === 'number') return modToEval;
+		if (modToEval === undefined) return value;
 		else if (Array.isArray(modToEval))
 		{
-			return modToEval.reduce((accum, mod) => accum + this.evalModifier(mod, value), 0);
+			return modToEval.reduce((accum, mod) => this.applyModifier(mod, accum), value);
 		}
-		else if (typeof modToEval === 'string')
+		else if (typeof value === 'number')
 		{
-			// dont pass data to modifier evals, currently not required
-			const modifier = inlineEval(modToEval, this.getLocalContext());
-			return parseInt(modifier, 10);
-		}
-		else if (typeof modToEval === 'object')
-		{
-			switch (modToEval.type)
+			if (typeof modToEval === 'number') return value + modToEval;
+			else if (typeof modToEval === 'string')
 			{
-				case 'curve':
-					switch (modToEval.curve)
-					{
-						case 'step':
-							{
-								const keyframes = Object.keys(modToEval.values);
-								let currentIndex = undefined;
-								let nextIndex = keyframes.length > 0 ? 0 : undefined;
-								while (nextIndex !== undefined
-									&& parseInt(this.value, 10) > parseInt(keyframes[nextIndex], 10))
+				// dont pass data to modifier evals, currently not required
+				const modifier = inlineEval(modToEval, this.getLocalContext());
+				return modifier !== undefined ? value + parseInt(modifier, 10) : value;
+			}
+			else if (typeof modToEval === 'object')
+			{
+				switch (modToEval.type)
+				{
+					case 'curve':
+						switch (modToEval.curve)
+						{
+							case 'step':
 								{
-									currentIndex = nextIndex;
-									nextIndex++;
-									if (nextIndex >= keyframes.length) nextIndex = undefined;
+									const keyframes = Object.keys(modToEval.values);
+									let currentIndex = undefined;
+									let nextIndex = keyframes.length > 0 ? 0 : undefined;
+									while (nextIndex !== undefined
+										&& parseInt(this.value, 10) > parseInt(keyframes[nextIndex], 10))
+									{
+										currentIndex = nextIndex;
+										nextIndex++;
+										if (nextIndex >= keyframes.length) nextIndex = undefined;
+									}
+									return value + (currentIndex ? modToEval.values[keyframes[currentIndex]] : 0);
 								}
-								return currentIndex ? modToEval.values[keyframes[currentIndex]] : 0;
-							}
-						case 'lerp':
-							{
-								const valueInt = parseInt(this.value, 10);
+							case 'lerp':
+								{
+									const valueInt = parseInt(this.value, 10);
 
-								const keyframes = Object.keys(modToEval.values);
-								const getInt = (i) => parseInt(keyframes[i], 10);
-								let lowerIndex = undefined;
-								let higherIndex = keyframes.length > 0 ? 0 : undefined;
-								while (higherIndex !== undefined
-									&& valueInt > getInt(higherIndex))
-								{
-									lowerIndex = higherIndex;
-									higherIndex++;
-									if (higherIndex >= keyframes.length) higherIndex = undefined;
-								}
+									const keyframes = Object.keys(modToEval.values);
+									const getInt = (i) => parseInt(keyframes[i], 10);
+									let lowerIndex = undefined;
+									let higherIndex = keyframes.length > 0 ? 0 : undefined;
+									while (higherIndex !== undefined
+										&& valueInt > getInt(higherIndex))
+									{
+										lowerIndex = higherIndex;
+										higherIndex++;
+										if (higherIndex >= keyframes.length) higherIndex = undefined;
+									}
 
-								if (lowerIndex === undefined)
-								{
-									lowerIndex = higherIndex;
-								}
-								else if (higherIndex === undefined)
-								{
-									higherIndex = lowerIndex;
-								}
-								
-								const lowerInput = getInt(lowerIndex);
-								const higherInput = getInt(higherIndex);
-								const lowerMod = modToEval.values[keyframes[lowerIndex]];
-								const higherMod = modToEval.values[keyframes[higherIndex]];
+									if (lowerIndex === undefined)
+									{
+										lowerIndex = higherIndex;
+									}
+									else if (higherIndex === undefined)
+									{
+										higherIndex = lowerIndex;
+									}
 
-								const t = (valueInt - lowerInput) / (higherInput !== lowerInput ? higherInput - lowerInput : higherInput);
-								const lerped = (1 - t) * lowerMod + (t * higherMod);
+									const lowerInput = getInt(lowerIndex);
+									const higherInput = getInt(higherIndex);
+									const lowerMod = modToEval.values[keyframes[lowerIndex]];
+									const higherMod = modToEval.values[keyframes[higherIndex]];
 
-								if (modToEval.toIntOp === undefined) return lerped;
-								const intOp = Math[modToEval.toIntOp];
-								if (intOp === undefined)
-								{
-									console.warn('Encountered unimplemented curve int cast operator:', modToEval.toIntOp);
-									return 0;
+									const t = (valueInt - lowerInput) / (higherInput !== lowerInput ? higherInput - lowerInput : higherInput);
+									const lerped = (1 - t) * lowerMod + (t * higherMod);
+
+									if (modToEval.toIntOp === undefined) return lerped;
+									const intOp = Math[modToEval.toIntOp];
+									if (intOp === undefined)
+									{
+										console.warn('Encountered unimplemented curve int cast operator:', modToEval.toIntOp);
+										return value;
+									}
+									else
+									{
+										return value + intOp(lerped);
+									}
 								}
-								else
-								{
-									return intOp(lerped);
-								}
-							}
-						default:
-							break;
-					}
-					break;
-				case 'multiply':
-					const multiplier = inlineEval(modToEval.value, this.getLocalContext());
-					return value * parseInt(parser(multiplier, {}), 10);
-				default:
-					break;
+							default:
+								break;
+						}
+						break;
+						case 'multiply':
+						{
+							const multiplier = inlineEval(modToEval.value, this.getLocalContext());
+							if (multiplier === undefined) return value;
+							return value * parseInt(parser(multiplier, {}), 10);
+						}
+						case 'multiplyAdd':
+						{
+							const multiplier = inlineEval(modToEval.multiply, this.getLocalContext());
+							const adder = inlineEval(modToEval.add, this.getLocalContext());
+							if (multiplier === undefined || adder === undefined) return value;
+							return value * parseInt(multiplier, 10) + parseInt(adder, 10);
+						}
+					default:
+						break;
+				}
 			}
 		}
+		else if (Array.isArray(value))
+		{
+			if (typeof modToEval === 'object')
+			{
+				switch (modToEval.type)
+				{
+					case 'append':
+					{
+						const valueToAppend = inlineEval(modToEval.value, this.getLocalContext());
+						if (valueToAppend === undefined) return value;
+						return lodash.cloneDeep(value).concat(valueToAppend);
+					}
+					default:
+						break;
+				}
+			}
+		}
+
 		console.warn('Encountered unimplemented modifier schema:', modToEval);
-		return 0;
+		return value;
 	}
 
 }
@@ -534,6 +698,16 @@ export class Generator
 
 	constructor()
 	{
+		this.hasCategory = this.hasCategory.bind(this);
+		this.addEntry = this.addEntry.bind(this);
+		this.getEntry = this.getEntry.bind(this);
+		this.hasEntry = this.hasEntry.bind(this);
+		this.forAllEntries = this.forAllEntries.bind(this);
+		this.getAllValues = this.getAllValues.bind(this);
+		this.setGenerationOrder = this.setGenerationOrder.bind(this);
+		this.generate = this.generate.bind(this);
+		this.regenerate = this.regenerate.bind(this);
+
 		this.categories = {};
 		this.generationOrder = [];
 	}
@@ -603,6 +777,7 @@ export class Generator
 	{
 		if (this.hasCategory(path))
 		{
+			// TODO: Categories need to generate in a specific order
 			lodash.values(this.categories[path]).forEach((entry) => this.regenerate(entry.getPath(), bGenerateDependencies));
 			return;
 		}
@@ -616,29 +791,7 @@ export class Generator
 
 		const entry = this.getEntry(path);
 
-		/*
-		Object.keys(entry.modifiers).forEach((keyModifier) =>
-		{
-			const entryToModify = this.getEntry(keyModifier);
-			if (entryToModify)
-			{
-				entryToModify.unsubscribeModifyingEntry(entry);
-			}
-		});
-		//*/
-
 		entry.generate(allData);
-
-		/*
-		Object.keys(entry.modifiers).forEach((keyModifier) =>
-		{
-			const entryToModify = this.getEntry(keyModifier);
-			if (entryToModify)
-			{
-				entryToModify.subscribeModifyingEntry(entry);
-			}
-		});
-		//*/
 
 		if (bGenerateDependencies)
 		{

@@ -13,9 +13,8 @@
 			"value": "blue skin"
 		},
 		{
-			"value": "{roll:race/Human/skin}",
+			"source": "{roll:race/Human/skin}",
 			"weight": 1
 		}
-	],
-	"values": {}
+	]
 }

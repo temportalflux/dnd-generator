@@ -1,8 +1,7 @@
 {
 	"rows": [
 		{
-			"value": "{roll:deity/dragon}"
+			"source": "{roll:deity/dragon}"
 		}
-	],
-	"values": []
+	]
 }

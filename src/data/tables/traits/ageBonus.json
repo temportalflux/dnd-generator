@@ -5,22 +5,20 @@
 			"children": [
 				{
 					"key": "multiply",
-					"source": "{randInt:1,6}",
-					"modifiers": {
-						"description.age": {
-							"type": "multiply",
-							"value": "$(value)"
-						}
-					}
+					"source": "{randInt:1,6}"
 				},
 				{
 					"key": "add",
-					"source": "{randInt:0,9}",
-					"modifiers": {
-						"description.age": "$(value)"
-					}
+					"source": "{randInt:0,9}"
 				}
-			]
+			],
+			"modifiers": {
+				"description.age": {
+					"type": "multiplyAdd",
+					"multiply": "$(multiply)",
+					"add": "$(add)"
+				}
+			}
 		}
 	]
 }

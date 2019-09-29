@@ -1,8 +1,9 @@
 import lodash from 'lodash';
-import parser from './parser';
+//import parser from './parser';
 import {Generator} from './Generator';
 const { getTable } = require('../Data');
 
+/*
 function iterateGenerationOrder(schema, data, loop)
 {
 	for (let valueKey of schema.generationOrder)
@@ -16,6 +17,7 @@ function iterateGenerationOrder(schema, data, loop)
 	}
 	return data;
 }
+//*/
 
 function createDefaultDataFromFilter(filter)
 {
@@ -53,6 +55,7 @@ export function generate(filter)
 
 	return generator;
 
+	/*
 	let dataWithValues = iterateGenerationOrder(npc, dataWithFilters,
 		(data, key, field, _) =>
 		{
@@ -83,4 +86,5 @@ export function generate(filter)
 		meta: npc.metadata,
 		values: dataWithValues,
 	};
+	//*/
 }

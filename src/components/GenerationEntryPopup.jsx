@@ -51,8 +51,24 @@ export default class GenerationEntryPopup extends React.Component
 					</div>
 				))}
 
+				{this.renderIf(entry.collection !== undefined, (
+					<div>
+						<Header as='h5'>Collection</Header>
+						{entry.collection}
+						<Divider />
+					</div>
+				))}
+
 				{this.renderIf(!this.isObjectEmpty(entry.modifiers), (
 					this.createModifiersTable(entry.modifiers)
+				))}
+
+				{this.renderIf(entry.hasCollectionEntries(), (
+					<div>
+						<Header as='h5'>Collection Entries</Header>
+						{entry.getCollectionEntries()}
+						<Divider />
+					</div>
 				))}
 
 			</div>

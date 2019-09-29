@@ -1,11 +1,10 @@
 import React from 'react'
-import { Grid, Button, Popup } from 'semantic-ui-react';
+import { Header, Button, Popup } from 'semantic-ui-react';
 import Tree from 'react-animated-tree';
-import {Generator} from '../generator/Generator';
+import { Generator } from '../generator/Generator';
 import GenerationEntryPopup from './GenerationEntryPopup';
 
 import lodash from 'lodash';
-import inlineEval from '../generator/modules/evalAtCtx';
 
 export default class NpcDataTree extends React.Component
 {
@@ -13,7 +12,6 @@ export default class NpcDataTree extends React.Component
 	constructor(props)
 	{
 		super(props);
-		this.makeStringifiedValue = this.makeStringifiedValue.bind(this);
 		this.makeTitleText = this.makeTitleText.bind(this);
 		this.makeTitleContent = this.makeTitleContent.bind(this);
 		this.makeTreeContents = this.makeTreeContents.bind(this);
@@ -21,50 +19,35 @@ export default class NpcDataTree extends React.Component
 		this.makeDataTree = this.makeDataTree.bind(this);
 	}
 
-	makeStringifiedValue(data, meta)
-	{
-		const isStructuralObject = typeof data === 'object';
-		if (isStructuralObject)
-		{
-			if (Array.isArray(data))
-			{
-				return data.join(' ');
-			}
-			else if (meta !== undefined && meta.stringify !== undefined)
-			{
-				return inlineEval(meta.stringify, data);
-			}
-			else
-			{
-				return '';
-			}
-		}
-		return `${data}`;
-	}
-
 	makeTitleText(generatorEntry)
 	{
 		const name = generatorEntry.getName();
 		if (generatorEntry.hideInlineValue) return name;
-		
+
 		const stringifiedValue = generatorEntry.toString();
 		if (stringifiedValue) return `${name}: ${stringifiedValue}`;
 
 		return name;
 	}
 
+	createPopup(text, component)
+	{
+		return (
+			<Popup
+				trigger={(
+					<span>
+						{text}
+					</span>
+				)}
+				content={component}
+			/>
+		);
+	}
+
 	makeTitleContent(title, path, canReroll, popupComponent)
 	{
 		const titleOrPopup = popupComponent !== undefined
-			? (
-				<Popup
-					trigger={(
-						<span>
-							{title}
-						</span>
-					)}
-					content={popupComponent}
-			/>)
+			? this.createPopup(title, popupComponent)
 			: title;
 		return (
 			<span>
@@ -82,6 +65,8 @@ export default class NpcDataTree extends React.Component
 			(<GenerationEntryPopup entry={generatorEntry} />)
 		);
 
+		//const value = generatorEntry.getValue();
+
 		if (generatorEntry.hasChildren())
 		{
 			return (
@@ -90,6 +75,33 @@ export default class NpcDataTree extends React.Component
 					key={generatorEntry.getKey()}
 				>
 					{this.makeTreeContents(generatorEntry.getChildren())}
+				</Tree>
+			);
+		}
+		else if (generatorEntry.hasCollectionEntries())
+		{
+			return (
+				<Tree
+					content={title}
+					key={generatorEntry.getKey()}
+				>
+					{generatorEntry.getCollectionEntries()
+						.filter(generatorEntry.generator.hasEntry)
+						.filter((entryPath) => generatorEntry.generator.getEntry(entryPath).toString() !== 'none')
+						.map((entryPath) => (
+							<Tree
+								key={entryPath}
+								content={this.createPopup(
+									generatorEntry.generator.getEntry(entryPath).toString(),
+									(
+										<div>
+											<Header as='h5'>Path</Header>
+											{entryPath}
+										</div>
+									)
+								)}
+							/>
+						))}
 				</Tree>
 			);
 		}
@@ -111,7 +123,8 @@ export default class NpcDataTree extends React.Component
 
 	makeTreeCategories(categoryEntryMap)
 	{
-		return lodash.toPairs(categoryEntryMap).map(([category, entries]) => {
+		return lodash.toPairs(categoryEntryMap).map(([category, entries]) =>
+		{
 			const title = this.makeTitleContent(
 				Generator.convertCamelToTitleCase(category),
 				category,

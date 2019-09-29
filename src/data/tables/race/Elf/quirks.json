@@ -1,67 +1,71 @@
 {
 	"rows": [
 		{
-			"weight": 35,
-			"value": ""
+			"weight": 35
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) is disgusted by human architecture."
+			"stringify": "$(identity.pronouns.singular) is disgusted by human architecture."
 		},
 		{
 			"weight": 3,
-			"value": "$(identity.pronouns.singular) feels more comfortable while surrounded by nature."
+			"stringify": "$(identity.pronouns.singular) feels more comfortable while surrounded by nature."
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) is secretly captivated by dwarves."
+			"stringify": "$(identity.pronouns.singular) is secretly captivated by dwarves."
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) has a deep knowledge of ancient secrets."
+			"stringify": "$(identity.pronouns.singular) has a deep knowledge of ancient secrets."
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) has a deep knowledge of ancient magic."
+			"stringify": "$(identity.pronouns.singular) has a deep knowledge of ancient magic."
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) knows the name of all the local plants."
+			"stringify": "$(identity.pronouns.singular) knows the name of all the local plants."
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) will only speak common if absolutely forced to."
+			"stringify": "$(identity.pronouns.singular) will only speak common if absolutely forced to."
 		},
 		{
 			"weight": 4,
-			"value": "$(identity.pronouns.singular) never knows the current time and date."
+			"stringify": "$(identity.pronouns.singular) never knows the current time and date."
 		},
 		{
 			"weight": 2,
-			"generators": {
-				"attractiveness": "{roll:traits/face/attractiveness}"
-			},
-			"value": "$(identity.pronouns.singular) paints $(attractiveness) paintings in $(identity.pronouns.possessive) spare time."
+			"stringify": "$(identity.pronouns.singular) paints $(attractivenessString) paintings in $(identity.pronouns.possessive) spare time.",
+			"children": [
+				{
+					"key": "attractiveness",
+					"source": "{roll:traits/face/attractiveness}"
+				}
+			]
 		},
 		{
 			"weight": 4,
-			"value": "$(identity.pronouns.singular) is always late."
+			"stringify": "$(identity.pronouns.singular) is always late."
 		},
 		{
 			"weight": 1,
-			"value": "$(identity.pronouns.singular) has never declared himself an adult."
+			"stringify": "$(identity.pronouns.singular) has never declared himself an adult."
 		},
 		{
 			"weight": 2,
-			"value": "$(identity.pronouns.singular) is deeply xenophobic."
+			"stringify": "$(identity.pronouns.singular) is deeply xenophobic."
 		},
 		{
 			"weight": 3,
-			"generators": {
-				"frequency": "{roll:common/frequency}"
-			},
-			"value": "$(identity.pronouns.singular) $(frequency) uses terms from a different language as $(identity.pronouns.singular) speaks."
+			"stringify": "$(identity.pronouns.singular) $(frequency) uses terms from a different language as $(identity.pronouns.singular) speaks.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
 		}
-	],
-	"values": {}
+	]
 }

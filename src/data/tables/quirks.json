@@ -5,6 +5,7 @@
 			"children": [
 				{
 					"key": 0,
+					"collection": "personality.quirks",
 					"source": "{roll:quirks/general}"
 				}
 			]
@@ -14,10 +15,12 @@
 			"children": [
 				{
 					"key": 0,
+					"collection": "personality.quirks",
 					"source": "{roll:quirks/general}"
 				},
 				{
 					"key": 1,
+					"collection": "personality.quirks",
 					"source": "{roll:quirks/general}"
 				}
 			]
