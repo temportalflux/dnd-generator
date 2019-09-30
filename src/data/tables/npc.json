@@ -233,6 +233,18 @@
 			"hideInlineValue": true
 		},
 		{
+			"category": "personality",
+			"key": "trait1",
+			"collection": "personality.quirks",
+			"source": "{roll:quirks/traits-1}"
+		},
+		{
+			"category": "personality",
+			"key": "trait2",
+			"collection": "personality.quirks",
+			"source": "{roll:quirks/traits-2}"
+		},
+		{
 			"category": "occupation",
 			"key": "type",
 			"source": "{roll:occupation/type}"

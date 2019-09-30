@@ -1,0 +1,32 @@
+{
+	"rows": [
+		{
+			"weight": 1,
+			"value": "-4",
+			"modifiers": {
+				"stats.abilityScores.wisdom": -4
+			}
+		},
+		{
+			"weight": 2,
+			"value": "-2",
+			"modifiers": {
+				"stats.abilityScores.wisdom": -2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "+0",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 0
+			}
+		},
+		{
+			"weight": 1,
+			"value": "+2",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 2
+			}
+		}
+	]
+}

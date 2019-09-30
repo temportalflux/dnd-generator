@@ -1,11 +1,72 @@
 {
 	"rows": [
 		{
-			"weight": 6
+			"weight": 6,
+			"stringify": "none"
 		},
 		{
-			"weight": 16,
-			"stringify": "$(identity.pronouns.singular) talks so fast that $(identity.pronouns.singular) is very difficult to understand."
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) makes the best out of any situation."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) is always tinkering in $(identity.pronouns.possessive) free time."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has a solution for everything."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) explains everything in great detail."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has a fascination with explosions."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) never stops talking."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) complicates simple situations."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) is always scribbling notes."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) keeps a very precise journal."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) always has plans for a new invention."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has a detailed map of everywhere $(identity.pronouns.singular) has been to."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) loves shiny objects."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has a fascination with alchemy."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) is fascinated by magic and its history."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) is way too curious."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) talks so fast that $(identity.pronouns.thirdPerson) is very difficult to understand."
 		}
 	]
 }

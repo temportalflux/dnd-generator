@@ -1,0 +1,32 @@
+{
+	"rows": [
+		{
+			"weight": 1,
+			"value": "-4",
+			"modifiers": {
+				"stats.abilityScores.strength": -4
+			}
+		},
+		{
+			"weight": 2,
+			"value": "-2",
+			"modifiers": {
+				"stats.abilityScores.strength": -2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "+0",
+			"modifiers": {
+				"stats.abilityScores.strength": 0
+			}
+		},
+		{
+			"weight": 1,
+			"value": "+2",
+			"modifiers": {
+				"stats.abilityScores.strength": 2
+			}
+		}
+	]
+}

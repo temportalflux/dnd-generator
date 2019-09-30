@@ -1,6 +1,38 @@
 {
 	"rows": [
 		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) never acts on impulse.",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is very detached from $(identity.pronouns.possessive) emotions."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has a hard time understanding other humanoids' emotions."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has no concept of empathy."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) seems emotionally distant."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is always cold and calculating."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) feels no attachment to the past."
+		},
+		{
+			"weight": 2,
 			"stringify": "$(identity.pronouns.singular) values $(identity.pronouns.possessive) survival above everything else."
 		}
 	]

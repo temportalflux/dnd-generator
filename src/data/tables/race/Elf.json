@@ -9,8 +9,15 @@
 			"weight": 8
 		},
 		{
+			"weight": 2,
 			"value": "Drow",
-			"weight": 2
+			"children": [
+				{
+					"key": "qurik",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Elf/Drow/quirks}"
+				}
+			]
 		}
 	]
 }
