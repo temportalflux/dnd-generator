@@ -1,0 +1,61 @@
+[
+	{
+		"weight": 14
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) is curious to a fault."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) $(frequency) complains about how cold the weather is.",
+		"children": [
+			{
+				"key": "frequency",
+				"source": "{roll:common/frequency}"
+			}
+		]
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) dislikes water."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) $(frequency) wags $(identity.pronouns.possesive) tail.",
+		"children": [
+			{
+				"key": "frequency",
+				"source": "{roll:common/frequency}"
+			}
+		]
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) is constantly talking about $(identity.pronouns.possesive) newest obsession."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) can often be found purring when happy."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) has a very deep knowledge of unusual facts and events."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) has a tendency to steal curious items to study them."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) knows everything there is to know about old prophecies."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) spends all of $(identity.pronouns.possesive) money on old baubles."
+	},
+	{
+		"weight": 2,
+		"stringify": "$(identity.pronouns.singular) can often be found narrating ongoing events."
+	}
+]

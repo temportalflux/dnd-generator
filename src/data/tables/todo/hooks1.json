@@ -55,7 +55,7 @@
   { "w":3, "v":"{$hook=$majPoss}{$hook+blood is the cure to a terrible and deadly sickness.}"},
   { "w":2, "v":"{$hook=$majPoss}{$hook+home has been infested by zombies.}"},
   { "w":3, "v":"{$hook=$majPro}{$hook+needs help exorcising }{$hook+$minPoss}{relationship}{$hook+$rela}{$hook+.}"},
-  { "w":3, "v":"{$hook=$majPro}{$hook+is in dire need of some }{monster}{$hook+$monster}{$hook+ blood.}"},
+  { "w":3, "v":"{$hook=$majPro}{$hook+is in dire need of some }{roll:misc/monster}{$hook+$monster}{$hook+ blood.}"},
   { "w":2, "v":"{$hook=$majPoss}{$hook+house has been eaten by a purple worm. Further inspection of the tunnel reveals a complex cave system.}"},
   { "w":2, "v":"{$hook=$majPoss}{$hook+house has been eaten by a purple worm. Further inspection of the tunnel reveals an ancient catacomb.}"},
   { "w":2, "v":"{$hook=$majPro}{$hook+wants the PCs to help }{$hook+$minHim}{$hook+kill }{amonster}{$hook+$monster}{$hook+.}"},

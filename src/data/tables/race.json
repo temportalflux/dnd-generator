@@ -530,6 +530,16 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Tabaxi/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Tabaxi/quirks}"
+				},
+				{
+					"key": "obsession",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Tabaxi/quirkObsession}"
 				}
 			]
 		},

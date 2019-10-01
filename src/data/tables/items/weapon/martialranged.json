@@ -1,0 +1,8 @@
+{
+	"rows": [
+		{ "weight":1, "value":"blowgun"},
+		{ "weight":3, "value":"crossbow"},
+		{ "weight":1, "value":"net"},
+		{ "weight":3, "value":"longbow"}
+	]
+}

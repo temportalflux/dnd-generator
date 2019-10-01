@@ -1,0 +1,26 @@
+{
+	"rows": [
+		{
+			"weight": 5,
+			"value": "precious",
+			"stringify": "precious $(item)",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:item/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "magical",
+			"stringify": "magical $(item)",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:item/precious}"
+				}
+			]
+		}
+	]
+}

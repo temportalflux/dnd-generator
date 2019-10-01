@@ -1,0 +1,88 @@
+{
+	"rows": [
+		{
+			"weight": 5,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by $(monster)s.",
+			"children": [
+				{
+					"key": "monster",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 5,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by $(raceBias).",
+			"children": [
+				{
+					"key": "raceBias",
+					"source": "{roll:quirks/modifier/raceAllergy}"
+				}
+			]
+		},
+		{
+			"weight": 5,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a $(specialItem).",
+			"children": [
+				{
+					"key": "specialItem",
+					"source": "{roll:items/preciousPrefixed}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by the current town."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a nearby house."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by the nearest castle."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a nearby cave."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a forgotten legend."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a local legend."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a song about $(descriptor).",
+			"children": [
+				{
+					"key": "descriptor",
+					"source": "{roll:misc/abstractWord}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a poem about $(descriptor).",
+			"children": [
+				{
+					"key": "descriptor",
+					"source": "{roll:misc/abstractWord}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is currently obsessed by a book about $(descriptor).",
+			"children": [
+				{
+					"key": "descriptor",
+					"source": "{roll:misc/abstractWord}"
+				}
+			]
+		}
+	]
+}

@@ -104,13 +104,5 @@
 			"value": "unicorn",
 			"weight": 1
 		}
-	],
-	"values": {
-		"{regex:[^aeiou]{1}.*}": {
-			"value": "a ${value}"
-		},
-		"{regex:[aeiou]{1}.*}": {
-			"value": "an ${value}"
-		}
-	}
+	]
 }
