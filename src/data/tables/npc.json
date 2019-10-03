@@ -21,6 +21,7 @@
 		"identity.name",
 		"identity.surname",
 		"personality.generalQuirk",
+		"description.specialPhysical",
 		"occupation.type",
 		"occupation.category",
 		"occupation.profession"
@@ -243,6 +244,13 @@
 			"key": "trait2",
 			"collection": "personality.quirks",
 			"source": "{roll:quirks/traits-2}"
+		},
+		{
+			"category": "description",
+			"key": "specialPhysical",
+			"name": "Special Physical Trait",
+			"hideInlineValue": true,
+			"source": "{roll:traits/physical}"
 		},
 		{
 			"category": "occupation",

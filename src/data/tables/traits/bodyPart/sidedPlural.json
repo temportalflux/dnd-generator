@@ -1,0 +1,24 @@
+{
+	"rows": [
+		{
+			"weight": 4,
+			"value": "arms"
+		},
+		{
+			"weight": 5,
+			"value": "hands"
+		},
+		{
+			"weight": 1,
+			"value": "legs"
+		},
+		{
+			"weight": 2,
+			"value": "feet"
+		},
+		{
+			"weight": 4,
+			"source": "{roll:traits/bodyPart/head/sidedPlural}"
+		}
+	]
+}

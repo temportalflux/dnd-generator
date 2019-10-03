@@ -1,0 +1,38 @@
+{
+	"rows": [
+		{
+			"weight": 4,
+			"stringify": "$(side) $(part)",
+			"children": [
+				{
+					"key": "side",
+					"source": "{roll:common/rightLeft}"
+				},
+				{
+					"key": "part",
+					"source": "{roll:traits/bodyPart/sided}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "left and right $(part)",
+			"children": [
+				{
+					"key": "part",
+					"source": "{roll:traits/bodyPart/sidedPlural}"
+				}
+			]
+		},
+		{
+			"weight": 5,
+			"stringify": "$(part)",
+			"children": [
+				{
+					"key": "part",
+					"source": "{roll:traits/bodyPart/unsided}"
+				}
+			]
+		}
+	]
+}
