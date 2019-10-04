@@ -34,6 +34,10 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirk",
+					"source": "{roll:quirks/religious}"
 				}
 			]
 		},
