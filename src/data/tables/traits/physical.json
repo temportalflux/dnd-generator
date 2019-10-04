@@ -5,7 +5,6 @@
 			"children": [
 				{
 					"key": "traitA",
-					"stringify": "$(identity.pronouns.singular) $(value).",
 					"source": "{roll:traits/physical/traits-1}"
 				}
 			]

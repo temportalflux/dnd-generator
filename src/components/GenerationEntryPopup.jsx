@@ -31,6 +31,21 @@ export default class GenerationEntryPopup extends React.Component
 		)
 	}
 
+	createModifiedByTable(modifiersList)
+	{
+		const rows = modifiersList.map((entryPath) => (
+			<div key={entryPath}>
+				{entryPath}: {JSON.stringify(this.props.entry.generator.getEntry(entryPath).modifiers[this.props.entry.getPath()])}
+			</div>
+		));
+		return (
+			<div>
+				<Header as='h5'>Modified By</Header>
+				{rows}
+			</div>
+		)
+	}
+
 	render()
 	{
 		const { entry } = this.props;
@@ -61,6 +76,10 @@ export default class GenerationEntryPopup extends React.Component
 
 				{this.renderIf(!this.isObjectEmpty(entry.modifiers), (
 					this.createModifiersTable(entry.modifiers)
+				))}
+
+				{this.renderIf(!this.isObjectEmpty(entry.modifiedBy), (
+					this.createModifiedByTable(entry.modifiedBy)
 				))}
 
 				{this.renderIf(entry.hasCollectionEntries(), (

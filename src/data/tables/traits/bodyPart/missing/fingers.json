@@ -1,0 +1,39 @@
+{
+	"rows": [
+		{
+			"weight": 4,
+			"value": "a single finger",
+			"modifiers": {
+				"stats.abilityScores.dexterity": -1
+			}
+		},
+		{
+			"weight": 3,
+			"value": "two fingers",
+			"modifiers": {
+				"stats.abilityScores.dexterity": -1
+			}
+		},
+		{
+			"weight": 3,
+			"value": "three fingers",
+			"modifiers": {
+				"stats.abilityScores.dexterity": -2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "four fingers",
+			"modifiers": {
+				"stats.abilityScores.dexterity": -2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "all the fingers",
+			"modifiers": {
+				"stats.abilityScores.dexterity": -4
+			}
+		}
+	]
+}

@@ -4,21 +4,24 @@
 			"value": {
 				"singular": "he",
 				"thirdPerson": "him",
-				"possessive": "his"
+				"possessive": "his",
+				"selfPossessive": "his"
 			}
 		},
 		{
 			"value": {
 				"singular": "she",
 				"thirdPerson": "her",
-				"possessive": "hers"
+				"possessive": "hers",
+				"selfPossessive": "her"
 			}
 		},
 		{
 			"value": {
 				"singular": "they",
 				"thirdPerson": "them",
-				"possessive": "theirs"
+				"possessive": "theirs",
+				"selfPossessive": "their"
 			}
 		}
 	]

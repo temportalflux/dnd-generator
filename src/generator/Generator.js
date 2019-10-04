@@ -672,6 +672,10 @@ export class GenerationEntry
 				}
 			}
 		}
+		else if (typeof value === 'string' && typeof modToEval === 'string')
+		{
+			return modToEval;
+		}
 
 		console.warn('Encountered unimplemented modifier schema:', modToEval);
 		return value;

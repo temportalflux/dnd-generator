@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"weight": 5,
+			"stringify": "an extra finger"
+		},
+		{
+			"weight": 1,
+			"stringify": "two extra fingers"
+		},
+		{
+			"weight": 4,
+			"stringify": "an extra thumb"
+		}
+	]
+}
