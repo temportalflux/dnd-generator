@@ -106,6 +106,7 @@ export class GenerationEntry
 		this.unsubscribeDependencies();
 		this.unsubscribeModifiers();
 		this.unsubscribeFromCollection();
+		this.clearChildren();
 	}
 
 	getCategory()
@@ -454,9 +455,6 @@ export class GenerationEntry
 
 	generate(data, layer = 0)
 	{
-		// TODO: Ability bonuses generated from class occupations never remove their modifiers, thus duplicating the keys in their parents
-		// One potential fix would be to prune out duplicates on add, but that is a hacky solution. Best to get rid of the source of the duplicate first
-
 		if (layer > 0)
 		{
 			//console.log(`Generating secondary generation for ${this.source}/${this.value}`);
