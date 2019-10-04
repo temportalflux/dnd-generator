@@ -1,5 +1,5 @@
 import lodash from 'lodash';
-import inlineEval from './modules/evalAtCtx';
+import {inlineEval, VARIABLE_REGEX} from './modules/evalAtCtx';
 import parser from './parser';
 import appendModifiers from './appendModifiers';
 
@@ -89,6 +89,7 @@ export class GenerationEntry
 			// DYNAMIC
 			// entry keys which have modifiers for this entry. Generated from `modifiers`
 			modifiedBy: [],
+			usedInStringifyBy: [],
 			// entry keys which this value causes regeneration for. Generated from `dependencies`
 			affects: [],
 			// entry keys which have marked themselves as a part of this collection. Only used if value is an array.
@@ -165,6 +166,16 @@ export class GenerationEntry
 		return lodash.assign({}, this.getGlobalContext(), this.getLocalContext());
 	}
 
+	getStringifyDependencies()
+	{
+		if (this.stringify === undefined) return [];
+		const allMatches = Array.from(this.stringify.matchAll(VARIABLE_REGEX));
+		const allVariableReplacements = allMatches.map((match) => match[1]);
+		const variableStringOnlyRegex = /^[a-zA-Z0-9]+\.[a-zA-Z0-9\.]+$/g;
+		const allNonlineageReplacements = allVariableReplacements.filter((key) => variableStringOnlyRegex.test(key));
+		return allNonlineageReplacements;
+	}
+
 	makeString(value)
 	{
 		value = value || this.getValue();
@@ -194,15 +205,53 @@ export class GenerationEntry
 			this.parent.updateString();
 		}
 
-		Object.keys(this.modifiers).forEach((entryKey) =>
+		const allAffectedStrings = lodash.uniq(Object.keys(this.modifiers).concat(this.usedInStringifyBy));
+
+		allAffectedStrings.forEach((entryKey) =>
 		{
 			const entry = this.generator.getEntry(entryKey);
 			if (entry !== undefined)
 			{
 				entry.updateString();
 			}
-		})
+		});
 
+	}
+
+	subscribeToStringReplacements()
+	{
+		this.getStringifyDependencies().forEach((path) =>
+		{
+			const entry = this.generator.getEntry(path);
+			if (entry)
+			{
+				entry.subscribeStringifyDependency(this);
+			}
+		});
+	}
+
+	unsubscribeFromStringReplacements()
+	{
+		this.getStringifyDependencies().forEach((path) =>
+		{
+			const entry = this.generator.getEntry(path);
+			if (entry)
+			{
+				entry.unsubscribeStringifyDependency(this);
+			}
+		});
+	}
+
+	subscribeStringifyDependency(entry)
+	{
+		this.usedInStringifyBy.push(entry.getPath());
+		this.usedInStringifyBy = lodash.uniq(this.usedInStringifyBy);
+	}
+
+	unsubscribeStringifyDependency(entry)
+	{
+		const entryKey = entry.getPath();
+		this.usedInStringifyBy = this.usedInStringifyBy.filter((key) => key !== entryKey);
 	}
 
 	toString()
@@ -268,7 +317,15 @@ export class GenerationEntry
 			const child = children[items[0]];
 			return remaining.length > 0 ? child.getChild(remaining) : child;
 		}
-		else return undefined;
+		else if (lodash.has(this.value, subpath))
+		{
+			return this;
+		}
+		else
+		{
+			console.warn(`Could not find entry with subpath ${subpath} under entry ${this.getPath()}`);
+			return undefined;
+		}
 	}
 
 	getLineageValues(values)
@@ -397,6 +454,9 @@ export class GenerationEntry
 
 	generate(data, layer = 0)
 	{
+		// TODO: Ability bonuses generated from class occupations never remove their modifiers, thus duplicating the keys in their parents
+		// One potential fix would be to prune out duplicates on add, but that is a hacky solution. Best to get rid of the source of the duplicate first
+
 		if (layer > 0)
 		{
 			//console.log(`Generating secondary generation for ${this.source}/${this.value}`);
@@ -429,6 +489,7 @@ export class GenerationEntry
 		{
 			this.unsubscribeModifiers();
 			this.unsubscribeFromCollection();
+			this.unsubscribeFromStringReplacements();
 		}
 
 		// Parser could return an undefined value if the command didn't work.
@@ -488,6 +549,7 @@ export class GenerationEntry
 		{
 			this.subscribeModifiers();
 			this.subscribeToCollection();
+			this.subscribeToStringReplacements();
 			this.updateString();
 		}
 

@@ -1,6 +1,6 @@
 import lodash from 'lodash';
 import parser from '../parser';
-import inlineEval from './evalAtCtx';
+import {inlineEval} from './evalAtCtx';
 import appendModifiers from '../appendModifiers';
 const { getTable } = require('../../Data');
 

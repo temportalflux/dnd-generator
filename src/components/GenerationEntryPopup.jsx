@@ -27,6 +27,7 @@ export default class GenerationEntryPopup extends React.Component
 			<div>
 				<Header as='h5'>Modifiers</Header>
 				{rows}
+				<Divider />
 			</div>
 		)
 	}
@@ -42,6 +43,39 @@ export default class GenerationEntryPopup extends React.Component
 			<div>
 				<Header as='h5'>Modified By</Header>
 				{rows}
+				<Divider />
+			</div>
+		)
+	}
+
+	createStringifyDependenciesTable(stringifyDependenciesList)
+	{
+		const rows = stringifyDependenciesList.map((entryPath) => (
+			<div key={entryPath}>
+				{entryPath}
+			</div>
+		));
+		return (
+			<div>
+				<Header as='h5'>Stringify Dependent On</Header>
+				{rows}
+				<Divider />
+			</div>
+		)
+	}
+
+	createStringifyUsageTable(usedInStringifyBy)
+	{
+		const rows = usedInStringifyBy.map((entryPath) => (
+			<div key={entryPath}>
+				{entryPath}
+			</div>
+		));
+		return (
+			<div>
+				<Header as='h5'>String Used By</Header>
+				{rows}
+				<Divider />
 			</div>
 		)
 	}
@@ -50,6 +84,7 @@ export default class GenerationEntryPopup extends React.Component
 	{
 		const { entry } = this.props;
 		const localContext = entry.getLocalContext();
+		const stringifyDependencies = entry.getStringifyDependencies();
 		return (
 			<div>
 
@@ -80,6 +115,14 @@ export default class GenerationEntryPopup extends React.Component
 
 				{this.renderIf(!this.isObjectEmpty(entry.modifiedBy), (
 					this.createModifiedByTable(entry.modifiedBy)
+				))}
+
+				{this.renderIf(!this.isObjectEmpty(stringifyDependencies), (
+					this.createStringifyDependenciesTable(stringifyDependencies)
+				))}
+
+				{this.renderIf(!this.isObjectEmpty(entry.usedInStringifyBy), (
+					this.createStringifyUsageTable(entry.usedInStringifyBy)
 				))}
 
 				{this.renderIf(entry.hasCollectionEntries(), (

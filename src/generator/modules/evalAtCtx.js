@@ -22,7 +22,11 @@ function evalAtCtx(code, ctx, fullText)
 	}
 }
 
-export default function exec(text, context)
+// if grouping has periods ('.'), then it definitely relies on another value external to the hierarchy
+// (all non-lineage values have at least a category and key, separated by a period)
+export const VARIABLE_REGEX = new RegExp(/\$\((.*?)\)/, 'g');
+
+export function inlineEval(text, context)
 {
-	return text.replace(/\$\((.*?)\)/g, (match, group) => evalAtCtx(group, context, text));
+	return text.replace(VARIABLE_REGEX, (match, group) => evalAtCtx(group, context, text));
 }

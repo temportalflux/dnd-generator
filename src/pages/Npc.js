@@ -43,6 +43,11 @@ export class Npc extends React.Component
 
 	onRerollClicked(evt, { path })
 	{
+		this.regenerate(path);
+	}
+
+	async regenerate(path)
+	{
 		const generator = this.state.generator;
 		if (path === 'npc')
 		{

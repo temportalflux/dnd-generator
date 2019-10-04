@@ -283,7 +283,7 @@
 				{
 					"key": "quirk",
 					"collection": "personality.quirks",
-					"source": "{roll:race/Half-Dwarf/quirks}"
+					"source": "{roll:race/Dwarf/quirks}"
 				}
 			]
 		},
@@ -313,7 +313,7 @@
 				{
 					"key": "quirk",
 					"collection": "personality.quirks",
-					"source": "{roll:race/Half-Elf/quirks}"
+					"source": "{roll:race/Elf/quirks}"
 				}
 			]
 		},
@@ -343,11 +343,6 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Half-Orc/skin}"
-				},
-				{
-					"key": "quirk",
-					"collection": "personality.quirks",
-					"source": "{roll:race/Half-Orc/quirks}"
 				}
 			]
 		},
@@ -594,6 +589,11 @@
 				{
 					"key": "skin",
 					"source": "{roll:race/Triton/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Elf/quirks}"
 				}
 			]
 		},

@@ -6,7 +6,7 @@
 		},
 		{
 			"weight": 4,
-			"stringify": "tattoo of $(animal.test('[aeiou]{1}.*') ? 'an' : 'a') $(animal)",
+			"stringify": "tattoo of a $(animal)",
 			"children": [
 				{
 					"key": "animal",

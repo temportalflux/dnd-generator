@@ -12,6 +12,7 @@
 			"children": [
 				{
 					"key": "abilityBonus",
+					"hideInlineValue": true,
 					"children": [
 						{
 							"key": "strength",
@@ -48,6 +49,7 @@
 			"children": [
 				{
 					"key": "abilityBonus",
+					"hideInlineValue": true,
 					"children": [
 						{
 							"key": "strength",
@@ -89,6 +91,7 @@
 			"children": [
 				{
 					"key": "abilityBonus",
+					"hideInlineValue": true,
 					"children": [
 						{
 							"key": "strength",
@@ -131,6 +134,7 @@
 			"children": [
 				{
 					"key": "abilityBonus",
+					"hideInlineValue": true,
 					"children": [
 						{
 							"key": "strength",
@@ -171,6 +175,7 @@
 			"children": [
 				{
 					"key": "abilityBonus",
+					"hideInlineValue": true,
 					"children": [
 						{
 							"key": "strength",
@@ -211,6 +216,7 @@
 			"children": [
 				{
 					"key": "abilityBonus",
+					"hideInlineValue": true,
 					"children": [
 						{
 							"key": "strength",

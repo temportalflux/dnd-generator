@@ -35,27 +35,33 @@
 			"children": [
 				{
 					"key": "strength",
-					"value": 9
+					"value": 9,
+					"minimum": 0
 				},
 				{
 					"key": "dexterity",
-					"value": 9
+					"value": 9,
+					"minimum": 0
 				},
 				{
 					"key": "constitution",
-					"value": 9
+					"value": 9,
+					"minimum": 0
 				},
 				{
 					"key": "intelligence",
-					"value": 9
+					"value": 9,
+					"minimum": 0
 				},
 				{
 					"key": "wisdom",
-					"value": 9
+					"value": 9,
+					"minimum": 0
 				},
 				{
 					"key": "charisma",
-					"value": 9
+					"value": 9,
+					"minimum": 0
 				}
 			]
 		},

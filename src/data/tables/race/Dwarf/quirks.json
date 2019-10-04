@@ -1,7 +1,8 @@
 {
 	"rows": [
 		{
-			"weight": 40
+			"weight": 40,
+			"stringify": "none"
 		},
 		{
 			"weight": 3,
