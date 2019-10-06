@@ -1,28 +1,21 @@
 {
 	"rows": [
 		{
-			"value": "blueish skin",
-			"weight": 1
-		},
-		{
-			"value": "pink skin",
-			"weight": 2
-		},
-		{
-			"value": "golden skin",
-			"weight": 2
-		},
-		{
-			"value": "silver skin",
-			"weight": 2
-		},
-		{
-			"value": "green skin",
-			"weight": 3
-		},
-		{
-			"value": "copper skin",
-			"weight": 2
+			"stringify": "$(color) $(texture)$(tone ? '' : ', ')$(tone) skin",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:race/Elf/skin/color}"
+				},
+				{
+					"key": "texture",
+					"source": "{roll:traits/skin/textureSkin}"
+				},
+				{
+					"key": "tone",
+					"source": "{roll:traits/skin/tone}"
+				}
+			]
 		}
 	]
 }

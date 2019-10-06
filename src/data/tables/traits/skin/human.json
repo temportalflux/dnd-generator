@@ -1,7 +1,7 @@
 {
 	"rows": [
 		{
-			"stringify": "$(color) $(texture)$(tone === undefined ? '' : ', ')$(tone) skin",
+			"stringify": "$(color) $(texture)$(toneString === 'none' ? '' : ',') $(toneString === 'none' ? '' : tone)$(toneString === 'none' ? '' : ', ')skin",
 			"children": [
 				{
 					"key": "color",

@@ -397,7 +397,7 @@
 				},
 				{
 					"key": "skin",
-					"source": "{roll:race/Human/skin}"
+					"source": "{roll:traits/skin/human}"
 				}
 			]
 		},
