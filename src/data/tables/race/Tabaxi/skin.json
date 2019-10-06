@@ -1,8 +1,12 @@
 {
 	"rows": [
 		{
-			"value": "fur",
+			"stringify": "$(texture) $(color)$(pattern === undefined ? '' : ', ')$(pattern) fur",
 			"children": [
+				{
+					"key": "color",
+					"source": "{roll:race/Tabaxi/skin/color}"
+				},
 				{
 					"key": "texture",
 					"source": "{roll:race/Tabaxi/skin/texture}"
@@ -10,10 +14,6 @@
 				{
 					"key": "pattern",
 					"source": "{roll:race/Tabaxi/skin/pattern}"
-				},
-				{
-					"key": "color",
-					"source": "{roll:race/Tabaxi/skin/color}"
 				}
 			]
 		}

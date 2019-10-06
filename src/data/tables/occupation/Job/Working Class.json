@@ -1,11 +1,11 @@
 {
 	"rows": [
 		{
-			"value": "Boat",
+			"value": "Deckhand",
 			"weight": 1
 		},
 		{
-			"value": "Coach",
+			"value": "Coachdriver",
 			"weight": 1
 		},
 		{
@@ -13,16 +13,22 @@
 			"weight": 3
 		},
 		{
+			"weight": 3,
 			"value": "Fisher",
-			"weight": 3
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
 		},
 		{
 			"value": "Gravedigger",
 			"weight": 1
 		},
 		{
+			"weight": 1,
 			"value": "Sheppard",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
 		},
 		{
 			"value": "Trapper",
@@ -37,20 +43,34 @@
 			"weight": 2
 		},
 		{
+			"weight": 2,
 			"value": "Miner",
-			"weight": 2
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.constitution": 2
+			}
 		},
 		{
+			"weight": 1,
 			"value": "Peddler",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
 		},
 		{
+			"weight": 1,
 			"value": "Ratcatcher",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2
+			}
 		},
 		{
+			"weight": 3,
 			"value": "Sailor",
-			"weight": 3
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 2
+			}
 		}
 	]
 }

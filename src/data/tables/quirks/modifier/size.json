@@ -14,7 +14,7 @@
 		},
 		{
 			"weight": 10,
-			"value": ""
+			"stringify": "none"
 		},
 		{
 			"weight": 3,

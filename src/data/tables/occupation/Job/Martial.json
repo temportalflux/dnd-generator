@@ -1,28 +1,83 @@
 {
 	"rows": [
 		{
+			"weight": 3,
 			"value": "Bodyguard",
-			"weight": 3
+			"modifiers": {
+				"stats.abilityScores.wisdom": 2
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		},
 		{
+			"weight": 1,
 			"value": "Bounty Hunter",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		},
 		{
+			"weight": 1,
 			"value": "Forester",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.wisdom": 2
+			},
+			"children": [
+				{
+					"key": "quirkNature",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/nature}"
+				}
+			]
 		},
 		{
+			"weight": 1,
 			"value": "Gladiator",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		},
 		{
-			"value": "Jailer",
-			"weight": 1
+			"weight": 1,
+			"value": "Jailer"
 		},
 		{
+			"weight": 3,
 			"value": "Soldier",
-			"weight": 3
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		}
 	]
 }

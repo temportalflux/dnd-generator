@@ -1,0 +1,20 @@
+{
+	"rows": [
+		{
+			"weight": 20,
+			"stringify": "none"
+		},
+		{
+			"weight": 3,
+			"value": "sunburned"
+		},
+		{
+			"weight": 1,
+			"value": "dirty"
+		},
+		{
+			"weight": 3,
+			"value": "pockmarked"
+		}
+	]
+}

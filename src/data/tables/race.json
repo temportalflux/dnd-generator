@@ -48,8 +48,7 @@
 				},
 				{
 					"key": "skin",
-					"source": "{roll:traits/skin/scaleTexture}",
-					"stringify": "$(value) scales"
+					"source": "{roll:traits/skin/scales}"
 				},
 				{
 					"key": "quirk",
@@ -460,7 +459,7 @@
 				},
 				{
 					"key": "skin",
-					"source": "{roll:race/Lizardfolk/skin}"
+					"source": "{roll:traits/skin/scales}"
 				},
 				{
 					"key": "quirk1",

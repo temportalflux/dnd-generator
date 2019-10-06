@@ -1,28 +1,82 @@
 {
 	"rows": [
 		{
+			"weight": 1,
 			"value": "Explorer",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.wisdom": 1
+			}
 		},
 		{
+			"weight": 2,
 			"value": "Diplomat",
-			"weight": 2
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.charisma": 1
+			}
 		},
 		{
+			"weight": 2,
 			"value": "Knight",
-			"weight": 2
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 2
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		},
 		{
+			"weight": 1,
 			"value": "Minister",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			},
+			"children": [
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				}
+			]
 		},
 		{
+			"weight": 1,
 			"value": "Page",
-			"weight": 1
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.intelligence": -1
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		},
 		{
+			"weight": 2,
 			"value": "Squire",
-			"weight": 2
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		}
 	]
 }

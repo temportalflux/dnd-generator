@@ -6,7 +6,10 @@
 		},
 		{
 			"value": "Painter",
-			"weight": 1
+			"weight": 1,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
 		},
 		{
 			"value": "Baker",
@@ -34,7 +37,10 @@
 		},
 		{
 			"value": "Carpenter",
-			"weight": 3
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1
+			}
 		},
 		{
 			"value": "Clothier",
@@ -54,11 +60,18 @@
 		},
 		{
 			"value": "Innkeeper",
-			"weight": 4
+			"weight": 4,
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
 		},
 		{
 			"value": "Jeweler",
-			"weight": 2
+			"weight": 2,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.intelligence": 1
+			}
 		},
 		{
 			"value": "Leatherworker",
@@ -66,7 +79,10 @@
 		},
 		{
 			"value": "Locksmith",
-			"weight": 2
+			"weight": 2,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
 		},
 		{
 			"value": "Mason",
@@ -74,27 +90,51 @@
 		},
 		{
 			"value": "Merchant",
-			"weight": 3
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
 		},
 		{
 			"value": "Musician",
-			"weight": 3
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.charisma": 4
+			}
 		},
 		{
 			"value": "Tinker",
-			"weight": 1
+			"weight": 1,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.intelligence": 3
+			}
 		},
 		{
 			"value": "Torturer",
-			"weight": 1
+			"weight": 1,
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.charisma": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
 		},
 		{
 			"value": "Trader",
-			"weight": 2
+			"weight": 2,
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3,
+				"stats.abilityScores.charisma": 2
+			}
 		},
 		{
 			"value": "Weaver",
-			"weight": 3
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
 		}
 	]
 }

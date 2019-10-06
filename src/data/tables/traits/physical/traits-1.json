@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"weight": 4,
-			"stringify": "$(identity.pronouns.singular) has a $(size)$(size === '' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"stringify": "$(identity.pronouns.singular) has a $(size)$(size === undefined ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartString).",
 			"children": [
 				{
 					"key": "size",
@@ -16,7 +16,7 @@
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) has $(sizeA)$(sizeA === '' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(sizeB)$(sizeB === '' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"stringify": "$(identity.pronouns.singular) has $(sizeA)$(sizeA === undefined ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(sizeB)$(sizeB === undefined ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
 			"children": [
 				{
 					"key": "sizeA",
@@ -152,7 +152,7 @@
 		},
 		{
 			"weight": 2,
-			"stringify": "$(identity.pronouns.singular) has a $(degree)$(degree === '' ? '' : ' ')limp.",
+			"stringify": "$(identity.pronouns.singular) has a $(degree)$(degree === undefined ? '' : ' ')limp.",
 			"children": [
 				{
 					"key": "degree",
@@ -165,7 +165,7 @@
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) has $(degree)$(degree === '' ? '' : ' ')hunch.",
+			"stringify": "$(identity.pronouns.singular) has $(degree)$(degree === undefined ? '' : ' ')hunch.",
 			"children": [
 				{
 					"key": "degree",
@@ -296,7 +296,7 @@
 		},
 		{
 			"weight": 3,
-			"stringify": "$(identity.pronouns.singular) smells $(degree)$(degree === '' ? '' : ' ') of $(smell).",
+			"stringify": "$(identity.pronouns.singular) smells $(degree)$(degree === undefined ? '' : ' ') of $(smell).",
 			"children": [
 				{
 					"key": "degree",
@@ -313,7 +313,7 @@
 		},
 		{
 			"weight": 3,
-			"stringify": "$(identity.pronouns.singular) smells $(degree)$(degree === '' ? '' : ' ') of $(smell).",
+			"stringify": "$(identity.pronouns.singular) smells $(degree)$(degree === undefined ? '' : ' ') of $(smell).",
 			"children": [
 				{
 					"key": "degree",

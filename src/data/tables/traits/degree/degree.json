@@ -10,7 +10,7 @@
 		},
 		{
 			"weight": 5,
-			"value": ""
+			"stringify": "none"
 		},
 		{
 			"weight": 2,

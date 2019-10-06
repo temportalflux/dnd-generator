@@ -1,20 +1,21 @@
 {
 	"rows": [
 		{
-			"value": "green skin",
-			"weight": 6
-		},
-		{
-			"value": "brown skin",
-			"weight": 2
-		},
-		{
-			"value": "red skin",
-			"weight": 1
-		},
-		{
-			"value": "gray skin",
-			"weight": 4
+			"stringify": "$(color) $(texture), $(tone)$(tone === undefined ? '' : ', ')skin",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:race/Orc/skin/color}"
+				},
+				{
+					"key": "texture",
+					"source": "{roll:traits/skin/textureSkin}"
+				},
+				{
+					"key": "tone",
+					"source": "{roll:traits/skin/tone}"
+				}
+			]
 		}
 	]
 }

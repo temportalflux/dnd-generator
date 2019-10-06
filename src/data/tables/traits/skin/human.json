@@ -5,7 +5,7 @@
 			"children": [
 				{
 					"key": "color",
-					"source": "{roll:traits/skin/nonhumanColor}"
+					"source": "{roll:traits/skin/humanColor}"
 				},
 				{
 					"key": "texture",
