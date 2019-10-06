@@ -3,7 +3,6 @@
 		{
 			"weight": 9,
 			"value": "Cleric",
-			"v": "{religiousquirk}",
 			"children": [
 				{
 					"key": "abilityBonus",
@@ -34,13 +33,17 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
 				}
 			]
 		},
 		{
 			"weight": 3,
 			"value": "Artificier",
-			"v": "{richquirk}{weirdQuirk}",
 			"children": [
 				{
 					"key": "abilityBonus",
@@ -71,13 +74,22 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkRich",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/rich}"
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
 				}
 			]
 		},
 		{
 			"weight": 2,
 			"value": "Druid",
-			"v": "{religiousquirk}{naturequirk}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": -2,
 				"stats.alignmentTendancies.ethical.neutral": 2,
@@ -116,13 +128,22 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				},
+				{
+					"key": "quirkNature",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/nature}"
 				}
 			]
 		},
 		{
 			"weight": 3,
 			"value": "Mystic",
-			"v": "{weirdQuirk}",
 			"children": [
 				{
 					"key": "abilityBonus",
@@ -153,13 +174,17 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
 				}
 			]
 		},
 		{
 			"weight": 2,
 			"value": "Sorcerer",
-			"v": "{weirdQuirk}",
 			"children": [
 				{
 					"key": "abilityBonus",
@@ -190,13 +215,17 @@
 							"source": "{roll:bonus/ability/cha/high}"
 						}
 					]
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
 				}
 			]
 		},
 		{
 			"weight": 2,
 			"value": "Warlock",
-			"v": "{weirdQuirk}",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
 			},
@@ -230,13 +259,17 @@
 							"source": "{roll:bonus/ability/cha/high}"
 						}
 					]
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
 				}
 			]
 		},
 		{
 			"weight": 3,
 			"value": "Wizard",
-			"v": "{richquirk}{weirdQuirk}",
 			"children": [
 				{
 					"key": "abilityBonus",
@@ -267,6 +300,16 @@
 							"source": "{roll:bonus/ability/cha/low}"
 						}
 					]
+				},
+				{
+					"key": "quirkRich",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/rich}"
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
 				}
 			]
 		}

@@ -3,7 +3,6 @@
 		{
 			"weight": 3,
 			"value": "Barbarian",
-			"v": "{poorquirk}{militaryquirk}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": -1,
 				"stats.alignmentTendancies.ethical.negative": 2,
@@ -39,13 +38,22 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkPoor",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/poor}"
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
 				}
 			]
 		},
 		{
 			"weight": 12,
 			"value": "Fighter",
-			"v": "{militaryquirk}",
 			"children": [
 				{
 					"key": "abilityBonus",
@@ -76,13 +84,17 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
 				}
 			]
 		},
 		{
 			"weight": 6,
 			"value": "Monk",
-			"v": "{militaryquirk}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.ethical.neutral": -2,
@@ -118,13 +130,17 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
 				}
 			]
 		},
 		{
 			"weight": 8,
 			"value": "Paladin",
-			"v": "{religiousquirk}{militaryquirk}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 3,
 				"stats.alignmentTendancies.ethical.negative": -1,
@@ -161,13 +177,22 @@
 							"source": "{roll:bonus/ability/cha/high}"
 						}
 					]
+				},
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
 				}
 			]
 		},
 		{
 			"weight": 3,
 			"value": "Ranger",
-			"v": "{naturequirk}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -202,13 +227,17 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkNature",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/nature}"
 				}
 			]
 		},
 		{
 			"weight": 5,
 			"value": "Rogue",
-			"v": "{poorquirk}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 3,
 				"stats.alignmentTendancies.moral.negative": 1
@@ -243,6 +272,11 @@
 							"source": "{roll:bonus/ability/cha/medium}"
 						}
 					]
+				},
+				{
+					"key": "quirkPoor",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/poor}"
 				}
 			]
 		}

@@ -157,7 +157,7 @@
 					"key": "quirkNature",
 					"name": "Nature Quirk",
 					"collection": "personality.quirks",
-					"source": "{roll:traits/quirk/nature}"
+					"source": "{roll:quirks/nature}"
 				}
 			]
 		},

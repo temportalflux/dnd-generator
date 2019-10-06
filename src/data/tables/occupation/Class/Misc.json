@@ -3,7 +3,6 @@
 		{
 			"weight": 4,
 			"value": "Bard",
-			"v": "{richquirk}",
 			"children": [
 				{
 					"key": "abilityBonus",
@@ -34,6 +33,11 @@
 							"source": "{roll:bonus/ability/cha/high}"
 						}
 					]
+				},
+				{
+					"key": "quirkRich",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/rich}"
 				}
 			]
 		}
