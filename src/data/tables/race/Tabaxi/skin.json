@@ -1,7 +1,7 @@
 {
 	"rows": [
 		{
-			"stringify": "$(texture) $(color) $(patternString === 'none' ? '' : ',')$(patternString === 'none' ? '' : pattern)$(patternString === 'none' ? '' : ', ')fur",
+			"stringify": "$(texture) $(color) $(pattern)fur",
 			"children": [
 				{
 					"key": "color",

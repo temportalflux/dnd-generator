@@ -2,19 +2,20 @@
 	"rows": [
 		{
 			"weight": 5,
+			"value": "",
 			"stringify": "none"
 		},
 		{
 			"weight": 1,
-			"value": "spotted"
+			"value": "spotted "
 		},
 		{
 			"weight": 1,
-			"value": "patterned"
+			"value": "patterned "
 		},
 		{
 			"weight": 1,
-			"value": "striped"
+			"value": "striped "
 		}
 	]
 }
