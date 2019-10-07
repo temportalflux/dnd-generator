@@ -4,7 +4,10 @@
 			"value": "killer"
 		},
 		{
-			"value": "tamer"
+			"value": "tamer",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
 		},
 		{
 			"value": "hunter"
@@ -12,12 +15,5 @@
 		{
 			"value": "stalker"
 		}
-	],
-	"values": {
-		"tamer": {
-			"modifiers": {
-				"stats.abilityScores.wisdom": 1
-			}
-		}
-	}
+	]
 }

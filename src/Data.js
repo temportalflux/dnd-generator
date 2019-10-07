@@ -1,4 +1,3 @@
-const path = require('path');
 const lodash = require('lodash');
 
 function makeEntry(name, value)

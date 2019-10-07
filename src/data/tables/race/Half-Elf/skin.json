@@ -1,7 +1,7 @@
 {
 	"rows": [
 		{
-			"source": "{roll:race/Human/skin}"
+			"source": "{roll:traits/skin}"
 		},
 		{
 			"source": "{roll:race/Elf/skin}"

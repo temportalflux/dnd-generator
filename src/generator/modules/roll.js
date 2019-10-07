@@ -22,6 +22,7 @@ function chooseRandomWithWeight(entries)
 	return null;
 }
 
+/*
 function testFrequency(entries)
 {
 	let frequency = {};
@@ -32,6 +33,7 @@ function testFrequency(entries)
 	}
 	return frequency;
 }
+//*/
 
 export default function exec(match, data)
 {

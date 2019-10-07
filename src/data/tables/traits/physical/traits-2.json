@@ -100,11 +100,11 @@
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) is blind}"
+			"stringify": "$(identity.pronouns.singular) is blind."
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) is mute}"
+			"stringify": "$(identity.pronouns.singular) is mute."
 		},
 		{
 			"weight": 1,
@@ -122,7 +122,7 @@
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) has $(degree)$(degree === undefined ? '' : ' ')lisp.",
+			"stringify": "$(identity.pronouns.singular) has $(degreeString === 'none' ? '' : degree)$(degreeString === 'none' ? '' : ' ')lisp.",
 			"children": [
 				{
 					"key": "degree",
@@ -256,7 +256,9 @@
 			"modifiers": {
 				"description.race.hair.color": "white",
 				"description.eyeColor": "red",
-				"description.race.skin": "ghostly, white skin"
+				"description.race.skin.texture": "ghostly",
+				"description.race.skin.color": "white",
+				"description.race.skin.tone": ""
 			}
 		}
 	]

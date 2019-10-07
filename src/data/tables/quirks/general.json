@@ -348,7 +348,7 @@
 		},
 		{
 			"weight": 3,
-			"stringify": "$(identity.pronouns.singular) believes that $(identity.pronouns.singular) is related to $(personality.deity)."
+			"stringify": "$(identity.pronouns.singular) believes that $(identity.pronouns.singular) is related to $(personality.religion.deity)."
 		},
 		{
 			"weight": 1,

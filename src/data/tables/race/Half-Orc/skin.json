@@ -5,7 +5,7 @@
 			"weight": 3
 		},
 		{
-			"source": "{roll:race/Human/skin}",
+			"source": "{roll:traits/skin}",
 			"weight": 2
 		}
 	]

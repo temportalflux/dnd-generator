@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Divider, Grid, Header } from 'semantic-ui-react';
+import { Divider, Header } from 'semantic-ui-react';
 import lodash from 'lodash';
 
 export default class GenerationEntryPopup extends React.Component

@@ -31,14 +31,10 @@
 			"value": "Dark"
 		},
 		{
-			"value": "Word"
-		}
-	],
-	"values": {
-		"Word": {
+			"value": "Word",
 			"modifiers": {
 				"stats.abilityScores.charisma": 2
 			}
 		}
-	}
+	]
 }

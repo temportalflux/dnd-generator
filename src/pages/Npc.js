@@ -1,11 +1,12 @@
 import React from 'react'
 //import { Grid } from 'semantic-ui-react';
 //import FilterMenu from '../components/FilterMenu';
-//import DisplayNpc from '../components/DisplayNpc';
+import DisplayNpc from '../components/DisplayNpc';
 import { generate } from '../generator/index';
 import NpcDataTree from '../components/NpcDataTree';
 import lodash from 'lodash';
 import { Generator, GenerationEntry } from '../generator/Generator';
+import { Tab } from 'semantic-ui-react';
 
 const { getTable } = require('../Data');
 
@@ -74,20 +75,36 @@ export class Npc extends React.Component
 				</Grid>
 		
 						<Grid.Column>
-							<DisplayNpc
-								data={this.state.npc}
-							/>
+							
 						</Grid.Column>
 
 		*/
+		const panes = [
+			{
+				menuItem: 'Article',
+				render: () => (
+					<Tab.Pane>
+						<DisplayNpc
+							generator={this.state.generator}
+							onRerollClicked={this.onRerollClicked}
+						/>
+					</Tab.Pane>
+				)
+			},
+			{
+				menuItem: 'Data',
+				render: () => (
+					<Tab.Pane>
+						<NpcDataTree
+							generator={this.state.generator}
+							onRerollClicked={this.onRerollClicked}
+						/>
+					</Tab.Pane>
+				)
+			}
+		];
 		return (
-			<div>
-				<NpcDataTree
-					data={this.state.npc}
-					generator={this.state.generator}
-					onRerollClicked={this.onRerollClicked}
-				/>
-			</div>
+			<Tab panes={panes} />
 		);
 	}
 

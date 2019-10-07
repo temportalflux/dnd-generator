@@ -2,27 +2,28 @@
 	"rows": [
 		{
 			"weight": 2,
-			"value": "slight"
+			"value": "slight "
 		},
 		{
 			"weight": 2,
-			"value": "light"
+			"value": "light "
 		},
 		{
 			"weight": 5,
+			"value": " ",
 			"stringify": "none"
 		},
 		{
 			"weight": 2,
-			"value": "impressive"
+			"value": "impressive "
 		},
 		{
 			"weight": 2,
-			"value": "heavy"
+			"value": "heavy "
 		},
 		{
 			"weight": 1,
-			"value": "severe"
+			"value": "severe "
 		}
 	]
 }

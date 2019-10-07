@@ -8,52 +8,7 @@ export class GenerationEntry
 
 	constructor(data)
 	{
-		{
-			this.deconstruct = this.deconstruct.bind(this);
-			this.getCategory = this.getCategory.bind(this);
-			this.getKey = this.getKey.bind(this);
-			this.getPath = this.getPath.bind(this);
-			this.isValid = this.isValid.bind(this);
-			this.getName = this.getName.bind(this);
-			this.getLocalContext = this.getLocalContext.bind(this);
-			this.getGlobalContext = this.getGlobalContext.bind(this);
-			this.getAllContext = this.getAllContext.bind(this);
-			this.makeString = this.makeString.bind(this);
-			this.updateString = this.updateString.bind(this);
-			this.toString = this.toString.bind(this);
-			this.getCanReroll = this.getCanReroll.bind(this);
-			this.clearChildren = this.clearChildren.bind(this);
-			this.createChildren = this.createChildren.bind(this);
-			this.createEntry = this.createEntry.bind(this);
-			this.addChild = this.addChild.bind(this);
-			this.setParent = this.setParent.bind(this);
-			this.hasChildren = this.hasChildren.bind(this);
-			this.getChildren = this.getChildren.bind(this);
-			this.getChild = this.getChild.bind(this);
-			this.getLineageValues = this.getLineageValues.bind(this);
-			this.hasDependencies = this.hasDependencies.bind(this);
-			this.getDependencies = this.getDependencies.bind(this);
-			this.subscribeDependencies = this.subscribeDependencies.bind(this);
-			this.unsubscribeDependencies = this.unsubscribeDependencies.bind(this);
-			this.addAffectedEntry = this.addAffectedEntry.bind(this);
-			this.removeAffectedEntry = this.removeAffectedEntry.bind(this);
-			this.getAllAffectedEntryPaths = this.getAllAffectedEntryPaths.bind(this);
-			this.subscribeToCollection = this.subscribeToCollection.bind(this);
-			this.unsubscribeFromCollection = this.unsubscribeFromCollection.bind(this);
-			this.subscribeAsCollectionEntry = this.subscribeAsCollectionEntry.bind(this);
-			this.unsubscribeAsCollectionEntry = this.unsubscribeAsCollectionEntry.bind(this);
-			this.hasCollectionEntries = this.hasCollectionEntries.bind(this);
-			this.getCollectionEntries = this.getCollectionEntries.bind(this);
-			this.generate = this.generate.bind(this);
-			this.getValue = this.getValue.bind(this);
-			this.modify = this.modify.bind(this);
-			this.subscribeModifiers = this.subscribeModifiers.bind(this);
-			this.unsubscribeModifiers = this.unsubscribeModifiers.bind(this);
-			this.subscribeModifyingEntry = this.subscribeModifyingEntry.bind(this);
-			this.unsubscribeModifyingEntry = this.unsubscribeModifyingEntry.bind(this);
-			this.modifyEntryValue = this.modifyEntryValue.bind(this);
-			this.applyModifier = this.applyModifier.bind(this);
-		}
+		this.makeBindings();
 
 		lodash.assign(this, {
 			generator: null,
@@ -80,6 +35,7 @@ export class GenerationEntry
 
 			// METADATA
 			stringify: undefined,
+			stringifyGenerated: undefined,
 			canReroll: true,
 			// entry keys that cause regeneration of this entry
 			dependencies: [],
@@ -99,6 +55,54 @@ export class GenerationEntry
 		this.createChildren();
 
 		this.stringified = undefined;
+	}
+
+	makeBindings()
+	{
+		this.deconstruct = this.deconstruct.bind(this);
+		this.getCategory = this.getCategory.bind(this);
+		this.getKey = this.getKey.bind(this);
+		this.getPath = this.getPath.bind(this);
+		this.isValid = this.isValid.bind(this);
+		this.getName = this.getName.bind(this);
+		this.getLocalContext = this.getLocalContext.bind(this);
+		this.getGlobalContext = this.getGlobalContext.bind(this);
+		this.getAllContext = this.getAllContext.bind(this);
+		this.makeString = this.makeString.bind(this);
+		this.updateString = this.updateString.bind(this);
+		this.toString = this.toString.bind(this);
+		this.getCanReroll = this.getCanReroll.bind(this);
+		this.clearChildren = this.clearChildren.bind(this);
+		this.createChildren = this.createChildren.bind(this);
+		this.createEntry = this.createEntry.bind(this);
+		this.addChild = this.addChild.bind(this);
+		this.setParent = this.setParent.bind(this);
+		this.hasChildren = this.hasChildren.bind(this);
+		this.getChildren = this.getChildren.bind(this);
+		this.getChild = this.getChild.bind(this);
+		this.getLineageValues = this.getLineageValues.bind(this);
+		this.hasDependencies = this.hasDependencies.bind(this);
+		this.getDependencies = this.getDependencies.bind(this);
+		this.subscribeDependencies = this.subscribeDependencies.bind(this);
+		this.unsubscribeDependencies = this.unsubscribeDependencies.bind(this);
+		this.addAffectedEntry = this.addAffectedEntry.bind(this);
+		this.removeAffectedEntry = this.removeAffectedEntry.bind(this);
+		this.getAllAffectedEntryPaths = this.getAllAffectedEntryPaths.bind(this);
+		this.subscribeToCollection = this.subscribeToCollection.bind(this);
+		this.unsubscribeFromCollection = this.unsubscribeFromCollection.bind(this);
+		this.subscribeAsCollectionEntry = this.subscribeAsCollectionEntry.bind(this);
+		this.unsubscribeAsCollectionEntry = this.unsubscribeAsCollectionEntry.bind(this);
+		this.hasCollectionEntries = this.hasCollectionEntries.bind(this);
+		this.getCollectionEntries = this.getCollectionEntries.bind(this);
+		this.generate = this.generate.bind(this);
+		this.getValue = this.getValue.bind(this);
+		this.modify = this.modify.bind(this);
+		this.subscribeModifiers = this.subscribeModifiers.bind(this);
+		this.unsubscribeModifiers = this.unsubscribeModifiers.bind(this);
+		this.subscribeModifyingEntry = this.subscribeModifyingEntry.bind(this);
+		this.unsubscribeModifyingEntry = this.unsubscribeModifyingEntry.bind(this);
+		this.modifyEntryValue = this.modifyEntryValue.bind(this);
+		this.applyModifier = this.applyModifier.bind(this);
 	}
 
 	deconstruct()
@@ -140,6 +144,11 @@ export class GenerationEntry
 			).join(' ');
 	}
 
+	hasValue()
+	{
+		return this.value !== undefined;
+	}
+
 	getLocalContext()
 	{
 		const value = this.getValue();
@@ -167,12 +176,17 @@ export class GenerationEntry
 		return lodash.assign({}, this.getGlobalContext(), this.getLocalContext());
 	}
 
+	getStringifyTemplate()
+	{
+		return this.stringifyGenerated !== undefined ? this.stringifyGenerated : this.stringify;
+	}
+
 	getStringifyDependencies()
 	{
-		if (this.stringify === undefined) return [];
-		const allMatches = Array.from(this.stringify.matchAll(VARIABLE_REGEX));
+		if (this.getStringifyTemplate() === undefined) return [];
+		const allMatches = Array.from(this.getStringifyTemplate().matchAll(VARIABLE_REGEX));
 		const allVariableReplacements = allMatches.map((match) => match[1]);
-		const variableStringOnlyRegex = /^[a-zA-Z0-9]+\.[a-zA-Z0-9\.]+$/g;
+		const variableStringOnlyRegex = /^[a-zA-Z0-9]+\.[a-zA-Z0-9.]+$/g;
 		const allNonlineageReplacements = allVariableReplacements.filter((key) => variableStringOnlyRegex.test(key));
 		return allNonlineageReplacements;
 	}
@@ -180,10 +194,10 @@ export class GenerationEntry
 	makeString(value)
 	{
 		value = value || this.getValue();
-		if (this.stringify !== undefined)
+		if (this.getStringifyTemplate() !== undefined)
 		{
 			const allContext = this.getAllContext();
-			const asString = inlineEval(this.stringify, allContext);
+			const asString = inlineEval(this.getStringifyTemplate(), allContext);
 			return asString === undefined ? value : asString;
 		}
 		else if (this.description !== undefined)
@@ -453,6 +467,11 @@ export class GenerationEntry
 		return this.collectionEntries.sort();
 	}
 
+	getCollection()
+	{
+		return this.getCollectionEntries().map((entryKey) => this.generator.getEntry(entryKey));
+	}
+
 	generate(data, layer = 0)
 	{
 		if (layer > 0)
@@ -500,14 +519,14 @@ export class GenerationEntry
 			const entry = this.createEntry(result);
 			if (!entry.isValid())
 			{
+				// TODO: Modifiers for attractiveness aren't being compiled
 				let entryModifiers = appendModifiers({}, lodash.cloneDeep(entry.modifiers));
 				entry.modifiers = {};
 
 				entry.generate(data, layer + 1);
 				this.value = entry.getValue();
 
-				if (entry.stringify !== undefined)
-					this.stringify = entry.stringify;
+				this.stringifyGenerated = entry.getStringifyTemplate();
 				this.description = entry.description;
 
 				// copy over secondary generation modifiers
@@ -604,6 +623,7 @@ export class GenerationEntry
 	{
 		const entryKey = entry.getPath();
 		this.modifiedBy = this.modifiedBy.filter((key) => key !== entryKey);
+		this.updateString();
 	}
 
 	modifyEntryValue(keyToModify, value)
@@ -732,9 +752,9 @@ export class GenerationEntry
 				}
 			}
 		}
-		else if (typeof value === 'string' && typeof modToEval === 'string')
+		else if ((value === undefined || typeof value === 'string') && typeof modToEval === 'string')
 		{
-			return modToEval;
+			return modToEval === '' ? undefined : modToEval;
 		}
 
 		console.warn('Encountered unimplemented modifier schema:', modToEval);

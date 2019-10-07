@@ -17,10 +17,12 @@
 		"description.age",
 		"description.race",
 		"description.face",
-		"personality.deity",
+		"personality.religion",
 		"identity.name",
 		"identity.surname",
 		"personality.generalQuirk",
+		"personality.trait1",
+		"personality.trait2",
 		"description.specialPhysical",
 		"occupation.type",
 		"occupation.category",
@@ -210,10 +212,20 @@
 		},
 		{
 			"category": "personality",
-			"key": "deity",
-			"source": "{roll:race/$(description.race.value)/deity}",
-			"dependencies": [
-				"description.race"
+			"key": "religion",
+			"hideInlineValue": true,
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:race/$(description.race.value)/deity}",
+					"dependencies": [
+						"description.race"
+					]
+				},
+				{
+					"key": "worship",
+					"source": "{roll:personality/worship}"
+				}
 			]
 		},
 		{
