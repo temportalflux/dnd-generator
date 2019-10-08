@@ -1,39 +1,37 @@
 
-function fallbackCopyTextToClipboard(text)
+function copyTextToClipboard(html)
 {
-	var textArea = document.createElement("textarea");
-	textArea.value = text;
-	document.body.appendChild(textArea);
-	textArea.focus();
-	textArea.select();
+	// Create an iframe (isolated container) for the HTML
+  var container = document.createElement('div');
+  container.innerHTML = html;
+  
+  // Hide element
+  container.style.position = 'fixed';
+  container.style.pointerEvents = 'none';
+	container.style.opacity = 0;
+	
+  // Mount the iframe to the DOM to make `contentWindow` available
+  document.body.appendChild(container);
 
+	// Clear all selected nodes
+  window.getSelection().removeAllRanges();
+  
+  // Add the container as the only selected node
+  var range = document.createRange();
+  range.selectNode(container);
+  window.getSelection().addRange(range);
+
+  // Copy selected nodes to clipboard
 	try
 	{
 		var successful = document.execCommand('copy');
-		var msg = successful ? 'successful' : 'unsuccessful';
-		console.log('Fallback: Copying text command was ' + msg);
-	} catch (err)
-	{
-		console.error('Fallback: Oops, unable to copy', err);
 	}
-
-	document.body.removeChild(textArea);
-}
-
-function copyTextToClipboard(text)
-{
-	if (!navigator.clipboard)
+	catch (err)
 	{
-		fallbackCopyTextToClipboard(text);
-		return;
 	}
-	navigator.clipboard.writeText(text).then(function()
-	{
-		console.log('Async: Copying to clipboard was successful!');
-	}, function(err)
-	{
-		console.error('Async: Could not copy text: ', err);
-	});
+  
+  // Remove the iframe
+  document.body.removeChild(container);
 }
 
 module.exports = copyTextToClipboard;
