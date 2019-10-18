@@ -1,8 +1,6 @@
 import lodash from 'lodash';
 import Execs from './modules/index';
 
-console.log('Parser valid executors', Execs);
-
 export default function parseField(field, data)
 {
 	if (Array.isArray(field))
