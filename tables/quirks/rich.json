@@ -1,0 +1,117 @@
+{
+	"rows": [
+		{
+			"weight": 20,
+			"stringify": "none"
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) cannot tolerate rough living conditions."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) $(frequency) uses long words to sound smart.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) $(frequency) gives money to the poor.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			],
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 1
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) disregards poorer people."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) inherited a $(inheritance).",
+			"children": [
+				{
+					"key": "inheritance",
+					"source": "{roll:quirks/modifier/inheritance}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) only dresses in very expensive clothes."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) always wears a fancy hat."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) loves partying."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) uses a beautiful walking cane."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) wears a lot of cheap jewelry."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) wears a lot of beautiful jewelry."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) wears fancy spectacles."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) wears cheap spectacles."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is always accompanied by $(identity.pronouns.possessive) servants."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) likes to know how things work.",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 2
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) doesn't like parting with $(identity.pronouns.possessive) money or possessions.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.negative": 1
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has a very regal look.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) considers everyone else as idiots.",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has very little practical experience."
+		}
+	]
+}

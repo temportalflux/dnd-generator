@@ -1,0 +1,18 @@
+{
+	"rows": [
+		{
+			"value": "feathers",
+			"children": [
+				{
+					"key": "texture",
+					"source": "{roll:race/Kenku/skin/featherTexture}"
+				},
+				{
+					"key": "color",
+					"source": "{roll:race/Kenku/skin/color}"
+				}
+			]
+		}
+	],
+	"values": {}
+}

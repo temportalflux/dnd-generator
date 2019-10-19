@@ -1,0 +1,32 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"value": "-2",
+			"modifiers": {
+				"stats.abilityScores.charisma": -2
+			}
+		},
+		{
+			"weight": 6,
+			"value": "+0",
+			"modifiers": {
+				"stats.abilityScores.charisma": 0
+			}
+		},
+		{
+			"weight": 2,
+			"value": "+2",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "+4",
+			"modifiers": {
+				"stats.abilityScores.charisma": 4
+			}
+		}
+	]
+}

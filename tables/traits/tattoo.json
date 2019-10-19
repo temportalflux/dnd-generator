@@ -1,0 +1,36 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"source": "{roll:traits/tattoo/text}"
+		},
+		{
+			"weight": 4,
+			"stringify": "tattoo of a $(animal)",
+			"children": [
+				{
+					"key": "animal",
+					"source": "{roll:traits/tattoo/animal}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "tattoo of a $(weapon)",
+			"children": [
+				{
+					"key": "weapon",
+					"source": "{roll:items/weapon}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "abstract tattoo"
+		},
+		{
+			"weight": 3,
+			"stringify": "tribal tattoo"
+		}
+	]
+}

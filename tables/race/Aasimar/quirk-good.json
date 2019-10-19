@@ -1,0 +1,59 @@
+{
+	"rows": [
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to spread compassion and hope.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to spread knowledge and wisdom.",
+			"modifiers": {
+				"stats.abilityScore.intelligence": 2,
+				"stats.abilityScore.wisdom": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to spread humor and joy.",
+			"modifiers": {
+				"stats.abilityScore.charisma": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to teach people how to fight against evil.",
+			"modifiers": {
+				"stats.abilityScore.intelligence": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to forgive and reform evil creatures.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to eradicate evil in all its forms.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to destroy fallen aasimars.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to punish wrongdoers.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to nurture $(identity.pronouns.possessive) community and help it grow.}"
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to undo all of evil's misdeeds."
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"rows": [
+		{
+			"weight": 4,
+			"value": "red skin"
+		},
+		{
+			"weight": 2,
+			"value": "purple skin"
+		},
+		{
+			"weight": 3,
+			"value": "blue skin"
+		},
+		{
+			"source": "{roll:traits/skin}",
+			"weight": 1
+		}
+	]
+}

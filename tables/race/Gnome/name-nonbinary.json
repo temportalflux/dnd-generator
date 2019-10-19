@@ -1,0 +1,31 @@
+{
+	"rows": [
+		{
+			"source": [
+				["{rand:man,woman}", "{randInt:1,4}"],
+				["{rand:man,woman}", "{randInt:1,4}"],
+				["{rand:man,woman}", "{randInt:1,4}"],
+				["{rand:man,woman}", "{randInt:1,4}"]
+			],
+			"stringify": "$(name1) $(name2) $(name3) $(name4)",
+			"children": [
+				{
+					"key": "name1",
+					"source": "{roll:race/Gnome/name/$(identity.name.value[0][0])-$(identity.name.value[0][1])}"
+				},
+				{
+					"key": "name2",
+					"source": "{roll:race/Gnome/name/$(identity.name.value[1][0])-$(identity.name.value[1][1])}"
+				},
+				{
+					"key": "name3",
+					"source": "{roll:race/Gnome/name/$(identity.name.value[2][0])-$(identity.name.value[2][1])}"
+				},
+				{
+					"key": "name4",
+					"source": "{roll:race/Gnome/name/$(identity.name.value[3][0])-$(identity.name.value[3][1])}"
+				}
+			]
+		}
+	]
+}

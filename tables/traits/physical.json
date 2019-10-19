@@ -1,0 +1,38 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"children": [
+				{
+					"key": "traitA",
+					"source": "{roll:traits/physical/traits-1}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"children": [
+				{
+					"key": "traitA",
+					"stringify": "$(identity.pronouns.singular) $(value).",
+					"source": "{roll:traits/physical/traits-2}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"children": [
+				{
+					"key": "traitA",
+					"stringify": "$(identity.pronouns.singular) $(value).",
+					"source": "{roll:traits/physical/traits-1}"
+				},
+				{
+					"key": "traitB",
+					"stringify": "$(identity.pronouns.singular) $(value).",
+					"source": "{roll:traits/physical/traits-2}"
+				}
+			]
+		}
+	]
+}

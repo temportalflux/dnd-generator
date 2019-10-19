@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"value": "2"
+		},
+		{
+			"weight": 2,
+			"value": "3"
+		},
+		{
+			"weight": 1,
+			"value": "4"
+		}
+	]
+}

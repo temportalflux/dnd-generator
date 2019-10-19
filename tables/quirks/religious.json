@@ -1,0 +1,88 @@
+{
+	"rows": [
+		{
+			"weight": 22,
+			"stringify": "none"
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) sees divine omens in everything."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) $(frequency) talks aloud to $(identity.pronouns.possessive) god.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) $(frequency) quotes sacred texts.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) $(frequency) misquotes sacred texts.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is very intolerant towards other faiths."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) carries blessed water everywhere."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) spends a lot of time studying other religions. }{%int+1}"
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has story about $(identity.pronouns.possessive) god for every occasion."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) will share $(identity.pronouns.possessive) god's wisdom when appropriate. }{%wis+1}"
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) keeps everything about $(identity.pronouns.possessive) god a secret."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) carries out a complicated religious ritual every morning."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) will $(frequency) pray at inopportune moments.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) tries to convert everyone $(identity.pronouns.singular) meets."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) idolizes a religious hero."
+		}
+	]
+}

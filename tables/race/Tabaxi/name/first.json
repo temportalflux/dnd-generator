@@ -1,0 +1,144 @@
+{
+	"rows": [
+		{
+			"value": "Swift",
+			"weight": 3
+		},
+		{
+			"value": "Wandering",
+			"weight": 3
+		},
+		{
+			"value": "Jade",
+			"weight": 2
+		},
+		{
+			"value": "Iron",
+			"weight": 2
+		},
+		{
+			"value": "Steel",
+			"weight": 2
+		},
+		{
+			"value": "Wooden",
+			"weight": 2
+		},
+		{
+			"value": "Left-Handed",
+			"weight": 2
+		},
+		{
+			"value": "Right-Handed",
+			"weight": 2
+		},
+		{
+			"value": "Quick",
+			"weight": 3
+		},
+		{
+			"value": "Wise",
+			"weight": 2
+		},
+		{
+			"value": "Keen",
+			"weight": 2
+		},
+		{
+			"value": "Bright",
+			"weight": 2
+		},
+		{
+			"value": "Shining",
+			"weight": 2
+		},
+		{
+			"value": "Vivid",
+			"weight": 2
+		},
+		{
+			"value": "Noble",
+			"weight": 2
+		},
+		{
+			"value": "Strong",
+			"weight": 2
+		},
+		{
+			"value": "Fair",
+			"weight": 2
+		},
+		{
+			"value": "Distant",
+			"weight": 2
+		},
+		{
+			"value": "Lone",
+			"weight": 2
+		},
+		{
+			"value": "Brave",
+			"weight": 2
+		},
+		{
+			"value": "Ancient",
+			"weight": 2
+		},
+		{
+			"value": "Doomed",
+			"weight": 1
+		},
+		{
+			"value": "Discreet",
+			"weight": 2
+		},
+		{
+			"value": "Fiery",
+			"weight": 2
+		},
+		{
+			"value": "Blazing",
+			"weight": 2
+		},
+		{
+			"value": "Frozen",
+			"weight": 2
+		},
+		{
+			"value": "Lost",
+			"weight": 2
+		},
+		{
+			"value": "Magical",
+			"weight": 2
+		},
+		{
+			"value": "Mystic",
+			"weight": 3
+		},
+		{
+			"value": "Secret",
+			"weight": 2
+		},
+		{
+			"value": "Hidden",
+			"weight": 2
+		},
+		{
+			"value": "Fleeting",
+			"weight": 2
+		},
+		{
+			"value": "Valorous",
+			"weight": 2
+		},
+		{
+			"value": "Curious",
+			"weight": 3
+		},
+		{
+			"value": "Thieving",
+			"weight": 2
+		}
+	]
+}

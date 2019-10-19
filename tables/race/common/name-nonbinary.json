@@ -1,0 +1,10 @@
+{
+	"rows": [
+		{
+			"source": "{roll:race/$(description.race.value)/name-man}"
+		},
+		{
+			"source": "{roll:race/$(description.race.value)/name-woman}"
+		}
+	]
+}

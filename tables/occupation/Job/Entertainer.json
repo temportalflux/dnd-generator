@@ -1,0 +1,64 @@
+{
+	"rows": [
+		{
+			"value": "Acrobat",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2
+			}
+		},
+		{
+			"value": "Actor",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"value": "Clown",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"value": "Dancer",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.constitution": 2
+			}
+		},
+		{
+			"value": "Fortune-Teller",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3,
+				"stats.abilityScores.wisdom": 5,
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"value": "Juggler",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2
+			}
+		},
+		{
+			"value": "Prestidigitator",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 4,
+				"stats.abilityScores.dexterity": 1
+			}
+		},
+		{
+			"value": "Funambulist",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 3
+			}
+		},
+		{
+			"value": "Storyteller",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": 2,
+				"stats.abilityScores.charisma": 2
+			}
+		}
+	]
+}

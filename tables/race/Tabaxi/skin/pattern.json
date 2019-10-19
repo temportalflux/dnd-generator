@@ -1,0 +1,21 @@
+{
+	"rows": [
+		{
+			"weight": 5,
+			"value": "",
+			"stringify": "none"
+		},
+		{
+			"weight": 1,
+			"value": "spotted "
+		},
+		{
+			"weight": 1,
+			"value": "patterned "
+		},
+		{
+			"weight": 1,
+			"value": "striped "
+		}
+	]
+}

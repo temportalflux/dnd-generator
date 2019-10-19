@@ -1,0 +1,24 @@
+{
+	"rows": [
+		{
+			"weight": 4,
+			"value": "arm"
+		},
+		{
+			"weight": 5,
+			"value": "hand"
+		},
+		{
+			"weight": 1,
+			"value": "leg"
+		},
+		{
+			"weight": 2,
+			"value": "foot"
+		},
+		{
+			"weight": 4,
+			"source": "{roll:traits/bodyPart/head/sided}"
+		}
+	]
+}

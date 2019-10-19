@@ -1,0 +1,48 @@
+{
+	"rows": [
+		{
+			"value": "sharp",
+			"weight": 2
+		},
+		{
+			"value": "round",
+			"weight": 3
+		},
+		{
+			"value": "oval",
+			"weight": 4
+		},
+		{
+			"value": "soft",
+			"weight": 1
+		},
+		{
+			"value": "diamond-shaped",
+			"weight": 1
+		},
+		{
+			"value": "triangular",
+			"weight": 1
+		},
+		{
+			"value": "oblong",
+			"weight": 2
+		},
+		{
+			"value": "edgy",
+			"weight": 2
+		},
+		{
+			"value": "square",
+			"weight": 3
+		}
+	],
+	"values": {
+		"{regex:[^aeiou]{1}.*}": {
+			"value": "a ${value}"
+		},
+		"{regex:[aeiou]{1}.*}": {
+			"value": "an ${value}"
+		}
+	}
+}

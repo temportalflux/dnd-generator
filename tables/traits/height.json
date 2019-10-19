@@ -1,0 +1,65 @@
+{
+	"rows": [
+		{
+			"source": "{randInt:140,150}",
+			"weight": 1
+		},
+		{
+			"source": "{randInt:151,161}",
+			"weight": 3
+		},
+		{
+			"source": "{randInt:162,185}",
+			"weight": 5
+		},
+		{
+			"source": "{randInt:186,195}",
+			"weight": 2
+		},
+		{
+			"source": "{randInt:195,205}",
+			"weight": 1
+		}
+	],
+	"modifiers": [
+		{
+			"match": "{regex:.*}",
+			"modifiers": {
+				"stats.abilityScores.strength": {
+					"type": "curve",
+					"curve": "step",
+					"values": {
+						"140": -2,
+						"152": -1,
+						"162": 0,
+						"182": 1,
+						"192": 2
+					}
+				},
+				"stats.abilityScores.dexterity": {
+					"type": "curve",
+					"curve": "step",
+					"values": {
+						"140": 2,
+						"152": 1,
+						"162": 0,
+						"182": -1,
+						"192": -2
+					}
+				},
+				"stats.abilityScores.constitution": {
+					"type": "curve",
+					"curve": "step",
+					"values": {
+						"140": -2,
+						"152": -1,
+						"162": 0,
+						"182": 1,
+						"192": 2
+					}
+				}
+			}
+		}
+	],
+	"values": {}
+}

@@ -1,0 +1,11 @@
+{
+	"rows": [
+		{
+			"source": "{roll:identity/sexualOrientation/gayLesbian/man}"
+		},
+		{
+			"source": "{roll:identity/sexualOrientation/gayLesbian/woman}"
+		}
+	],
+	"values": {}
+}

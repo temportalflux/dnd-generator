@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{
+			"value": "Forest",
+			"weight": 4
+		},
+		{
+			"value": "Rock",
+			"weight": 3
+		}
+	]
+}

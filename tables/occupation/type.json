@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{
+			"value": "Class",
+			"weight": 1
+		},
+		{
+			"value": "Job",
+			"weight": 4
+		}
+	]
+}

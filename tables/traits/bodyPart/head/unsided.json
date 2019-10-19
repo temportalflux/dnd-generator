@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"value": "lip"
+		},
+		{
+			"weight": 1,
+			"value": "forehead"
+		},
+		{
+			"weight": 2,
+			"value": "nose"
+		}
+	]
+}

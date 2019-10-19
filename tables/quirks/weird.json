@@ -1,0 +1,96 @@
+{
+	"rows": [
+		{
+			"weight": 30,
+			"stringify": "none"
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) mostly wears $(color) clothes.",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:common/color}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) never wears $(color) clothes.",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:common/color}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) only wears $(color) clothes.",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:common/color}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) never takes off $(identity.pronouns.possessive) footwear."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) never wears footwear."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) always wears a mask."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) always wears a veil."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) never sleeps in a bed."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) refuses to light fires."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) refuses to write."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) never sits on a chair."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) speaks only in riddles."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) doesn't tolerate nicknames."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) keeps a list of all $(identity.pronouns.possessive) fallen enemies."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has an imaginary friend."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) $(frequency) changes name.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"weight": 8,
+			"value": "slave"
+		},
+		{
+			"weight": 2,
+			"value": "felon"
+		},
+		{
+			"weight": 5,
+			"value": "prisoner"
+		}
+	]
+}

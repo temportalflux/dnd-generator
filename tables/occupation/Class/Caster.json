@@ -1,0 +1,317 @@
+{
+	"rows": [
+		{
+			"weight": 9,
+			"value": "Cleric",
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/medium}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/low}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/high}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/medium}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/high}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"value": "Artificier",
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/medium}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/medium}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/high}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/medium}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkRich",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/rich}"
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Druid",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": -2,
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.ethical.negative": -2,
+				"stats.alignmentTendancies.moral.positive": -2,
+				"stats.alignmentTendancies.moral.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": -2
+			},
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/low}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/medium}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/medium}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/high}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				},
+				{
+					"key": "quirkNature",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/nature}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"value": "Mystic",
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/low}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/low}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/high}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/high}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Sorcerer",
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/low}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/medium}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/medium}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/medium}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/high}"
+						}
+					]
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Warlock",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.negative": 1
+			},
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/low}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/medium}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/medium}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/low}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/high}"
+						}
+					]
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"value": "Wizard",
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/low}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/medium}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/high}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/medium}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/low}"
+						}
+					]
+				},
+				{
+					"key": "quirkRich",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/rich}"
+				},
+				{
+					"key": "quirkWeird",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/weird}"
+				}
+			]
+		}
+	]
+}

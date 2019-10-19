@@ -1,0 +1,60 @@
+{
+	"rows": [
+		{
+			"weight": 10,
+			"value": "a"
+		},
+		{
+			"weight": 4,
+			"value": "an unfinished"
+		},
+		{
+			"weight": 2,
+			"value": "a small"
+		},
+		{
+			"weight": 2,
+			"value": "a large"
+		},
+		{
+			"weight": 2,
+			"value": "a tiny"
+		},
+		{
+			"weight": 1,
+			"value": "an elaborate"
+		},
+		{
+			"weight": 1,
+			"value": "a beautiful"
+		},
+		{
+			"weight": 1,
+			"value": "a badly done"
+		},
+		{
+			"weight": 1,
+			"value": "a colorful"
+		},
+		{
+			"weight": 1,
+			"value": "a complicated"
+		},
+		{
+			"weight": 1,
+			"value": "a shocking"
+		},
+		{
+			"weight": 1,
+			"value": "a provocative"
+		},
+		{
+			"weight": 1,
+			"value": "a bland"
+		},
+		{
+			"weight": 1,
+			"value": "an exceptional"
+		}
+	]
+}

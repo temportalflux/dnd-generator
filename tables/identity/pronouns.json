@@ -1,0 +1,28 @@
+{
+	"rows": [
+		{
+			"value": {
+				"singular": "he",
+				"thirdPerson": "him",
+				"possessive": "his",
+				"selfPossessive": "his"
+			}
+		},
+		{
+			"value": {
+				"singular": "she",
+				"thirdPerson": "her",
+				"possessive": "hers",
+				"selfPossessive": "her"
+			}
+		},
+		{
+			"value": {
+				"singular": "they",
+				"thirdPerson": "them",
+				"possessive": "theirs",
+				"selfPossessive": "their"
+			}
+		}
+	]
+}

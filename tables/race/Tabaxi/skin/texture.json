@@ -1,0 +1,44 @@
+{
+	"rows": [
+		{
+			"value": "lustrous",
+			"weight": 2
+		},
+		{
+			"value": "soft",
+			"weight": 6
+		},
+		{
+			"value": "dirty",
+			"weight": 1
+		},
+		{
+			"value": "rough",
+			"weight": 1
+		},
+		{
+			"value": "fluffy",
+			"weight": 3
+		},
+		{
+			"value": "short",
+			"weight": 5
+		},
+		{
+			"value": "long",
+			"weight": 3
+		},
+		{
+			"value": "shiny",
+			"weight": 3
+		},
+		{
+			"value": "luxurious",
+			"weight": 1
+		},
+		{
+			"value": "dense",
+			"weight": 2
+		}
+	]
+}

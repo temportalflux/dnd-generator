@@ -1,0 +1,373 @@
+{
+	"rows": [
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) has a $(sizeString === 'none' ? '' : size)$(sizeString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"children": [
+				{
+					"key": "size",
+					"source": "{roll:quirks/modifier/size}"
+				},
+				{
+					"key": "bodyPart",
+					"source": "{roll:traits/bodyPart}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has $(sizeAString === 'none' ? '' : sizeA)$(sizeAString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(sizeBString === 'none' ? '' : sizeB)$(sizeBString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"children": [
+				{
+					"key": "sizeA",
+					"source": "{roll:quirks/modifier/size}"
+				},
+				{
+					"key": "bodyPartA",
+					"source": "{roll:traits/bodyPart}"
+				},
+				{
+					"key": "sizeB",
+					"source": "{roll:quirks/modifier/size}"
+				},
+				{
+					"key": "bodyPartB",
+					"source": "{roll:traits/bodyPart}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) has $(descriptor) piercing on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"children": [
+				{
+					"key": "descriptor",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPart",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) piercing on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(descriptorB) piercing on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"children": [
+				{
+					"key": "descriptorA",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPartA",
+					"source": "{roll:traits/bodyPart/head}"
+				},
+				{
+					"key": "descriptorB",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPartB",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) on $(identity.pronouns.selfPossessive) $(bodyPartAString), $(descriptorB) on $(identity.pronouns.selfPossessive) $(bodyPartBString), and $(descriptorC) on $(identity.pronouns.selfPossessive) $(bodyPartCString).",
+			"children": [
+				{
+					"key": "descriptorA",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPartA",
+					"source": "{roll:traits/bodyPart/head}"
+				},
+				{
+					"key": "descriptorB",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPartB",
+					"source": "{roll:traits/bodyPart/head}"
+				},
+				{
+					"key": "descriptorC",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPartC",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has $(amount) $(descriptor) piercings on $(identity.pronouns.selfPossessive) $(bodyPartString)",
+			"children": [
+				{
+					"key": "amount",
+					"source": "{roll:traits/physical/piercingAmount}"
+				},
+				{
+					"key": "descriptor",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPart",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has $(amountA) $(descriptorA) piercings on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(amountB) $(descriptorB) piercings on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"children": [
+				{
+					"key": "amountA",
+					"source": "{roll:traits/physical/piercingAmount}"
+				},
+				{
+					"key": "descriptorA",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPartA",
+					"source": "{roll:traits/bodyPart/head}"
+				},
+				{
+					"key": "amountB",
+					"source": "{roll:traits/physical/piercingAmount}"
+				},
+				{
+					"key": "descriptorB",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "bodyPartB",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has a $(degree)limp.",
+			"children": [
+				{
+					"key": "degree",
+					"source": "{roll:traits/degree/degree}"
+				}
+			],
+			"modifiers": {
+				"stats.abilityScores.dexterity": -2
+			}
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has $(degree)hunch.",
+			"children": [
+				{
+					"key": "degree",
+					"source": "{roll:traits/degree/degree}"
+				}
+			],
+			"modifiers": {
+				"stats.abilityScores.dexterity": -1,
+				"stats.abilityScores.charisma": -2
+			}
+		},
+		{
+			"weight": 5,
+			"stringify": "$(identity.pronouns.singular) has $(descriptor) $(tattooString) on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"children": [
+				{
+					"key": "descriptor",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "tattoo",
+					"source": "{roll:traits/tattoo}"
+				},
+				{
+					"key": "bodyPart",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooAString) on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(descriptorB) $(tattooBString) on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"children": [
+				{
+					"key": "descriptorA",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "tattooA",
+					"source": "{roll:traits/tattoo}"
+				},
+				{
+					"key": "bodyPartA",
+					"source": "{roll:traits/bodyPart/head}"
+				},
+				{
+					"key": "descriptorB",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "tattooB",
+					"source": "{roll:traits/tattoo}"
+				},
+				{
+					"key": "bodyPartB",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooAString) on $(identity.pronouns.selfPossessive) $(bodyPartAString), $(descriptorB) $(tattooBString) on $(identity.pronouns.selfPossessive) $(bodyPartBString), and $(descriptorC) $(tattooCString) on $(identity.pronouns.selfPossessive) $(bodyPartCString).",
+			"children": [
+				{
+					"key": "descriptorA",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "tattooA",
+					"source": "{roll:traits/tattoo}"
+				},
+				{
+					"key": "bodyPartA",
+					"source": "{roll:traits/bodyPart/head}"
+				},
+				{
+					"key": "descriptorB",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "tattooB",
+					"source": "{roll:traits/tattoo}"
+				},
+				{
+					"key": "bodyPartB",
+					"source": "{roll:traits/bodyPart/head}"
+				},
+				{
+					"key": "descriptorC",
+					"source": "{roll:traits/descriptor}"
+				},
+				{
+					"key": "tattooC",
+					"source": "{roll:traits/tattoo}"
+				},
+				{
+					"key": "bodyPartC",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is branded as a $(brand) on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"children": [
+				{
+					"key": "brand",
+					"source": "{roll:traits/brand}"
+				},
+				{
+					"key": "bodyPart",
+					"source": "{roll:traits/bodyPart/head}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has $(degree) scoliose.",
+			"children": [
+				{
+					"key": "degree",
+					"source": "{roll:traits/degree/degree}"
+				}
+			],
+			"modifiers": {
+				"stats.abilityScores.dexterity": -1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) smells $(degree)of $(smell).",
+			"children": [
+				{
+					"key": "degree",
+					"source": "{roll:traits/degree/degree2}"
+				},
+				{
+					"key": "smell",
+					"source": "{roll:traits/smell/bad}"
+				}
+			],
+			"modifiers": {
+				"stats.abilityScores.charisma": -1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) smells $(degree)of $(smell).",
+			"children": [
+				{
+					"key": "degree",
+					"source": "{roll:traits/degree/degree2}"
+				},
+				{
+					"key": "smell",
+					"source": "{roll:traits/smell/good}"
+				}
+			],
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is very nimble.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is very clumsy.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": -3
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) gestures profusely during a conversation."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has a high-pitched voice."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has a low-toned voice."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is easily out of breath.",
+			"modifiers": {
+				"stats.abilityScores.constitution": -2
+			}
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has a sunken breastbone."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) cannot whistle."
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"rows": [
+		{
+			"value": "straight",
+			"weight": 30
+		},
+		{
+			"value": "bisexual",
+			"weight": 25
+		},
+		{
+			"source": "{roll:identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)}",
+			"weight": 100
+		},
+		{
+			"value": "pansexual",
+			"weight": 15
+		}
+	],
+	"values": {}
+}

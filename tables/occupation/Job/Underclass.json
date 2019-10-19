@@ -1,0 +1,80 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"value": "Bandit",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.negative": 1
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"value": "Beggar",
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": -2,
+				"stats.abilityScores.wisdom": -2,
+				"stats.abilityScores.charisma": -2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "Fence",
+			"modifiers": {
+				"stats.abilityScores.charisma": 4
+			}
+		},
+		{
+			"weight": 2,
+			"value": "Pickpockset",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 3,
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.negative": 1
+			}
+		},
+		{
+			"weight": 1,
+			"value": "Procurer",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3,
+				"stats.abilityScores.charisma": 3
+			}
+		},
+		{
+			"weight": 2,
+			"value": "Prostitute",
+			"modifiers": {
+				"stats.abilityScores.charisma": 4
+			}
+		},
+		{
+			"weight": 1,
+			"value": "Slaver",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "Smuggler",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3
+			}
+		}
+	]
+}

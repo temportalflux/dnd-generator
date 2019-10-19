@@ -1,0 +1,12 @@
+{
+	"rows": [
+		{
+			"value": "Mountain",
+			"weight": 5
+		},
+		{
+			"value": "Hill",
+			"weight": 6
+		}
+	]
+}

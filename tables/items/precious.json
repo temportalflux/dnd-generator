@@ -1,0 +1,48 @@
+{
+	"rows": [
+		{
+			"weight": 1,
+			"value": "pendant"
+		},
+		{
+			"weight": 1,
+			"value": "ring"
+		},
+		{
+			"weight": 1,
+			"value": "robe"
+		},
+		{
+			"weight": 1,
+			"value": "trinket"
+		},
+		{
+			"weight": 1,
+			"value": "bracelet"
+		},
+		{
+			"weight": 1,
+			"value": "watch"
+		},
+		{
+			"weight": 1,
+			"value": "amulet"
+		},
+		{
+			"weight": 1,
+			"value": "tiara"
+		},
+		{
+			"weight": 1,
+			"value": "gem"
+		},
+		{
+			"weight": 1,
+			"value": "coin"
+		},
+		{
+			"weight": 2,
+			"source": "{roll:items/weapon}"
+		}
+	]
+}

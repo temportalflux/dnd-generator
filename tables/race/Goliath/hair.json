@@ -1,0 +1,13 @@
+{
+	"rows": [
+		{
+			"value": "bald",
+			"children": [
+				{
+					"key": "tattoos",
+					"source": "{roll:race/Goliath/hairTattoos}"
+				}
+			]
+		}
+	]
+}

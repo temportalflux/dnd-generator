@@ -1,0 +1,34 @@
+{
+	"rows": [
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to spread misery and despair."
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to spread lies and fear.",
+			"modifiers": {
+				"stats.abilityScore.intelligence": 3
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to spread sadness and sorrow."
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to raise an army of followers.",
+			"modifiers": {
+				"stats.abilityScore.charisma": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to eradicate good aasimars."
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks to eradicate followers of good gods."
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) seeks mindless destruction.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3
+			}
+		}
+	]
+}

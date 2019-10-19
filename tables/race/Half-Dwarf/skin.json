@@ -1,0 +1,10 @@
+{
+	"rows": [
+		{
+			"source": "{roll:traits/skin}"
+		},
+		{
+			"source": "{roll:race/Dwarf/skin}"
+		}
+	]
+}

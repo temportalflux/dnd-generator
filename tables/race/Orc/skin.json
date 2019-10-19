@@ -1,0 +1,21 @@
+{
+	"rows": [
+		{
+			"stringify": "$(color) $(texture), $(tone)skin",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:race/Orc/skin/color}"
+				},
+				{
+					"key": "texture",
+					"source": "{roll:traits/skin/textureSkin}"
+				},
+				{
+					"key": "tone",
+					"source": "{roll:traits/skin/tone}"
+				}
+			]
+		}
+	]
+}

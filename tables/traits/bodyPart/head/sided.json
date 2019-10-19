@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"weight": 1,
+			"value": "cheek"
+		},
+		{
+			"weight": 3,
+			"value": "eyebrow"
+		},
+		{
+			"weight": 5,
+			"value": "ear"
+		}
+	]
+}

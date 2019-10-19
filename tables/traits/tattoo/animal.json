@@ -1,0 +1,200 @@
+{
+	"rows": [
+		{
+			"value": "skull",
+			"weight": 8
+		},
+		{
+			"value": "wolf",
+			"weight": 3
+		},
+		{
+			"value": "bear",
+			"weight": 3
+		},
+		{
+			"value": "eagle",
+			"weight": 3
+		},
+		{
+			"value": "falcon",
+			"weight": 3
+		},
+		{
+			"value": "fish",
+			"weight": 3
+		},
+		{
+			"value": "shark",
+			"weight": 3
+		},
+		{
+			"value": "cobra",
+			"weight": 3
+		},
+		{
+			"value": "snake",
+			"weight": 3
+		},
+		{
+			"value": "crocodile",
+			"weight": 3
+		},
+		{
+			"value": "deer",
+			"weight": 3
+		},
+		{
+			"value": "gorilla",
+			"weight": 3
+		},
+		{
+			"value": "elephant",
+			"weight": 3
+		},
+		{
+			"value": "horse",
+			"weight": 3
+		},
+		{
+			"value": "rabbit",
+			"weight": 3
+		},
+		{
+			"value": "goat",
+			"weight": 3
+		},
+		{
+			"value": "gecko",
+			"weight": 3
+		},
+		{
+			"value": "lizard",
+			"weight": 3
+		},
+		{
+			"value": "turtle",
+			"weight": 3
+		},
+		{
+			"value": "panther",
+			"weight": 3
+		},
+		{
+			"value": "dog",
+			"weight": 3
+		},
+		{
+			"value": "cat",
+			"weight": 3
+		},
+		{
+			"value": "scorpion",
+			"weight": 3
+		},
+		{
+			"value": "scarab",
+			"weight": 3
+		},
+		{
+			"value": "spider",
+			"weight": 3
+		},
+		{
+			"value": "fly",
+			"weight": 2
+		},
+		{
+			"value": "rat",
+			"weight": 3
+		},
+		{
+			"value": "mouse",
+			"weight": 3
+		},
+		{
+			"value": "fox",
+			"weight": 3
+		},
+		{
+			"value": "tiger",
+			"weight": 3
+		},
+		{
+			"value": "lion",
+			"weight": 3
+		},
+		{
+			"value": "armadillo",
+			"weight": 2
+		},
+		{
+			"value": "dragon",
+			"weight": 2
+		},
+		{
+			"value": "wyvern",
+			"weight": 2
+		},
+		{
+			"value": "octopus",
+			"weight": 2
+		},
+		{
+			"value": "medusa",
+			"weight": 2
+		},
+		{
+			"value": "minotaur",
+			"weight": 2
+		},
+		{
+			"value": "manatee",
+			"weight": 2
+		},
+		{
+			"value": "giraffe",
+			"weight": 2
+		},
+		{
+			"value": "koala",
+			"weight": 2
+		},
+		{
+			"value": "unicorn",
+			"weight": 2
+		},
+		{
+			"value": "umber hulk",
+			"weight": 2
+		},
+		{
+			"value": "ghost",
+			"weight": 2
+		},
+		{
+			"value": "demon",
+			"weight": 2
+		},
+		{
+			"value": "wurm",
+			"weight": 2
+		},
+		{
+			"value": "zombie",
+			"weight": 2
+		},
+		{
+			"value": "jellyfish",
+			"weight": 2
+		},
+		{
+			"value": "chimera",
+			"weight": 2
+		},
+		{
+			"value": "kraken",
+			"weight": 2
+		}
+	]
+}

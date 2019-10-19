@@ -1,0 +1,10 @@
+{
+	"rows": [
+		{
+			"source": "{roll:race/Human/name-nonbinary}"
+		},
+		{
+			"source": "{roll:race/Elf/name-nonbinary}"
+		}
+	]
+}

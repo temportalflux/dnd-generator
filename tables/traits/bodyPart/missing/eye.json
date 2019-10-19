@@ -1,0 +1,13 @@
+{
+	"rows": [
+		{
+			"stringify": "wears an eyepatch on $(identity.pronouns.possessive)"
+		},
+		{
+			"stringify": "has a glass"
+		},
+		{
+			"stringify": "is blind from $(identity.pronouns.possessive)"
+		}
+	]
+}

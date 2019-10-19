@@ -1,0 +1,284 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"value": "Barbarian",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": -1,
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			},
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/high}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/high}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/low}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/low}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkPoor",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/poor}"
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"weight": 12,
+			"value": "Fighter",
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/high}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/medium}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/high}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/low}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/medium}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"weight": 6,
+			"value": "Monk",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.ethical.neutral": -2,
+				"stats.alignmentTendancies.ethical.negative": -2
+			},
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/high}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/high}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/high}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/medium}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/high}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"weight": 8,
+			"value": "Paladin",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 3,
+				"stats.alignmentTendancies.ethical.negative": -1,
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.negative": -3
+			},
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/high}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/low}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/high}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/low}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/medium}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/high}"
+						}
+					]
+				},
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				},
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"value": "Ranger",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			},
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/medium}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/high}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/high}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/low}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/medium}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkNature",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/nature}"
+				}
+			]
+		},
+		{
+			"weight": 5,
+			"value": "Rogue",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 1
+			},
+			"children": [
+				{
+					"key": "abilityBonus",
+					"hideInlineValue": true,
+					"children": [
+						{
+							"key": "strength",
+							"source": "{roll:bonus/ability/str/low}"
+						},
+						{
+							"key": "dexterity",
+							"source": "{roll:bonus/ability/dex/high}"
+						},
+						{
+							"key": "constitution",
+							"source": "{roll:bonus/ability/const/medium}"
+						},
+						{
+							"key": "intelligence",
+							"source": "{roll:bonus/ability/int/high}"
+						},
+						{
+							"key": "wisdom",
+							"source": "{roll:bonus/ability/wis/low}"
+						},
+						{
+							"key": "charisma",
+							"source": "{roll:bonus/ability/cha/medium}"
+						}
+					]
+				},
+				{
+					"key": "quirkPoor",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/poor}"
+				}
+			]
+		}
+	]
+}

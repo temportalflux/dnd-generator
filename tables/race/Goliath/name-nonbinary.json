@@ -1,0 +1,90 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"stringify": "$(noun)$(action)",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": 2
+			},
+			"children": [
+				{
+					"key": "noun",
+					"source": "{roll:race/Goliath/names/mystic-noun}"
+				},
+				{
+					"key": "action",
+					"source": "{roll:race/Goliath/names/mystic-action}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(noun)$(action)",
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.constitution": 2
+			},
+			"children": [
+				{
+					"key": "noun",
+					"source": "{roll:race/Goliath/names/fighting-noun}"
+				},
+				{
+					"key": "action",
+					"source": "{roll:race/Goliath/names/fighting-action}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(noun)$(action)",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.intelligence": 1
+			},
+			"children": [
+				{
+					"key": "noun",
+					"source": "{roll:race/Goliath/names/craft-noun}"
+				},
+				{
+					"key": "action",
+					"source": "{roll:race/Goliath/names/craft-action}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(noun)$(action)",
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.wisdom": 2
+			},
+			"children": [
+				{
+					"key": "noun",
+					"source": "{roll:race/Goliath/names/animal-noun}"
+				},
+				{
+					"key": "action",
+					"source": "{roll:race/Goliath/names/animal-action}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(adjective)$(noun)",
+			"children": [
+				{
+					"key": "adjective",
+					"source": "{roll:race/Goliath/names/adjective}"
+				},
+				{
+					"key": "noun",
+					"source": "{roll:race/Goliath/names/noun}"
+				}
+			]
+		}
+	]
+}

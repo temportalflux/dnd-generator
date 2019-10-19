@@ -1,0 +1,40 @@
+{
+	"rows": [
+		{
+			"value": "golden",
+			"weight": 2
+		},
+		{
+			"value": "black",
+			"weight": 3
+		},
+		{
+			"value": "gray",
+			"weight": 3
+		},
+		{
+			"value": "dark gray",
+			"weight": 4
+		},
+		{
+			"value": "orange",
+			"weight": 2
+		},
+		{
+			"value": "red",
+			"weight": 1
+		},
+		{
+			"value": "chestnut",
+			"weight": 2
+		},
+		{
+			"value": "yellow",
+			"weight": 2
+		},
+		{
+			"value": "white",
+			"weight": 3
+		}
+	]
+}

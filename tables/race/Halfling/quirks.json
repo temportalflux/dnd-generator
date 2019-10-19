@@ -1,0 +1,61 @@
+{
+	"rows": [
+		{
+			"weight": 12,
+			"stringify": "none"
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) tries to stay home as much as possible."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) usually tries not to get noticed."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) is very shy.",
+			"modifiers": {
+				"stats.abilityScores.charisma": -1
+			}
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has several pet animals."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) rides a pony everywhere."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) always has a good joke to tell.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) knows all there is to know about farms."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) lived $(identity.pronouns.possessive) early years in a caravan."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) never goes anywhere without $(identity.pronouns.possessive) best friend."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) smiles constantly.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) values $(identity.pronouns.possessive) community very highly."
+		}
+	]
+}

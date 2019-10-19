@@ -1,0 +1,623 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"value": "Aasimar",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 3
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:common/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Aasimar/quirk-$(personality.alignmentMoral)}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"value": "Dragonborn",
+			"modifiers": {
+				"stats.abilityScores.strength": 3,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 2,
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": -1,
+				"stats.abilityScores.charisma": 2,
+				"description.height": 20
+			},
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:creatures/dragon/color}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:creatures/dragon/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/scales}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Dragonborn/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 11,
+			"value": "Dwarf",
+			"modifiers": {
+				"description.height": -38
+			},
+			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Dwarf}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:race/Dwarf/beard}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Dwarf/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Dwarf/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 16,
+			"value": "Elf",
+			"modifiers": {
+				"description.height": -5
+			},
+			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Elf}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Elf/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Elf/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Firbolg",
+			"modifiers": {
+				"stats.abilityScores.strength": 3,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 2,
+				"stats.abilityScores.wisdom": 2,
+				"description.height": 60,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.good": 2,
+				"stats.alignmentTendancies.moral.neutral": 2
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Firbolg/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Firbolg/quirks}"
+				},
+				{
+					"key": "quirkNature",
+					"name": "Nature Quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/nature}"
+				}
+			]
+		},
+		{
+			"weight": 7,
+			"value": "Gnome",
+			"modifiers": {
+				"description.height": -58
+			},
+			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Gnome}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/nonhuman}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Gnome/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"value": "Goblin",
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": -4,
+				"stats.abilityScores.wisdom": -3,
+				"stats.abilityScores.charisma": -1,
+				"description.height": -50,
+				"stats.alignmentTendancies.ethical.neutral": 2,
+				"stats.alignmentTendancies.ethical.positive": -2,
+				"stats.alignmentTendancies.moral.negative": 3
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Orc/skin}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Goliath",
+			"modifiers": {
+				"stats.abilityScores.strength": 3,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 3,
+				"stats.abilityScores.intelligence": -2,
+				"description.height": 60,
+				"stats.alignmentTendancies.ethical.positive": 3,
+				"stats.alignmentTendancies.ethical.negative": -2,
+				"stats.alignmentTendancies.moral.positive": -2,
+				"stats.alignmentTendancies.moral.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": -2
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:race/Goliath/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/nonhuman}"
+				},
+				{
+					"key": "quirk1",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Goliath/quirks-1}"
+				},
+				{
+					"key": "quirk2",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Goliath/quirks-2}"
+				}
+			]
+		},
+		{
+			"weight": 20,
+			"value": "Half-Dwarf",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.constitution": 2,
+				"stats.abilityScores.wisdom": 1,
+				"description.height": -25,
+				"stats.alignmentTendancies.ethical.positive": 2
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Half-Dwarf/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Dwarf/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 25,
+			"value": "Half-Elf",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.charisma": 2,
+				"description.height": -5,
+				"stats.alignmentTendancies.ethical.negative": 2
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Half-Elf/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Elf/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 5,
+			"value": "Half-Orc",
+			"modifiers": {
+				"stats.abilityScores.strength": 4,
+				"stats.abilityScores.dexterity": -1,
+				"stats.abilityScores.constitution": 3,
+				"stats.abilityScores.intelligence": -3,
+				"stats.abilityScores.wisdom": -3,
+				"stats.abilityScores.charisma": -1,
+				"description.height": 15,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -2
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Half-Orc/skin}"
+				}
+			]
+		},
+		{
+			"weight": 8,
+			"value": "Halfling",
+			"modifiers": {
+				"description.height": -63
+			},
+			"children": [
+				{
+					"key": "subrace",
+					"source": "{roll:race/Halfling}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/nonhuman}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Halfling/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 70,
+			"value": "Human",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/human}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Kenku",
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 3,
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1,
+				"description.height": -28,
+				"stats.alignmentTendancies.ethical.positive": -2,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -1,
+				"stats.alignmentTendancies.moral.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": -1,
+				"description.age": -6
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Kenku/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Kenku/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Lizardfolk",
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": -2,
+				"stats.abilityScores.wisdom": 2,
+				"stats.abilityScores.charisma": -2,
+				"description.height": 15,
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.ethical.negative": -3,
+				"stats.alignmentTendancies.moral.positive": -1,
+				"stats.alignmentTendancies.moral.neutral": 2,
+				"stats.alignmentTendancies.moral.negative": -1,
+				"description.age": -4
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:creatures/dragon/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:traits/skin/scales}"
+				},
+				{
+					"key": "quirk1",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Lizardfolk/quirks-1}"
+				},
+				{
+					"key": "quirk2",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Lizardfolk/quirks-2}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"value": "Orc",
+			"modifiers": {
+				"stats.abilityScores.strength": 5,
+				"stats.abilityScores.dexterity": -1,
+				"stats.abilityScores.constitution": 5,
+				"stats.abilityScores.intelligence": -4,
+				"stats.abilityScores.wisdom": -3,
+				"description.height": 20,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -2,
+				"stats.alignmentTendancies.moral.negative": 2
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Orc/skin}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"value": "Tabaxi",
+			"modifiers": {
+				"stats.abilityScores.strength": -1,
+				"stats.abilityScores.dexterity": 4,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": -2,
+				"stats.abilityScores.charisma": 1,
+				"description.height": 10,
+				"stats.alignmentTendancies.moral.positive": 1,
+				"stats.alignmentTendancies.ethical.negative": 3
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Tabaxi/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Tabaxi/quirks}"
+				},
+				{
+					"key": "obsession",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Tabaxi/quirkObsession}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"value": "Tiefling",
+			"modifiers": {
+				"stats.abilityScores.constitution": -1,
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.charisma": 3,
+				"stats.alignmentTendancies.ethical.negative": 3
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "beard",
+					"source": "{roll:traits/face/beard}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Tiefling/skin}"
+				},
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonus}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"value": "Triton",
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.constitution": 2,
+				"stats.abilityScores.charisma": 1,
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.negative": -3
+			},
+			"children": [
+				{
+					"key": "ageBonus",
+					"source": "{roll:traits/ageBonusSmall}"
+				},
+				{
+					"key": "hair",
+					"source": "{roll:traits/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Triton/skin}"
+				},
+				{
+					"key": "quirk",
+					"collection": "personality.quirks",
+					"source": "{roll:race/Elf/quirks}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"value": "Troglodyte",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": -4,
+				"stats.abilityScores.charisma": -4,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": -2,
+				"stats.alignmentTendancies.moral.negative": 2
+			},
+			"children": [
+				{
+					"key": "hair",
+					"source": "{roll:creatures/dragon/hair}"
+				},
+				{
+					"key": "skin",
+					"source": "{roll:race/Lizardfolk/skin}"
+				}
+			]
+		}
+	]
+}

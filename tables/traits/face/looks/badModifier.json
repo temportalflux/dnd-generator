@@ -1,0 +1,33 @@
+{
+	"rows": [
+		{
+			"source": "{roll:traits/modifier}"
+		}
+	],
+	"modifiers": [
+		{
+			"match": "slightly",
+			"modifiers": {
+				"stats.abilityScores.charisma": -1
+			}
+		},
+		{
+			"match": "very",
+			"modifiers": {
+				"stats.abilityScores.charisma": -2
+			}
+		},
+		{
+			"match": "incredibly",
+			"modifiers": {
+				"stats.abilityScores.charisma": -3
+			}
+		},
+		{
+			"match": "extremely",
+			"modifiers": {
+				"stats.abilityScores.charisma": -4
+			}
+		}
+	]
+}

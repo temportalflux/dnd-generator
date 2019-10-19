@@ -1,0 +1,21 @@
+{
+	"rows": [
+		{
+			"stringify": "$(color) $(texture)$(toneString === 'none' ? '' : ',') $(toneString === 'none' ? '' : tone)$(toneString === 'none' ? '' : ', ')skin",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:race/Elf/skin/color}"
+				},
+				{
+					"key": "texture",
+					"source": "{roll:traits/skin/textureSkin}"
+				},
+				{
+					"key": "tone",
+					"source": "{roll:traits/skin/tone}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"rows": [
+		{
+			"weight": 35,
+			"stringify": "none"
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is disgusted by human architecture."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) feels more comfortable while surrounded by nature."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is secretly captivated by dwarves."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has a deep knowledge of ancient secrets."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) has a deep knowledge of ancient magic."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) knows the name of all the local plants."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) will only speak common if absolutely forced to."
+		},
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) never knows the current time and date."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) paints $(attractivenessString) paintings in $(identity.pronouns.possessive) spare time.",
+			"children": [
+				{
+					"key": "attractiveness",
+					"source": "{roll:traits/face/attractiveness}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) is always late."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) has never declared himself an adult."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is deeply xenophobic."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) uses terms from a different language as $(identity.pronouns.singular) speaks.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,140 @@
+{
+	"rows": [
+		{
+			"value": "Armorer",
+			"weight": 2
+		},
+		{
+			"value": "Painter",
+			"weight": 1,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
+		},
+		{
+			"value": "Baker",
+			"weight": 1
+		},
+		{
+			"value": "Banker",
+			"weight": 1
+		},
+		{
+			"value": "Blacksmith",
+			"weight": 3
+		},
+		{
+			"value": "Bowyer",
+			"weight": 1
+		},
+		{
+			"value": "Brewer",
+			"weight": 2
+		},
+		{
+			"value": "Butcher",
+			"weight": 2
+		},
+		{
+			"value": "Carpenter",
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1
+			}
+		},
+		{
+			"value": "Clothier",
+			"weight": 1
+		},
+		{
+			"value": "Cook",
+			"weight": 2
+		},
+		{
+			"value": "Furrier",
+			"weight": 1
+		},
+		{
+			"value": "Goldsmith",
+			"weight": 1
+		},
+		{
+			"value": "Innkeeper",
+			"weight": 4,
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"value": "Jeweler",
+			"weight": 2,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.intelligence": 1
+			}
+		},
+		{
+			"value": "Leatherworker",
+			"weight": 3
+		},
+		{
+			"value": "Locksmith",
+			"weight": 2,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
+		},
+		{
+			"value": "Mason",
+			"weight": 2
+		},
+		{
+			"value": "Merchant",
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"value": "Musician",
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.charisma": 4
+			}
+		},
+		{
+			"value": "Tinker",
+			"weight": 1,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.intelligence": 3
+			}
+		},
+		{
+			"value": "Torturer",
+			"weight": 1,
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.charisma": 2,
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		{
+			"value": "Trader",
+			"weight": 2,
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3,
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"value": "Weaver",
+			"weight": 3,
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"rows": [
+		{
+			"value": "romantic",
+			"weight": 100
+		},
+		{
+			"value": "demiromantic",
+			"weight": 20
+		},
+		{
+			"value": "aromantic",
+			"weight": 15
+		}
+	]
+}

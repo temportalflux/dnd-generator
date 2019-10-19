@@ -1,0 +1,300 @@
+{
+	"generationOrder": [
+		"stats.abilityScores",
+		"stats.alignmentTendancies",
+		"personality.quirks",
+		"personality.alignmentMoral",
+		"identity.pronouns",
+		"identity.genderIdentity",
+		"identity.genderExpression",
+		"identity.sex",
+		"identity.sexualOrientation",
+		"identity.sexualIdentity",
+		"identity.romanticIdentity",
+		"description.height",
+		"description.weight",
+		"description.eyeColor",
+		"description.age",
+		"description.race",
+		"description.face",
+		"personality.religion",
+		"identity.name",
+		"identity.surname",
+		"personality.generalQuirk",
+		"personality.trait1",
+		"personality.trait2",
+		"description.specialPhysical",
+		"occupation.type",
+		"occupation.category",
+		"occupation.profession"
+	],
+	"fieldOrder": [
+		{
+			"category": "stats",
+			"key": "abilityScores",
+			"stringify": "STR($(strength)) DEX($(dexterity)) CON($(constitution)) INT($(intelligence)) WIS($(wisdom)) CHA($(charisma))",
+			"canReroll": false,
+			"children": [
+				{
+					"key": "strength",
+					"value": 9,
+					"minimum": 0
+				},
+				{
+					"key": "dexterity",
+					"value": 9,
+					"minimum": 0
+				},
+				{
+					"key": "constitution",
+					"value": 9,
+					"minimum": 0
+				},
+				{
+					"key": "intelligence",
+					"value": 9,
+					"minimum": 0
+				},
+				{
+					"key": "wisdom",
+					"value": 9,
+					"minimum": 0
+				},
+				{
+					"key": "charisma",
+					"value": 9,
+					"minimum": 0
+				}
+			]
+		},
+		{
+			"category": "stats",
+			"key": "alignmentTendancies",
+			"stringify": "($(ethical.positive)/$(ethical.neutral)/$(ethical.negative)) - ($(moral.positive)/$(moral.neutral)/$(moral.negative))",
+			"children": [
+				{
+					"key": "ethical",
+					"stringify": "$(positive)/$(neutral)/$(negative)",
+					"children": [
+						{
+							"key": "positive",
+							"name": "Lawful",
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
+						},
+						{
+							"key": "neutral",
+							"name": "Neutral",
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
+						},
+						{
+							"key": "negative",
+							"name": "Chaotic",
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
+						}
+					]
+				},
+				{
+					"key": "moral",
+					"stringify": "$(positive)/$(neutral)/$(negative)",
+					"children": [
+						{
+							"key": "positive",
+							"name": "Good",
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
+						},
+						{
+							"key": "neutral",
+							"name": "Neutral",
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
+						},
+						{
+							"key": "negative",
+							"name": "Evil",
+							"source": "{roll:traits/alignment/tendancy}",
+							"minimum": 0
+						}
+					]
+				}
+			]
+		},
+		{
+			"category": "personality",
+			"key": "quirks",
+			"canReroll": false,
+			"hideInlineValue": true,
+			"value": []
+		},
+		{
+			"category": "personality",
+			"key": "alignmentMoral",
+			"source": "{roll:traits/alignmentMoral}"
+		},
+		{
+			"category": "identity",
+			"key": "pronouns",
+			"source": "{roll:identity/pronouns}",
+			"stringify": "$(singular)/$(thirdPerson)/$(possessive)"
+		},
+		{
+			"category": "identity",
+			"key": "genderIdentity",
+			"source": "{roll:identity/genderIdentity}"
+		},
+		{
+			"category": "identity",
+			"key": "genderExpression",
+			"source": "{roll:identity/genderExpression}"
+		},
+		{
+			"category": "identity",
+			"key": "sex",
+			"source": "{roll:identity/sex}"
+		},
+		{
+			"category": "identity",
+			"key": "sexualOrientation",
+			"source": "{roll:identity/sexualOrientation}"
+		},
+		{
+			"category": "identity",
+			"key": "sexualIdentity",
+			"source": "{roll:identity/sexualIdentity}"
+		},
+		{
+			"category": "identity",
+			"key": "romanticIdentity",
+			"source": "{roll:identity/romanticIdentity}"
+		},
+		{
+			"category": "description",
+			"key": "height",
+			"source": "{roll:traits/height}"
+		},
+		{
+			"category": "description",
+			"key": "weight",
+			"source": "{roll:traits/weight}"
+		},
+		{
+			"category": "description",
+			"key": "age",
+			"source": "{roll:traits/age}"
+		},
+		{
+			"category": "description",
+			"key": "race",
+			"source": "{roll:race}"
+		},
+		{
+			"category": "description",
+			"key": "eyeColor",
+			"source": "{roll:traits/eyecolor}"
+		},
+		{
+			"category": "description",
+			"key": "face",
+			"stringify": "$(shape) $(attractivenessString)",
+			"children": [
+				{
+					"key": "shape",
+					"source": "{roll:traits/face/shape}"
+				},
+				{
+					"key": "attractiveness",
+					"source": "{roll:traits/face/attractiveness}"
+				}
+			]
+		},
+		{
+			"category": "personality",
+			"key": "religion",
+			"hideInlineValue": true,
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:race/$(description.race.value)/deity}",
+					"dependencies": [
+						"description.race"
+					]
+				},
+				{
+					"key": "worship",
+					"source": "{roll:personality/worship}"
+				}
+			]
+		},
+		{
+			"category": "identity",
+			"key": "name",
+			"source": "{roll:race/$(description.race.value)/name-$(identity.genderIdentity)}",
+			"dependencies": [
+				"description.race",
+				"identity.genderIdentity"
+			]
+		},
+		{
+			"category": "identity",
+			"key": "surname",
+			"source": "{roll:race/$(description.race.value)/surname}",
+			"dependencies": [
+				"description.race"
+			]
+		},
+		{
+			"category": "personality",
+			"key": "generalQuirk",
+			"source": "{roll:quirks}",
+			"hideInlineValue": true
+		},
+		{
+			"category": "personality",
+			"key": "trait1",
+			"collection": "personality.quirks",
+			"source": "{roll:quirks/traits-1}"
+		},
+		{
+			"category": "personality",
+			"key": "trait2",
+			"collection": "personality.quirks",
+			"source": "{roll:quirks/traits-2}"
+		},
+		{
+			"category": "description",
+			"key": "specialPhysical",
+			"name": "Special Physical Trait",
+			"hideInlineValue": true,
+			"source": "{roll:traits/physical}"
+		},
+		{
+			"category": "occupation",
+			"key": "type",
+			"source": "{roll:occupation/type}"
+		},
+		{
+			"category": "occupation",
+			"key": "category",
+			"source": "{roll:occupation/$(occupation.type)/Category}",
+			"dependencies": [
+				"occupation.type"
+			]
+		},
+		{
+			"category": "occupation",
+			"key": "profession",
+			"source": "{roll:occupation/$(occupation.type)/$(occupation.category)}",
+			"dependencies": [
+				"occupation.type",
+				"occupation.category"
+			]
+		}
+	],
+	"fields": {
+		"relationships": {},
+		"hooks": {}
+	}
+}

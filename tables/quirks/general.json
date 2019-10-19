@@ -1,0 +1,438 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has a constant wanderlust and is unable to live at the same place for more than a few months.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) doesn't like change.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.positive": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) quotes $(identity.pronouns.possessive) $(relation).",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				},
+				{
+					"key": "relation",
+					"source": "{roll:quirks/modifier/relation}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) quotes proverbs.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) misquotes proverbs.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) falls in and out of love easily."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) believes in soulmates."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is always joking, even at innapropriate times."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has a joke for every situation.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) doesn't like listening to jokes."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is constantly flattering people $(identity.pronouns.singular) talks to.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is a compulsive gambler."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is an alcoholic."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) lies.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) believes in whatever deity is most helpful to $(identity.pronouns.thirdPerson) at a given moment."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is kleptomaniac.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) always does what $(identity.pronouns.singular) is told not to.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) gets very mad at any semblance of an insult.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has a story for everything.",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1,
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) sees insults as an art."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is a cross-dresser."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) runs everywhere instead of walking.",
+			"modifiers": {
+				"stats.abilityScores.constitution": 2
+			}
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) dreams of becoming rich and famous."
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) admires the local lord."
+		},
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) knows all the gossip around town."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is always sharing $(identity.pronouns.possessive) wisdom."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) believes in destiny."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) argues about everything."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) spaces out often, lost in thought."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) makes anyone $(identity.pronouns.singular) speaks to feel like the most important person in the world.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) cares about $(identity.pronouns.possessive) friends and will do anything for them.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) reads every book $(identity.pronouns.singular) comes across.",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1
+			}
+		},
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) loves discovering new mysteries and solving them.",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) wants to know every side of a story before expressing an opinion.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.neutral": 2
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is $(modifier) paranoid.",
+			"children": [
+				{
+					"key": "modifier",
+					"source": "{roll:traits/modifier}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) works hard to play hard afterwards.",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 1
+			}
+		},
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) stretches the truth to tell a good story."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is haunted by horrible memories."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has lost many friends."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has a crude sense of humour."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) likes finding direct solutions to problems."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) always carries food in $(identity.pronouns.possessive) pockets."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) asks questions.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			],
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is a local sport champion.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) laughs at inappropriate times.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			],
+			"modifiers": {
+				"stats.abilityScores.charisma": -1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) reacts violently to $(object).",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 1
+			},
+			"children": [
+				{
+					"key": "object",
+					"source": "{roll:items/mundanePlural}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) is fascinated by $(itemType).",
+			"children": [
+				{
+					"key": "itemType",
+					"source": "{roll:items/mundanePlural}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"stringify": "$(identity.pronouns.singular) doesn't like $(identity.pronouns.possessive) profession, and has always dreamed of becoming a $(occupation).",
+			"children": [
+				{
+					"key": "occupation",
+					"todo": "NEED THE OCCUPATION TABLE",
+					"value": "{occupation}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) believes that all $(raceAllergy) are planning to destroy the world.",
+			"children": [
+				{
+					"key": "raceAllergy",
+					"source": "{roll:quirks/modifier/raceAllergy}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) goes out at night secretly looking for $(object).",
+			"children": [
+				{
+					"key": "object",
+					"source": "{roll:items/mundanePlural}"
+				}
+			]
+		},
+		{
+			"weight": 20,
+			"stringify": "$(identity.pronouns.singular) owns a box full of dead animals.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.negative": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) sets up local dance clubs."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) believes that $(identity.pronouns.singular) is related to $(personality.religion.deity)."
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) goes to church to pick up sexual partners.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) lies poorly on purpose."
+		},
+		{
+			"weight": 5,
+			"stringify": "$(identity.pronouns.singular) collects $(collection).",
+			"children": [
+				{
+					"key": "collection",
+					"source": "{roll:quirks/modifier/collection}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) secretly wants to become the ruler of the city."
+		},
+		{
+			"weight": 8,
+			"stringify": "$(identity.pronouns.singular) has a $(petSize) pet $(petAnimal) named $(petName).",
+			"children": [
+				{
+					"key": "petSize",
+					"source": "{roll:quirks/modifier/size}"
+				},
+				{
+					"key": "petAnimal",
+					"source": "{roll:quirks/modifier/pet/animal}"
+				},
+				{
+					"key": "petName",
+					"source": "{roll:quirks/modifier/pet/name}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) likes to swim."
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) has a beautiful singing voice.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"weight": 3,
+			"stringify": "$(identity.pronouns.singular) $(frequency) thinks aloud.",
+			"children": [
+				{
+					"key": "frequency",
+					"source": "{roll:common/frequency}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"stringify": "$(identity.pronouns.singular) is addicted to a local drug.",
+			"modifiers": {
+				"stats.abilityScores.strength": -1,
+				"stats.abilityScores.constitution": -1
+			}
+		},
+		{
+			"weight": 1,
+			"stringify": "$(identity.pronouns.singular) is heavily addicted to an exotic drug.",
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": -2,
+				"stats.abilityScores.wisdom": -2,
+				"stats.abilityScores.charisma": -2
+			}
+		}
+	]
+}

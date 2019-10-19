@@ -1,0 +1,76 @@
+{
+	"rows": [
+		{
+			"value": "Deckhand",
+			"weight": 1
+		},
+		{
+			"value": "Coachdriver",
+			"weight": 1
+		},
+		{
+			"value": "Farmer",
+			"weight": 3
+		},
+		{
+			"weight": 3,
+			"value": "Fisher",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
+		},
+		{
+			"value": "Gravedigger",
+			"weight": 1
+		},
+		{
+			"weight": 1,
+			"value": "Sheppard",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
+		},
+		{
+			"value": "Trapper",
+			"weight": 2
+		},
+		{
+			"value": "Messenger",
+			"weight": 1
+		},
+		{
+			"value": "Miller",
+			"weight": 2
+		},
+		{
+			"weight": 2,
+			"value": "Miner",
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.constitution": 2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "Peddler",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"weight": 1,
+			"value": "Ratcatcher",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2
+			}
+		},
+		{
+			"weight": 3,
+			"value": "Sailor",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 2
+			}
+		}
+	]
+}

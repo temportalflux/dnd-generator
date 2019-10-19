@@ -1,0 +1,49 @@
+{
+	"rows": [
+		{
+			"stringify": "$(identity.pronouns.singular) has been outcast for a murder $(identity.pronouns.singular) was forced to commit. }"
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) has been outcast for a murder $(identity.pronouns.singular) committed.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.negative": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) got lost years ago and could never find $(identity.pronouns.possessive) home.",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 2
+			}
+		},
+		{
+			"stringify": "$(identity.pronouns.possessive) clan was slain by $(raceBias).",
+			"children": [
+				{
+					"key": "raceBias",
+					"source": "{roll:quirks/modifier/raceAllergy}"
+				}
+			]
+		},
+		{
+			"stringify": "$(identity.pronouns.possessive) homeland was destroyed by an earthquake."
+		},
+		{
+			"stringify": "$(identity.pronouns.possessive) homeland was destroyed by a tsunami."
+		},
+		{
+			"stringify": "$(identity.pronouns.possessive) homeland was destroyed by a viscious storm."
+		},
+		{
+			"stringify": "$(identity.pronouns.possessive) can sit for hours watching plants grow."
+		},
+		{
+			"stringify": "$(identity.pronouns.possessive) tries to keep away from crowds."
+		},
+		{
+			"stringify": "$(identity.pronouns.singular) follows omens to determine $(identity.pronouns.possessive) daily actions.",
+			"modifiers": {
+				"stats.alignmentTendancies.moral.positive": 1
+			}
+		}
+	]
+}

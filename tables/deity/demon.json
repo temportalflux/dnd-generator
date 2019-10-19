@@ -1,0 +1,76 @@
+{
+	"rows": [
+		{
+			"value": "Baphomet",
+			"description": "Baphomet, Demon lord of minotaurs, beasts, vengeance. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Demogorgon",
+			"description": "Demogorgon, the Iron Duke, Prince of Demons. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Eltab",
+			"description": "Eltab, Demon lord of hatred, retribution. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Graz'zt",
+			"description": "Graz'zt, Demon lord of darkness, seduction, guilde, debauchery. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Kostchtchie",
+			"description": "Kostchtchie, Demon lord of frost giants, wrath, rage. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Orcus",
+			"description": "Orcus, Demon lord of undeath. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Pazrael",
+			"description": "Pazrael, the Archduchess, Demon lord of evil flying creatures, corruption. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Sess'Innek",
+			"description": "Sess'Innek, the Slug Archduke, Demon lord of khaastas, lizard kings, civilization, domination. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		},
+		{
+			"value": "Yeenoghu",
+			"description": "Yeenoghu, Demon lord of gnolls. (Chaotic Evil)",
+			"modifiers": {
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.negative": 3
+			}
+		}
+	]
+}
