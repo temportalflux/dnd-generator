@@ -1,0 +1,3 @@
+[submodule "coredata"]
+	path = coredata
+	url = git@github.com:temportalflux/dnd-generator.git
