@@ -15,7 +15,8 @@
     "build": "react-scripts build",
     "deployManual": "gh-pages -d build",
     "deploy": "gh-pages-with-token -d build",
-    "validate": "node validate.js"
+    "validate": "node validate.js",
+    "index": "node generateIndexing.js"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
