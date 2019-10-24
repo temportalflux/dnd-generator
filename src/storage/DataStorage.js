@@ -84,11 +84,18 @@ export default class DataStorage
 
 	loadTables()
 	{
+		this.tables = lodash.mapValues(loadItem('/', 'index').content, Table.from);
+		console.log(this.tables);
+
+		return;
 		const npc = loadItem('/', 'npc');
 		console.log(npc.content);
 
-		this.tables = lodash.mapValues(loadItem('/', 'index').content, Table.from);
-		console.log(this.tables);
+	}
+
+	getTable(key)
+	{
+		return this.tables.hasOwnProperty(key) ? this.tables[key] : undefined;
 	}
 
 }

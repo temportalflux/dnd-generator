@@ -51,7 +51,7 @@ class App extends React.Component
 				<Switch>
 					<Route key='home' exact path='/' component={HomeView} />
 					<Route key='npc' path='/npc' component={NpcView} />
-					<Route key='data' path='/data' component={DataView} />
+					<Route key='data' path='/data/:table?' component={DataView} />
 				</Switch>
 			</Container>
 		);

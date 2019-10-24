@@ -24,7 +24,7 @@ const writeFile = async (fullPath, contents) => new Promise(
 
 const source = path.join(__dirname, './src/data/tables/');
 const blacklist = [
-	'npc.json'
+	'npc.json', 'todo', 'filters.json', 'npc-full.json'
 ];
 
 async function generateIndexFor(pathDirectory)
@@ -50,14 +50,19 @@ async function generateIndexFor(pathDirectory)
 	// Index subdirectories
 	for (subdirectory of subdirectories)
 	{
-		const subindexPath = await generateIndexFor(path.join(pathDirectory, subdirectory));
-		directoryContents.push(subindexPath);
+		const pathSubdirectory = path.join(pathDirectory, subdirectory);
+		const subindexPath = await generateIndexFor(pathSubdirectory);
+		if (!blacklist.includes(pathSubdirectory))
+		{
+			directoryContents.push(subindexPath);
+		}
 	}
 
 	// Write out contents to the index
 	const pathIndex = path.join(pathDirectory, 'index.json');
 	await writeFile(path.join(source, pathIndex), JSON.stringify(directoryContents, null, 2));
-	return pathIndex.slice(0, -'.json'.length).replace(/\\/g, '/');
+	const immediatePathIndex = path.join(...pathIndex.split(path.sep).slice(-2));
+	return immediatePathIndex.slice(0, -'.json'.length).replace(/\\/g, '/');
 }
 
 async function generateIndexes()
