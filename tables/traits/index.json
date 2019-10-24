@@ -13,13 +13,13 @@
   "physical",
   "tattoo",
   "weight",
-  "traits/alignment/index",
-  "traits/bodyPart/index",
-  "traits/degree/index",
-  "traits/face/index",
-  "traits/hair/index",
-  "traits/physical/index",
-  "traits/skin/index",
-  "traits/smell/index",
-  "traits/tattoo/index"
+  "alignment/index",
+  "bodyPart/index",
+  "degree/index",
+  "face/index",
+  "hair/index",
+  "physical/index",
+  "skin/index",
+  "smell/index",
+  "tattoo/index"
 ]

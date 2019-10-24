@@ -3,7 +3,7 @@
   "sided",
   "sidedPlural",
   "unsided",
-  "traits/bodyPart/extra/index",
-  "traits/bodyPart/head/index",
-  "traits/bodyPart/missing/index"
+  "extra/index",
+  "head/index",
+  "missing/index"
 ]

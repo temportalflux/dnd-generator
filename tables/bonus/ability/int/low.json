@@ -2,28 +2,28 @@
 	"rows": [
 		{
 			"weight": 1,
-			"value": "-4",
+			"key": "-4",
 			"modifiers": {
 				"stats.abilityScores.intelligence": -4
 			}
 		},
 		{
 			"weight": 2,
-			"value": "-2",
+			"key": "-2",
 			"modifiers": {
 				"stats.abilityScores.intelligence": -2
 			}
 		},
 		{
 			"weight": 1,
-			"value": "+0",
+			"key": "+0",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 0
 			}
 		},
 		{
 			"weight": 1,
-			"value": "+2",
+			"key": "+2",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2
 			}

@@ -1,7 +1,5 @@
 [
-  "filters",
   "hooks",
-  "npc-full",
   "quirks",
   "race",
   "bonus/index",
@@ -16,6 +14,5 @@
   "quirks/index",
   "race/index",
   "relationship/index",
-  "todo/index",
   "traits/index"
 ]

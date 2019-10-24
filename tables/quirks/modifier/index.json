@@ -4,6 +4,6 @@
   "raceAllergy",
   "relation",
   "size",
-  "quirks/modifier/pet/index",
-  "quirks/modifier/relation/index"
+  "pet/index",
+  "relation/index"
 ]

@@ -5,6 +5,6 @@
   "sex",
   "sexualIdentity",
   "sexualOrientation",
-  "identity/pronouns/index",
-  "identity/sexualOrientation/index"
+  "pronouns/index",
+  "sexualOrientation/index"
 ]

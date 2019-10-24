@@ -6,6 +6,6 @@
   "quirks",
   "skin",
   "surname",
-  "race/Elf/Drow/index",
-  "race/Elf/skin/index"
+  "Drow/index",
+  "skin/index"
 ]
