@@ -1,72 +1,94 @@
 import lodash from 'lodash';
-//import fs from 'fs';
-//import path from 'path';
+import Table from './Table';
+import storage from 'local-storage';
 
-const fs = require('fs');
-const path = require('path');
-
-function createGlobalPath(localPath)
+function loadItem(directory, fileName)
 {
-	return path.join(__dirname, localPath);
+	const data = require(`../data/tables${directory}${fileName}.json`);
+	const isIndex = Array.isArray(data);
+	let content = !isIndex ? data : data.reduce((accum, itemPath) => loadTableEntry(accum, directory, itemPath), {});
+	return { content, isIndex };
 }
 
-let readDirectory = (dirPath, options={}) => new Promise((resolve, reject) => {
-	fs.readdir(createGlobalPath(dirPath), options, (err, data) => {
-		if(err) reject(err);
-		else resolve(data);
-	});
-});
-
-let readFile = (filePath) => new Promise((resolve, reject) => {
-	fs.readFile(createGlobalPath(filePath), (err, data) => {
-		if(err) reject(err);
-		else resolve(data);
-	});
-});
-
-async function getAllFilePathsInDirectory(dirPath)
+function loadTableEntry(accumulator, directory, itemPath)
 {
-	let subdirectoryPaths = [];
-	let filePaths = [];
-
-	console.log(lodash.cloneDeep(fs));
-
-	const dir = await fs.promises.opendir(dirPath, {
-		encoding: 'utf8'
-	});
-	for await (const entry of dir)
+	const itemPathSplit = itemPath.split('/');
+	const fileName = itemPathSplit.slice(-1).join('/');
+	const immediateDirectory = itemPathSplit.slice(0, -1).join('/');
+	const fullDirectory = `${directory}${itemPath}`.split('/').slice(0, -1).join('/') + '/';
+	const item = loadItem(fullDirectory, fileName);
+	if (item.isIndex)
 	{
-		console.log(entry);
-		const entryPath = path.join(dirPath, entry.name);
-		if (entry.isDirectory())
-		{
-			subdirectoryPaths.push(entryPath);
-		}
-		else if (entry.isFile())
-		{
-			filePaths.push(entryPath);
-		}
+		lodash.assignIn(accumulator, lodash.mapKeys(item.content, (_, key) => `${immediateDirectory}/${key}`));
 	}
-	for (let subdirectoryPath in subdirectoryPaths)
+	else
 	{
-		let subdirectoryFilePaths = await getAllFilePathsInDirectory(subdirectoryPath);
-		filePaths = filePaths.concat(subdirectoryFilePaths);
+		accumulator[itemPath] = item.content;
 	}
-	return filePaths;
+	return accumulator;
 }
+
+const events = new EventTarget();
 
 export default class DataStorage
 {
 
-	async ayeep()
+	static get()
 	{
-		const filePaths = await getAllFilePathsInDirectory('./src/data/tables');
-		console.log(filePaths);
+		const saved = storage.get('tables');
+		return saved === null ? null : DataStorage.fromStorage(saved);
 	}
 
-	async createTableFromFile()
+	static clear()
 	{
-		
+		const prev = DataStorage.get();
+		storage.remove('tables');
+		DataStorage.dispatchOnChanged(prev, null);
+	}
+
+	static addOnChanged(callback)
+	{
+		events.addEventListener('onChanged', callback);
+	}
+
+	static removeOnChanged(callback)
+	{
+		events.removeEventListener('onChanged', callback);
+	}
+
+	static dispatchOnChanged(prev, next)
+	{
+		events.dispatchEvent(new CustomEvent('onChanged', {
+			detail: { prev, next }
+		}));
+	}
+
+	static fromStorage(obj)
+	{
+		const data = new DataStorage();
+		data.tables = lodash.mapValues(obj.tables, Table.fromStorage);
+		return data;
+	}
+
+	constructor()
+	{
+		this.tables = {};
+	}
+
+	save()
+	{
+		const prev = lodash.cloneDeep(this);
+		storage.set('tables', this);
+		DataStorage.dispatchOnChanged(prev, this);
+	}
+
+	loadTables()
+	{
+		const npc = loadItem('/', 'npc');
+		console.log(npc.content);
+
+		this.tables = lodash.mapValues(loadItem('/', 'index').content, Table.from);
+		console.log(this.tables);
 	}
 
 }
