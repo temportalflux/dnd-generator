@@ -1,15 +1,18 @@
 {
 	"rows": [
 		{
-			"value": "High",
-			"weight": 6
+			"weight": 6,
+			"key": "High",
+			"value": "High"
 		},
 		{
-			"value": "Wood",
-			"weight": 8
+			"weight": 8,
+			"key": "Wood",
+			"value": "Wood"
 		},
 		{
 			"weight": 2,
+			"key": "Drow",
 			"value": "Drow",
 			"children": [
 				{

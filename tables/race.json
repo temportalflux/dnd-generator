@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 2,
+			"key": "Aasimar",
 			"value": "Aasimar",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
@@ -27,6 +28,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "Dragonborn",
 			"value": "Dragonborn",
 			"modifiers": {
 				"stats.abilityScores.strength": 3,
@@ -59,6 +61,7 @@
 		},
 		{
 			"weight": 11,
+			"key": "Dwarf",
 			"value": "Dwarf",
 			"modifiers": {
 				"description.height": -38
@@ -93,6 +96,7 @@
 		},
 		{
 			"weight": 16,
+			"key": "Elf",
 			"value": "Elf",
 			"modifiers": {
 				"description.height": -5
@@ -123,6 +127,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Firbolg",
 			"value": "Firbolg",
 			"modifiers": {
 				"stats.abilityScores.strength": 3,
@@ -162,6 +167,7 @@
 		},
 		{
 			"weight": 7,
+			"key": "Gnome",
 			"value": "Gnome",
 			"modifiers": {
 				"description.height": -58
@@ -196,6 +202,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "Goblin",
 			"value": "Goblin",
 			"modifiers": {
 				"stats.abilityScores.strength": -2,
@@ -222,6 +229,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Goliath",
 			"value": "Goliath",
 			"modifiers": {
 				"stats.abilityScores.strength": 3,
@@ -258,6 +266,7 @@
 		},
 		{
 			"weight": 20,
+			"key": "Half-Dwarf",
 			"value": "Half-Dwarf",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
@@ -288,6 +297,7 @@
 		},
 		{
 			"weight": 25,
+			"key": "Half-Elf",
 			"value": "Half-Elf",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 1,
@@ -318,6 +328,7 @@
 		},
 		{
 			"weight": 5,
+			"key": "Half-Orc",
 			"value": "Half-Orc",
 			"modifiers": {
 				"stats.abilityScores.strength": 4,
@@ -347,6 +358,7 @@
 		},
 		{
 			"weight": 8,
+			"key": "Halfling",
 			"value": "Halfling",
 			"modifiers": {
 				"description.height": -63
@@ -377,6 +389,7 @@
 		},
 		{
 			"weight": 70,
+			"key": "Human",
 			"value": "Human",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
@@ -403,6 +416,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Kenku",
 			"value": "Kenku",
 			"modifiers": {
 				"stats.abilityScores.strength": -2,
@@ -436,6 +450,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Lizardfolk",
 			"value": "Lizardfolk",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
@@ -475,6 +490,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "Orc",
 			"value": "Orc",
 			"modifiers": {
 				"stats.abilityScores.strength": 5,
@@ -504,6 +520,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Tabaxi",
 			"value": "Tabaxi",
 			"modifiers": {
 				"stats.abilityScores.strength": -1,
@@ -539,6 +556,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "Tiefling",
 			"value": "Tiefling",
 			"modifiers": {
 				"stats.abilityScores.constitution": -1,
@@ -567,6 +585,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "Triton",
 			"value": "Triton",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
@@ -598,6 +617,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "Troglodyte",
 			"value": "Troglodyte",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
