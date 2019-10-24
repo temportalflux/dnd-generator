@@ -1,4 +1,21 @@
 [
-	"race",
-	"race/index"
+  "filters",
+  "hooks",
+  "npc-full",
+  "quirks",
+  "race",
+  "bonus/index",
+  "common/index",
+  "deity/index",
+  "hooks/index",
+  "identity/index",
+  "items/index",
+  "misc/index",
+  "occupation/index",
+  "personality/index",
+  "quirks/index",
+  "race/index",
+  "relationship/index",
+  "todo/index",
+  "traits/index"
 ]

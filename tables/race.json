@@ -42,11 +42,11 @@
 			"children": [
 				{
 					"key": "color",
-					"source": "{roll:creatures/dragon/color}"
+					"source": "{roll:race/Dragonborn/color}"
 				},
 				{
 					"key": "hair",
-					"source": "{roll:creatures/dragon/hair}"
+					"source": "{roll:race/Dragonborn/hair}"
 				},
 				{
 					"key": "skin",
@@ -470,7 +470,7 @@
 			"children": [
 				{
 					"key": "hair",
-					"source": "{roll:creatures/dragon/hair}"
+					"source": "{roll:race/Dragonborn/hair}"
 				},
 				{
 					"key": "skin",
@@ -631,7 +631,7 @@
 			"children": [
 				{
 					"key": "hair",
-					"source": "{roll:creatures/dragon/hair}"
+					"source": "{roll:race/Dragonborn/hair}"
 				},
 				{
 					"key": "skin",

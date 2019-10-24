@@ -1,0 +1,44 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"value": "spiked head"
+		},
+		{
+			"weight": 3,
+			"value": "rigged head"
+		},
+		{
+			"weight": 3,
+			"value": "crested head"
+		},
+		{
+			"weight": 3,
+			"value": "bumpy head"
+		},
+		{
+			"weight": 3,
+			"value": "plated head"
+		},
+		{
+			"weight": 1,
+			"value": "bright frill"
+		},
+		{
+			"weight": 1,
+			"value": "colorful frill"
+		},
+		{
+			"weight": 1,
+			"value": "dark frill"
+		},
+		{
+			"weight": 1,
+			"value": "bony frill"
+		},
+		{
+			"weight": 8,
+			"value": "smooth frill"
+		}
+	]
+}

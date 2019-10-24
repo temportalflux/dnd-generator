@@ -1,0 +1,37 @@
+{
+	"rows": [
+		{
+			"weight": 1,
+			"key": "masculinePronouns",
+			"value": {
+				"singular": "he",
+				"thirdPerson": "him",
+				"possessive": "his",
+				"selfPossessive": "his",
+				"isPlural": false
+			}
+		},
+		{
+			"weight": 1,
+			"key": "femininePronouns",
+			"value": {
+				"singular": "she",
+				"thirdPerson": "her",
+				"possessive": "hers",
+				"selfPossessive": "her",
+				"isPlural": false
+			}
+		},
+		{
+			"weight": 5,
+			"key": "neutralPronouns",
+			"value": {
+				"singular": "they",
+				"thirdPerson": "them",
+				"possessive": "theirs",
+				"selfPossessive": "their",
+				"isPlural": true
+			}
+		}
+	]
+}

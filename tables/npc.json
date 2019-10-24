@@ -4,8 +4,8 @@
 		"stats.alignmentTendancies",
 		"personality.quirks",
 		"personality.alignmentMoral",
-		"identity.pronouns",
 		"identity.genderIdentity",
+		"identity.pronouns",
 		"identity.genderExpression",
 		"identity.sex",
 		"identity.sexualOrientation",
@@ -136,14 +136,17 @@
 		},
 		{
 			"category": "identity",
-			"key": "pronouns",
-			"source": "{roll:identity/pronouns}",
-			"stringify": "$(singular)/$(thirdPerson)/$(possessive)"
+			"key": "genderIdentity",
+			"source": "{roll:identity/genderIdentity}"
 		},
 		{
 			"category": "identity",
-			"key": "genderIdentity",
-			"source": "{roll:identity/genderIdentity}"
+			"key": "pronouns",
+			"source": "{roll:identity/pronouns/$(identity.genderIdentity)}",
+			"stringify": "$(singular)/$(thirdPerson)/$(possessive)",
+			"dependencies": [
+				"identity.genderIdentity"
+			]
 		},
 		{
 			"category": "identity",

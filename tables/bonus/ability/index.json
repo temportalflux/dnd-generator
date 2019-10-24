@@ -1,0 +1,8 @@
+[
+  "bonus/ability/cha/index",
+  "bonus/ability/const/index",
+  "bonus/ability/dex/index",
+  "bonus/ability/int/index",
+  "bonus/ability/str/index",
+  "bonus/ability/wis/index"
+]
