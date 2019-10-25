@@ -1,22 +1,19 @@
 import React from 'react';
 import { ViewContainer } from './ViewContainer';
+import DataTableView from '../components/DataTableView';
 import DataStorage from '../storage/DataStorage';
-import { Container, Header } from 'semantic-ui-react';
 
 export class DataView extends React.Component
 {
 
-	hasTableKey()
+	getTableKey()
 	{
-		return this.props.match.params.table !== undefined;
+		return this.props.match.params.table;
 	}
 
-	getTable()
+	hasTableKey()
 	{
-		const tableCollection = DataStorage.get();
-		if (!tableCollection) { return undefined; }
-		const tableKey = this.props.match.params.table;
-		return tableKey !== undefined ? tableCollection.getTable(tableKey) : undefined;
+		return this.getTableKey() !== undefined;
 	}
 
 	render()
@@ -32,6 +29,7 @@ export class DataView extends React.Component
 	{
 		if (!this.hasTableKey())
 		{
+			console.log(DataStorage.get());
 			// TODO: List of all the tables & their descriptions
 			return (
 				'TODO: Render all the table keys + descriptions'
@@ -39,21 +37,9 @@ export class DataView extends React.Component
 		}
 		else
 		{
-			console.log(DataStorage.get());
-			const table = this.getTable();
-			console.log(table);
-			if (table === undefined)
-			{
-				return '403: No table found';
-			}
-			else
-			{
-				return (
-					<Container>
-						<Header>{table.key}</Header>
-					</Container>
-				);
-			}
+			return (
+				<DataTableView tableKey={this.getTableKey()} />
+			);
 		}
 	}
 

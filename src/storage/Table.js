@@ -2,7 +2,8 @@ import lodash from 'lodash';
 
 function accumulateEntries(data, context)
 {
-	return data.reduce((accum, entryData) => {
+	return data.reduce((accum, entryData) =>
+	{
 		const entry = Entry.from(entryData);
 		if (entry.getKey() === undefined)
 		{
@@ -28,7 +29,7 @@ class Entry
 	static from(data)
 	{
 		const entry = new Entry();
-		
+
 		entry.weight = data.weight;
 		entry.key = data.key;
 
@@ -84,8 +85,60 @@ export default class Table
 
 	constructor()
 	{
+		this.events = new EventTarget();
+
 		this.key = undefined;
-		this.entries = [];
+		this.entries = {};
+	}
+
+	length()
+	{
+		return Object.keys(this.entries).length;
+	}
+
+	getRows()
+	{
+		return Object.values(this.entries);
+	}
+
+	addRow(entry)
+	{
+		this.entries.push(entry);
+		this.dispatchOnChangedRowCount(this.entries.length - 1, this.entries.length);
+	}
+
+	removeRow(entry)
+	{
+		this.entries.splice(this.entries.indexOf(entry), 1);
+		this.dispatchOnChangedRowCount(this.entries.length, this.entries.length - 1);
+	}
+
+	dispatchOnChangedRowCount(prev, next)
+	{
+		this.events.dispatchEvent(new CustomEvent('onChangedRowCount', {
+			detail: { prev, next }
+		}));
+	}
+
+	subscribeOnChangedRowCount(callback)
+	{
+		this.events.addEventListener('onChangedRowCount', callback);
+	}
+
+	unsubscribeOnChangedRowCount(callback)
+	{
+		this.events.removeEventListener('onChangedRowCount', callback);
 	}
 
 }
+
+Table.COLUMNS = [
+	{
+		accessor: 'weight',
+		Header: 'Weight',
+	},
+	{
+		accessor: 'key',
+		Header: 'Key',
+	}
+];
