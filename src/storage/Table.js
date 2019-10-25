@@ -30,7 +30,7 @@ class Entry
 	{
 		const entry = new Entry();
 
-		entry.weight = data.weight;
+		entry.weight = data.weight || 1;
 		entry.key = data.key;
 
 		entry.source = data.source;
@@ -89,6 +89,21 @@ export default class Table
 
 		this.key = undefined;
 		this.entries = {};
+	}
+
+	getKey()
+	{
+		return this.key;
+	}
+
+	getKeyPath()
+	{
+		return this.getKey().replace(/\//g, '.');
+	}
+
+	static getKeyFromKeyPath(keyPath)
+	{
+		return keyPath.replace(/\./g, '/');
 	}
 
 	length()

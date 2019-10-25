@@ -20,7 +20,7 @@ export default function DataTableView({ tableKey })
 	{
 		const tableCollection = DataStorage.get();
 		if (!tableCollection) { return undefined; }
-		return tableKey !== undefined ? tableCollection.getTable(tableKey) : undefined;
+		return tableKey !== undefined ? tableCollection.getTableAtPath(tableKey) : undefined;
 	}
 	const dataTable = getDataTable();
 	
@@ -42,6 +42,8 @@ export default function DataTableView({ tableKey })
 			dataTable.unsubscribeOnChangedRowCount(onChangedRowCount);
 		};
 	});
+
+	console.log(dataTable);
 
 	const data = React.useMemo(() => {
 		if (dataTable === undefined) { return []; }
@@ -71,7 +73,7 @@ export default function DataTableView({ tableKey })
 
 	return (
 		<Container>
-			<Header>{tableKey} ({rowCount} rows)</Header>
+			<Header>{dataTable.getKey()} ({rowCount} rows)</Header>
 			<Table {...getTableProps()}>
 				<Table.Header>
 					{headerGroups.map((headerGroup) => (

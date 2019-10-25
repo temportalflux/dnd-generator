@@ -98,4 +98,16 @@ export default class DataStorage
 		return this.tables.hasOwnProperty(key) ? this.tables[key] : undefined;
 	}
 
+	getTableAtPath(keyPath)
+	{
+		return this.getTable(Table.getKeyFromKeyPath(keyPath));
+	}
+
+	getTableTree()
+	{
+		return Object.keys(this.tables).reduce((accum, key) => {
+			return lodash.set(accum, this.tables[key].getKeyPath() + '.table', this.tables[key]);
+		}, {});
+	}
+
 }

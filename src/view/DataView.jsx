@@ -1,7 +1,10 @@
 import React from 'react';
+import lodash from 'lodash';
 import { ViewContainer } from './ViewContainer';
 import DataTableView from '../components/DataTableView';
 import DataStorage from '../storage/DataStorage';
+import Tree from 'react-animated-tree';
+import { Link } from 'react-router-dom';
 
 export class DataView extends React.Component
 {
@@ -29,10 +32,52 @@ export class DataView extends React.Component
 	{
 		if (!this.hasTableKey())
 		{
-			console.log(DataStorage.get());
-			// TODO: List of all the tables & their descriptions
+			function makeTreeNode([pathItem, nodeDetails])
+			{
+				const allNodeProperties = Object.keys(nodeDetails);
+				const subNodeProperties = allNodeProperties.filter((item) => item !== 'table');
+				const hasTable = allNodeProperties.includes('table');
+				const content = !hasTable ? pathItem : (
+					<span>
+						<Link to={`data/${nodeDetails.table.getKeyPath()}`}>{pathItem}</Link>
+					</span>
+				);
+				if (subNodeProperties.length === 0)
+				{
+					if (hasTable)
+					{
+						// Just a leaf for an actual table
+						return (
+							<Tree key={pathItem}
+								content={content}
+							/>
+						);
+					}
+					return <Tree key={pathItem} content={`Unknown: ${pathItem}`} />;
+				}
+				else
+				{
+					const subnodes = subNodeProperties.reduce((accum, propKey) => {
+						accum[propKey] = nodeDetails[propKey];
+						return accum;
+					}, {});
+					return (
+						<Tree key={pathItem} content={content} >
+							{lodash.toPairs(subnodes).map(makeTreeNode)}
+						</Tree>
+					);
+				}
+			}
+
+			const tableCollection = DataStorage.get();
+			console.log(tableCollection.getTableTree());
+			
 			return (
-				'TODO: Render all the table keys + descriptions'
+				<Tree
+					content={'Tables'}
+				>
+					{lodash.toPairs(tableCollection.getTableTree()).map(makeTreeNode)}
+				</Tree>
 			);
 		}
 		else
