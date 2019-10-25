@@ -1,35 +1,45 @@
 {
 	"rows": [
 		{
+			"key": "blue",
 			"value": "blue"
 		},
 		{
+			"key": "red",
 			"value": "red"
 		},
 		{
+			"key": "green",
 			"value": "green"
 		},
 		{
+			"key": "yellow",
 			"value": "yellow"
 		},
 		{
+			"key": "pink",
 			"value": "pink"
 		},
 		{
+			"key": "brown",
 			"value": "brown"
 		},
 		{
-			"value": "black",
-			"weight": 2
+			"weight": 2,
+			"key": "black",
+			"value": "black"
 		},
 		{
-			"value": "white",
-			"weight": 2
+			"weight": 2,
+			"key": "white",
+			"value": "white"
 		},
 		{
+			"key": "gray",
 			"value": "gray"
 		},
 		{
+			"key": "purple",
 			"value": "purple"
 		}
 	]

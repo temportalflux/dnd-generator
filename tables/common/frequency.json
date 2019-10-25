@@ -2,23 +2,23 @@
 	"rows": [
 		{
 			"weight": 2,
-			"value": "sporadically"
+			"key": "sporadically"
 		},
 		{
 			"weight": 2,
-			"value": "occasionally"
+			"key": "occasionally"
 		},
 		{
 			"weight": 2,
-			"value": "intermittently"
+			"key": "intermittently"
 		},
 		{
 			"weight": 2,
-			"value": "frequently"
+			"key": "frequently"
 		},
 		{
 			"weight": 1,
-			"value": "constantly"
+			"key": "constantly"
 		}
 	]
 }
