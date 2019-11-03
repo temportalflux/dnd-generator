@@ -2,7 +2,7 @@ import React from 'react';
 import lodash from 'lodash';
 import { ViewContainer } from './ViewContainer';
 import DataTableView from '../components/DataTableView';
-import DataStorage from '../storage/DataStorage';
+import TableCollection from '../storage/TableCollection';
 import Tree from 'react-animated-tree';
 import { Link } from 'react-router-dom';
 
@@ -69,23 +69,23 @@ export class DataView extends React.Component
 				}
 			}
 
-			const tableCollection = DataStorage.get();
-			console.log(tableCollection.getTableTree());
-			
-			return (
-				<Tree
-					content={'Tables'}
-				>
-					{lodash.toPairs(tableCollection.getTableTree()).map(makeTreeNode)}
-				</Tree>
-			);
+			const tableCollection = TableCollection.get();
+			if (tableCollection)
+			{
+				console.log(tableCollection.getTableTree());
+				
+				return (
+					<Tree
+						content={'Tables'}
+					>
+						{lodash.toPairs(tableCollection.getTableTree()).map(makeTreeNode)}
+					</Tree>
+				);
+			}
 		}
-		else
-		{
-			return (
-				<DataTableView tableKey={this.getTableKey()} />
-			);
-		}
+		return (
+			<DataTableView tableKey={this.getTableKey()} />
+		);
 	}
 
 }

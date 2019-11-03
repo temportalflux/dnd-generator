@@ -1,5 +1,5 @@
 import React from 'react';
-import DataStorage from './storage/DataStorage';
+import TableCollection from './storage/TableCollection';
 import shortid from 'shortid';
 import { Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
@@ -14,34 +14,21 @@ class App extends React.Component
 	{
 		super(props);
 		this.state = { refreshKey: undefined };
-		DataStorage.addOnChanged(this.onDataChanged.bind(this));
-	}
-
-	loadData()
-	{
-		console.log('Loading data tables');
-		const data = new DataStorage();
-		data.loadTables();
-		data.save();
-		this.setState({ refreshKey: shortid.generate() });
+		TableCollection.addOnChanged(this.onDataChanged.bind(this));
 	}
 
 	componentDidMount()
 	{
-		const tables = DataStorage.get();
+		const tables = TableCollection.get();
 		if (tables === null)
 		{
-			this.loadData();
+			TableCollection.initialize();
+			this.setState({ refreshKey: shortid.generate() });
 		}
 	}
 
 	onDataChanged({ detail })
 	{
-		// data is being cleared
-		if (detail.next === null)
-		{
-			this.loadData();
-		}
 	}
 
 	render()

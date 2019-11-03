@@ -1,5 +1,5 @@
 import React from 'react';
-import DataStorage from '../storage/DataStorage';
+import TableCollection from '../storage/TableCollection';
 import {
   useTable,
   useGroupBy,
@@ -18,7 +18,7 @@ export default function DataTableView({ tableKey })
 
 	function getDataTable()
 	{
-		const tableCollection = DataStorage.get();
+		const tableCollection = TableCollection.get();
 		if (!tableCollection) { return undefined; }
 		return tableKey !== undefined ? tableCollection.getTableAtPath(tableKey) : undefined;
 	}
@@ -109,7 +109,7 @@ export class DataTableView extends React.Component
 {
 	getTableData()
 	{
-		const tableCollection = DataStorage.get();
+		const tableCollection = TableCollection.get();
 		if (!tableCollection) { return undefined; }
 		const tableKey = this.props.tableKey;
 		return tableKey !== undefined ? tableCollection.getTable(tableKey) : undefined;

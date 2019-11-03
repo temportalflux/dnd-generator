@@ -1,13 +1,17 @@
 import lodash from 'lodash';
 
-function accumulateEntries(data, context)
+function accumulateEntries(data, context, onUndefinedKey=undefined)
 {
 	return data.reduce((accum, entryData) =>
 	{
 		const entry = Entry.from(entryData);
 		if (entry.getKey() === undefined)
 		{
-			console.warn(`Encountered invalid key in ${context} at entry`, entryData);
+			if (onUndefinedKey !== undefined && typeof onUndefinedKey === 'function')
+			{
+				onUndefinedKey(entry);
+			}
+			//console.warn(`Encountered invalid key in ${context} at entry`, entryData);
 			return accum;
 		}
 		accum[entry.getKey()] = entry;
@@ -38,7 +42,8 @@ class Entry
 		entry.value = data.value;
 		entry.stringify = data.stringify;
 
-		entry.children = accumulateEntries(data.children || [], `entry '${this.key}'`);
+		entry.childrenWithoutKeys = [];
+		entry.children = accumulateEntries(data.children || [], `entry '${this.key}'`, (i) => entry.childrenWithoutKeys.push(i));
 		return entry;
 	}
 
@@ -65,6 +70,8 @@ class Entry
 export default class Table
 {
 
+	static EVENT_ONCHANGEDFILTER = 'onChangedFilter';
+
 	static fromStorage(obj, key)
 	{
 		const table = new Table();
@@ -79,7 +86,8 @@ export default class Table
 		const table = new Table();
 		table.key = key;
 		// turn json data for a table's entry rows into objects
-		table.entries = accumulateEntries(obj.rows, `table '${key}'`);
+		table.entriesWithoutKeys = [];
+		table.entries = accumulateEntries(obj.rows, `table '${key}'`, (i) => table.entriesWithoutKeys.push(i));
 		return table;
 	}
 
@@ -89,6 +97,8 @@ export default class Table
 
 		this.key = undefined;
 		this.entries = {};
+
+		this.filter = [];
 	}
 
 	getKey()
@@ -135,6 +145,7 @@ export default class Table
 		}));
 	}
 
+	// TODO: This will never work because Tables are deserialized from the local storage
 	subscribeOnChangedRowCount(callback)
 	{
 		this.events.addEventListener('onChangedRowCount', callback);
@@ -143,6 +154,15 @@ export default class Table
 	unsubscribeOnChangedRowCount(callback)
 	{
 		this.events.removeEventListener('onChangedRowCount', callback);
+	}
+
+	// Viewing the table via react
+
+	getOptions()
+	{
+		return this.getRows().map((entry) => ({
+			key: entry.getKey(), text: entry.getKey(), value: entry.getKey()
+		}));
 	}
 
 }

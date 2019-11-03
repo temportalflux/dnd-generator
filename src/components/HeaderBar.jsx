@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, Button, Icon } from 'semantic-ui-react';
 import { HeaderBarLink } from './HeaderBarLink';
-import DataStorage from '../storage/DataStorage';
+import TableCollection from '../storage/TableCollection';
 
 export class HeaderBar extends React.Component
 {
@@ -9,7 +9,7 @@ export class HeaderBar extends React.Component
 	onClearStorage()
 	{
 		console.log('Syncing tables');
-		DataStorage.clear();
+		TableCollection.clear();
 	}
 
 	render()
