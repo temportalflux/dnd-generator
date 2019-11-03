@@ -2,46 +2,57 @@
 	"rows": [
 		{
 			"weight": 1,
+			"key": "pendant",
 			"value": "pendant"
 		},
 		{
 			"weight": 1,
+			"key": "ring",
 			"value": "ring"
 		},
 		{
 			"weight": 1,
+			"key": "robe",
 			"value": "robe"
 		},
 		{
 			"weight": 1,
+			"key": "trinket",
 			"value": "trinket"
 		},
 		{
 			"weight": 1,
+			"key": "bracelet",
 			"value": "bracelet"
 		},
 		{
 			"weight": 1,
+			"key": "watch",
 			"value": "watch"
 		},
 		{
 			"weight": 1,
+			"key": "amulet",
 			"value": "amulet"
 		},
 		{
 			"weight": 1,
+			"key": "tiara",
 			"value": "tiara"
 		},
 		{
 			"weight": 1,
+			"key": "gem",
 			"value": "gem"
 		},
 		{
 			"weight": 1,
+			"key": "coin",
 			"value": "coin"
 		},
 		{
 			"weight": 2,
+			"key": "weapon",
 			"source": "{roll:items/weapon}"
 		}
 	]

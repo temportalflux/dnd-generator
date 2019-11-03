@@ -1,15 +1,19 @@
 {
 	"rows": [
 		{
+			"key": "rapier",
 			"value": "rapier"
 		},
 		{
+			"key": "scimitar",
 			"value": "scimitar"
 		},
 		{
+			"key": "short sword",
 			"value": "short sword"
 		},
 		{
+			"key": "whip",
 			"value": "whip"
 		}
 	]

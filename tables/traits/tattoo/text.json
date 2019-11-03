@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 10,
+			"key": "word",
 			"stringify": "the word $(word)",
 			"children": [
 				{
@@ -12,6 +13,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "poemAboutWord",
 			"stringify": "a poem about $(word)",
 			"children": [
 				{
@@ -22,6 +24,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "lyricsOfSongAboutWord",
 			"stringify": "the lyrics of a song quote about $(word)",
 			"children": [
 				{
@@ -32,6 +35,7 @@
 		},
 		{
 			"weight": 6,
+			"key": "inspirationalQuoteAbout",
 			"stringify": "an inspirational quote about $(word)",
 			"children": [
 				{
@@ -42,6 +46,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "wordInLanguage",
 			"stringify": "the word $(word) translated into $(language)",
 			"children": [
 				{
@@ -56,6 +61,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "poemAboutWordInLanguage",
 			"stringify": "a poem about $(word) translated into $(language)",
 			"children": [
 				{
@@ -70,6 +76,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "inspirationalQuoteInLanguage",
 			"stringify": "an inspirational quote about $(word) translated into $(language)",
 			"children": [
 				{
@@ -84,6 +91,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "lyricsOfSongAboutWordInLanguage",
 			"stringify": "the lyrics of a song quote about $(word) written in $(language)",
 			"children": [
 				{
@@ -98,6 +106,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "nameOfRelative",
 			"stringify": "the name of $(identity.pronouns.possessive) $(relative)",
 			"children": [
 				{

@@ -1,54 +1,71 @@
 {
 	"rows": [
 		{
+			"key": "gloves",
 			"value": "gloves"
 		},
 		{
+			"key": "hats",
 			"value": "hats"
 		},
 		{
+			"key": "belts",
 			"value": "belts"
 		},
 		{
+			"key": "feathers",
 			"value": "feathers"
 		},
 		{
+			"key": "fruits",
 			"value": "fruits"
 		},
 		{
+			"key": "leaves",
 			"value": "leaves"
 		},
 		{
+			"key": "branches",
 			"value": "branches"
 		},
 		{
+			"key": "coins",
 			"value": "coins"
 		},
 		{
+			"key": "rocks",
 			"value": "rocks"
 		},
 		{
+			"key": "pens",
 			"value": "pens"
 		},
 		{
+			"key": "scarves",
 			"value": "scarves"
 		},
 		{
+			"key": "weapons",
 			"value": "weapons"
 		},
 		{
+			"key": "small animals",
 			"value": "small animals"
 		},
 		{
+			"key": "books",
 			"value": "books"
 		},
 		{
+			"key": "kitchenware",
 			"value": "kitchenware"
 		},
 		{
+			"key": "grass",
 			"value": "grass"
 		},
 		{
+			"key": "weird clothes",
 			"value": "weird clothes"
 		}
 	]

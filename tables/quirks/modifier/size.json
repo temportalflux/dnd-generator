@@ -2,26 +2,32 @@
 	"rows": [
 		{
 			"weight": 1,
+			"key": "tiny",
 			"value": "tiny"
 		},
 		{
 			"weight": 2,
+			"key": "very small",
 			"value": "very small"
 		},
 		{
 			"weight": 3,
+			"key": "small",
 			"value": "small"
 		},
 		{
 			"weight": 10,
+			"key": "none",
 			"stringify": "none"
 		},
 		{
 			"weight": 3,
+			"key": "large",
 			"value": "large"
 		},
 		{
 			"weight": 1,
+			"key": "very large",
 			"value": "very large"
 		}
 	]

@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"weight": 5,
-			"value": "Lolth",
+			"key": "Lolth", "value": "Lolth",
 			"description": "Lolth, Goddess of drows, spiders, darkness, chaos, evil, assassination. (Chaotic Evil)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
@@ -11,7 +11,7 @@
 		},
 		{
 			"weigth": 1,
-			"value": "Ghaunadaur",
+			"key": "Ghaunadaur", "value": "Ghaunadaur",
 			"description": "Ghaunadaur, Patron of abominations, oozes, slimes, jellies, outcasts, ropers and rebels. (Chaotic Evil)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,

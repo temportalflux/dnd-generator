@@ -2,34 +2,42 @@
 	"rows": [
 		{
 			"weight": 8,
+			"key": "elvish",
 			"value": "elvish"
 		},
 		{
 			"weight": 2,
+			"key": "celestial",
 			"value": "celestial"
 		},
 		{
 			"weight": 5,
+			"key": "draconic",
 			"value": "draconic"
 		},
 		{
 			"weight": 6,
+			"key": "dwarvish",
 			"value": "dwarvish"
 		},
 		{
 			"weight": 2,
+			"key": "infernal",
 			"value": "infernal"
 		},
 		{
 			"weight": 2,
+			"key": "sylvan",
 			"value": "sylvan"
 		},
 		{
 			"weight": 2,
+			"key": "orcish",
 			"value": "orcish"
 		},
 		{
 			"weight": 2,
+			"key": "deep speech",
 			"value": "deep speech"
 		}
 	]

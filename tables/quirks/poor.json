@@ -2,14 +2,17 @@
 	"rows": [
 		{
 			"weight": 20,
+			"key": "none",
 			"stringify": "none"
 		},
 		{
 			"weight": 3,
+			"key": "uncomfortableAroundRich",
 			"stringify": "$(identity.pronouns.singular) feels uncomfortable in a rich setting."
 		},
 		{
 			"weight": 2,
+			"key": "longWords",
 			"stringify": "$(identity.pronouns.singular) $(frequency) misuses long words to sound smarter.",
 			"children": [
 				{
@@ -20,6 +23,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "etiquetteOblivious",
 			"stringify": "$(identity.pronouns.singular) is totally oblivious to etiquette and social expectations.",
 			"modifiers": {
 				"stats.abilityScores.charisma": -1
@@ -27,6 +31,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "tavernBrawler",
 			"stringify": "$(identity.pronouns.singular) enjoys tavern brawls.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 1
@@ -34,6 +39,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "noProperty",
 			"stringify": "$(identity.pronouns.singular) has no concept of propriety.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
@@ -41,6 +47,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "helpsOthers",
 			"stringify": "$(identity.pronouns.singular) always has time to help others.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 2
@@ -48,6 +55,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "hatesAristocracy",
 			"stringify": "$(identity.pronouns.singular) despises the aristocracy.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
@@ -55,14 +63,17 @@
 		},
 		{
 			"weight": 3,
+			"key": "sleepsFullyDressed",
 			"stringify": "$(identity.pronouns.singular) sleeps fully dressed, ready to run."
 		},
 		{
 			"weight": 3,
+			"key": "knowsAllHidingPlaces",
 			"stringify": "$(identity.pronouns.singular) always knows where to hide."
 		},
 		{
 			"weight": 3,
+			"key": "asksForHelp",
 			"stringify": "$(identity.pronouns.singular) $(frequency) asks for help.",
 			"children": [
 				{
@@ -73,10 +84,12 @@
 		},
 		{
 			"weight": 3,
+			"key": "lastMeal",
 			"stringify": "$(identity.pronouns.singular) always eat like it's $(identity.pronouns.possessive) last meal."
 		},
 		{
 			"weight": 3,
+			"key": "sharesEverything",
 			"stringify": "$(identity.pronouns.singular) shares everything $(identity.pronouns.singular) owns.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 2
@@ -84,6 +97,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "foulLanguage",
 			"stringify": "$(identity.pronouns.singular) uses very foul language.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
@@ -91,6 +105,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "doesNotBathe",
 			"stringify": "$(identity.pronouns.singular) doesn't bathe.",
 			"modifiers": {
 				"stats.abilityScores.charisma": -2

@@ -2,86 +2,107 @@
 	"rows": [
 		{
 			"weight": 1,
+			"key": "zombie",
 			"value": "zombie"
 		},
 		{
 			"weight": 1,
+			"key": "dragon hatchling",
 			"value": "dragon hatchling"
 		},
 		{
 			"weight": 1,
+			"key": "kobold",
 			"value": "kobold"
 		},
 		{
 			"weight": 1,
+			"key": "golem",
 			"value": "golem"
 		},
 		{
 			"weight": 1,
+			"key": "ooze",
 			"value": "ooze"
 		},
 		{
 			"weight": 4,
+			"key": "pidgeon",
 			"value": "pidgeon"
 		},
 		{
 			"weight": 4,
+			"key": "mouse",
 			"value": "mouse"
 		},
 		{
 			"weight": 18,
+			"key": "dog",
 			"value": "dog"
 		},
 		{
 			"weight": 14,
+			"key": "cat",
 			"value": "cat"
 		},
 		{
 			"weight": 4,
+			"key": "fox",
 			"value": "fox"
 		},
 		{
 			"weight": 4,
+			"key": "turtle",
 			"value": "turtle"
 		},
 		{
 			"weight": 4,
+			"key": "rat",
 			"value": "rat"
 		},
 		{
 			"weight": 4,
+			"key": "rock",
 			"value": "rock"
 		},
 		{
 			"weight": 4,
+			"key": "falcon",
 			"value": "falcon"
 		},
 		{
 			"weight": 4,
+			"key": "guinea pig",
 			"value": "guinea pig"
 		},
 		{
 			"weight": 4,
+			"key": "hamster",
 			"value": "hamster"
 		},
 		{
 			"weight": 4,
+			"key": "gecko",
 			"value": "gecko"
 		},
 		{
 			"weight": 5,
+			"key": "rabbit",
 			"value": "rabbit"
 		},
 		{
 			"weight": 6,
+			"key": "parrot",
 			"value": "parrot"
 		},
 		{
 			"weight": 4,
+			"key": "ferret",
 			"value": "ferret"
 		},
 		{
 			"weight": 2,
+			"key": "pseudodragon",
 			"value": "pseudodragon"
 		}
 	]

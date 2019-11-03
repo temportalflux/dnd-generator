@@ -1,13 +1,14 @@
 {
 	"rows": [
 		{
-			"value": "Classic",
-			"weight": 4
+			"weight": 4,
+			"key": "Classic",
+			"value": "Classic"
 		},
 		{
-			"value": "Funky",
-			"weight": 2
+			"weight": 2,
+			"key": "Funky",
+			"value": "Funky"
 		}
-	],
-	"values": {}
+	]
 }

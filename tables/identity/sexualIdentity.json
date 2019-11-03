@@ -1,16 +1,19 @@
 {
 	"rows": [
 		{
-			"value": "sexual",
-			"weight": 100
+			"weight": 100,
+			"key": "sexual",
+			"value": "sexual"
 		},
 		{
-			"value": "demisexual",
-			"weight": 20
+			"weight": 20,
+			"key": "demisexual",
+			"value": "demisexual"
 		},
 		{
-			"value": "asexual",
-			"weight": 15
+			"weight": 15,
+			"key": "asexual",
+			"value": "asexual"
 		}
 	]
 }

@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "scales",
 			"stringify": "$(color) $(texture) scales",
 			"children": [
 				{

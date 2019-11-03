@@ -1,78 +1,91 @@
 {
 	"rows": [
 		{
+			"key": "impulsive",
 			"stringify": "$(identity.pronouns.singular) acts on impulse.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": -1
 			}
 		},
 		{
+			"key": "evenTemper",
 			"stringify": "$(identity.pronouns.singular) has an even temper.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1
 			}
 		},
 		{
+			"key": "actsFirst",
 			"stringify": "$(identity.pronouns.singular) would rather act than talk or think.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 1
 			}
 		},
 		{
+			"key": "pondersProsAndCons",
 			"stringify": "$(identity.pronouns.singular) will ponder the pros and cons before making a decision.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": -1
 			}
 		},
 		{
+			"key": "boredEasily",
 			"stringify": "$(identity.pronouns.singular) gets bored easily.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
 			}
 		},
 		{
+			"key": "variableMood",
 			"stringify": "$(identity.pronouns.singular) has a highly variable mood.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
 			}
 		},
 		{
+			"key": "bipolar",
 			"stringify": "$(identity.pronouns.singular) is bipolar.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 3
 			}
 		},
 		{
+			"key": "serene",
 			"stringify": "$(identity.pronouns.singular) is always serene.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 2
 			}
 		},
 		{
+			"key": "patient",
 			"stringify": "$(identity.pronouns.singular) is very patient.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1
 			}
 		},
 		{
+			"key": "impatient",
 			"stringify": "$(identity.pronouns.singular) is very impatient.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": -1
 			}
 		},
 		{
+			"key": "doesntThinkAhead",
 			"stringify": "$(identity.pronouns.singular) rarely thinks ahead.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": -1
 			}
 		},
 		{
+			"key": "calm",
 			"stringify": "$(identity.pronouns.singular) is always very calm.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1
 			}
 		},
 		{
+			"key": "prepared",
 			"stringify": "$(identity.pronouns.singular) is always prepared.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1,
@@ -80,18 +93,21 @@
 			}
 		},
 		{
+			"key": "excitable",
 			"stringify": "$(identity.pronouns.singular) is always very excited.",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 1
 			}
 		},
 		{
+			"key": "hasABackupPlan",
 			"stringify": "$(identity.pronouns.singular) always has a backup plan.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 1
 			}
 		},
 		{
+			"key": "focused",
 			"stringify": "$(identity.pronouns.singular) is very focused.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1,
@@ -99,36 +115,46 @@
 			}
 		},
 		{
+			"key": "cynical",
 			"stringify": "$(identity.pronouns.singular) is very cynical."
 		},
 		{
+			"key": "hopelessRomantic",
 			"stringify": "$(identity.pronouns.singular) is an hopeless romantic."
 		},
 		{
+			"key": "sarcastic",
 			"stringify": "$(identity.pronouns.singular) uses sarcasm and insults commonly.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
 			}
 		},
 		{
+			"key": "toThePoint",
 			"stringify": "$(identity.pronouns.singular) always goes straight to the point."
 		},
 		{
+			"key": "direct",
 			"stringify": "$(identity.pronouns.singular) is very direct."
 		},
 		{
+			"key": "keepsScore",
 			"stringify": "$(identity.pronouns.singular) always keeps score."
 		},
 		{
+			"key": "competitive",
 			"stringify": "$(identity.pronouns.singular) is very competitive."
 		},
 		{
+			"key": "changesSubject",
 			"stringify": "$(identity.pronouns.singular) changes subject very often."
 		},
 		{
+			"key": "ironic",
 			"stringify": "$(identity.pronouns.singular) is always ironic."
 		},
 		{
+			"key": "selfish",
 			"stringify": "$(identity.pronouns.singular) is very selfish.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": -1,
@@ -136,12 +162,14 @@
 			}
 		},
 		{
+			"key": "prioritizesTheirNeeds",
 			"stringify": "$(identity.pronouns.singular) will always prioritize $(identity.pronouns.possessive) needs.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
 			}
 		},
 		{
+			"key": "prioritizesOthersNeeds",
 			"stringify": "$(identity.pronouns.singular) will always prioritize the needs of other people, even to $(identity.pronouns.possessive) detriment.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": -2,
@@ -150,15 +178,18 @@
 			}
 		},
 		{
+			"key": "notEmpathetic",
 			"stringify": "$(identity.pronouns.singular) shows very little empathy towards others."
 		},
 		{
+			"key": "Empathetic",
 			"stringify": "$(identity.pronouns.singular) is very empathic towards others.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 2
 			}
 		},
 		{
+			"key": "helpsOthers",
 			"stringify": "$(identity.pronouns.singular) is always ready to help others.",
 			"modifiers": {
 				
@@ -167,18 +198,21 @@
 			}
 		},
 		{
+			"key": "polite",
 			"stringify": "$(identity.pronouns.singular) is polite and respectful.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 1
 			}
 		},
 		{
+			"key": "pacifist",
 			"stringify": "$(identity.pronouns.singular) is a pacifist.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
 			}
 		},
 		{
+			"key": "kind",
 			"stringify": "$(identity.pronouns.singular) is kind and generous.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 2,
@@ -186,30 +220,35 @@
 			}
 		},
 		{
+			"key": "holdsGrudges",
 			"stringify": "$(identity.pronouns.singular) easily holds grudges.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
 			}
 		},
 		{
+			"key": "benevolent",
 			"stringify": "$(identity.pronouns.singular) is very benevolent.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
+			"key": "easilyForgives",
 			"stringify": "$(identity.pronouns.singular) is quick to forgive.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
 			}
 		},
 		{
+			"key": "violent",
 			"stringify": "$(identity.pronouns.singular) is prone to violence.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
 			}
 		},
 		{
+			"key": "diplomatic",
 			"stringify": "$(identity.pronouns.singular) is a very good diplomat and always works towards resolution of conflict.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
@@ -217,15 +256,18 @@
 			}
 		},
 		{
+			"key": "diffusesTension",
 			"stringify": "$(identity.pronouns.singular) is very good at defusing tensions.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.neutral": 2
 			}
 		},
 		{
+			"key": "spiesOnOthers",
 			"stringify": "$(identity.pronouns.singular) often spies on other people."
 		},
 		{
+			"key": "playsFair",
 			"stringify": "$(identity.pronouns.singular) always plays fair.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
@@ -233,6 +275,7 @@
 			}
 		},
 		{
+			"key": "hatesFairPlay",
 			"stringify": "$(identity.pronouns.singular) hates fair play.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,

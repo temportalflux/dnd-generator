@@ -1,9 +1,8 @@
 {
 	"rows": [
 		{
-			"text": "Lesbian",
+			"key": "lesbian",
 			"value": "lesbian"
 		}
-	],
-	"values": {}
+	]
 }

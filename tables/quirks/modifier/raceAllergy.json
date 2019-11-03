@@ -2,46 +2,57 @@
 	"rows": [
 		{
 			"weight": 2,
+			"key": "dwarves",
 			"value": "dwarves"
 		},
 		{
 			"weight": 2,
+			"key": "elves",
 			"value": "elves"
 		},
 		{
 			"weight": 2,
+			"key": "tieflings",
 			"value": "tieflings"
 		},
 		{
 			"weight": 2,
+			"key": "dragonborns",
 			"value": "dragonborns"
 		},
 		{
 			"weight": 1,
+			"key": "demons",
 			"value": "demons"
 		},
 		{
 			"weight": 1,
+			"key": "dragons",
 			"value": "dragons"
 		},
 		{
 			"weight": 2,
+			"key": "gnomes",
 			"value": "gnomes"
 		},
 		{
 			"weight": 2,
+			"key": "halflings",
 			"value": "halflings"
 		},
 		{
 			"weight": 1,
+			"key": "orcs",
 			"value": "orcs"
 		},
 		{
 			"weight": 1,
+			"key": "goblins",
 			"value": "goblins"
 		},
 		{
 			"weight": 1,
+			"key": "kobolds",
 			"value": "kobolds"
 		}
 	]

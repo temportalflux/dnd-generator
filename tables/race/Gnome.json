@@ -1,10 +1,12 @@
 {
 	"rows": [
 		{
+			"key": "Forest",
 			"value": "Forest",
 			"weight": 4
 		},
 		{
+			"key": "Rock",
 			"value": "Rock",
 			"weight": 3
 		}

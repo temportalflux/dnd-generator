@@ -2,30 +2,37 @@
 	"rows": [
 		{
 			"weight": 7,
+			"key": "discretely",
 			"value": "discretely"
 		},
 		{
 			"weight": 4,
+			"key": "quietly",
 			"value": "quietly"
 		},
 		{
 			"weight": 3,
+			"key": "openly",
 			"value": "openly"
 		},
 		{
 			"weight": 2,
+			"key": "proudly",
 			"value": "proudly"
 		},
 		{
 			"weight": 1,
+			"key": "loudly",
 			"value": "loudly"
 		},
 		{
 			"weight": 1,
+			"key": "zealously",
 			"value": "zealously"
 		},
 		{
 			"weight": 1,
+			"key": "fervently",
 			"value": "fervently"
 		}
 	]

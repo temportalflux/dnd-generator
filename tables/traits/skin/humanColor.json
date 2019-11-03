@@ -1,24 +1,31 @@
 {
 	"rows": [
 		{
+			"key": "white",
 			"value": "white"
 		},
 		{
+			"key": "pink",
 			"value": "pink"
 		},
 		{
+			"key": "red",
 			"value": "red"
 		},
 		{
+			"key": "brown",
 			"value": "brown"
 		},
 		{
+			"key": "black",
 			"value": "black"
 		},
 		{
+			"key": "golden",
 			"value": "golden"
 		},
 		{
+			"key": "chocolate",
 			"value": "chocolate"
 		}
 	]

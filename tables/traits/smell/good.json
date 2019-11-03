@@ -2,70 +2,87 @@
 	"rows": [
 		{
 			"weight": 3,
+			"key": "cheap cologne",
 			"value": "cheap cologne"
 		},
 		{
 			"weight": 3,
+			"key": "cologne",
 			"value": "cologne"
 		},
 		{
 			"weight": 2,
+			"key": "expensive cologne",
 			"value": "expensive cologne"
 		},
 		{
 			"weight": 3,
+			"key": "cedar wood",
 			"value": "cedar wood"
 		},
 		{
 			"weight": 3,
+			"key": "lavender",
 			"value": "lavender"
 		},
 		{
 			"weight": 3,
+			"key": "honey",
 			"value": "honey"
 		},
 		{
 			"weight": 3,
+			"key": "flowers",
 			"value": "flowers"
 		},
 		{
 			"weight": 3,
+			"key": "incense",
 			"value": "incense"
 		},
 		{
 			"weight": 3,
+			"key": "baking",
 			"value": "baking"
 		},
 		{
 			"weight": 3,
+			"key": "rain",
 			"value": "rain"
 		},
 		{
 			"weight": 3,
+			"key": "forest life",
 			"value": "forest life"
 		},
 		{
 			"weight": 3,
+			"key": "the sea",
 			"value": "the sea"
 		},
 		{
 			"weight": 3,
+			"key": "cookies",
 			"value": "cookies"
 		},
 		{
 			"weight": 3,
+			"key": "spices",
 			"value": "spices"
 		},
 		{
 			"weight": 3,
+			"key": "autumn leaves",
 			"value": "autumn leaves"
 		},
 		{
 			"weight": 4,
+			"key": "soap",
 			"value": "soap"
 		},
 		{
 			"weight": 4,
+			"key": "roses",
 			"value": "roses"
 		}
 	]

@@ -2,19 +2,12 @@
 	"rows": [
 		{
 			"weight": 16,
+			"key": "none",
 			"stringify": "none"
 		},
 		{
-			"weight": 2,
-			"stringify": "$(identity.pronouns.singular) spends every morning training.",
-			"modifiers": {
-				"stats.abilityScores.strength": 2,
-				"stats.abilityScores.dexterity": 2,
-				"stats.abilityScores.constitution": 2
-			}
-		},
-		{
 			"weight": 3,
+			"key": "meditating",
 			"stringify": "$(identity.pronouns.singular) spends every morning meditating.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2,
@@ -24,6 +17,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "animals",
 			"stringify": "$(identity.pronouns.singular) likes animals more than people.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2
@@ -31,6 +25,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "vegetarianVocal",
 			"stringify": "$(identity.pronouns.singular) is a vocal vegetarian.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
@@ -38,6 +33,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "vegetarian",
 			"stringify": "$(identity.pronouns.singular) is a vegetarian.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
@@ -45,6 +41,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "vegetarianSecret",
 			"stringify": "$(identity.pronouns.singular) is a secret vegetarian.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
@@ -52,6 +49,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "vegan",
 			"stringify": "$(identity.pronouns.singular) is a vegan.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
@@ -59,6 +57,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "veganVocal",
 			"stringify": "$(identity.pronouns.singular) is a vocal vegan.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
@@ -66,6 +65,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "veganSecret",
 			"stringify": "$(identity.pronouns.singular) is a secret vegan.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 1
@@ -73,6 +73,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "plantSpeaker",
 			"stringify": "$(identity.pronouns.singular) $(frequency) talks to plants.",
 			"children": [
 				{
@@ -83,30 +84,37 @@
 		},
 		{
 			"weight": 4,
+			"key": "uncomfortableInCities",
 			"stringify": "$(identity.pronouns.singular) feels uncomfortable in a urban setting."
 		},
 		{
 			"weight": 3,
+			"key": "herbalist",
 			"stringify": "$(identity.pronouns.singular) is a very proficient herbalist."
 		},
 		{
 			"weight": 3,
+			"key": "potionMaker",
 			"stringify": "$(identity.pronouns.singular) can make a potion out of anything."
 		},
 		{
 			"weight": 3,
+			"key": "treeSleeper",
 			"stringify": "$(identity.pronouns.singular) sleeps best in a tree."
 		},
 		{
 			"weight": 3,
+			"key": "goodAtDirections",
 			"stringify": "$(identity.pronouns.singular) can always find $(identity.pronouns.possessive) way in the woods."
 		},
 		{
 			"weight": 3,
+			"key": "freshFood",
 			"stringify": "$(identity.pronouns.singular) loves eating fresh aliments."
 		},
 		{
 			"weight": 3,
+			"key": "animalTamer",
 			"stringify": "$(identity.pronouns.singular) can tame any animal.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1
@@ -114,6 +122,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "pacificst",
 			"stringify": "$(identity.pronouns.singular) will never take a life if given the choice.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 2,

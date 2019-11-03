@@ -1,17 +1,19 @@
 {
 	"rows": [
 		{
+			"key": "masculine",
 			"value": "masculine",
 			"weight": 2
 		},
 		{
+			"key": "feminine",
 			"value": "feminine",
 			"weight": 2
 		},
 		{
+			"key": "androgynous",
 			"value": "androgynous",
 			"weight": 1
 		}
-	],
-	"values": {}
+	]
 }

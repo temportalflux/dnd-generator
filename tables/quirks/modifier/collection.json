@@ -2,10 +2,12 @@
 	"rows": [
 		{
 			"weight": 2,
+			"key": "old pennies",
 			"value": "old pennies"
 		},
 		{
 			"weight": 1,
+			"key": "teeth from cadavers",
 			"value": "teeth from cadavers",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
@@ -13,30 +15,37 @@
 		},
 		{
 			"weight": 2,
+			"key": "cute rocks",
 			"value": "cute rocks"
 		},
 		{
 			"weight": 2,
+			"key": "weird bones",
 			"value": "weird bones"
 		},
 		{
 			"weight": 2,
+			"key": "bottle corks",
 			"value": "bottle corks"
 		},
 		{
 			"weight": 2,
+			"key": "iridescent feathers",
 			"value": "iridescent feathers"
 		},
 		{
 			"weight": 2,
+			"key": "sea shells",
 			"value": "sea shells"
 		},
 		{
 			"weight": 2,
+			"key": "dried rose petals",
 			"value": "dried rose petals"
 		},
 		{
 			"weight": 1,
+			"key": "tiny animal skulls",
 			"value": "tiny animal skulls",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
@@ -44,18 +53,22 @@
 		},
 		{
 			"weight": 2,
+			"key": "handkerchiefs",
 			"value": "handkerchiefs"
 		},
 		{
 			"weight": 2,
+			"key": "buttons",
 			"value": "buttons"
 		},
 		{
 			"weight": 2,
+			"key": "thimbles",
 			"value": "thimbles"
 		},
 		{
 			"weight": 2,
+			"key": "labels",
 			"value": "labels"
 		}
 	]

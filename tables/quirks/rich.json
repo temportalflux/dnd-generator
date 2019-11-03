@@ -2,14 +2,17 @@
 	"rows": [
 		{
 			"weight": 20,
+			"key": "none",
 			"stringify": "none"
 		},
 		{
 			"weight": 2,
+			"key": "badLivingConditions",
 			"stringify": "$(identity.pronouns.singular) cannot tolerate rough living conditions."
 		},
 		{
 			"weight": 2,
+			"key": "longWords",
 			"stringify": "$(identity.pronouns.singular) $(frequency) uses long words to sound smart.",
 			"children": [
 				{
@@ -20,6 +23,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "donates",
 			"stringify": "$(identity.pronouns.singular) $(frequency) gives money to the poor.",
 			"children": [
 				{
@@ -33,10 +37,12 @@
 		},
 		{
 			"weight": 2,
+			"key": "disregardsThePoor",
 			"stringify": "$(identity.pronouns.singular) disregards poorer people."
 		},
 		{
 			"weight": 2,
+			"key": "inheritance",
 			"stringify": "$(identity.pronouns.singular) inherited a $(inheritance).",
 			"children": [
 				{
@@ -47,42 +53,52 @@
 		},
 		{
 			"weight": 2,
+			"key": "expensiveClothes",
 			"stringify": "$(identity.pronouns.singular) only dresses in very expensive clothes."
 		},
 		{
 			"weight": 2,
+			"key": "fancyHat",
 			"stringify": "$(identity.pronouns.singular) always wears a fancy hat."
 		},
 		{
 			"weight": 2,
+			"key": "lovesParties",
 			"stringify": "$(identity.pronouns.singular) loves partying."
 		},
 		{
 			"weight": 2,
+			"key": "walkingCane",
 			"stringify": "$(identity.pronouns.singular) uses a beautiful walking cane."
 		},
 		{
 			"weight": 1,
+			"key": "cheapJewlery",
 			"stringify": "$(identity.pronouns.singular) wears a lot of cheap jewelry."
 		},
 		{
 			"weight": 1,
+			"key": "beautifulJewlery",
 			"stringify": "$(identity.pronouns.singular) wears a lot of beautiful jewelry."
 		},
 		{
 			"weight": 1,
+			"key": "fancySpectacles",
 			"stringify": "$(identity.pronouns.singular) wears fancy spectacles."
 		},
 		{
 			"weight": 1,
+			"key": "cheapSpectacles",
 			"stringify": "$(identity.pronouns.singular) wears cheap spectacles."
 		},
 		{
 			"weight": 2,
+			"key": "hasServants",
 			"stringify": "$(identity.pronouns.singular) is always accompanied by $(identity.pronouns.possessive) servants."
 		},
 		{
 			"weight": 2,
+			"key": "inquisitive",
 			"stringify": "$(identity.pronouns.singular) likes to know how things work.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2
@@ -90,6 +106,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "doesntPartyWithPossessions",
 			"stringify": "$(identity.pronouns.singular) doesn't like parting with $(identity.pronouns.possessive) money or possessions.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
@@ -97,6 +114,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "regalLooking",
 			"stringify": "$(identity.pronouns.singular) has a very regal look.",
 			"modifiers": {
 				"stats.abilityScores.charisma": 1
@@ -104,6 +122,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "everyoneIsAnIdiot",
 			"stringify": "$(identity.pronouns.singular) considers everyone else as idiots.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 1
@@ -111,6 +130,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "noPracticleExperience",
 			"stringify": "$(identity.pronouns.singular) has very little practical experience."
 		}
 	]

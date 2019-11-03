@@ -1,10 +1,12 @@
 {
 	"rows": [
 		{
+			"key": "Armorer",
 			"value": "Armorer",
 			"weight": 2
 		},
 		{
+			"key": "Painter",
 			"value": "Painter",
 			"weight": 1,
 			"modifiers": {
@@ -12,30 +14,37 @@
 			}
 		},
 		{
+			"key": "Baker",
 			"value": "Baker",
 			"weight": 1
 		},
 		{
+			"key": "Banker",
 			"value": "Banker",
 			"weight": 1
 		},
 		{
+			"key": "Blacksmith",
 			"value": "Blacksmith",
 			"weight": 3
 		},
 		{
+			"key": "Bowyer",
 			"value": "Bowyer",
 			"weight": 1
 		},
 		{
+			"key": "Brewer",
 			"value": "Brewer",
 			"weight": 2
 		},
 		{
+			"key": "Butcher",
 			"value": "Butcher",
 			"weight": 2
 		},
 		{
+			"key": "Carpenter",
 			"value": "Carpenter",
 			"weight": 3,
 			"modifiers": {
@@ -43,22 +52,27 @@
 			}
 		},
 		{
+			"key": "Clothier",
 			"value": "Clothier",
 			"weight": 1
 		},
 		{
+			"key": "Cook",
 			"value": "Cook",
 			"weight": 2
 		},
 		{
+			"key": "Furrier",
 			"value": "Furrier",
 			"weight": 1
 		},
 		{
+			"key": "Goldsmith",
 			"value": "Goldsmith",
 			"weight": 1
 		},
 		{
+			"key": "Innkeeper",
 			"value": "Innkeeper",
 			"weight": 4,
 			"modifiers": {
@@ -66,6 +80,7 @@
 			}
 		},
 		{
+			"key": "Jeweler",
 			"value": "Jeweler",
 			"weight": 2,
 			"modifiers": {
@@ -74,10 +89,12 @@
 			}
 		},
 		{
+			"key": "Leatherworker",
 			"value": "Leatherworker",
 			"weight": 3
 		},
 		{
+			"key": "Locksmith",
 			"value": "Locksmith",
 			"weight": 2,
 			"modifiers": {
@@ -85,10 +102,12 @@
 			}
 		},
 		{
+			"key": "Mason",
 			"value": "Mason",
 			"weight": 2
 		},
 		{
+			"key": "Merchant",
 			"value": "Merchant",
 			"weight": 3,
 			"modifiers": {
@@ -96,6 +115,7 @@
 			}
 		},
 		{
+			"key": "Musician",
 			"value": "Musician",
 			"weight": 3,
 			"modifiers": {
@@ -104,6 +124,7 @@
 			}
 		},
 		{
+			"key": "Tinker",
 			"value": "Tinker",
 			"weight": 1,
 			"modifiers": {
@@ -112,6 +133,7 @@
 			}
 		},
 		{
+			"key": "Torturer",
 			"value": "Torturer",
 			"weight": 1,
 			"modifiers": {
@@ -122,6 +144,7 @@
 			}
 		},
 		{
+			"key": "Trader",
 			"value": "Trader",
 			"weight": 2,
 			"modifiers": {
@@ -130,6 +153,7 @@
 			}
 		},
 		{
+			"key": "Weaver",
 			"value": "Weaver",
 			"weight": 3,
 			"modifiers": {

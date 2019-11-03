@@ -1,198 +1,247 @@
 {
 	"rows": [
 		{
+			"key": "skull",
 			"value": "skull",
 			"weight": 8
 		},
 		{
+			"key": "wolf",
 			"value": "wolf",
 			"weight": 3
 		},
 		{
+			"key": "bear",
 			"value": "bear",
 			"weight": 3
 		},
 		{
+			"key": "eagle",
 			"value": "eagle",
 			"weight": 3
 		},
 		{
+			"key": "falcon",
 			"value": "falcon",
 			"weight": 3
 		},
 		{
+			"key": "fish",
 			"value": "fish",
 			"weight": 3
 		},
 		{
+			"key": "shark",
 			"value": "shark",
 			"weight": 3
 		},
 		{
+			"key": "cobra",
 			"value": "cobra",
 			"weight": 3
 		},
 		{
+			"key": "snake",
 			"value": "snake",
 			"weight": 3
 		},
 		{
+			"key": "crocodile",
 			"value": "crocodile",
 			"weight": 3
 		},
 		{
+			"key": "deer",
 			"value": "deer",
 			"weight": 3
 		},
 		{
+			"key": "gorilla",
 			"value": "gorilla",
 			"weight": 3
 		},
 		{
+			"key": "elephant",
 			"value": "elephant",
 			"weight": 3
 		},
 		{
+			"key": "horse",
 			"value": "horse",
 			"weight": 3
 		},
 		{
+			"key": "rabbit",
 			"value": "rabbit",
 			"weight": 3
 		},
 		{
+			"key": "goat",
 			"value": "goat",
 			"weight": 3
 		},
 		{
+			"key": "gecko",
 			"value": "gecko",
 			"weight": 3
 		},
 		{
+			"key": "lizard",
 			"value": "lizard",
 			"weight": 3
 		},
 		{
+			"key": "turtle",
 			"value": "turtle",
 			"weight": 3
 		},
 		{
+			"key": "panther",
 			"value": "panther",
 			"weight": 3
 		},
 		{
+			"key": "dog",
 			"value": "dog",
 			"weight": 3
 		},
 		{
+			"key": "cat",
 			"value": "cat",
 			"weight": 3
 		},
 		{
+			"key": "scorpion",
 			"value": "scorpion",
 			"weight": 3
 		},
 		{
+			"key": "scarab",
 			"value": "scarab",
 			"weight": 3
 		},
 		{
+			"key": "spider",
 			"value": "spider",
 			"weight": 3
 		},
 		{
+			"key": "fly",
 			"value": "fly",
 			"weight": 2
 		},
 		{
+			"key": "rat",
 			"value": "rat",
 			"weight": 3
 		},
 		{
+			"key": "mouse",
 			"value": "mouse",
 			"weight": 3
 		},
 		{
+			"key": "fox",
 			"value": "fox",
 			"weight": 3
 		},
 		{
+			"key": "tiger",
 			"value": "tiger",
 			"weight": 3
 		},
 		{
+			"key": "lion",
 			"value": "lion",
 			"weight": 3
 		},
 		{
+			"key": "armadillo",
 			"value": "armadillo",
 			"weight": 2
 		},
 		{
+			"key": "dragon",
 			"value": "dragon",
 			"weight": 2
 		},
 		{
+			"key": "wyvern",
 			"value": "wyvern",
 			"weight": 2
 		},
 		{
+			"key": "octopus",
 			"value": "octopus",
 			"weight": 2
 		},
 		{
+			"key": "medusa",
 			"value": "medusa",
 			"weight": 2
 		},
 		{
+			"key": "minotaur",
 			"value": "minotaur",
 			"weight": 2
 		},
 		{
+			"key": "manatee",
 			"value": "manatee",
 			"weight": 2
 		},
 		{
+			"key": "giraffe",
 			"value": "giraffe",
 			"weight": 2
 		},
 		{
+			"key": "koala",
 			"value": "koala",
 			"weight": 2
 		},
 		{
+			"key": "unicorn",
 			"value": "unicorn",
 			"weight": 2
 		},
 		{
+			"key": "umber hulk",
 			"value": "umber hulk",
 			"weight": 2
 		},
 		{
+			"key": "ghost",
 			"value": "ghost",
 			"weight": 2
 		},
 		{
+			"key": "demon",
 			"value": "demon",
 			"weight": 2
 		},
 		{
+			"key": "wurm",
 			"value": "wurm",
 			"weight": 2
 		},
 		{
+			"key": "zombie",
 			"value": "zombie",
 			"weight": 2
 		},
 		{
+			"key": "jellyfish",
 			"value": "jellyfish",
 			"weight": 2
 		},
 		{
+			"key": "chimera",
 			"value": "chimera",
 			"weight": 2
 		},
 		{
+			"key": "kraken",
 			"value": "kraken",
 			"weight": 2
 		}

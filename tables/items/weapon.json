@@ -1,21 +1,27 @@
 {
 	"rows": [
 		{
+			"key": "simple weapon",
 			"source": "{roll:items/weapon/simpleweapon}"
 		},
 		{
+			"key": "simple finesse",
 			"source": "{roll:items/weapon/simplefinesse}"
 		},
 		{
+			"key": "simple ranged",
 			"source": "{roll:items/weapon/simpleranged}"
 		},
 		{
+			"key": "martial weapon",
 			"source": "{roll:items/weapon/martialweapon}"
 		},
 		{
+			"key": "martial finesse",
 			"source": "{roll:items/weapon/martialfinesse}"
 		},
 		{
+			"key": "martial ranged",
 			"source": "{roll:items/weapon/martialranged}"
 		}
 	]

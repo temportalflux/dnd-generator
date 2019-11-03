@@ -1,9 +1,11 @@
 {
 	"rows": [
 		{
+			"key": "dagger",
 			"value": "dagger"
 		},
 		{
+			"key": "shortsword",
 			"value": "shortsword"
 		}
 	]

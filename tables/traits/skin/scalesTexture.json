@@ -1,27 +1,35 @@
 {
 	"rows": [
 		{
+			"key": "rough",
 			"value": "rough"
 		},
 		{
+			"key": "smooth",
 			"value": "smooth"
 		},
 		{
+			"key": "shiny",
 			"value": "shiny"
 		},
 		{
+			"key": "rugged",
 			"value": "rugged"
 		},
 		{
+			"key": "dirty",
 			"value": "dirty"
 		},
 		{
+			"key": "pointy",
 			"value": "pointy"
 		},
 		{
+			"key": "broad",
 			"value": "broad"
 		},
 		{
+			"key": "ridged",
 			"value": "ridged"
 		}
 	]

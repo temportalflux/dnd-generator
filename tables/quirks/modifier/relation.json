@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "familyMember",
 			"source": "{roll:quirks/modifier/relation/familyMember}"
 		}
 	]

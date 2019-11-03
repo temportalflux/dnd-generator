@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "nonbinary",
 			"source": "{roll:race/$(description.race.value)/name-nonbinary}"
 		}
 	]

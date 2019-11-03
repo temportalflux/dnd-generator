@@ -2,14 +2,17 @@
 	"rows": [
 		{
 			"weight": 22,
+			"key": "none",
 			"stringify": "none"
 		},
 		{
 			"weight": 2,
+			"key": "omensEverywhere",
 			"stringify": "$(identity.pronouns.singular) sees divine omens in everything."
 		},
 		{
 			"weight": 2,
+			"key": "talksToDietyAloud",
 			"stringify": "$(identity.pronouns.singular) $(frequency) talks aloud to $(identity.pronouns.possessive) god.",
 			"children": [
 				{
@@ -20,6 +23,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "quotesSacredTexts",
 			"stringify": "$(identity.pronouns.singular) $(frequency) quotes sacred texts.",
 			"children": [
 				{
@@ -30,6 +34,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "misquotesSacredTexts",
 			"stringify": "$(identity.pronouns.singular) $(frequency) misquotes sacred texts.",
 			"children": [
 				{
@@ -40,34 +45,48 @@
 		},
 		{
 			"weight": 2,
+			"key": "intolerant",
 			"stringify": "$(identity.pronouns.singular) is very intolerant towards other faiths."
 		},
 		{
 			"weight": 2,
+			"key": "blessedWater",
 			"stringify": "$(identity.pronouns.singular) carries blessed water everywhere."
 		},
 		{
 			"weight": 3,
-			"stringify": "$(identity.pronouns.singular) spends a lot of time studying other religions. }{%int+1}"
+			"key": "studiesReligion",
+			"stringify": "$(identity.pronouns.singular) spends a lot of time studying other religions.",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1
+			}
 		},
 		{
 			"weight": 2,
+			"key": "alwaysHasAStory",
 			"stringify": "$(identity.pronouns.singular) has story about $(identity.pronouns.possessive) god for every occasion."
 		},
 		{
 			"weight": 2,
-			"stringify": "$(identity.pronouns.singular) will share $(identity.pronouns.possessive) god's wisdom when appropriate. }{%wis+1}"
+			"key": "sharesWisdomAsAppropriate",
+			"stringify": "$(identity.pronouns.singular) will share $(identity.pronouns.possessive) god's wisdom when appropriate.",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			}
 		},
 		{
 			"weight": 2,
+			"key": "secretKeeper",
 			"stringify": "$(identity.pronouns.singular) keeps everything about $(identity.pronouns.possessive) god a secret."
 		},
 		{
 			"weight": 2,
+			"key": "complicatedRitual",
 			"stringify": "$(identity.pronouns.singular) carries out a complicated religious ritual every morning."
 		},
 		{
 			"weight": 2,
+			"key": "praysAtBadTimes",
 			"stringify": "$(identity.pronouns.singular) will $(frequency) pray at inopportune moments.",
 			"children": [
 				{
@@ -78,10 +97,12 @@
 		},
 		{
 			"weight": 2,
+			"key": "convertsEveryone",
 			"stringify": "$(identity.pronouns.singular) tries to convert everyone $(identity.pronouns.singular) meets."
 		},
 		{
 			"weight": 2,
+			"key": "idolizesAHero",
 			"stringify": "$(identity.pronouns.singular) idolizes a religious hero."
 		}
 	]

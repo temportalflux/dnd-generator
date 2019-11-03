@@ -1,27 +1,35 @@
 {
 	"rows": [
 		{
+			"key": "quickToTrust",
 			"stringify": "$(identity.pronouns.singular) is very quick to trust other people."
 		},
 		{
+			"key": "slotToTrust",
 			"stringify": "$(identity.pronouns.singular) is very slow to trust other people."
 		},
 		{
+			"key": "obstinate",
 			"stringify": "$(identity.pronouns.singular) is very obstinate."
 		},
 		{
+			"key": "notObstinate",
 			"stringify": "$(identity.pronouns.singular) is not very obstinate."
 		},
 		{
+			"key": "optimistic",
 			"stringify": "$(identity.pronouns.singular) is very optimistic."
 		},
 		{
+			"key": "pessimistic",
 			"stringify": "$(identity.pronouns.singular) is very pessimistic."
 		},
 		{
+			"key": "modest",
 			"stringify": "$(identity.pronouns.singular) is an example of modesty."
 		},
 		{
+			"key": "conceited",
 			"stringify": "$(identity.pronouns.singular) is $(modifier) conceited.",
 			"children": [
 				{
@@ -31,66 +39,82 @@
 			]
 		},
 		{
+			"key": "confident",
 			"stringify": "$(identity.pronouns.singular) is very self-confident.",
 			"modifiers": {
 				"stats.abilityScores.charisma": 1
 			}
 		},
 		{
+			"key": "lowSelfConfidence",
 			"stringify": "$(identity.pronouns.singular) has no self-confidence.",
 			"modifiers": {
 				"stats.abilityScores.charisma": -1
 			}
 		},
 		{
+			"key": "rarelySpeaks",
 			"stringify": "$(identity.pronouns.singular) rarely speaks."
 		},
 		{
+			"key": "talkative",
 			"stringify": "$(identity.pronouns.singular) is very talkative."
 		},
 		{
+			"key": "talkesQuietly",
 			"stringify": "$(identity.pronouns.singular) only talks in whispers."
 		},
 		{
+			"key": "talksLoudly",
 			"stringify": "$(identity.pronouns.singular) only talks loudly."
 		},
 		{
+			"key": "generous",
 			"stringify": "$(identity.pronouns.singular) is very generous.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 2
 			}
 		},
 		{
+			"key": "greedy",
 			"stringify": "$(identity.pronouns.singular) is very greedy.",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 2
 			}
 		},
 		{
+			"key": "materialistic",
 			"stringify": "$(identity.pronouns.singular) is materialistic."
 		},
 		{
+			"key": "nonmaterialistic",
 			"stringify": "$(identity.pronouns.singular) is non-materialistic.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 1
 			}
 		},
 		{
+			"key": "coward",
 			"stringify": "$(identity.pronouns.singular) is very cowardly."
 		},
 		{
+			"key": "courageous",
 			"stringify": "$(identity.pronouns.singular) is very courageous, to a fault."
 		},
 		{
+			"key": "riskTaker",
 			"stringify": "$(identity.pronouns.singular) doesn't care about risks or odds."
 		},
 		{
+			"key": "judgesBasedOnActions",
 			"stringify": "$(identity.pronouns.singular) judges people by their actions, not their words."
 		},
 		{
+			"key": "faceValue",
 			"stringify": "$(identity.pronouns.singular) takes everything at face-value."
 		},
 		{
+			"key": "looksforLoopholes",
 			"stringify": "$(identity.pronouns.singular) constantly looks for the loophole.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 1,
@@ -99,6 +123,7 @@
 			}
 		},
 		{
+			"key": "perfectionist",
 			"stringify": "$(identity.pronouns.singular) is a perfectionist.",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
@@ -110,6 +135,7 @@
 			}
 		},
 		{
+			"key": "lazy",
 			"stringify": "$(identity.pronouns.singular) is $(modifier) lazy.",
 			"children": [
 				{
@@ -119,18 +145,21 @@
 			]
 		},
 		{
+			"key": "hatesLazy",
 			"stringify": "$(identity.pronouns.singular) can't stand laziness.",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2
 			}
 		},
 		{
+			"key": "badAtSecrets",
 			"stringify": "$(identity.pronouns.singular) can't keep a secret.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": -1
 			}
 		},
 		{
+			"key": "goodAtSecrets",
 			"stringify": "$(identity.pronouns.singular) is very good at keeping secrets.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": -1

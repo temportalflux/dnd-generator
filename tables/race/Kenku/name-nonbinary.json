@@ -1,111 +1,192 @@
 {
 	"rows": [
 		{
-			"value": ["Wind"],
+			"key": "Wind",
+			"value": [
+				"Wind"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Gust"],
+			"key": "Gust",
+			"value": [
+				"Gust"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Stream"],
+			"key": "Stream",
+			"value": [
+				"Stream"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Coins"],
+			"key": "Coins",
+			"value": [
+				"Coins"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Keys"],
+			"key": "Keys",
+			"value": [
+				"Keys"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Laugh"],
+			"key": "Laugh",
+			"value": [
+				"Laugh"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Thunder"],
+			"key": "Thunder",
+			"value": [
+				"Thunder"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Door Slam"],
+			"key": "Door Slam",
+			"value": [
+				"Door Slam"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Knock Knock"],
+			"key": "Knock Knock",
+			"value": [
+				"Knock Knock"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Small Bell"],
+			"key": "Small Bell",
+			"value": [
+				"Small Bell"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Big Bell"],
+			"key": "Big Bell",
+			"value": [
+				"Big Bell"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Yawn"],
+			"key": "Yawn",
+			"value": [
+				"Yawn"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Waterfall"],
+			"key": "Waterfall",
+			"value": [
+				"Waterfall"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Applause"],
+			"key": "Applause",
+			"value": [
+				"Applause"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Clap"],
+			"key": "Clap",
+			"value": [
+				"Clap"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Shatter"],
+			"key": "Shatter",
+			"value": [
+				"Shatter"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Fog Horn"],
+			"key": "Fog Horn",
+			"value": [
+				"Fog Horn"
+			],
 			"weight": 1
 		},
 		{
-			"value": ["Crickets"],
+			"key": "Crickets",
+			"value": [
+				"Crickets"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Fart"],
+			"key": "Fart",
+			"value": [
+				"Fart"
+			],
 			"weight": 2
 		},
 		{
-			"value": ["Tap Tap"],
+			"key": "Tap Tap",
+			"value": [
+				"Tap Tap"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Whirr"],
+			"key": "Whirr",
+			"value": [
+				"Whirr"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Grill"],
+			"key": "Grill",
+			"value": [
+				"Grill"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Bubble"],
+			"key": "Bubble",
+			"value": [
+				"Bubble"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Steam"],
+			"key": "Steam",
+			"value": [
+				"Steam"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Crash"],
+			"key": "Crash",
+			"value": [
+				"Crash"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Cough"],
+			"key": "Cough",
+			"value": [
+				"Cough"
+			],
 			"weight": 3
 		},
 		{
-			"value": ["Rattle"],
+			"key": "Rattle",
+			"value": [
+				"Rattle"
+			],
 			"weight": 3
 		}
 	]

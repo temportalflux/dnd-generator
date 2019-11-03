@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 4,
+			"key": "Bard",
 			"value": "Bard",
 			"children": [
 				{

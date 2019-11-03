@@ -2,46 +2,57 @@
 	"rows": [
 		{
 			"weight": 18,
+			"key": "none",
 			"stringify": "none"
 		},
 		{
 			"weight": 3,
+			"key": "neverAsksForHelp",
 			"stringify": "$(identity.pronouns.singular) never asks for help."
 		},
 		{
 			"weight": 2,
+			"key": "seeksMastery",
 			"stringify": "$(identity.pronouns.singular) seeks extreme mastery of what $(identity.pronouns.singular) does."
 		},
 		{
 			"weight": 2,
+			"key": "otherRacesAreInferior",
 			"stringify": "$(identity.pronouns.singular) sees other races as inferior."
 		},
 		{
 			"weight": 2,
+			"key": "keepsAllPromises",
 			"stringify": "$(identity.pronouns.singular) keeps all of $(identity.pronouns.possessive) promises."
 		},
 		{
 			"weight": 2,
+			"key": "despisesFear",
 			"stringify": "$(identity.pronouns.singular) despises fear and cowardice."
 		},
 		{
 			"weight": 2,
+			"key": "respectsAdversaries",
 			"stringify": "$(identity.pronouns.singular) treats adversaries with respect."
 		},
 		{
 			"weight": 2,
+			"key": "valuesHonor",
 			"stringify": "$(identity.pronouns.singular) values honor above all."
 		},
 		{
 			"weight": 2,
+			"key": "cannotUseBreathWeapon",
 			"stringify": "$(identity.pronouns.singular) cannot use $(identity.pronouns.possessive) breath weapon."
 		},
 		{
 			"weight": 2,
+			"key": "secretDragonMaster",
 			"stringify": "$(identity.pronouns.singular) has a secret dragon master."
 		},
 		{
 			"weight": 6,
+			"key": "valuesClan",
 			"stringify": "$(identity.pronouns.singular) values $(identity.pronouns.possessive) clan above anything else."
 		}
 	]

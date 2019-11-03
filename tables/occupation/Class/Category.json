@@ -1,12 +1,15 @@
 {
 	"rows": [
 		{
+			"key": "Martial",
 			"value": "Martial"
 		},
 		{
+			"key": "Caster",
 			"value": "Caster"
 		},
 		{
+			"key": "Misc",
 			"value": "Misc"
 		}
 	]

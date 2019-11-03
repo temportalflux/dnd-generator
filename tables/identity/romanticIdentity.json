@@ -1,16 +1,19 @@
 {
 	"rows": [
 		{
-			"value": "romantic",
-			"weight": 100
+			"weight": 100,
+			"key": "romantic",
+			"value": "romantic"
 		},
 		{
-			"value": "demiromantic",
-			"weight": 20
+			"weight": 20,
+			"key": "demiromantic",
+			"value": "demiromantic"
 		},
 		{
-			"value": "aromantic",
-			"weight": 15
+			"weight": 15,
+			"key": "aromantic",
+			"value": "aromantic"
 		}
 	]
 }

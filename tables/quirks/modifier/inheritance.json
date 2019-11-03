@@ -2,26 +2,32 @@
 	"rows": [
 		{
 			"weight": 3,
+			"key": "castle",
 			"value": "castle"
 		},
 		{
 			"weight": 4,
+			"key": "farm",
 			"value": "farm"
 		},
 		{
 			"weight": 2,
+			"key": "manor",
 			"value": "manor"
 		},
 		{
 			"weight": 2,
+			"key": "small forest",
 			"value": "small forest"
 		},
 		{
 			"weight": 2,
+			"key": "creepy house",
 			"value": "creepy house"
 		},
 		{
 			"weight": 1,
+			"key": "palace",
 			"value": "palace"
 		}
 	]

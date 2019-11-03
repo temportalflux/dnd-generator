@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 3,
+			"key": "Bandit",
 			"value": "Bandit",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
@@ -19,6 +20,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "Beggar",
 			"value": "Beggar",
 			"modifiers": {
 				"stats.abilityScores.strength": -2,
@@ -31,6 +33,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "Fence",
 			"value": "Fence",
 			"modifiers": {
 				"stats.abilityScores.charisma": 4
@@ -38,6 +41,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Pickpockset",
 			"value": "Pickpockset",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 3,
@@ -47,6 +51,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "Procurer",
 			"value": "Procurer",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 3,
@@ -55,6 +60,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Prostitute",
 			"value": "Prostitute",
 			"modifiers": {
 				"stats.abilityScores.charisma": 4
@@ -62,6 +68,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "Slaver",
 			"value": "Slaver",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 3,
@@ -71,6 +78,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "Smuggler",
 			"value": "Smuggler",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 3

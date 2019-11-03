@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 9,
+			"key": "Cleric",
 			"value": "Cleric",
 			"children": [
 				{
@@ -43,6 +44,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "Artificier",
 			"value": "Artificier",
 			"children": [
 				{
@@ -89,6 +91,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Druid",
 			"value": "Druid",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": -2,
@@ -143,6 +146,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "Mystic",
 			"value": "Mystic",
 			"children": [
 				{
@@ -184,6 +188,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Sorcerer",
 			"value": "Sorcerer",
 			"children": [
 				{
@@ -225,6 +230,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Warlock",
 			"value": "Warlock",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.negative": 1
@@ -269,6 +275,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "Wizard",
 			"value": "Wizard",
 			"children": [
 				{

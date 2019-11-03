@@ -1,24 +1,31 @@
 {
 	"rows": [
 		{
+			"key": "club",
 			"value": "club"
 		},
 		{
+			"key": "greatclub",
 			"value": "greatclub"
 		},
 		{
+			"key": "javelin",
 			"value": "javelin"
 		},
 		{
+			"key": "light hammer",
 			"value": "light hammer"
 		},
 		{
+			"key": "mace",
 			"value": "mace"
 		},
 		{
+			"key": "quarterstaff",
 			"value": "quarterstaff"
 		},
 		{
+			"key": "spear",
 			"value": "spear"
 		}
 	]

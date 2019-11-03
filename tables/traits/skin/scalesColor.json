@@ -1,26 +1,32 @@
 {
 	"rows": [
 		{
+			"key": "black",
 			"value": "black",
 			"weight": 2
 		},
 		{
+			"key": "gray",
 			"value": "gray",
 			"weight": 2
 		},
 		{
+			"key": "brown",
 			"value": "brown",
 			"weight": 2
 		},
 		{
+			"key": "emerald",
 			"value": "emerald",
 			"weight": 3
 		},
 		{
+			"key": "dark green",
 			"value": "dark green",
 			"weight": 3
 		},
 		{
+			"key": "green",
 			"value": "green",
 			"weight": 3
 		}

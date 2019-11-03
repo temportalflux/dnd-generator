@@ -2,10 +2,12 @@
 	"rows": [
 		{
 			"weight": 1,
+			"key": "no beard",
 			"value": "no beard"
 		},
 		{
 			"weight": 100,
+			"key": "beard",
 			"value": "beard",
 			"children": [
 				{
@@ -19,6 +21,5 @@
 				}
 			]
 		}
-	],
-	"values": {}
+	]
 }

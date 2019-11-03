@@ -1,8 +1,24 @@
 {
 	"rows": [
-		{ "weight":1, "value":"blowgun"},
-		{ "weight":3, "value":"crossbow"},
-		{ "weight":1, "value":"net"},
-		{ "weight":3, "value":"longbow"}
+		{
+			"weight": 1,
+			"key": "blowgun",
+			"value": "blowgun"
+		},
+		{
+			"weight": 3,
+			"key": "crossbow",
+			"value": "crossbow"
+		},
+		{
+			"weight": 1,
+			"key": "net",
+			"value": "net"
+		},
+		{
+			"weight": 3,
+			"key": "longbow",
+			"value": "longbow"
+		}
 	]
 }

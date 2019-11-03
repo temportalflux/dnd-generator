@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 4,
+			"key": "1scar",
 			"stringify": "$(identity.pronouns.singular) has a $(sizeString === 'none' ? '' : size)$(sizeString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartString).",
 			"children": [
 				{
@@ -16,6 +17,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "2scar",
 			"stringify": "$(identity.pronouns.singular) has $(sizeAString === 'none' ? '' : sizeA)$(sizeAString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(sizeBString === 'none' ? '' : sizeB)$(sizeBString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
 			"children": [
 				{
@@ -38,6 +40,7 @@
 		},
 		{
 			"weight": 4,
+			"key": "1piercing",
 			"stringify": "$(identity.pronouns.singular) has $(descriptor) piercing on $(identity.pronouns.selfPossessive) $(bodyPartString).",
 			"children": [
 				{
@@ -52,6 +55,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "2piercing",
 			"stringify": "$(identity.pronouns.singular) has $(descriptorA) piercing on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(descriptorB) piercing on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
 			"children": [
 				{
@@ -74,7 +78,8 @@
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) has $(descriptorA) on $(identity.pronouns.selfPossessive) $(bodyPartAString), $(descriptorB) on $(identity.pronouns.selfPossessive) $(bodyPartBString), and $(descriptorC) on $(identity.pronouns.selfPossessive) $(bodyPartCString).",
+			"key": "3piercing",
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) piercing on $(identity.pronouns.selfPossessive) $(bodyPartAString), $(descriptorB) piercing on $(identity.pronouns.selfPossessive) $(bodyPartBString), and $(descriptorC) piercing on $(identity.pronouns.selfPossessive) $(bodyPartCString).",
 			"children": [
 				{
 					"key": "descriptorA",
@@ -104,6 +109,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "1npiercing",
 			"stringify": "$(identity.pronouns.singular) has $(amount) $(descriptor) piercings on $(identity.pronouns.selfPossessive) $(bodyPartString)",
 			"children": [
 				{
@@ -122,6 +128,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "2npiercing",
 			"stringify": "$(identity.pronouns.singular) has $(amountA) $(descriptorA) piercings on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(amountB) $(descriptorB) piercings on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
 			"children": [
 				{
@@ -152,6 +159,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "limp",
 			"stringify": "$(identity.pronouns.singular) has a $(degree)limp.",
 			"children": [
 				{
@@ -165,6 +173,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "hunch",
 			"stringify": "$(identity.pronouns.singular) has $(degree)hunch.",
 			"children": [
 				{
@@ -179,6 +188,7 @@
 		},
 		{
 			"weight": 5,
+			"key": "1tattoo",
 			"stringify": "$(identity.pronouns.singular) has $(descriptor) $(tattooString) on $(identity.pronouns.selfPossessive) $(bodyPartString).",
 			"children": [
 				{
@@ -197,6 +207,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "2tattoo",
 			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooAString) on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(descriptorB) $(tattooBString) on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
 			"children": [
 				{
@@ -227,6 +238,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "3tattoo",
 			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooAString) on $(identity.pronouns.selfPossessive) $(bodyPartAString), $(descriptorB) $(tattooBString) on $(identity.pronouns.selfPossessive) $(bodyPartBString), and $(descriptorC) $(tattooCString) on $(identity.pronouns.selfPossessive) $(bodyPartCString).",
 			"children": [
 				{
@@ -269,6 +281,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "branded",
 			"stringify": "$(identity.pronouns.singular) is branded as a $(brand) on $(identity.pronouns.selfPossessive) $(bodyPartString).",
 			"children": [
 				{
@@ -283,6 +296,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "scoliose",
 			"stringify": "$(identity.pronouns.singular) has $(degree) scoliose.",
 			"children": [
 				{
@@ -296,6 +310,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "smellsBad",
 			"stringify": "$(identity.pronouns.singular) smells $(degree)of $(smell).",
 			"children": [
 				{
@@ -313,6 +328,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "smellsGood",
 			"stringify": "$(identity.pronouns.singular) smells $(degree)of $(smell).",
 			"children": [
 				{
@@ -330,6 +346,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "nimble",
 			"stringify": "$(identity.pronouns.singular) is very nimble.",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2
@@ -337,6 +354,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "clumsy",
 			"stringify": "$(identity.pronouns.singular) is very clumsy.",
 			"modifiers": {
 				"stats.abilityScores.dexterity": -3
@@ -344,18 +362,22 @@
 		},
 		{
 			"weight": 3,
+			"key": "gesturesProfusely",
 			"stringify": "$(identity.pronouns.singular) gestures profusely during a conversation."
 		},
 		{
 			"weight": 2,
+			"key": "highPitchVoice",
 			"stringify": "$(identity.pronouns.singular) has a high-pitched voice."
 		},
 		{
 			"weight": 2,
+			"key": "lowPitchVoice",
 			"stringify": "$(identity.pronouns.singular) has a low-toned voice."
 		},
 		{
 			"weight": 3,
+			"key": "easilyOutOfBreath",
 			"stringify": "$(identity.pronouns.singular) is easily out of breath.",
 			"modifiers": {
 				"stats.abilityScores.constitution": -2
@@ -363,10 +385,12 @@
 		},
 		{
 			"weight": 1,
+			"key": "sunkenBreastbone",
 			"stringify": "$(identity.pronouns.singular) has a sunken breastbone."
 		},
 		{
 			"weight": 2,
+			"key": "cannotWhistle",
 			"stringify": "$(identity.pronouns.singular) cannot whistle."
 		}
 	]

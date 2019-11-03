@@ -1,20 +1,24 @@
 {
 	"rows": [
 		{
-			"value": "straight",
-			"weight": 30
+			"weight": 30,
+			"key": "straight",
+			"value": "straight"
 		},
 		{
-			"value": "bisexual",
-			"weight": 25
+			"weight": 25,
+			"key": "bisexual",
+			"value": "bisexual"
 		},
 		{
-			"source": "{roll:identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)}",
-			"weight": 100
+			"weight": 100,
+			"key": "gayLesbian",
+			"source": "{roll:identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)}"
 		},
 		{
-			"value": "pansexual",
-			"weight": 15
+			"weight": 15,
+			"key": "pansexual",
+			"value": "pansexual"
 		}
 	]
 }

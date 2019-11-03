@@ -1,21 +1,26 @@
 {
 	"rows": [
 		{
+			"key": "Astrologer",
 			"value": "Astrologer"
 		},
 		{
+			"key": "Cartographer",
 			"value": "Cartographer"
 		},
 		{
+			"key": "Historian",
 			"value": "Historian"
 		},
 		{
+			"key": "Poet",
 			"value": "Poet",
 			"modifiers": {
 				"stats.abilityScores.charisma": 1
 			}
 		},
 		{
+			"key": "Philosopher",
 			"value": "Philosopher",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1,
@@ -29,6 +34,7 @@
 			]
 		},
 		{
+			"key": "Hermit",
 			"value": "Hermit",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1
@@ -41,6 +47,7 @@
 			]
 		},
 		{
+			"key": "Wandering Pilgrim",
 			"value": "Wandering Pilgrim",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1,
@@ -56,12 +63,14 @@
 		},
 		{
 			"weight": 2,
+			"key": "Barber",
 			"value": "Barber",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 3
 			}
 		},
 		{
+			"key": "Doctor",
 			"value": "Doctor",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2,
@@ -69,12 +78,14 @@
 			}
 		},
 		{
+			"key": "Medic",
 			"value": "Medic",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 1
 			}
 		},
 		{
+			"key": "Barrister",
 			"value": "Barrister",
 			"modifiers": {
 				"stats.abilityScores.charisma": 2,
@@ -82,6 +93,7 @@
 			}
 		},
 		{
+			"key": "Herald",
 			"value": "Herald",
 			"modifiers": {
 				"stats.abilityScores.charisma": 3
@@ -89,6 +101,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Scribe",
 			"value": "Scribe",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 1
@@ -102,6 +115,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Acolyte",
 			"value": "Acolyte",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1
@@ -115,6 +129,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Neophyte",
 			"value": "Neophyte",
 			"children": [
 				{

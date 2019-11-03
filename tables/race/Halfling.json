@@ -1,9 +1,11 @@
 {
 	"rows": [
 		{
+			"key": "Lightfoot",
 			"value": "Lightfoot"
 		},
 		{
+			"key": "Stout",
 			"value": "Stout"
 		}
 	]

@@ -1,35 +1,44 @@
 {
 	"rows": [
 		{
+			"key": "black",
 			"value": "black"
 		},
 		{
+			"key": "blue",
 			"value": "blue"
 		},
 		{
+			"key": "brass",
 			"value": "brass"
 		},
 		{
+			"key": "bronze",
 			"value": "bronze"
 		},
 		{
+			"key": "copper",
 			"value": "copper"
 		},
 		{
+			"key": "gold",
 			"value": "gold"
 		},
 		{
+			"key": "green",
 			"value": "green"
 		},
 		{
+			"key": "red",
 			"value": "red"
 		},
 		{
+			"key": "silver",
 			"value": "silver"
 		},
 		{
+			"key": "white",
 			"value": "white"
 		}
-	],
-	"values": {}
+	]
 }

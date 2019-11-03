@@ -1,12 +1,15 @@
 {
 	"rows": [
 		{
+			"key": "light crossbow",
 			"value": "light crossbow"
 		},
 		{
+			"key": "shortbow",
 			"value": "shortbow"
 		},
 		{
+			"key": "sling",
 			"value": "sling"
 		}
 	]

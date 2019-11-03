@@ -1,24 +1,28 @@
 {
 	"rows": [
 		{
+			"key": "Acrobat",
 			"value": "Acrobat",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2
 			}
 		},
 		{
+			"key": "Actor",
 			"value": "Actor",
 			"modifiers": {
 				"stats.abilityScores.charisma": 2
 			}
 		},
 		{
+			"key": "Clown",
 			"value": "Clown",
 			"modifiers": {
 				"stats.abilityScores.charisma": 2
 			}
 		},
 		{
+			"key": "Dancer",
 			"value": "Dancer",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2,
@@ -26,6 +30,7 @@
 			}
 		},
 		{
+			"key": "Fortune-Teller",
 			"value": "Fortune-Teller",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 3,
@@ -34,12 +39,14 @@
 			}
 		},
 		{
+			"key": "Juggler",
 			"value": "Juggler",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2
 			}
 		},
 		{
+			"key": "Prestidigitator",
 			"value": "Prestidigitator",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 4,
@@ -47,12 +54,14 @@
 			}
 		},
 		{
+			"key": "Funambulist",
 			"value": "Funambulist",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 3
 			}
 		},
 		{
+			"key": "Storyteller",
 			"value": "Storyteller",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2,

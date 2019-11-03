@@ -1,16 +1,19 @@
 {
 	"rows": [
 		{
-			"value": "man",
-			"weight": 3
+			"weight": 3,
+			"key": "man",
+			"value": "man"
 		},
 		{
-			"value": "woman",
-			"weight": 3
+			"weight": 3,
+			"key": "woman",
+			"value": "woman"
 		},
 		{
-			"value": "nonbinary",
-			"weight": 2
+			"weight": 2,
+			"key": "nonbinary",
+			"value": "nonbinary"
 		}
 	]
 }

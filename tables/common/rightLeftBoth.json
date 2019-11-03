@@ -1,16 +1,19 @@
 {
 	"rows": [
 		{
-			"value": "the left",
-			"weight": 5
+			"weight": 5,
+			"key": "left",
+			"value": "the left"
 		},
 		{
-			"value": "the right",
-			"weight": 5
+			"weight": 5,
+			"key": "right",
+			"value": "the right"
 		},
 		{
-			"value": "both",
-			"weight": 2
+			"weight": 2,
+			"key": "both",
+			"value": "both"
 		}
 	]
 }

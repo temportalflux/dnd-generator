@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "human",
 			"source": "{roll:race/Human/deity}"
 		}
 	]

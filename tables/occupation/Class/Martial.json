@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 3,
+			"key": "Barbarian",
 			"value": "Barbarian",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": -1,
@@ -53,6 +54,7 @@
 		},
 		{
 			"weight": 12,
+			"key": "Fighter",
 			"value": "Fighter",
 			"children": [
 				{
@@ -94,6 +96,7 @@
 		},
 		{
 			"weight": 6,
+			"key": "Monk",
 			"value": "Monk",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
@@ -140,6 +143,7 @@
 		},
 		{
 			"weight": 8,
+			"key": "Paladin",
 			"value": "Paladin",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 3,
@@ -192,6 +196,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "Ranger",
 			"value": "Ranger",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
@@ -237,6 +242,7 @@
 		},
 		{
 			"weight": 5,
+			"key": "Rogue",
 			"value": "Rogue",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 3,

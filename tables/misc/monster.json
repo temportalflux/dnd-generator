@@ -1,106 +1,132 @@
 {
 	"rows": [
 		{
+			"key": "vampire",
 			"value": "vampire",
 			"weight": 2
 		},
 		{
+			"key": "dragon",
 			"value": "dragon",
 			"weight": 2
 		},
 		{
+			"key": "troll",
 			"value": "troll",
 			"weight": 2
 		},
 		{
+			"key": "lycanthrope",
 			"value": "lycanthrope",
 			"weight": 2
 		},
 		{
+			"key": "basilisk",
 			"value": "basilisk",
 			"weight": 2
 		},
 		{
+			"key": "medusa",
 			"value": "medusa",
 			"weight": 2
 		},
 		{
+			"key": "beholder",
 			"value": "beholder",
 			"weight": 2
 		},
 		{
+			"key": "chimera",
 			"value": "chimera",
 			"weight": 2
 		},
 		{
+			"key": "cloaker",
 			"value": "cloaker",
 			"weight": 2
 		},
 		{
+			"key": "doppelganger",
 			"value": "doppelganger",
 			"weight": 2
 		},
 		{
+			"key": "gnoll",
 			"value": "gnoll",
 			"weight": 2
 		},
 		{
+			"key": "griffon",
 			"value": "griffon",
 			"weight": 2
 		},
 		{
+			"key": "cockatrice",
 			"value": "cockatrice",
 			"weight": 2
 		},
 		{
+			"key": "demon",
 			"value": "demon",
 			"weight": 2
 		},
 		{
+			"key": "devil",
 			"value": "devil",
 			"weight": 2
 		},
 		{
+			"key": "golem",
 			"value": "golem",
 			"weight": 2
 		},
 		{
+			"key": "water elemental",
 			"value": "water elemental",
 			"weight": 1
 		},
 		{
+			"key": "fire elemental",
 			"value": "fire elemental",
 			"weight": 1
 		},
 		{
+			"key": "earth elemental",
 			"value": "earth elemental",
 			"weight": 1
 		},
 		{
+			"key": "air elemental",
 			"value": "air elemental",
 			"weight": 1
 		},
 		{
+			"key": "hydra",
 			"value": "hydra",
 			"weight": 2
 		},
 		{
+			"key": "minotaur",
 			"value": "minotaur",
 			"weight": 2
 		},
 		{
+			"key": "naga",
 			"value": "naga",
 			"weight": 2
 		},
 		{
+			"key": "ankheg",
 			"value": "ankheg",
 			"weight": 1
 		},
 		{
+			"key": "angel",
 			"value": "angel",
 			"weight": 1
 		},
 		{
+			"key": "unicorn",
 			"value": "unicorn",
 			"weight": 1
 		}

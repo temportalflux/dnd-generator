@@ -1,9 +1,11 @@
 {
 	"rows": [
 		{
+			"key": "man",
 			"source": "{roll:race/$(description.race.value)/name-man}"
 		},
 		{
+			"key": "woman",
 			"source": "{roll:race/$(description.race.value)/name-woman}"
 		}
 	]

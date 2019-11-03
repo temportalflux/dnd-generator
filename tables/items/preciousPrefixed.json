@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 5,
+			"key": "precious",
 			"value": "precious",
 			"stringify": "precious $(item)",
 			"children": [
@@ -13,6 +14,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "magical",
 			"value": "magical",
 			"stringify": "magical $(item)",
 			"children": [

@@ -1,39 +1,51 @@
 {
 	"rows": [
 		{
+			"key": "battleaxe",
 			"value": "battleaxe"
 		},
 		{
+			"key": "flail",
 			"value": "flail"
 		},
 		{
+			"key": "greataxe",
 			"value": "greataxe"
 		},
 		{
+			"key": "glaive",
 			"value": "glaive"
 		},
 		{
+			"key": "greatsword",
 			"value": "greatsword"
 		},
 		{
+			"key": "lance",
 			"value": "lance"
 		},
 		{
+			"key": "longsword",
 			"value": "longsword"
 		},
 		{
+			"key": "maul",
 			"value": "maul"
 		},
 		{
+			"key": "morningstar",
 			"value": "morningstar"
 		},
 		{
+			"key": "pike",
 			"value": "pike"
 		},
 		{
+			"key": "trident",
 			"value": "trident"
 		},
 		{
+			"key": "warhammer",
 			"value": "warhammer"
 		}
 	]

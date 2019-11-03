@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "nonbinary",
 			"source": "{roll:race/Dragonborn/name-nonbinary}"
 		}
 	]
