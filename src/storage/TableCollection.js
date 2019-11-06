@@ -1,6 +1,7 @@
 import lodash from 'lodash';
 import Table from './Table';
 import storage from 'local-storage';
+import NpcSchema from './NpcSchema';
 
 function loadItem(directory, fileName)
 {
@@ -90,12 +91,14 @@ export default class TableCollection
 	{
 		const data = new TableCollection();
 		data.tables = lodash.mapValues(obj.tables, Table.fromStorage);
+		data.npcSchema = NpcSchema.fromStorage(obj.npcSchema);
 		return data;
 	}
 
 	constructor()
 	{
 		this.tables = {};
+		this.npcSchema = undefined;
 	}
 
 	save()
@@ -129,10 +132,19 @@ export default class TableCollection
 			return accum;
 		}, {}))
 
-		return;
-		const npc = loadItem('/', 'npc');
-		console.log(npc.content);
+		this.npcSchema = NpcSchema.from(loadItem('/', 'npc').content);
+		console.log(this.npcSchema);
 
+	}
+
+	getNpcSchema()
+	{
+		return this.npcSchema;
+	}
+
+	getTableKeys()
+	{
+		return Object.keys(this.tables).sort();
 	}
 
 	getTable(key)

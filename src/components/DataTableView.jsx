@@ -1,28 +1,21 @@
 import React from 'react';
 import TableCollection from '../storage/TableCollection';
-import {
-  useTable,
-  useGroupBy,
-  useFilters,
-  useSortBy,
-  useExpanded,
-  usePagination
-} from 'react-table';
+import {useTable} from 'react-table';
 import { Table, Header, Container } from 'semantic-ui-react';
 import * as DataTable from '../storage/Table';
+
+function getDataTable(tableKey)
+{
+	const tableCollection = TableCollection.get();
+	if (!tableCollection) { return undefined; }
+	return tableKey !== undefined ? tableCollection.getTableAtPath(tableKey) : undefined;
+}
 
 // ReactHooks: https://reactjs.org/docs/hooks-effect.html
 // Memos: https://reactjs.org/docs/hooks-reference.html#usememo
 export default function DataTableView({ tableKey })
 {
-
-	function getDataTable()
-	{
-		const tableCollection = TableCollection.get();
-		if (!tableCollection) { return undefined; }
-		return tableKey !== undefined ? tableCollection.getTableAtPath(tableKey) : undefined;
-	}
-	const dataTable = getDataTable();
+	const dataTable = getDataTable(tableKey);
 	
 	const columns = React.useMemo(() => DataTable.default.COLUMNS, []);
 
@@ -46,9 +39,10 @@ export default function DataTableView({ tableKey })
 	console.log(dataTable);
 
 	const data = React.useMemo(() => {
-		if (dataTable === undefined) { return []; }
-		return dataTable.getRows();
-	}, []);
+		const table = getDataTable(tableKey);
+		if (table === undefined) { return []; }
+		return table.getRows();
+	}, [tableKey]);
 
 	// React-Table API: https://github.com/tannerlinsley/react-table/blob/master/docs/api.md#usetable
 	// React-Table Examples: https://github.com/tannerlinsley/react-table/blob/master/docs/examples.md

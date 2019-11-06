@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TableCollection from '../storage/TableCollection';
-import storage from 'local-storage';
 import { Dropdown } from 'semantic-ui-react';
+import Filter from '../storage/Filter';
 
 export function TableFilter({tableKey})
 {
-
-	function getFilterStorageKey()
-	{
-		return `filters.${tableKey}`;
-	}
 
 	function getTable()
 	{
@@ -17,17 +12,17 @@ export function TableFilter({tableKey})
 		return tableCollection ? tableCollection.getTable(tableKey) : undefined;
 	}
 
-	const [value, setValue] = useState(storage.get(getFilterStorageKey()));
+	const [value, setValue] = useState(Filter.get(tableKey) || []);
 
 	function onDropdownChanged(value)
 	{
 		if (value.length > 0)
 		{
-			storage.set(getFilterStorageKey(), value);
+			Filter.set(tableKey, value);
 		}
 		else
 		{
-			storage.remove(getFilterStorageKey());
+			Filter.remove(tableKey);
 		}
 		setValue(value);
 	}

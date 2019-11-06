@@ -1,28 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import { ViewContainer } from './ViewContainer';
 import TableCollection from '../storage/TableCollection';
-import { Loader, Dropdown, Segment } from 'semantic-ui-react';
+import { Loader, Header, Button, Icon, Popup, Menu } from 'semantic-ui-react';
 import shortid from 'shortid';
-import { TableFilter } from '../components/TableFilter';
+import { DetailView } from '../components/NPC/DetailView';
+import storage from 'local-storage';
+import {
+	DISPLAY_MODES,
+	getDisplayIconForMode,
+	getNextDisplayMode,
+	getDisplayModeSwitchLabel,
+} from '../components/NPC/EDisplayModes';
+import NpcData from '../storage/NpcData';
 
 //import {Npc} from './pages/Npc';
 // <Npc/>
 
+const CURRENT_DISPLAYMODE_STORAGE = `npc.displayMode`;
+
 export function NpcView(props)
 {
-	const [refreshKey, refreshWith] = useState(0);
+	const refreshWith = useState(0)[1];
+	const [displayMode, setDisplayMode] = useState(storage.get(CURRENT_DISPLAYMODE_STORAGE) || DISPLAY_MODES.Readable);
+	const switchDisplayMode = () => {
+		const nextMode = getNextDisplayMode(displayMode);
+		storage.set(CURRENT_DISPLAYMODE_STORAGE, nextMode);
+		setDisplayMode(nextMode);
+	};
 
-	useEffect(() => {
-		function onTableCollectionChanged({detail}) {
+	useEffect(() =>
+	{
+		function onTableCollectionChanged({ detail })
+		{
 			refreshWith(shortid.generate());
 		};
 		TableCollection.addOnChanged(onTableCollectionChanged);
-		return () => {
+		return () =>
+		{
 			TableCollection.removeOnChanged(onTableCollectionChanged);
 		}
 	});
-
-	console.log('Rendering npc view');
 
 	const tableCollection = TableCollection.get();
 	if (!tableCollection)
@@ -34,15 +51,54 @@ export function NpcView(props)
 		);
 	}
 
+	const npc = NpcData.get();
+	if (npc === null) NpcData.initialize();
+
+	const renderDisplayMode = () => {
+		switch (displayMode)
+		{
+			case DISPLAY_MODES.Readable: return (
+				'TODO'
+			);
+			case DISPLAY_MODES.Detailed: return (
+				<DetailView tableCollection={tableCollection} />
+			);
+			default: return (
+				<div>
+					Something went wrong, I'm confused... <Icon name='question' />
+				</div>
+			);
+		}
+	}
+
 	return (
 		<ViewContainer page={props.location.pathname}>
 			
-			<Segment>
-				
-				<TableFilter tableKey='identity/sex' />
+			<Menu borderless pointing secondary>
+				<Menu.Item>
+					<Header>
+						<Icon name={getDisplayIconForMode(displayMode)} />
+						<Header.Content>NPC</Header.Content>
+					</Header>
+				</Menu.Item>
+				<Menu.Menu position='right'>
+					<Menu.Item>
+						<Popup
+							position='bottom right'
+							content={getDisplayModeSwitchLabel(displayMode)}
+							trigger={(
+								<Button
+									icon={getDisplayIconForMode(getNextDisplayMode(displayMode))}
+									onClick={switchDisplayMode}
+								/>
+							)}
+						/>
+					</Menu.Item>
+				</Menu.Menu>
+			</Menu>
 
-			</Segment>
-
+			{renderDisplayMode()}
+			
 		</ViewContainer>
 	);
 }
