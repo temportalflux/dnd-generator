@@ -88,4 +88,9 @@ export default class NpcSchema
 		return (this.categories[category] || []).sort();
 	}
 
+	getGenerationOrder()
+	{
+		return this.generationOrder;
+	}
+
 }
