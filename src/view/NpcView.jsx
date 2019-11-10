@@ -61,7 +61,7 @@ export function NpcView(props)
 				'TODO'
 			);
 			case DISPLAY_MODES.Detailed: return (
-				<DetailView tableCollection={tableCollection} />
+				<DetailView tableCollection={tableCollection} npc={npc} />
 			);
 			default: return (
 				<div>

@@ -1,45 +1,68 @@
-import React, { useState } from 'react';
-import { Segment, Accordion, Icon } from 'semantic-ui-react';
-import storage from 'local-storage';
+import React from 'react';
+import { camelCaseToTitle } from '../../lib/str';
+import { StorageAccordion } from '../StorageAccordion';
 import { DISPLAY_MODES } from './EDisplayModes';
+import { Accordion, Icon, Segment } from 'semantic-ui-react';
 import { DataViewEntry } from './DetailViewEntry';
 
-const EXPANDED_ENTRY_KEYS_STORAGE = `npc.${DISPLAY_MODES.Detailed}.expandedEntries`;
-
-export function DetailView({ tableCollection })
+function DetailViewCategory({
+	propertyKey, tableCollection, categoryFields, storageKey,
+	active, onClick
+})
 {
-	const [expandedEntryKeys, setExpandedEntryKeys_state] = useState(storage.get(EXPANDED_ENTRY_KEYS_STORAGE) || []);
-	function setExpandedEntryKeys(keys)
-	{
-		if (keys.length > 0) storage.set(EXPANDED_ENTRY_KEYS_STORAGE, keys);
-		else storage.remove(EXPANDED_ENTRY_KEYS_STORAGE);
-		setExpandedEntryKeys_state(keys);
-	}
-	function addExpandedEntryKey(key) { setExpandedEntryKeys(expandedEntryKeys.concat([key])); }
-	function removeExpandedEntryKey(key) { setExpandedEntryKeys(expandedEntryKeys.filter((item) => item !== key)); }
-	function isEntryExpanded(key) { return expandedEntryKeys.includes(key); }
-
-	const handleAccordionClick = (_, { index }) =>
-	{
-		if (!isEntryExpanded(index)) addExpandedEntryKey(index);
-		else removeExpandedEntryKey(index);
-	};
-
-	const npcSchema = tableCollection.getNpcSchema();
-	console.log(tableCollection.getNpcSchema());
-
 	return (
-		<Accordion>
+		<div>
+			<Accordion.Title
+				index={propertyKey}
+				active={active}
+				onClick={onClick}
+			>
+				<Icon name='dropdown' />
+				{camelCaseToTitle(propertyKey)}
+			</Accordion.Title>
+			<Accordion.Content
+				active={active}
+			>
+				<Segment basic>
+					<StorageAccordion
+						storageKey={storageKey}
+						entryComponentType={DataViewEntry}
+						entries={categoryFields.reduce((accum, fieldKey) =>
+						{
+							accum[fieldKey] = {
+								propertyKey: fieldKey,
+								tableCollection: tableCollection,
+								tableKey: fieldKey,
+								storageKey: `${storageKey}.${fieldKey}`,
+							};
+							return accum;
+						}, {})}
+					/>
+				</Segment>
+			</Accordion.Content>
+		</div>
+	);
+}
 
-			{npcSchema.getCategories().map((category) => (
-				<DataViewEntry key={category}
-					tableCollection={tableCollection}
-					propertyKey={category}
-					active={isEntryExpanded(category)}
-					onClick={handleAccordionClick}
-				/>
-			))}
-			
-		</Accordion>
+export function DetailView({ tableCollection, npc })
+{
+	const npcSchema = tableCollection.getNpcSchema();
+	const storageKey = `npc.${DISPLAY_MODES.Detailed}.expandedEntries`;
+	console.log(tableCollection, npcSchema, npc);
+	return (
+		<StorageAccordion
+			storageKey={storageKey}
+			entryComponentType={DetailViewCategory}
+			entries={npcSchema.getCategories().reduce((accum, category) =>
+			{
+				accum[category] = {
+					propertyKey: category,
+					tableCollection: tableCollection,
+					categoryFields: tableCollection.getNpcSchema().getFieldsForCategory(category),
+					storageKey: `${storageKey}.${category}`,
+				};
+				return accum;
+			}, {})}
+		/>
 	);
 }

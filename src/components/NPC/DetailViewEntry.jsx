@@ -1,22 +1,64 @@
 import React, { useState } from 'react';
-import { Segment, Accordion, Icon } from 'semantic-ui-react';
+import { Segment, Accordion, Icon, Header, Container } from 'semantic-ui-react';
 import { TableFilter } from '../TableFilter';
+import { DetailViewEntryList } from './DetailViewEntryList';
+import { StorageAccordion } from '../StorageAccordion';
+import { camelCaseToTitle } from '../../lib/str';
+import NpcData from '../../storage/NpcData';
 
-function camelCaseToTitle(str)
-{
-	return str
-		.split(/(?=[A-Z])/)
-		.map(
-			(word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`
-		).join(' ');
-}
-
-export function DataViewEntry({
-	propertyKey, tableCollection,
+function DataViewEntryCategory({
+	titleKey, description, children,
 	active, onClick
 })
 {
-	// <TableFilter tableKey='identity/sex' />
+	return (
+		<div>
+			<Accordion.Title
+				index={titleKey}
+				active={active}
+				onClick={onClick}
+			>
+				{camelCaseToTitle(titleKey)} <Icon name='dropdown' />
+			</Accordion.Title>
+			<Accordion.Content active={active}>
+				{description}
+				{children}
+			</Accordion.Content>
+		</div>
+	);
+}
+
+export function DataViewEntry({
+	propertyKey, tableCollection, categoryFields, tableKey, storageKey,
+	active, onClick
+})
+{
+	const table = tableCollection ? tableCollection.getTable(tableKey) : null;
+	const npcSchema = tableCollection ? tableCollection.getNpcSchema() : null;
+
+	const categories = {};
+
+	/*
+	if (childTableKeys.length > 0)
+	{
+		categories['children'] = {
+			storageAccordianComponent: DataViewEntryCategory,
+			titleKey: 'children',
+			description: 'These are the child fields for this item',
+			children: [
+				(
+					<DetailViewEntryList
+						key={0}
+						parentPropertyKey={propertyKey}
+						tableCollection={tableCollection}
+						childTableKeys={childTableKeys}
+					/>
+				)
+			]
+		};
+	}
+	//*/
+
 	return (
 		<div>
 			<Accordion.Title
@@ -30,9 +72,11 @@ export function DataViewEntry({
 			<Accordion.Content
 				active={active}
 			>
-				<Segment>
-					TODO {camelCaseToTitle(propertyKey)} properties
-					
+				<Segment basic>
+					<StorageAccordion
+						storageKey={storageKey}
+						entries={categories}
+					/>
 				</Segment>
 			</Accordion.Content>
 		</div>

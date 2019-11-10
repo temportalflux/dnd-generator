@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import TableCollection from '../storage/TableCollection';
 import { Dropdown } from 'semantic-ui-react';
 import Filter from '../storage/Filter';
 
-export function TableFilter({tableKey})
+export function TableFilter({
+	tableCollection, tableKey
+})
 {
 
 	function getTable()
 	{
-		const tableCollection = TableCollection.get();
 		return tableCollection ? tableCollection.getTable(tableKey) : undefined;
 	}
 
