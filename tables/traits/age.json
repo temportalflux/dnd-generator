@@ -1,18 +1,10 @@
 {
-	"rows": [
-		{
-			"weight": 1,
-			"value": "{randInt:14,16}"
-		},
-		{
-			"weight": 2,
-			"value": "{randInt:17,53}"
-		},
-		{
-			"weight": 1,
-			"value": "{randInt:54,90}"
-		}
-	],
+	"filter": {
+		"type": "minMaxRange",
+		"min": 5,
+		"max": 90
+	},
+	"valueMacro": "{randInt:$(filter.min),$(filter.max)}",
 	"modifiers": [
 		{
 			"match": "{range:7,15}",
