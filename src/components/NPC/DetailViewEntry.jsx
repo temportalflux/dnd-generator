@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Segment, Accordion, Icon, Header, Container } from 'semantic-ui-react';
+import { Segment, Accordion, Icon, Header, Container, Popup, Button, Menu } from 'semantic-ui-react';
 import { TableFilter } from '../TableFilter';
 import { DetailViewEntryList } from './DetailViewEntryList';
 import { StorageAccordion } from '../StorageAccordion';
@@ -30,13 +30,17 @@ function DataViewEntryCategory({
 
 export function DataViewEntry({
 	propertyKey, tableCollection, categoryFields, tableKey, storageKey,
-	active, onClick
+	active, onClick,
+	depth,
 })
 {
 	const table = tableCollection ? tableCollection.getTable(tableKey) : null;
 	const npcSchema = tableCollection ? tableCollection.getNpcSchema() : null;
 
 	const categories = {};
+	const npc = NpcData.get();
+	const entry = npc.getEntry(tableKey);
+	//console.log(entry, entry.getField(npcSchema));
 
 	/*
 	if (childTableKeys.length > 0)
@@ -61,24 +65,39 @@ export function DataViewEntry({
 
 	return (
 		<div>
-			<Accordion.Title
-				index={propertyKey}
+			<Menu secondary style={{ marginBottom: 0 }}>
+				<Menu.Item fitted>
+					<Accordion.Title
+						index={propertyKey}
+						active={active}
+						onClick={onClick}
+					>
+						<Icon name='dropdown' />
+						{camelCaseToTitle(propertyKey)}
+					</Accordion.Title>
+				</Menu.Item>
+				<Menu.Item fitted position='right'>
+					<Button
+						icon={'refresh'}
+						onClick={() => entry.regenerate(npcSchema)}
+					/>
+				</Menu.Item>
+			</Menu>
+			{active && <Accordion.Content
 				active={active}
-				onClick={onClick}
 			>
-				<Icon name='dropdown' />
-				{camelCaseToTitle(propertyKey)}
-			</Accordion.Title>
-			<Accordion.Content
-				active={active}
-			>
-				<Segment basic>
+				<div style={{
+					borderLeft: '2px solid rgba(34,36,38,.15)',
+					paddingLeft: '10px',
+					marginLeft: '7px',
+				}}>
+					Test
 					<StorageAccordion
 						storageKey={storageKey}
 						entries={categories}
 					/>
-				</Segment>
-			</Accordion.Content>
+				</div>
+			</Accordion.Content>}
 		</div>
 	);
 }

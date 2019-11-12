@@ -31,6 +31,11 @@ class Field extends Entry
 		return `${this.category}.${this.getKey()}`;
 	}
 
+	getCategory()
+	{
+		return this.category;
+	}
+
 }
 
 export default class NpcSchema
@@ -74,8 +79,18 @@ export default class NpcSchema
 	{
 		const field = Field.from(data);
 		this.fields[field.getKeyPath()] = field;
-		this.categories[field.category] = (this.categories[field.category] || []).concat([field.getKey()]);
+		this.categories[field.getCategory()] = (this.categories[field.getCategory()] || []).concat([field.getKey()]);
 		return field;
+	}
+
+	getFields()
+	{
+		return lodash.values(this.fields);
+	}
+
+	getField(keyPath)
+	{
+		return this.fields[keyPath];
 	}
 
 	getCategories()
@@ -86,6 +101,11 @@ export default class NpcSchema
 	getFieldsForCategory(category)
 	{
 		return (this.categories[category] || []).sort();
+	}
+
+	getFieldForCategory(category, key)
+	{
+		return this.categories[category][key];
 	}
 
 	getGenerationOrder()

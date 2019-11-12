@@ -1,6 +1,4 @@
 import React from 'react'
-//import { Grid } from 'semantic-ui-react';
-//import FilterMenu from '../components/FilterMenu';
 import DisplayNpc from '../components/DisplayNpc';
 import { generate } from '../generator/index';
 import NpcDataTree from '../components/NpcDataTree';
@@ -63,22 +61,6 @@ export class Npc extends React.Component
 
 	render()
 	{
-		/*
-				<Grid columns={2}>
-					<Grid.Row>
-						<Grid.Column>
-							<FilterMenu
-								generate={this.generate}
-							/>
-						</Grid.Column>
-					</Grid.Row>
-				</Grid>
-		
-						<Grid.Column>
-							
-						</Grid.Column>
-
-		*/
 		const panes = [
 			{
 				menuItem: 'Article',

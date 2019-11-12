@@ -1,7 +1,8 @@
 import lodash from 'lodash';
-import storage from 'local-storage';
 import TableCollection from './TableCollection';
 import GeneratedEntry from './GeneratedEntry';
+
+let NPC_TEMPORARY_DATA = null;
 
 export default class NpcData
 {
@@ -14,46 +15,57 @@ export default class NpcData
 	static initialize()
 	{
 		const data = new NpcData();
-		data.save();
+
+		const fields = NpcData.getSchema().getFields();
+		for (let field of fields)
+		{
+			data.addEntry(field);
+		}
+
+		NPC_TEMPORARY_DATA = data;
 	}
 
 	static get()
 	{
-		const saved = storage.get('npc');
-		return saved === null ? null : NpcData.fromStorage(saved);
+		return NPC_TEMPORARY_DATA;
 	}
 
 	static clear()
 	{
-		storage.remove('npc');
 		NpcData.initialize();
-	}
-
-	static fromStorage(obj)
-	{
-		const data = new NpcData();
-		data.readStorage(obj);
-		return data;
 	}
 
 	constructor()
 	{
 		this.entries = {};
+		this.categories = {};
 	}
 
-	readStorage(data)
+	addEntry(field)
 	{
-		this.entries = lodash.mapValues(data.entries, (e) => GeneratedEntry.fromStorage(this, e));
+		const entry = GeneratedEntry.fromSchema(field);
+		this.entries[entry.getKeyPath()] = entry;
+		this.categories[field.category] = (this.categories[field.getCategory()] || []).concat([field.getKey()]);
 	}
 
-	save()
+	getEntry(keyPath)
 	{
-		storage.set('npc', this);
+		return this.entries[keyPath];
+	}
+
+	getCategories()
+	{
+		return Object.keys(this.categories).sort();
+	}
+
+	getEntriesForCategory(category)
+	{
+		return (this.categories[category] || []).sort();
 	}
 
 	regenerateAll()
 	{
-		for (let entryKey of getSchema().getGenerationOrder())
+		for (let entryKey of NpcData.getSchema().getGenerationOrder())
 		{
 			this.regenerate(entryKey);
 		}
@@ -61,7 +73,7 @@ export default class NpcData
 
 	regenerate(entryKey)
 	{
-
+		this.entries[entryKey].regenerate();
 	}
 
 }

@@ -45,8 +45,9 @@ export class Entry
 
 		this.value = undefined;
 		this.stringify = undefined;
+		this.modifiers = {};
 
-		this.children = undefined;
+		this.children = [];
 	}
 
 	readStorage(obj)
@@ -67,11 +68,29 @@ export class Entry
 
 		this.childrenWithoutKeys = [];
 		this.children = accumulateEntries(data.children || [], `entry '${this.key}'`, (i) => this.childrenWithoutKeys.push(i));
+
+		this.modifiers = data.modifiers || {};
 	}
 
 	getKey()
 	{
 		return this.key;
+	}
+
+	hasSource()
+	{
+		return typeof this.source === 'string';
+	}
+
+	getSource()
+	{
+		return this.source;
+	}
+
+	getWeight()
+	{
+		// TODO: fetch from local storage
+		return this.weight;
 	}
 
 }

@@ -133,8 +133,6 @@ export default class TableCollection
 		}, {}))
 
 		this.npcSchema = NpcSchema.from(loadItem('/', 'npc').content);
-		console.log(this.npcSchema);
-
 	}
 
 	getNpcSchema()
@@ -154,7 +152,7 @@ export default class TableCollection
 
 	getTableAtPath(keyPath)
 	{
-		return this.getTable(Table.getKeyFromKeyPath(keyPath));
+		return this.getTable(Table.getTablePathFromKeyPath(keyPath));
 	}
 
 	getTableTree()

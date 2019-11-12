@@ -27,7 +27,7 @@ export function StorageAccordion({
 	};
 
 	return (
-		<Accordion>
+		<Accordion style={{ margin: 0 }}>
 			{lodash.toPairs(entries).map(([entryKey, entryProps]) => (
 				React.createElement(entryProps.storageAccordianComponent || entryComponentType, {
 					...entryProps,

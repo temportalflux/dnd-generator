@@ -51,8 +51,7 @@ export function NpcView(props)
 		);
 	}
 
-	const npc = NpcData.get();
-	if (npc === null) NpcData.initialize();
+	NpcData.initialize();
 
 	const renderDisplayMode = () => {
 		switch (displayMode)
@@ -61,7 +60,7 @@ export function NpcView(props)
 				'TODO'
 			);
 			case DISPLAY_MODES.Detailed: return (
-				<DetailView tableCollection={tableCollection} npc={npc} />
+				<DetailView tableCollection={tableCollection} />
 			);
 			default: return (
 				<div>
@@ -90,6 +89,18 @@ export function NpcView(props)
 								<Button
 									icon={getDisplayIconForMode(getNextDisplayMode(displayMode))}
 									onClick={switchDisplayMode}
+									style={{ marginLeft: 2, marginRight: 2, }}
+								/>
+							)}
+						/>
+						<Popup
+							position='bottom right'
+							content={'Delete generated data'}
+							trigger={(
+								<Button
+									icon={'trash'}
+									onClick={NpcData.clear}
+									style={{ marginLeft: 2, marginRight: 2, }}
 								/>
 							)}
 						/>

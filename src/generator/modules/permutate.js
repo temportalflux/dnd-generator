@@ -1,6 +1,6 @@
 export default function exec(match)
 {
-	const params = match[1].split(',');
+	const params = match.split(',');
 	const result = [];
 	while (params.length > 0)
 	{
