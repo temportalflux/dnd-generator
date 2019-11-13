@@ -41,8 +41,23 @@ export function NpcView(props)
 		}
 	});
 
+	useEffect(() =>
+	{
+		function onNpcInitialized({ detail })
+		{
+			refreshWith(shortid.generate());
+		};
+		NpcData.toggleOnInitialized('on', onNpcInitialized);
+		if (!NpcData.get()) NpcData.initialize();
+		return () =>
+		{
+			NpcData.toggleOnInitialized('off', onNpcInitialized);
+		}
+	});
+
 	const tableCollection = TableCollection.get();
-	if (!tableCollection)
+	const npcData = NpcData.get();
+	if (!tableCollection || !npcData)
 	{
 		return (
 			<ViewContainer page={props.location.pathname}>
@@ -50,9 +65,6 @@ export function NpcView(props)
 			</ViewContainer>
 		);
 	}
-
-	NpcData.initialize();
-	NpcData.get().regenerateAll();
 
 	const renderDisplayMode = () => {
 		switch (displayMode)
@@ -71,6 +83,7 @@ export function NpcView(props)
 		}
 	}
 
+	console.log('Rendering NpcView');
 	return (
 		<ViewContainer page={props.location.pathname}>
 			
