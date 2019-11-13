@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 3,
+			"key": "Type 1",
 			"children": [
 				{
 					"key": "traitA",
@@ -11,6 +12,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "Type 2",
 			"children": [
 				{
 					"key": "traitA",
@@ -21,6 +23,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "Types 1 & 2",
 			"children": [
 				{
 					"key": "traitA",

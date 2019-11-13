@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 3,
+			"key": "mystic",
 			"stringify": "$(noun)$(action)",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2,
@@ -20,6 +21,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "fighting",
 			"stringify": "$(noun)$(action)",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
@@ -38,6 +40,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "craft",
 			"stringify": "$(noun)$(action)",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2,
@@ -56,6 +59,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "animal",
 			"stringify": "$(noun)$(action)",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
@@ -74,6 +78,7 @@
 		},
 		{
 			"weight": 3,
+			"key": "general",
 			"stringify": "$(adjective)$(noun)",
 			"children": [
 				{
