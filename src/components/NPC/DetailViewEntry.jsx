@@ -95,6 +95,7 @@ export function DataViewEntry({
 					>
 						{!isMissingSourceTable && <Icon name='dropdown' />}
 						{camelCaseToTitle(propertyKey)}
+						<span> - {entry.toString(npcModifiedData)}</span>
 						{isMissingSourceTable && (
 							<span> - No generator available</span>
 						)}
@@ -128,7 +129,7 @@ export function DataViewEntry({
 							)}
 							<Form.Field>
 								<label>Generated Value</label>
-								{entry.getRawValue() || (
+								{entry.getRawValue() ? entry.toString(npcModifiedData) : (
 									<span style={{ color: 'red' }}>Not Generated</span>
 								)}
 							</Form.Field>

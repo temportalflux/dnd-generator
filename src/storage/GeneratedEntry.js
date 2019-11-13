@@ -1,6 +1,7 @@
 import Filter from './Filter';
 import lodash from 'lodash';
 import { createExecutor } from '../generator/modules/createExecutor';
+import { inlineEval } from '../generator/modules/evalAtCtx';
 
 export default class GeneratedEntry
 {
@@ -120,10 +121,11 @@ export default class GeneratedEntry
 		return this.getRawValue();
 	}
 
-	toString()
+	toString(globalData)
 	{
-		// TODO
-		return `${this.getModifiedValue()}`;
+		const entry = this.generated ? this.generated.entry : undefined;
+		const stringify = entry ? entry.stringify : undefined;
+		return stringify ? inlineEval(stringify, globalData || {}) : `${this.getModifiedValue()}`;
 	}
 
 }

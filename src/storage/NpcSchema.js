@@ -44,6 +44,7 @@ export default class NpcSchema
 	static fromStorage(obj)
 	{
 		const schema = new NpcSchema();
+		if (!obj) return schema;
 		schema.fields = lodash.mapValues(obj.fields, Field.fromStorage);
 		schema.fieldOrder = obj.fieldOrder;
 		schema.generationOrder = obj.generationOrder;
