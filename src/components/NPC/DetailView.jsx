@@ -2,7 +2,7 @@ import React from 'react';
 import { camelCaseToTitle } from '../../lib/str';
 import { StorageAccordion } from '../StorageAccordion';
 import { DISPLAY_MODES } from './EDisplayModes';
-import { Accordion, Icon, Segment, Header } from 'semantic-ui-react';
+import { Accordion, Icon } from 'semantic-ui-react';
 import { DataViewEntry } from './DetailViewEntry';
 import NpcData from '../../storage/NpcData';
 
@@ -37,7 +37,7 @@ function DetailViewCategory({
 							accum[fieldKey] = {
 								propertyKey: fieldKey,
 								tableCollection: tableCollection,
-								tableKey: `${propertyKey}.${fieldKey}`,
+								entryKey: `${propertyKey}.${fieldKey}`,
 								storageKey: `${storageKey}.${fieldKey}`,
 								depth: 1,
 							};

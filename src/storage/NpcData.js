@@ -65,15 +65,31 @@ export default class NpcData
 
 	regenerateAll()
 	{
-		for (let entryKey of NpcData.getSchema().getGenerationOrder())
+		const schema = NpcData.getSchema();
+		const globalData = {};
+		for (let entryKey of schema.getGenerationOrder())
 		{
-			this.regenerate(entryKey);
+			this.regenerate(entryKey, schema, globalData, globalData);
 		}
 	}
 
-	regenerate(entryKey)
+	regenerate(entryKey, schema, globalData, valuesOut)
 	{
-		this.entries[entryKey].regenerate();
+		const entry = this.entries[entryKey];
+		entry.regenerate(schema, globalData);
+		entry.getModifiedData(valuesOut);
+	}
+
+	forAllEntries(loop)
+	{
+		lodash.values(this.entries).forEach(loop);
+	}
+
+	getModifiedData()
+	{
+		const values = {}
+		this.forAllEntries((entry) => entry.getModifiedData(values));
+		return values;
 	}
 
 }

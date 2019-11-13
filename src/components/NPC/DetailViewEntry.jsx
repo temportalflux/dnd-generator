@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import { Segment, Accordion, Icon, Header, Container, Popup, Button, Menu } from 'semantic-ui-react';
+ /*eslint no-unused-vars: [0, {"args": "after-used", "argsIgnorePattern": "^_"}]*/
+
+import React, { useEffect } from 'react';
+import { Accordion, Icon, Button, Menu, Form } from 'semantic-ui-react';
 import { TableFilter } from '../TableFilter';
-import { DetailViewEntryList } from './DetailViewEntryList';
 import { StorageAccordion } from '../StorageAccordion';
 import { camelCaseToTitle } from '../../lib/str';
 import NpcData from '../../storage/NpcData';
+import * as shortid from 'shortid';
+import { inlineEval } from '../../generator/modules/evalAtCtx';
 
+/*
 function DataViewEntryCategory({
 	titleKey, description, children,
 	active, onClick
@@ -27,20 +31,35 @@ function DataViewEntryCategory({
 		</div>
 	);
 }
+//*/
 
 export function DataViewEntry({
-	propertyKey, tableCollection, categoryFields, tableKey, storageKey,
+	propertyKey, tableCollection, categoryFields, entryKey, storageKey,
 	active, onClick,
 	depth,
 })
 {
-	const table = tableCollection ? tableCollection.getTable(tableKey) : null;
 	const npcSchema = tableCollection ? tableCollection.getNpcSchema() : null;
 
 	const categories = {};
 	const npc = NpcData.get();
-	const entry = npc.getEntry(tableKey);
-	//console.log(entry, entry.getField(npcSchema));
+	const npcModifiedData = npc.getModifiedData();
+	const entry = npc.getEntry(entryKey);
+	const field = entry.getField(npcSchema);
+
+	const sourceTableKey = field.getSourceTableKey(tableCollection);
+
+	const [_refreshKey, refresh] = React.useState(undefined);
+	useEffect(() => {
+		function onChanged({ details })
+		{
+			refresh(shortid.generate());
+		}
+		NpcData.get().getEntry(entryKey).addListenerOnChanged(onChanged);
+		return () => {
+			NpcData.get().getEntry(entryKey).removeListenerOnChanged(onChanged);
+		};
+	});
 
 	/*
 	if (childTableKeys.length > 0)
@@ -63,35 +82,62 @@ export function DataViewEntry({
 	}
 	//*/
 
+	const isMissingSourceTable = field.isMissingSourceTable(tableCollection, (k) => inlineEval(k, npcModifiedData));
+
 	return (
 		<div>
 			<Menu secondary style={{ marginBottom: 0 }}>
 				<Menu.Item fitted>
 					<Accordion.Title
 						index={propertyKey}
-						active={active}
+						active={!isMissingSourceTable && active}
 						onClick={onClick}
 					>
-						<Icon name='dropdown' />
+						{!isMissingSourceTable && <Icon name='dropdown' />}
 						{camelCaseToTitle(propertyKey)}
+						{isMissingSourceTable && (
+							<span> - No generator available</span>
+						)}
 					</Accordion.Title>
 				</Menu.Item>
-				<Menu.Item fitted position='right'>
+				{!isMissingSourceTable && <Menu.Item fitted position='right'>
 					<Button
 						icon={'refresh'}
-						onClick={() => entry.regenerate(npcSchema)}
+						onClick={() => entry.regenerate(npcSchema, npc.getModifiedData())}
+						content={camelCaseToTitle(propertyKey)}
 					/>
-				</Menu.Item>
+				</Menu.Item>}
 			</Menu>
-			{active && <Accordion.Content
-				active={active}
+			{!isMissingSourceTable && active && <Accordion.Content
 			>
 				<div style={{
 					borderLeft: '2px solid rgba(34,36,38,.15)',
 					paddingLeft: '10px',
 					marginLeft: '7px',
 				}}>
-					Test
+					<Form>
+						<Form.Group widths={'equal'}>
+							{sourceTableKey !== undefined && (
+								<Form.Field
+									label={'Filter'}
+									control={TableFilter}
+									tableCollection={tableCollection}
+									tableKey={inlineEval(sourceTableKey, npcModifiedData)}
+									storageKey={entryKey}
+								/>
+							)}
+							<Form.Field>
+								<label>Generated Value</label>
+								{entry.getRawValue() || (
+									<span style={{ color: 'red' }}>Not Generated</span>
+								)}
+							</Form.Field>
+							<Form.Field>
+								<label>Value with Modifiers</label>
+								<span style={{ color: 'red' }}>Not Generated</span>
+							</Form.Field>
+						</Form.Group>
+					</Form>
 					<StorageAccordion
 						storageKey={storageKey}
 						entries={categories}

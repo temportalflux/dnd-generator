@@ -24,7 +24,7 @@ export function DetailViewEntryList({
 				accum[childTableKey] = {
 					propertyKey: childTableKey,
 					tableCollection: tableCollection,
-					tableKey: hasCategories ? undefined : `${parentPropertyKey}/${childTableKey}`,
+					entryKey: hasCategories ? undefined : `${parentPropertyKey}/${childTableKey}`,
 					categoryFields: hasCategories ? getCategoryFields(tableCollection, childTableKey) : undefined,
 					storageKey: storageKey,
 				};

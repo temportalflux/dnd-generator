@@ -1,9 +1,12 @@
 import TableCollection from '../../storage/TableCollection';
-import Filter from '../../storage/Filter';
 
 export default function exec(tablePath, data)
 {
-	const tableCollection = TableCollection.get();
-	const table = tableCollection.getTable(tablePath);
-	return table.roll(Filter.get(tablePath), data);
+	const table = TableCollection.get().getTable(tablePath);
+	if (!table)
+	{
+		//console.error(`Could not find table for path ${tablePath}`);
+		return undefined;
+	}
+	return table.roll(data.filter, data);
 }

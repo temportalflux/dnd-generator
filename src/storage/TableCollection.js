@@ -147,7 +147,13 @@ export default class TableCollection
 
 	getTable(key)
 	{
-		return this.tables.hasOwnProperty(key) ? this.tables[key] : undefined;
+		let table = null;
+		do
+		{
+			if (table !== null && table.hasRedirector()) key = table.getRedirector();
+			table = this.tables.hasOwnProperty(key) ? this.tables[key] : undefined;
+		} while (table !== undefined && table.hasRedirector());
+		return table;
 	}
 
 	getTableAtPath(keyPath)

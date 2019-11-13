@@ -1,15 +1,9 @@
 import Filter from './Filter';
+import lodash from 'lodash';
 import { createExecutor } from '../generator/modules/createExecutor';
 
 export default class GeneratedEntry
 {
-
-	static fromStorage(obj)
-	{
-		const data = new GeneratedEntry();
-		data.readStorage(obj);
-		return data;
-	}
 
 	static fromSchema(field)
 	{
@@ -20,14 +14,12 @@ export default class GeneratedEntry
 
 	constructor()
 	{
+		this.events = new EventTarget();
+
 		this.category = undefined;
 		this.key = undefined;
-	}
 
-	readStorage(data)
-	{
-		this.category = data.category;
-		this.key = data.key;
+		this.generated = undefined;
 	}
 
 	readSchema(field)
@@ -60,19 +52,78 @@ export default class GeneratedEntry
 		return macro;
 	}
 
-	getFilter()
+	getFilterValue()
 	{
-		return Filter.get(this.key);
+		return Filter.get(this.getKeyPath());
 	}
 
-	regenerate(schema)
+	regenerate(schema, globalData)
 	{
 		const macro = this.getGenerationMacro(schema);
 		if (macro === undefined) return;
-		const executed = macro();
-		console.log(executed);
-		// TODO: STUB
+		const context = {
+			...globalData,
+			filter: this.getFilterValue(),
+		};
+		this.generated = macro(context);
+		this.events.dispatchEvent(new CustomEvent('onChanged', {
+			detail: {}
+		}));
+	}
+
+	getModifiedData(values)
+	{
+		// TODO
+		const hasChildren = false;//this.hasChildren();
+
+		const localValue = this.getModifiedValue();
+		if (localValue !== undefined)
+		{
+			lodash.set(values, `${this.getKeyPath()}.value`, localValue);
+			if (!hasChildren)
+			{
+				lodash.set(values, this.getKeyPath(), localValue);
+			}
+		}
+
+		lodash.set(values, `${this.getKeyPath()}String`, this.toString());
 		
+		/*
+		if (hasChildren)
+		{
+			lodash.values(this.getChildren()).forEach(
+				(child) => child.getLineageValues(values)
+			);
+		}
+		//*/
+	}
+
+	addListenerOnChanged(callback)
+	{
+		this.events.addEventListener('onChanged', callback);
+	}
+
+	removeListenerOnChanged(callback)
+	{
+		this.events.removeEventListener('onChanged', callback);
+	}
+
+	getRawValue()
+	{
+		const generated = this.generated || {};
+		return generated.value || (generated.entry ? generated.entry.getKey() : undefined);
+	}
+
+	getModifiedValue()
+	{
+		// TODO
+		return this.getRawValue();
+	}
+
+	toString()
+	{
+		// TODO
+		return `${this.getModifiedValue()}`;
 	}
 
 }

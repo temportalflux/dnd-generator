@@ -1,15 +1,26 @@
 import Execs from './index';
 import {inlineEval} from './evalAtCtx';
 
-export function createExecutor(macro)
+export function parseMacro(macro)
 {
 	const regex = new RegExp(`^\\{(.*):(.*)\\}$`);
 	const match = macro.match(regex);
 	if (match && match.length >= 2)
 	{
-		const execFunc = match[1];
-		const args = match[2];
-		return (data) => Execs[execFunc](inlineEval(args, data), data);
+		return {
+			execFunc: match[1],
+			args: match[2],
+		};
+	}
+	return undefined;
+}
+
+export function createExecutor(macro)
+{
+	const executor = parseMacro(macro);
+	if (executor)
+	{
+		return (data) => Execs[executor.execFunc](inlineEval(executor.args, data), data);
 	}
 	return undefined;
 }

@@ -52,6 +52,7 @@ export function NpcView(props)
 	}
 
 	NpcData.initialize();
+	NpcData.get().regenerateAll();
 
 	const renderDisplayMode = () => {
 		switch (displayMode)

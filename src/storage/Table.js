@@ -10,7 +10,8 @@ function chooseRandomWithWeight(entries)
 	const randInt = require('../lib/randInt')(1, totalWeight);
 
 	var weight_sum = 0;
-	for (var i = 0; i < entries.length; i++)
+	var i;
+	for (i = 0; i < entries.length; i++)
 	{
 		weight_sum += entries[i].getWeight() || 1;
 		if (randInt <= weight_sum)
@@ -19,6 +20,7 @@ function chooseRandomWithWeight(entries)
 		}
 	}
 
+	console.warn(`'Returning null from \`chooseRandomWithWeight\`. i=${i} weight_sum=${weight_sum}`, entries);
 	return null;
 }
 
@@ -45,6 +47,7 @@ export default class Table
 		table.valueMacro = obj.valueMacro;
 		table.entries = lodash.mapValues(obj.entries, Entry.fromStorage);
 		table.modifiers = obj.modifiers;
+		table.redirect = obj.redirect;
 		return table;
 	}
 
@@ -61,11 +64,12 @@ export default class Table
 			table.valueMacro = obj.valueMacro;
 			table.entries = null;
 		}
-		else
+		else if (obj.rows)
 		{
 			table.entries = accumulateEntries(obj.rows, `table '${key}'`, (i) => table.entriesWithoutKeys.push(i));
 		}
 		table.modifiers = obj.modifiers;
+		table.redirect = obj.redirect;
 		return table;
 	}
 
@@ -81,6 +85,8 @@ export default class Table
 		this.entries = {};
 		// Global modifiers that can (and should) be applied to any entry after being rolled.
 		this.modifiers = {};
+
+		this.redirect = undefined;
 	}
 
 	getKey()
@@ -165,34 +171,57 @@ export default class Table
 					max: this.filter.max,
 				};
 			default:
-				return undefined;
+				return this.getOptions();
 		}
+	}
+
+	hasGlobalModifiers()
+	{
+		return this.modifiers !== null && this.modifiers !== undefined && Object.keys(this.modifiers).length > 0;
+	}
+
+	getGlobalModifiers()
+	{
+		return this.modifiers;
+	}
+
+	hasRedirector()
+	{
+		return this.redirect !== undefined;
+	}
+
+	getRedirector()
+	{
+		return this.redirect;
 	}
 
 	// Performing ops
 
 	roll(filter, context)
 	{
-		console.log(this);
+		let result = { value: undefined, modifiers: {} };
 
 		if (this.hasValueMacro())
 		{
 			const filterContext = { ...context, filter: (filter || this.getDefaultFilter()) };
 			const macro = createExecutor(this.valueMacro);
-			if (macro === undefined) return inlineEval(this.valueMacro, filterContext);
-			else return macro(filterContext);
+			if (macro === undefined) result.value = inlineEval(this.valueMacro, filterContext);
+			else result.value = macro(filterContext);
 		}
-
-		const rollable = this.getRows();
-		const filtered = filter === undefined ? rollable : rollable.filter((entry) => filter.includes(entry.getKeyPath()));
-		const entry = chooseRandomWithWeight(filtered);
-		
-		let result = {
-			value: lodash.cloneDeep(entry.value),
-			modifiers: lodash.cloneDeep(entry.modifiers),
-		};
-
-		console.log(result);
+		else
+		{
+			const rollable = this.getRows();
+			const filtered = filter === undefined ? rollable : rollable.filter((entry) => filter.includes(entry.getKey()));
+			const entry = chooseRandomWithWeight(filtered);
+			if (entry === null)
+			{
+				console.warn('Received null generated value. Maybe there are missing keys?', this.entriesWithoutKeys, this.getKeyPath());
+				return result;
+			}
+			result.value = lodash.cloneDeep(entry.value);
+			result.modifiers = lodash.cloneDeep(entry.modifiers);
+			result.entry = entry;
+		}
 
 		// Modifiers which are determined based on scales or regexs on the generated value
 		if (this.hasGlobalModifiers())
@@ -206,18 +235,88 @@ export default class Table
 				}
 			}
 		}
+		
+		result.modifiers = lodash.mapValues(result.modifiers, (modifierList, targetProperty) => {
+			if (!Array.isArray(modifierList)) modifierList = [modifierList];
+			return modifierList.map((modifier) => {
+				// Preprocess each modifier to ensure that the modifiers remaining are either numbers or strings
+				if (typeof modifier === 'object')
+				{
+					switch (modifier.type)
+					{
+						case 'curve':
+							switch (modifier.curve)
+							{
+								case 'step':
+									{
+										const keyframes = Object.keys(modifier.values);
+										let currentIndex = undefined;
+										let nextIndex = keyframes.length > 0 ? 0 : undefined;
+										while (nextIndex !== undefined
+											&& parseInt(result.value, 10) > parseInt(keyframes[nextIndex], 10))
+										{
+											currentIndex = nextIndex;
+											nextIndex++;
+											if (nextIndex >= keyframes.length) nextIndex = undefined;
+										}
+										return currentIndex ? modifier.values[keyframes[currentIndex]] : 0;
+									}
+								case 'lerp':
+									{
+										const valueInt = parseInt(result.value, 10);
+
+										const keyframes = Object.keys(modifier.values);
+										const getInt = (i) => parseInt(keyframes[i], 10);
+										let lowerIndex = undefined;
+										let higherIndex = keyframes.length > 0 ? 0 : undefined;
+										while (higherIndex !== undefined
+											&& valueInt > getInt(higherIndex))
+										{
+											lowerIndex = higherIndex;
+											higherIndex++;
+											if (higherIndex >= keyframes.length) higherIndex = undefined;
+										}
+
+										if (lowerIndex === undefined)
+										{
+											lowerIndex = higherIndex;
+										}
+										else if (higherIndex === undefined)
+										{
+											higherIndex = lowerIndex;
+										}
+
+										const lowerInput = getInt(lowerIndex);
+										const higherInput = getInt(higherIndex);
+										const lowerMod = modifier.values[keyframes[lowerIndex]];
+										const higherMod = modifier.values[keyframes[higherIndex]];
+
+										const t = (valueInt - lowerInput) / (higherInput !== lowerInput ? higherInput - lowerInput : higherInput);
+										const lerped = (1 - t) * lowerMod + (t * higherMod);
+
+										if (modifier.toIntOp === undefined) return lerped;
+										const intOp = Math[modifier.toIntOp];
+										if (intOp === undefined)
+										{
+											console.warn('Encountered unimplemented curve int cast operator:', modifier.toIntOp);
+											return 0;
+										}
+										else
+										{
+											return intOp(lerped);
+										}
+									}
+								default: break;
+							}
+							break;
+						default: break;
+					}
+				}
+				return modifier;
+			});
+		});
 
 		return result;
-	}
-
-	hasGlobalModifiers()
-	{
-		return this.modifiers.length > 0;
-	}
-
-	getGlobalModifiers()
-	{
-		return this.modifiers;
 	}
 
 }

@@ -1,10 +1,11 @@
 import lodash from 'lodash';
+import {parseMacro} from '../generator/modules/createExecutor';
 
 export function accumulateEntries(data, context, onUndefinedKey=undefined)
 {
-	return data.reduce((accum, entryData) =>
+	return data.reduce((accum, entryData, i) =>
 	{
-		const entry = Entry.from(entryData);
+		const entry = Entry.from(entryData, i);
 		if (entry.getKey() === undefined)
 		{
 			if (onUndefinedKey !== undefined && typeof onUndefinedKey === 'function')
@@ -29,10 +30,10 @@ export class Entry
 		return entry;
 	}
 
-	static from(data)
+	static from(data, idx)
 	{
 		const entry = new Entry();
-		entry.readFrom(data);
+		entry.readFrom(data, idx);
 		return entry;
 	}
 
@@ -56,10 +57,10 @@ export class Entry
 		this.children = lodash.mapValues(this.children || [], Entry.fromStorage);
 	}
 
-	readFrom(data)
+	readFrom(data, idx)
 	{
 		this.weight = data.weight || 1;
-		this.key = data.key;
+		this.key = data.key || idx;
 
 		this.source = data.source;
 
@@ -91,6 +92,22 @@ export class Entry
 	{
 		// TODO: fetch from local storage
 		return this.weight;
+	}
+
+	getSourceTableKey()
+	{
+		if (!this.hasSource()) return undefined;
+		const executor = parseMacro(this.source);
+		if (executor.execFunc !== 'roll') return undefined;
+		return executor.args;
+	}
+
+	isMissingSourceTable(tableCollection, evaluateWithData)
+	{
+		if (!this.hasSource()) return false;
+		const tablePath = this.getSourceTableKey();
+		if (!tablePath) return false;
+		return tableCollection.getTable(evaluateWithData(tablePath)) === undefined;
 	}
 
 }
