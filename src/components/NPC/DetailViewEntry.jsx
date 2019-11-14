@@ -8,6 +8,7 @@ import { camelCaseToTitle } from '../../lib/str';
 import NpcData from '../../storage/NpcData';
 import * as shortid from 'shortid';
 import { inlineEval } from '../../generator/modules/evalAtCtx';
+import lodash from 'lodash';
 
 /*
 function DataViewEntryCategory({
@@ -52,56 +53,23 @@ function makeModifierPopup(title, popupTitle, itemMap)
 	);
 }
 
-export function DataViewEntry({
-	propertyKey, tableCollection, categoryFields, entryKey, storageKey,
-	active, onClick,
-	depth,
+function EntryView({
+	tableCollection, npcSchema, npc, npcModifiedData,
+	propertyKey, storageKey,
+	entry, parentEntry,
+	active, onClick, // from StorageAccordion
 })
 {
-	const npcSchema = tableCollection ? tableCollection.getNpcSchema() : null;
+	const sourceTableKey = parentEntry.getSourceTableKey(tableCollection);
+	const isMissingSourceTable = parentEntry.isMissingSourceTable(tableCollection, (k) => inlineEval(k, npcModifiedData));
 
-	const categories = {};
-	const npc = NpcData.get();
-	const npcModifiedData = npc.getModifiedData();
-	const entry = npc.getEntry(entryKey);
-	const field = entry.getField(npcSchema);
-
-	const sourceTableKey = field.getSourceTableKey(tableCollection);
-
-	const [_refreshKey, refresh] = React.useState(undefined);
+	const refresh = React.useState(undefined)[1];
 	useEffect(() => {
-		function onChanged({ details })
-		{
-			refresh(shortid.generate());
-		}
-		NpcData.get().getEntry(entryKey).addListenerOnChanged(onChanged);
-		return () => {
-			NpcData.get().getEntry(entryKey).removeListenerOnChanged(onChanged);
-		};
+		function onChanged({ details }) { refresh(shortid.generate()); }
+		entry.addListenerOnChanged(onChanged);
+		return () => entry.removeListenerOnChanged(onChanged);
 	});
 
-	/*
-	if (childTableKeys.length > 0)
-	{
-		categories['children'] = {
-			storageAccordianComponent: DataViewEntryCategory,
-			titleKey: 'children',
-			description: 'These are the child fields for this item',
-			children: [
-				(
-					<DetailViewEntryList
-						key={0}
-						parentPropertyKey={propertyKey}
-						tableCollection={tableCollection}
-						childTableKeys={childTableKeys}
-					/>
-				)
-			]
-		};
-	}
-	//*/
-
-	const isMissingSourceTable = field.isMissingSourceTable(tableCollection, (k) => inlineEval(k, npcModifiedData));
 	const modifiersFromEntry = entry.getModifiers();
 	const modifiersFromEntryCount = Object.keys(modifiersFromEntry).length;
 	const hasModifiers = modifiersFromEntryCount > 0;
@@ -110,7 +78,7 @@ export function DataViewEntry({
 
 	if (active)
 	{
-		console.log(entry, modifiersFromEntry);
+		console.log(entry, entry.hasChildren(), entry.getChildren());
 	}
 
 	return (
@@ -133,7 +101,7 @@ export function DataViewEntry({
 				{!isMissingSourceTable && <Menu.Item fitted position='right'>
 					<Button
 						icon={'refresh'}
-						onClick={() => entry.regenerate(npcSchema, npc.getModifiedData())}
+						onClick={() => entry.regenerate(npcModifiedData)}
 						content={camelCaseToTitle(propertyKey)}
 					/>
 				</Menu.Item>}
@@ -153,7 +121,7 @@ export function DataViewEntry({
 									control={TableFilter}
 									tableCollection={tableCollection}
 									tableKey={inlineEval(sourceTableKey, npcModifiedData)}
-									storageKey={entryKey}
+									storageKey={storageKey}
 								/>
 							)}
 							<Form.Field>
@@ -172,12 +140,51 @@ export function DataViewEntry({
 							</Form.Field>
 						</Form.Group>
 					</Form>
-					<StorageAccordion
+					{entry.hasChildren() && <StorageAccordion
 						storageKey={storageKey}
-						entries={categories}
-					/>
+						entryComponentType={EntryView}
+						entries={lodash.toPairs(entry.getChildren()).reduce((accum, [childKey, childEntry]) =>
+						{
+							accum[childKey] = {
+								tableCollection: tableCollection,
+								npcSchema: npcSchema,
+								npc: npc,
+								npcModifiedData: npcModifiedData,
+								propertyKey: childKey,
+								storageKey: `${storageKey}.${childKey}`,
+								entry: childEntry,
+								parentEntry: childEntry.parent,
+							};
+							return accum;
+						}, {})}
+					/>}
 				</div>
 			</Accordion.Content>}
 		</div>
 	);
+}
+
+export function DataViewEntry({
+	propertyKey, tableCollection, entryKey, storageKey,
+	active, onClick,
+})
+{
+	const npcSchema = tableCollection ? tableCollection.getNpcSchema() : null;
+	const npc = NpcData.get();
+	const npcModifiedData = npc.getModifiedData();
+	const entry = npc.getEntry(entryKey);
+
+	const parentEntry = entry.getField();
+
+	return (
+		<EntryView
+			tableCollection={tableCollection} npcSchema={npcSchema}
+			npc={npc} npcModifiedData={npcModifiedData}
+
+			propertyKey={propertyKey} storageKey={storageKey}
+			entry={entry} parentEntry={parentEntry}
+
+			active={active} onClick={onClick}
+		/>
+	)
 }

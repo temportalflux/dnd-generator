@@ -9,7 +9,15 @@ export default class GeneratedEntry
 	static fromSchema(field)
 	{
 		const data = new GeneratedEntry();
-		data.readSchema(field);
+		data.readEntry(field);
+		data.category = field.getCategory();
+		return data;
+	}
+
+	static fromEntry(entry)
+	{
+		const data = new GeneratedEntry();
+		data.readEntry(entry);
 		return data;
 	}
 
@@ -17,16 +25,19 @@ export default class GeneratedEntry
 	{
 		this.events = new EventTarget();
 
+		this.schemaEntry = undefined;
+
 		this.category = undefined;
 		this.key = undefined;
 
 		this.generated = undefined;
+		this.generatedChildren = undefined;
 	}
 
-	readSchema(field)
+	readEntry(entry)
 	{
-		this.category = field.getCategory();
-		this.key = field.getKey();
+		this.schemaEntry = entry;
+		this.key = entry.getKey();
 	}
 
 	getKeyPath()
@@ -36,19 +47,18 @@ export default class GeneratedEntry
 		else return `${this.category}.${this.key}`;
 	}
 
-	getField(schema)
+	getField()
 	{
-		return schema.getField(this.getKeyPath());
+		return this.schemaEntry;
 	}
 
-	getGenerationMacro(schema)
+	getGenerationMacro()
 	{
-		const field = this.getField(schema);
-		if (!field.hasSource()) return undefined;
-		const macro = createExecutor(field.getSource());
+		if (!this.getField().hasSource()) return undefined;
+		const macro = createExecutor(this.getField().getSource());
 		if (macro === undefined)
 		{
-			console.warn('Failed to find a valid exec source functor for field:', field);
+			console.warn('Failed to find a valid exec source functor for field:', this.getField());
 		}
 		return macro;
 	}
@@ -58,18 +68,29 @@ export default class GeneratedEntry
 		return Filter.get(this.getKeyPath());
 	}
 
-	regenerate(schema, globalData)
+	regenerate(globalData)
 	{
-		const macro = this.getGenerationMacro(schema);
+		const macro = this.getGenerationMacro();
 		if (macro === undefined) return;
 		const context = {
 			...globalData,
 			filter: this.getFilterValue(),
 		};
 		this.generated = macro(context);
+		this.generatedChildren = this.generated && this.generated.entry && this.generated.entry.hasChildren()
+			? lodash.mapValues(this.generated.entry.getChildren(), (child) => {
+				const clone = GeneratedEntry.fromEntry(child);
+				clone.parent = child;
+				return clone;
+			}) : undefined;
 		this.events.dispatchEvent(new CustomEvent('onChanged', {
 			detail: {}
 		}));
+	}
+
+	getGeneratedEntry()
+	{
+		return this.generated ? this.generated.entry : undefined;
 	}
 
 	getModifiedData(values)
@@ -112,7 +133,8 @@ export default class GeneratedEntry
 	getRawValue()
 	{
 		const generated = this.generated || {};
-		return generated.value || (generated.entry ? generated.entry.getKey() : undefined);
+		const genEntry = this.getGeneratedEntry();
+		return generated.value || (genEntry ? genEntry.getKey() : undefined);
 	}
 
 	getModifiedValue()
@@ -123,14 +145,24 @@ export default class GeneratedEntry
 
 	toString(globalData)
 	{
-		const entry = this.generated ? this.generated.entry : undefined;
-		const stringify = entry ? entry.stringify : undefined;
+		const genEntry = this.getGeneratedEntry();
+		const stringify = genEntry ? genEntry.stringify : undefined;
 		return stringify ? inlineEval(stringify, globalData || {}) : `${this.getModifiedValue()}`;
 	}
 
 	getModifiers()
 	{
 		return (this.generated ? this.generated.modifiers : undefined) || {};
+	}
+
+	hasChildren()
+	{
+		return this.generatedChildren && Object.keys(this.generatedChildren).length > 0;
+	}
+
+	getChildren()
+	{
+		return this.hasChildren() ? this.generatedChildren : {};
 	}
 
 }

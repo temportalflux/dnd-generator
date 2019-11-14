@@ -120,7 +120,7 @@ export default class NpcData
 	regenerate(entryKey, schema, globalData, valuesOut)
 	{
 		const entry = this.entries[entryKey];
-		entry.regenerate(schema, globalData);
+		entry.regenerate(globalData);
 		entry.getModifiedData(valuesOut);
 	}
 

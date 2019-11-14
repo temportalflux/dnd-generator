@@ -110,4 +110,11 @@ export class Entry
 		return tableCollection.getTable(evaluateWithData(tablePath)) === undefined;
 	}
 
+	hasChildren()
+	{
+		return Object.keys(this.children).length > 0;
+	}
+
+	getChildren() { return this.children; }
+
 }
