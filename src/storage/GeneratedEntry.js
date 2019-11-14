@@ -128,4 +128,9 @@ export default class GeneratedEntry
 		return stringify ? inlineEval(stringify, globalData || {}) : `${this.getModifiedValue()}`;
 	}
 
+	getModifiers()
+	{
+		return (this.generated ? this.generated.modifiers : undefined) || {};
+	}
+
 }

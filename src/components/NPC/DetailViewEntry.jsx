@@ -1,7 +1,7 @@
  /*eslint no-unused-vars: [0, {"args": "after-used", "argsIgnorePattern": "^_"}]*/
 
 import React, { useEffect } from 'react';
-import { Accordion, Icon, Button, Menu, Form } from 'semantic-ui-react';
+import { Accordion, Icon, Button, Menu, Form, Popup, Header } from 'semantic-ui-react';
 import { TableFilter } from '../TableFilter';
 import { StorageAccordion } from '../StorageAccordion';
 import { camelCaseToTitle } from '../../lib/str';
@@ -32,6 +32,25 @@ function DataViewEntryCategory({
 	);
 }
 //*/
+
+function makeModifierPopup(title, popupTitle, itemMap)
+{
+	return (
+		<Popup
+			trigger={<label>{title} ({Object.keys(itemMap).length})</label>}
+			content={(
+				<div>
+					<Header as='h5'>{popupTitle}</Header>
+					{Object.keys(itemMap).map((key) => (
+						<div key={key}>
+							{key}: {JSON.stringify(itemMap[key])}
+						</div>
+					))}
+				</div>
+			)}
+		/>
+	);
+}
 
 export function DataViewEntry({
 	propertyKey, tableCollection, categoryFields, entryKey, storageKey,
@@ -83,6 +102,16 @@ export function DataViewEntry({
 	//*/
 
 	const isMissingSourceTable = field.isMissingSourceTable(tableCollection, (k) => inlineEval(k, npcModifiedData));
+	const modifiersFromEntry = entry.getModifiers();
+	const modifiersFromEntryCount = Object.keys(modifiersFromEntry).length;
+	const hasModifiers = modifiersFromEntryCount > 0;
+	const modifiersOfEntry = {}; // TODO: collective modifiers of this entry
+	const isModified = Object.keys(modifiersOfEntry).length > 0;
+
+	if (active)
+	{
+		console.log(entry, modifiersFromEntry);
+	}
 
 	return (
 		<div>
@@ -136,6 +165,10 @@ export function DataViewEntry({
 							<Form.Field>
 								<label>Value with Modifiers</label>
 								<span style={{ color: 'red' }}>Not Generated</span>
+							</Form.Field>
+							<Form.Field>
+								{hasModifiers && makeModifierPopup('Modifiers', 'Modifing Entries', modifiersFromEntry)}
+								{isModified && makeModifierPopup('Modified By', 'Modified by Entries', modifiersOfEntry)}
 							</Form.Field>
 						</Form.Group>
 					</Form>
