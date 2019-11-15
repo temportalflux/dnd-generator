@@ -10,6 +10,15 @@ export default class NpcData
 	static EVENTS = new EventTarget();
 	static EVENT_INITIALIZED = 'onInitialized';
 
+	static sever(fullKey, itemCount = 1)
+	{
+		const path = lodash.toPath(fullKey);
+		return {
+			items: path.slice(0, itemCount),
+			remaining: path.slice(itemCount).join('.'),
+		};
+	}
+
 	static toggleOnInitialized(status, callback)
 	{
 		switch (status)
@@ -94,7 +103,9 @@ export default class NpcData
 
 	getEntry(keyPath)
 	{
-		return this.entries[keyPath];
+		const { items, remaining } = NpcData.sever(keyPath, 2);
+		const entry = this.entries[`${items[0]}.${items[1]}`];
+		return remaining.length > 0 ? entry.getChild(remaining) : entry;
 	}
 
 	getCategories()
@@ -113,11 +124,11 @@ export default class NpcData
 		const globalData = {};
 		for (let entryKey of schema.getGenerationOrder())
 		{
-			this.regenerate(entryKey, schema, globalData, globalData);
+			this.regenerate(entryKey, globalData, globalData);
 		}
 	}
 
-	regenerate(entryKey, schema, globalData, valuesOut)
+	regenerate(entryKey, globalData, valuesOut)
 	{
 		const entry = this.entries[entryKey];
 		entry.regenerate(globalData);

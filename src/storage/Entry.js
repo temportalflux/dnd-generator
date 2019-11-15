@@ -42,6 +42,7 @@ export class Entry
 		this.weight = undefined;
 		this.key = undefined;
 
+		this.redirect = undefined;
 		this.source = undefined;
 
 		this.value = undefined;
@@ -62,6 +63,7 @@ export class Entry
 		this.weight = data.weight || 1;
 		this.key = data.key || idx;
 
+		this.redirect = data.redirect;
 		this.source = data.source;
 
 		this.value = data.value;
@@ -110,11 +112,26 @@ export class Entry
 		return tableCollection.getTable(evaluateWithData(tablePath)) === undefined;
 	}
 
+	hasRedirector()
+	{
+		return typeof this.redirect === 'string';
+	}
+
+	getRedirector()
+	{
+		return this.redirect;
+	}
+
 	hasChildren()
 	{
 		return Object.keys(this.children).length > 0;
 	}
 
 	getChildren() { return this.children; }
+
+	getStringifyTemplate()
+	{
+		return this.stringify;
+	}
 
 }

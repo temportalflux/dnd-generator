@@ -20,7 +20,10 @@ export function createExecutor(macro)
 	const executor = parseMacro(macro);
 	if (executor)
 	{
-		return (data) => Execs[executor.execFunc](inlineEval(executor.args, data), data);
+		return (data) => {
+			const evaledArgs = inlineEval(executor.args, data);
+			return Execs[executor.execFunc](evaledArgs, data);
+		};
 	}
 	return undefined;
 }

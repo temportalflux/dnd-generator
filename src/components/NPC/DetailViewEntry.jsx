@@ -54,12 +54,15 @@ function makeModifierPopup(title, popupTitle, itemMap)
 }
 
 function EntryView({
-	tableCollection, npcSchema, npc, npcModifiedData,
+	tableCollection, npcSchema, npc,
 	propertyKey, storageKey,
 	entry, parentEntry,
 	active, onClick, // from StorageAccordion
 })
 {
+	// TODO: this is ineffecient, but it cant be passed in b/c passing through react copies objects, does not pass by ref.
+	// maybe add functionality to cache data until it is marked as dirty.
+	const npcModifiedData = npc.getModifiedData();
 	const sourceTableKey = parentEntry.getSourceTableKey(tableCollection);
 	const isMissingSourceTable = parentEntry.isMissingSourceTable(tableCollection, (k) => inlineEval(k, npcModifiedData));
 
@@ -67,7 +70,11 @@ function EntryView({
 	useEffect(() => {
 		function onChanged({ details }) { refresh(shortid.generate()); }
 		entry.addListenerOnChanged(onChanged);
-		return () => entry.removeListenerOnChanged(onChanged);
+		entry.addListenerOnUpdateString(onChanged);
+		return () => {
+			entry.removeListenerOnChanged(onChanged)
+			entry.removeListenerOnUpdateString(onChanged);
+		};
 	});
 
 	const modifiersFromEntry = entry.getModifiers();
@@ -75,10 +82,12 @@ function EntryView({
 	const hasModifiers = modifiersFromEntryCount > 0;
 	const modifiersOfEntry = {}; // TODO: collective modifiers of this entry
 	const isModified = Object.keys(modifiersOfEntry).length > 0;
+	const stringifyDeps = entry.getStringifyDependencies();
+	const stringifySubscribed = entry.stringifyLinker.getSubscribedKeys();
 
 	if (active)
 	{
-		console.log(entry, entry.hasChildren(), entry.getChildren());
+		//console.log(entry);
 	}
 
 	return (
@@ -92,7 +101,7 @@ function EntryView({
 					>
 						{!isMissingSourceTable && <Icon name='dropdown' />}
 						{camelCaseToTitle(propertyKey)}
-						<span> - {entry.toString(npcModifiedData)}</span>
+						<span> - {entry.toString()}</span>
 						{isMissingSourceTable && (
 							<span> - No generator available</span>
 						)}
@@ -121,12 +130,12 @@ function EntryView({
 									control={TableFilter}
 									tableCollection={tableCollection}
 									tableKey={inlineEval(sourceTableKey, npcModifiedData)}
-									storageKey={storageKey}
+									storageKey={entry.getKeyPath()}
 								/>
 							)}
 							<Form.Field>
 								<label>Generated Value</label>
-								{entry.getRawValue() ? entry.toString(npcModifiedData) : (
+								{entry.getRawValue() ? entry.toString() : (
 									<span style={{ color: 'red' }}>Not Generated</span>
 								)}
 							</Form.Field>
@@ -137,6 +146,8 @@ function EntryView({
 							<Form.Field>
 								{hasModifiers && makeModifierPopup('Modifiers', 'Modifing Entries', modifiersFromEntry)}
 								{isModified && makeModifierPopup('Modified By', 'Modified by Entries', modifiersOfEntry)}
+								{stringifyDeps.length > 0 && makeModifierPopup('String Dependencies', 'String Dependencies', stringifyDeps)}
+								{stringifySubscribed.length > 0 && makeModifierPopup('String Subscriptions', 'String Subscriptions', stringifySubscribed)}
 							</Form.Field>
 						</Form.Group>
 					</Form>
@@ -171,15 +182,13 @@ export function DataViewEntry({
 {
 	const npcSchema = tableCollection ? tableCollection.getNpcSchema() : null;
 	const npc = NpcData.get();
-	const npcModifiedData = npc.getModifiedData();
 	const entry = npc.getEntry(entryKey);
 
 	const parentEntry = entry.getField();
 
 	return (
 		<EntryView
-			tableCollection={tableCollection} npcSchema={npcSchema}
-			npc={npc} npcModifiedData={npcModifiedData}
+			tableCollection={tableCollection} npcSchema={npcSchema} npc={npc}
 
 			propertyKey={propertyKey} storageKey={storageKey}
 			entry={entry} parentEntry={parentEntry}
