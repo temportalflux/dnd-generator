@@ -1,7 +1,3 @@
 {
-	"rows": [
-		{
-			"source": "{roll:traits/modifier}"
-		}
-	]
+	"redirect": "traits/modifier"
 }

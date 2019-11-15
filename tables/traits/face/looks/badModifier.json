@@ -1,9 +1,5 @@
 {
-	"rows": [
-		{
-			"source": "{roll:traits/modifier}"
-		}
-	],
+	"redirect": "traits/modifier",
 	"modifiers": [
 		{
 			"match": "slightly",

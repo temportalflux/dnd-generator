@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 5,
+			"key": "good",
 			"value": "good",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": 3,
@@ -11,6 +12,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "evil",
 			"value": "evil",
 			"modifiers": {
 				"stats.alignmentTendancies.moral.positive": -3,
