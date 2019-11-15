@@ -4,14 +4,6 @@ import { Entry } from './Entry';
 class Field extends Entry
 {
 
-	static fromStorage(obj)
-	{
-		const entry = new Field();
-		entry.readStorage(obj);
-		entry.category = obj.category;
-		return entry;
-	}
-
 	static from(data)
 	{
 		const entry = new Field();
@@ -40,17 +32,6 @@ class Field extends Entry
 
 export default class NpcSchema
 {
-
-	static fromStorage(obj)
-	{
-		const schema = new NpcSchema();
-		if (!obj) return schema;
-		schema.fields = lodash.mapValues(obj.fields, Field.fromStorage);
-		schema.fieldOrder = obj.fieldOrder;
-		schema.generationOrder = obj.generationOrder;
-		schema.categories = obj.categories;
-		return schema;
-	}
 
 	// takes a json object
 	static from(obj)

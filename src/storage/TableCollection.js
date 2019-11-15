@@ -30,6 +30,7 @@ function loadTableEntry(accumulator, directory, itemPath)
 }
 
 const events = new EventTarget();
+let TABLE_COLLECTION_CACHE = undefined;
 
 export default class TableCollection
 {
@@ -38,16 +39,15 @@ export default class TableCollection
 
 	static get()
 	{
-		const saved = storage.get('tables');
-		return saved === null ? null : TableCollection.fromStorage(saved);
+		return TABLE_COLLECTION_CACHE;
 	}
 
 	static initialize()
 	{
 		console.log('Initializing table collection');
-		const data = new TableCollection();
-		data.loadTables();
-		data.save();
+		TABLE_COLLECTION_CACHE = new TableCollection();
+		TABLE_COLLECTION_CACHE.loadTables();
+		TABLE_COLLECTION_CACHE.save();
 	}
 
 	static clear()
@@ -87,24 +87,16 @@ export default class TableCollection
 		}));
 	}
 
-	static fromStorage(obj)
-	{
-		const data = new TableCollection();
-		data.tables = lodash.mapValues(obj.tables, Table.fromStorage);
-		data.npcSchema = NpcSchema.fromStorage(obj.npcSchema);
-		return data;
-	}
-
 	constructor()
 	{
 		this.tables = {};
 		this.npcSchema = undefined;
 	}
 
+	// TODO: This is a misnomer now. All changes are already "saved" - because it exists globally
 	save()
 	{
 		const prev = lodash.cloneDeep(this);
-		storage.set('tables', this);
 		TableCollection.dispatchEvent(TableCollection.EVENT_ONCHANGED, prev, this);
 	}
 
@@ -147,13 +139,7 @@ export default class TableCollection
 
 	getTable(key)
 	{
-		let table = null;
-		do
-		{
-			if (table !== null && table.hasRedirector()) key = table.getRedirector();
-			table = this.tables.hasOwnProperty(key) ? this.tables[key] : undefined;
-		} while (table !== undefined && table.hasRedirector());
-		return table;
+		return this.tables.hasOwnProperty(key) ? this.tables[key] : undefined
 	}
 
 	getTableAtPath(keyPath)

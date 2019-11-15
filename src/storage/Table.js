@@ -1,5 +1,5 @@
 import lodash from 'lodash';
-import { Entry, accumulateEntries } from './Entry';
+import { accumulateEntries } from './Entry';
 import { createExecutor } from '../generator/modules/createExecutor';
 import appendModifiers from '../generator/appendModifiers';
 import { inlineEval } from '../generator/modules/evalAtCtx';
@@ -37,18 +37,6 @@ export default class Table
 	static getKeyPathFromTablePath(tablePath)
 	{
 		return tablePath.replace(/\//g, '.');
-	}
-
-	static fromStorage(obj, key)
-	{
-		const table = new Table();
-		table.key = key;
-		table.filter = obj.filter;
-		table.valueMacro = obj.valueMacro;
-		table.entries = lodash.mapValues(obj.entries, Entry.fromStorage);
-		table.modifiers = obj.modifiers;
-		table.redirect = obj.redirect;
-		return table;
 	}
 
 	// takes a json object
@@ -208,6 +196,11 @@ export default class Table
 			if (macro === undefined) result.value = inlineEval(this.valueMacro, filterContext);
 			else result.value = macro(filterContext);
 		}
+		else if (this.hasRedirector())
+		{
+			const macro = createExecutor(`{roll:${this.getRedirector()}}`);
+			if (macro) result = macro(context);
+		}
 		else
 		{
 			const rollable = this.getRows();
@@ -228,8 +221,18 @@ export default class Table
 		{
 			for (let globalModifierEntry of this.getGlobalModifiers())
 			{
-				let matchResult = createExecutor(globalModifierEntry.match)({ ...context, value: result.value });
-				if (matchResult === true)
+				let matched = false;
+				const macro = createExecutor(globalModifierEntry.match);
+				if (macro)
+				{
+					let matchResult = macro({ ...context, value: result.value });
+					matched = matchResult === true;
+				}
+				else
+				{
+					matched = result.value === globalModifierEntry.match;
+				}
+				if (matched)
 				{
 					result.modifiers = appendModifiers(result.modifiers, globalModifierEntry.modifiers);
 				}

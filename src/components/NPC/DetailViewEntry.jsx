@@ -164,7 +164,7 @@ function EntryView({
 								propertyKey: childKey,
 								storageKey: `${storageKey}.${childKey}`,
 								entry: childEntry,
-								parentEntry: childEntry.parent,
+								parentEntry: childEntry.schemaEntry,
 							};
 							return accum;
 						}, {})}

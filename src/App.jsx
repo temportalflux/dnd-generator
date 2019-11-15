@@ -20,7 +20,7 @@ class App extends React.Component
 	componentDidMount()
 	{
 		const tables = TableCollection.get();
-		if (tables === null)
+		if (!tables)
 		{
 			TableCollection.initialize();
 			this.setState({ refreshKey: shortid.generate() });

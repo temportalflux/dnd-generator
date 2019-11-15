@@ -111,8 +111,9 @@ export default class GeneratedEntry
 	getKeyPath()
 	{
 		if (this.key === undefined) return undefined;
-		else if (this.category === undefined) return this.key;
-		else return `${this.category}.${this.key}`;
+		else if (this.category !== undefined) return `${this.category}.${this.key}`;
+		else if (this.parent !== undefined) return `${this.parent.getKeyPath()}.${this.key}`;
+		else return this.key;
 	}
 
 	getField()
@@ -147,23 +148,40 @@ export default class GeneratedEntry
 		};
 		this.generated = null;
 
-		do
+		if (this.schemaEntry.value)
 		{
-			let macro = undefined;
-			if (this.generated && this.generated.entry && this.generated.entry.hasRedirector())
-				macro = createExecutor(`{roll:${this.generated.entry.getRedirector()}}`);
-			else macro = this.getGenerationMacro();
-			if (macro === undefined) return;
-			this.generated = macro(context);
-		} while(this.generated && this.generated.entry && this.generated.entry.hasRedirector());
-		
+			this.generated = {
+				value: this.schemaEntry.value
+			};
+		}
+		else
+		{
+			do
+			{
+				let macro = undefined;
+				if (this.generated && this.generated.entry && this.generated.entry.hasRedirector())
+					macro = createExecutor(`{roll:${this.generated.entry.getRedirector()}}`);
+				else macro = this.getGenerationMacro();
+				if (macro === undefined) break;
+				this.generated = macro(context);
+			} while(this.generated && this.generated.entry && this.generated.entry.hasRedirector());
+		}
+
 		this.generatedChildren = this.generated && this.generated.entry && this.generated.entry.hasChildren()
 			? lodash.mapValues(this.generated.entry.getChildren(), (child) =>
 			{
 				const clone = GeneratedEntry.fromEntry(child);
-				clone.parent = child;
+				clone.parent = this;
 				return clone;
 			}) : undefined;
+		if (this.generatedChildren === undefined && this.schemaEntry && this.schemaEntry.hasChildren())
+		{
+			this.generatedChildren = lodash.mapValues(this.schemaEntry.getChildren(), (child) => {
+				const clone = GeneratedEntry.fromEntry(child);
+				clone.parent = this;
+				return clone;
+			});
+		}
 		// temporarily modify globalData until it can be accounted for later
 		// we should probably just mark the data as dirty here instead of passing it through functions
 		this.getModifiedData(globalData);
@@ -173,6 +191,11 @@ export default class GeneratedEntry
 		this.updateString(globalData);
 		this.stringifyLinker.subscribe(this.getStringifyDependencies());
 		this.stringifyLinker.dispatchToSubscribers('onChanged', { globalData });
+
+		if (this.generatedChildren)
+		{
+			lodash.values(this.generatedChildren).forEach((child) => child.regenerate(globalData));
+		}
 	}
 
 	getGeneratedEntry()
@@ -182,29 +205,38 @@ export default class GeneratedEntry
 
 	getModifiedData(values)
 	{
-		// TODO
-		const hasChildren = false;//this.hasChildren();
+		const hasChildren = this.hasChildren();
 
 		const localValue = this.getModifiedValue();
 		if (localValue !== undefined)
 		{
-			lodash.set(values, `${this.getKeyPath()}.value`, localValue);
 			if (!hasChildren)
 			{
 				lodash.set(values, this.getKeyPath(), localValue);
+			}
+			else
+			{
+				lodash.set(values, `${this.getKeyPath()}.value`, localValue);
 			}
 		}
 
 		lodash.set(values, `${this.getKeyPath()}String`, this.toString());
 
-		/*
 		if (hasChildren)
 		{
 			lodash.values(this.getChildren()).forEach(
-				(child) => child.getLineageValues(values)
+				(child) => child.getModifiedData(values)
 			);
 		}
-		//*/
+	}
+
+	getChildModifiedData(values)
+	{
+		const tmpValues = {};
+		lodash.values(this.getChildren()).forEach(
+			(child) => child.getModifiedData(tmpValues)
+		);
+		lodash.assign(values, lodash.get(tmpValues, this.getKeyPath()));
 	}
 
 	addListenerOnChanged(callback)
@@ -233,7 +265,7 @@ export default class GeneratedEntry
 	getStringifyTemplate()
 	{
 		const genEntry = this.getGeneratedEntry();
-		return genEntry ? genEntry.getStringifyTemplate() : undefined;
+		return (genEntry ? genEntry.getStringifyTemplate() : undefined) || (this.schemaEntry.stringify);
 	}
 
 	getStringifyDependencies()
@@ -241,20 +273,21 @@ export default class GeneratedEntry
 		const template = this.getStringifyTemplate();
 		if (!template) return [];
 		const allMatches = Array.from(template.matchAll(VARIABLE_REGEX));
-		const allVariableReplacements = allMatches.map((match) => match[1]);
-		const variableStringOnlyRegex = /^[a-zA-Z0-9]+\.[a-zA-Z0-9.]+$/g;
-		const allNonlineageReplacements = allVariableReplacements.filter((key) => variableStringOnlyRegex.test(key));
+		const allNonlineageReplacements = allMatches.map((match) => match[1]).filter((key) => this.getChild(key) === undefined);
 		return allNonlineageReplacements;
 	}
 
 	updateString(globalData)
 	{
-		const genEntry = this.getGeneratedEntry();
-		const stringify = genEntry ? genEntry.stringify : undefined;
+		const localizedGlobalData = globalData;
+		this.getChildModifiedData(localizedGlobalData);
+		
+		const stringify = this.getStringifyTemplate();
 		this.stringifyCached = stringify ? inlineEval(stringify, globalData || {}) : `${this.getModifiedValue()}`;
 		this.events.dispatchEvent(new CustomEvent('onUpdateString', { detail: {
 			string: this.stringifyCached
 		}}));
+		if (this.parent) this.parent.updateString(globalData);
 	}
 
 	addListenerOnUpdateString(callback)
@@ -305,7 +338,7 @@ export default class GeneratedEntry
 		else if (lodash.has(this.getRawValue(), subpath)) return this;
 		else
 		{
-			console.warn(`Could not find entry with subpath ${subpath} under entry ${this.getKeyPath()}`);
+			//console.warn(`Could not find entry with subpath ${subpath} under entry ${this.getKeyPath()}`);
 			return undefined;
 		}
 	}

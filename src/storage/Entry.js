@@ -1,4 +1,3 @@
-import lodash from 'lodash';
 import {parseMacro} from '../generator/modules/createExecutor';
 
 export function accumulateEntries(data, context, onUndefinedKey=undefined)
@@ -6,14 +5,12 @@ export function accumulateEntries(data, context, onUndefinedKey=undefined)
 	return data.reduce((accum, entryData, i) =>
 	{
 		const entry = Entry.from(entryData, i);
-		if (entry.getKey() === undefined)
+		if (entry.key === undefined)
 		{
 			if (onUndefinedKey !== undefined && typeof onUndefinedKey === 'function')
 			{
 				onUndefinedKey(entry);
 			}
-			//console.warn(`Encountered invalid key in ${context} at entry`, entryData);
-			return accum;
 		}
 		accum[entry.getKey()] = entry;
 		return accum;
@@ -22,13 +19,6 @@ export function accumulateEntries(data, context, onUndefinedKey=undefined)
 
 export class Entry
 {
-
-	static fromStorage(obj)
-	{
-		const entry = new Entry();
-		entry.readStorage(obj);
-		return entry;
-	}
 
 	static from(data, idx)
 	{
@@ -52,16 +42,11 @@ export class Entry
 		this.children = [];
 	}
 
-	readStorage(obj)
-	{
-		lodash.assignIn(this, obj);
-		this.children = lodash.mapValues(this.children || [], Entry.fromStorage);
-	}
-
 	readFrom(data, idx)
 	{
 		this.weight = data.weight || 1;
-		this.key = data.key || idx;
+		this.key = data.key;
+		this.index = idx;
 
 		this.redirect = data.redirect;
 		this.source = data.source;
@@ -77,7 +62,7 @@ export class Entry
 
 	getKey()
 	{
-		return this.key;
+		return this.key || this.index;
 	}
 
 	hasSource()
