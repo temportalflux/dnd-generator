@@ -2,11 +2,11 @@
 	"rows": [
 		{
 			"key": "man",
-			"source": "{roll:race/$(description.race.value)/name-man}"
+			"redirect": "race/$(description.race.value || description.race)/name-man"
 		},
 		{
 			"key": "woman",
-			"source": "{roll:race/$(description.race.value)/name-woman}"
+			"redirect": "race/$(description.race.value || description.race)/name-woman"
 		}
 	]
 }

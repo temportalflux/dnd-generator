@@ -13,7 +13,7 @@
 		{
 			"weight": 100,
 			"key": "gayLesbian",
-			"source": "{roll:identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)}"
+			"redirect": "identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)"
 		},
 		{
 			"weight": 15,
