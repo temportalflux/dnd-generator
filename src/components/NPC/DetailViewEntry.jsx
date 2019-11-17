@@ -84,6 +84,8 @@ function EntryView({
 	const isModified = Object.keys(modifiersOfEntry).length > 0;
 	const stringifyDeps = entry.getStringifyDependencies();
 	const stringifySubscribed = entry.stringifyLinker.getSubscribedKeys();
+	const generationDependencies = entry.getGenerationDependencies();
+	const generationDependedOnBy = entry.generationDependencyLinker.getSubscribedKeys();
 
 	if (active)
 	{
@@ -143,12 +145,26 @@ function EntryView({
 								<label>Value with Modifiers</label>
 								<span style={{ color: 'red' }}>Not Generated</span>
 							</Form.Field>
-							<Form.Field>
-								{hasModifiers && makeModifierPopup('Modifiers', 'Modifing Entries', modifiersFromEntry)}
-								{isModified && makeModifierPopup('Modified By', 'Modified by Entries', modifiersOfEntry)}
-								{stringifyDeps.length > 0 && makeModifierPopup('String Dependencies', 'String Dependencies', stringifyDeps)}
-								{stringifySubscribed.length > 0 && makeModifierPopup('String Subscriptions', 'String Subscriptions', stringifySubscribed)}
-							</Form.Field>
+						</Form.Group>
+						<Form.Group widths={'equal'}>
+							{hasModifiers && <Form.Field>{makeModifierPopup(
+								'Modifiers', 'Modifing Entries', modifiersFromEntry
+							)}</Form.Field>}
+							{isModified && <Form.Field>{makeModifierPopup(
+								'Modified By', 'Modified by Entries', modifiersOfEntry
+							)}</Form.Field>}
+							{stringifyDeps.length > 0 && <Form.Field>{makeModifierPopup(
+								'String Dependencies', 'String Dependencies', stringifyDeps
+							)}</Form.Field>}
+							{stringifySubscribed.length > 0 && <Form.Field>{makeModifierPopup(
+								'String Subscriptions', 'String Subscriptions', stringifySubscribed
+							)}</Form.Field>}
+							{generationDependencies.length > 0 && <Form.Field>{makeModifierPopup(
+								'Dependencies', 'Generation Dependencies', generationDependencies
+							)}</Form.Field>}
+							{generationDependedOnBy.length > 0 && <Form.Field>{makeModifierPopup(
+								'Depended On By', 'Generations That Depend on entry', generationDependedOnBy
+							)}</Form.Field>}
 						</Form.Group>
 					</Form>
 					{entry.hasChildren() && <StorageAccordion

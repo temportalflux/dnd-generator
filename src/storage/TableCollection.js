@@ -1,6 +1,5 @@
 import lodash from 'lodash';
 import Table from './Table';
-import storage from 'local-storage';
 import NpcSchema from './NpcSchema';
 
 function loadItem(directory, fileName)
@@ -32,28 +31,40 @@ function loadTableEntry(accumulator, directory, itemPath)
 const events = new EventTarget();
 let TABLE_COLLECTION_CACHE = undefined;
 
+/**
+ * A collection of Tables which is loaded once at application start (or on demand after initial load).
+ * This data is meant to be READONLY at runtime and does not reliably support changing or adding data.
+*/
 export default class TableCollection
 {
 
+	/** Event key for when the table collection is finished loading - either at app launch or user initiated. */
 	static EVENT_ONCHANGED = 'onChanged';
 
+	/** Returns the current iteration/collection of tables loaded from data. */
 	static get()
 	{
 		return TABLE_COLLECTION_CACHE;
 	}
 
+	/**
+	 * Creates a new table collection object and loads collection from data.
+	*/
 	static initialize()
 	{
 		console.log('Initializing table collection');
 		TABLE_COLLECTION_CACHE = new TableCollection();
 		TABLE_COLLECTION_CACHE.loadTables();
-		TABLE_COLLECTION_CACHE.save();
+		TableCollection.dispatchEvent(TableCollection.EVENT_ONCHANGED, null, TABLE_COLLECTION_CACHE);
 	}
 
+	/**
+	 * Wipes the table collection singleton and immediately reinitializes.
+	*/
 	static clear()
 	{
 		const prev = TableCollection.get();
-		storage.remove('tables');
+		TABLE_COLLECTION_CACHE = null;
 		TableCollection.dispatchEvent(TableCollection.EVENT_ONCHANGED, prev, null);
 
 		// Re-Initialize
@@ -80,6 +91,7 @@ export default class TableCollection
 		TableCollection.removeEventListener(TableCollection.EVENT_ONCHANGED, callback);
 	}
 
+	// NOTE: `prev` is outdated
 	static dispatchEvent(event, prev, next)
 	{
 		events.dispatchEvent(new CustomEvent(event, {
@@ -91,13 +103,6 @@ export default class TableCollection
 	{
 		this.tables = {};
 		this.npcSchema = undefined;
-	}
-
-	// TODO: This is a misnomer now. All changes are already "saved" - because it exists globally
-	save()
-	{
-		const prev = lodash.cloneDeep(this);
-		TableCollection.dispatchEvent(TableCollection.EVENT_ONCHANGED, prev, this);
 	}
 
 	loadTables()

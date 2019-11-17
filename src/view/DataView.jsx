@@ -71,9 +71,7 @@ export class DataView extends React.Component
 
 			const tableCollection = TableCollection.get();
 			if (tableCollection)
-			{
-				console.log(tableCollection.getTableTree());
-				
+			{				
 				return (
 					<Tree
 						content={'Tables'}

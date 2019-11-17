@@ -89,11 +89,12 @@ export default class GeneratedEntry
 	constructor()
 	{
 		this.events = new EventTarget();
+		this.schemaEntry = undefined;
 
 		this.stringifyLinker = new EntryLinker(this, 'stringifyLinker', this.onStringifyLinkerEvent.bind(this));
 		this.stringifyCached = undefined;
 
-		this.schemaEntry = undefined;
+		this.generationDependencyLinker = new EntryLinker(this, 'generationDependencyLinker', this.onGenerationDependencyEvent.bind(this));
 
 		this.category = undefined;
 		this.key = undefined;
@@ -140,6 +141,7 @@ export default class GeneratedEntry
 
 	regenerate(globalData)
 	{
+		this.generationDependencyLinker.unsubscribe(this.getGenerationDependencies());
 		this.stringifyLinker.unsubscribe(this.getStringifyDependencies());
 
 		const context = {
@@ -164,7 +166,7 @@ export default class GeneratedEntry
 				else macro = this.getGenerationMacro();
 				if (macro === undefined) break;
 				this.generated = macro(context);
-			} while(this.generated && this.generated.entry && this.generated.entry.hasRedirector());
+			} while (this.generated && this.generated.entry && this.generated.entry.hasRedirector());
 		}
 
 		this.generatedChildren = this.generated && this.generated.entry && this.generated.entry.hasChildren()
@@ -176,21 +178,30 @@ export default class GeneratedEntry
 			}) : undefined;
 		if (this.generatedChildren === undefined && this.schemaEntry && this.schemaEntry.hasChildren())
 		{
-			this.generatedChildren = lodash.mapValues(this.schemaEntry.getChildren(), (child) => {
+			this.generatedChildren = lodash.mapValues(this.schemaEntry.getChildren(), (child) =>
+			{
 				const clone = GeneratedEntry.fromEntry(child);
 				clone.parent = this;
 				return clone;
 			});
 		}
+
+		// TODO: Check to see if the entry actually changed at all (key may have changed of the underlying generated entry),
+		// otherwise if the value hasn't changed, all of these updates are being processed for no reason.
+
+		this.updateString(globalData);
+		this.stringifyLinker.subscribe(this.getStringifyDependencies());
+
 		// temporarily modify globalData until it can be accounted for later
 		// we should probably just mark the data as dirty here instead of passing it through functions
 		this.getModifiedData(globalData);
 
 		this.events.dispatchEvent(new CustomEvent('onChanged', { detail: {} }));
 
-		this.updateString(globalData);
-		this.stringifyLinker.subscribe(this.getStringifyDependencies());
 		this.stringifyLinker.dispatchToSubscribers('onChanged', { globalData });
+
+		this.generationDependencyLinker.subscribe(this.getGenerationDependencies());
+		this.generationDependencyLinker.dispatchToSubscribers('onChanged', { key: this.getKeyPath(), globalData });
 
 		if (this.generatedChildren)
 		{
@@ -205,24 +216,15 @@ export default class GeneratedEntry
 
 	getModifiedData(values)
 	{
-		const hasChildren = this.hasChildren();
-
 		const localValue = this.getModifiedValue();
-		if (localValue !== undefined)
-		{
-			if (!hasChildren)
+		lodash.set(values, this.getKeyPath(), lodash.assignIn(
+			typeof localValue === 'object' ? localValue : {},
 			{
-				lodash.set(values, this.getKeyPath(), localValue);
+				toString: () => `${localValue}`,
+				asString: this.toString(),
 			}
-			else
-			{
-				lodash.set(values, `${this.getKeyPath()}.value`, localValue);
-			}
-		}
-
-		lodash.set(values, `${this.getKeyPath()}String`, this.toString());
-
-		if (hasChildren)
+		));
+		if (this.hasChildren())
 		{
 			lodash.values(this.getChildren()).forEach(
 				(child) => child.getModifiedData(values)
@@ -262,6 +264,11 @@ export default class GeneratedEntry
 		return this.getRawValue();
 	}
 
+	getModifiers()
+	{
+		return (this.generated ? this.generated.modifiers : undefined) || {};
+	}
+
 	getStringifyTemplate()
 	{
 		const genEntry = this.getGeneratedEntry();
@@ -279,14 +286,18 @@ export default class GeneratedEntry
 
 	updateString(globalData)
 	{
-		const localizedGlobalData = globalData;
+		const localizedGlobalData = lodash.cloneDeep(globalData);
 		this.getChildModifiedData(localizedGlobalData);
-		
+
 		const stringify = this.getStringifyTemplate();
-		this.stringifyCached = stringify ? inlineEval(stringify, globalData || {}) : `${this.getModifiedValue()}`;
-		this.events.dispatchEvent(new CustomEvent('onUpdateString', { detail: {
-			string: this.stringifyCached
-		}}));
+		this.stringifyCached = stringify ? inlineEval(stringify, localizedGlobalData) : `${this.getModifiedValue()}`;
+
+		this.events.dispatchEvent(new CustomEvent('onUpdateString', {
+			detail: {
+				string: this.stringifyCached
+			}
+		}));
+
 		if (this.parent) this.parent.updateString(globalData);
 	}
 
@@ -311,9 +322,21 @@ export default class GeneratedEntry
 		this.updateString(globalData);
 	}
 
-	getModifiers()
+	getGenerationDependencies()
 	{
-		return (this.generated ? this.generated.modifiers : undefined) || {};
+		const field = this.getField();
+		const source = field.hasSource() ? field.getSource() : undefined;
+		if (!source) return [];
+		const deps = [];
+		for (let match of source.matchAll(VARIABLE_REGEX))
+			deps.push(match[1]);
+		return deps;
+	}
+
+	onGenerationDependencyEvent(evt, { key, globalData })
+	{
+		console.assert(evt === 'onChanged');
+		this.regenerate(globalData);
 	}
 
 	hasChildren()

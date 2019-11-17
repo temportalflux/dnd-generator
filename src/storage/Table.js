@@ -4,6 +4,11 @@ import { createExecutor } from '../generator/modules/createExecutor';
 import appendModifiers from '../generator/appendModifiers';
 import { inlineEval } from '../generator/modules/evalAtCtx';
 
+/**
+ * Picks a random item from `entries`, using `entry.getWeight()` to get the weight for any
+ * given item (assuming a weight of 1 if the function returns a falsey value).
+ * Returns null if it was unable to determine a value. Assumes `entries` is non-empty.
+*/
 function chooseRandomWithWeight(entries)
 {
 	const totalWeight = entries.reduce((accum, row) => accum + (row.getWeight() || 1), 0);
@@ -24,6 +29,10 @@ function chooseRandomWithWeight(entries)
 	return null;
 }
 
+/**
+ * A READONLY collective of randomizable entries with modifiers. It is loaded by a TableCollection,
+ * and can be used to get a weighted random entry that it contains (see the `roll` function).
+*/
 export default class Table
 {
 

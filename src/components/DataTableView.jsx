@@ -36,8 +36,6 @@ export default function DataTableView({ tableKey })
 		};
 	});
 
-	console.log(dataTable);
-
 	const data = React.useMemo(() => {
 		const table = getDataTable(tableKey);
 		if (table === undefined) { return []; }
