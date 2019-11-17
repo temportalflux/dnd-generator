@@ -1,7 +1,3 @@
 {
-	"rows": [
-		{
-			"source": "{roll:race/Elf/name-man}"
-		}
-	]
+	"redirect": "race/Elf/name-man"
 }

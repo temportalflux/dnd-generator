@@ -1,10 +1,10 @@
 {
 	"rows": [
 		{
-			"source": "{roll:race/Human/name-man}"
+			"redirect": "race/Human/name-man"
 		},
 		{
-			"source": "{roll:race/Dwarf/name-man}"
+			"redirect": "race/Dwarf/name-man"
 		}
 	]
 }

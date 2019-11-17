@@ -2,11 +2,11 @@
 	"rows": [
 		{
 			"weight": 3,
-			"source": "{roll:deity/gnome}"
+			"redirect": "deity/gnome"
 		},
 		{
 			"weight": 2,
-			"source": "{roll:race/Human/deity}"
+			"redirect": "race/Human/deity"
 		}
 	]
 }

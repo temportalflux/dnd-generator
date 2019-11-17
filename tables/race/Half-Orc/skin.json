@@ -1,11 +1,11 @@
 {
 	"rows": [
 		{
-			"source": "{roll:race/Orc/skin}",
+			"redirect": "race/Orc/skin",
 			"weight": 3
 		},
 		{
-			"source": "{roll:traits/skin}",
+			"redirect": "traits/skin",
 			"weight": 2
 		}
 	]

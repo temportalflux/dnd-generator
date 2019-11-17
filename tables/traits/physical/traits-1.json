@@ -3,7 +3,7 @@
 		{
 			"weight": 4,
 			"key": "1scar",
-			"stringify": "$(identity.pronouns.singular) has a $(sizeString === 'none' ? '' : size)$(sizeString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"stringify": "$(identity.pronouns.singular) has a $(sizeString === 'none' ? '' : size)$(sizeString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
 				{
 					"key": "size",
@@ -18,7 +18,7 @@
 		{
 			"weight": 1,
 			"key": "2scar",
-			"stringify": "$(identity.pronouns.singular) has $(sizeAString === 'none' ? '' : sizeA)$(sizeAString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(sizeBString === 'none' ? '' : sizeB)$(sizeBString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"stringify": "$(identity.pronouns.singular) has $(sizeAString === 'none' ? '' : sizeA)$(sizeAString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(sizeBString === 'none' ? '' : sizeB)$(sizeBString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
 			"children": [
 				{
 					"key": "sizeA",
@@ -41,7 +41,7 @@
 		{
 			"weight": 4,
 			"key": "1piercing",
-			"stringify": "$(identity.pronouns.singular) has $(descriptor) piercing on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"stringify": "$(identity.pronouns.singular) has $(descriptor) piercing on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
 				{
 					"key": "descriptor",
@@ -56,7 +56,7 @@
 		{
 			"weight": 2,
 			"key": "2piercing",
-			"stringify": "$(identity.pronouns.singular) has $(descriptorA) piercing on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(descriptorB) piercing on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) piercing on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(descriptorB) piercing on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
 			"children": [
 				{
 					"key": "descriptorA",
@@ -79,7 +79,7 @@
 		{
 			"weight": 1,
 			"key": "3piercing",
-			"stringify": "$(identity.pronouns.singular) has $(descriptorA) piercing on $(identity.pronouns.selfPossessive) $(bodyPartAString), $(descriptorB) piercing on $(identity.pronouns.selfPossessive) $(bodyPartBString), and $(descriptorC) piercing on $(identity.pronouns.selfPossessive) $(bodyPartCString).",
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) piercing on $(identity.pronouns.selfPossessive) $(bodyPartA.asString), $(descriptorB) piercing on $(identity.pronouns.selfPossessive) $(bodyPartB.asString), and $(descriptorC) piercing on $(identity.pronouns.selfPossessive) $(bodyPartC.asString).",
 			"children": [
 				{
 					"key": "descriptorA",
@@ -110,7 +110,7 @@
 		{
 			"weight": 3,
 			"key": "1npiercing",
-			"stringify": "$(identity.pronouns.singular) has $(amount) $(descriptor) piercings on $(identity.pronouns.selfPossessive) $(bodyPartString)",
+			"stringify": "$(identity.pronouns.singular) has $(amount) $(descriptor) piercings on $(identity.pronouns.selfPossessive) $(bodyPart.asString)",
 			"children": [
 				{
 					"key": "amount",
@@ -129,7 +129,7 @@
 		{
 			"weight": 3,
 			"key": "2npiercing",
-			"stringify": "$(identity.pronouns.singular) has $(amountA) $(descriptorA) piercings on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(amountB) $(descriptorB) piercings on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"stringify": "$(identity.pronouns.singular) has $(amountA) $(descriptorA) piercings on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(amountB) $(descriptorB) piercings on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
 			"children": [
 				{
 					"key": "amountA",
@@ -189,7 +189,7 @@
 		{
 			"weight": 5,
 			"key": "1tattoo",
-			"stringify": "$(identity.pronouns.singular) has $(descriptor) $(tattooString) on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"stringify": "$(identity.pronouns.singular) has $(descriptor) $(tattoo.asString) on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
 				{
 					"key": "descriptor",
@@ -208,7 +208,7 @@
 		{
 			"weight": 2,
 			"key": "2tattoo",
-			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooAString) on $(identity.pronouns.selfPossessive) $(bodyPartAString) and $(descriptorB) $(tattooBString) on $(identity.pronouns.selfPossessive) $(bodyPartBString).",
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooA.asString) on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(descriptorB) $(tattooB.asString) on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
 			"children": [
 				{
 					"key": "descriptorA",
@@ -239,7 +239,7 @@
 		{
 			"weight": 1,
 			"key": "3tattoo",
-			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooAString) on $(identity.pronouns.selfPossessive) $(bodyPartAString), $(descriptorB) $(tattooBString) on $(identity.pronouns.selfPossessive) $(bodyPartBString), and $(descriptorC) $(tattooCString) on $(identity.pronouns.selfPossessive) $(bodyPartCString).",
+			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooA.asString) on $(identity.pronouns.selfPossessive) $(bodyPartA.asString), $(descriptorB) $(tattooB.asString) on $(identity.pronouns.selfPossessive) $(bodyPartB.asString), and $(descriptorC) $(tattooC.asString) on $(identity.pronouns.selfPossessive) $(bodyPartC.asString).",
 			"children": [
 				{
 					"key": "descriptorA",
@@ -282,7 +282,7 @@
 		{
 			"weight": 2,
 			"key": "branded",
-			"stringify": "$(identity.pronouns.singular) is branded as a $(brand) on $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"stringify": "$(identity.pronouns.singular) is branded as a $(brand) on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
 				{
 					"key": "brand",

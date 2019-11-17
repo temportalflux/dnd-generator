@@ -1,7 +1,3 @@
 {
-	"rows": [
-		{
-			"source": "{roll:traits/skin/nonhuman}"
-		}
-	]
+	"redirect": "traits/skin/nonhuman"
 }

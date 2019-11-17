@@ -57,12 +57,12 @@
 		{
 			"weight": 2,
 			"key": "demon",
-			"source": "{roll:deity/demon}"
+			"redirect": "deity/demon"
 		},
 		{
 			"weight": 2,
 			"key": "devil",
-			"source": "{roll:deity/devil}"
+			"redirect": "deity/devil"
 		}
 	]
 }

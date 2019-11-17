@@ -143,10 +143,7 @@
 			"category": "identity",
 			"key": "pronouns",
 			"source": "{roll:identity/pronouns/$(identity.genderIdentity)}",
-			"stringify": "$(singular)/$(thirdPerson)/$(possessive)",
-			"dependencies": [
-				"identity.genderIdentity"
-			]
+			"stringify": "$(singular)/$(thirdPerson)/$(possessive)"
 		},
 		{
 			"category": "identity",
@@ -201,7 +198,7 @@
 		{
 			"category": "description",
 			"key": "face",
-			"stringify": "$(shape) $(attractivenessString)",
+			"stringify": "$(shape) $(attractiveness.asString)",
 			"children": [
 				{
 					"key": "shape",
@@ -216,14 +213,11 @@
 		{
 			"category": "personality",
 			"key": "religion",
-			"hideInlineValue": true,
+			"stringify": "($(worship)) $(deity)",
 			"children": [
 				{
 					"key": "deity",
-					"source": "{roll:race/$(description.race.value)/deity}",
-					"dependencies": [
-						"description.race"
-					]
+					"source": "{roll:race/$(description.race)/deity}"
 				},
 				{
 					"key": "worship",
@@ -234,19 +228,12 @@
 		{
 			"category": "identity",
 			"key": "name",
-			"source": "{roll:race/$(description.race.value || description.race)/name-$(identity.genderIdentity)}",
-			"dependencies": [
-				"description.race",
-				"identity.genderIdentity"
-			]
+			"source": "{roll:race/$(description.race)/name-$(identity.genderIdentity)}"
 		},
 		{
 			"category": "identity",
 			"key": "surname",
-			"source": "{roll:race/$(description.race.value || description.race)/surname}",
-			"dependencies": [
-				"description.race"
-			]
+			"source": "{roll:race/$(description.race)/surname}"
 		},
 		{
 			"category": "personality",
@@ -281,19 +268,12 @@
 		{
 			"category": "occupation",
 			"key": "category",
-			"source": "{roll:occupation/$(occupation.type)/Category}",
-			"dependencies": [
-				"occupation.type"
-			]
+			"source": "{roll:occupation/$(occupation.type)/Category}"
 		},
 		{
 			"category": "occupation",
 			"key": "profession",
-			"source": "{roll:occupation/$(occupation.type)/$(occupation.category)}",
-			"dependencies": [
-				"occupation.type",
-				"occupation.category"
-			]
+			"source": "{roll:occupation/$(occupation.type)/$(occupation.category)}"
 		}
 	],
 	"fields": {

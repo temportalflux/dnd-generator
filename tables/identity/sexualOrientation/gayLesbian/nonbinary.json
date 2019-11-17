@@ -1,12 +1,10 @@
 {
 	"rows": [
 		{
-			"key": "gay",
-			"source": "{roll:identity/sexualOrientation/gayLesbian/man}"
+			"redirect": "identity/sexualOrientation/gayLesbian/man"
 		},
 		{
-			"key": "lesbian",
-			"source": "{roll:identity/sexualOrientation/gayLesbian/woman}"
+			"redirect": "identity/sexualOrientation/gayLesbian/woman"
 		}
 	]
 }

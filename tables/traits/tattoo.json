@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"weight": 3,
-			"source": "{roll:traits/tattoo/text}"
+			"redirect": "traits/tattoo/text"
 		},
 		{
 			"weight": 4,

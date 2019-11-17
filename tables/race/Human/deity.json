@@ -2,39 +2,39 @@
 	"rows": [
 		{
 			"weight": 70,
-			"source": "{roll:deity/good}"
+			"redirect": "deity/good"
 		},
 		{
 			"weight": 5,
-			"source": "{roll:deity/evil}"
+			"redirect": "deity/evil"
 		},
 		{
 			"weight": 1,
-			"source": "{roll:deity/dragon}"
+			"redirect": "deity/dragon"
 		},
 		{
 			"weight": 1,
-			"source": "{roll:deity/drow}"
+			"redirect": "deity/drow"
 		},
 		{
 			"weight": 1,
-			"source": "{roll:deity/dwarf}"
+			"redirect": "deity/dwarf"
 		},
 		{
 			"weight": 2,
-			"source": "{roll:deity/elf}"
+			"redirect": "deity/elf"
 		},
 		{
 			"weight": 1,
-			"source": "{roll:deity/gnome}"
+			"redirect": "deity/gnome"
 		},
 		{
 			"weight": 1,
-			"source": "{roll:deity/halfing}"
+			"redirect": "deity/halfing"
 		},
 		{
 			"weight": 1,
-			"source": "{roll:deity/orc}"
+			"redirect": "deity/orc"
 		}
 	]
 }

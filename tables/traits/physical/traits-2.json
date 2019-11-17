@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"weight": 2,
-			"stringify": "$(identity.pronouns.singular) twitches $(frequency) from $(identity.pronouns.selfPossessive) $(bodyPartString).",
+			"stringify": "$(identity.pronouns.singular) twitches $(frequency) from $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
 				{
 					"key": "frequency",
@@ -86,7 +86,7 @@
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) $(missingEyeString) $(side) eye.",
+			"stringify": "$(identity.pronouns.singular) $(missingEye.asString) $(side) eye.",
 			"children": [
 				{
 					"key": "missingEye",
@@ -203,7 +203,7 @@
 		},
 		{
 			"weight": 1,
-			"stringify": "$(identity.pronouns.singular) has $(fingerString) on $(identity.pronouns.selfPossessive) $(side) hand.",
+			"stringify": "$(identity.pronouns.singular) has $(finger.asString) on $(identity.pronouns.selfPossessive) $(side) hand.",
 			"children": [
 				{
 					"key": "finger",

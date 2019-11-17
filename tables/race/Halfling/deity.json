@@ -1,11 +1,11 @@
 {
 	"rows": [
 		{
-			"source": "{roll:deity/halfling}",
+			"redirect": "deity/halfling",
 			"weight": 3
 		},
 		{
-			"source": "{roll:race/Human/deity}",
+			"redirect": "race/Human/deity",
 			"weight": 2
 		}
 	]

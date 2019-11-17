@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"key": "dragon",
-			"source": "{roll:deity/dragon}"
+			"redirect": "deity/dragon"
 		}
 	]
 }

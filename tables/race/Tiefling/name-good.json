@@ -1,15 +1,15 @@
 {
 	"rows": [
 		{
-			"source": "{roll:race/Tiefling/name/good}",
+			"redirect": "race/Tiefling/name/good",
 			"weight": 3
 		},
 		{
-			"source": "{roll:race/Tiefling/name/neutral}",
+			"redirect": "race/Tiefling/name/neutral",
 			"weight": 2
 		},
 		{
-			"source": "{roll:race/Tiefling/name/unaligned}",
+			"redirect": "race/Tiefling/name/unaligned",
 			"weight": 5
 		}
 	]

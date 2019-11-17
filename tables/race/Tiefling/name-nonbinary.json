@@ -1,7 +1,3 @@
 {
-	"rows": [
-		{
-			"source": "{roll:race/Tiefling/name-$(personality.alignmentMoral)}"
-		}
-	]
+	"redirect": "race/Tiefling/name-$(personality.alignmentMoral)"
 }

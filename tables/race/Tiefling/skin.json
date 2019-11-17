@@ -13,7 +13,7 @@
 			"value": "blue skin"
 		},
 		{
-			"source": "{roll:traits/skin}",
+			"redirect": "traits/skin",
 			"weight": 1
 		}
 	]

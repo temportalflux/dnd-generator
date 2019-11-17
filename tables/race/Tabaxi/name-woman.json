@@ -1,7 +1,3 @@
 {
-	"rows": [
-		{
-			"source": "{roll:race/Tabaxi/name-nonbinary}"
-		}
-	]
+	"redirect": "race/Tabaxi/name-nonbinary"
 }

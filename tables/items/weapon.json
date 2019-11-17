@@ -2,27 +2,27 @@
 	"rows": [
 		{
 			"key": "simple weapon",
-			"source": "{roll:items/weapon/simpleweapon}"
+			"redirect": "items/weapon/simpleweapon"
 		},
 		{
 			"key": "simple finesse",
-			"source": "{roll:items/weapon/simplefinesse}"
+			"redirect": "items/weapon/simplefinesse"
 		},
 		{
 			"key": "simple ranged",
-			"source": "{roll:items/weapon/simpleranged}"
+			"redirect": "items/weapon/simpleranged"
 		},
 		{
 			"key": "martial weapon",
-			"source": "{roll:items/weapon/martialweapon}"
+			"redirect": "items/weapon/martialweapon"
 		},
 		{
 			"key": "martial finesse",
-			"source": "{roll:items/weapon/martialfinesse}"
+			"redirect": "items/weapon/martialfinesse"
 		},
 		{
 			"key": "martial ranged",
-			"source": "{roll:items/weapon/martialranged}"
+			"redirect": "items/weapon/martialranged"
 		}
 	]
 }

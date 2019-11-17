@@ -53,7 +53,7 @@
 		{
 			"weight": 2,
 			"key": "weapon",
-			"source": "{roll:items/weapon}"
+			"redirect": "items/weapon"
 		}
 	]
 }

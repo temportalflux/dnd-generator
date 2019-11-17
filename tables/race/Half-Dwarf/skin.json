@@ -1,10 +1,10 @@
 {
 	"rows": [
 		{
-			"source": "{roll:traits/skin}"
+			"redirect": "traits/skin"
 		},
 		{
-			"source": "{roll:race/Dwarf/skin}"
+			"redirect": "race/Dwarf/skin"
 		}
 	]
 }

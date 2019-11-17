@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"key": "nonbinary",
-			"source": "{roll:race/$(description.race.value)/name-nonbinary}"
+			"redirect": "race/$(description.race.value)/name-nonbinary"
 		}
 	]
 }

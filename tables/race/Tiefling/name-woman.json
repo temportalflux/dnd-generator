@@ -1,7 +1,3 @@
 {
-	"rows": [
-		{
-			"source": "{roll:race/Tiefling/name-nonbinary}"
-		}
-	]
+	"redirect": "race/Tiefling/name-nonbinary"
 }

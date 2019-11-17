@@ -38,7 +38,7 @@
 		},
 		{
 			"weight": 2,
-			"stringify": "$(identity.pronouns.singular) paints $(attractivenessString) paintings in $(identity.pronouns.possessive) spare time.",
+			"stringify": "$(identity.pronouns.singular) paints $(attractiveness.asString) paintings in $(identity.pronouns.possessive) spare time.",
 			"children": [
 				{
 					"key": "attractiveness",

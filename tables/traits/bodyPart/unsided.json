@@ -14,7 +14,7 @@
 		},
 		{
 			"weight": 2,
-			"source": "{roll:traits/bodyPart/head/unsided}"
+			"redirect": "traits/bodyPart/head/unsided"
 		}
 	]
 }

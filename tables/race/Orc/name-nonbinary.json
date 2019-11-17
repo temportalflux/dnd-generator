@@ -1,7 +1,3 @@
 {
-	"rows": [
-		{
-			"source": "{roll:race/common/name-nonbinary}"
-		}
-	]
+	"redirect": "race/common/name-nonbinary"
 }

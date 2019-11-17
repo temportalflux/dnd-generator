@@ -8,7 +8,7 @@
 		{
 			"weight": 35,
 			"value": "normal",
-			"stringify": "$(lengthString), $(styleString), $(colorString) hair",
+			"stringify": "$(length.asString), $(style.asString), $(color.asString) hair",
 			"children": [
 				{
 					"key": "length",
@@ -27,7 +27,7 @@
 		{
 			"weight": 4,
 			"value": "shaved",
-			"stringify": "$(lengthString), $(styleString), $(colorString) hair shaved on $(sideString) side",
+			"stringify": "$(length.asString), $(style.asString), $(color.asString) hair shaved on $(side.asString) side",
 			"children": [
 				{
 					"key": "length",
@@ -50,7 +50,7 @@
 		{
 			"weight": 3,
 			"value": "mohawk",
-			"stringify": "$(lengthString) $(colorString) mohawk",
+			"stringify": "$(length.asString) $(color.asString) mohawk",
 			"children": [
 				{
 					"key": "length",

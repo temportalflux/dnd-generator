@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"key": "Human",
-			"source": "{roll:race/Human/name-woman}"
+			"redirect": "race/Human/name-woman"
 		}
 	]
 }

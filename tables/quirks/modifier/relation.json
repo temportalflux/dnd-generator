@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"key": "familyMember",
-			"source": "{roll:quirks/modifier/relation/familyMember}"
+			"redirect": "quirks/modifier/relation/familyMember"
 		}
 	]
 }
