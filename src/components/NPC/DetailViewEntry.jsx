@@ -125,7 +125,7 @@ function EntryView({
 					marginLeft: '7px',
 				}}>
 					<Form>
-						<Form.Group widths={'equal'}>
+						<Form.Group widths={'equal'} style={sourceTableKey === undefined && !entry.hasValue() ? {margin: 0} : {}}>
 							{sourceTableKey !== undefined && (
 								<Form.Field
 									label={'Filter'}
@@ -135,18 +135,27 @@ function EntryView({
 									storageKey={entry.getKeyPath()}
 								/>
 							)}
-							<Form.Field>
+							{entry.hasValue() && <Form.Field>
 								<label>Generated Value</label>
 								{entry.getRawValue() ? entry.toString() : (
 									<span style={{ color: 'red' }}>Not Generated</span>
 								)}
-							</Form.Field>
-							<Form.Field>
+							</Form.Field>}
+							{entry.hasValue() && <Form.Field>
 								<label>Value with Modifiers</label>
 								<span style={{ color: 'red' }}>Not Generated</span>
-							</Form.Field>
+							</Form.Field>}
 						</Form.Group>
-						<Form.Group widths={'equal'}>
+						<Form.Group widths={'equal'} style={
+							!(
+								hasModifiers
+								|| isModified
+								|| stringifyDeps.length > 0
+								|| stringifySubscribed.length > 0
+								|| generationDependencies.length > 0
+								|| generationDependedOnBy.length > 0
+							) ? {margin: 0} : {}
+						}>
 							{hasModifiers && <Form.Field>{makeModifierPopup(
 								'Modifiers', 'Modifing Entries', modifiersFromEntry
 							)}</Form.Field>}

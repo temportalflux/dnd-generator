@@ -49,13 +49,15 @@ export function TableFilter({
 		case 'minMaxRange':
 			const defaultFilter = table.getDefaultFilter();
 			return (
-				<InputRange
-					allowSameValues
-					minValue={defaultFilter.min}
-					maxValue={defaultFilter.max}
-					value={value || defaultFilter}
-					onChange={onDropdownChanged}
-				/>
+				<div style={{marginTop: '15px', marginBottom: '15px'}}>
+					<InputRange
+						allowSameValues
+						minValue={defaultFilter.min}
+						maxValue={defaultFilter.max}
+						value={value || defaultFilter}
+						onChange={onDropdownChanged}
+					/>
+				</div>
 			);
 		default:
 			return (

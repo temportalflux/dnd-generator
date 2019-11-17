@@ -220,7 +220,7 @@ export default class GeneratedEntry
 		lodash.set(values, this.getKeyPath(), lodash.assignIn(
 			typeof localValue === 'object' ? localValue : {},
 			{
-				toString: () => `${localValue}`,
+				toString: () => typeof localValue === 'object' ? undefined : `${localValue}`,
 				asString: this.toString(),
 			}
 		));
@@ -249,6 +249,15 @@ export default class GeneratedEntry
 	removeListenerOnChanged(callback)
 	{
 		this.events.removeEventListener('onChanged', callback);
+	}
+
+	/**
+	 * If, when generated, the entry resulted in a tangible value (not just children and a stringify).
+	**/
+	hasValue()
+	{
+		const generated = this.generated || {};
+		return generated.value !== undefined;
 	}
 
 	getRawValue()

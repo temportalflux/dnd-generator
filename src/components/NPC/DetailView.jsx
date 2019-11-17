@@ -13,7 +13,7 @@ function DetailViewCategory({
 })
 {
 	return (
-		<div style={{marginBottom: '1rem'}}>
+		<div>
 			<Accordion.Title
 				index={propertyKey}
 				active={active}
