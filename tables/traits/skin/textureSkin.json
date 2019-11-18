@@ -2,27 +2,38 @@
 	"rows": [
 		{
 			"weight": 4,
+			"key": "smooth",
 			"value": "smooth"
 		},
 		{
 			"weight": 4,
+			"key": "soft",
 			"value": "soft"
 		},
 		{
 			"weight": 5,
+			"key": "rough",
 			"value": "rough"
 		},
 		{
 			"weight": 3,
+			"key": "rugged",
 			"value": "rugged"
 		},
 		{
 			"weight": 2,
+			"key": "silky",
 			"value": "silky"
 		},
 		{
 			"weight": 1,
+			"key": "veiny",
 			"value": "veiny"
+		},
+		{
+			"key": "ghostly",
+			"value": "ghostly",
+			"weight": 0
 		}
 	]
 }

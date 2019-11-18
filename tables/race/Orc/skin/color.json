@@ -15,6 +15,11 @@
 		{
 			"value": "gray",
 			"weight": 4
+		},
+		{
+			"key": "white",
+			"value": "white",
+			"weight": 0
 		}
 	]
 }

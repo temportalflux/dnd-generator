@@ -27,6 +27,11 @@
 		{
 			"key": "chocolate",
 			"value": "chocolate"
+		},
+		{
+			"key": "white",
+			"value": "white",
+			"weight": 0
 		}
 	]
 }

@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 2,
+			"key": "twitches",
 			"stringify": "$(identity.pronouns.singular) twitches $(frequency) from $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
 				{
@@ -16,6 +17,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "fidgets",
 			"stringify": "$(identity.pronouns.singular) fidgets $(frequency).",
 			"children": [
 				{
@@ -26,6 +28,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "smokes",
 			"stringify": "$(identity.pronouns.singular) smokes the pipe $(frequency).",
 			"children": [
 				{
@@ -39,6 +42,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "bowLegged",
 			"stringify": "$(identity.pronouns.singular) is $(modifier) bow-legged.",
 			"children": [
 				{
@@ -52,6 +56,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "missingEar",
 			"stringify": "$(identity.pronouns.singular) is missing $(identity.pronouns.selfPossessive) $(side) ear.",
 			"children": [
 				{
@@ -62,6 +67,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "deaf",
 			"stringify": "$(identity.pronouns.singular) is deaf from $(side) ear$(side === 'both' ? 's' : '').",
 			"children": [
 				{
@@ -72,6 +78,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "missingFingers",
 			"stringify": "$(identity.pronouns.singular) is missing $(fingerCount) from $(identity.pronouns.selfPossessive) $(side) hand.",
 			"children": [
 				{
@@ -86,6 +93,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "middingEye",
 			"stringify": "$(identity.pronouns.singular) $(missingEye.asString) $(side) eye.",
 			"children": [
 				{
@@ -100,18 +108,22 @@
 		},
 		{
 			"weight": 1,
+			"key": "blind",
 			"stringify": "$(identity.pronouns.singular) is blind."
 		},
 		{
 			"weight": 1,
+			"key": "mute",
 			"stringify": "$(identity.pronouns.singular) is mute."
 		},
 		{
 			"weight": 1,
+			"key": "rollsRs",
 			"stringify": "$(identity.pronouns.singular) rolls $(identity.pronouns.selfPossessive) \"R\"s profusely."
 		},
 		{
 			"weight": 2,
+			"key": "squints",
 			"stringify": "$(identity.pronouns.singular) $(frequency) squints.",
 			"children": [
 				{
@@ -122,6 +134,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "lisp",
 			"stringify": "$(identity.pronouns.singular) has $(degreeString === 'none' ? '' : degree)$(degreeString === 'none' ? '' : ' ')lisp.",
 			"children": [
 				{
@@ -135,6 +148,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "missingLimb",
 			"stringify": "$(identity.pronouns.singular) is missing $(identity.pronouns.selfPossessive) $(side) $(limb).",
 			"children": [
 				{
@@ -153,6 +167,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "color blind",
 			"stringify": "$(identity.pronouns.singular) is $(modifier) colorblind.",
 			"children": [
 				{
@@ -163,6 +178,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "cross eyed",
 			"stringify": "$(identity.pronouns.singular) is $(modifier) cross-eyed.",
 			"children": [
 				{
@@ -173,6 +189,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "webbed fingers",
 			"stringify": "$(identity.pronouns.singular) has $(modifier) webbed fingers.",
 			"children": [
 				{
@@ -183,6 +200,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "long nails",
 			"stringify": "$(identity.pronouns.singular) has $(modifier) long nails.",
 			"children": [
 				{
@@ -193,6 +211,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "long fingers",
 			"stringify": "$(identity.pronouns.singular) has $(modifier) long fingers.",
 			"children": [
 				{
@@ -203,6 +222,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "extra fingers",
 			"stringify": "$(identity.pronouns.singular) has $(finger.asString) on $(identity.pronouns.selfPossessive) $(side) hand.",
 			"children": [
 				{
@@ -217,6 +237,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "no pain",
 			"stringify": "$(identity.pronouns.singular) can't feel pain.",
 			"modifiers": {
 				"stats.abilityScores.constitution": 2
@@ -224,6 +245,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "allergy aliment",
 			"stringify": "$(identity.pronouns.singular) is $(degree) allergic to $(aliment).",
 			"children": [
 				{
@@ -238,6 +260,7 @@
 		},
 		{
 			"weight": 2,
+			"key": "allergy race",
 			"stringify": "$(identity.pronouns.singular) is $(degree) allergic to $(raceBias).",
 			"children": [
 				{
@@ -252,13 +275,14 @@
 		},
 		{
 			"weight": 1,
+			"key": "albino",
 			"stringify": "$(identity.pronouns.singular) is albino.",
 			"modifiers": {
 				"description.race.hair.color": "white",
 				"description.eyeColor": "red",
 				"description.race.skin.texture": "ghostly",
 				"description.race.skin.color": "white",
-				"description.race.skin.tone": ""
+				"description.race.skin.tone": "none"
 			}
 		}
 	]

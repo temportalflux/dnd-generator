@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 35,
+			"key": "none",
 			"stringify": "none"
 		},
 		{

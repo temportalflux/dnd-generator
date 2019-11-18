@@ -29,6 +29,11 @@
 			"key": "green",
 			"value": "green",
 			"weight": 3
+		},
+		{
+			"key": "white",
+			"value": "white",
+			"weight": 0
 		}
 	]
 }

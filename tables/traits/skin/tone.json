@@ -2,19 +2,22 @@
 	"rows": [
 		{
 			"weight": 20,
-			"value": "",
+			"key": "none",
 			"stringify": "none"
 		},
 		{
 			"weight": 3,
+			"key": "sunburned",
 			"value": "sunburned "
 		},
 		{
 			"weight": 1,
+			"key": "dirty",
 			"value": "dirty "
 		},
 		{
 			"weight": 3,
+			"key": "pockmarked",
 			"value": "pockmarked "
 		}
 	]

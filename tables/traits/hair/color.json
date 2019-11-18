@@ -1,74 +1,92 @@
 {
 	"rows": [
 		{
+			"key": "brown",
 			"value": "brown",
 			"weight": 25
 		},
 		{
+			"key": "auburn",
 			"value": "auburn",
 			"weight": 20
 		},
 		{
+			"key": "blond",
 			"value": "blond",
 			"weight": 12
 		},
 		{
+			"key": "red",
 			"value": "red",
 			"weight": 14
 		},
 		{
+			"key": "golden",
 			"value": "golden",
 			"weight": 8
 		},
 		{
+			"key": "silver",
 			"value": "silver",
 			"weight": 5
 		},
 		{
+			"key": "gray",
 			"value": "gray",
 			"weight": 16
 		},
 		{
+			"key": "white",
 			"value": "white",
 			"weight": 8
 		},
 		{
+			"key": "black",
 			"value": "black",
 			"weight": 20
 		},
 		{
+			"key": "dyed black",
 			"value": "dyed black",
 			"weight": 5
 		},
 		{
+			"key": "dyed blue",
 			"value": "dyed blue",
 			"weight": 1
 		},
 		{
+			"key": "dyed purple",
 			"value": "dyed purple",
 			"weight": 1
 		},
 		{
+			"key": "dyed pink",
 			"value": "dyed pink",
 			"weight": 1
 		},
 		{
+			"key": "dyed yellow",
 			"value": "dyed yellow",
 			"weight": 1
 		},
 		{
+			"key": "dyed red",
 			"value": "dyed red",
 			"weight": 1
 		},
 		{
+			"key": "dyed orange",
 			"value": "dyed orange",
 			"weight": 1
 		},
 		{
+			"key": "dyed green",
 			"value": "dyed green",
 			"weight": 1
 		},
 		{
+			"key": "dyed teal",
 			"value": "dyed teal",
 			"weight": 1
 		}

@@ -1,19 +1,29 @@
 {
 	"rows": [
 		{
+			"key": "white",
 			"value": "white"
 		},
 		{
+			"key": "pink",
 			"value": "pink"
 		},
 		{
+			"key": "brown",
 			"value": "brown"
 		},
 		{
+			"key": "gray",
 			"value": "gray"
 		},
 		{
+			"key": "golden",
 			"value": "golden"
+		},
+		{
+			"key": "white",
+			"value": "white",
+			"weight": 0
 		}
 	]
 }
