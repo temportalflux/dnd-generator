@@ -51,7 +51,6 @@ export function TableFilter({
 			return (
 				<div style={{marginTop: '15px', marginBottom: '15px'}}>
 					<InputRange
-						allowSameValues
 						minValue={defaultFilter.min}
 						maxValue={defaultFilter.max}
 						value={value || defaultFilter}

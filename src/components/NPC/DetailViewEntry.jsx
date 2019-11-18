@@ -71,25 +71,29 @@ function EntryView({
 		function onChanged({ details }) { refresh(shortid.generate()); }
 		entry.addListenerOnChanged(onChanged);
 		entry.addListenerOnUpdateString(onChanged);
+		entry.addListenerOnModified(onChanged);
 		return () => {
 			entry.removeListenerOnChanged(onChanged)
 			entry.removeListenerOnUpdateString(onChanged);
+			entry.removeListenerOnModified(onChanged);
 		};
 	});
 
-	const modifiersFromEntry = entry.getModifiers();
-	const modifiersFromEntryCount = Object.keys(modifiersFromEntry).length;
+	const hasFilter = entry.hasFilter(tableCollection);
+	const modifiersFromEntry = entry.getModifyingEntryData();
+	const modifiersFromEntryCount = entry.getModifyingEntryKeys().length;
 	const hasModifiers = modifiersFromEntryCount > 0;
-	const modifiersOfEntry = {}; // TODO: collective modifiers of this entry
+	const modifiersOfEntry = entry.getModifiedByEntryKeys();
 	const isModified = Object.keys(modifiersOfEntry).length > 0;
 	const stringifyDeps = entry.getStringifyDependencies();
 	const stringifySubscribed = entry.stringifyLinker.getSubscribedKeys();
 	const generationDependencies = entry.getGenerationDependencies();
 	const generationDependedOnBy = entry.generationDependencyLinker.getSubscribedKeys();
+	const canRegenerate = entry.getCanReroll();
 
 	if (active)
 	{
-		//console.log(entry);
+		//console.log(entry, entry.getRawValue(), entry.getModifiedValue());
 	}
 
 	return (
@@ -109,7 +113,7 @@ function EntryView({
 						)}
 					</Accordion.Title>
 				</Menu.Item>
-				{!isMissingSourceTable && <Menu.Item fitted position='right'>
+				{!isMissingSourceTable && canRegenerate && <Menu.Item fitted position='right'>
 					<Button
 						icon={'refresh'}
 						onClick={() => entry.regenerate(npcModifiedData)}
@@ -125,25 +129,27 @@ function EntryView({
 					marginLeft: '7px',
 				}}>
 					<Form>
-						<Form.Group widths={'equal'} style={sourceTableKey === undefined && !entry.hasValue() ? {margin: 0} : {}}>
-							{sourceTableKey !== undefined && (
+						<Form.Group widths={'equal'} style={hasFilter && !entry.hasValue() ? {margin: 0} : {}}>
+							{hasFilter && (
 								<Form.Field
 									label={'Filter'}
 									control={TableFilter}
 									tableCollection={tableCollection}
-									tableKey={inlineEval(sourceTableKey, npcModifiedData)}
+									tableKey={sourceTableKey !== undefined ? inlineEval(sourceTableKey, npcModifiedData) : undefined}
 									storageKey={entry.getKeyPath()}
 								/>
 							)}
 							{entry.hasValue() && <Form.Field>
 								<label>Generated Value</label>
-								{entry.getRawValue() ? entry.toString() : (
+								{entry.getRawValue() || (
 									<span style={{ color: 'red' }}>Not Generated</span>
 								)}
 							</Form.Field>}
 							{entry.hasValue() && <Form.Field>
 								<label>Value with Modifiers</label>
-								<span style={{ color: 'red' }}>Not Generated</span>
+								{entry.getModifiedValue() || (
+									<span style={{ color: 'red' }}>Not Generated</span>
+								)}
 							</Form.Field>}
 						</Form.Group>
 						<Form.Group widths={'equal'} style={
@@ -157,7 +163,7 @@ function EntryView({
 							) ? {margin: 0} : {}
 						}>
 							{hasModifiers && <Form.Field>{makeModifierPopup(
-								'Modifiers', 'Modifing Entries', modifiersFromEntry
+								'Modifies', 'Modifies Entries', modifiersFromEntry
 							)}</Form.Field>}
 							{isModified && <Form.Field>{makeModifierPopup(
 								'Modified By', 'Modified by Entries', modifiersOfEntry

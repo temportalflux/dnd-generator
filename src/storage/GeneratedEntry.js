@@ -1,8 +1,22 @@
 import Filter from './Filter';
 import lodash from 'lodash';
 import { createExecutor } from '../generator/modules/createExecutor';
-import { inlineEval, VARIABLE_REGEX } from '../generator/modules/evalAtCtx';
+import { inlineEval, PURE_VARIABLE_REGEX } from '../generator/modules/evalAtCtx';
 import NpcData from './NpcData';
+
+function objectEqualityDeepRecursive(a, b) {
+	for(const key in a) {
+			if(!(key in b) || !objectEqualityDeepRecursive(a[key], b[key])) {
+					return false;
+			}
+	}
+	for(var key in b) {
+			if(!(key in a) || !objectEqualityDeepRecursive(a[key], b[key])) {
+					return false;
+			}
+	}
+	return true;
+}
 
 class EntryLinker
 {
@@ -11,6 +25,7 @@ class EntryLinker
 	{
 		this.owner = owner;
 		this.property = property;
+		this.subscribingTo = [];
 		this.subscribed = [];
 		this.onEvent = onEvent;
 	}
@@ -22,6 +37,7 @@ class EntryLinker
 
 	subscribe(entryPaths)
 	{
+		this.subscribingTo = lodash.uniq(entryPaths);
 		entryPaths.forEach((path) =>
 		{
 			const entry = this.getEntryForPath(path);
@@ -31,6 +47,7 @@ class EntryLinker
 
 	unsubscribe(entryPaths)
 	{
+		this.subscribingTo = this.subscribingTo.filter((key) => !entryPaths.includes(key));
 		entryPaths.forEach((path) =>
 		{
 			const entry = this.getEntryForPath(path);
@@ -53,6 +70,17 @@ class EntryLinker
 	getSubscribedKeys()
 	{
 		return this.subscribed;
+	}
+
+	dispatchToSubscriptions(evt, args, appendArgsForEntry=(a)=>a)
+	{
+		this.subscribingTo.forEach((entryPath) =>
+		{
+			const entry = this.getEntryForPath(entryPath);
+			const linker = entry ? entry[this.property] : undefined;
+			const onEvt = linker ? linker.onEvent : undefined;
+			if (onEvt) onEvt(evt, appendArgsForEntry(args, entryPath));
+		});
 	}
 
 	dispatchToSubscribers(evt, args)
@@ -95,6 +123,12 @@ export default class GeneratedEntry
 		this.stringifyCached = undefined;
 
 		this.generationDependencyLinker = new EntryLinker(this, 'generationDependencyLinker', this.onGenerationDependencyEvent.bind(this));
+		this.modifyingLinker = new EntryLinker(this, 'modifyingLinker', this.onModifiersChanged.bind(this));
+		
+		this.modifierSources = {};
+		this.totalModifyingValue = 0;
+		this.forcedFilter = {};
+		this.postOperationModifiers = {};
 
 		this.category = undefined;
 		this.key = undefined;
@@ -134,15 +168,35 @@ export default class GeneratedEntry
 		return macro;
 	}
 
+	hasFilter(tableCollection)
+	{
+		const sourceTableKey = this.getField().getSourceTableKey(tableCollection);
+		const table = sourceTableKey !== undefined ? tableCollection.getTable(sourceTableKey) : undefined;
+		return table ? table.hasFilter() : false;
+	}
+
 	getFilterValue()
 	{
-		return Filter.get(this.getKeyPath());
+		const forcedFilter = Object.values(this.forcedFilter);
+		return forcedFilter.length > 0 ? forcedFilter : Filter.get(this.getKeyPath());
+	}
+
+	getCanReroll()
+	{
+		return this.schemaEntry.getCanReroll() && (!this.parent || this.parent.getCanReroll());
 	}
 
 	regenerate(globalData)
 	{
+		this.modifyingLinker.dispatchToSubscriptions('remove', {
+			source: this.getKeyPath()
+		}, (args, keyPath) => ({...args, value: this.getModifierFor(keyPath)}));
+		this.modifyingLinker.unsubscribe(this.getModifyingEntryKeys());
 		this.generationDependencyLinker.unsubscribe(this.getGenerationDependencies());
 		this.stringifyLinker.unsubscribe(this.getStringifyDependencies());
+
+		// TODO: filter out the current value so that we never "regenerate" into the same value.
+		// unless of course its the only value possible, in which case, prevent generation entirely.
 
 		const context = {
 			...globalData,
@@ -203,10 +257,29 @@ export default class GeneratedEntry
 		this.generationDependencyLinker.subscribe(this.getGenerationDependencies());
 		this.generationDependencyLinker.dispatchToSubscribers('onChanged', { key: this.getKeyPath(), globalData });
 
+		this.modifyingLinker.subscribe(this.getModifyingEntryKeys());
+
 		if (this.generatedChildren)
 		{
 			lodash.values(this.generatedChildren).forEach((child) => child.regenerate(globalData));
 		}
+
+		this.modifyingLinker.dispatchToSubscriptions('add', {
+			source: this.getKeyPath()
+		}, (args, keyPath) => ({...args, value: this.getModifierFor(keyPath)}));
+
+		if (this.parent) this.parent.onChildGenerated(this);
+	}
+
+	onChildGenerated(child)
+	{
+		this.modifyingLinker.dispatchToSubscriptions('remove', {
+			source: this.getKeyPath()
+		}, (args, keyPath) => ({...args, value: this.getModifierFor(keyPath)}));
+		this.events.dispatchEvent(new CustomEvent('onChanged', { detail: {} }));
+		this.modifyingLinker.dispatchToSubscriptions('add', {
+			source: this.getKeyPath()
+		}, (args, keyPath) => ({...args, value: this.getModifierFor(keyPath)}));
 	}
 
 	getGeneratedEntry()
@@ -264,18 +337,187 @@ export default class GeneratedEntry
 	{
 		const generated = this.generated || {};
 		const genEntry = this.getGeneratedEntry();
-		return generated.value || (genEntry ? genEntry.getKey() : undefined);
+		return (generated.value && generated.value.value ? generated.value.value : generated.value) || (genEntry ? genEntry.getKey() : undefined);
+	}
+
+	getModifyingEntryData_internal()
+	{
+		return (this.generated ? this.generated.modifiers : undefined) || {};
+	}
+
+	getModifyingEntryData()
+	{
+		return lodash.mapValues(this.getModifyingEntryData_internal(), (value, key) => this.getModifierFor(key));
+	}
+
+	getModifierFor(keyPath)
+	{
+		const getModifierInternal = (rawModifier) => {
+			if (typeof rawModifier === 'object')
+			{
+				switch (rawModifier.type)
+				{
+					case 'multiply':
+					{
+						const localData = {};
+						this.getChildModifiedData(localData);
+						const multiplier = inlineEval(rawModifier.value, localData);
+						if (multiplier === undefined) return rawModifier;
+						const m = parseInt(multiplier, 10);
+						return {
+							type: rawModifier.type,
+							multiply: m,
+							toString: () => `*${m}`,
+						};
+					}
+					case 'multiplyAdd':
+					{
+						const localData = {};
+						this.getChildModifiedData(localData);
+						const multiplier = inlineEval(rawModifier.multiply, localData);
+						const adder = inlineEval(rawModifier.add, localData);
+						if (multiplier === undefined || adder === undefined) return rawModifier;
+						const m = parseInt(multiplier, 10);
+						const a = parseInt(adder, 10);
+						return {
+							type: rawModifier.type,
+							multiply: m,
+							add: a,
+							toString: () => `*${m}+${a}`,
+						};
+					}
+					default:
+						break;
+				}
+			}
+			return rawModifier;
+		};
+
+		const rawModifier = this.getModifyingEntryData_internal()[keyPath];
+		if (Array.isArray(rawModifier)) return rawModifier.map(getModifierInternal);
+		else return getModifierInternal(rawModifier);
+	}
+
+	/**
+	 * Get the key paths of entries this item is currently modifying.
+	**/
+	getModifyingEntryKeys()
+	{
+		return Object.keys(this.getModifyingEntryData());
+	}
+
+	/**
+	 * Get the key paths of entries this item is currently being modified by.
+	**/
+	getModifiedByEntryKeys()
+	{
+		return {
+			...this.modifierSources,
+			...this.postOperationModifiers,
+			...this.forcedFilter,
+		}
+	}
+
+	addListenerOnModified(callback)
+	{
+		this.events.addEventListener('onModified', callback);
+	}
+
+	removeListenerOnModified(callback)
+	{
+		this.events.removeEventListener('onModified', callback);
+	}
+
+	/**
+	 * Called when some entry adds or removes their modifiers from the total list of things this item is modified by.
+	**/
+	onModifiersChanged(evt, args)
+	{
+		const forcedFilter = lodash.cloneDeep(this.forcedFilter);
+		if (Array.isArray(args.value)) args.value.forEach((v) => this.applyModifier(evt, args.source, v));
+		else this.applyModifier(evt, args.source, args.value);
+		this.events.dispatchEvent(new CustomEvent('onModified', { detail: {} }));
+
+		const globalData = NpcData.get().getModifiedData();
+		// TODO: This check is very inefficient, but it works...
+		if (!objectEqualityDeepRecursive(forcedFilter, this.forcedFilter))
+		{
+			this.regenerate(globalData);
+		}
+		else
+		{
+			this.updateString(globalData);
+		}
+	}
+
+	applyModifier(evt, source, value)
+	{
+		switch (evt)
+		{
+			case 'add':
+				// These are forced value filters, where the value argument is the key of the desired value
+				if (typeof value === 'string')
+				{
+					this.forcedFilter[source] = value;
+				}
+				// A macro of sorts that is executed on compilation
+				else if (typeof value === 'object')
+				{
+					this.postOperationModifiers[source] = value;
+				}
+				else if (typeof value !== 'number') throw new Error(`Cannot use a modifier that is not a number: ${value}`);
+				else if (value !== 0)
+				{
+					this.modifierSources[source] = value;
+				}
+				break;
+			case 'remove':
+				// These are forced value filters, where the value argument is the key of the desired value
+				if (typeof value === 'string')
+				{
+					delete this.forcedFilter[source];
+				}
+				// A macro of sorts that is executed on compilation
+				else if (typeof value === 'object')
+				{
+					delete this.postOperationModifiers[source];
+				}
+				else if (typeof value !== 'number') throw new Error(`Cannot use a modifier that is not a number: ${value}`);
+				else if (value !== 0)
+				{
+					delete this.modifierSources[source];
+					this.totalModifyingValue -= value;
+				}
+				break;
+			default:
+				throw new Error(`Unknown modifiers changed event ${evt}, ${source}: ${value}`);
+		}
+		
 	}
 
 	getModifiedValue()
 	{
-		// TODO
-		return this.getRawValue();
-	}
-
-	getModifiers()
-	{
-		return (this.generated ? this.generated.modifiers : undefined) || {};
+		let value = this.getRawValue();
+		if (typeof value === 'number')
+		{
+			const postOperations = Object.values(this.postOperationModifiers);
+			if (postOperations.length > 0)
+			{
+				value = postOperations.reduce((retVal, modifier) => {
+					switch (modifier.type)
+					{
+						case 'multiplyAdd':
+							return retVal * modifier.multiply + modifier.add;
+						case 'multiply':
+							return retVal;// * modifier.multiply;
+						default:
+							throw new Error('Cannot process modifier object', value);
+					}
+				}, value);
+			}
+			value += this.totalModifyingValue;
+		}
+		return value;
 	}
 
 	getStringifyTemplate()
@@ -288,7 +530,7 @@ export default class GeneratedEntry
 	{
 		const template = this.getStringifyTemplate();
 		if (!template) return [];
-		const allMatches = Array.from(template.matchAll(VARIABLE_REGEX));
+		const allMatches = Array.from(template.matchAll(PURE_VARIABLE_REGEX));
 		const allNonlineageReplacements = allMatches.map((match) => match[1]).filter((key) => this.getChild(key) === undefined);
 		return allNonlineageReplacements;
 	}
@@ -337,7 +579,7 @@ export default class GeneratedEntry
 		const source = field.hasSource() ? field.getSource() : undefined;
 		if (!source) return [];
 		const deps = [];
-		for (let match of source.matchAll(VARIABLE_REGEX))
+		for (let match of source.matchAll(PURE_VARIABLE_REGEX))
 			deps.push(match[1]);
 		return deps;
 	}

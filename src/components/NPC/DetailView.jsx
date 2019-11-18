@@ -32,6 +32,7 @@ function DetailViewCategory({
 					<StorageAccordion
 						storageKey={storageKey}
 						entryComponentType={DataViewEntry}
+						active={active}
 						entries={categoryFields.reduce((accum, fieldKey) =>
 						{
 							accum[fieldKey] = {
@@ -39,7 +40,6 @@ function DetailViewCategory({
 								tableCollection: tableCollection,
 								entryKey: `${propertyKey}.${fieldKey}`,
 								storageKey: `${storageKey}.${fieldKey}`,
-								depth: 1,
 							};
 							return accum;
 						}, {})}

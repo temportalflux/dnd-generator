@@ -25,6 +25,7 @@ function evalAtCtx(code, ctx, fullText)
 // if grouping has periods ('.'), then it definitely relies on another value external to the hierarchy
 // (all non-lineage values have at least a category and key, separated by a period)
 export const VARIABLE_REGEX = new RegExp(/\$\((.*?)\)/, 'g');
+export const PURE_VARIABLE_REGEX = new RegExp(/\$\(([.a-zA-Z]*?)\)/, 'g');
 
 export function inlineEval(text, context)
 {

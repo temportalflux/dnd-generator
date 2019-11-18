@@ -153,9 +153,14 @@ export default class Table
 		}));
 	}
 
+	hasFilter()
+	{
+		return this.filter === undefined || this.filter !== false;
+	}
+
 	getFilterType()
 	{
-		return this.filter !== undefined ? this.filter.type : undefined;
+		return this.hasFilter() && this.filter !== undefined ? this.filter.type : undefined;
 	}
 
 	getDefaultFilter()
@@ -203,7 +208,7 @@ export default class Table
 			const filterContext = { ...context, filter: (filter || this.getDefaultFilter()) };
 			const macro = createExecutor(this.valueMacro);
 			if (macro === undefined) result.value = inlineEval(this.valueMacro, filterContext);
-			else result.value = macro(filterContext);
+			else result.value = macro(filterContext).value;
 		}
 		else if (this.hasRedirector())
 		{

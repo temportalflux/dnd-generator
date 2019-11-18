@@ -1,4 +1,6 @@
 export default function exec(match)
 {
-	return require('../../lib/rand')(match.split(','));
+	return {
+		value: require('../../lib/rand')(match.split(','))
+	};
 }

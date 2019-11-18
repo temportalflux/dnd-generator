@@ -7,6 +7,7 @@ export function StorageAccordion({
 	storageKey,
 	entryComponentType,
 	entries,
+	active, // if the item the accordion is in is currently rendering (not collapsed)
 })
 {
 	const [expandedEntryKeys, setExpandedEntryKeys_state] = useState(storage.get(storageKey) || []);
@@ -32,7 +33,7 @@ export function StorageAccordion({
 				React.createElement(entryProps.storageAccordianComponent || entryComponentType, {
 					...entryProps,
 					key: entryKey,
-					active: isEntryExpanded(entryKey),
+					active: isEntryExpanded(entryKey) && (active === undefined || active === true),
 					onClick: handleAccordionClick,
 				})
 			))}

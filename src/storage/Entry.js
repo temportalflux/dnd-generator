@@ -40,6 +40,8 @@ export class Entry
 		this.modifiers = {};
 
 		this.children = [];
+
+		this.canReroll = undefined;
 	}
 
 	readFrom(data, idx)
@@ -58,6 +60,8 @@ export class Entry
 		this.children = accumulateEntries(data.children || [], `entry '${this.key}'`, (i) => this.childrenWithoutKeys.push(i));
 
 		this.modifiers = data.modifiers || {};
+
+		this.canReroll = data.canReroll;
 	}
 
 	getKey()
@@ -117,6 +121,11 @@ export class Entry
 	getStringifyTemplate()
 	{
 		return this.stringify;
+	}
+
+	getCanReroll()
+	{
+		return this.canReroll === undefined || this.canReroll === true;
 	}
 
 }
