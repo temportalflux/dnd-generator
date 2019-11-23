@@ -22,7 +22,6 @@ export function createExecutor(macro)
 	{
 		return (data) => {
 			const evaledArgs = inlineEval(executor.args, data);
-			//console.log(executor, evaledArgs);
 			return Execs[executor.execFunc](evaledArgs, data);
 		};
 	}

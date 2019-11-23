@@ -42,6 +42,12 @@ export class Entry
 		this.children = [];
 
 		this.canReroll = undefined;
+		/**
+		 * The key for another entry, whose value is an array,
+		 * which GeneratedEntries that this entry is a schema for,
+		 * are considered a part of during `GeneratedEntry#getModifiedData`.
+		**/
+		this.collection = undefined;
 	}
 
 	readFrom(data, idx)
@@ -62,6 +68,7 @@ export class Entry
 		this.modifiers = data.modifiers || {};
 
 		this.canReroll = data.canReroll;
+		this.collection = data.collection;
 	}
 
 	getKey()

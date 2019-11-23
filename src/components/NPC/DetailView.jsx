@@ -1,10 +1,12 @@
 import React from 'react';
+import { Accordion, Icon } from 'semantic-ui-react';
 import { camelCaseToTitle } from '../../lib/str';
 import { StorageAccordion } from '../StorageAccordion';
 import { DISPLAY_MODES } from './EDisplayModes';
-import { Accordion, Icon } from 'semantic-ui-react';
 import { DataViewEntry } from './DetailViewEntry';
 import NpcData from '../../storage/NpcData';
+import { ViewContainer } from '../../view/ViewContainer';
+import { MenuBar } from './MenuBar';
 
 function DetailViewCategory({
 	propertyKey, tableCollection,
@@ -50,26 +52,34 @@ function DetailViewCategory({
 	);
 }
 
-export function DetailView({ tableCollection })
+export function DetailView(props)
 {
-	const npcSchema = tableCollection.getNpcSchema();
+	const npcSchema = props.tableCollection.getNpcSchema();
 	const storageKey = `npc.${DISPLAY_MODES.Detailed}.expandedEntries`;
-	console.log(tableCollection, npcSchema, NpcData.get());
+	console.log(props.tableCollection, npcSchema, NpcData.get());
 	const npc = NpcData.get();
 	return (
-		<StorageAccordion
-			storageKey={storageKey}
-			entryComponentType={DetailViewCategory}
-			entries={npc.getCategories().reduce((accum, category) =>
-			{
-				accum[category] = {
-					propertyKey: category,
-					tableCollection: tableCollection,
-					categoryFields: npc.getEntriesForCategory(category),
-					storageKey: `${storageKey}.${category}`,
-				};
-				return accum;
-			}, {})}
-		/>
+		<ViewContainer page={props.location.pathname}>
+			<MenuBar
+				switchDisplayMode={props.switchDisplayMode}
+				displayMode={props.displayMode}
+			/>
+
+			<StorageAccordion
+				storageKey={storageKey}
+				entryComponentType={DetailViewCategory}
+				entries={npc.getCategories().reduce((accum, category) =>
+				{
+					accum[category] = {
+						propertyKey: category,
+						tableCollection: props.tableCollection,
+						categoryFields: npc.getEntriesForCategory(category),
+						storageKey: `${storageKey}.${category}`,
+					};
+					return accum;
+				}, {})}
+			/>
+
+		</ViewContainer>
 	);
 }

@@ -1,5 +1,6 @@
 export default function exec(match)
 {
+	console.log(match);
 	const params = match.split(',');
 	const result = [];
 	while (params.length > 0)
@@ -11,5 +12,8 @@ export default function exec(match)
 			1
 		)[0]);
 	}
-	return result;
+	console.log(result);
+	return {
+		value: result
+	};
 }

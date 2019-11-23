@@ -1,19 +1,8 @@
 import React from 'react';
-import { Header, Button, List, Popup, Table, Grid, Divider } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import copyToClipboard from '../lib/clipboard';
-import lodash from 'lodash';
 import { renderToString } from 'react-dom/server';
 import NpcArticleBlock from './NpcArticleBlock';
-
-const formatData = (data) => renderToString(
-<div>
-	<Header as='h1'>Description</Header>
-	<p>Some paragraph text here.</p>
-	<ul>
-		{data.description.map((text, i) => (<li key={i}>{text}</li>))}
-	</ul>
-</div>
-);
 
 export default class DisplayNpc extends React.Component
 {
@@ -26,16 +15,6 @@ export default class DisplayNpc extends React.Component
 
 	onExport()
 	{
-		const generator = this.props.generator;
-		/*
-		copyToClipboard(formatData({
-			description: [
-				'DescriptionItem1',
-				'DescriptionItem2',
-				'DescriptionItem3',
-			]
-		}));
-		//*/
 		copyToClipboard(renderToString(
 			<NpcArticleBlock
 				generator={this.props.generator}

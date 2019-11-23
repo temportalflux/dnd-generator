@@ -25,7 +25,9 @@ class EntryLinker
 	{
 		this.owner = owner;
 		this.property = property;
+		// entry keys that our owner has subscribed to
 		this.subscribingTo = [];
+		// entry keys that have subscribed to our owner
 		this.subscribed = [];
 		this.onEvent = onEvent;
 	}
@@ -124,6 +126,7 @@ export default class GeneratedEntry
 
 		this.generationDependencyLinker = new EntryLinker(this, 'generationDependencyLinker', this.onGenerationDependencyEvent.bind(this));
 		this.modifyingLinker = new EntryLinker(this, 'modifyingLinker', this.onModifiersChanged.bind(this));
+		this.collectionLinker = new EntryLinker(this, 'collectionLinker', this.onCollectionEntriesChanged.bind(this));
 		
 		this.modifierSources = {};
 		this.totalModifyingValue = 0;
@@ -151,15 +154,29 @@ export default class GeneratedEntry
 		else return this.key;
 	}
 
+	getName()
+	{
+		const field = this.getField();
+		if (field.name !== undefined) return field.name;
+		const path = lodash.toPath(this.getKeyPath());
+		return path[path.length - 1]
+			.split(/(?=[A-Z])/)
+			.map(
+				(word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`
+			).join(' ');
+	}
+
 	getField()
 	{
 		return this.schemaEntry;
 	}
 
+	// TODO: Gnome names are still fucked
 	getGenerationMacro()
 	{
 		const field = this.getField();
 		if (!field.hasSource()) return undefined;
+		console.log(field.getSource());
 		const macro = createExecutor(field.getSource());
 		if (macro === undefined)
 		{
@@ -194,6 +211,11 @@ export default class GeneratedEntry
 		this.modifyingLinker.unsubscribe(this.getModifyingEntryKeys());
 		this.generationDependencyLinker.unsubscribe(this.getGenerationDependencies());
 		this.stringifyLinker.unsubscribe(this.getStringifyDependencies());
+		
+		this.collectionLinker.dispatchToSubscriptions('remove', {
+			source: this.getKeyPath()
+		});
+		this.collectionLinker.unsubscribe(this.getOurCollections());
 
 		// TODO: filter out the current value so that we never "regenerate" into the same value.
 		// unless of course its the only value possible, in which case, prevent generation entirely.
@@ -220,6 +242,7 @@ export default class GeneratedEntry
 				else macro = this.getGenerationMacro();
 				if (macro === undefined) break;
 				this.generated = macro(context);
+				console.log(this.getKeyPath(), this.generated);
 			} while (this.generated && this.generated.entry && this.generated.entry.hasRedirector());
 		}
 
@@ -251,6 +274,11 @@ export default class GeneratedEntry
 		this.getModifiedData(globalData);
 
 		this.events.dispatchEvent(new CustomEvent('onChanged', { detail: {} }));
+
+		this.collectionLinker.subscribe(this.getOurCollections());
+		this.collectionLinker.dispatchToSubscriptions('add', {
+			source: this.getKeyPath()
+		});
 
 		this.stringifyLinker.dispatchToSubscribers('onChanged', { globalData });
 
@@ -469,6 +497,7 @@ export default class GeneratedEntry
 				else if (value !== 0)
 				{
 					this.modifierSources[source] = value;
+					this.totalModifyingValue += value;
 				}
 				break;
 			case 'remove':
@@ -562,6 +591,11 @@ export default class GeneratedEntry
 		this.events.removeEventListener('onUpdateString', callback);
 	}
 
+	isValueEquivalentToNone()
+	{
+		return this.toString() === 'none';
+	}
+
 	toString()
 	{
 		return this.stringifyCached;
@@ -584,10 +618,39 @@ export default class GeneratedEntry
 		return deps;
 	}
 
+	addListenerOnUpdateCollection(callback)
+	{
+		this.events.addEventListener('onUpdateCollection', callback);
+	}
+
+	removeListenerOnUpdateCollection(callback)
+	{
+		this.events.removeEventListener('onUpdateCollection', callback);
+	}
+
 	onGenerationDependencyEvent(evt, { key, globalData })
 	{
 		console.assert(evt === 'onChanged');
 		this.regenerate(globalData);
+	}
+
+	getOurCollections()
+	{
+		return this.schemaEntry.collection !== undefined ? [this.schemaEntry.collection] : [];
+	}
+
+	getCollectionEntryKeys()
+	{
+		return this.collectionLinker.getSubscribedKeys();
+	}
+
+	onCollectionEntriesChanged(evt, {source})
+	{
+		this.events.dispatchEvent(new CustomEvent('onUpdateCollection', {
+			detail: {
+				entryKeys: this.getCollectionEntryKeys()
+			}
+		}));
 	}
 
 	hasChildren()

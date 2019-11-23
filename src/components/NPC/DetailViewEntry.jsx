@@ -72,10 +72,12 @@ function EntryView({
 		entry.addListenerOnChanged(onChanged);
 		entry.addListenerOnUpdateString(onChanged);
 		entry.addListenerOnModified(onChanged);
+		entry.addListenerOnUpdateCollection(onChanged);
 		return () => {
 			entry.removeListenerOnChanged(onChanged)
 			entry.removeListenerOnUpdateString(onChanged);
 			entry.removeListenerOnModified(onChanged);
+			entry.removeListenerOnUpdateCollection(onChanged);
 		};
 	});
 
@@ -90,10 +92,17 @@ function EntryView({
 	const generationDependencies = entry.getGenerationDependencies();
 	const generationDependedOnBy = entry.generationDependencyLinker.getSubscribedKeys();
 	const canRegenerate = entry.getCanReroll();
+	const collectionEntryKeys = entry.getCollectionEntryKeys();
+	const collectionEntryObj = collectionEntryKeys.reduce((accum, entryKey) => {
+		const collectionEntry = npc.getEntry(entryKey);
+		if (collectionEntry && !collectionEntry.isValueEquivalentToNone())
+			accum[entryKey] = collectionEntry.toString();
+		return accum;
+	}, {})
 
 	if (active)
 	{
-		//console.log(entry, entry.getRawValue(), entry.getModifiedValue());
+		//console.log(entry, collectionEntryKeys);
 	}
 
 	return (
@@ -180,6 +189,15 @@ function EntryView({
 							{generationDependedOnBy.length > 0 && <Form.Field>{makeModifierPopup(
 								'Depended On By', 'Generations That Depend on entry', generationDependedOnBy
 							)}</Form.Field>}
+							{collectionEntryKeys.length > 0 && <Form.Field>
+								{makeModifierPopup('Other Values', 'Collective Values', collectionEntryObj)}
+								{lodash.toPairs(collectionEntryObj).map(([entryKey, stringified]) => (
+									<Popup key={entryKey}
+										trigger={(<p>{stringified}</p>)}
+										content={(`Source: ${entryKey}`)}
+									/>
+								))}
+							</Form.Field>}
 						</Form.Group>
 					</Form>
 					{entry.hasChildren() && <StorageAccordion

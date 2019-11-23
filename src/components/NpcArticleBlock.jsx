@@ -10,7 +10,7 @@ function toFeet(n)
 	return feet + "'" + inches + '"';
 }
 
-export default class DisplayNpc extends React.Component
+export default class NpcArticleBlock extends React.Component
 {
 
 	toSentenceCase(sentence)
