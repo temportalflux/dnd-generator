@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "name",
 			"source": [
 				["{rand:man,woman}", "{randInt:1,4}"],
 				["{rand:man,woman}", "{randInt:1,4}"],

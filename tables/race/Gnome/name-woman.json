@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "name",
 			"source": "{permutate:1,2,3,4}",
 			"stringify": "$(name1) $(name2) $(name3) $(name4)",
 			"children": [
