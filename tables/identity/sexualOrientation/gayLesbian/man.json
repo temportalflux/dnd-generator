@@ -1,8 +1,6 @@
 {
-	"rows": [
-		{
-			"key": "gay",
-			"value": "gay"
-		}
-	]
+	"entry": {
+		"key": "gay",
+		"value": "gay"
+	}
 }

@@ -1,42 +1,52 @@
 {
 	"rows": [
 		{
+			"key": "cute",
 			"value": "cute",
 			"weight": 4
 		},
 		{
+			"key": "attractive",
 			"value": "attractive",
 			"weight": 5
 		},
 		{
+			"key": "beautiful",
 			"value": "beautiful",
 			"weight": 5
 		},
 		{
+			"key": "glamorous",
 			"value": "glamorous",
 			"weight": 3
 		},
 		{
+			"key": "innocent",
 			"value": "innocent",
 			"weight": 3
 		},
 		{
+			"key": "stunning",
 			"value": "stunning",
 			"weight": 2
 		},
 		{
+			"key": "fanciable",
 			"value": "fanciable",
 			"weight": 3
 		},
 		{
+			"key": "pretty",
 			"value": "pretty",
 			"weight": 3
 		},
 		{
+			"key": "magnificent",
 			"value": "magnificent",
 			"weight": 2
 		},
 		{
+			"key": "sightly",
 			"value": "sightly",
 			"weight": 3
 		}

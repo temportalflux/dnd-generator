@@ -2,10 +2,12 @@
 	"rows": [
 		{
 			"weight": 3,
+			"key": "dwarven",
 			"redirect": "deity/dwarf"
 		},
 		{
 			"weight": 2,
+			"key": "human",
 			"redirect": "race/Human/deity"
 		}
 	]

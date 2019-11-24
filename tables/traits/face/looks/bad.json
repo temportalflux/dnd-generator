@@ -1,57 +1,56 @@
 {
 	"rows": [
 		{
-			"value": "asymmetrical",
+			"key": "asymmetrical", "value": "asymmetrical",
 			"weight": 1
 		},
 		{
-			"value": "ugly",
+			"key": "ugly", "value": "ugly",
 			"weight": 1
 		},
 		{
-			"value": "repulsive",
+			"key": "repulsive", "value": "repulsive",
 			"weight": 1
 		},
 		{
-			"value": "pockmarked",
+			"key": "pockmarked", "value": "pockmarked",
 			"weight": 1
 		},
 		{
-			"value": "hideous",
+			"key": "hideous", "value": "hideous",
 			"weight": 1
 		},
 		{
-			"value": "repugnant",
+			"key": "repugnant", "value": "repugnant",
 			"weight": 1
 		},
 		{
-			"value": "bulbous",
+			"key": "bulbous", "value": "bulbous",
 			"weight": 1
 		},
 		{
-			"value": "awful",
+			"key": "awful", "value": "awful",
 			"weight": 1
 		},
 		{
-			"value": "disfigured",
+			"key": "disfigured", "value": "disfigured",
 			"weight": 1
 		},
 		{
-			"value": "revolting",
+			"key": "revolting", "value": "revolting",
 			"weight": 1
 		},
 		{
-			"value": "disgusting",
+			"key": "disgusting", "value": "disgusting",
 			"weight": 1
 		},
 		{
-			"value": "creepy",
+			"key": "creepy", "value": "creepy",
 			"weight": 2
 		},
 		{
-			"value": "mediocre",
+			"key": "mediocre", "value": "mediocre",
 			"weight": 3
 		}
-	],
-	"values": {}
+	]
 }

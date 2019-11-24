@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "nonhuman",
 			"stringify": "$(color) $(texture) $(tone)skin",
 			"children": [
 				{

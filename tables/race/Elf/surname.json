@@ -1,255 +1,154 @@
 {
 	"rows": [
 		{
-			"value": [
-				"Aeraagamae"
-			]
+			"key": "Aeraagamae", "value": ["Aeraagamae"]
 		},
 		{
-			"value": [
-				"Aerabriniel"
-			]
+			"key": "Aerabriniel", "value": ["Aerabriniel"]
 		},
 		{
-			"value": [
-				"Aldarina"
-			]
+			"key": "Aldarina", "value": ["Aldarina"]
 		},
 		{
-			"value": [
-				"Aldaviel"
-			]
+			"key": "Aldaviel", "value": ["Aldaviel"]
 		},
 		{
-			"value": [
-				"Bertanonel"
-			]
+			"key": "Bertanonel", "value": ["Bertanonel"]
 		},
 		{
-			"value": [
-				"Birdiir"
-			]
+			"key": "Birdiir", "value": ["Birdiir"]
 		},
 		{
-			"value": [
-				"Birlond"
-			]
+			"key": "Birlond", "value": ["Birlond"]
 		},
 		{
-			"value": [
-				"Cromelon"
-			]
+			"key": "Cromelon", "value": ["Cromelon"]
 		},
 		{
-			"value": [
-				"Cromviel"
-			]
+			"key": "Cromviel", "value": ["Cromviel"]
 		},
 		{
-			"value": [
-				"Dlaralthor"
-			]
+			"key": "Dlaralthor", "value": ["Dlaralthor"]
 		},
 		{
-			"value": [
-				"Dlarraithar"
-			]
+			"key": "Dlarraithar", "value": ["Dlarraithar"]
 		},
 		{
-			"value": [
-				"Elendiir"
-			]
+			"key": "Elendiir", "value": ["Elendiir"]
 		},
 		{
-			"value": [
-				"Eleneth"
-			]
+			"key": "Eleneth", "value": ["Eleneth"]
 		},
 		{
-			"value": [
-				"Elervir"
-			]
+			"key": "Elervir", "value": ["Elervir"]
 		},
 		{
-			"value": [
-				"Falavaul"
-			]
+			"key": "Falavaul", "value": ["Falavaul"]
 		},
 		{
-			"value": [
-				"Gadilinion"
-			]
+			"key": "Gadilinion", "value": ["Gadilinion"]
 		},
 		{
-			"value": [
-				"Galamin"
-			]
+			"key": "Galamin", "value": ["Galamin"]
 		},
 		{
-			"value": [
-				"Galarina"
-			]
+			"key": "Galarina", "value": ["Galarina"]
 		},
 		{
-			"value": [
-				"Galathaniel"
-			]
+			"key": "Galathaniel", "value": ["Galathaniel"]
 		},
 		{
-			"value": [
-				"Garaitinu"
-			]
+			"key": "Garaitinu", "value": ["Garaitinu"]
 		},
 		{
-			"value": [
-				"Gwamiel"
-			]
+			"key": "Gwamiel", "value": ["Gwamiel"]
 		},
 		{
-			"value": [
-				"Haelond"
-			]
+			"key": "Haelond", "value": ["Haelond"]
 		},
 		{
-			"value": [
-				"Isilielenion"
-			]
+			"key": "Isilielenion", "value": ["Isilielenion"]
 		},
 		{
-			"value": [
-				"Kevadirtinu"
-			]
+			"key": "Kevadirtinu", "value": ["Kevadirtinu"]
 		},
 		{
-			"value": [
-				"Kithollal"
-			]
+			"key": "Kithollal", "value": ["Kithollal"]
 		},
 		{
-			"value": [
-				"Lantaththar"
-			]
+			"key": "Lantaththar", "value": ["Lantaththar"]
 		},
 		{
-			"value": [
-				"Laranonel"
-			]
+			"key": "Laranonel", "value": ["Laranonel"]
 		},
 		{
-			"value": [
-				"Larentansel"
-			]
+			"key": "Larentansel", "value": ["Larentansel"]
 		},
 		{
-			"value": [
-				"Lithtaur"
-			]
+			"key": "Lithtaur", "value": ["Lithtaur"]
 		},
 		{
-			"value": [
-				"Maerethar"
-			]
+			"key": "Maerethar", "value": ["Maerethar"]
 		},
 		{
-			"value": [
-				"Maltanthir"
-			]
+			"key": "Maltanthir", "value": ["Maltanthir"]
 		},
 		{
-			"value": [
-				"Mithanmae"
-			]
+			"key": "Mithanmae", "value": ["Mithanmae"]
 		},
 		{
-			"value": [
-				"Mithanmyr"
-			]
+			"key": "Mithanmyr", "value": ["Mithanmyr"]
 		},
 		{
-			"value": [
-				"Mithmirelen"
-			]
+			"key": "Mithmirelen", "value": ["Mithmirelen"]
 		},
 		{
-			"value": [
-				"Nalllithe"
-			]
+			"key": "Nalllithe", "value": ["Nalllithe"]
 		},
 		{
-			"value": [
-				"Nellynnthar"
-			]
+			"key": "Nellynnthar", "value": ["Nellynnthar"]
 		},
 		{
-			"value": [
-				"Nhaendrin"
-			]
+			"key": "Nhaendrin", "value": ["Nhaendrin"]
 		},
 		{
-			"value": [
-				"Noroelwa"
-			]
+			"key": "Noroelwa", "value": ["Noroelwa"]
 		},
 		{
-			"value": [
-				"Orren"
-			]
+			"key": "Orren", "value": ["Orren"]
 		},
 		{
-			"value": [
-				"Orrina"
-			]
+			"key": "Orrina", "value": ["Orrina"]
 		},
 		{
-			"value": [
-				"Rhuivaul"
-			]
+			"key": "Rhuivaul", "value": ["Rhuivaul"]
 		},
 		{
-			"value": [
-				"Runelenrin"
-			]
+			"key": "Runelenrin", "value": ["Runelenrin"]
 		},
 		{
-			"value": [
-				"Runlithmae"
-			]
+			"key": "Runlithmae", "value": ["Runlithmae"]
 		},
 		{
-			"value": [
-				"Sharondalan"
-			]
+			"key": "Sharondalan", "value": ["Sharondalan"]
 		},
 		{
-			"value": [
-				"Taldilindar"
-			]
+			"key": "Taldilindar", "value": ["Taldilindar"]
 		},
 		{
-			"value": [
-				"Talraidal"
-			]
+			"key": "Talraidal", "value": ["Talraidal"]
 		},
 		{
-			"value": [
-				"Talthanryl"
-			]
+			"key": "Talthanryl", "value": ["Talthanryl"]
 		},
 		{
-			"value": [
-				"Tathviel"
-			]
+			"key": "Tathviel", "value": ["Tathviel"]
 		},
 		{
-			"value": [
-				"Wervanion"
-			]
+			"key": "Wervanion", "value": ["Wervanion"]
 		},
 		{
-			"value": [
-				"Yraudhen"
-			]
+			"key": "Yraudhen", "value": ["Yraudhen"]
 		}
-	],
-	"values": {}
+	]
 }

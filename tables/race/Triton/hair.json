@@ -1,11 +1,14 @@
 {
 	"rows": [
 		{
-			"value": "a bald head",
+			"key": "bald",
+			"value": "bald",
+			"stringify": "a bald head",
 			"weight": 8
 		},
 		{
 			"weight": 35,
+			"key": "normal",
 			"value": "normal",
 			"children": [
 				{

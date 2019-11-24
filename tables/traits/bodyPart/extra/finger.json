@@ -2,14 +2,17 @@
 	"rows": [
 		{
 			"weight": 5,
+			"key": "one finger",
 			"stringify": "an extra finger"
 		},
 		{
 			"weight": 1,
+			"key": "two fingers",
 			"stringify": "two extra fingers"
 		},
 		{
 			"weight": 4,
+			"key": "thumb",
 			"stringify": "an extra thumb"
 		}
 	]

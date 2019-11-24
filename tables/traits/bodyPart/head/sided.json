@@ -2,14 +2,17 @@
 	"rows": [
 		{
 			"weight": 1,
+			"key": "cheek",
 			"value": "cheek"
 		},
 		{
 			"weight": 3,
+			"key": "eyebrow",
 			"value": "eyebrow"
 		},
 		{
 			"weight": 5,
+			"key": "ear",
 			"value": "ear"
 		}
 	]

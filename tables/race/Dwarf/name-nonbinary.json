@@ -1,6 +1,7 @@
 {
 	"rows": [
 		{
+			"key": "manOrWomanName",
 			"redirect": "race/common/name-nonbinary"
 		}
 	]

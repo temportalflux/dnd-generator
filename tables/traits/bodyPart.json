@@ -2,6 +2,7 @@
 	"rows": [
 		{
 			"weight": 4,
+			"key": "one side",
 			"stringify": "$(side) $(part)",
 			"children": [
 				{
@@ -16,6 +17,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "both sides",
 			"stringify": "left and right $(part)",
 			"children": [
 				{
@@ -26,6 +28,7 @@
 		},
 		{
 			"weight": 5,
+			"key": "unsided",
 			"stringify": "$(part)",
 			"children": [
 				{

@@ -1,73 +1,89 @@
 {
 	"rows": [
 		{
+			"key": "chinstrap beard",
 			"value": "chinstrap beard",
 			"weight": 1
 		},
 		{
+			"key": "neckbeard",
 			"value": "neckbeard",
 			"weight": 1
 		},
 		{
+			"key": "beard",
 			"value": "beard",
 			"weight": 12
 		},
 		{
+			"key": "squared beard",
 			"value": "squared beard",
 			"weight": 2
 		},
 		{
+			"key": "goatee",
 			"value": "goatee",
 			"weight": 2
 		},
 		{
+			"key": "spotty beard",
 			"value": "spotty beard",
 			"weight": 2
 		},
 		{
+			"key": "sideburns",
 			"value": "sideburns",
 			"weight": 2
 		},
 		{
+			"key": "goat patch beard",
 			"value": "goat patch beard",
 			"weight": 1
 		},
 		{
+			"key": "soul patch",
 			"value": "soul patch",
 			"weight": 1
 		},
 		{
+			"key": "german goatee",
 			"value": "german goatee",
 			"weight": 1
 		},
 		{
+			"key": "mutton chops beard",
 			"value": "mutton chops beard",
 			"weight": 1
 		},
 		{
+			"key": "chin strap",
 			"value": "chin strap",
 			"weight": 1
 		},
 		{
+			"key": "van dyke beard",
 			"value": "van dyke beard",
 			"weight": 1
 		},
 		{
+			"key": "handlebar moustache",
 			"value": "handlebar moustache",
 			"weight": 1
 		},
 		{
+			"key": "pencil moustache",
 			"value": "pencil moustache",
 			"weight": 1
 		},
 		{
+			"key": "fu manchu moustache",
 			"value": "fu manchu moustache",
 			"weight": 1
 		},
 		{
+			"key": "moustache",
 			"value": "moustache",
 			"weight": 5
 		}
-	],
-	"values": {}
+	]
 }

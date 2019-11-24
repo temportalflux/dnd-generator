@@ -1,33 +1,32 @@
 {
 	"rows": [
 		{
-			"value": "average",
-			"weight": 1
+			"key": "average",
+			"value": "average"
 		},
 		{
-			"value": "bland",
-			"weight": 1
+			"key": "bland",
+			"value": "bland"
 		},
 		{
-			"value": "unremarkable",
-			"weight": 1
+			"key": "unremarkable",
+			"value": "unremarkable"
 		},
 		{
-			"value": "forgettable",
-			"weight": 1
+			"key": "forgettable",
+			"value": "forgettable"
 		},
 		{
-			"value": "typical",
-			"weight": 1
+			"key": "typical",
+			"value": "typical"
 		},
 		{
-			"value": "common",
-			"weight": 1
+			"key": "common",
+			"value": "common"
 		},
 		{
-			"value": "ordinary",
-			"weight": 1
+			"key": "ordinary",
+			"value": "ordinary"
 		}
-	],
-	"values": {}
+	]
 }

@@ -2,10 +2,18 @@
 	"rows": [
 		{
 			"weight": 3,
-			"redirect": "traits/tattoo/text"
+			"key": "text",
+			"stringify": "$(text)",
+			"children": [
+				{
+					"key": "text",
+					"source": "{roll:traits/tattoo/text}"
+				}
+			]
 		},
 		{
 			"weight": 4,
+			"key": "animal",
 			"stringify": "tattoo of a $(animal)",
 			"children": [
 				{
@@ -16,6 +24,7 @@
 		},
 		{
 			"weight": 1,
+			"key": "weapon",
 			"stringify": "tattoo of a $(weapon)",
 			"children": [
 				{
@@ -26,10 +35,12 @@
 		},
 		{
 			"weight": 2,
+			"key": "abstract",
 			"stringify": "abstract tattoo"
 		},
 		{
 			"weight": 3,
+			"key": "tribal",
 			"stringify": "tribal tattoo"
 		}
 	]

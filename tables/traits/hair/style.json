@@ -1,21 +1,24 @@
 {
 	"rows": [
 		{
+			"key": "straight",
 			"value": "straight",
 			"weight": 3
 		},
 		{
+			"key": "wavy",
 			"value": "wavy",
 			"weight": 3
 		},
 		{
+			"key": "curled",
 			"value": "curled",
 			"weight": 3
 		},
 		{
+			"key": "braided",
 			"value": "braided",
 			"weight": 1
 		}
-	],
-	"values": {}
+	]
 }

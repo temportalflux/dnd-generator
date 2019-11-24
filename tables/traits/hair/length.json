@@ -1,25 +1,29 @@
 {
 	"rows": [
 		{
+			"key": "cropped",
 			"value": "cropped",
 			"weight": 3
 		},
 		{
+			"key": "short",
 			"value": "short",
 			"weight": 5
 		},
 		{
+			"key": "long",
 			"value": "long",
 			"weight": 5
 		},
 		{
+			"key": "very long",
 			"value": "very long",
 			"weight": 3
 		},
 		{
+			"key": "extremely long",
 			"value": "extremely long",
 			"weight": 1
 		}
-	],
-	"values": {}
+	]
 }

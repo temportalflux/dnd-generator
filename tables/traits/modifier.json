@@ -1,18 +1,22 @@
 {
 	"rows": [
 		{
+			"key": "slightly",
 			"value": "slightly",
 			"weight": 6
 		},
 		{
+			"key": "very",
 			"value": "very",
 			"weight": 3
 		},
 		{
+			"key": "incredibly",
 			"value": "incredibly",
 			"weight": 1
 		},
 		{
+			"key": "extremely",
 			"value": "extremely",
 			"weight": 1
 		}

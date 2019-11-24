@@ -2,12 +2,12 @@
 	"rows": [
 		{
 			"weight": 8,
-			"value": "bald",
+			"key": "bald", "value": "bald",
 			"stringify": "a bald head"
 		},
 		{
 			"weight": 35,
-			"value": "normal",
+			"key": "normal", "value": "normal",
 			"stringify": "$(length.asString), $(style.asString), $(color.asString) hair",
 			"children": [
 				{
@@ -26,7 +26,7 @@
 		},
 		{
 			"weight": 4,
-			"value": "shaved",
+			"key": "shaved", "value": "shaved",
 			"stringify": "$(length.asString), $(style.asString), $(color.asString) hair shaved on $(side.asString) side",
 			"children": [
 				{
@@ -49,7 +49,7 @@
 		},
 		{
 			"weight": 3,
-			"value": "mohawk",
+			"key": "mohawk", "value": "mohawk",
 			"stringify": "$(length.asString) $(color.asString) mohawk",
 			"children": [
 				{

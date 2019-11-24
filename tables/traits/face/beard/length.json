@@ -1,41 +1,49 @@
 {
 	"rows": [
 		{
+			"key": "very short",
 			"value": "very short",
 			"weight": 6
 		},
 		{
+			"key": "short",
 			"value": "short",
 			"weight": 8
 		},
 		{
+			"key": "medium",
 			"value": "medium",
 			"weight": 6
 		},
 		{
+			"key": "long",
 			"value": "long",
 			"weight": 3
 		},
 		{
+			"key": "long, braided",
 			"value": "long, braided",
 			"weight": 2
 		},
 		{
+			"key": "very long",
 			"value": "very long",
 			"weight": 1
 		},
 		{
+			"key": "very long, braided",
 			"value": "very long, braided",
 			"weight": 1
 		},
 		{
+			"key": "gigantic",
 			"value": "gigantic",
 			"weight": 1
 		},
 		{
+			"key": "gigantic, braided",
 			"value": "gigantic, braided",
 			"weight": 1
 		}
-	],
-	"values": {}
+	]
 }

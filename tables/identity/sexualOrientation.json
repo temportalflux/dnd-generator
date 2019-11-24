@@ -11,9 +11,15 @@
 			"value": "bisexual"
 		},
 		{
-			"weight": 100,
+			"weight": 40,
 			"key": "gayLesbian",
-			"redirect": "identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)"
+			"stringify": "$(gayLesbianOrientation)",
+			"children": [
+				{
+					"key": "gayLesbianOrientation",
+					"source": "{roll:identity/sexualOrientation/gayLesbian/$(identity.genderIdentity)}"
+				}
+			]
 		},
 		{
 			"weight": 15,

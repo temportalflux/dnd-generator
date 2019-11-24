@@ -2,58 +2,72 @@
 	"rows": [
 		{
 			"weight": 10,
+			"key": "none",
 			"value": "a"
 		},
 		{
-			"weight": 4,
+			"weight": 1,
+			"key": "unfinished",
 			"value": "an unfinished"
 		},
 		{
 			"weight": 2,
+			"key": "small",
 			"value": "a small"
 		},
 		{
 			"weight": 2,
+			"key": "large",
 			"value": "a large"
 		},
 		{
 			"weight": 2,
+			"key": "tiny",
 			"value": "a tiny"
 		},
 		{
 			"weight": 1,
+			"key": "elaborate",
 			"value": "an elaborate"
 		},
 		{
 			"weight": 1,
+			"key": "beautiful",
 			"value": "a beautiful"
 		},
 		{
 			"weight": 1,
+			"key": "poor",
 			"value": "a badly done"
 		},
 		{
 			"weight": 1,
+			"key": "colorful",
 			"value": "a colorful"
 		},
 		{
 			"weight": 1,
+			"key": "complicated",
 			"value": "a complicated"
 		},
 		{
 			"weight": 1,
+			"key": "shocking",
 			"value": "a shocking"
 		},
 		{
 			"weight": 1,
+			"key": "provacative",
 			"value": "a provocative"
 		},
 		{
 			"weight": 1,
+			"key": "bland",
 			"value": "a bland"
 		},
 		{
 			"weight": 1,
+			"key": "exceptional",
 			"value": "an exceptional"
 		}
 	]

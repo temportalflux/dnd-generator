@@ -1,47 +1,58 @@
 {
 	"rows": [
 		{
+			"key": "sharp",
 			"value": "sharp",
 			"weight": 2
 		},
 		{
+			"key": "round",
 			"value": "round",
 			"weight": 3
 		},
 		{
+			"key": "oval",
 			"value": "oval",
 			"weight": 4
 		},
 		{
+			"key": "soft",
 			"value": "soft",
 			"weight": 1
 		},
 		{
+			"key": "diamond-shaped",
 			"value": "diamond-shaped",
 			"weight": 1
 		},
 		{
+			"key": "triangular",
 			"value": "triangular",
 			"weight": 1
 		},
 		{
+			"key": "oblong",
 			"value": "oblong",
 			"weight": 2
 		},
 		{
+			"key": "edgy",
 			"value": "edgy",
 			"weight": 2
 		},
 		{
+			"key": "square",
 			"value": "square",
 			"weight": 3
 		}
 	],
 	"values": {
 		"{regex:[^aeiou]{1}.*}": {
+			"key": "a ${value}",
 			"value": "a ${value}"
 		},
 		"{regex:[aeiou]{1}.*}": {
+			"key": "an ${value}",
 			"value": "an ${value}"
 		}
 	}

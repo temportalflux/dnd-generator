@@ -2,18 +2,22 @@
 	"rows": [
 		{
 			"weight": 2,
+			"key": "neck",
 			"value": "neck"
 		},
 		{
 			"weight": 3,
+			"key": "chest",
 			"value": "chest"
 		},
 		{
 			"weight": 3,
+			"key": "back",
 			"value": "back"
 		},
 		{
 			"weight": 2,
+			"key": "head",
 			"redirect": "traits/bodyPart/head/unsided"
 		}
 	]

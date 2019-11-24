@@ -1,9 +1,11 @@
 {
 	"rows": [
 		{
+			"key": "man",
 			"redirect": "identity/sexualOrientation/gayLesbian/man"
 		},
 		{
+			"key": "woman",
 			"redirect": "identity/sexualOrientation/gayLesbian/woman"
 		}
 	]

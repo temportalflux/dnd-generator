@@ -2,14 +2,17 @@
 	"rows": [
 		{
 			"weight": 8,
+			"key": "slave",
 			"value": "slave"
 		},
 		{
 			"weight": 2,
+			"key": "felon",
 			"value": "felon"
 		},
 		{
 			"weight": 5,
+			"key": "prisoner",
 			"value": "prisoner"
 		}
 	]

@@ -2,38 +2,47 @@
 	"rows": [
 		{
 			"weight": 70,
+			"key": "good",
 			"redirect": "deity/good"
 		},
 		{
 			"weight": 5,
+			"key": "evil",
 			"redirect": "deity/evil"
 		},
 		{
 			"weight": 1,
+			"key": "dragon",
 			"redirect": "deity/dragon"
 		},
 		{
 			"weight": 1,
+			"key": "drow",
 			"redirect": "deity/drow"
 		},
 		{
 			"weight": 1,
+			"key": "dwarf",
 			"redirect": "deity/dwarf"
 		},
 		{
 			"weight": 2,
+			"key": "elf",
 			"redirect": "deity/elf"
 		},
 		{
 			"weight": 1,
+			"key": "gnome",
 			"redirect": "deity/gnome"
 		},
 		{
 			"weight": 1,
+			"key": "halfing",
 			"redirect": "deity/halfing"
 		},
 		{
 			"weight": 1,
+			"key": "orc",
 			"redirect": "deity/orc"
 		}
 	]

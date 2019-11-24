@@ -1,10 +1,12 @@
 {
 	"rows": [
 		{
+			"key": "none",
 			"description": "no beard",
 			"weight": 3
 		},
 		{
+			"key": "beard",
 			"value": "beard",
 			"children": [
 				{

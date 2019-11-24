@@ -2,22 +2,27 @@
 	"rows": [
 		{
 			"weight": 4,
+			"key": "arm",
 			"value": "arm"
 		},
 		{
 			"weight": 5,
+			"key": "hand",
 			"value": "hand"
 		},
 		{
 			"weight": 1,
+			"key": "leg",
 			"value": "leg"
 		},
 		{
 			"weight": 2,
+			"key": "foot",
 			"value": "foot"
 		},
 		{
 			"weight": 4,
+			"key": "head",
 			"redirect": "traits/bodyPart/head/sided"
 		}
 	]
