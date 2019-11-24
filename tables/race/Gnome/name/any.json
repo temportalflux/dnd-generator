@@ -1,0 +1,13 @@
+{
+	"filter": false,
+	"rows": [
+		{
+			"key": "man-name",
+			"redirect": "race/Gnome/name/man"
+		},
+		{
+			"key": "woman-name",
+			"redirect": "race/Gnome/name/woman"
+		}
+	]
+}

@@ -6,11 +6,11 @@
 			"children": [
 				{
 					"key": "multiply",
-					"source": "{randInt:1,6}"
+					"source": "{roll:traits/age/multiplier6}"
 				},
 				{
 					"key": "add",
-					"source": "{randInt:0,9}"
+					"source": "{roll:traits/age/additive}"
 				}
 			],
 			"modifiers": {

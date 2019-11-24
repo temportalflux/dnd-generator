@@ -1,0 +1,8 @@
+{
+	"filter": {
+		"type": "minMaxRange",
+		"min": 0,
+		"max": 50
+	},
+	"valueMacro": "{randInt:$(filter.min),$(filter.max)}"
+}

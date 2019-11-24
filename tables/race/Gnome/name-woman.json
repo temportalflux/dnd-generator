@@ -1,25 +1,25 @@
 {
+	"filter": false,
 	"rows": [
 		{
 			"key": "name",
-			"source": "{permutate:1,2,3,4}",
 			"stringify": "$(name1) $(name2) $(name3) $(name4)",
 			"children": [
 				{
 					"key": "name1",
-					"source": "{roll:race/Gnome/name/woman-$(identity.name.value[0])}"
+					"source": "{roll:race/Gnome/name/woman}"
 				},
 				{
 					"key": "name2",
-					"source": "{roll:race/Gnome/name/woman-$(identity.name.value[1])}"
+					"source": "{roll:race/Gnome/name/any}"
 				},
 				{
 					"key": "name3",
-					"source": "{roll:race/Gnome/name/woman-$(identity.name.value[2])}"
+					"source": "{roll:race/Gnome/name/any}"
 				},
 				{
 					"key": "name4",
-					"source": "{roll:race/Gnome/name/woman-$(identity.name.value[3])}"
+					"source": "{roll:race/Gnome/name/any}"
 				}
 			]
 		}

@@ -85,7 +85,7 @@
 				},
 				{
 					"key": "ageBonus",
-					"source": "{roll:traits/ageBonus}"
+					"source": "{roll:traits/age/bonusRegular}"
 				},
 				{
 					"key": "quirk",
@@ -116,7 +116,7 @@
 				},
 				{
 					"key": "ageBonus",
-					"source": "{roll:traits/ageBonus}"
+					"source": "{roll:traits/age/bonusRegular}"
 				},
 				{
 					"key": "quirk",
@@ -150,7 +150,7 @@
 				},
 				{
 					"key": "ageBonus",
-					"source": "{roll:traits/ageBonus}"
+					"source": "{roll:traits/age/bonusRegular}"
 				},
 				{
 					"key": "quirk",
@@ -191,7 +191,7 @@
 				},
 				{
 					"key": "ageBonus",
-					"source": "{roll:traits/ageBonus}"
+					"source": "{roll:traits/age/bonusRegular}"
 				},
 				{
 					"key": "quirk",
@@ -579,7 +579,7 @@
 				},
 				{
 					"key": "ageBonus",
-					"source": "{roll:traits/ageBonus}"
+					"source": "{roll:traits/age/bonusRegular}"
 				}
 			]
 		},
@@ -598,7 +598,7 @@
 			"children": [
 				{
 					"key": "ageBonus",
-					"source": "{roll:traits/ageBonusSmall}"
+					"source": "{roll:traits/age/bonusSmall}"
 				},
 				{
 					"key": "hair",

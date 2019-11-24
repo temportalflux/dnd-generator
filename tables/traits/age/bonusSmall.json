@@ -1,15 +1,16 @@
 {
+	"filter": false,
 	"rows": [
 		{
 			"stringify": "x$(multiply)+$(add)",
 			"children": [
 				{
 					"key": "multiply",
-					"source": "{randInt:1,3}"
+					"source": "{roll:traits/age/multiplier3}"
 				},
 				{
 					"key": "add",
-					"source": "{randInt:0,9}"
+					"source": "{roll:traits/age/additive}"
 				}
 			],
 			"modifiers": {

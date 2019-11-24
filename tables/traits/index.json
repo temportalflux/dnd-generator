@@ -1,7 +1,5 @@
 [
   "age",
-  "ageBonus",
-  "ageBonusSmall",
   "alignmentMoral",
   "bodyPart",
   "brand",
@@ -12,7 +10,8 @@
   "modifier",
   "physical",
   "tattoo",
-  "weight",
+	"weight",
+	"age/index",
   "alignment/index",
   "bodyPart/index",
   "degree/index",

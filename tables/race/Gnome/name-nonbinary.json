@@ -1,30 +1,25 @@
 {
+	"filter": false,
 	"rows": [
 		{
 			"key": "name",
-			"source": [
-				["{rand:man,woman}", "{randInt:1,4}"],
-				["{rand:man,woman}", "{randInt:1,4}"],
-				["{rand:man,woman}", "{randInt:1,4}"],
-				["{rand:man,woman}", "{randInt:1,4}"]
-			],
 			"stringify": "$(name1) $(name2) $(name3) $(name4)",
 			"children": [
 				{
 					"key": "name1",
-					"source": "{roll:race/Gnome/name/$(identity.name.value[0][0])-$(identity.name.value[0][1])}"
+					"source": "{roll:race/Gnome/name/any}"
 				},
 				{
 					"key": "name2",
-					"source": "{roll:race/Gnome/name/$(identity.name.value[1][0])-$(identity.name.value[1][1])}"
+					"source": "{roll:race/Gnome/name/any}"
 				},
 				{
 					"key": "name3",
-					"source": "{roll:race/Gnome/name/$(identity.name.value[2][0])-$(identity.name.value[2][1])}"
+					"source": "{roll:race/Gnome/name/any}"
 				},
 				{
 					"key": "name4",
-					"source": "{roll:race/Gnome/name/$(identity.name.value[3][0])-$(identity.name.value[3][1])}"
+					"source": "{roll:race/Gnome/name/any}"
 				}
 			]
 		}
