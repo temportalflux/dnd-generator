@@ -11,11 +11,21 @@ import {
 } from '../components/NPC/EDisplayModes';
 import NpcData from '../storage/NpcData';
 import { ArticleView } from '../components/NPC/ArticleView';
+import * as queryString from 'query-string';
 
 const CURRENT_DISPLAYMODE_STORAGE = `npc.displayMode`;
 
 export function NpcView(props)
 {
+	const parsedNpcData = (() => {
+		const npcDataInUrl = queryString.parse(props.location.search);
+		if (typeof npcDataInUrl.npc === 'string') 
+		{
+			return JSON.parse(npcDataInUrl.npc);
+		}
+		return undefined;
+	})();
+
 	const refreshWith = useState(0)[1];
 	const [displayMode, setDisplayMode] = useState(storage.get(CURRENT_DISPLAYMODE_STORAGE) || DISPLAY_MODES.Readable);
 	const switchDisplayMode = () => {
@@ -44,7 +54,10 @@ export function NpcView(props)
 			refreshWith(shortid.generate());
 		};
 		NpcData.toggleOnInitialized('on', onNpcInitialized);
-		if (!NpcData.get()) NpcData.initialize();
+		if (!NpcData.get())
+		{
+			NpcData.initialize(parsedNpcData);
+		}
 		return () =>
 		{
 			NpcData.toggleOnInitialized('off', onNpcInitialized);

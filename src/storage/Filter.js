@@ -27,4 +27,9 @@ export default class Filter
 		storage.set('filters', allFilters);
 	}
 
+	static clear()
+	{
+		storage.set('filters', {});
+	}
+
 }

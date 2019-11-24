@@ -34,7 +34,7 @@ class EntryLinker
 
 	getEntryForPath(entryPath)
 	{
-		return NpcData.get().getEntry(entryPath);
+		return this.owner.npc.getEntry(entryPath);
 	}
 
 	subscribe(entryPaths)
@@ -101,23 +101,10 @@ class EntryLinker
 export default class GeneratedEntry
 {
 
-	static fromSchema(field)
+	constructor(npcData)
 	{
-		const data = new GeneratedEntry();
-		data.readEntry(field);
-		data.category = field.getCategory();
-		return data;
-	}
+		this.npc = npcData;
 
-	static fromEntry(entry)
-	{
-		const data = new GeneratedEntry();
-		data.readEntry(entry);
-		return data;
-	}
-
-	constructor()
-	{
 		this.events = new EventTarget();
 		this.schemaEntry = undefined;
 
@@ -201,8 +188,10 @@ export default class GeneratedEntry
 		return this.schemaEntry.getCanReroll() && (!this.parent || this.parent.getCanReroll());
 	}
 
-	regenerate(globalData)
+	regenerate(globalData, getPreset)
 	{
+		this.clearSaveState();
+
 		this.modifyingLinker.dispatchToSubscriptions('remove', {
 			source: this.getKeyPath()
 		}, (args, keyPath) => ({...args, value: this.getModifierFor(keyPath)}));
@@ -215,38 +204,60 @@ export default class GeneratedEntry
 		});
 		this.collectionLinker.unsubscribe(this.getOurCollections());
 
+		const presetData = typeof getPreset === 'function' ? getPreset(this) : undefined;
+
 		// TODO: filter out the current value so that we never "regenerate" into the same value.
 		// unless of course its the only value possible, in which case, prevent generation entirely.
 
 		const context = {
 			...globalData,
 			filter: this.getFilterValue(),
+			preset: presetData,
 		};
 		this.generated = null;
 
 		if (this.schemaEntry.value)
 		{
 			this.generated = {
-				value: this.schemaEntry.value
+				value: presetData !== undefined ? presetData : this.schemaEntry.value
 			};
 		}
 		else
 		{
+			let redirectPath = [];
 			do
 			{
 				let macro = undefined;
-				if (this.generated && this.generated.entry && this.generated.entry.hasRedirector())
-					macro = createExecutor(`{roll:${this.generated.entry.getRedirector()}}`);
-				else macro = this.getGenerationMacro();
+				// grab the redirector from the previous generated entry
+				let redirector = this.generated && this.generated.entry && this.generated.entry.hasRedirector() ? this.generated.entry.getRedirector() : undefined;
+				if (redirector !== undefined)
+				{
+					macro = createExecutor(`{roll:${redirector}}`);
+				}
+				else
+				{
+					macro = this.getGenerationMacro();
+				}
+				
 				if (macro === undefined) break;
-				this.generated = macro(context);
+				
+				this.generated = macro(redirector === undefined ? context : {...context, filter: undefined});
+				if (this.generated && this.generated.entry && this.generated.entry.hasRedirector())
+				{
+					redirectPath.push(this.generated.entry.getKey());
+				}
 			} while (this.generated && this.generated.entry && this.generated.entry.hasRedirector());
+			if (this.generated && redirectPath.length > 0)
+			{
+				this.generated.redirectPath = redirectPath;
+			}
 		}
 
 		this.generatedChildren = this.generated && this.generated.entry && this.generated.entry.hasChildren()
 			? lodash.mapValues(this.generated.entry.getChildren(), (child) =>
 			{
-				const clone = GeneratedEntry.fromEntry(child);
+				const clone = new GeneratedEntry(this.npc);
+				clone.readEntry(child);
 				clone.parent = this;
 				return clone;
 			}) : undefined;
@@ -254,7 +265,8 @@ export default class GeneratedEntry
 		{
 			this.generatedChildren = lodash.mapValues(this.schemaEntry.getChildren(), (child) =>
 			{
-				const clone = GeneratedEntry.fromEntry(child);
+				const clone = new GeneratedEntry(this.npc);
+				clone.readEntry(child);
 				clone.parent = this;
 				return clone;
 			});
@@ -269,6 +281,7 @@ export default class GeneratedEntry
 		// temporarily modify globalData until it can be accounted for later
 		// we should probably just mark the data as dirty here instead of passing it through functions
 		this.getModifiedData(globalData);
+		this.writeSaveState();
 
 		this.events.dispatchEvent(new CustomEvent('onChanged', { detail: {} }));
 
@@ -286,7 +299,7 @@ export default class GeneratedEntry
 
 		if (this.generatedChildren)
 		{
-			lodash.values(this.generatedChildren).forEach((child) => child.regenerate(globalData));
+			lodash.values(this.generatedChildren).forEach((child) => child.regenerate(globalData, getPreset));
 		}
 
 		this.modifyingLinker.dispatchToSubscriptions('add', {
@@ -363,9 +376,7 @@ export default class GeneratedEntry
 		const generated = this.generated || {};
 		const generatedObjValue = generated.value !== undefined && generated.value.value !== undefined ? generated.value.value : generated.value;
 		if (generatedObjValue !== undefined) return generatedObjValue;
-
-		const genEntry = this.getGeneratedEntry();
-		return genEntry !== undefined ? genEntry.getKey() : undefined;
+		return generated.entry !== undefined ? generated.entry.getKey() : undefined;
 	}
 
 	getModifyingEntryData_internal()
@@ -466,7 +477,7 @@ export default class GeneratedEntry
 		else this.applyModifier(evt, args.source, args.value);
 		this.events.dispatchEvent(new CustomEvent('onModified', { detail: {} }));
 
-		const globalData = NpcData.get().getModifiedData();
+		const globalData = this.npc.getModifiedData();
 		// TODO: This check is very inefficient, but it works...
 		if (!objectEqualityDeepRecursive(forcedFilter, this.forcedFilter))
 		{
@@ -678,6 +689,27 @@ export default class GeneratedEntry
 			//console.warn(`Could not find entry with subpath ${subpath} under entry ${this.getKeyPath()}`);
 			return undefined;
 		}
+	}
+
+	getSaveState()
+	{
+		const generated = this.generated || {};
+		if (generated.entry) return generated.entry.getKey();
+		else if (typeof generated.value !== 'object') return generated.value;
+		else return undefined;
+	}
+
+	clearSaveState()
+	{
+		this.npc.updateSaveState(this.getKeyPath(), undefined);
+		Object.values(this.getChildren()).forEach((child) => child.clearSaveState());
+	}
+
+	writeSaveState()
+	{
+		let saveState = this.getSaveState();
+		if (this.generated && Array.isArray(this.generated.redirectPath)) saveState = this.generated.redirectPath.concat([saveState]);
+		this.npc.updateSaveState(this.getKeyPath(), saveState);
 	}
 
 }

@@ -1,5 +1,5 @@
 import lodash from 'lodash';
-import { accumulateEntries } from './Entry';
+import { accumulateEntries, Entry } from './Entry';
 import { createExecutor } from '../generator/modules/createExecutor';
 import appendModifiers from '../generator/appendModifiers';
 import { inlineEval } from '../generator/modules/evalAtCtx';
@@ -67,6 +67,7 @@ export default class Table
 		}
 		table.modifiers = obj.modifiers;
 		table.redirect = obj.redirect;
+		table.entry = obj.entry !== undefined ? Entry.from(obj.entry, -1) : undefined;
 		return table;
 	}
 
@@ -202,8 +203,14 @@ export default class Table
 	roll(filter, context)
 	{
 		let result = { value: undefined, modifiers: {} };
-
-		if (this.hasValueMacro())
+		
+		if (this.entry !== undefined)
+		{
+			result.value = lodash.cloneDeep(this.entry.value.value);
+			result.modifiers = lodash.cloneDeep(this.entry.value.modifiers);
+			result.entry = this.entry;
+		}
+		else if (this.hasValueMacro())
 		{
 			const filterContext = { ...context, filter: (filter || this.getDefaultFilter()) };
 			const macro = createExecutor(this.valueMacro);
@@ -212,14 +219,31 @@ export default class Table
 		}
 		else if (this.hasRedirector())
 		{
-			const macro = createExecutor(`{roll:${this.getRedirector()}}`);
-			if (macro) result = macro(context);
+			let redirector = this.getRedirector();
+
+			const macro = createExecutor(`{roll:${redirector}}`);
+			if (macro)
+			{
+				result = macro({...context, filter: undefined});
+			}
 		}
 		else
 		{
-			const rollable = this.getRows();
-			const filtered = filter === undefined ? rollable : rollable.filter((entry) => filter.includes(entry.getKey()));
-			const entry = chooseRandomWithWeight(filtered);
+			const entry = (() => {
+				const rollable = this.getRows();
+				if (context.preset !== undefined)
+				{
+					const preset = Array.isArray(context.preset) ? context.preset.shift() : context.preset;
+					const presetEntry = rollable.find((entry) => entry.getKey() === preset);
+					if (presetEntry !== undefined) return presetEntry;
+					else
+					{
+						console.error(`Could not find entry with preset key ${preset} in table ${this.getKey()}`);
+					}
+				}
+				const filtered = filter === undefined ? rollable : rollable.filter((entry) => filter.includes(entry.getKey()));
+				return chooseRandomWithWeight(filtered);
+			})();
 			if (entry === null)
 			{
 				console.warn('Received null generated value. Maybe there are missing keys?', this.entriesWithoutKeys, this.getKeyPath());

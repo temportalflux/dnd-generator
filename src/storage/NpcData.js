@@ -1,6 +1,7 @@
 import lodash from 'lodash';
 import TableCollection from './TableCollection';
 import GeneratedEntry from './GeneratedEntry';
+import storage from 'local-storage';
 
 let NPC_TEMPORARY_DATA = null;
 
@@ -39,7 +40,7 @@ export default class NpcData
 		return tableCollection ? tableCollection.getNpcSchema() : undefined;
 	}
 
-	static initialize()
+	static initialize(presetData)
 	{
 		const schema = NpcData.getSchema();
 		if (!schema) { return; }
@@ -59,7 +60,7 @@ export default class NpcData
 			detail: { npc: NPC_TEMPORARY_DATA }
 		}));
 
-		NPC_TEMPORARY_DATA.regenerateAll();
+		NPC_TEMPORARY_DATA.regenerateAll(presetData);
 	}
 
 	static get()
@@ -72,12 +73,26 @@ export default class NpcData
 		NpcData.initialize();
 	}
 
+	static getState()
+	{
+		return storage.get('npc');
+	}
+
+	static getLink()
+	{
+		const stateString = JSON.stringify(NpcData.getState());
+		const encoded = encodeURIComponent(stateString);
+		return `${window.location.href.split(window.location.pathname)[0]}/npc?npc=${encoded}`;
+	}
+
 	constructor()
 	{
 		this.events = new EventTarget();
 
 		this.entries = {};
 		this.categories = {};
+
+		this.saveState = {};
 	}
 
 	toggleListener(event, status, callback)
@@ -96,7 +111,9 @@ export default class NpcData
 
 	addEntry(field)
 	{
-		const entry = GeneratedEntry.fromSchema(field);
+		const entry = new GeneratedEntry(this);
+		entry.readEntry(field);
+		entry.category = field.getCategory();
 		this.entries[entry.getKeyPath()] = entry;
 		this.categories[field.category] = (this.categories[field.getCategory()] || []).concat([field.getKey()]);
 	}
@@ -118,21 +135,18 @@ export default class NpcData
 		return (this.categories[category] || []).sort();
 	}
 
-	regenerateAll()
+	regenerateAll(presetData)
 	{
 		const schema = NpcData.getSchema();
 		const globalData = {};
 		for (let entryKey of schema.getGenerationOrder())
 		{
-			this.regenerate(entryKey, globalData, globalData);
+			const entry = this.entries[entryKey];
+			const getPreset = (e) => presetData !== undefined ? lodash.cloneDeep(presetData[e.getKeyPath()]) : undefined;
+			entry.regenerate(globalData, getPreset);
+			entry.getModifiedData(globalData);
 		}
-	}
-
-	regenerate(entryKey, globalData, valuesOut)
-	{
-		const entry = this.entries[entryKey];
-		entry.regenerate(globalData);
-		entry.getModifiedData(valuesOut);
+		this.save();
 	}
 
 	forAllEntries(loop)
@@ -145,6 +159,17 @@ export default class NpcData
 		const values = {}
 		this.forAllEntries((entry) => entry.getModifiedData(values));
 		return values;
+	}
+
+	updateSaveState(key, state)
+	{
+		if (state === undefined) { delete this.saveState[key]; }
+		else this.saveState[key] = state;
+	}
+
+	save()
+	{
+		storage.set('npc', this.saveState);
 	}
 
 }

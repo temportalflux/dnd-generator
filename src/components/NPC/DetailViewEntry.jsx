@@ -127,7 +127,10 @@ function EntryView({
 				{!isMissingSourceTable && canRegenerate && <Menu.Item fitted position='right'>
 					<Button
 						icon={'refresh'}
-						onClick={() => entry.regenerate(npcModifiedData)}
+						onClick={() => {
+							entry.regenerate(npcModifiedData);
+							npc.save();
+						}}
 						content={camelCaseToTitle(propertyKey)}
 					/>
 				</Menu.Item>}
@@ -193,12 +196,16 @@ function EntryView({
 							)}</Form.Field>}
 							{collectionEntryKeys.length > 0 && <Form.Field>
 								{makeModifierPopup('Other Values', 'Collective Values', collectionEntryObj)}
-								{lodash.toPairs(collectionEntryObj).map(([entryKey, stringified]) => (
-									<Popup key={entryKey}
-										trigger={(<p>{stringified}</p>)}
-										content={(`Source: ${entryKey}`)}
-									/>
-								))}
+								<ul>
+									{lodash.toPairs(collectionEntryObj).map(([entryKey, stringified]) => (
+										<li key={entryKey}>
+											<Popup key={entryKey}
+												trigger={(<p>{stringified}</p>)}
+												content={(`Source: ${entryKey}`)}
+											/>
+										</li>
+									))}
+								</ul>
 							</Form.Field>}
 						</Form.Group>
 					</Form>
