@@ -1,22 +1,22 @@
 {
-  "main.css": "static/css/main.e0e2df79.css",
-  "main.css.map": "static/css/main.e0e2df79.css.map",
-  "main.js": "static/js/main.cc4ec97c.js",
-  "main.js.map": "static/js/main.cc4ec97c.js.map",
-  "static\\media\\brand-icons.eot": "static/media/brand-icons.13db00b7.eot",
-  "static\\media\\brand-icons.svg": "static/media/brand-icons.a1a749e8.svg",
-  "static\\media\\brand-icons.ttf": "static/media/brand-icons.c5ebe0b3.ttf",
-  "static\\media\\brand-icons.woff": "static/media/brand-icons.a046592b.woff",
-  "static\\media\\brand-icons.woff2": "static/media/brand-icons.e8c322de.woff2",
-  "static\\media\\flags.png": "static/media/flags.9c74e172.png",
-  "static\\media\\icons.eot": "static/media/icons.8e3c7f55.eot",
-  "static\\media\\icons.svg": "static/media/icons.962a1bf3.svg",
-  "static\\media\\icons.ttf": "static/media/icons.b87b9ba5.ttf",
-  "static\\media\\icons.woff": "static/media/icons.faff9214.woff",
-  "static\\media\\icons.woff2": "static/media/icons.0ab54153.woff2",
-  "static\\media\\outline-icons.eot": "static/media/outline-icons.701ae6ab.eot",
-  "static\\media\\outline-icons.svg": "static/media/outline-icons.82f60bd0.svg",
-  "static\\media\\outline-icons.ttf": "static/media/outline-icons.ad97afd3.ttf",
-  "static\\media\\outline-icons.woff": "static/media/outline-icons.ef60a4f6.woff",
-  "static\\media\\outline-icons.woff2": "static/media/outline-icons.cd6c777f.woff2"
+  "files": {
+    "main.js": "/dnd-generator/static/js/main.dfded703.chunk.js",
+    "main.js.map": "/dnd-generator/static/js/main.dfded703.chunk.js.map",
+    "runtime-main.js": "/dnd-generator/static/js/runtime-main.9a206029.js",
+    "runtime-main.js.map": "/dnd-generator/static/js/runtime-main.9a206029.js.map",
+    "static/css/2.78f897c1.chunk.css": "/dnd-generator/static/css/2.78f897c1.chunk.css",
+    "static/js/2.0f019335.chunk.js": "/dnd-generator/static/js/2.0f019335.chunk.js",
+    "static/js/2.0f019335.chunk.js.map": "/dnd-generator/static/js/2.0f019335.chunk.js.map",
+    "index.html": "/dnd-generator/index.html",
+    "precache-manifest.215ffeb18373e0824bd7eba963cfdc11.js": "/dnd-generator/precache-manifest.215ffeb18373e0824bd7eba963cfdc11.js",
+    "service-worker.js": "/dnd-generator/service-worker.js",
+    "static/css/2.78f897c1.chunk.css.map": "/dnd-generator/static/css/2.78f897c1.chunk.css.map",
+    "static/media/semantic.min.css": "/dnd-generator/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a206029.js",
+    "static/css/2.78f897c1.chunk.css",
+    "static/js/2.0f019335.chunk.js",
+    "static/js/main.dfded703.chunk.js"
+  ]
 }
