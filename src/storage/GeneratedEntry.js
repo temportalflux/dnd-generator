@@ -171,12 +171,10 @@ export default class GeneratedEntry
 		return this.schemaEntry;
 	}
 
-	// TODO: Gnome names are still fucked
 	getGenerationMacro()
 	{
 		const field = this.getField();
 		if (!field.hasSource()) return undefined;
-		console.log(field.getSource());
 		const macro = createExecutor(field.getSource());
 		if (macro === undefined)
 		{
@@ -242,7 +240,6 @@ export default class GeneratedEntry
 				else macro = this.getGenerationMacro();
 				if (macro === undefined) break;
 				this.generated = macro(context);
-				console.log(this.getKeyPath(), this.generated);
 			} while (this.generated && this.generated.entry && this.generated.entry.hasRedirector());
 		}
 
@@ -364,8 +361,11 @@ export default class GeneratedEntry
 	getRawValue()
 	{
 		const generated = this.generated || {};
+		const generatedObjValue = generated.value !== undefined && generated.value.value !== undefined ? generated.value.value : generated.value;
+		if (generatedObjValue !== undefined) return generatedObjValue;
+
 		const genEntry = this.getGeneratedEntry();
-		return (generated.value && generated.value.value ? generated.value.value : generated.value) || (genEntry ? genEntry.getKey() : undefined);
+		return genEntry !== undefined ? genEntry.getKey() : undefined;
 	}
 
 	getModifyingEntryData_internal()

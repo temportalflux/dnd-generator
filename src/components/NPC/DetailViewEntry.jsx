@@ -81,6 +81,8 @@ function EntryView({
 		};
 	});
 
+	const rawValue = entry.getRawValue();
+	const modifiedValue = entry.getModifiedValue();
 	const hasFilter = entry.hasFilter(tableCollection);
 	const modifiersFromEntry = entry.getModifyingEntryData();
 	const modifiersFromEntryCount = entry.getModifyingEntryKeys().length;
@@ -150,13 +152,13 @@ function EntryView({
 							)}
 							{entry.hasValue() && <Form.Field>
 								<label>Generated Value</label>
-								{entry.getRawValue() || (
+								{rawValue !== undefined ? rawValue : (
 									<span style={{ color: 'red' }}>Not Generated</span>
 								)}
 							</Form.Field>}
 							{entry.hasValue() && <Form.Field>
 								<label>Value with Modifiers</label>
-								{entry.getModifiedValue() || (
+								{modifiedValue !== undefined ? modifiedValue : (
 									<span style={{ color: 'red' }}>Not Generated</span>
 								)}
 							</Form.Field>}
