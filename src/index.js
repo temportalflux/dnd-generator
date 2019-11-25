@@ -10,4 +10,9 @@ console.log('Versions:', {
 	node: process.versions.node,
 });
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+// basename is required because the apge is being served under github pages (aliased to a domain site).
+ReactDOM.render((
+	<BrowserRouter basename="/dnd-generator">
+		<App />
+	</BrowserRouter>
+), document.getElementById('root'));

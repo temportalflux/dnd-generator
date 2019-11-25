@@ -2,48 +2,40 @@ import React from 'react';
 import TableCollection from './storage/TableCollection';
 import shortid from 'shortid';
 import { Switch, Route } from "react-router-dom";
-import { Container } from "semantic-ui-react";
+import { Container, Loader } from "semantic-ui-react";
 import { HomeView } from './view/HomeView';
 import { NpcView } from './view/NpcView';
 import { DataView } from './view/DataView';
 
-class App extends React.Component
+export default function App(props)
 {
+	const refreshWith = React.useState(undefined)[1];
 
-	constructor(props)
+	React.useEffect(() =>
 	{
-		super(props);
-		this.state = { refreshKey: undefined };
-		TableCollection.addOnChanged(this.onDataChanged.bind(this));
-	}
-
-	componentDidMount()
-	{
-		const tables = TableCollection.get();
-		if (!tables)
+		function onTableCollectionChanged()
 		{
-			TableCollection.initialize();
-			this.setState({ refreshKey: shortid.generate() });
+			refreshWith(shortid.generate());
+		};
+		TableCollection.addOnChanged(onTableCollectionChanged);
+		return () =>
+		{
+			TableCollection.removeOnChanged(onTableCollectionChanged);
 		}
-	}
+	});
 
-	onDataChanged({ detail })
+	if (!TableCollection.get())
 	{
+		TableCollection.initialize();
 	}
 
-	render()
-	{
-		return (
-			<Container id={'App'} fluid>
-				<Switch>
-					<Route key='home' exact path='/' component={HomeView} />
-					<Route key='npc' path='/npc' component={NpcView} />
-					<Route key='data' path='/data/:table?' component={DataView} />
-				</Switch>
-			</Container>
-		);
-	}
-
+	return (
+		<Container id={'App'} fluid>
+			<Switch>
+				<Route key='home' exact path='/' component={HomeView} />
+				<Route key='npc' path='/npc' component={NpcView} />
+				<Route key='data' path='/data/:table?' component={DataView} />
+			</Switch>
+		</Container>
+	);
 }
-
-export default App;
