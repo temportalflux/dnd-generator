@@ -1,7 +1,7 @@
 import React from 'react';
 import NpcData from '../../storage/NpcData';
 import lodash from 'lodash';
-import { Header, Button, List, Popup, Table, Grid, Divider } from 'semantic-ui-react';
+import { Header, Button, List, Popup, Table } from 'semantic-ui-react';
 import * as shortid from 'shortid';
 
 function toFeet(n)

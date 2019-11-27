@@ -1,16 +1,17 @@
 import React from 'react';
-import TableCollection from './storage/TableCollection';
+import { Container } from "semantic-ui-react";
+import { useRoutes } from 'raviger';
+import Routes from './routes';
 import shortid from 'shortid';
-import { Switch, Route } from "react-router-dom";
-import { Container, Loader } from "semantic-ui-react";
-import { HomeView } from './view/HomeView';
-import { NpcView } from './view/NpcView';
-import { DataView } from './view/DataView';
+import TableCollection from './storage/TableCollection';
+import { ViewContainer } from './view/ViewContainer';
 
-export default function App(props)
+export default function App()
 {
+	// https://kyeotic.github.io/raviger/
+	const routeResult = useRoutes(Routes, { basePath: process.env.PUBLIC_URL });
 	const refreshWith = React.useState(undefined)[1];
-
+ 
 	React.useEffect(() =>
 	{
 		function onTableCollectionChanged()
@@ -31,11 +32,9 @@ export default function App(props)
 
 	return (
 		<Container id={'App'} fluid>
-			<Switch>
-				<Route key='home' exact path='/' component={HomeView} />
-				<Route key='npc' path='/npc' component={NpcView} />
-				<Route key='data' path='/data/:table?' component={DataView} />
-			</Switch>
+			<ViewContainer page={window.location.pathname}>
+				{routeResult}
+			</ViewContainer>
 		</Container>
 	);
 }

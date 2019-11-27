@@ -2,7 +2,6 @@ import React from 'react';
 import { Header, Button, Icon, Popup, Menu, Dropdown } from 'semantic-ui-react';
 import {
 	getDisplayIconForMode,
-	getDisplayModeSwitchLabel,
 } from './EDisplayModes';
 import NpcData from '../../storage/NpcData';
 import copyToClipboard from '../../lib/clipboard';

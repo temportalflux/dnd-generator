@@ -5,7 +5,6 @@ import { StorageAccordion } from '../StorageAccordion';
 import { DISPLAY_MODES } from './EDisplayModes';
 import { DataViewEntry } from './DetailViewEntry';
 import NpcData from '../../storage/NpcData';
-import { ViewContainer } from '../../view/ViewContainer';
 import { MenuBar } from './MenuBar';
 
 function DetailViewCategory({
@@ -59,7 +58,7 @@ export function DetailView(props)
 	console.log(props.tableCollection, npcSchema, NpcData.get());
 	const npc = NpcData.get();
 	return (
-		<ViewContainer page={props.location.pathname}>
+		<div>
 			<MenuBar
 				switchDisplayMode={props.switchDisplayMode}
 				displayMode={props.displayMode}
@@ -79,7 +78,6 @@ export function DetailView(props)
 					return accum;
 				}, {})}
 			/>
-
-		</ViewContainer>
+		</div>
 	);
 }

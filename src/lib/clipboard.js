@@ -24,10 +24,11 @@ function copyTextToClipboard(html)
   // Copy selected nodes to clipboard
 	try
 	{
-		var successful = document.execCommand('copy');
+		document.execCommand('copy');
 	}
 	catch (err)
 	{
+		console.error(err);
 	}
   
   // Remove the iframe

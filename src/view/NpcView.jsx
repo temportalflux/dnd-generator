@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ViewContainer } from './ViewContainer';
 import TableCollection from '../storage/TableCollection';
 import { Loader, Icon } from 'semantic-ui-react';
 import shortid from 'shortid';
@@ -18,7 +17,7 @@ const CURRENT_DISPLAYMODE_STORAGE = `npc.displayMode`;
 export function NpcView(props)
 {
 	const parsedNpcData = (() => {
-		const npcDataInUrl = queryString.parse(props.location.search);
+		const npcDataInUrl = queryString.parse(window.location.search);
 		if (typeof npcDataInUrl.npc === 'string') 
 		{
 			return JSON.parse(npcDataInUrl.npc);
@@ -69,9 +68,7 @@ export function NpcView(props)
 	if (!tableCollection || !npcData)
 	{
 		return (
-			<ViewContainer page={props.location.pathname}>
-				<Loader active>Loading</Loader>
-			</ViewContainer>
+			<Loader active>Loading</Loader>
 		);
 	}
 

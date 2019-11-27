@@ -122,7 +122,7 @@ export default class NpcData
 	{
 		const { items, remaining } = NpcData.sever(keyPath, 2);
 		const entry = this.entries[`${items[0]}.${items[1]}`];
-		return remaining.length > 0 ? entry.getChild(remaining) : entry;
+		return remaining.length > 0 && entry !== undefined ? entry.getChild(remaining) : entry;
 	}
 
 	getCategories()

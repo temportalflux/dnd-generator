@@ -142,6 +142,11 @@ export default class TableCollection
 		return Object.keys(this.tables).sort();
 	}
 
+	getTables()
+	{
+		return Object.values(this.tables);
+	}
+
 	getTable(key)
 	{
 		return this.tables.hasOwnProperty(key) ? this.tables[key] : undefined
@@ -154,7 +159,7 @@ export default class TableCollection
 
 	getTableTree()
 	{
-		return Object.keys(this.tables).reduce((accum, key) => {
+		return this.getTableKeys().reduce((accum, key) => {
 			return lodash.set(accum, this.tables[key].getKeyPath() + '.table', this.tables[key]);
 		}, {});
 	}
