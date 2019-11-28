@@ -1,13 +1,12 @@
 import React from 'react';
-import { HomeView } from "./view/HomeView";
 import { NpcView } from "./view/NpcView";
 import { DataView } from "./view/DataView";
+import { HomeView } from './view/HomeView';
 
 const routes = {
-  "/": () => <HomeView />,
-	"/npc": () => <NpcView />,
-	// todo move table param to match all sub route https://github.com/Paratron/hookrouter/blob/master/src-docs/pages/en/02_routing.md#url-parameters
-  "/data*": () => <DataView basePath='/data' />,
+	"home": () => <HomeView />,
+	"npc": () => <NpcView />,
+  "data": () => <DataView />,
 };
 
 export default routes;

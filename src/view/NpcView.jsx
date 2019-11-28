@@ -10,20 +10,20 @@ import {
 } from '../components/NPC/EDisplayModes';
 import NpcData from '../storage/NpcData';
 import { ArticleView } from '../components/NPC/ArticleView';
-import * as queryString from 'query-string';
 
 const CURRENT_DISPLAYMODE_STORAGE = `npc.displayMode`;
 
 export function NpcView(props)
 {
-	const parsedNpcData = (() => {
-		const npcDataInUrl = queryString.parse(window.location.search);
-		if (typeof npcDataInUrl.npc === 'string') 
-		{
-			return JSON.parse(npcDataInUrl.npc);
-		}
-		return undefined;
-	})();
+	const parsedNpcData = NpcData.getCurrentLinkData();
+	if (parsedNpcData !== undefined)
+	{
+		// filter out the npc data
+		// warning: this will remove ALL url params
+		window.location.replace(
+			`${window.location.protocol}//${window.location.host}${window.location.pathname}`
+		);
+	}
 
 	const refreshWith = useState(0)[1];
 	const [displayMode, setDisplayMode] = useState(storage.get(CURRENT_DISPLAYMODE_STORAGE) || DISPLAY_MODES.Readable);
@@ -55,7 +55,13 @@ export function NpcView(props)
 		NpcData.toggleOnInitialized('on', onNpcInitialized);
 		if (!NpcData.get())
 		{
-			NpcData.initialize(parsedNpcData);
+			NpcData.initialize((npc) => {
+				if (parsedNpcData !== undefined)
+				{
+					npc.setState(parsedNpcData);
+				}
+				npc.regenerateAll(NpcData.getState() || {});
+			});
 		}
 		return () =>
 		{

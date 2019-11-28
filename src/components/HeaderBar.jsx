@@ -16,9 +16,9 @@ export class HeaderBar extends React.Component
 	{
 		return (
 			<Menu>
-				<HeaderBarLink name={'home'} path={'/'} activeItem={this.props.page}>Home</HeaderBarLink>
-				<HeaderBarLink name={'npc'} path={'/npc'} activeItem={this.props.page}>NPC</HeaderBarLink>
-				<HeaderBarLink name={'data'} path={'/data'} activeItem={this.props.page}>Data</HeaderBarLink>
+				<HeaderBarLink path={'home'}>Home</HeaderBarLink>
+				<HeaderBarLink path={'npc'}>NPC</HeaderBarLink>
+				<HeaderBarLink path={'data'}>Data</HeaderBarLink>
 
 				<Menu.Item position='right'>
 					<Button color='red' onClick={this.onClearStorage.bind(this)}>

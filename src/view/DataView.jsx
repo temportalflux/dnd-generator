@@ -1,58 +1,53 @@
 import React from 'react';
 import lodash from 'lodash';
-import { Link, useRoutes } from 'raviger';
-import DataTableView from '../components/DataTableView';
 import TableCollection from '../storage/TableCollection';
 import Tree from 'react-animated-tree';
+import { View, Table } from '../storage/Session';
+import * as queryString from 'query-string';
+import DataTableView from '../components/DataTableView';
 
-export function DataView({ basePath })
+export function DataView()
 {
-	const tableCollection = TableCollection.get();
-	const routes = (tableCollection ? tableCollection.getTables() : [])
-		.reduce((routes, table) => {
-			routes[`/${table.getKeyPath()}`] = () => <DataTableView tableKey={table.getKey()} />;
-			return routes;
-		}, {});
-	const route = useRoutes(routes, { basePath: basePath });
-	if (route) return route;
+	const urlParams = queryString.parse(window.location.search);
+	if (urlParams.table !== undefined)
+	{
+		return <DataTableView tableKey={urlParams.table} />
+	}
 
 	function makeTreeNode([pathItem, nodeDetails])
 	{
 		const allNodeProperties = Object.keys(nodeDetails);
 		const subNodeProperties = allNodeProperties.filter((item) => item !== 'table');
 		const hasTable = allNodeProperties.includes('table');
-		const content = !hasTable ? pathItem : (
-			<span>
-				<Link href={`${basePath}/${nodeDetails.table.getKeyPath()}`}>{pathItem}</Link>
-			</span>
+		return (
+			<Tree key={pathItem}
+				content={(
+					hasTable ? (
+						<a href={(
+							`${window.location.protocol}//${window.location.host}${window.location.pathname}?table=${nodeDetails.table.getKeyPath()}`
+						)}>{pathItem}</a>
+					) : (
+						subNodeProperties.length > 0 ? pathItem : `Unknown: ${pathItem}`
+					)
+				)}
+				onClick={(
+					!hasTable ? undefined : () =>
+					{
+						View.set("data");
+						Table.set(nodeDetails.table.getKeyPath());
+					}
+				)}
+			>
+				{(
+					subNodeProperties.map(
+						(propKey) => ([propKey, nodeDetails[propKey]])
+					).map(makeTreeNode)
+				)}
+			</Tree>
 		);
-		if (subNodeProperties.length === 0)
-		{
-			if (hasTable)
-			{
-				// Just a leaf for an actual table
-				return (
-					<Tree key={pathItem}
-						content={content}
-					/>
-				);
-			}
-			return <Tree key={pathItem} content={`Unknown: ${pathItem}`} />;
-		}
-		else
-		{
-			const subnodes = subNodeProperties.reduce((accum, propKey) => {
-				accum[propKey] = nodeDetails[propKey];
-				return accum;
-			}, {});
-			return (
-				<Tree key={pathItem} content={content} >
-					{lodash.toPairs(subnodes).map(makeTreeNode)}
-				</Tree>
-			);
-		}
 	}
 
+	const tableCollection = TableCollection.get();
 	if (tableCollection)
 	{
 		return (

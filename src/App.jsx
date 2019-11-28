@@ -1,17 +1,36 @@
 import React from 'react';
 import { Container } from "semantic-ui-react";
-import { useRoutes } from 'raviger';
 import Routes from './routes';
+import { HomeView } from "./view/HomeView";
 import shortid from 'shortid';
 import TableCollection from './storage/TableCollection';
 import { ViewContainer } from './view/ViewContainer';
+import { View } from './storage/Session';
+import NpcData from './storage/NpcData';
+
+function getRoute(view)
+{
+	if (Routes.hasOwnProperty(view)) return Routes[view]();
+	else return (<HomeView />);
+}
 
 export default function App()
 {
-	// https://kyeotic.github.io/raviger/
-	const routeResult = useRoutes(Routes, { basePath: process.env.PUBLIC_URL });
 	const refreshWith = React.useState(undefined)[1];
+
+	if (NpcData.getCurrentLinkData() !== undefined)
+	{
+		View.set("npc");
+	}
  
+	React.useEffect(() => {
+		const onViewChanged = () => refreshWith(shortid.generate());
+		View.subscribeOnChanged(onViewChanged);
+		return () => {
+			View.unsubscribeOnChanged(onViewChanged);
+		};
+	});
+
 	React.useEffect(() =>
 	{
 		function onTableCollectionChanged()
@@ -33,7 +52,7 @@ export default function App()
 	return (
 		<Container id={'App'} fluid>
 			<ViewContainer page={window.location.pathname}>
-				{routeResult}
+				{getRoute(View.get())}
 			</ViewContainer>
 		</Container>
 	);

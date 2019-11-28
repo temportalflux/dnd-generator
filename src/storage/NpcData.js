@@ -1,7 +1,7 @@
 import lodash from 'lodash';
 import TableCollection from './TableCollection';
 import GeneratedEntry from './GeneratedEntry';
-import storage from 'local-storage';
+import * as queryString from 'query-string';
 
 let NPC_TEMPORARY_DATA = null;
 
@@ -40,7 +40,7 @@ export default class NpcData
 		return tableCollection ? tableCollection.getNpcSchema() : undefined;
 	}
 
-	static initialize(presetData)
+	static initialize(onInitialized)
 	{
 		const schema = NpcData.getSchema();
 		if (!schema) { return; }
@@ -56,11 +56,20 @@ export default class NpcData
 
 		NPC_TEMPORARY_DATA = data;
 
+		if (typeof onInitialized === 'function')
+		{
+			onInitialized(data);
+		}
+
 		NpcData.EVENTS.dispatchEvent(new CustomEvent(this.EVENT_INITIALIZED, {
 			detail: { npc: NPC_TEMPORARY_DATA }
 		}));
+	}
 
-		NPC_TEMPORARY_DATA.regenerateAll(presetData);
+	setState(state)
+	{
+		this.saveState = state;
+		this.save();
 	}
 
 	static get()
@@ -70,19 +79,30 @@ export default class NpcData
 
 	static clear()
 	{
-		NpcData.initialize();
+		window.sessionStorage.removeItem('npc');
+		NpcData.initialize((npc) => npc.regenerateAll(NpcData.getState() || {}));
 	}
 
 	static getState()
 	{
-		return storage.get('npc');
+		return JSON.parse(window.sessionStorage.getItem('npc'));
+	}
+
+	static getCurrentLinkData()
+	{
+		const npcDataInUrl = queryString.parse(window.location.search);
+		if (typeof npcDataInUrl.npc === 'string') 
+		{
+			return JSON.parse(npcDataInUrl.npc);
+		}
+		return undefined;
 	}
 
 	static getLink()
 	{
 		const stateString = JSON.stringify(NpcData.getState());
 		const encoded = encodeURIComponent(stateString);
-		return `${window.location.href.split(window.location.pathname)[0]}/npc?npc=${encoded}`;
+		return `${window.location.href.slice(0, -1)}?npc=${encoded}`;
 	}
 
 	constructor()
@@ -169,7 +189,7 @@ export default class NpcData
 
 	save()
 	{
-		storage.set('npc', this.saveState);
+		window.sessionStorage.setItem('npc', JSON.stringify(this.saveState));
 	}
 
 }

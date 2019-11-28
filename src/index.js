@@ -10,4 +10,6 @@ console.log('Versions:', {
 });
 console.log(`Serving at public url: ${process.env.PUBLIC_URL}`);
 
-ReactDOM.render((<App />), document.getElementById('root'));
+ReactDOM.render((
+	<App />
+), document.getElementById('root'));
