@@ -1,0 +1,48 @@
+{
+	"rows": [
+		{
+			"key": "Class-Caster",
+			"redirect": "occupation/Class/Caster"
+		},
+		{
+			"key": "Class-Martial",
+			"redirect": "occupation/Class/Martial"
+		},
+		{
+			"key": "Class-Misc",
+			"redirect": "occupation/Class/Misc"
+		},
+		{
+			"key": "Job-Entertainer",
+			"redirect": "occupation/Class/Entertainer"
+		},
+		{
+			"key": "Job-Learned",
+			"redirect": "occupation/Class/Learned"
+		},
+		{
+			"key": "Job-Lesser Nobility",
+			"redirect": "occupation/Class/Lesser Nobility"
+		},
+		{
+			"key": "Job-Martial",
+			"redirect": "occupation/Class/Martial"
+		},
+		{
+			"key": "Job-Professional",
+			"redirect": "occupation/Class/Professional"
+		},
+		{
+			"key": "Job-Underclass",
+			"redirect": "occupation/Class/Underclass"
+		},
+		{
+			"key": "Job-Working Class",
+			"redirect": "occupation/Class/Working Class"
+		},
+		{
+			"key": "Job-Misc",
+			"redirect": "occupation/Class/Misc"
+		}
+	]
+}

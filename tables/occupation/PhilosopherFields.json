@@ -1,0 +1,79 @@
+{
+	"rows": [
+		{
+			"key": "Aestetics",
+			"value": "Aestetics",
+			"description": "A branch of philosophy that deals with the nature of art, beauty and taste, with the creation or appreciation of beauty, with theories and conceptions of beauty or art, and with tastes for and approaches to what is pleasing to the senses and especially sight."
+		},
+		{
+			"key": "Ethics",
+			"value": "Ethics",
+			"description": "A branch of philosophy that involves systematizing, defending, and recommending concepts of right and wrong conduct."
+		},
+		{
+			"key": "Epistemology",
+			"value": "Epistemology",
+			"description": "The branch of philosophy concerned with the theory of knowledge and the study of the nature of knowledge, justification, and the rationality of belief."
+		},
+		{
+			"key": "Logic",
+			"value": "Logic",
+			"description": "The systematic study of the form of valid inference, and the most general laws of truth."
+		},
+		{
+			"key": "Metaphysics",
+			"value": "Metaphysics",
+			"description": "The branch of philosophy that examines the fundamental nature of reality, including the relationship between mind and matter, between substance and attribute, and between potentiality and actuality."
+		},
+		{
+			"key": "Social Theory",
+			"value": "Social Theory",
+			"description": "https://en.wikipedia.org/wiki/Social_theory"
+		},
+		{
+			"key": "Political Philosophy",
+			"value": "Political Philosophy",
+			"description": "The study of topics such as politics, liberty, justice, property, rights, law, and the enforcement of laws by authority: what they are, if they are needed, what makes a government legitimate, what rights and freedoms it should protect, what form it should take, what the law is, and what duties citizens owe to a legitimate government, if any, and when it may be legitimately overthrown, if ever."
+		},
+		{
+			"key": "History",
+			"value": "History",
+			"description": "The study of the past as it is described in written documents."
+		},
+		{
+			"key": "Economics",
+			"value": "Economics",
+			"description": "The social science that studies the production, distribution, and consumption of goods and services."
+		},
+		{
+			"key": "Sociology",
+			"value": "Sociology",
+			"description": "The study of society, patterns of social relationships, social interaction and culture of everyday life, using various methods of empirical investigation and critical analysis to develop a body of knowledge about social order, acceptance, and change or social evolution."
+		},
+		{
+			"key": "Psychology",
+			"value": "Psychology",
+			"description": "The science of behavior and mind and study of conscious and unconscious phenomena, as well as feeling and thought."
+		},
+		{
+			"key": "Linguistics",
+			"value": "Linguistics",
+			"description": "The scientific study of language."
+		},
+		{
+			"key": "Anthropology",
+			"value": "Anthropology",
+			"description": "The scientific study of humans, human behavior and societies in the past and present"
+		},
+		{
+			"key": "Theology",
+			"value": "Theology",
+			"description": "The study and contemplation of the impact deities have on mortals."
+		},
+		{
+			"key": "Politics",
+			"value": "Politics",
+			"description": "A set of activities associated with the governance of a country, state, or area."
+		}
+	]
+}
