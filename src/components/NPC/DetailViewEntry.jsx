@@ -83,7 +83,7 @@ function EntryView({
 
 	const rawValue = entry.getRawValue();
 	const modifiedValue = entry.getModifiedValue();
-	const hasFilter = entry.hasFilter(tableCollection);
+	const hasFilter = entry.hasFilter(tableCollection, npcModifiedData);
 	const modifiersFromEntry = entry.getModifyingEntryData();
 	const modifiersFromEntryCount = entry.getModifyingEntryKeys().length;
 	const hasModifiers = modifiersFromEntryCount > 0;
@@ -104,7 +104,7 @@ function EntryView({
 
 	if (active)
 	{
-		//console.log(entry, collectionEntryKeys);
+		//console.log(entry, hasFilter, table);
 	}
 
 	return (

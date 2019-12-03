@@ -8,5 +8,5 @@ export default function exec(tablePath, data)
 		//console.error(`Could not find table for path ${tablePath}`);
 		return undefined;
 	}
-	return table.roll(data.filter, data);
+	return table.roll(data.filter, data, data.ignore);
 }

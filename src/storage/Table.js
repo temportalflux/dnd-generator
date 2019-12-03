@@ -200,7 +200,7 @@ export default class Table
 
 	// Performing ops
 
-	roll(filter, context)
+	roll(filter, context, ignore)
 	{
 		let result = { value: undefined, modifiers: {} };
 		
@@ -241,8 +241,13 @@ export default class Table
 						console.error(`Could not find entry with preset key ${preset} in table ${this.getKey()}`);
 					}
 				}
-				const filtered = filter === undefined ? rollable : rollable.filter((entry) => filter.includes(entry.getKey()));
-				return chooseRandomWithWeight(filtered);
+				return chooseRandomWithWeight(
+					rollable.filter((entry) => (
+						(filter === undefined || filter.includes(entry.getKey()))
+						&&
+						(ignore === undefined || !ignore.includes(entry.getKey()))
+					))
+				);
 			})();
 			if (entry === null)
 			{
@@ -259,8 +264,8 @@ export default class Table
 		{
 			for (let globalModifierEntry of this.getGlobalModifiers())
 			{
-				let matched = false;
-				const macro = createExecutor(globalModifierEntry.match);
+				let matched = globalModifierEntry.match === undefined;
+				const macro = globalModifierEntry.match !== undefined ? createExecutor(globalModifierEntry.match) : undefined;
 				if (macro)
 				{
 					let matchResult = macro({ ...context, value: result.value });

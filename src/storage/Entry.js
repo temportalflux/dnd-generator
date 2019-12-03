@@ -36,8 +36,11 @@ export class Entry
 		this.source = undefined;
 
 		this.value = undefined;
-		this.stringify = undefined;
 		this.modifiers = {};
+
+		this.stringify = undefined;
+		this.description = undefined;
+		this.articleContent = undefined;
 
 		this.children = [];
 
@@ -60,12 +63,14 @@ export class Entry
 		this.source = data.source;
 
 		this.value = data.value;
+		this.modifiers = data.modifiers || {};
+
 		this.stringify = data.stringify;
+		this.description = data.description;
+		this.articleContent = data.articleContent;
 
 		this.childrenWithoutKeys = [];
 		this.children = accumulateEntries(data.children || [], `entry '${this.key}'`, (i) => this.childrenWithoutKeys.push(i));
-
-		this.modifiers = data.modifiers || {};
 
 		this.canReroll = data.canReroll;
 		this.collection = data.collection;
@@ -128,6 +133,16 @@ export class Entry
 	getStringifyTemplate()
 	{
 		return this.stringify;
+	}
+
+	getArticleContent()
+	{
+		return this.articleContent;
+	}
+
+	getDescription()
+	{
+		return this.description;
 	}
 
 	getCanReroll()

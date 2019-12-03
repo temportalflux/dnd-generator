@@ -200,9 +200,9 @@ export class GenerationEntry
 			const asString = inlineEval(this.getStringifyTemplate(), allContext);
 			return asString === undefined ? value : asString;
 		}
-		else if (this.description !== undefined)
+		else if (this.articleContent !== undefined)
 		{
-			return this.description;
+			return this.articleContent;
 		}
 		else if (Array.isArray(value))
 		{
@@ -527,7 +527,7 @@ export class GenerationEntry
 				this.value = entry.getValue();
 
 				this.stringifyGenerated = entry.getStringifyTemplate();
-				this.description = entry.description;
+				this.articleContent = entry.articleContent;
 
 				// copy over secondary generation modifiers
 				entryModifiers = appendModifiers(entryModifiers, lodash.cloneDeep(entry.modifiers));

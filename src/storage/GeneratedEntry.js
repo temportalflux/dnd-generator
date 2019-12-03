@@ -170,10 +170,10 @@ export default class GeneratedEntry
 		return macro;
 	}
 
-	hasFilter(tableCollection)
+	hasFilter(tableCollection, globalData)
 	{
 		const sourceTableKey = this.getField().getSourceTableKey(tableCollection);
-		const table = sourceTableKey !== undefined ? tableCollection.getTable(sourceTableKey) : undefined;
+		const table = sourceTableKey !== undefined ? tableCollection.getTable(inlineEval(sourceTableKey, globalData)) : undefined;
 		return table ? table.hasFilter() : false;
 	}
 
@@ -188,10 +188,8 @@ export default class GeneratedEntry
 		return this.schemaEntry.getCanReroll() && (!this.parent || this.parent.getCanReroll());
 	}
 
-	regenerate(globalData, getPreset)
+	clearLinking()
 	{
-		this.clearSaveState();
-
 		this.modifyingLinker.dispatchToSubscriptions('remove', {
 			source: this.getKeyPath()
 		}, (args, keyPath) => ({...args, value: this.getModifierFor(keyPath)}));
@@ -203,15 +201,34 @@ export default class GeneratedEntry
 			source: this.getKeyPath()
 		});
 		this.collectionLinker.unsubscribe(this.getOurCollections());
+	}
+
+	regenerate(globalData, getPreset)
+	{
+		this.clearSaveState();
+
+		if (this.generatedChildren)
+		{
+			lodash.values(this.generatedChildren).forEach((child) => child.clearLinking());
+		}
+		this.clearLinking();
 
 		const presetData = typeof getPreset === 'function' ? getPreset(this) : undefined;
 
-		// TODO: filter out the current value so that we never "regenerate" into the same value.
-		// unless of course its the only value possible, in which case, prevent generation entirely.
+		let prevValueOrKey = undefined;
+		if (this.generated !== undefined)
+		{
+			prevValueOrKey = this.generated.value;
+			if (this.generated.entry !== undefined)
+			{
+				prevValueOrKey = this.generated.entry.getKey();
+			}
+		}
 
 		const context = {
 			...globalData,
 			filter: this.getFilterValue(),
+			ignore: prevValueOrKey !== undefined ? [prevValueOrKey] : undefined,
 			preset: presetData,
 		};
 		this.generated = null;
@@ -271,9 +288,6 @@ export default class GeneratedEntry
 				return clone;
 			});
 		}
-
-		// TODO: Check to see if the entry actually changed at all (key may have changed of the underlying generated entry),
-		// otherwise if the value hasn't changed, all of these updates are being processed for no reason.
 
 		this.updateString(globalData);
 		this.stringifyLinker.subscribe(this.getStringifyDependencies());
@@ -566,6 +580,12 @@ export default class GeneratedEntry
 		return (genEntry ? genEntry.getStringifyTemplate() : undefined) || (this.schemaEntry.stringify);
 	}
 
+	getDescription()
+	{
+		const genEntry = this.getGeneratedEntry();
+		return (genEntry ? genEntry.getDescription() : undefined) || (this.schemaEntry.description);
+	}
+
 	getStringifyDependencies()
 	{
 		const template = this.getStringifyTemplate();
@@ -612,6 +632,29 @@ export default class GeneratedEntry
 		return this.stringifyCached;
 	}
 
+	getArticleContent(globalData)
+	{
+		const genEntry = this.getGeneratedEntry();
+		const articleContent = (genEntry ? genEntry.getArticleContent() : undefined) || (this.schemaEntry.articleContent);
+		if (articleContent === undefined) { return this.toString(); }
+
+		const localizedGlobalData = lodash.cloneDeep(globalData);
+		this.getChildModifiedData(localizedGlobalData);
+
+		return inlineEval(articleContent, localizedGlobalData);
+	}
+
+	getDescriptionString(globalData)
+	{
+		const description = this.getDescription();
+		if (description === undefined) { return undefined; }
+		
+		const localizedGlobalData = lodash.cloneDeep(globalData);
+		this.getChildModifiedData(localizedGlobalData);
+
+		return inlineEval(description, localizedGlobalData);
+	}
+
 	onStringifyLinkerEvent(evt, { globalData })
 	{
 		console.assert(evt === 'onChanged');
@@ -642,6 +685,7 @@ export default class GeneratedEntry
 	onGenerationDependencyEvent(evt, { key, globalData })
 	{
 		console.assert(evt === 'onChanged');
+		Filter.remove(this.getKeyPath());
 		this.regenerate(globalData);
 	}
 

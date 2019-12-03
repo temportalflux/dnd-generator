@@ -19,7 +19,7 @@ function toSentenceCase(sentence)
 	);
 }
 
-function getRenderedText(text, entry)
+function getRenderedText(text, entry, globalData)
 {
 	if (typeof text === 'function')
 	{
@@ -31,13 +31,11 @@ function getRenderedText(text, entry)
 	}
 	else
 	{
-		return entry.toString();
+		return entry.getArticleContent(globalData);
 	}
 }
 
-function InlineEntryItem({
-	entry, rerollAs, globalData, text,
-})
+function InlineEntryComponent({ entry, getComponent })
 {
 	const refresh = React.useState(undefined)[1];
 	React.useEffect(() => {
@@ -53,26 +51,39 @@ function InlineEntryItem({
 			entry.removeListenerOnUpdateCollection(onChanged);
 		};
 	});
-	const renderedText = getRenderedText(text, entry);
+	return getComponent(entry) || <span/>;
+}
+
+function InlineEntryItem({
+	entry, rerollAs, globalData, text,
+})
+{
 	return (
-		<Popup
-			hoverable={true}
-			trigger={(<span style={{
-				color: "#4400ff",
-				fontWeight: 'bold'
-			}}>{renderedText}</span>)}
-			content={(
-				<span>
-					<Button
-						path={rerollAs || entry.getKeyPath()} size='mini' icon='refresh'
-						onClick={() => {
-							entry.regenerate(globalData);
-							entry.npc.save();
-						}}
+		<InlineEntryComponent
+			entry={entry}
+			getComponent={(e) => {
+				const renderedText = getRenderedText(text, e, globalData);
+				return (
+					<Popup
+						hoverable={true}
+						trigger={(
+							<span style={{ color: "#4400ff", fontWeight: 'bold' }}>{renderedText}</span>
+						)}
+						content={(
+							<span>
+								<Button
+									path={rerollAs || e.getKeyPath()} size='mini' icon='refresh'
+									onClick={() => {
+										e.regenerate(globalData);
+										e.npc.save();
+									}}
+								/>
+								<label>{e.getName()}: {renderedText}</label>
+							</span>
+						)}
 					/>
-					<label>{entry.getName()}: {renderedText}</label>
-				</span>
-			)}
+				);
+			}}
 		/>
 	);
 }
@@ -82,13 +93,12 @@ export function ArticleContent({ usePlainText })
 	const npc = NpcData.get();
 	const globalData = npc.getModifiedData();
 
-	
 	const createEntryItem = (entry, text=undefined, rerollAs=undefined) =>
 	{
 		if (!entry) { return <div />; }
 		if (usePlainText || !entry.getCanReroll())
 		{
-			return getRenderedText(text, entry);
+			return getRenderedText(text, entry, globalData);
 		}
 		return (
 			<InlineEntryItem
@@ -124,6 +134,7 @@ export function ArticleContent({ usePlainText })
 	const sexualOrientation = npc.getEntry('identity.sexualOrientation');
 
 	const profession = npc.getEntry('occupation.profession');
+	const occupationalArea = npc.getEntry('occupation.area');
 
 	const age = npc.getEntry('description.age');
 	const eyeColor = npc.getEntry('description.eyeColor');
@@ -165,9 +176,16 @@ export function ArticleContent({ usePlainText })
 					{createEntryItem(name)}{surname.hasValue() && createEntryItem(surname, (e) => ` ${e.toString()}`)}
 					&nbsp; is a &nbsp;
 					{createEntryItem(age)} year old &nbsp;
-					{createEntryItem(genderIdentity)} &nbsp;
 					{createEntryItem(race)} &nbsp;
-					{createEntryItem(profession, undefined, 'occupation.type')}.
+					{createEntryItem(genderIdentity)} and &nbsp;
+					{createEntryItem(profession)} ({createEntryItem(occupationalArea)})
+					<InlineEntryComponent entry={profession}
+						getComponent={(e) => {
+							const desc = e.getDescriptionString(globalData);
+							if (desc === undefined) return undefined;
+							return <span>&nbsp;({desc})</span>;
+						}}
+					/>.
 				</List.Item>
 				<List.Item as='li'>
 					{toSentenceCase(pronouns.getRawValue().singular)}
