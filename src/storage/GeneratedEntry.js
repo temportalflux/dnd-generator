@@ -225,9 +225,15 @@ export default class GeneratedEntry
 			}
 		}
 
+		const filter = this.getFilterValue();
+		if (filter !== undefined && filter.length === 1 && filter.includes(prevValueOrKey))
+		{
+			prevValueOrKey = undefined;
+		}
+
 		const context = {
 			...globalData,
-			filter: this.getFilterValue(),
+			filter: filter,
 			ignore: prevValueOrKey !== undefined ? [prevValueOrKey] : undefined,
 			preset: presetData,
 		};

@@ -1,4 +1,4 @@
- /*eslint no-unused-vars: [0, {"args": "after-used", "argsIgnorePattern": "^_"}]*/
+/*eslint no-unused-vars: [0, {"args": "after-used", "argsIgnorePattern": "^_"}]*/
 
 import React, { useEffect } from 'react';
 import { Accordion, Icon, Button, Menu, Form, Popup, Header } from 'semantic-ui-react';
@@ -67,13 +67,15 @@ function EntryView({
 	const isMissingSourceTable = parentEntry.isMissingSourceTable(tableCollection, (k) => inlineEval(k, npcModifiedData));
 
 	const refresh = React.useState(undefined)[1];
-	useEffect(() => {
+	useEffect(() =>
+	{
 		function onChanged({ details }) { refresh(shortid.generate()); }
 		entry.addListenerOnChanged(onChanged);
 		entry.addListenerOnUpdateString(onChanged);
 		entry.addListenerOnModified(onChanged);
 		entry.addListenerOnUpdateCollection(onChanged);
-		return () => {
+		return () =>
+		{
 			entry.removeListenerOnChanged(onChanged)
 			entry.removeListenerOnUpdateString(onChanged);
 			entry.removeListenerOnModified(onChanged);
@@ -95,7 +97,8 @@ function EntryView({
 	const generationDependedOnBy = entry.generationDependencyLinker.getSubscribedKeys();
 	const canRegenerate = entry.getCanReroll();
 	const collectionEntryKeys = entry.getCollectionEntryKeys();
-	const collectionEntryObj = collectionEntryKeys.reduce((accum, entryKey) => {
+	const collectionEntryObj = collectionEntryKeys.reduce((accum, entryKey) =>
+	{
 		const collectionEntry = npc.getEntry(entryKey);
 		if (collectionEntry && !collectionEntry.isValueEquivalentToNone())
 			accum[entryKey] = collectionEntry.toString();
@@ -117,8 +120,8 @@ function EntryView({
 						onClick={onClick}
 					>
 						{!isMissingSourceTable && <Icon name='dropdown' />}
-						{camelCaseToTitle(propertyKey)}
-						<span> - {entry.toString()}</span>
+						{camelCaseToTitle(propertyKey)} - &nbsp;
+						<span>{entry.toString()}</span>
 						{isMissingSourceTable && (
 							<span> - No generator available</span>
 						)}
@@ -127,7 +130,8 @@ function EntryView({
 				{!isMissingSourceTable && canRegenerate && <Menu.Item fitted position='right'>
 					<Button
 						icon={'refresh'}
-						onClick={() => {
+						onClick={() =>
+						{
 							entry.regenerate(npcModifiedData);
 							npc.save();
 						}}
@@ -143,7 +147,7 @@ function EntryView({
 					marginLeft: '7px',
 				}}>
 					<Form>
-						<Form.Group widths={'equal'} style={hasFilter && !entry.hasValue() ? {margin: 0} : {}}>
+						<Form.Group widths={'equal'} style={hasFilter && !entry.hasValue() ? { margin: 0 } : {}}>
 							{hasFilter && (
 								<Form.Field
 									label={'Filter'}
@@ -174,7 +178,7 @@ function EntryView({
 								|| stringifySubscribed.length > 0
 								|| generationDependencies.length > 0
 								|| generationDependedOnBy.length > 0
-							) ? {margin: 0} : {}
+							) ? { margin: 0 } : {}
 						}>
 							{hasModifiers && <Form.Field>{makeModifierPopup(
 								'Modifies', 'Modifies Entries', modifiersFromEntry
