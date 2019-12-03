@@ -1,0 +1,46 @@
+{
+	"rows": [
+		{
+			"key": "Apothecary",
+			"value": "Merchant (Apothecary)",
+			"description": "Seller of potions, tonics, salves and medicines.... maybe the odd poison or 2... maybe."
+		},
+		{
+			"key": "Fishmonger",
+			"value": "Merchant (Fishmonger)",
+			"description": "Sells fish caught that morning. "
+		},
+		{
+			"key": "Generalist",
+			"value": "Merchant (Generalist)",
+			"description": "Your general goods seller. Often specializes but rarely makes anything."
+		},
+		{
+			"key": "Herbalist",
+			"value": "Merchant (Herbalist)",
+			"description": "Seller of different plants, herbs, berries, etc for various uses from cooking to healing to poison. "
+		},
+		{
+			"key": "Peddler",
+			"value": "Peddler",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"key": "Wholesale Trader",
+			"value": "Merchant (Wholesale Trader)",
+			"description": "This I kept in because it could be seen as more of a warehouse type store. Selling large numbers of items wholesale.",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3
+			}
+		}
+	],
+	"modifiers": [
+		{
+			"modifiers": {
+				"stats.abilityScores.charisma": 2
+			}
+		}
+	]
+}

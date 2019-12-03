@@ -1,0 +1,149 @@
+{
+	"rows": [
+		{
+			"key": "Astrologer",
+			"value": "Astrologer",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Astrologer",
+			"description": "A researcher exploring the impact divine beings and celestial/planar bodies have on the behavior of mortals.",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Cartographer",
+			"value": "Cartographer",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Cartographer",
+			"description": "Collector and maker of maps.",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Historian",
+			"value": "Historian",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Historian",
+			"description": "Researches and catalogues various eras or portions of history.",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Philosopher",
+			"value": "Philosopher",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Philosopher",
+			"description": "An intellectual who has contributed in one or more branches of philosophy.",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1,
+				"stats.alignmentTendancies.moral.neutral": 1
+			},
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				},
+				{
+					"key": "field",
+					"source": "{roll:occupation/PhilosopherFields}"
+				},
+				{
+					"key": "quirkReligious",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		},
+		{
+			"key": "Alchemist",
+			"value": "Alchemist",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Alchemist",
+			"description": "Researcher and inventor of alchemical ingredients and brews (respectively).",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Astronomer",
+			"value": "Astronomer",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Astronomer",
+			"description": "One who researches celestial objects and phenomena (space and the stars), potentially going as far as Spelljamming.",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Librarian",
+			"value": "Librarian",
+			"stringify": "Librarian",
+			"description": "Collects and loans out books, often interacting with other scholars."
+		},
+		{
+			"key": "Professor",
+			"value": "Professor",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Professor",
+			"description": "A researcher who teaches about their field.",
+			"todo": "TODO generate again on scholars to determine their field (could be a teacher about teaching 0_0)",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Wizard",
+			"value": "Wizard",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Wizard",
+			"description": "A wizard who has dedicated their life to researching and creating new spells, rather than only learning what spells already exist.",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Wizard’s apprentice",
+			"value": "Wizard’s apprentice",
+			"stringify": "Wizard’s apprentice",
+			"description": "A wizard in study, learning from a fully realized wizard."
+		},
+		{
+			"key": "Spelljamming",
+			"value": "Spelljamming",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Researcher of Spelljamming",
+			"description": "A researcher who was likely an astronomer or astrologer who has further specialized in the celestial bodies on the material plane and how one traverses between them.",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		},
+		{
+			"key": "Planar",
+			"value": "Planar",
+			"stringify": "$(discredited==1 ? 'Discredited ' : '')Researcher of the Inner & Outer Planes",
+			"description": "A researcher exploring the inner and outer planes and their impact on the prime material plane.",
+			"children": [
+				{
+					"key": "discredited",
+					"source": "{randInt:0,1}"
+				}
+			]
+		}
+	]
+}

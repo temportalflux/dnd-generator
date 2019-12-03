@@ -1,0 +1,57 @@
+{
+	"rows": [
+		{
+			"key": "Priest",
+			"description": "One authorized to perform the sacred rites of a religion especially as a mediatory agent between mortals and gods",
+			"children": [
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		},
+		{
+			"key": "Acolyte",
+			"value": "Acolyte",
+			"description": "One who assists a member of the clergy in a liturgical service by performing minor duties",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			},
+			"children": [
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		},
+		{
+			"key": "Minister",
+			"value": "Minister",
+			"description": "One officiating or assisting the officiant in church worship",
+			"modifiers": {
+				"stats.abilityScores.charisma": 1
+			},
+			"children": [
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		},
+		{
+			"key": "Neophyte",
+			"value": "Neophyte",
+			"description": "A novice and new convert",
+			"children": [
+				{
+					"key": "quirkReligious",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		}
+	]
+}

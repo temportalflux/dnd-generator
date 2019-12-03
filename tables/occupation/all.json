@@ -1,48 +1,37 @@
 {
 	"rows": [
 		{
-			"key": "Class-Caster",
-			"redirect": "occupation/Class/Caster"
+			"redirect": "occupation/Craftsperson"
 		},
 		{
-			"key": "Class-Martial",
-			"redirect": "occupation/Class/Martial"
+			"redirect": "occupation/Entertainer"
 		},
 		{
-			"key": "Class-Misc",
-			"redirect": "occupation/Class/Misc"
+			"redirect": "occupation/Government"
 		},
 		{
-			"key": "Job-Entertainer",
-			"redirect": "occupation/Class/Entertainer"
+			"redirect": "occupation/Independent"
 		},
 		{
-			"key": "Job-Learned",
-			"redirect": "occupation/Class/Learned"
+			"redirect": "occupation/Martial"
 		},
 		{
-			"key": "Job-Lesser Nobility",
-			"redirect": "occupation/Class/Lesser Nobility"
+			"redirect": "occupation/Merchant"
 		},
 		{
-			"key": "Job-Martial",
-			"redirect": "occupation/Class/Martial"
+			"redirect": "occupation/Outlaw"
 		},
 		{
-			"key": "Job-Professional",
-			"redirect": "occupation/Class/Professional"
+			"redirect": "occupation/PublicServant"
 		},
 		{
-			"key": "Job-Underclass",
-			"redirect": "occupation/Class/Underclass"
+			"redirect": "occupation/Religious"
 		},
 		{
-			"key": "Job-Working Class",
-			"redirect": "occupation/Class/Working Class"
+			"redirect": "occupation/Scholar"
 		},
 		{
-			"key": "Job-Misc",
-			"redirect": "occupation/Class/Misc"
+			"redirect": "occupation/Traveller"
 		}
 	]
 }

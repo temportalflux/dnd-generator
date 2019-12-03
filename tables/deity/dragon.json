@@ -3,11 +3,11 @@
 		{
 			"weight": 5,
 			"key": "Asgorath", "value": "Asgorath",
-			"description": "Asgorath, the Ninefold Dragon, head deity of dragonkind (All alignments)"
+			"articleContent": "Asgorath, the Ninefold Dragon, head deity of dragonkind (All alignments)"
 		},
 		{
 			"key": "Astilabor", "value": "Astilabor",
-			"description": "Astilabor, Goddess of acquisitiveness, status, wealth (Lawful Neutral)",
+			"articleContent": "Astilabor, Goddess of acquisitiveness, status, wealth (Lawful Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -15,7 +15,7 @@
 		},
 		{
 			"key": "Bahamut", "value": "Bahamut",
-			"description": "Bahamut, God of good dragons, wind, wisdom, justice (Lawful Good)",
+			"articleContent": "Bahamut, God of good dragons, wind, wisdom, justice (Lawful Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -23,7 +23,7 @@
 		},
 		{
 			"key": "Faluzure", "value": "Faluzure",
-			"description": "Faluzure, God of decay, undeath, exhaustion (Chaotic Evil)",
+			"articleContent": "Faluzure, God of decay, undeath, exhaustion (Chaotic Evil)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
 				"stats.alignmentTendancies.moral.negative": 2
@@ -31,7 +31,7 @@
 		},
 		{
 			"key": "Garyx", "value": "Garyx",
-			"description": "Garyx, God of fire, destruction, renewal (Chaotic Evil)",
+			"articleContent": "Garyx, God of fire, destruction, renewal (Chaotic Evil)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
 				"stats.alignmentTendancies.moral.negative": 2
@@ -39,7 +39,7 @@
 		},
 		{
 			"key": "Hlal", "value": "Hlal",
-			"description": "Hlal, Goddess of humor, tricks, messages (Chaotic Neutral)",
+			"articleContent": "Hlal, Goddess of humor, tricks, messages (Chaotic Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -47,7 +47,7 @@
 		},
 		{
 			"key": "Kereska", "value": "Kereska",
-			"description": "Kereska, Goddess of dragon magic and magical creativity (Neutral Good)",
+			"articleContent": "Kereska, Goddess of dragon magic and magical creativity (Neutral Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -55,7 +55,7 @@
 		},
 		{
 			"key": "Lendys", "value": "Lendys",
-			"description": "Lendys, God of balance, justice (Lawful Neutral)",
+			"articleContent": "Lendys, God of balance, justice (Lawful Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -63,7 +63,7 @@
 		},
 		{
 			"key": "Tamara", "value": "Tamara",
-			"description": "Tamara, Goddess of life, light, mercy (Lawful Good)}",
+			"articleContent": "Tamara, Goddess of life, light, mercy (Lawful Good)}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -71,7 +71,7 @@
 		},
 		{
 			"key": "Task", "value": "Task",
-			"description": "Task, God of greed, selfishness (Chaotic Neutral)}",
+			"articleContent": "Task, God of greed, selfishness (Chaotic Neutral)}",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -80,7 +80,7 @@
 		{
 			"weight": 4,
 			"key": "Zorquan", "value": "Zorquan",
-			"description": "Zorquan, God of the essence of dragons (All alignments)"
+			"articleContent": "Zorquan, God of the essence of dragons (All alignments)"
 		}
 	]
 }

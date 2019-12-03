@@ -1,6 +1,17 @@
 [
-  "type",
   "Class/index",
-	"Job/index",
-	"all"
+	"all",
+	"type",
+	"Craftsperson",
+	"Entertainer",
+	"Government",
+	"Independent",
+	"Martial",
+	"Merchant",
+	"Outlaw",
+	"PublicServant",
+	"Religious",
+	"Scholar",
+	"PhilosopherFields",
+	"Traveller"
 ]

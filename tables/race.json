@@ -635,7 +635,7 @@
 				},
 				{
 					"key": "skin",
-					"source": "{roll:race/Lizardfolk/skin}"
+					"source": "{roll:traits/skin/scales}"
 				}
 			]
 		}

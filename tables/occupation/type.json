@@ -1,14 +1,48 @@
 {
 	"rows": [
 		{
-			"weight": 1,
-			"key": "Class",
-			"value": "Class"
+			"key": "Craftsperson",
+			"value": "Craftsperson"
 		},
 		{
-			"weight": 4,
-			"key": "Job",
-			"value": "Job"
+			"key": "Entertainer",
+			"value": "Entertainer"
+		},
+		{
+			"key": "Government",
+			"value": "Government"
+		},
+		{
+			"key": "Independent",
+			"value": "Independent"
+		},
+		{
+			"key": "Martial",
+			"value": "Martial"
+		},
+		{
+			"key": "Merchant",
+			"value": "Merchant"
+		},
+		{
+			"key": "Outlaw",
+			"value": "Outlaw"
+		},
+		{
+			"key": "Public Services",
+			"value": "PublicServant"
+		},
+		{
+			"key": "Religious",
+			"value": "Religious"
+		},
+		{
+			"key": "Scholar",
+			"value": "Scholar"
+		},
+		{
+			"key": "Traveller",
+			"value": "Traveller"
 		}
 	]
 }

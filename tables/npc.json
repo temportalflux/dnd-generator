@@ -24,6 +24,7 @@
 		"personality.trait1",
 		"personality.trait2",
 		"description.specialPhysical",
+		"occupation.area",
 		"occupation.profession"
 	],
 	"fieldOrder": [
@@ -260,8 +261,13 @@
 		},
 		{
 			"category": "occupation",
+			"key": "area",
+			"source": "{roll:occupation/type}"
+		},
+		{
+			"category": "occupation",
 			"key": "profession",
-			"source": "{roll:occupation/all}"
+			"source": "{roll:occupation/$(occupation.area)}"
 		}
 	],
 	"fields": {

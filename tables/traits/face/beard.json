@@ -2,7 +2,8 @@
 	"rows": [
 		{
 			"key": "none",
-			"description": "no beard",
+			"value": "none",
+			"articleContent": "no beard",
 			"weight": 3
 		},
 		{

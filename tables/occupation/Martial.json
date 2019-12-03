@@ -1,59 +1,12 @@
 {
 	"rows": [
 		{
-			"weight": 3,
-			"key": "Bodyguard",
-			"value": "Bodyguard",
-			"modifiers": {
-				"stats.abilityScores.wisdom": 2
-			},
-			"children": [
-				{
-					"key": "quirkMilitary",
-					"collection": "personality.quirks",
-					"source": "{roll:quirks/military}"
-				}
-			]
-		},
-		{
-			"weight": 1,
-			"key": "Bounty Hunter",
-			"value": "Bounty Hunter",
-			"modifiers": {
-				"stats.abilityScores.intelligence": 3
-			},
-			"children": [
-				{
-					"key": "quirkMilitary",
-					"collection": "personality.quirks",
-					"source": "{roll:quirks/military}"
-				}
-			]
-		},
-		{
-			"weight": 1,
-			"key": "Forester",
-			"value": "Forester",
-			"modifiers": {
-				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.wisdom": 2
-			},
-			"children": [
-				{
-					"key": "quirkNature",
-					"collection": "personality.quirks",
-					"source": "{roll:quirks/nature}"
-				}
-			]
-		},
-		{
-			"weight": 1,
-			"key": "Gladiator",
-			"value": "Gladiator",
+			"key": "Knight",
+			"value": "Knight",
 			"modifiers": {
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.dexterity": 1,
-				"stats.abilityScores.constitution": 1
+				"stats.abilityScores.constitution": 2
 			},
 			"children": [
 				{
@@ -64,18 +17,45 @@
 			]
 		},
 		{
-			"weight": 1,
-			"key": "Jailer",
-			"value": "Jailer"
+			"key": "Page",
+			"value": "Page",
+			"description": "a youth being trained for the rank of knight and in the personal service of a knight",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.intelligence": -1
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
 		},
 		{
-			"weight": 3,
 			"key": "Soldier",
 			"value": "Soldier",
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
 				"stats.abilityScores.dexterity": 1,
 				"stats.abilityScores.constitution": 1
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"key": "Squire",
+			"value": "Squire",
+			"description": "A member of the military, ranking above gentleman but below knight.",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 1
 			},
 			"children": [
 				{

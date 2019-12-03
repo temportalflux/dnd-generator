@@ -3,12 +3,12 @@
 		{
 			"weight": 3,
 			"key": "Angharradh", "value": "Angharradh",
-			"description": "Angharradh, Goddess of spring, fertility, planting, birth, defense, wisdom. (Chaotic Good)"
+			"articleContent": "Angharradh, Goddess of spring, fertility, planting, birth, defense, wisdom. (Chaotic Good)"
 		},
 		{
 			"weight": 3,
 			"key": "Corellon Larethian", "value": "Corellon Larethian",
-			"description": "Corellon Larethian, God of elves, magic, music, arts, crafts, war, poetry, bards, warriors. (Chaotic Good)"
+			"articleContent": "Corellon Larethian, God of elves, magic, music, arts, crafts, war, poetry, bards, warriors. (Chaotic Good)"
 		}
 	]
 }

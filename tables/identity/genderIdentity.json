@@ -13,7 +13,8 @@
 		{
 			"weight": 2,
 			"key": "nonbinary",
-			"value": "nonbinary"
+			"value": "nonbinary",
+			"stringify": "nonbinary person"
 		}
 	]
 }

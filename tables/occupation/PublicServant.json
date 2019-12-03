@@ -1,0 +1,218 @@
+{
+	"rows": [
+		{
+			"key": "Barber",
+			"value": "Barber",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 3
+			},
+			"description": "A doctor, surgeon, bloodletter, dentist, and haircutter. Probably best at cutting hair though."
+		},
+		{
+			"key": "Barrister",
+			"value": "Barrister",
+			"description": "A lawyer. Often individuals but also form groups.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 2,
+				"stats.alignmentTendancies.ethical.positive": 3
+			}
+		},
+		{
+			"key": "Boatman",
+			"value": "Boatman",
+			"description": "Need to travel by lake or river? Hop in."
+		},
+		{
+			"key": "Bodyguard",
+			"value": "Bodyguard",
+			"description": "Everyone needs protection sometime.",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 2
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"key": "Bounty Hunter",
+			"value": "Bounty Hunter",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 3
+			},
+			"children": [
+				{
+					"key": "quirkMilitary",
+					"collection": "personality.quirks",
+					"source": "{roll:quirks/military}"
+				}
+			]
+		},
+		{
+			"key": "Caravan driver",
+			"value": "Caravan driver",
+			"description": "Brings items to the wholesale market from far away locations."
+		},
+		{
+			"key": "Coachdriver",
+			"value": "Coacdriver",
+			"description": "Driver of a coach."
+		},
+		{
+			"key": "Cook",
+			"value": "Cook",
+			"description": "Need someone to fix your meals in your mansion?"
+		},
+		{
+			"key": "Doctor",
+			"value": "Doctor",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.intelligence": 2
+			}
+		},
+		{
+			"key": "Deckhand",
+			"value": "Deckhand"
+		},
+		{
+			"key": "Gravedigger",
+			"value": "Gravedigger",
+			"description": "Someone has to do it."
+		},
+		{
+			"key": "Groom",
+			"value": "Groom",
+			"description": "One who tends animals. Works at a stable."
+		},
+		{
+			"key": "Herald",
+			"value": "Herald",
+			"description": "An officer with the status of ambassador acting as official messenger between leaders especially in war.",
+			"modifiers": {
+				"stats.abilityScores.charisma": 3
+			}
+		},
+		{
+			"key": "Medic",
+			"value": "Medic",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
+		},
+		{
+			"key": "Messenger",
+			"value": "Messenger",
+			"description": "Mail was not very advanced at this time. If you need a message to get somewhere send this human sized letter."
+		},
+		{
+			"key": "Mercenaries",
+			"value": "Mercenaries",
+			"description": "When you need someone to fight your wars for you. Big or Small."
+		},
+		{
+			"key": "Sailor",
+			"value": "Sailor",
+			"description": "Helps sail your ship wherever you might need to go.",
+			"modifiers": {
+				"stats.abilityScores.strength": 1,
+				"stats.abilityScores.dexterity": 2
+			}
+		},
+		{
+			"key": "Scribe",
+			"value": "Scribe",
+			"description": "Skilled in taking dictation or copying documents. Writers for Hire.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			},
+			"children": [
+				{
+					"key": "quirkReligious",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		},
+		{
+			"key": "Servant",
+			"value": "Servant",
+			"description": "Maid, butler, attendant, steward, etc. All your household needs."
+		},
+		{
+			"key": "Stevedore",
+			"value": "Stevedore",
+			"description": "One who loads and unloads goods from sailing ships or caravan."
+		},
+		{
+			"key": "Warehouse",
+			"value": "Warehouse",
+			"description": "Storage for your goods."
+		},
+		{
+			"key": "Guard",
+			"value": "Guard",
+			"description": "Sometimes your goods or property needs protection."
+		},
+		{
+			"key": "Well-Worker",
+			"value": "Well-Worker",
+			"description": "Pulls up water from the well for you!"
+		},
+		{
+			"key": "Charcoal Maker",
+			"value": "Charcoal Maker",
+			"description": "Makes that burning black stuff."
+		},
+		{
+			"key": "Scat Farmer",
+			"value": "Scat Farmer",
+			"description": "Gathers the town's shit for use in the fields."
+		},
+		{
+			"key": "Cleaner",
+			"value": "Cleaner",
+			"description": "Someone to clean your house for you - for gold."
+		},
+		{
+			"key": "Almhouse Volunteer",
+			"value": "Almhouse Volunteer",
+			"description": "Volunteer at the local shelter, how nice!"
+		},
+		{
+			"key": "Waiter",
+			"value": "Waiter",
+			"description": "Will wait on you as long as you are kind, or have gold."
+		},
+		{
+			"key": "Rodent Catcher",
+			"value": "Rodent Catcher",
+			"description": "Catches the rodents of the town.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2
+			}
+		},
+		{
+			"key": "Stable Hand",
+			"value": "Stable Hand",
+			"description": "Runs or helps the local stable."
+		},
+		{
+			"key": "Tailor",
+			"value": "Tailor",
+			"description": "Mends clothes to fit you just right."
+		},
+		{
+			"key": "Tanner",
+			"value": "Tanner",
+			"description": "Tans leathers so they can be used for clothes and tools."
+		},
+		{
+			"key": "Warehouse Worker",
+			"value": "Warehouse Worker",
+			"description": "Moves boxes all day so that folks get their goods in time."
+		}
+	]
+}

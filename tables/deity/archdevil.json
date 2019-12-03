@@ -3,52 +3,52 @@
 		{
 			"key": "Bel",
 			"value": "Bel",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Dispater",
 			"value": "Dispater",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Mammon",
 			"value": "Mammon",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Fierna",
 			"value": "Fierna",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Belial",
 			"value": "Belial",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Prince Levistus",
 			"value": "Prince Levistus",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Glasya",
 			"value": "Glasya",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Baalzebul",
 			"value": "Baalzebul",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Mephistopheles",
 			"value": "Mephistopheles",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		},
 		{
 			"key": "Asmodeus",
 			"value": "Asmodeus",
-			"description": "the archdevil $(value)"
+			"articleContent": "the archdevil $(value)"
 		}
 	]
 }

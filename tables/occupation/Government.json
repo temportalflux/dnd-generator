@@ -1,0 +1,26 @@
+{
+	"rows": [
+		{
+			"key": "Banks",
+			"value": "Banks",
+			"description": "Storage for money. Large banking groups provide documentation allowing one to withdraw money from far flung financial institutions without the need to transport large amounts of money."
+		},
+		{
+			"key": "Diplomat",
+			"value": "Diplomat",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1,
+				"stats.abilityScores.charisma": 1
+			}
+		},
+		{
+			"key": "Jailer",
+			"value": "Jailer"
+		},
+		{
+			"key": "Moneylender",
+			"value": "Moneylender",
+			"description": "Most decent sized cities will have these. There is always a broke person in need of money."
+		}
+	]
+}

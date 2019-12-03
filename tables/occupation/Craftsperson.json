@@ -1,0 +1,210 @@
+{
+	"rows": [
+		{
+			"key": "Armorer",
+			"value": "Armorer",
+			"description": "A general armor maker, part blacksmith and part leatherworker."
+		},
+		{
+			"key": "Artist",
+			"value": "Artist",
+			"description": "A painter of portraits and may sell their own pieces.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
+		},
+		{
+			"key": "Baker",
+			"value": "Baker",
+			"description": "Bread.... Mmmmmm bread."
+		},
+		{
+			"key": "Blacksmith",
+			"value": "Blacksmith",
+			"description": "Though they can make weapons and possibly armor but they normally do horseshoes, tools, even pots and pans."
+		},
+		{
+			"key": "Bookbinder",
+			"value": "Bookbinder",
+			"description": "Makes books. You can probably buy scribe supplies here, paper, ink, quills, etc."
+		},
+		{
+			"key": "Fletcher",
+			"value": "Fletcher",
+			"description": "Bows, arrows, strings, etc. Fletchers are more associated with arrows specifically but they normally overlap."
+		},
+		{
+			"key": "Brewer",
+			"value": "Brewer",
+			"description": "A maker of beer and ale. Normally sales wholesale."
+		},
+		{
+			"key": "Mason",
+			"value": "Mason",
+			"description": "Laborers skilled in the building of walls and ducts. Freemasons actually formed from a bricklayers guild."
+		},
+		{
+			"key": "Butcher",
+			"value": "Butcher",
+			"description": "Meat is Murder.... Delicious Murder."
+		},
+		{
+			"key": "Candlemaker",
+			"value": "Candlemaker",
+			"description": "For all of your candle/lantern needs."
+		},
+		{
+			"key": "Carpenter",
+			"value": "Carpenter",
+			"description": "An elite tradesman, skilled in math as well as woodworking",
+			"modifiers": {
+				"stats.abilityScores.intelligence": 1
+			}
+		},
+		{
+			"key": "Cartwright",
+			"value": "Cartwright",
+			"description": "A maker and repairer of carts and wagons"
+		},
+		{
+			"key": "Clothier",
+			"value": "Clothier",
+			"description": "A garment-maker/seamstress."
+		},
+		{
+			"key": "Cobbler",
+			"value": "Cobbler",
+			"description": "Makes and mends shoes/boots."
+		},
+		{
+			"key": "Cooper",
+			"value": "Cooper",
+			"description": "A barrel-maker"
+		},
+		{
+			"key": "Dyer",
+			"value": "Dyer",
+			"description": "A maker of inks, paints, dyes, and stains. A much more important job in the middle ages than one might think."
+		},
+		{
+			"key": "Enchanter",
+			"value": "Enchanter",
+			"description": "Specialized profession that enchants your items or makes enchanted items for you."
+		},
+		{
+			"key": "Engraver",
+			"value": "Engraver",
+			"description": "Engraves items. Works with or can be with gold/silversmiths or jewelers."
+		},
+		{
+			"key": "Farmer",
+			"value": "Farmer",
+			"description": "Farms.... Also produces eggs."
+		},
+		{
+			"key": "Fisherman",
+			"value": "Fisherman",
+			"description": "Brings in the bounty of the sea."
+		},
+		{
+			"key": "Furrier",
+			"value": "Furrier",
+			"description": "Deals with fur garments. The making and repair of them."
+		},
+		{
+			"key": "Glassblower",
+			"value": "Glassblower",
+			"description": "Glass vases, glasses, etc."
+		},
+		{
+			"key": "Goldsmith",
+			"value": "Goldsmith",
+			"description": "Occasionally has their own shops or works with jewelers. Sell silverware, fills in filigree, repairs jewelry."
+		},
+		{
+			"key": "Hatter",
+			"value": "Hatter",
+			"description": "They make hats and are often mad because of the process to make them."
+		},
+		{
+			"key": "Rancher",
+			"value": "Rancher",
+			"description": "Watches over and breeds sheep, cattle, and horses for the market."
+		},
+		{
+			"key": "Hunter",
+			"value": "Hunter",
+			"description": "Brings wild game, furs, and herbs in for the market."
+		},
+		{
+			"key": "Jeweler",
+			"value": "Jeweler",
+			"description": "Gems Gems Gems. Often has a gold or silversmith on staff or works with one.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.intelligence": 1
+			}
+		},
+		{
+			"key": "Joiner",
+			"value": "Joiner",
+			"description": "A maker of furniture... might need this so keeping it."
+		},
+		{
+			"key": "Leatherworker",
+			"value": "Leatherworker",
+			"description": "Belts, shoes, even armor. This guy could be popular."
+		},
+		{
+			"key": "Locksmith",
+			"value": "Locksmith",
+			"description": "Keys and locks. Seems simple but can also be where housebreaking supplies are sold on the side.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
+		},
+		{
+			"key": "Lumberjack",
+			"value": "Lumberjack",
+			"description": "Brings wood in for the market."
+		},
+		{
+			"key": "Miller",
+			"value": "Miller",
+			"description": "Turns the farmers grains into flour."
+		},
+		{
+			"key": "Potter",
+			"value": "Potter",
+			"description": "For all of your clay pot, jug, cup, dish, etc needs."
+		},
+		{
+			"key": "Shipwright",
+			"value": "Shipwright",
+			"description": "A builder of ships. Need to buy something that floats? Head here"
+		},
+		{
+			"key": "Tinker",
+			"value": "Tinker",
+			"description": "Normally a traveling craftsman who repairs tin pots and other small items, often also a peddler but they can be in a city."
+		},
+		{
+			"key": "Vintner",
+			"value": "Vintner",
+			"description": "Winemaker. Might not have had their own shop except in large cities."
+		},
+		{
+			"key": "Weaponsmith",
+			"value": "Weaponsmith",
+			"description": "A blacksmith type shop specializing in weapons."
+		},
+		{
+			"key": "Weaver",
+			"value": "Weaver",
+			"description": "Basic Cloth, normally not dyed.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1
+			}
+		}
+	]
+}

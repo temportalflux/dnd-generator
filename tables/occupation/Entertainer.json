@@ -3,6 +3,7 @@
 		{
 			"key": "Acrobat",
 			"value": "Acrobat",
+			"description": "More often seen in theatres you can of course hire one for your own purposes.",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2
 			}
@@ -10,6 +11,7 @@
 		{
 			"key": "Actor",
 			"value": "Actor",
+			"description": "More often seen in theatres you can of course hire one for your own purposes.",
 			"modifiers": {
 				"stats.abilityScores.charisma": 2
 			}
@@ -41,6 +43,7 @@
 		{
 			"key": "Juggler",
 			"value": "Juggler",
+			"description": "More often seen in theatres you can of course hire one for your own purposes.",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 2
 			}
@@ -63,10 +66,29 @@
 		{
 			"key": "Storyteller",
 			"value": "Storyteller",
+			"description": "Entertainment for hire. Singing, dancing, and stories of the olden days.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 2,
 				"stats.abilityScores.wisdom": 2,
 				"stats.abilityScores.charisma": 2
+			}
+		},
+		{
+			"key": "Minstrel",
+			"value": "Minstrel",
+			"description": "Entertainment for hire. Singing, dancing, and stories of the olden days.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.charisma": 4
+			}
+		},
+		{
+			"key": "Bard",
+			"value": "Bard",
+			"description": "Entertainment for hire. Singing, dancing, and stories of the olden days.",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.charisma": 4
 			}
 		}
 	]

@@ -1,0 +1,65 @@
+{
+	"rows": [
+		{
+			"key": "Beggar",
+			"value": "Beggar",
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": -2,
+				"stats.abilityScores.wisdom": -2,
+				"stats.abilityScores.charisma": -2
+			}
+		},
+		{
+			"key": "Explorer",
+			"value": "Explorer",
+			"modifiers": {
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.wisdom": 1
+			}
+		},
+		{
+			"key": "Hermit",
+			"value": "Hermit",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1
+			},
+			"children": [
+				{
+					"key": "quirkReligious",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		},
+		{
+			"key": "Multiverse Traveller",
+			"value": "Multiverse Traveller"
+		},
+		{
+			"key": "Scavenger",
+			"value": "Scavenger"
+		},
+		{
+			"key": "Traveller of the Planes",
+			"value": "Traveller of the Planes"
+		},
+		{
+			"key": "Wandering Pilgrim",
+			"value": "Wandering Pilgrim",
+			"modifiers": {
+				"stats.abilityScores.wisdom": 1,
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.negative": -1
+			},
+			"children": [
+				{
+					"key": "quirkReligious",
+					"source": "{roll:quirks/religious}"
+				}
+			]
+		}
+	]
+}
