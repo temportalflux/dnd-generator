@@ -3,7 +3,7 @@
 		{
 			"weight": 10,
 			"key": "word",
-			"stringify": "the word $(word)",
+			"stringify": "the word \"$(word)\"",
 			"children": [
 				{
 					"key": "word",

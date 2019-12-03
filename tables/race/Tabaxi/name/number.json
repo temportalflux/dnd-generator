@@ -1,66 +1,82 @@
 {
 	"rows": [
 		{
+			"key": "Two",
 			"value": "Two",
 			"weight": 3
 		},
 		{
+			"key": "Three",
 			"value": "Three",
 			"weight": 5
 		},
 		{
+			"key": "Four",
 			"value": "Four",
 			"weight": 4
 		},
 		{
+			"key": "Five",
 			"value": "Five",
 			"weight": 5
 		},
 		{
+			"key": "Six",
 			"value": "Six",
 			"weight": 3
 		},
 		{
+			"key": "Seven",
 			"value": "Seven",
 			"weight": 5
 		},
 		{
+			"key": "Eight",
 			"value": "Eight",
 			"weight": 5
 		},
 		{
+			"key": "Nine",
 			"value": "Nine",
 			"weight": 5
 		},
 		{
+			"key": "Eleven",
 			"value": "Eleven",
 			"weight": 5
 		},
 		{
+			"key": "Twelve",
 			"value": "Twelve",
 			"weight": 5
 		},
 		{
+			"key": "Fourteen",
 			"value": "Fourteen",
 			"weight": 5
 		},
 		{
+			"key": "Eighteen",
 			"value": "Eighteen",
 			"weight": 5
 		},
 		{
+			"key": "Twenty",
 			"value": "Twenty",
 			"weight": 4
 		},
 		{
+			"key": "Fourty",
 			"value": "Fourty",
 			"weight": 3
 		},
 		{
+			"key": "A Hundred",
 			"value": "A Hundred",
 			"weight": 2
 		},
 		{
+			"key": "One Thousand",
 			"value": "One Thousand",
 			"weight": 1
 		}

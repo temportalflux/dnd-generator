@@ -3,7 +3,7 @@
 		{
 			"weight": 3,
 			"key": "text",
-			"stringify": "$(text)",
+			"stringify": "$(text.asString)",
 			"children": [
 				{
 					"key": "text",
@@ -14,7 +14,7 @@
 		{
 			"weight": 4,
 			"key": "animal",
-			"stringify": "tattoo of a $(animal)",
+			"stringify": "a tattoo of a $(animal)",
 			"children": [
 				{
 					"key": "animal",
@@ -25,7 +25,7 @@
 		{
 			"weight": 1,
 			"key": "weapon",
-			"stringify": "tattoo of a $(weapon)",
+			"stringify": "a tattoo of a $(weapon)",
 			"children": [
 				{
 					"key": "weapon",
@@ -36,12 +36,12 @@
 		{
 			"weight": 2,
 			"key": "abstract",
-			"stringify": "abstract tattoo"
+			"stringify": "an abstract tattoo"
 		},
 		{
 			"weight": 3,
 			"key": "tribal",
-			"stringify": "tribal tattoo"
+			"stringify": "a tribal tattoo"
 		}
 	]
 }

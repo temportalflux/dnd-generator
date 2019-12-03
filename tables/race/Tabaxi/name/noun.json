@@ -1,99 +1,131 @@
 {
 	"rows": [
 		{
+			"key": "Star",
 			"value": "Star"
 		},
 		{
+			"key": "Light",
 			"value": "Light"
 		},
 		{
+			"key": "Mirror",
 			"value": "Mirror"
 		},
 		{
+			"key": "Blade",
 			"value": "Blade"
 		},
 		{
+			"key": "Spider",
 			"value": "Spider"
 		},
 		{
+			"key": "Hummingbird",
 			"value": "Hummingbird"
 		},
 		{
+			"key": "Falcon",
 			"value": "Falcon"
 		},
 		{
+			"key": "Snake",
 			"value": "Snake"
 		},
 		{
+			"key": "Bat",
 			"value": "Bat"
 		},
 		{
+			"key": "Fang",
 			"value": "Fang"
 		},
 		{
+			"key": "Thundercloud",
 			"value": "Thundercloud"
 		},
 		{
+			"key": "Tree",
 			"value": "Tree"
 		},
 		{
+			"key": "Root",
 			"value": "Root"
 		},
 		{
+			"key": "Tail",
 			"value": "Tail"
 		},
 		{
+			"key": "Wisp",
 			"value": "Wisp"
 		},
 		{
+			"key": "Harp",
 			"value": "Harp"
 		},
 		{
+			"key": "Whisper",
 			"value": "Whisper"
 		},
 		{
+			"key": "Flame",
 			"value": "Flame"
 		},
 		{
+			"key": "Howl",
 			"value": "Howl"
 		},
 		{
+			"key": "Relic",
 			"value": "Relic"
 		},
 		{
+			"key": "Paw",
 			"value": "Paw"
 		},
 		{
+			"key": "Claw",
 			"value": "Claw"
 		},
 		{
+			"key": "Eagle",
 			"value": "Eagle"
 		},
 		{
+			"key": "Bull",
 			"value": "Bull"
 		},
 		{
+			"key": "Guardian",
 			"value": "Guardian"
 		},
 		{
+			"key": "Seer",
 			"value": "Seer"
 		},
 		{
+			"key": "Magpie",
 			"value": "Magpie"
 		},
 		{
+			"key": "Dragon",
 			"value": "Dragon"
 		},
 		{
+			"key": "Eye",
 			"value": "Eye"
 		},
 		{
+			"key": "Heart",
 			"value": "Heart"
 		},
 		{
+			"key": "Mind",
 			"value": "Mind"
 		},
 		{
+			"key": "Lord",
 			"value": "Lord"
 		}
 	]

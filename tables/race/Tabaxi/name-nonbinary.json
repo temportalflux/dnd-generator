@@ -1,50 +1,116 @@
 {
 	"rows": [
 		{
-			"source": [
-				"{roll:race/Tabaxi/name/first}",
-				"{roll:race/Tabaxi/name/noun}"
-			],
-			"weight": 10
+			"weight": 10,
+			"key": "first-noun",
+			"stringify": "$(first) $(second)",
+			"children": [
+				{
+					"key": "first",
+					"source": "{roll:race/Tabaxi/name/first}"
+				},
+				{
+					"key": "second",
+					"source": "{roll:race/Tabaxi/name/noun}"
+				}
+			]
+		},
+		{
+			"weight": 6,
+			"key": "noun-last",
+			"stringify": "$(first) $(second)",
+			"children": [
+				{
+					"key": "first",
+					"source": "{roll:race/Tabaxi/name/noun}"
+				},
+				{
+					"key": "second",
+					"source": "{roll:race/Tabaxi/name/last}"
+				}
+			]
+		},
+		{
+			"weight": 6,
+			"key": "number-noun",
+			"stringify": "$(first) $(second)",
+			"children": [
+				{
+					"key": "first",
+					"source": "{roll:race/Tabaxi/name/number}"
+				},
+				{
+					"key": "second",
+					"source": "{roll:race/Tabaxi/name/noun}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"key": "number-noun-last",
+			"stringify": "$(first) $(second) $(third)",
+			"children": [
+				{
+					"key": "first",
+					"source": "{roll:race/Tabaxi/name/number}"
+				},
+				{
+					"key": "second",
+					"source": "{roll:race/Tabaxi/name/noun}"
+				},
+				{
+					"key": "third",
+					"source": "{roll:race/Tabaxi/name/last}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"key": "number-first-noun",
+			"stringify": "$(first) $(second) $(third)",
+			"children": [
+				{
+					"key": "first",
+					"source": "{roll:race/Tabaxi/name/number}"
+				},
+				{
+					"key": "second",
+					"source": "{roll:race/Tabaxi/name/first}"
+				},
+				{
+					"key": "third",
+					"source": "{roll:race/Tabaxi/name/noun}"
+				}
+			]
 		},
 		{
 			"source": [
+				"{roll:race/Tabaxi/name/number}",
+				"{roll:race/Tabaxi/name/first}",
 				"{roll:race/Tabaxi/name/noun}",
 				"{roll:race/Tabaxi/name/last}"
 			],
-			"weight": 4
-		},
-		{
-			"source": [
-				"{roll:race/Tabaxi/name/number}",
-				"{roll:race/Tabaxi/name/noun}"
-			],
-			"weight": 6
-		},
-		{
-			"source": [
-				"{roll:race/Tabaxi/name/number}",
-				"{roll:race/Tabaxi/name/noun}",
-				"{roll:race/Tabaxi/name/last}"
-			],
-			"weight": 4
-		},
-		{
-			"source": [
-				"{roll:race/Tabaxi/name/number}",
-				"{roll:race/Tabaxi/name/first}",
-				"{roll:race/Tabaxi/name/noun}"
-			],
-			"weight": 4
-		},
-		{
-			"source": [
-				"{roll:race/Tabaxi/name/number}",
-				"{roll:race/Tabaxi/name/first}",
-				"{roll:race/Tabaxi/name/noun}",
-				"{roll:race/Tabaxi/name/last}"
-			],
-			"weight": 1
+			"weight": 1,
+			"key": "number-first-noun-last",
+			"stringify": "$(first) $(second) $(third) $(fourth)",
+			"children": [
+				{
+					"key": "first",
+					"source": "{roll:race/Tabaxi/name/number}"
+				},
+				{
+					"key": "second",
+					"source": "{roll:race/Tabaxi/name/first}"
+				},
+				{
+					"key": "third",
+					"source": "{roll:race/Tabaxi/name/noun}"
+				},
+				{
+					"key": "fourth",
+					"source": "{roll:race/Tabaxi/name/last}"
+				}
+			]
 		}
 	]
 }

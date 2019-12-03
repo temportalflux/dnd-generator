@@ -1,143 +1,143 @@
 {
 	"rows": [
 		{
-			"value": "Swift",
+			"key": "Swift", "value": "Swift",
 			"weight": 3
 		},
 		{
-			"value": "Wandering",
+			"key": "Wandering", "value": "Wandering",
 			"weight": 3
 		},
 		{
-			"value": "Jade",
+			"key": "Jade", "value": "Jade",
 			"weight": 2
 		},
 		{
-			"value": "Iron",
+			"key": "Iron", "value": "Iron",
 			"weight": 2
 		},
 		{
-			"value": "Steel",
+			"key": "Steel", "value": "Steel",
 			"weight": 2
 		},
 		{
-			"value": "Wooden",
+			"key": "Wooden", "value": "Wooden",
 			"weight": 2
 		},
 		{
-			"value": "Left-Handed",
+			"key": "Left-Handed", "value": "Left-Handed",
 			"weight": 2
 		},
 		{
-			"value": "Right-Handed",
+			"key": "Right-Handed", "value": "Right-Handed",
 			"weight": 2
 		},
 		{
-			"value": "Quick",
+			"key": "Quick", "value": "Quick",
 			"weight": 3
 		},
 		{
-			"value": "Wise",
+			"key": "Wise", "value": "Wise",
 			"weight": 2
 		},
 		{
-			"value": "Keen",
+			"key": "Keen", "value": "Keen",
 			"weight": 2
 		},
 		{
-			"value": "Bright",
+			"key": "Bright", "value": "Bright",
 			"weight": 2
 		},
 		{
-			"value": "Shining",
+			"key": "Shining", "value": "Shining",
 			"weight": 2
 		},
 		{
-			"value": "Vivid",
+			"key": "Vivid", "value": "Vivid",
 			"weight": 2
 		},
 		{
-			"value": "Noble",
+			"key": "Noble", "value": "Noble",
 			"weight": 2
 		},
 		{
-			"value": "Strong",
+			"key": "Strong", "value": "Strong",
 			"weight": 2
 		},
 		{
-			"value": "Fair",
+			"key": "Fair", "value": "Fair",
 			"weight": 2
 		},
 		{
-			"value": "Distant",
+			"key": "Distant", "value": "Distant",
 			"weight": 2
 		},
 		{
-			"value": "Lone",
+			"key": "Lone", "value": "Lone",
 			"weight": 2
 		},
 		{
-			"value": "Brave",
+			"key": "Brave", "value": "Brave",
 			"weight": 2
 		},
 		{
-			"value": "Ancient",
+			"key": "Ancient", "value": "Ancient",
 			"weight": 2
 		},
 		{
-			"value": "Doomed",
+			"key": "Doomed", "value": "Doomed",
 			"weight": 1
 		},
 		{
-			"value": "Discreet",
+			"key": "Discreet", "value": "Discreet",
 			"weight": 2
 		},
 		{
-			"value": "Fiery",
+			"key": "Fiery", "value": "Fiery",
 			"weight": 2
 		},
 		{
-			"value": "Blazing",
+			"key": "Blazing", "value": "Blazing",
 			"weight": 2
 		},
 		{
-			"value": "Frozen",
+			"key": "Frozen", "value": "Frozen",
 			"weight": 2
 		},
 		{
-			"value": "Lost",
+			"key": "Lost", "value": "Lost",
 			"weight": 2
 		},
 		{
-			"value": "Magical",
+			"key": "Magical", "value": "Magical",
 			"weight": 2
 		},
 		{
-			"value": "Mystic",
+			"key": "Mystic", "value": "Mystic",
 			"weight": 3
 		},
 		{
-			"value": "Secret",
+			"key": "Secret", "value": "Secret",
 			"weight": 2
 		},
 		{
-			"value": "Hidden",
+			"key": "Hidden", "value": "Hidden",
 			"weight": 2
 		},
 		{
-			"value": "Fleeting",
+			"key": "Fleeting", "value": "Fleeting",
 			"weight": 2
 		},
 		{
-			"value": "Valorous",
+			"key": "Valorous", "value": "Valorous",
 			"weight": 2
 		},
 		{
-			"value": "Curious",
+			"key": "Curious", "value": "Curious",
 			"weight": 3
 		},
 		{
-			"value": "Thieving",
+			"key": "Thieving", "value": "Thieving",
 			"weight": 2
 		}
 	]

@@ -1,83 +1,83 @@
 {
 	"rows": [
 		{
-			"value": "on the Mountaintop",
+			"key": "Mountaintop", "value": "on the Mountaintop",
 			"weight": 2
 		},
 		{
-			"value": "in the Wind",
+			"key": "Wind", "value": "in the Wind",
 			"weight": 2
 		},
 		{
-			"value": "under the Earth",
+			"key": "Earth", "value": "under the Earth",
 			"weight": 2
 		},
 		{
-			"value": "in the Night",
+			"key": "Night", "value": "in the Night",
 			"weight": 2
 		},
 		{
-			"value": "in the Rain",
+			"key": "Rain", "value": "in the Rain",
 			"weight": 2
 		},
 		{
-			"value": "in the Forest",
+			"key": "Forest", "value": "in the Forest",
 			"weight": 2
 		},
 		{
-			"value": "by the Lake",
+			"key": "Lake", "value": "by the Lake",
 			"weight": 2
 		},
 		{
-			"value": "by the River",
+			"key": "River", "value": "by the River",
 			"weight": 2
 		},
 		{
-			"value": "in the Darkness",
+			"key": "Darkness", "value": "in the Darkness",
 			"weight": 2
 		},
 		{
-			"value": "Dancing in the Rain",
+			"key": "Dancing in the Rain", "value": "Dancing in the Rain",
 			"weight": 1
 		},
 		{
-			"value": "Running like the Wind",
+			"key": "Running like the Wind", "value": "Running like the Wind",
 			"weight": 1
 		},
 		{
-			"value": "Walking on Water",
+			"key": "Walking on Water", "value": "Walking on Water",
 			"weight": 1
 		},
 		{
-			"value": "Shadowed by the Clouds",
+			"key": "Shadowed by the Clouds", "value": "Shadowed by the Clouds",
 			"weight": 1
 		},
 		{
-			"value": "Lost in Song",
+			"key": "Lost in Song", "value": "Lost in Song",
 			"weight": 1
 		},
 		{
-			"value": "Blessed by the Fire",
+			"key": "Blessed by the Fire", "value": "Blessed by the Fire",
 			"weight": 1
 		},
 		{
-			"value": "Embraced by the Gods",
+			"key": "Embraced by the Gods", "value": "Embraced by the Gods",
 			"weight": 1
 		},
 		{
-			"value": "Comforted by the Winds",
+			"key": "Comforted by the Winds", "value": "Comforted by the Winds",
 			"weight": 1
 		},
 		{
-			"value": "Forever at Peace",
+			"key": "Forever at Peace", "value": "Forever at Peace",
 			"weight": 1
 		},
 		{
-			"value": "Smiling in the Face of Death",
+			"key": "Smiling in the Face of Death", "value": "Smiling in the Face of Death",
 			"weight": 1
 		},
 		{
-			"value": "Fighting the Tide",
+			"key": "Fighting the Tide", "value": "Fighting the Tide",
 			"weight": 1
 		}
 	]

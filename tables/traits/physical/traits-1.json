@@ -189,12 +189,8 @@
 		{
 			"weight": 5,
 			"key": "1tattoo",
-			"stringify": "$(identity.pronouns.singular) has $(descriptor) $(tattoo.asString) on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
+			"stringify": "$(identity.pronouns.singular) has $(tattoo.asString) on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
-				{
-					"key": "descriptor",
-					"source": "{roll:traits/descriptor}"
-				},
 				{
 					"key": "tattoo",
 					"source": "{roll:traits/tattoo}"
@@ -208,12 +204,8 @@
 		{
 			"weight": 2,
 			"key": "2tattoo",
-			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooA.asString) on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(descriptorB) $(tattooB.asString) on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
+			"stringify": "$(identity.pronouns.singular) has $(tattooA.asString) on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(tattooB.asString) on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
 			"children": [
-				{
-					"key": "descriptorA",
-					"source": "{roll:traits/descriptor}"
-				},
 				{
 					"key": "tattooA",
 					"source": "{roll:traits/tattoo}"
@@ -221,10 +213,6 @@
 				{
 					"key": "bodyPartA",
 					"source": "{roll:traits/bodyPart/head}"
-				},
-				{
-					"key": "descriptorB",
-					"source": "{roll:traits/descriptor}"
 				},
 				{
 					"key": "tattooB",
@@ -239,12 +227,8 @@
 		{
 			"weight": 1,
 			"key": "3tattoo",
-			"stringify": "$(identity.pronouns.singular) has $(descriptorA) $(tattooA.asString) on $(identity.pronouns.selfPossessive) $(bodyPartA.asString), $(descriptorB) $(tattooB.asString) on $(identity.pronouns.selfPossessive) $(bodyPartB.asString), and $(descriptorC) $(tattooC.asString) on $(identity.pronouns.selfPossessive) $(bodyPartC.asString).",
+			"stringify": "$(identity.pronouns.singular) has $(tattooA.asString) on $(identity.pronouns.selfPossessive) $(bodyPartA.asString), $(tattooB.asString) on $(identity.pronouns.selfPossessive) $(bodyPartB.asString), and $(tattooC.asString) on $(identity.pronouns.selfPossessive) $(bodyPartC.asString).",
 			"children": [
-				{
-					"key": "descriptorA",
-					"source": "{roll:traits/descriptor}"
-				},
 				{
 					"key": "tattooA",
 					"source": "{roll:traits/tattoo}"
@@ -254,20 +238,12 @@
 					"source": "{roll:traits/bodyPart/head}"
 				},
 				{
-					"key": "descriptorB",
-					"source": "{roll:traits/descriptor}"
-				},
-				{
 					"key": "tattooB",
 					"source": "{roll:traits/tattoo}"
 				},
 				{
 					"key": "bodyPartB",
 					"source": "{roll:traits/bodyPart/head}"
-				},
-				{
-					"key": "descriptorC",
-					"source": "{roll:traits/descriptor}"
 				},
 				{
 					"key": "tattooC",
