@@ -164,6 +164,9 @@ export function ArticleContent({ usePlainText })
 			</List.Item>
 		));
 
+	const hooks = npc.getEntry('hooks.hook');
+	const relationshipStatus = npc.getEntry('relations.relationship');
+
 	return (
 		<div>
 			{usePlainText && (
@@ -257,6 +260,16 @@ export function ArticleContent({ usePlainText })
 				{quirkList}
 			</List>
 
+			<Header as='h1' content='Relations' />
+			<b>Relationship Status:</b> {createEntryItem(relationshipStatus)}
+			
+			<Header as='h1' content='Hooks' />
+			<List bulleted as='ul'>
+				<List.Item as='li'>
+					{createEntryItem(hooks)}
+				</List.Item>
+			</List>
+
 			<Header as='h1' content='Stats' />
 
 			<Header as='h2' content='Ability Scores' />
@@ -324,8 +337,6 @@ export function ArticleContent({ usePlainText })
 					</Table.Row>
 				</Table.Body>
 			</Table>
-
-			{/*<Header as='h1' content='Plot Hook' />*/}
 
 		</div>
 	);
