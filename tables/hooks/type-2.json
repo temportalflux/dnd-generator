@@ -1,0 +1,296 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is looking for $(identity.pronouns.possessive) lost }{relationship}{$hook+$rela}{$hook+, who never actually existed."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has recently obtained a fake map to a great treasure."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) seeks revenge for the death of $(identity.pronouns.possessive) {relationship}{$hook+$rela}{$hook+, who never actually existed."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) needs the party to deliver a tamed }{roll:misc/monster}{$hook+$monster}{$hook+ to a local wizard."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) needs the party to deliver a tamed }{roll:misc/monster}{$hook+$monster}{$hook+ to a local zoo."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) needs the party to deliver a tamed }{roll:misc/monster}{$hook+$monster}{$hook+ to a local circus."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) needs the party to deliver a tamed }{roll:misc/monster}{$hook+$monster}{$hook+ to a local museum."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is followed day and night by a }{personality}{$hook+$personality}{$hook+ speaking crow."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is followed day and night by a }{personality}{$hook+$personality}{$hook+ speaking mouse."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is followed day and night by a }{personality}{$hook+$personality}{$hook+ speaking snake."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is followed day and night by a }{personality}{$hook+$personality}{$hook+ speaking cat."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is followed day and night by an animated }{furniture}{$hook+$furniture}{$hook+."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has been cursed into speaking only gibberish."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is willingly wearing a cursed }{$precious=}{precious}{$hook+$precious}{$hook+."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has been hexed into constantly hallucinating."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has been hexed and is now constantly hungry."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) has been hexed into becoming minuscule."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) has been hexed into becoming gigantic."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is being constantly pranked by a leprechaun."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is being constantly psychologically tortured by a crazed leprechaun."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) needs help sabotaging a }{contest}{$hook+."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a were}{werebeast}{$hook+$wb}{$hook+."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a were}{werebeast}{$hook+$wb}{$hook+ and tries to convince the PCs to let $(identity.pronouns.thirdPerson) change them as well."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a were}{werebeast}{$hook+$wb}{$hook+ and wants to get rid of it."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a were}{werebeast}{$hook+$wb}{$hook+ and is looking for acceptance within society."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) approaches the PC by falling from the sky. $(identity.pronouns.singular) has 50% chance of surviving the landing."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is currently chasing a band of bandits and asks the PCs for help."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is currently being chased by a band of bandits }{$hook+$minPro}{$hook+just stole from and asks the PCs for protection."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a doppleganger."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is actually a doppleganger who killed }{$hook+$name}{$hook+ and is living $(identity.pronouns.possessive) life."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a doppleganger posing as one of the PCs."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) lives with an incubus."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) lives with a succubus."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) lives with an incubus. They are trying to fit in with society."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) lives with a succubus. They are trying to fit in with society."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is raising an Otyugh in the town's sewer system. It's always hungry."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.possessive) home has been infested by zombies. Upon further inquiry, the zombies are asking for help."
+		},
+		{
+			"weight": 2,
+			"value": "All of $(identity.pronouns.possessive) furniture has suddenly become animated."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.possessive) home has been infested by zombies. Upon further inquiry, the zombies are asking for brains."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.possessive) home has been infested by zombies. Upon further inquiry, the zombies used to live there, and are claiming the house as belonging to them."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is a serial killer at night."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a cannibal."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is a cannibal, and $(identity.pronouns.singular) wants to convert the PCs to $(identity.pronouns.possessive) ways."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is a secret vigilante."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a secret vigilante, and considers the PCs a threat to society."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is addicted to }{roll:misc/monster}{$hook+$monster}{$hook+ blood."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) wants the PCs to help $(identity.pronouns.possessive) tame }{amonster}{$hook+$monster}{$hook+."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is being stalked by a gibbering mouth at night"
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is actually an Oni posing as a }{$hook+$race}{$hook+."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has fallen in love with a dryad from a local forest."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has fallen in love with a mermaid from the nearest water source."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has fallen in love with a fairy from the nearby woods."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is obsessively in love with a dryad. $(identity.pronouns.singular) keeps her locked up in $(identity.pronouns.possessive) basement."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is obsessively in love with a mermaid. $(identity.pronouns.singular) keeps her locked up in $(identity.pronouns.possessive) basement."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is obsessively in love with a fairy. $(identity.pronouns.singular) keeps her locked up in $(identity.pronouns.possessive) basement."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) has been enslaved by a demon."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is being controlled by an illithid."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is being harassed about a threat of impending doom by a pseudodragon."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is slowly becoming a plant."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is followed by multiple animals at all time."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is openly a vampire."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) talks very fast and incomprehensibly to the NPCs before turning to stone."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) talks very fast and incomprehensibly to the NPCs before turning to dust."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is actually a }{dragons}{$hook+$dragon}{$hook+ dragon."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has recently come into possession of an unreasonable amount of fish, and it's not clear why."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) gives the PCs a magical }{$precious=}{precious}{$hook+$precious}{$hook+. Turns out }{$hook+$minPro}{$hook+had stolen it from an imp who is hellbent on recovering it."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a time traveller from a distant past."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a time traveller from a distant past. $(identity.pronouns.singular) is obsessed with finding her descendants."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a time traveller from a distant past. $(identity.pronouns.singular) is obsessed with finding the treasure }{$hook+$minPro}{$hook+buried thousands of years ago."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is a time traveller from a distant future. $(identity.pronouns.singular) needs help sleeping for a few thousand years."
+		},
+		{
+			"weight": 1,
+			"value": "$(identity.pronouns.singular) is a time traveller from a distant future. $(identity.pronouns.singular) is trying to alter the course of history."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is possessed by an evil spirit. They argue constantly."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) has started using snakes as currency, and it's starting to catch on."
+		}
+	]
+}

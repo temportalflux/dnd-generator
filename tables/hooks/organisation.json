@@ -1,0 +1,49 @@
+{
+	"rows": [
+		{
+			"weight": 3,
+			"key": "wizards' guild",
+			"value": "wizards' guild"
+		},
+		{
+			"weight": 3,
+			"key": "fighters' club",
+			"value": "fighters' club"
+		},
+		{
+			"weight": 3,
+			"key": "thiefs' guild",
+			"value": "thiefs' guild"
+		},
+		{
+			"weight": 3,
+			"key": "witchs' coven",
+			"value": "witchs' coven"
+		},
+		{
+			"weight": 2,
+			"key": "assassins' guild",
+			"value": "assassins' guild"
+		},
+		{
+			"weight": 1,
+			"key": "cult's hideout",
+			"value": "cult's hideout"
+		},
+		{
+			"weight": 3,
+			"key": "clergy",
+			"value": "clergy"
+		},
+		{
+			"weight": 3,
+			"key": "monks' monastery",
+			"value": "monks' monastery"
+		},
+		{
+			"weight": 3,
+			"key": "traders' guild",
+			"value": "traders' guild"
+		}
+	]
+}

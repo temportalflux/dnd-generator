@@ -1,0 +1,74 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"key": "horse riding contest",
+			"value": "horse riding contest"
+		},
+		{
+			"weight": 2,
+			"key": "drinking competition",
+			"value": "drinking competition"
+		},
+		{
+			"weight": 2,
+			"key": "hunting competition",
+			"value": "hunting competition"
+		},
+		{
+			"weight": 2,
+			"key": "monster slaying tournament",
+			"value": "monster slaying tournament"
+		},
+		{
+			"weight": 2,
+			"key": "shooting contest",
+			"value": "shooting contest"
+		},
+		{
+			"weight": 4,
+			"key": "fighting competition",
+			"value": "fighting competition"
+		},
+		{
+			"weight": 2,
+			"key": "hot coals race",
+			"value": "hot coals race"
+		},
+		{
+			"weight": 2,
+			"key": "book reading competition",
+			"value": "book reading competition"
+		},
+		{
+			"weight": 2,
+			"key": "grand melee tournament",
+			"value": "grand melee tournament"
+		},
+		{
+			"weight": 2,
+			"key": "pie eating competition",
+			"value": "pie eating competition"
+		},
+		{
+			"weight": 3,
+			"key": "race",
+			"value": "race"
+		},
+		{
+			"weight": 2,
+			"key": "pumpkin tossing contest",
+			"value": "pumpkin tossing contest"
+		},
+		{
+			"weight": 2,
+			"key": "rock throwing competition",
+			"value": "rock throwing competition"
+		},
+		{
+			"weight": 2,
+			"key": "tree trunk tossing contest",
+			"value": "tree trunk tossing contest"
+		}
+	]
+}
