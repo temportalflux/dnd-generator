@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"key": "Akadi", "value": "Akadi",
-			"description": "Akadi, Goddess of air, movement and speed (True Neutral)",
+			"articleContent": "Akadi, Goddess of air, movement and speed (True Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -10,7 +10,7 @@
 		},
 		{
 			"key": "Chauntea", "value": "Chauntea",
-			"description": "Chauntea, Goddess of agriculture, farmers, gardeners and summer (Neutral Good)",
+			"articleContent": "Chauntea, Goddess of agriculture, farmers, gardeners and summer (Neutral Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -18,7 +18,7 @@
 		},
 		{
 			"key": "Grumbar", "value": "Grumbar",
-			"description": "Grumbar, God of earth, solidity, changelessness, oaths (True Neutral)",
+			"articleContent": "Grumbar, God of earth, solidity, changelessness, oaths (True Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -26,7 +26,7 @@
 		},
 		{
 			"key": "Istishia", "value": "Istishia",
-			"description": "Istishia, God of water, purification, wetness (True Neutral)",
+			"articleContent": "Istishia, God of water, purification, wetness (True Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -34,7 +34,7 @@
 		},
 		{
 			"key": "Kelemvor", "value": "Kelemvor",
-			"description": "Kelemvor, God of death and the dead (Lawful Neutral)",
+			"articleContent": "Kelemvor, God of death and the dead (Lawful Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -42,7 +42,7 @@
 		},
 		{
 			"key": "Kossuth", "value": "Kossuth",
-			"description": "Kossuth, God of fire, purification through fire (True Neutral)",
+			"articleContent": "Kossuth, God of fire, purification through fire (True Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -50,7 +50,7 @@
 		},
 		{
 			"key": "Lathander", "value": "Lathander",
-			"description": "Lathander, God of spring, dawn, birth, youth, vitality, athletics (Neutral Good)",
+			"articleContent": "Lathander, God of spring, dawn, birth, youth, vitality, athletics (Neutral Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -58,7 +58,7 @@
 		},
 		{
 			"key": "Mystra", "value": "Mystra",
-			"description": "Mystra, Goddess of magic, spells, the Weave (Neutral Good)",
+			"articleContent": "Mystra, Goddess of magic, spells, the Weave (Neutral Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -66,7 +66,7 @@
 		},
 		{
 			"key": "Oghma", "value": "Oghma",
-			"description": "Oghma, God of knowledge, invention, inspiration, bards (True Neutral)",
+			"articleContent": "Oghma, God of knowledge, invention, inspiration, bards (True Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -74,7 +74,7 @@
 		},
 		{
 			"key": "Selune", "value": "Selune",
-			"description": "Selune, Goddess of the moon, stars, navigation, prophecy, questers, lycanthropes (Neutral Good)",
+			"articleContent": "Selune, Goddess of the moon, stars, navigation, prophecy, questers, lycanthropes (Neutral Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -82,7 +82,7 @@
 		},
 		{
 			"key": "Silvanus", "value": "Silvanus",
-			"description": "Silvanus, God of wild nature, druids (True Neutral)",
+			"articleContent": "Silvanus, God of wild nature, druids (True Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -90,7 +90,7 @@
 		},
 		{
 			"key": "Sune", "value": "Sune",
-			"description": "Sune, Goddess of beauty, love, passion (Chaotic Good)",
+			"articleContent": "Sune, Goddess of beauty, love, passion (Chaotic Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -98,7 +98,7 @@
 		},
 		{
 			"key": "Tempus", "value": "Tempus",
-			"description": "Tempus, God of war, battle, warriors (Chaotic Neutral)",
+			"articleContent": "Tempus, God of war, battle, warriors (Chaotic Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.negative": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
@@ -106,7 +106,7 @@
 		},
 		{
 			"key": "Torm", "value": "Torm",
-			"description": "Torm, God of duty, loyalty, obedience, paladins (Lawful Good)",
+			"articleContent": "Torm, God of duty, loyalty, obedience, paladins (Lawful Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -114,7 +114,7 @@
 		},
 		{
 			"key": "Tyr", "value": "Tyr",
-			"description": "Tyr, God of justice (Lawful Good)",
+			"articleContent": "Tyr, God of justice (Lawful Good)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.positive": 2,
 				"stats.alignmentTendancies.moral.positive": 2
@@ -122,7 +122,7 @@
 		},
 		{
 			"key": "Ubtao", "value": "Ubtao",
-			"description": "Ubtao, God of creation, jungles, Chult, the Chultans, dinosaurs (True Neutral)",
+			"articleContent": "Ubtao, God of creation, jungles, Chult, the Chultans, dinosaurs (True Neutral)",
 			"modifiers": {
 				"stats.alignmentTendancies.ethical.neutral": 2,
 				"stats.alignmentTendancies.moral.neutral": 2
