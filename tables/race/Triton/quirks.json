@@ -1,0 +1,57 @@
+{
+	"rows": [
+		{
+			"weight": 25,
+			"key": "none",
+			"stringify": "none"
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is disgusted by human architecture."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) feels more comfortable underwater."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) will boast the greatness of Triton civilization at every opportunity."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) speaks an antiquated version of common."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) has a hard time understanding sarcasm."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is fascinated by the surface world, and can often be seen scribbling notes or drawings."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) is surprised when people don't know everything about Triton culture."
+		},
+		{
+			"weight": 4,
+			"value": "$(identity.pronouns.singular) is still struggling to understand the surface's culture."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) always knows if it's going to rain."
+		},
+		{
+			"weight": 3,
+			"value": "$(identity.pronouns.singular) goes swimming every day."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) views other cultures as barbaric."
+		},
+		{
+			"weight": 2,
+			"value": "$(identity.pronouns.singular) is deeply xenophobic."
+		}
+	]
+}

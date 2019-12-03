@@ -25,7 +25,9 @@
 		"personality.trait2",
 		"description.specialPhysical",
 		"occupation.area",
-		"occupation.profession"
+		"occupation.profession",
+		"relations.relationship",
+		"hooks.hook"
 	],
 	"fieldOrder": [
 		{
@@ -268,10 +270,16 @@
 			"category": "occupation",
 			"key": "profession",
 			"source": "{roll:occupation/$(occupation.area)}"
+		},
+		{
+			"category": "hooks",
+			"key": "hook",
+			"source": "{roll:hooks/all}"
+		},
+		{
+			"category": "relations",
+			"key": "relationship",
+			"source": "{roll:relationship/status}"
 		}
-	],
-	"fields": {
-		"relationships": {},
-		"hooks": {}
-	}
+	]
 }

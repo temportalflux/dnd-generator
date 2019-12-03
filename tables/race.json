@@ -286,7 +286,7 @@
 				},
 				{
 					"key": "skin",
-					"source": "{roll:race/Half-Dwarf/skin}"
+					"source": "{roll:race/Dwarf/skin}"
 				},
 				{
 					"key": "quirk",
@@ -611,7 +611,7 @@
 				{
 					"key": "quirk",
 					"collection": "personality.quirks",
-					"source": "{roll:race/Elf/quirks}"
+					"source": "{roll:race/Triton/quirks}"
 				}
 			]
 		},

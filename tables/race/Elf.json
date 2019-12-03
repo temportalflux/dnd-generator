@@ -3,17 +3,47 @@
 		{
 			"weight": 6,
 			"key": "High",
-			"value": "High"
+			"value": "High",
+			"modifiers": {
+				"stats.abilityScores.strength": -1,
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": 2,
+				"stats.abilityScores.charisma": 2,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
 		},
 		{
 			"weight": 8,
 			"key": "Wood",
-			"value": "Wood"
+			"value": "Wood",
+			"modifiers": {
+				"stats.abilityScores.strength": -1,
+				"stats.abilityScores.dexterity": 4,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": 4,
+				"stats.abilityScores.wisdom": 4,
+				"stats.abilityScores.charisma": 2,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.positive": 2
+			}
 		},
 		{
 			"weight": 2,
 			"key": "Drow",
 			"value": "Drow",
+			"modifiers": {
+				"stats.abilityScores.strength": -1,
+				"stats.abilityScores.dexterity": 2,
+				"stats.abilityScores.constitution": -2,
+				"stats.abilityScores.intelligence": 2,
+				"stats.abilityScores.wisdom": 2,
+				"stats.abilityScores.charisma": 4,
+				"stats.alignmentTendancies.ethical.negative": 3,
+				"stats.alignmentTendancies.moral.neutral": 4
+			},
 			"children": [
 				{
 					"key": "qurik",

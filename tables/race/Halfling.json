@@ -2,11 +2,33 @@
 	"rows": [
 		{
 			"key": "Lightfoot",
-			"value": "Lightfoot"
+			"value": "Lightfoot",
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 4,
+				"stats.abilityScores.constitution": -1,
+				"stats.abilityScores.intelligence": 0,
+				"stats.abilityScores.wisdom": 0,
+				"stats.abilityScores.charisma": 2,
+				"stats.alignmentTendancies.ethical.positive": 3,
+				"stats.alignmentTendancies.moral.positive": 3
+			}
 		},
 		{
 			"key": "Stout",
-			"value": "Stout"
+			"value": "Stout",
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 4,
+				"stats.abilityScores.constitution": 1,
+				"stats.abilityScores.intelligence": 0,
+				"stats.abilityScores.wisdom": 0,
+				"stats.abilityScores.charisma": 0,
+				"stats.alignmentTendancies.ethical.positive": 3,
+				"stats.alignmentTendancies.ethical.negative": -1,
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.negative": -1
+			}
 		}
 	]
 }

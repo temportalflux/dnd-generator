@@ -1,0 +1,54 @@
+{
+	"rows": [
+		{
+			"weight": 20,
+			"key": "Single",
+			"value": "Single"
+		},
+		{
+			"weight": 17,
+			"key": "Relationship",
+			"value": "In a relationship"
+		},
+		{
+			"weight": 15,
+			"key": "Married",
+			"value": "Married"
+		},
+		{
+			"weight": 3,
+			"key": "Divorced",
+			"value": "Divorced"
+		},
+		{
+			"weight": 3,
+			"key": "Widowed",
+			"value": "Widowed"
+		},
+		{
+			"weight": 2,
+			"key": "Recently broke up",
+			"value": "Recently broke up"
+		},
+		{
+			"weight": 2,
+			"key": "Recently divorced",
+			"value": "Recently divorced"
+		},
+		{
+			"weight": 2,
+			"key": "Recently widowed",
+			"value": "Recently widowed"
+		},
+		{
+			"weight": 3,
+			"key": "Seeing someone who is married",
+			"value": "Seeing someone who is married"
+		},
+		{
+			"weight": 4,
+			"key": "Married and having an affair",
+			"value": "Married and having an affair"
+		}
+	]
+}

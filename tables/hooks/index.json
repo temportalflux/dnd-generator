@@ -1,6 +1,8 @@
 [
-	"type-1",
-	"type-2",
+	"all",
+	"contest",
+	"furniture",
 	"organization",
-	"contest"
+	"personality",
+	"werebeast"
 ]

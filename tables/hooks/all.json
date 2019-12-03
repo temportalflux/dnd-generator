@@ -1,0 +1,1004 @@
+{
+	"rows": [
+		{
+			"weight": 2,
+			"key": "map-treasure",
+			"stringify": "$(identity.pronouns.singular) has recently obtained a map to a great treasure."
+		},
+		{
+			"weight": 2,
+			"key": "map-civilization",
+			"stringify": "$(identity.pronouns.singular) has recently obtained a map to an old and forgotten civilization."
+		},
+		{
+			"weight": 2,
+			"key": "houseFire",
+			"stringify": "$(identity.pronouns.possessive) house was recently burned down by a mysterious fire."
+		},
+		{
+			"weight": 2,
+			"key": "houseQuake",
+			"stringify": "$(identity.pronouns.possessive) house was recently destroyed by a mysterious earthquake."
+		},
+		{
+			"weight": 2,
+			"key": "houseTornado",
+			"stringify": "$(identity.pronouns.possessive) house was recently destroyed by a mysterious tornado."
+		},
+		{
+			"weight": 3,
+			"key": "lostRelative",
+			"stringify": "$(identity.pronouns.singular) is looking for $(identity.pronouns.possessive) lost $(relation).",
+			"children": [
+				{
+					"key": "relation",
+					"source": "{roll:relationship/any}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "lostItem",
+			"stringify": "$(identity.pronouns.singular) is looking for $(identity.pronouns.possessive) lost $(item).",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "missingItem",
+			"stringify": "$(identity.pronouns.singular) needs help finding a $(item).",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "stealItemFromHouse",
+			"stringify": "$(identity.pronouns.singular) needs help stealing a $(item) from a nearby house.",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "stealItemFromCommerce",
+			"stringify": "$(identity.pronouns.singular) needs help stealing a $(item) from a nearby commerce.",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "stealItemFromCastle",
+			"stringify": "$(identity.pronouns.singular) needs help stealing a $(item) from a nearby castle.",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "revenge",
+			"stringify": "$(identity.pronouns.singular) seeks revenge for the death of $(identity.pronouns.possessive) $(relation).",
+			"children": [
+				{
+					"key": "relation",
+					"source": "{roll:relationship/any}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "fightRebellionGovernment",
+			"stringify": "$(identity.pronouns.singular) needs help fighting a rebellious organization who wants to take control of the governement."
+		},
+		{
+			"weight": 2,
+			"key": "fightRebellionClergy",
+			"stringify": "$(identity.pronouns.singular) needs help fighting a rebellious organization who wants to take control of the clergy."
+		},
+		{
+			"weight": 2,
+			"key": "helpRebellionGovernment",
+			"stringify": "$(identity.pronouns.singular) is part of a secret rebellious organization who wants to take control of the government."
+		},
+		{
+			"weight": 2,
+			"key": "helpRebellionClergy",
+			"stringify": "$(identity.pronouns.singular) is part of a secret rebellious organization who wants to take control of the clergy."
+		},
+		{
+			"weight": 4,
+			"key": "deliverItemRelation",
+			"stringify": "$(identity.pronouns.singular) needs the party to deliver a $(item) to $(identity.pronouns.possessive) $(relation).",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				},
+				{
+					"key": "relation",
+					"source": "{roll:relationship/any}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"key": "deliverItemOrganization",
+			"stringify": "$(identity.pronouns.singular) needs the party to deliver a $(item) to the local $(organisation).",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/preciousPrefixed}"
+				},
+				{
+					"key": "organization",
+					"source": "{roll:hooks/organization}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "obsessedWaterfalls",
+			"stringify": "$(identity.pronouns.singular) is obsessed with a nearby cavern with amazing waterfalls."
+		},
+		{
+			"weight": 2,
+			"key": "obsessesCliff",
+			"stringify": "$(identity.pronouns.singular) is obsessed with a nearby cliff with an eerily beautiful view."
+		},
+		{
+			"weight": 2,
+			"key": "obsessedGrove",
+			"stringify": "$(identity.pronouns.singular) is obsessed with a nearby grove with extraordinary flowers."
+		},
+		{
+			"weight": 2,
+			"key": "obsessedValley",
+			"stringify": "$(identity.pronouns.singular) is obsessed with a nearby valley with luxurious vegetation."
+		},
+		{
+			"weight": 2,
+			"key": "obsessedTavern",
+			"stringify": "$(identity.pronouns.singular) is obsessed with a nearby tavern with absolutely incredible ale."
+		},
+		{
+			"weight": 2,
+			"key": "spyingOnPlayersForOrganizationRace",
+			"stringify": "$(identity.pronouns.singular) is spying on the players on behalf of an organization of $(bias).",
+			"children": [
+				{
+					"key": "bias",
+					"source": "{roll:quirks/modifier/raceAllergy}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "spyingOnPlayersForOrganization",
+			"stringify": "$(identity.pronouns.singular) is spying the players on behalf of the local $(organisation).",
+			"children": [
+				{
+					"key": "organization",
+					"source": "{roll:hooks/organization}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "getInfoOnOrganizationRace",
+			"stringify": "$(identity.pronouns.singular) needs help gathering information on an organization of $(bias).",
+			"children": [
+				{
+					"key": "bias",
+					"source": "{roll:quirks/modifier/raceAllergy}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "getInfoOnOrganization",
+			"stringify": "$(identity.pronouns.singular) needs help gathering information on the local $(organisation).",
+			"children": [
+				{
+					"key": "organization",
+					"source": "{roll:hooks/organization}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "dueToTheDeath",
+			"stringify": "$(identity.pronouns.singular) has a duel to the death on the morrow but $(identity.pronouns.singular) is afraid to lose it."
+		},
+		{
+			"weight": 3,
+			"key": "challenge",
+			"stringify": "$(identity.pronouns.singular) challenges a PC to a duel to the death."
+		},
+		{
+			"weight": 3,
+			"key": "blackmailedChallenge",
+			"stringify": "$(identity.pronouns.singular) is being blackmailed into challenging a PC to a duel to the death."
+		},
+		{
+			"weight": 3,
+			"key": "powerfulItem",
+			"stringify": "$(identity.pronouns.singular) has recently come into possession of a powerful magical $(item), and nobody knows how.",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "runeOnBody",
+			"stringify": "$(identity.pronouns.singular) has recently woken up with a magical rune on $(identity.pronouns.possessive) $(bodypart).",
+			"children": [
+				{
+					"key": "bodyPart",
+					"source": "{roll:traits/bodyPart}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "haunted",
+			"stringify": "$(identity.pronouns.singular) is being haunted by a ghost."
+		},
+		{
+			"weight": 2,
+			"key": "hauntedByRelation",
+			"stringify": "$(identity.pronouns.singular) is being haunted by the ghost of $(identity.pronouns.possessive) dead $(relation).",
+			"children": [
+				{
+					"key": "relation",
+					"source": "{roll:relationship/any}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "cursedItem",
+			"stringify": "$(identity.pronouns.singular) was tricked into wearing a cursed $(item).",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "secretPassageCave",
+			"stringify": "$(identity.pronouns.singular) has discovered a secret passage under $(identity.pronouns.possessive) house leading to a mysterious cave."
+		},
+		{
+			"weight": 1,
+			"key": "secretPassageOrganization",
+			"stringify": "$(identity.pronouns.singular) has discovered a secret passage under $(identity.pronouns.possessive) house leading to a secret organisation."
+		},
+		{
+			"weight": 1,
+			"key": "secretPassageTemple",
+			"stringify": "$(identity.pronouns.singular) has discovered a secret passage under $(identity.pronouns.possessive) house leading to an hidden temple."
+		},
+		{
+			"weight": 3,
+			"key": "pressuredIntoSellingDrugs",
+			"stringify": "$(identity.pronouns.singular) has been pressured by local drug dealers into selling drugs."
+		},
+		{
+			"weight": 3,
+			"key": "drugDealingRing",
+			"stringify": "$(identity.pronouns.singular) is part of a local drug dealing circle."
+		},
+		{
+			"weight": 2,
+			"key": "drugDealingRingLeader",
+			"stringify": "$(identity.pronouns.singular) is the head of a local drug dealing circle."
+		},
+		{
+			"weight": 1,
+			"key": "drugDealingRingLeaderInternational",
+			"stringify": "$(identity.pronouns.singular) is the head of an international drug dealing circle."
+		},
+		{
+			"weight": 4,
+			"key": "contestWithItem",
+			"stringify": "$(identity.pronouns.singular) is organizing a $(contest). The prize will be a $(item).",
+			"children": [
+				{
+					"key": "contest",
+					"source": "{roll:hooks/contest}"
+				},
+				{
+					"key": "item",
+					"source": "{roll:items/preciousPrefixed}"
+				}
+			]
+		},
+		{
+			"weight": 4,
+			"key": "contestHelp",
+			"stringify": "$(identity.pronouns.singular) needs help organizing a $(contest).",
+			"children": [
+				{
+					"key": "contest",
+					"source": "{roll:hooks/contest}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "evilSpiritDuringNight",
+			"stringify": "$(identity.pronouns.singular) is possessed by an evil spirit who makes $(identity.pronouns.thirdPerson) do horrible things at night, without remembering them."
+		},
+		{
+			"weight": 2,
+			"key": "evilSpiritDuringDay",
+			"stringify": "$(identity.pronouns.singular) is possessed by an evil spirit during the day and can only control $(identity.pronouns.thirdPerson)self at night."
+		},
+		{
+			"weight": 2,
+			"key": "chasedByBandits",
+			"stringify": "$(identity.pronouns.singular) is currently being chased by a band of bandits attempting to rob $(identity.pronouns.thirdPerson) and asks the PCs for protection."
+		},
+		{
+			"weight": 2,
+			"key": "chasingABandit",
+			"stringify": "$(identity.pronouns.singular) is currently chasing a bandit and asks the PCs for help."
+		},
+		{
+			"weight": 2,
+			"key": "chasedByLaw",
+			"stringify": "$(identity.pronouns.singular) is currently being chased by law enforcement and asks the PCs for protection."
+		},
+		{
+			"weight": 2,
+			"key": "stealItemFromPCs",
+			"stringify": "$(identity.pronouns.singular) has been hired to steal items from the PCs."
+		},
+		{
+			"weight": 2,
+			"key": "stealMoneyFromPCs",
+			"stringify": "$(identity.pronouns.singular) has been hired to steal money from the PCs."
+		},
+		{
+			"weight": 2,
+			"key": "assassinatePCs",
+			"stringify": "$(identity.pronouns.singular) has been hired to assassinate the PCs."
+		},
+		{
+			"weight": 3,
+			"key": "patientZero",
+			"stringify": "$(identity.pronouns.singular) is the host of a terrible and deadly sickness."
+		},
+		{
+			"weight": 3,
+			"key": "cureForDisease",
+			"stringify": "$(identity.pronouns.possessive) blood is the cure to a terrible and deadly sickness."
+		},
+		{
+			"weight": 2,
+			"key": "zombieInfestation",
+			"stringify": "$(identity.pronouns.possessive) home has been infested by zombies."
+		},
+		{
+			"weight": 3,
+			"key": "exorcismeRelation",
+			"stringify": "$(identity.pronouns.singular) needs help exorcising $(identity.pronouns.possessive) $(relation).",
+			"children": [
+				{
+					"key": "relation",
+					"source": "{roll:relationship/any}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "monsterBlood",
+			"stringify": "$(identity.pronouns.singular) is in dire need of some $(monster) blood.",
+			"children": [
+				{
+					"key": "monster",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "purpleWormCave",
+			"stringify": "$(identity.pronouns.possessive) house has been eaten by a purple worm. Further inspection of the tunnel reveals a complex cave system."
+		},
+		{
+			"weight": 2,
+			"key": "purpleWormCatacombs",
+			"stringify": "$(identity.pronouns.possessive) house has been eaten by a purple worm. Further inspection of the tunnel reveals an ancient catacomb."
+		},
+		{
+			"weight": 2,
+			"key": "killMonster",
+			"stringify": "$(identity.pronouns.singular) wants the PCs to help $(identity.pronouns.thirdPerson) kill a $(monster).",
+			"children": [
+				{
+					"key": "monster",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "captureMonster",
+			"stringify": "$(identity.pronouns.singular) wants the PCs to help $(identity.pronouns.thirdPerson) capture a $(monster).",
+			"children": [
+				{
+					"key": "monster",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "shrineDeity",
+			"stringify": "$(identity.pronouns.singular) has learned of the existence of a shrine to $(deity).",
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:deity/archdevil}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "angryDeity",
+			"stringify": "$(identity.pronouns.singular) has angered $(deity) and needs help avoiding the consequences.",
+			"children": [
+				{
+					"key": "deity",
+					"source": "{roll:deity/archdevil}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "wildMagic",
+			"stringify": "$(identity.pronouns.singular) is a fountain of wild magic and cannot control it."
+		},
+		{
+			"weight": 3,
+			"key": "stolenItem",
+			"stringify": "$(identity.pronouns.singular) gives the PCs a magical $(item). Turns out $(identity.pronouns.singular) had stolen it from a wizard who is hellbent on recovering it.",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "vampire",
+			"stringify": "$(identity.pronouns.singular) is secretly a vampire."
+		},
+		{
+			"weight": 2,
+			"key": "largeUnknownEgg",
+			"stringify": "$(identity.pronouns.singular) carries around a large $(color) egg of unknown origin.",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:common/color}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "lookingForRelationDoesntExist",
+			"stringify": "$(identity.pronouns.singular) is looking for $(identity.pronouns.possessive) lost $(relation), who never actually existed.",
+			"children": [
+				{
+					"key": "relation",
+					"source": "{roll:relationship/any}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "fakeMap",
+			"stringify": "$(identity.pronouns.singular) has recently obtained a fake map to a great treasure."
+		},
+		{
+			"weight": 2,
+			"key": "revengeForRelationDoesntExist",
+			"stringify": "$(identity.pronouns.singular) seeks revenge for the death of $(identity.pronouns.possessive) $(relation), who never actually existed.",
+			"children": [
+				{
+					"key": "relation",
+					"source": "{roll:relationship/any}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "deliverTamedCreatureToWizard",
+			"stringify": "$(identity.pronouns.singular) needs the party to deliver a tamed $(creature) to a local wizard.",
+			"children": [
+				{
+					"key": "creature",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "deliverTamedCreatureToZoo",
+			"stringify": "$(identity.pronouns.singular) needs the party to deliver a tamed $(creature) to a local zoo.",
+			"children": [
+				{
+					"key": "creature",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "deliverTamedCreatureToCircus",
+			"stringify": "$(identity.pronouns.singular) needs the party to deliver a tamed $(creature) to a local circus.",
+			"children": [
+				{
+					"key": "creature",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "deliverTamedCreatureToMuseum",
+			"stringify": "$(identity.pronouns.singular) needs the party to deliver a tamed $(creature) to a local museum.",
+			"children": [
+				{
+					"key": "creature",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "followedBySpeakingCrow",
+			"stringify": "$(identity.pronouns.singular) is followed day and night by a $(personality.asString) speaking crow.",
+			"children": [
+				{
+					"key": "personality",
+					"source": "{roll:hooks/personality}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "followedBySpeakingMouse",
+			"stringify": "$(identity.pronouns.singular) is followed day and night by a $(personality.asString) speaking mouse.",
+			"children": [
+				{
+					"key": "personality",
+					"source": "{roll:hooks/personality}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "followedBySpeakingSnake",
+			"stringify": "$(identity.pronouns.singular) is followed day and night by a $(personality.asString) speaking snake.",
+			"children": [
+				{
+					"key": "personality",
+					"source": "{roll:hooks/personality}"
+				}
+			]
+		},
+		{
+			"weight": 1,
+			"key": "followedBySpeakingCat",
+			"stringify": "$(identity.pronouns.singular) is followed day and night by a $(personality.asString) speaking cat.",
+			"children": [
+				{
+					"key": "personality",
+					"source": "{roll:hooks/personality}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "followedByAnimatedFurniture",
+			"stringify": "$(identity.pronouns.singular) is followed day and night by an animated $(furniture).",
+			"children": [
+				{
+					"key": "furniture",
+					"source": "{roll:hooks/furniture}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "canOnlySpeakGibberish",
+			"stringify": "$(identity.pronouns.singular) has been cursed into speaking only gibberish."
+		},
+		{
+			"weight": 2,
+			"key": "willinglyWearningCursedItem",
+			"stringify": "$(identity.pronouns.singular) is willingly wearing a cursed $(item).",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "hexAlwaysHallucinating",
+			"stringify": "$(identity.pronouns.singular) has been hexed into constantly hallucinating."
+		},
+		{
+			"weight": 2,
+			"key": "hexAlwaysHungry",
+			"stringify": "$(identity.pronouns.singular) has been hexed and is now constantly hungry."
+		},
+		{
+			"weight": 1,
+			"key": "haxMiniscule",
+			"stringify": "$(identity.pronouns.singular) has been hexed into becoming minuscule."
+		},
+		{
+			"weight": 1,
+			"key": "haxGigantic",
+			"stringify": "$(identity.pronouns.singular) has been hexed into becoming gigantic."
+		},
+		{
+			"weight": 3,
+			"key": "leprechaunPranks",
+			"stringify": "$(identity.pronouns.singular) is being constantly pranked by a leprechaun."
+		},
+		{
+			"weight": 3,
+			"key": "torturedByLeprechaun",
+			"stringify": "$(identity.pronouns.singular) is being constantly psychologically tortured by a crazed leprechaun."
+		},
+		{
+			"weight": 2,
+			"key": "sabotageContest",
+			"stringify": "$(identity.pronouns.singular) needs help sabotaging a $(contest).",
+			"children": [
+				{
+					"key": "contest",
+					"source": "{roll:hooks/contest}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "werebeast",
+			"stringify": "$(identity.pronouns.singular) is a were$(werebeast).",
+			"children": [
+				{
+					"key": "werebeast",
+					"source": "{roll:hooks/werebeast}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "werebeastChangePCs",
+			"stringify": "$(identity.pronouns.singular) is a were$(werebeast) and tries to convince the PCs to let $(identity.pronouns.thirdPerson) change them as well.",
+			"children": [
+				{
+					"key": "werebeast",
+					"source": "{roll:hooks/werebeast}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "werebeastCurse",
+			"stringify": "$(identity.pronouns.singular) is a were$(werebeast) and wants to get rid of it.",
+			"children": [
+				{
+					"key": "werebeast",
+					"source": "{roll:hooks/werebeast}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "werebeastAcceptance",
+			"stringify": "$(identity.pronouns.singular) is a were$(werebeast) and is looking for acceptance within society.",
+			"children": [
+				{
+					"key": "werebeast",
+					"source": "{roll:hooks/werebeast}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "fallsFromSky",
+			"stringify": "$(identity.pronouns.singular) approaches the PC by falling from the sky. $(identity.pronouns.singular) has 50% chance of surviving the landing."
+		},
+		{
+			"weight": 2,
+			"key": "chasingBanditBand",
+			"stringify": "$(identity.pronouns.singular) is currently chasing a band of bandits and asks the PCs for help."
+		},
+		{
+			"weight": 2,
+			"key": "chasedByBanditBandForStealing",
+			"stringify": "$(identity.pronouns.singular) is currently being chased by a band of bandits $(identity.prnouns.thirdPerson) just stole from and asks the PCs for protection."
+		},
+		{
+			"weight": 2,
+			"key": "doppleganger",
+			"stringify": "$(identity.pronouns.singular) is a doppleganger."
+		},
+		{
+			"weight": 2,
+			"key": "dopplegangerImpersonator",
+			"stringify": "$(identity.pronouns.singular) is actually a doppleganger who killed $(identity.name.asString) and is living $(identity.pronouns.possessive) life."
+		},
+		{
+			"weight": 2,
+			"key": "dopplegangerPC",
+			"stringify": "$(identity.pronouns.singular) is a doppleganger posing as one of the PCs."
+		},
+		{
+			"weight": 2,
+			"key": "livesWithIncubus",
+			"stringify": "$(identity.pronouns.singular) lives with an incubus."
+		},
+		{
+			"weight": 2,
+			"key": "livesWithSuccubus",
+			"stringify": "$(identity.pronouns.singular) lives with a succubus."
+		},
+		{
+			"weight": 1,
+			"key": "livesWithIncubusFittingIn",
+			"stringify": "$(identity.pronouns.singular) lives with an incubus. They are trying to fit in with society."
+		},
+		{
+			"weight": 1,
+			"key": "livesWithSuccubusFittingIn",
+			"stringify": "$(identity.pronouns.singular) lives with a succubus. They are trying to fit in with society."
+		},
+		{
+			"weight": 2,
+			"key": "sewerLiving",
+			"stringify": "$(identity.pronouns.singular) is raising an Otyugh in the town's sewer system. It's always hungry."
+		},
+		{
+			"weight": 2,
+			"key": "zombieInfestationWhoWantHelp",
+			"stringify": "$(identity.pronouns.possessive) home has been infested by zombies. Upon further inquiry, the zombies are asking for help."
+		},
+		{
+			"weight": 2,
+			"key": "animatedFurniture",
+			"stringify": "All of $(identity.pronouns.possessive) furniture has suddenly become animated."
+		},
+		{
+			"weight": 2,
+			"key": "zombieInfestationWhoWantBrains",
+			"stringify": "$(identity.pronouns.possessive) home has been infested by zombies. Upon further inquiry, the zombies are asking for brains."
+		},
+		{
+			"weight": 2,
+			"key": "zombieInfestationResidents",
+			"stringify": "$(identity.pronouns.possessive) home has been infested by zombies. Upon further inquiry, the zombies used to live there, and are claiming the house as belonging to them."
+		},
+		{
+			"weight": 3,
+			"key": "serialKiller",
+			"stringify": "$(identity.pronouns.singular) is a serial killer at night."
+		},
+		{
+			"weight": 2,
+			"key": "cannibal",
+			"stringify": "$(identity.pronouns.singular) is a cannibal."
+		},
+		{
+			"weight": 1,
+			"key": "cannibalConvertPCs",
+			"stringify": "$(identity.pronouns.singular) is a cannibal, and $(identity.pronouns.singular) wants to convert the PCs to $(identity.pronouns.possessive) ways."
+		},
+		{
+			"weight": 3,
+			"key": "vigilante",
+			"stringify": "$(identity.pronouns.singular) is a secret vigilante."
+		},
+		{
+			"weight": 2,
+			"key": "vigilantePCsAreAThreat",
+			"stringify": "$(identity.pronouns.singular) is a secret vigilante, and considers the PCs a threat to society."
+		},
+		{
+			"weight": 3,
+			"key": "addictedToCreatureBlood",
+			"stringify": "$(identity.pronouns.singular) is addicted to $(creature) blood.",
+			"children": [
+				{
+					"key": "creature",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "helpTameCreature",
+			"stringify": "$(identity.pronouns.singular) wants the PCs to help $(identity.pronouns.possessive) tame a $(creature).",
+			"children": [
+				{
+					"key": "creature",
+					"source": "{roll:misc/monster}"
+				}
+			]
+		},
+		{
+			"weight": 3,
+			"key": "stalkedByGibberingMouther",
+			"stringify": "$(identity.pronouns.singular) is being stalked by a gibbering mouth at night"
+		},
+		{
+			"weight": 3,
+			"key": "oni",
+			"stringify": "$(identity.pronouns.singular) is actually an Oni posing as a $(description.race)."
+		},
+		{
+			"weight": 2,
+			"key": "lovesDryad",
+			"stringify": "$(identity.pronouns.singular) has fallen in love with a dryad from a local forest."
+		},
+		{
+			"weight": 2,
+			"key": "lovesMermaid",
+			"stringify": "$(identity.pronouns.singular) has fallen in love with a mermaid from the nearest water source."
+		},
+		{
+			"weight": 2,
+			"key": "lovesFairy",
+			"stringify": "$(identity.pronouns.singular) has fallen in love with a fairy from the nearby woods."
+		},
+		{
+			"weight": 1,
+			"key": "lovesDryadObsessed",
+			"stringify": "$(identity.pronouns.singular) is obsessively in love with a dryad. $(identity.pronouns.singular) keeps her locked up in $(identity.pronouns.possessive) basement."
+		},
+		{
+			"weight": 1,
+			"key": "lovesMermaidObsessed",
+			"stringify": "$(identity.pronouns.singular) is obsessively in love with a mermaid. $(identity.pronouns.singular) keeps her locked up in $(identity.pronouns.possessive) basement."
+		},
+		{
+			"weight": 1,
+			"key": "lovesFairyObsessed",
+			"stringify": "$(identity.pronouns.singular) is obsessively in love with a fairy. $(identity.pronouns.singular) keeps her locked up in $(identity.pronouns.possessive) basement."
+		},
+		{
+			"weight": 3,
+			"key": "enslavedByDemon",
+			"stringify": "$(identity.pronouns.singular) has been enslaved by a demon."
+		},
+		{
+			"weight": 3,
+			"key": "controlledByIllithid",
+			"stringify": "$(identity.pronouns.singular) is being controlled by an illithid."
+		},
+		{
+			"weight": 3,
+			"key": "harassedByThreadOfPseudodragon",
+			"stringify": "$(identity.pronouns.singular) is being harassed about a threat of impending doom by a pseudodragon."
+		},
+		{
+			"weight": 3,
+			"key": "becomingPlant",
+			"stringify": "$(identity.pronouns.singular) is slowly becoming a plant."
+		},
+		{
+			"weight": 3,
+			"key": "followedByAnimals",
+			"stringify": "$(identity.pronouns.singular) is followed by multiple animals at all time."
+		},
+		{
+			"weight": 2,
+			"key": "vampire",
+			"stringify": "$(identity.pronouns.singular) is openly a vampire."
+		},
+		{
+			"weight": 1,
+			"key": "turnsToStone",
+			"stringify": "$(identity.pronouns.singular) talks very fast and incomprehensibly to the NPCs before turning to stone."
+		},
+		{
+			"weight": 1,
+			"key": "turnsToDust",
+			"stringify": "$(identity.pronouns.singular) talks very fast and incomprehensibly to the NPCs before turning to dust."
+		},
+		{
+			"weight": 3,
+			"key": "dragon",
+			"stringify": "$(identity.pronouns.singular) is actually a $(color) dragon.",
+			"children": [
+				{
+					"key": "color",
+					"source": "{roll:race/Dragonborn/color}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "lotsOfFish",
+			"stringify": "$(identity.pronouns.singular) has recently come into possession of an unreasonable amount of fish, and it's not clear why."
+		},
+		{
+			"weight": 2,
+			"key": "stoleItemFromImp",
+			"stringify": "$(identity.pronouns.singular) gives the PCs a magical $(item). Turns out $(identity.prnouns.thirdPerson) had stolen it from an imp who is hellbent on recovering it.",
+			"children": [
+				{
+					"key": "item",
+					"source": "{roll:items/precious}"
+				}
+			]
+		},
+		{
+			"weight": 2,
+			"key": "timeTraveller",
+			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant past."
+		},
+		{
+			"weight": 2,
+			"key": "timeTravellerFindingDecendants",
+			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant past. $(identity.pronouns.singular) is obsessed with finding her descendants."
+		},
+		{
+			"weight": 2,
+			"key": "timeTravellerTreasureObsessed",
+			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant past. $(identity.pronouns.singular) is obsessed with finding the treasure $(identity.prnouns.thirdPerson) buried thousands of years ago."
+		},
+		{
+			"weight": 2,
+			"key": "timeTravellerFutureSleep",
+			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant future. $(identity.pronouns.singular) needs help sleeping for a few thousand years."
+		},
+		{
+			"weight": 1,
+			"key": "timeTravellerAlterHistory",
+			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant future. $(identity.pronouns.singular) is trying to alter the course of history."
+		},
+		{
+			"weight": 3,
+			"key": "evilSpiritArgues",
+			"stringify": "$(identity.pronouns.singular) is possessed by an evil spirit. They argue constantly."
+		},
+		{
+			"weight": 2,
+			"key": "snakesAsCurrency",
+			"stringify": "$(identity.pronouns.singular) has started using snakes as currency, and it's starting to catch on."
+		}
+	]
+}

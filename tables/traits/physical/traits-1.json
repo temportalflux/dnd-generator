@@ -3,7 +3,7 @@
 		{
 			"weight": 4,
 			"key": "1scar",
-			"stringify": "$(identity.pronouns.singular) has a $(sizeString === 'none' ? '' : size)$(sizeString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
+			"stringify": "$(identity.pronouns.singular) has a $(size.asString === 'none' ? '' : size)$(size.asString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPart.asString).",
 			"children": [
 				{
 					"key": "size",
@@ -18,7 +18,7 @@
 		{
 			"weight": 1,
 			"key": "2scar",
-			"stringify": "$(identity.pronouns.singular) has $(sizeAString === 'none' ? '' : sizeA)$(sizeAString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(sizeBString === 'none' ? '' : sizeB)$(sizeBString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
+			"stringify": "$(identity.pronouns.singular) has $(sizeA.asString === 'none' ? '' : sizeA)$(sizeA.asString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartA.asString) and $(sizeB.asString === 'none' ? '' : sizeB)$(sizeB.asString === 'none' ? '' : ' ')scar on $(identity.pronouns.selfPossessive) $(bodyPartB.asString).",
 			"children": [
 				{
 					"key": "sizeA",

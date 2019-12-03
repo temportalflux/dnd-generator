@@ -1,14 +1,34 @@
 {
 	"rows": [
 		{
+			"weight": 5,
 			"key": "Mountain",
 			"value": "Mountain",
-			"weight": 5
+			"modifiers": {
+				"stats.abilityScores.strength": 4,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 3,
+				"stats.abilityScores.intelligence": -1,
+				"stats.abilityScores.wisdom": 1,
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.ethical.negative": -2,
+				"stats.alignmentTendancies.moral.negative": -2
+			}
 		},
 		{
+			"weight": 6,
 			"key": "Hill",
 			"value": "Hill",
-			"weight": 6
+			"modifiers": {
+				"stats.abilityScores.strength": 2,
+				"stats.abilityScores.dexterity": -2,
+				"stats.abilityScores.constitution": 4,
+				"stats.abilityScores.intelligence": -1,
+				"stats.abilityScores.wisdom": 3,
+				"stats.alignmentTendancies.ethical.positive": 2,
+				"stats.alignmentTendancies.ethical.negative": -2,
+				"stats.alignmentTendancies.moral.negative": -2
+			}
 		}
 	]
 }

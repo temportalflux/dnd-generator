@@ -1,0 +1,49 @@
+{
+	"rows": [
+		{
+			"weight": 15,
+			"key": "wolf",
+			"value": "wolf"
+		},
+		{
+			"key": "bear",
+			"value": "bear"
+		},
+		{
+			"key": "rat",
+			"value": "rat"
+		},
+		{
+			"key": "boar",
+			"value": "boar"
+		},
+		{
+			"key": "bat",
+			"value": "bat"
+		},
+		{
+			"key": "cat",
+			"value": "cat"
+		},
+		{
+			"key": "owl",
+			"value": "owl"
+		},
+		{
+			"key": "pig",
+			"value": "pig"
+		},
+		{
+			"key": "badger",
+			"value": "badger"
+		},
+		{
+			"key": "eagle",
+			"value": "eagle"
+		},
+		{
+			"key": "tiger",
+			"value": "tiger"
+		}
+	]
+}

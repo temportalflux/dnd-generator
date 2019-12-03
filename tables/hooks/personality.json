@@ -1,0 +1,94 @@
+{
+	"rows": [
+		{
+			"key": "annoying",
+			"value": "annoying",
+			"stringify": "an annoying"
+		},
+		{
+			"key": "patronizing",
+			"value": "patronizing",
+			"stringify": "a patronizing"
+		},
+		{
+			"key": "sarcastic",
+			"value": "sarcastic",
+			"stringify": "a sarcastic"
+		},
+		{
+			"key": "impetuous",
+			"value": "impetuous",
+			"stringify": "an impetuous"
+		},
+		{
+			"key": "sardonic",
+			"value": "sardonic",
+			"stringify": "a sardonic"
+		},
+		{
+			"key": "stoic",
+			"value": "stoic",
+			"stringify": "a stoic"
+		},
+		{
+			"key": "fabulous",
+			"value": "fabulous",
+			"stringify": "a fabulous"
+		},
+		{
+			"key": "critical",
+			"value": "critical",
+			"stringify": "a critical"
+		},
+		{
+			"key": "seductive",
+			"value": "seductive",
+			"stringify": "a seductive"
+		},
+		{
+			"key": "inquisitive",
+			"value": "inquisitive",
+			"stringify": "an inquisitive"
+		},
+		{
+			"key": "lascivious",
+			"value": "lascivious",
+			"stringify": "a lascivious"
+		},
+		{
+			"key": "ironic",
+			"value": "ironic",
+			"stringify": "an ironic"
+		},
+		{
+			"key": "shy",
+			"value": "shy",
+			"stringify": "a shy"
+		},
+		{
+			"key": "aggressive",
+			"value": "aggressive",
+			"stringify": "an aggressive"
+		},
+		{
+			"key": "passive aggressive",
+			"value": "passive aggressive",
+			"stringify": "a passive aggressive"
+		},
+		{
+			"key": "confrontational",
+			"value": "confrontational",
+			"stringify": "a confrontational"
+		},
+		{
+			"key": "apathetic",
+			"value": "apathetic",
+			"stringify": "an apathetic"
+		},
+		{
+			"key": "sailor-mouthed",
+			"value": "sailor-mouthed",
+			"stringify": "a sailor-mouthed"
+		}
+	]
+}

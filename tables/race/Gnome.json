@@ -1,14 +1,31 @@
 {
 	"rows": [
 		{
+			"weight": 4,
 			"key": "Forest",
 			"value": "Forest",
-			"weight": 4
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 3,
+				"stats.abilityScores.constitution": -1,
+				"stats.abilityScores.intelligence": 3,
+				"stats.abilityScores.wisdom": -1,
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.negative": -1
+			}
 		},
 		{
+			"weight": 3,
 			"key": "Rock",
 			"value": "Rock",
-			"weight": 3
+			"modifiers": {
+				"stats.abilityScores.strength": -2,
+				"stats.abilityScores.dexterity": 1,
+				"stats.abilityScores.constitution": 2,
+				"stats.abilityScores.intelligence": 4,
+				"stats.alignmentTendancies.moral.positive": 3,
+				"stats.alignmentTendancies.moral.negative": -1
+			}
 		}
 	]
 }
