@@ -144,6 +144,7 @@ export function ArticleContent({ usePlainText })
 	const race = npc.getEntry('description.race');
 	const hair = npc.getEntry('description.race.hair');
 	const skin = npc.getEntry('description.race.skin');
+	const beard = npc.getEntry('description.race.beard');
 
 	const physicalTraitsMap = npc.getEntry('description.specialPhysical').getChildren();
 	const physicalTraits = lodash.values(physicalTraitsMap).map((entry) => (
@@ -194,8 +195,8 @@ export function ArticleContent({ usePlainText })
 					{toSentenceCase(pronouns.getRawValue().singular)}
 					&nbsp; has &nbsp;
 					{createEntryItem(eyeColor, (e) => `${e.toString()} eyes`)}
-					&nbsp; and &nbsp;
-					{createEntryItem(hair)}.
+					&nbsp;, &nbsp;
+					{createEntryItem(hair)}, and {createEntryItem(beard)}.
 				</List.Item>
 				<List.Item as='li'>
 					{toSentenceCase(pronouns.getRawValue().singular)}

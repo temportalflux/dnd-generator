@@ -215,7 +215,6 @@ export default class GeneratedEntry
 
 		const presetData = typeof getPreset === 'function' ? getPreset(this) : undefined;
 
-		console.log(this.getKeyPath(), this.generated);
 		let prevValueOrKey = undefined;
 		if (this.generated !== undefined)
 		{
