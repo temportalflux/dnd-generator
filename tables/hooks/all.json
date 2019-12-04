@@ -968,7 +968,7 @@
 		{
 			"weight": 2,
 			"key": "timeTraveller",
-			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant past."
+			"stringify": "$(identity.pronouns.singular) $#pluralize(identity.pronouns,'is','are')# a time traveller from a distant past."
 		},
 		{
 			"weight": 2,

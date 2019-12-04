@@ -135,7 +135,7 @@
 		{
 			"weight": 1,
 			"key": "lisp",
-			"stringify": "$(identity.pronouns.singular) has $(degreeString === 'none' ? '' : degree)$(degreeString === 'none' ? '' : ' ')lisp.",
+			"stringify": "$(identity.pronouns.singular) has a $(degree.asString === 'none' ? '' : degree)$(degree.asString === 'none' ? '' : ' ')lisp.",
 			"children": [
 				{
 					"key": "degree",

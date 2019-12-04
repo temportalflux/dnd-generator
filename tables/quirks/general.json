@@ -435,7 +435,7 @@
 		{
 			"weight": 8,
 			"key": "pet",
-			"stringify": "$(identity.pronouns.singular) has a $(petSize) pet $(petAnimal) named $(petName).",
+			"stringify": "$(identity.pronouns.singular) has a $(petSize.asString === 'none' ? '' : petSize.asString + ' ')pet $(petAnimal) named $(petName).",
 			"children": [
 				{
 					"key": "petSize",
