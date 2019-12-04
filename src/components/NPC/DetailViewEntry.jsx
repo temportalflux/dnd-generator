@@ -57,7 +57,7 @@ function EntryView({
 	tableCollection, npcSchema, npc,
 	propertyKey, storageKey,
 	entry, parentEntry,
-	active, onClick, // from StorageAccordion
+	active, onClick, forceCollapse, // from StorageAccordion
 })
 {
 	// TODO: this is ineffecient, but it cant be passed in b/c passing through react copies objects, does not pass by ref.
@@ -69,17 +69,20 @@ function EntryView({
 	const refresh = React.useState(undefined)[1];
 	useEffect(() =>
 	{
-		function onChanged({ details }) { refresh(shortid.generate()); }
+		function onChanged({ detail }) { refresh(shortid.generate()); }
+		function onDispose({ detail }) { forceCollapse(detail.entry.getKey()); }
 		entry.addListenerOnChanged(onChanged);
 		entry.addListenerOnUpdateString(onChanged);
 		entry.addListenerOnModified(onChanged);
 		entry.addListenerOnUpdateCollection(onChanged);
+		entry.addListenerOnDispose(onDispose);
 		return () =>
 		{
 			entry.removeListenerOnChanged(onChanged)
 			entry.removeListenerOnUpdateString(onChanged);
 			entry.removeListenerOnModified(onChanged);
 			entry.removeListenerOnUpdateCollection(onChanged);
+			entry.removeListenerOnDispose(onDispose);
 		};
 	});
 
@@ -166,13 +169,13 @@ function EntryView({
 									storageKey={entry.getKeyPath()}
 								/>
 							)}
-							{entry.hasValue() && <Form.Field>
+							{entry.hasValue() && (typeof rawValue !== 'object') && <Form.Field>
 								<label>Generated Value</label>
 								{rawValue !== undefined ? rawValue : (
 									<span style={{ color: 'red' }}>Not Generated</span>
 								)}
 							</Form.Field>}
-							{entry.hasValue() && <Form.Field>
+							{entry.hasValue() && (typeof modifiedValue !== 'object') && <Form.Field>
 								<label>Value with Modifiers</label>
 								{modifiedValue !== undefined ? modifiedValue : (
 									<span style={{ color: 'red' }}>Not Generated</span>
@@ -248,7 +251,7 @@ function EntryView({
 
 export function DataViewEntry({
 	propertyKey, tableCollection, entryKey, storageKey,
-	active, onClick,
+	active, onClick, forceCollapse,
 })
 {
 	const npcSchema = tableCollection ? tableCollection.getNpcSchema() : null;
@@ -264,7 +267,7 @@ export function DataViewEntry({
 			propertyKey={propertyKey} storageKey={storageKey}
 			entry={entry} parentEntry={parentEntry}
 
-			active={active} onClick={onClick}
+			active={active} onClick={onClick} forceCollapse={forceCollapse}
 		/>
 	)
 }

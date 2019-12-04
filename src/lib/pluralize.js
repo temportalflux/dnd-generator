@@ -1,0 +1,1 @@
+module.exports = ({isPlural}, singular, plural) => !isPlural ? singular : plural;

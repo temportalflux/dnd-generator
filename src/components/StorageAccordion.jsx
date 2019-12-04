@@ -17,8 +17,8 @@ export function StorageAccordion({
 		else storage.remove(storageKey);
 		setExpandedEntryKeys_state(keys);
 	}
-	function addExpandedEntryKey(key) { setExpandedEntryKeys(expandedEntryKeys.concat([key])); }
-	function removeExpandedEntryKey(key) { setExpandedEntryKeys(expandedEntryKeys.filter((item) => item !== key)); }
+	function addExpandedEntryKey(key) { setExpandedEntryKeys((storage.get(storageKey) || []).concat([key])); }
+	function removeExpandedEntryKey(key) { setExpandedEntryKeys((storage.get(storageKey) || []).filter((item) => item !== key)); }
 	function isEntryExpanded(key) { return expandedEntryKeys.includes(key); }
 
 	const handleAccordionClick = (_, { index }) =>
@@ -35,6 +35,7 @@ export function StorageAccordion({
 					key: entryKey,
 					active: isEntryExpanded(entryKey) && (active === undefined || active === true),
 					onClick: handleAccordionClick,
+					forceCollapse: removeExpandedEntryKey,
 				})
 			))}
 		</Accordion>

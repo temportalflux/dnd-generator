@@ -3,6 +3,7 @@ import NpcData from '../../storage/NpcData';
 import lodash from 'lodash';
 import { Header, Button, List, Popup, Table } from 'semantic-ui-react';
 import * as shortid from 'shortid';
+import pluralize from '../../lib/pluralize';
 
 function toFeet(n)
 {
@@ -206,28 +207,51 @@ export function ArticleContent({ usePlainText })
 					/>.
 				</List.Item>
 				<List.Item as='li'>
-					{toSentenceCase(pronouns.getRawValue().singular)}
-					&nbsp; has &nbsp;
-					{createEntryItem(eyeColor, (e) => `${e.toString()} eyes`)}
-					&nbsp;, &nbsp;
-					{createEntryItem(hair)}, and {createEntryItem(beard)}.
+					<InlineEntryComponent entry={pronouns}
+						getComponent={(e) => (
+							<span>
+								{toSentenceCase(e.getRawValue().singular)}
+								&nbsp; {pluralize(e.getRawValue(), 'has', 'have')} &nbsp;
+								{createEntryItem(eyeColor, (e) => `${e.toString()} eyes`)}, &nbsp;
+								{createEntryItem(hair)}, and {createEntryItem(beard)}.
+							</span>
+						)}
+					/>
 				</List.Item>
 				<List.Item as='li'>
-					{toSentenceCase(pronouns.getRawValue().singular)}
-					&nbsp; has &nbsp;
-					{createEntryItem(skin)}.
+					<InlineEntryComponent entry={pronouns}
+						getComponent={(e) => (
+							<span>
+								{toSentenceCase(e.getRawValue().singular)}
+								&nbsp; {pluralize(e.getRawValue(), 'has', 'have')} &nbsp;
+								{createEntryItem(skin)}.
+							</span>
+						)}
+					/>
 				</List.Item>
 				<List.Item as='li'>
-					{toSentenceCase(pronouns.getRawValue().singular)}
-					&nbsp; stands &nbsp;
-					{createEntryItem(height, (e) => `${e.toString()}cm (${toFeet(e.getModifiedValue())})`)}
-					&nbsp; tall and has a &nbsp;
-					{createEntryItem(weight)} build.
+					<InlineEntryComponent entry={pronouns}
+						getComponent={(e) => (
+							<span>
+								{toSentenceCase(e.getRawValue().singular)}
+								&nbsp; {pluralize(e.getRawValue(), 'stands', 'stand')} &nbsp;
+								{createEntryItem(height, (e) => `${e.toString()}cm (${toFeet(e.getModifiedValue())})`)}
+								&nbsp; tall and {pluralize(e.getRawValue(), 'has', 'have')} a &nbsp;
+								{createEntryItem(weight)} build.
+							</span>
+						)}
+					/>
 				</List.Item>
 				<List.Item as='li'>
-					{toSentenceCase(pronouns.getRawValue().singular)}
-					&nbsp; has an &nbsp;
-					{createEntryItem(face)} face.
+					<InlineEntryComponent entry={pronouns}
+						getComponent={(e) => (
+							<span>
+								{toSentenceCase(e.getRawValue().singular)}
+								&nbsp; {pluralize(e.getRawValue(), 'has', 'have')} an &nbsp;
+								{createEntryItem(face)} face.
+							</span>
+						)}
+					/>
 				</List.Item>
 				{physicalTraits}
 			</List>
@@ -269,19 +293,25 @@ export function ArticleContent({ usePlainText })
 			<Header as='h1' content='Personality' />
 			<List bulleted as='ul'>
 				<List.Item as='li'>
-					{toSentenceCase(pronouns.getRawValue().singular)}
-					&nbsp; {createEntryItem(worship)} worships {createEntryItem(deity)}.
+					<InlineEntryComponent entry={pronouns}
+						getComponent={(e) => (
+							<span>
+								{toSentenceCase(e.getRawValue().singular)}
+								&nbsp; {createEntryItem(worship)} {pluralize(e.getRawValue(), 'worships', 'worship')} {createEntryItem(deity)}.
+							</span>
+						)}
+					/>
 				</List.Item>
 				{quirkList}
 			</List>
 
 			<Header as='h1' content='Relations' />
-			<b>Relationship Status:</b> {createEntryItem(relationshipStatus)}
+			<b>Relationship Status:</b>&nbsp;{createEntryItem(relationshipStatus)}
 			
 			<Header as='h1' content='Hooks' />
 			<List bulleted as='ul'>
 				<List.Item as='li'>
-					{createEntryItem(hooks)}
+					{createEntryItem(hooks, toSentenceCase(hooks.toString()))}
 				</List.Item>
 			</List>
 

@@ -133,6 +133,11 @@ export default class GeneratedEntry
 		this.key = entry.getKey();
 	}
 
+	getKey()
+	{
+		return this.key;
+	}
+
 	getKeyPath()
 	{
 		if (this.key === undefined) return undefined;
@@ -203,13 +208,19 @@ export default class GeneratedEntry
 		this.collectionLinker.unsubscribe(this.getOurCollections());
 	}
 
+	dispose()
+	{
+		this.clearLinking();
+		this.events.dispatchEvent(new CustomEvent('onDispose', { detail: { entry: this } }));
+	}
+
 	regenerate(globalData, getPreset)
 	{
 		this.clearSaveState();
 
 		if (this.generatedChildren)
 		{
-			lodash.values(this.generatedChildren).forEach((child) => child.clearLinking());
+			lodash.values(this.generatedChildren).forEach((child) => child.dispose());
 		}
 		this.clearLinking();
 
@@ -385,6 +396,16 @@ export default class GeneratedEntry
 	removeListenerOnChanged(callback)
 	{
 		this.events.removeEventListener('onChanged', callback);
+	}
+
+	addListenerOnDispose(callback)
+	{
+		this.events.addEventListener('onDispose', callback);
+	}
+
+	removeListenerOnDispose(callback)
+	{
+		this.events.removeEventListener('onDispose', callback);
 	}
 
 	/**
@@ -580,7 +601,7 @@ export default class GeneratedEntry
 					}
 				}, value);
 			}
-			value += this.totalModifyingValue;
+			value = Math.max(value + this.totalModifyingValue, 0);
 		}
 		return value;
 	}
