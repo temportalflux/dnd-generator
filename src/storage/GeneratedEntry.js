@@ -317,16 +317,21 @@ export default class GeneratedEntry
 
 		this.modifyingLinker.subscribe(this.getModifyingEntryKeys());
 
-		if (this.generatedChildren)
-		{
-			lodash.values(this.generatedChildren).forEach((child) => child.regenerate(globalData, getPreset));
-		}
+		this.regenerateChildren(globalData, getPreset);
 
 		this.modifyingLinker.dispatchToSubscriptions('add', {
 			source: this.getKeyPath()
 		}, (args, keyPath) => ({...args, value: this.getModifierFor(keyPath)}));
 
 		if (this.parent) this.parent.onChildGenerated(this);
+	}
+
+	regenerateChildren(globalData, getPreset=undefined)
+	{
+		if (this.generatedChildren)
+		{
+			lodash.values(this.generatedChildren).forEach((child) => child.regenerate(globalData, getPreset));
+		}
 	}
 
 	onChildGenerated(child)

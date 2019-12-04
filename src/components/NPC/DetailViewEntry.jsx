@@ -129,6 +129,7 @@ function EntryView({
 				</Menu.Item>
 				{!isMissingSourceTable && canRegenerate && <Menu.Item fitted position='right'>
 					<Button
+						style={{ margin: 2 }}
 						icon={'refresh'}
 						onClick={() =>
 						{
@@ -136,6 +137,14 @@ function EntryView({
 							npc.save();
 						}}
 						content={camelCaseToTitle(propertyKey)}
+					/>
+					<Button
+						style={{ margin: 2 }}
+						icon='refresh' content='Children'
+						onClick={() => {
+							entry.regenerateChildren(npcModifiedData);
+							npc.save();
+						}}
 					/>
 				</Menu.Item>}
 			</Menu>

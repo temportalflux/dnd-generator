@@ -71,14 +71,28 @@ function InlineEntryItem({
 						)}
 						content={(
 							<span>
+								<label>
+									<Button
+										path={rerollAs || e.getKeyPath()} size='mini'
+										icon='refresh'
+										onClick={() => {
+											e.regenerate(globalData);
+											e.npc.save();
+										}}
+									/>
+									{e.getName()}
+								</label>
+								<br />
+								{renderedText}
+								<br />
 								<Button
-									path={rerollAs || e.getKeyPath()} size='mini' icon='refresh'
+									path={rerollAs || e.getKeyPath()} size='mini'
+									icon='refresh' content='Children'
 									onClick={() => {
-										e.regenerate(globalData);
+										e.regenerateChildren(globalData);
 										e.npc.save();
 									}}
 								/>
-								<label>{e.getName()}: {renderedText}</label>
 							</span>
 						)}
 					/>
