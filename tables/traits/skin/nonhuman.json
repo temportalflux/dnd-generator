@@ -2,7 +2,7 @@
 	"rows": [
 		{
 			"key": "nonhuman",
-			"stringify": "$(color) $(texture) $(tone)skin",
+			"stringify": "$(color) $(texture) $(tone.asString === 'none' ? '' : tone)skin",
 			"children": [
 				{
 					"key": "color",
