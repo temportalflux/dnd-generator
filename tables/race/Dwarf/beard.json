@@ -9,11 +9,15 @@
 			"weight": 100,
 			"key": "beard",
 			"value": "beard",
+			"stringify": "a $(length) $(color) $(shape)",
 			"children": [
 				{
 					"key": "length",
-					"source": "{roll:traits/face/beard/length}",
-					"shape": "{roll:traits/face/beard/shape}"
+					"source": "{roll:traits/face/beard/length}"
+				},
+				{
+					"key": "color",
+					"source": "{roll:common/color}"
 				},
 				{
 					"key": "shape",
