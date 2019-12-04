@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/dnd-generator/static/js/main.4760525f.chunk.js",
-    "main.js.map": "/dnd-generator/static/js/main.4760525f.chunk.js.map",
+    "main.js": "/dnd-generator/static/js/main.b1aa0907.chunk.js",
+    "main.js.map": "/dnd-generator/static/js/main.b1aa0907.chunk.js.map",
     "runtime-main.js": "/dnd-generator/static/js/runtime-main.9a206029.js",
     "runtime-main.js.map": "/dnd-generator/static/js/runtime-main.9a206029.js.map",
     "static/css/2.78f897c1.chunk.css": "/dnd-generator/static/css/2.78f897c1.chunk.css",
     "static/js/2.d4e30869.chunk.js": "/dnd-generator/static/js/2.d4e30869.chunk.js",
     "static/js/2.d4e30869.chunk.js.map": "/dnd-generator/static/js/2.d4e30869.chunk.js.map",
     "index.html": "/dnd-generator/index.html",
-    "precache-manifest.0dce09315422a04e6c9bbb642dcd8d6e.js": "/dnd-generator/precache-manifest.0dce09315422a04e6c9bbb642dcd8d6e.js",
+    "precache-manifest.63b6fe4da87dbd5952c1916a3e8e4062.js": "/dnd-generator/precache-manifest.63b6fe4da87dbd5952c1916a3e8e4062.js",
     "service-worker.js": "/dnd-generator/service-worker.js",
     "static/css/2.78f897c1.chunk.css.map": "/dnd-generator/static/css/2.78f897c1.chunk.css.map",
     "static/media/semantic.min.css": "/dnd-generator/static/media/outline-icons.ef60a4f6.woff"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9a206029.js",
     "static/css/2.78f897c1.chunk.css",
     "static/js/2.d4e30869.chunk.js",
-    "static/js/main.4760525f.chunk.js"
+    "static/js/main.b1aa0907.chunk.js"
   ]
 }
