@@ -76,6 +76,11 @@ export class Entry
 		this.collection = data.collection;
 	}
 
+	hasKey()
+	{
+		return this.key !== undefined;
+	}
+
 	getKey()
 	{
 		return this.key || this.index;
