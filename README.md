@@ -19,3 +19,13 @@ Start local server
 $ npm start
 ```
 
+# Credit
+
+Many traits used in this generator are inspired by other generators. Thanks to the following for inspiration and written words (no particular order):
+- http://www.npcgenerator.com/ by https://github.com/Cellule
+- http://whothefuckismydndcharacter.com/
+- https://rpgtinker.com/
+- https://www.kassoon.com/dnd/npc-generator/
+- https://perchance.org/ambitiousnpcgenerator
+- https://donjon.bin.sh/5e/random/#type=npc
+- http://negatherium.com/npc-generator/
