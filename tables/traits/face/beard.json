@@ -8,7 +8,7 @@
 		},
 		{
 			"key": "beard",
-			"value": "beard",
+			"stringify": "$(length) $(shape)",
 			"children": [
 				{
 					"key": "length",

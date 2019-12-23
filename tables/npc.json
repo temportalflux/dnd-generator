@@ -138,7 +138,8 @@
 		{
 			"category": "identity",
 			"key": "genderIdentity",
-			"source": "{roll:identity/genderIdentity}"
+			"source": "{roll:identity/genderIdentity}",
+			"isOptional": true
 		},
 		{
 			"category": "identity",
@@ -149,27 +150,32 @@
 		{
 			"category": "identity",
 			"key": "genderExpression",
-			"source": "{roll:identity/genderExpression}"
+			"source": "{roll:identity/genderExpression}",
+			"isOptional": true
 		},
 		{
 			"category": "identity",
 			"key": "sex",
-			"source": "{roll:identity/sex}"
+			"source": "{roll:identity/sex}",
+			"isOptional": true
 		},
 		{
 			"category": "identity",
 			"key": "sexualOrientation",
-			"source": "{roll:identity/sexualOrientation}"
+			"source": "{roll:identity/sexualOrientation}",
+			"isOptional": true
 		},
 		{
 			"category": "identity",
 			"key": "sexualIdentity",
-			"source": "{roll:identity/sexualIdentity}"
+			"source": "{roll:identity/sexualIdentity}",
+			"isOptional": true
 		},
 		{
 			"category": "identity",
 			"key": "romanticIdentity",
-			"source": "{roll:identity/romanticIdentity}"
+			"source": "{roll:identity/romanticIdentity}",
+			"isOptional": true
 		},
 		{
 			"category": "description",
@@ -264,22 +270,26 @@
 		{
 			"category": "occupation",
 			"key": "area",
-			"source": "{roll:occupation/type}"
+			"source": "{roll:occupation/type}",
+			"isOptional": true
 		},
 		{
 			"category": "occupation",
 			"key": "profession",
-			"source": "{roll:occupation/$(occupation.area)}"
+			"source": "{roll:occupation/$(occupation.area)}",
+			"isOptional": true
 		},
 		{
 			"category": "hooks",
 			"key": "hook",
-			"source": "{roll:hooks/all}"
+			"source": "{roll:hooks/all}",
+			"isOptional": true
 		},
 		{
 			"category": "relations",
 			"key": "relationship",
-			"source": "{roll:relationship/status}"
+			"source": "{roll:relationship/status}",
+			"isOptional": true
 		}
 	]
 }

@@ -51,6 +51,11 @@
 			"value": "coin"
 		},
 		{
+			"weight": 1,
+			"key": "necklace",
+			"value": "necklace"
+		},
+		{
 			"weight": 2,
 			"key": "weapon",
 			"redirect": "items/weapon"
