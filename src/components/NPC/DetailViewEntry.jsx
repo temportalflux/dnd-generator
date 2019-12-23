@@ -1,7 +1,7 @@
 /*eslint no-unused-vars: [0, {"args": "after-used", "argsIgnorePattern": "^_"}]*/
 
 import React, { useEffect } from 'react';
-import { Accordion, Icon, Button, Menu, Form, Popup, Header } from 'semantic-ui-react';
+import { Accordion, Icon, Button, Menu, Form, Popup, Header, Checkbox } from 'semantic-ui-react';
 import { TableFilter } from '../TableFilter';
 import { StorageAccordion } from '../StorageAccordion';
 import { camelCaseToTitle } from '../../lib/str';
@@ -76,6 +76,7 @@ function EntryView({
 		entry.addListenerOnModified(onChanged);
 		entry.addListenerOnUpdateCollection(onChanged);
 		entry.addListenerOnDispose(onDispose);
+		entry.addListenerOnEnabledChanged(onChanged);
 		return () =>
 		{
 			entry.removeListenerOnChanged(onChanged)
@@ -83,6 +84,7 @@ function EntryView({
 			entry.removeListenerOnModified(onChanged);
 			entry.removeListenerOnUpdateCollection(onChanged);
 			entry.removeListenerOnDispose(onDispose);
+			entry.removeListenerOnEnabledChanged(onChanged);
 		};
 	});
 
@@ -110,30 +112,38 @@ function EntryView({
 
 	if (active)
 	{
-		//console.log(entry, hasFilter, table);
+		//console.log(entry, entry.isEnabled());
 	}
 
 	return (
 		<div>
 			<Menu secondary style={{ marginBottom: 0 }}>
 				<Menu.Item fitted>
+					{entry.isOptional() && <Checkbox
+						toggle
+						disabled={!entry.areAllDependenciesUsable()}
+						checked={entry.isEnabled()}
+						onChange={(_, {checked}) => entry.setIsEnabled(checked)}
+					/>}
 					<Accordion.Title
 						index={propertyKey}
-						active={!isMissingSourceTable && active}
-						onClick={onClick}
+						active={!isMissingSourceTable && active && entry.isUsable()}
+						onClick={(evt, { index }) => { if (entry.isUsable()) onClick(evt, { index })}}
 					>
 						{!isMissingSourceTable && <Icon name='dropdown' />}
-						{camelCaseToTitle(propertyKey)} - &nbsp;
-						<span>{entry.toString()}</span>
-						{isMissingSourceTable && (
-							<span> - No generator available</span>
-						)}
+						{camelCaseToTitle(propertyKey)}
+						{entry.isUsable() &&
+							<span> - {entry.toString()} {isMissingSourceTable && (
+								<span> - No generator available</span>
+							)}</span>
+						}
 					</Accordion.Title>
 				</Menu.Item>
 				{!isMissingSourceTable && canRegenerate && <Menu.Item fitted position='right'>
 					<Button
 						style={{ margin: 2 }}
 						icon={'refresh'}
+						disabled={!entry.isUsable()}
 						onClick={() =>
 						{
 							entry.regenerate(npcModifiedData);
@@ -144,6 +154,7 @@ function EntryView({
 					<Button
 						style={{ margin: 2 }}
 						icon='refresh' content='Children'
+						disabled={!entry.isUsable()}
 						onClick={() => {
 							entry.regenerateChildren(npcModifiedData);
 							npc.save();
@@ -151,7 +162,7 @@ function EntryView({
 					/>
 				</Menu.Item>}
 			</Menu>
-			{!isMissingSourceTable && active && <Accordion.Content
+			{!isMissingSourceTable && active && entry.isUsable() && <Accordion.Content
 			>
 				<div style={{
 					borderLeft: '2px solid rgba(34,36,38,.15)',

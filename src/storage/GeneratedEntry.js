@@ -3,6 +3,7 @@ import lodash from 'lodash';
 import { createExecutor } from '../generator/modules/createExecutor';
 import { inlineEval, PURE_VARIABLE_REGEX } from '../generator/modules/evalAtCtx';
 import NpcData from './NpcData';
+import storage from 'local-storage';
 
 function objectEqualityDeepRecursive(a, b) {
 	for(const key in a) {
@@ -125,6 +126,62 @@ export default class GeneratedEntry
 
 		this.generated = undefined;
 		this.generatedChildren = undefined;
+	}
+
+	isOptional()
+	{
+		return this.schemaEntry.isOptional();
+	}
+
+	isUsable()
+	{
+		return !this.isOptional() || (this.isEnabled() && this.areAllDependenciesUsable());
+	}
+
+	areAllDependenciesUsable()
+	{
+		return (this.parent === undefined || this.parent.isUsable())
+			&& this.getGenerationDependencies().reduce(
+				(allDepsAreUsable, dependencyKeyPath) => allDepsAreUsable && this.npc.getEntry(dependencyKeyPath).isUsable(), true
+			);
+	}
+
+	isEnabled()
+	{
+		if (!this.isOptional()) return true;
+		return !(storage.get('disabledEntries') || []).includes(this.getKeyPath());
+	}
+
+	setIsEnabled(bIsEnabled)
+	{
+		let enabledEntries = (storage.get('disabledEntries') || []);
+
+		if (!bIsEnabled) enabledEntries.push(this.getKeyPath());
+		else enabledEntries = enabledEntries.filter((keyPath) => keyPath !== this.getKeyPath());
+
+		if (enabledEntries.length > 0) storage.set('disabledEntries', enabledEntries);
+		else storage.remove('disabledEntries');
+
+		this.dispatchEnabledStateChanged();
+		this.generationDependencyLinker.dispatchToSubscribers('onEnabledChanged', {});
+	}
+
+	addListenerOnEnabledChanged(callback)
+	{
+		this.events.addEventListener('onEnabledChanged', callback);
+	}
+
+	removeListenerOnEnabledChanged(callback)
+	{
+		this.events.removeEventListener('onEnabledChanged', callback);
+	}
+
+	dispatchEnabledStateChanged()
+	{
+		this.events.dispatchEvent(new CustomEvent('onEnabledChanged', { detail: {} }));
+		lodash.values(this.generatedChildren).forEach(
+			(child) => child.events.dispatchEvent(new CustomEvent('onEnabledChanged', { detail: {} }))
+		);
 	}
 
 	readEntry(entry)
@@ -716,9 +773,18 @@ export default class GeneratedEntry
 
 	onGenerationDependencyEvent(evt, { key, globalData })
 	{
-		console.assert(evt === 'onChanged');
-		Filter.remove(this.getKeyPath());
-		this.regenerate(globalData);
+		switch (evt)
+		{
+			case 'onChanged':
+				Filter.remove(this.getKeyPath());
+				this.regenerate(globalData);
+				break;
+			case 'onEnabledChanged':
+				this.dispatchEnabledStateChanged();
+				break;
+			default:
+				console.assert(false);
+		}
 	}
 
 	getOurCollections()

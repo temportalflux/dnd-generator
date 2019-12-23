@@ -45,11 +45,13 @@ function InlineEntryComponent({ entry, getComponent })
 		entry.addListenerOnUpdateString(onChanged);
 		entry.addListenerOnModified(onChanged);
 		entry.addListenerOnUpdateCollection(onChanged);
+		entry.addListenerOnEnabledChanged(onChanged);
 		return () => {
 			entry.removeListenerOnChanged(onChanged)
 			entry.removeListenerOnUpdateString(onChanged);
 			entry.removeListenerOnModified(onChanged);
 			entry.removeListenerOnUpdateCollection(onChanged);
+			entry.removeListenerOnEnabledChanged(onChanged);
 		};
 	});
 	return getComponent(entry) || <span/>;
@@ -195,25 +197,38 @@ export function ArticleContent({ usePlainText })
 					{createEntryItem(name)}{surname.hasValue() && createEntryItem(surname, (e) => ` ${e.toString()}`)}
 					&nbsp; is a &nbsp;
 					{createEntryItem(age)} year old &nbsp;
-					{createEntryItem(race)} &nbsp;
-					{createEntryItem(genderIdentity)} and &nbsp;
-					{createEntryItem(profession)} ({createEntryItem(occupationalArea)})
-					<InlineEntryComponent entry={profession}
-						getComponent={(e) => {
-							const desc = e.getDescriptionString(globalData);
-							if (desc === undefined) return undefined;
-							return <span>&nbsp;({desc})</span>;
-						}}
-					/>.
+					{createEntryItem(race)}
+					{genderIdentity.isUsable() ? <span>&nbsp; {createEntryItem(genderIdentity)}.</span> : '.'}
 				</List.Item>
+				{profession.isUsable() && <List.Item as='li'>
+					<InlineEntryComponent entry={pronouns}
+						getComponent={(e) => (
+							<span>
+								{toSentenceCase(e.getRawValue().singular)}
+								&nbsp; {pluralize(e.getRawValue(), 'works', 'work')} as a &nbsp;
+								{createEntryItem(profession)} ({createEntryItem(occupationalArea)}).
+								<InlineEntryComponent entry={profession}
+									getComponent={(e) => {
+										const desc = e.getDescriptionString(globalData);
+										if (desc === undefined) return undefined;
+										return <span>&nbsp;({desc})</span>;
+									}}
+								/>
+							</span>
+						)}
+					/>
+				</List.Item>}
 				<List.Item as='li'>
 					<InlineEntryComponent entry={pronouns}
 						getComponent={(e) => (
 							<span>
 								{toSentenceCase(e.getRawValue().singular)}
 								&nbsp; {pluralize(e.getRawValue(), 'has', 'have')} &nbsp;
-								{createEntryItem(eyeColor, (e) => `${e.toString()} eyes`)}, &nbsp;
-								{createEntryItem(hair)}, and {createEntryItem(beard)}.
+								{createEntryItem(eyeColor, (e) => `${e.toString()} eyes`)}
+								{ beard === undefined
+									? <span> and {createEntryItem(hair)}.</span>
+									: <span>, {createEntryItem(hair)}, and {createEntryItem(beard)}.</span>
+								}
 							</span>
 						)}
 					/>
@@ -259,34 +274,34 @@ export function ArticleContent({ usePlainText })
 			<Header as='h1' content='Identity' />
 			<Table compact='very' size='small' striped textAlign='center'>
 				<Table.Body>
-					<Table.Row>
+					{ pronouns.isUsable() && <Table.Row>
 						<Table.Cell>Pronouns</Table.Cell>
 						<Table.Cell>{createEntryItem(pronouns)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
+					</Table.Row> }
+					{ genderIdentity.isUsable() && <Table.Row>
 						<Table.Cell>Gender Identity</Table.Cell>
 						<Table.Cell>{createEntryItem(genderIdentity)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
+					</Table.Row> }
+					{ genderExpression.isUsable() && <Table.Row>
 						<Table.Cell>Gender Expression</Table.Cell>
 						<Table.Cell>{createEntryItem(genderExpression)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
+					</Table.Row> }
+					{ sex.isUsable() && <Table.Row>
 						<Table.Cell>Sex</Table.Cell>
 						<Table.Cell>{createEntryItem(sex)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
+					</Table.Row> }
+					{ romanticIdentity.isUsable() && <Table.Row>
 						<Table.Cell>Romantic Identity</Table.Cell>
 						<Table.Cell>{createEntryItem(romanticIdentity)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
+					</Table.Row> }
+					{ sexualIdentity.isUsable() && <Table.Row>
 						<Table.Cell>Sexual Identity</Table.Cell>
 						<Table.Cell>{createEntryItem(sexualIdentity)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
+					</Table.Row> }
+					{ sexualOrientation.isUsable() && <Table.Row>
 						<Table.Cell>Sexual Orientation</Table.Cell>
 						<Table.Cell>{createEntryItem(sexualOrientation)}</Table.Cell>
-					</Table.Row>
+					</Table.Row> }
 				</Table.Body>
 			</Table>
 
@@ -305,15 +320,18 @@ export function ArticleContent({ usePlainText })
 				{quirkList}
 			</List>
 
-			<Header as='h1' content='Relations' />
-			<b>Relationship Status:</b>&nbsp;{createEntryItem(relationshipStatus)}
+			{ relationshipStatus.isUsable() && <Header as='h1' content='Relations' />}
+			{ relationshipStatus.isUsable() && <span>
+				<b>Relationship Status:</b>&nbsp;{createEntryItem(relationshipStatus)}	
+			</span>}
 			
-			<Header as='h1' content='Hooks' />
-			<List bulleted as='ul'>
+			{ hooks.isUsable() && <Header as='h1' content='Hooks' /> }
+			{ hooks.isUsable() && <List bulleted as='ul'>
 				<List.Item as='li'>
 					{createEntryItem(hooks, toSentenceCase(hooks.toString()))}
 				</List.Item>
 			</List>
+ 			}
 
 			<Header as='h1' content='Stats' />
 

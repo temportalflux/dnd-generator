@@ -42,6 +42,9 @@ export class Entry
 		this.description = undefined;
 		this.articleContent = undefined;
 
+		// defines if the entry is can disabled
+		this.bIsOptional = false;
+
 		this.children = [];
 
 		this.canReroll = undefined;
@@ -68,6 +71,7 @@ export class Entry
 		this.stringify = data.stringify;
 		this.description = data.description;
 		this.articleContent = data.articleContent;
+		this.bIsOptional = data.isOptional;
 
 		this.childrenWithoutKeys = [];
 		this.children = accumulateEntries(data.children || [], `entry '${this.key}'`, (i) => this.childrenWithoutKeys.push(i));
@@ -153,6 +157,11 @@ export class Entry
 	getCanReroll()
 	{
 		return this.canReroll === undefined || this.canReroll === true;
+	}
+
+	isOptional()
+	{
+		return this.bIsOptional;
 	}
 
 }
