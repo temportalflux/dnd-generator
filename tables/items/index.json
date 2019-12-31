@@ -1,8 +1,9 @@
 [
   "aliment",
+	"clothes",
   "mundanePlural",
   "precious",
   "preciousPrefixed",
   "weapon",
-  "weapon/index"
+	"weapon/index"
 ]

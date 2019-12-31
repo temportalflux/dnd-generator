@@ -1,0 +1,24 @@
+{
+	"rows": [
+		{
+			"key": "gloves",
+			"value": "gloves"
+		},
+		{
+			"key": "hats",
+			"value": "hats"
+		},
+		{
+			"key": "belts",
+			"value": "belts"
+		},
+		{
+			"key": "scarves",
+			"value": "scarves"
+		},
+		{
+			"key": "boots",
+			"value": "boots"
+		}
+	]
+}

@@ -1,16 +1,7 @@
 {
 	"rows": [
 		{
-			"key": "gloves",
-			"value": "gloves"
-		},
-		{
-			"key": "hats",
-			"value": "hats"
-		},
-		{
-			"key": "belts",
-			"value": "belts"
+			"redirect": "items/clothes"
 		},
 		{
 			"key": "feathers",
@@ -29,6 +20,10 @@
 			"value": "branches"
 		},
 		{
+			"key": "candles",
+			"value": "candles"
+		},
+		{
 			"key": "coins",
 			"value": "coins"
 		},
@@ -39,10 +34,6 @@
 		{
 			"key": "pens",
 			"value": "pens"
-		},
-		{
-			"key": "scarves",
-			"value": "scarves"
 		},
 		{
 			"key": "weapons",
@@ -67,6 +58,58 @@
 		{
 			"key": "weird clothes",
 			"value": "weird clothes"
+		},
+		{
+			"key": "wires",
+			"value": "wires"
+		},
+		{
+			"key": "metal cubes",
+			"value": "metal cubes"
+		},
+		{
+			"key": "books",
+			"value": "books"
+		},
+		{
+			"key": "journals",
+			"value": "journals"
+		},
+		{
+			"key": "wrapping paper",
+			"value": "wrapping paper"
+		},
+		{
+			"key": "tape",
+			"value": "tape"
+		},
+		{
+			"key": "tapestries",
+			"value": "tapestries"
+		},
+		{
+			"key": "pillows",
+			"value": "pillows"
+		},
+		{
+			"key": "awards",
+			"value": "awards"
+		},
+		{
+			"key": "tables",
+			"value": "tables"
+		},
+		{
+			"key": "polyhedral dice",
+			"value": "polyhedral dice"
+		},
+		{
+			"key": "paintings",
+			"value": "paintings"
+		},
+		{
+			"key": "signed artwork",
+			"value": "signed artwork"
 		}
 	]
 }
