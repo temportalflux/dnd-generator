@@ -55,7 +55,6 @@ export function DetailView(props)
 {
 	const npcSchema = props.tableCollection.getNpcSchema();
 	const storageKey = `npc.${DISPLAY_MODES.Detailed}.expandedEntries`;
-	console.log(props.tableCollection, npcSchema, NpcData.get());
 	const npc = NpcData.get();
 	return (
 		<div>
