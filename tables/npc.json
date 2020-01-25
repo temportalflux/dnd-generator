@@ -33,6 +33,7 @@
 		{
 			"category": "stats",
 			"key": "abilityScores",
+			"isOptional": true,
 			"stringify": "STR($(strength)) DEX($(dexterity)) CON($(constitution)) INT($(intelligence)) WIS($(wisdom)) CHA($(charisma))",
 			"canReroll": false,
 			"children": [
@@ -71,6 +72,7 @@
 		{
 			"category": "stats",
 			"key": "alignmentTendancies",
+			"isOptional": true,
 			"stringify": "($(ethical.positive)/$(ethical.neutral)/$(ethical.negative)) - ($(moral.positive)/$(moral.neutral)/$(moral.negative))",
 			"children": [
 				{
