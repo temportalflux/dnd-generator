@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/dnd-generator/static/js/main.c9c9a18f.chunk.js",
-    "main.js.map": "/dnd-generator/static/js/main.c9c9a18f.chunk.js.map",
+    "main.js": "/dnd-generator/static/js/main.19a81ed4.chunk.js",
+    "main.js.map": "/dnd-generator/static/js/main.19a81ed4.chunk.js.map",
     "runtime-main.js": "/dnd-generator/static/js/runtime-main.9a206029.js",
     "runtime-main.js.map": "/dnd-generator/static/js/runtime-main.9a206029.js.map",
     "static/css/2.78f897c1.chunk.css": "/dnd-generator/static/css/2.78f897c1.chunk.css",
-    "static/js/2.e8965e44.chunk.js": "/dnd-generator/static/js/2.e8965e44.chunk.js",
-    "static/js/2.e8965e44.chunk.js.map": "/dnd-generator/static/js/2.e8965e44.chunk.js.map",
+    "static/js/2.aaa79623.chunk.js": "/dnd-generator/static/js/2.aaa79623.chunk.js",
+    "static/js/2.aaa79623.chunk.js.map": "/dnd-generator/static/js/2.aaa79623.chunk.js.map",
     "index.html": "/dnd-generator/index.html",
-    "precache-manifest.7f6982a35a1cb6442df52ae43a02bb8a.js": "/dnd-generator/precache-manifest.7f6982a35a1cb6442df52ae43a02bb8a.js",
+    "precache-manifest.211ac6cd604a7464fde7cf14cfd119f6.js": "/dnd-generator/precache-manifest.211ac6cd604a7464fde7cf14cfd119f6.js",
     "service-worker.js": "/dnd-generator/service-worker.js",
     "static/css/2.78f897c1.chunk.css.map": "/dnd-generator/static/css/2.78f897c1.chunk.css.map",
     "static/media/semantic.min.css": "/dnd-generator/static/media/outline-icons.ef60a4f6.woff"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.9a206029.js",
     "static/css/2.78f897c1.chunk.css",
-    "static/js/2.e8965e44.chunk.js",
-    "static/js/main.c9c9a18f.chunk.js"
+    "static/js/2.aaa79623.chunk.js",
+    "static/js/main.19a81ed4.chunk.js"
   ]
 }
