@@ -116,9 +116,9 @@ export class Entry
 
 	isMissingSourceTable(tableCollection, evaluateWithData)
 	{
-		if (!this.hasSource()) return false;
+		if (!this.hasSource()) return true;
 		const tablePath = this.getSourceTableKey();
-		if (!tablePath) return false;
+		if (!tablePath) return true;
 		return tableCollection.getTable(evaluateWithData(tablePath)) === undefined;
 	}
 
