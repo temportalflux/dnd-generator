@@ -5,7 +5,7 @@
 			"key": "wanderlust",
 			"stringify": "$(identity.pronouns.singular) has a constant wanderlust and is unable to live at the same place for more than a few months.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
@@ -13,7 +13,7 @@
 			"key": "change",
 			"stringify": "$(identity.pronouns.singular) doesn't like change.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 1
+				"stats.alignmentTendencies.ethical.positive": 1
 			}
 		},
 		{
@@ -128,7 +128,7 @@
 			"key": "disobedient",
 			"stringify": "$(identity.pronouns.singular) always does what $(identity.pronouns.singular) is told not to.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
@@ -136,7 +136,7 @@
 			"key": "irritable",
 			"stringify": "$(identity.pronouns.singular) gets very mad at any semblance of an insult.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
@@ -214,7 +214,7 @@
 			"key": "caresForFriends",
 			"stringify": "$(identity.pronouns.singular) cares about $(identity.pronouns.possessive) friends and will do anything for them.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 1
+				"stats.alignmentTendencies.moral.positive": 1
 			}
 		},
 		{
@@ -238,7 +238,7 @@
 			"key": "listener",
 			"stringify": "$(identity.pronouns.singular) wants to know every side of a story before expressing an opinion.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.moral.neutral": 2
 			}
 		},
 		{
@@ -257,7 +257,7 @@
 			"key": "workHardPlayHard",
 			"stringify": "$(identity.pronouns.singular) works hard to play hard afterwards.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 1
+				"stats.alignmentTendencies.ethical.negative": 1
 			}
 		},
 		{
@@ -331,7 +331,7 @@
 			"key": "violentReactionTo",
 			"stringify": "$(identity.pronouns.singular) reacts violently to $(object).",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 1
+				"stats.alignmentTendencies.ethical.negative": 1
 			},
 			"children": [
 				{
@@ -390,7 +390,7 @@
 			"key": "deadAnimals",
 			"stringify": "$(identity.pronouns.singular) owns a box full of dead animals.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{

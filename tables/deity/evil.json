@@ -5,8 +5,8 @@
 			"value": "Talos",
 			"articleContent": "Talos, God of storms, destruction, rebellion, conflagration, earthquakes, vortices (Chaotic Evil)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
@@ -14,8 +14,8 @@
 			"value": "Asmodeus",
 			"articleContent": "Asmodeus, God of sin, King of the Nine Hells (Lawful Evil)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
@@ -23,8 +23,8 @@
 			"value": "Bane",
 			"articleContent": "Bane, God of hatred, fear and tiranny (Lawful Evil)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
@@ -32,8 +32,8 @@
 			"value": "Cyric",
 			"articleContent": "Cyric, God of murder, lies, intrigue, strife, deception, illusion (Chaotic Evil)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
@@ -41,8 +41,8 @@
 			"value": "Lolth",
 			"articleContent": "Lolth, Goddess of drows, spiders, darkness, chaos, evil, assassination (Chaotic Evil)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
@@ -50,8 +50,8 @@
 			"value": "Shar",
 			"articleContent": "Shar, Goddess of dark, night, loss, forgetfulness, unrevealed secrets, caverns, dungeons, the Underdark (NE)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.neutral": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.neutral": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{

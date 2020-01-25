@@ -94,12 +94,12 @@
 			"key": "Druid",
 			"value": "Druid",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": -2,
-				"stats.alignmentTendancies.ethical.neutral": 2,
-				"stats.alignmentTendancies.ethical.negative": -2,
-				"stats.alignmentTendancies.moral.positive": -2,
-				"stats.alignmentTendancies.moral.neutral": 2,
-				"stats.alignmentTendancies.moral.negative": -2
+				"stats.alignmentTendencies.ethical.positive": -2,
+				"stats.alignmentTendencies.ethical.neutral": 2,
+				"stats.alignmentTendencies.ethical.negative": -2,
+				"stats.alignmentTendencies.moral.positive": -2,
+				"stats.alignmentTendencies.moral.neutral": 2,
+				"stats.alignmentTendencies.moral.negative": -2
 			},
 			"children": [
 				{
@@ -233,7 +233,7 @@
 			"key": "Warlock",
 			"value": "Warlock",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			},
 			"children": [
 				{

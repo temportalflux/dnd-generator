@@ -135,9 +135,9 @@
 				"stats.abilityScores.constitution": 2,
 				"stats.abilityScores.wisdom": 2,
 				"description.height": 60,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.good": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.good": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			},
 			"children": [
 				{
@@ -212,9 +212,9 @@
 				"stats.abilityScores.wisdom": -3,
 				"stats.abilityScores.charisma": -1,
 				"description.height": -50,
-				"stats.alignmentTendancies.ethical.neutral": 2,
-				"stats.alignmentTendancies.ethical.positive": -2,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.neutral": 2,
+				"stats.alignmentTendencies.ethical.positive": -2,
+				"stats.alignmentTendencies.moral.negative": 3
 			},
 			"children": [
 				{
@@ -237,11 +237,11 @@
 				"stats.abilityScores.constitution": 3,
 				"stats.abilityScores.intelligence": -2,
 				"description.height": 60,
-				"stats.alignmentTendancies.ethical.positive": 3,
-				"stats.alignmentTendancies.ethical.negative": -2,
-				"stats.alignmentTendancies.moral.positive": -2,
-				"stats.alignmentTendancies.moral.neutral": 2,
-				"stats.alignmentTendancies.moral.negative": -2
+				"stats.alignmentTendencies.ethical.positive": 3,
+				"stats.alignmentTendencies.ethical.negative": -2,
+				"stats.alignmentTendencies.moral.positive": -2,
+				"stats.alignmentTendencies.moral.neutral": 2,
+				"stats.alignmentTendencies.moral.negative": -2
 			},
 			"children": [
 				{
@@ -273,7 +273,7 @@
 				"stats.abilityScores.constitution": 2,
 				"stats.abilityScores.wisdom": 1,
 				"description.height": -25,
-				"stats.alignmentTendancies.ethical.positive": 2
+				"stats.alignmentTendencies.ethical.positive": 2
 			},
 			"children": [
 				{
@@ -304,7 +304,7 @@
 				"stats.abilityScores.intelligence": 1,
 				"stats.abilityScores.charisma": 2,
 				"description.height": -5,
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			},
 			"children": [
 				{
@@ -338,8 +338,8 @@
 				"stats.abilityScores.wisdom": -3,
 				"stats.abilityScores.charisma": -1,
 				"description.height": 15,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.positive": -2
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.positive": -2
 			},
 			"children": [
 				{
@@ -425,11 +425,11 @@
 				"stats.abilityScores.wisdom": 1,
 				"stats.abilityScores.charisma": 1,
 				"description.height": -28,
-				"stats.alignmentTendancies.ethical.positive": -2,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.positive": -1,
-				"stats.alignmentTendancies.moral.neutral": 2,
-				"stats.alignmentTendancies.moral.negative": -1,
+				"stats.alignmentTendencies.ethical.positive": -2,
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.positive": -1,
+				"stats.alignmentTendencies.moral.neutral": 2,
+				"stats.alignmentTendencies.moral.negative": -1,
 				"description.age": -6
 			},
 			"children": [
@@ -460,11 +460,11 @@
 				"stats.abilityScores.wisdom": 2,
 				"stats.abilityScores.charisma": -2,
 				"description.height": 15,
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.ethical.negative": -3,
-				"stats.alignmentTendancies.moral.positive": -1,
-				"stats.alignmentTendancies.moral.neutral": 2,
-				"stats.alignmentTendancies.moral.negative": -1,
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.ethical.negative": -3,
+				"stats.alignmentTendencies.moral.positive": -1,
+				"stats.alignmentTendencies.moral.neutral": 2,
+				"stats.alignmentTendencies.moral.negative": -1,
 				"description.age": -4
 			},
 			"children": [
@@ -499,9 +499,9 @@
 				"stats.abilityScores.intelligence": -4,
 				"stats.abilityScores.wisdom": -3,
 				"description.height": 20,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.positive": -2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.positive": -2,
+				"stats.alignmentTendencies.moral.negative": 2
 			},
 			"children": [
 				{
@@ -530,8 +530,8 @@
 				"stats.abilityScores.wisdom": -2,
 				"stats.abilityScores.charisma": 1,
 				"description.height": 10,
-				"stats.alignmentTendancies.moral.positive": 1,
-				"stats.alignmentTendancies.ethical.negative": 3
+				"stats.alignmentTendencies.moral.positive": 1,
+				"stats.alignmentTendencies.ethical.negative": 3
 			},
 			"children": [
 				{
@@ -562,7 +562,7 @@
 				"stats.abilityScores.constitution": -1,
 				"stats.abilityScores.intelligence": 2,
 				"stats.abilityScores.charisma": 3,
-				"stats.alignmentTendancies.ethical.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3
 			},
 			"children": [
 				{
@@ -591,9 +591,9 @@
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.constitution": 2,
 				"stats.abilityScores.charisma": 1,
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.positive": 3,
-				"stats.alignmentTendancies.moral.negative": -3
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.positive": 3,
+				"stats.alignmentTendencies.moral.negative": -3
 			},
 			"children": [
 				{
@@ -624,9 +624,9 @@
 				"stats.abilityScores.constitution": 1,
 				"stats.abilityScores.intelligence": -4,
 				"stats.abilityScores.charisma": -4,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.positive": -2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.positive": -2,
+				"stats.alignmentTendencies.moral.negative": 2
 			},
 			"children": [
 				{

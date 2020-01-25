@@ -100,7 +100,7 @@
 				"stats.abilityScores.strength": 2,
 				"stats.abilityScores.dexterity": 1,
 				"stats.abilityScores.charisma": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{

@@ -34,7 +34,7 @@
 			"key": "tavernBrawler",
 			"stringify": "$(identity.pronouns.singular) enjoys tavern brawls.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 1
+				"stats.alignmentTendencies.ethical.negative": 1
 			}
 		},
 		{
@@ -42,7 +42,7 @@
 			"key": "noProperty",
 			"stringify": "$(identity.pronouns.singular) has no concept of propriety.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
@@ -50,7 +50,7 @@
 			"key": "helpsOthers",
 			"stringify": "$(identity.pronouns.singular) always has time to help others.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
@@ -58,7 +58,7 @@
 			"key": "hatesAristocracy",
 			"stringify": "$(identity.pronouns.singular) despises the aristocracy.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
@@ -92,7 +92,7 @@
 			"key": "sharesEverything",
 			"stringify": "$(identity.pronouns.singular) shares everything $(identity.pronouns.singular) owns.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
@@ -100,7 +100,7 @@
 			"key": "foulLanguage",
 			"stringify": "$(identity.pronouns.singular) uses very foul language.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{

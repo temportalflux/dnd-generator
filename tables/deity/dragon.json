@@ -9,72 +9,72 @@
 			"key": "Astilabor", "value": "Astilabor",
 			"articleContent": "Astilabor, Goddess of acquisitiveness, status, wealth (Lawful Neutral)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			}
 		},
 		{
 			"key": "Bahamut", "value": "Bahamut",
 			"articleContent": "Bahamut, God of good dragons, wind, wisdom, justice (Lawful Good)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
 			"key": "Faluzure", "value": "Faluzure",
 			"articleContent": "Faluzure, God of decay, undeath, exhaustion (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
 			"key": "Garyx", "value": "Garyx",
 			"articleContent": "Garyx, God of fire, destruction, renewal (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
 			"key": "Hlal", "value": "Hlal",
 			"articleContent": "Hlal, Goddess of humor, tricks, messages (Chaotic Neutral)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			}
 		},
 		{
 			"key": "Kereska", "value": "Kereska",
 			"articleContent": "Kereska, Goddess of dragon magic and magical creativity (Neutral Good)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.neutral": 2,
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.ethical.neutral": 2,
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
 			"key": "Lendys", "value": "Lendys",
 			"articleContent": "Lendys, God of balance, justice (Lawful Neutral)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			}
 		},
 		{
 			"key": "Tamara", "value": "Tamara",
 			"articleContent": "Tamara, Goddess of life, light, mercy (Lawful Good)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
 			"key": "Task", "value": "Task",
 			"articleContent": "Task, God of greed, selfishness (Chaotic Neutral)}",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			}
 		},
 		{

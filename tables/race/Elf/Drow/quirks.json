@@ -32,14 +32,14 @@
 			"weight": 2,
 			"stringify": "$(identity.pronouns.singular) knows all the best ways to torture someone.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"weight": 2,
 			"stringify": "$(identity.pronouns.singular) enjoys torturing small animals.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{

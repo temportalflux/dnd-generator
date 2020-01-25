@@ -1,7 +1,7 @@
 {
 	"generationOrder": [
 		"stats.abilityScores",
-		"stats.alignmentTendancies",
+		"stats.alignmentTendencies",
 		"personality.quirks",
 		"personality.alignmentMoral",
 		"identity.genderIdentity",
@@ -71,7 +71,7 @@
 		},
 		{
 			"category": "stats",
-			"key": "alignmentTendancies",
+			"key": "alignmentTendencies",
 			"isOptional": true,
 			"stringify": "($(ethical.positive)/$(ethical.neutral)/$(ethical.negative)) - ($(moral.positive)/$(moral.neutral)/$(moral.negative))",
 			"children": [

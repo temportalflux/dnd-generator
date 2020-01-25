@@ -72,14 +72,14 @@
 			"key": "generous",
 			"stringify": "$(identity.pronouns.singular) is very generous.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
 			"key": "greedy",
 			"stringify": "$(identity.pronouns.singular) is very greedy.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
@@ -90,7 +90,7 @@
 			"key": "nonmaterialistic",
 			"stringify": "$(identity.pronouns.singular) is non-materialistic.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.neutral": 1
+				"stats.alignmentTendencies.ethical.neutral": 1
 			}
 		},
 		{
@@ -118,8 +118,8 @@
 			"stringify": "$(identity.pronouns.singular) constantly looks for the loophole.",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 1,
-				"stats.alignmentTendancies.ethical.positive": -2,
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.positive": -2,
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
@@ -148,7 +148,7 @@
 			"key": "hatesLazy",
 			"stringify": "$(identity.pronouns.singular) can't stand laziness.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2
+				"stats.alignmentTendencies.ethical.positive": 2
 			}
 		},
 		{

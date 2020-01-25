@@ -43,7 +43,7 @@
 			"description": "An intellectual who has contributed in one or more branches of philosophy.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1,
-				"stats.alignmentTendancies.moral.neutral": 1
+				"stats.alignmentTendencies.moral.neutral": 1
 			},
 			"children": [
 				{

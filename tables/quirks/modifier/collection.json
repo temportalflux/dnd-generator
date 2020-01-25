@@ -10,7 +10,7 @@
 			"key": "teeth from cadavers",
 			"value": "teeth from cadavers",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{
@@ -48,7 +48,7 @@
 			"key": "tiny animal skulls",
 			"value": "tiny animal skulls",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{

@@ -4,72 +4,72 @@
 			"key": "Baphomet", "value": "Baphomet",
 			"articleContent": "Baphomet, Demon lord of minotaurs, beasts, vengeance. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Demogorgon", "value": "Demogorgon",
 			"articleContent": "Demogorgon, the Iron Duke, Prince of Demons. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Eltab", "value": "Eltab",
 			"articleContent": "Eltab, Demon lord of hatred, retribution. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Graz'zt", "value": "Graz'zt",
 			"articleContent": "Graz'zt, Demon lord of darkness, seduction, guilde, debauchery. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Kostchtchie", "value": "Kostchtchie",
 			"articleContent": "Kostchtchie, Demon lord of frost giants, wrath, rage. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Orcus", "value": "Orcus",
 			"articleContent": "Orcus, Demon lord of undeath. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Pazrael", "value": "Pazrael",
 			"articleContent": "Pazrael, the Archduchess, Demon lord of evil flying creatures, corruption. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Sess'Innek", "value": "Sess'Innek",
 			"articleContent": "Sess'Innek, the Slug Archduke, Demon lord of khaastas, lizard kings, civilization, domination. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		},
 		{
 			"key": "Yeenoghu", "value": "Yeenoghu",
 			"articleContent": "Yeenoghu, Demon lord of gnolls. (Chaotic Evil)",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 3
 			}
 		}
 	]

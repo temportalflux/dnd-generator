@@ -5,9 +5,9 @@
 			"key": "Barbarian",
 			"value": "Barbarian",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": -1,
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.positive": -1,
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			},
 			"children": [
 				{
@@ -99,9 +99,9 @@
 			"key": "Monk",
 			"value": "Monk",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.ethical.neutral": -2,
-				"stats.alignmentTendancies.ethical.negative": -2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.ethical.neutral": -2,
+				"stats.alignmentTendencies.ethical.negative": -2
 			},
 			"children": [
 				{
@@ -146,10 +146,10 @@
 			"key": "Paladin",
 			"value": "Paladin",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 3,
-				"stats.alignmentTendancies.ethical.negative": -1,
-				"stats.alignmentTendancies.moral.positive": 3,
-				"stats.alignmentTendancies.moral.negative": -3
+				"stats.alignmentTendencies.ethical.positive": 3,
+				"stats.alignmentTendencies.ethical.negative": -1,
+				"stats.alignmentTendencies.moral.positive": 3,
+				"stats.alignmentTendencies.moral.negative": -3
 			},
 			"children": [
 				{
@@ -199,8 +199,8 @@
 			"key": "Ranger",
 			"value": "Ranger",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			},
 			"children": [
 				{
@@ -245,8 +245,8 @@
 			"key": "Rogue",
 			"value": "Rogue",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 1
 			},
 			"children": [
 				{

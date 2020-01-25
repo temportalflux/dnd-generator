@@ -6,8 +6,8 @@
 			"modifiers": {
 				"stats.abilityScores.strength": 1,
 				"stats.abilityScores.constitution": 1,
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.negative": 1
 			},
 			"children": [
 				{
@@ -29,8 +29,8 @@
 			"value": "Pickpockset",
 			"modifiers": {
 				"stats.abilityScores.dexterity": 3,
-				"stats.alignmentTendancies.ethical.negative": 2,
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.ethical.negative": 2,
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{
@@ -46,8 +46,8 @@
 			"value": "Slaver",
 			"modifiers": {
 				"stats.abilityScores.intelligence": 3,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{

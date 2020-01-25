@@ -51,8 +51,8 @@
 			"value": "Wandering Pilgrim",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1,
-				"stats.alignmentTendancies.moral.positive": 3,
-				"stats.alignmentTendancies.moral.negative": -1
+				"stats.alignmentTendencies.moral.positive": 3,
+				"stats.alignmentTendencies.moral.negative": -1
 			},
 			"children": [
 				{

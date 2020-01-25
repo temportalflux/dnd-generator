@@ -32,7 +32,7 @@
 				}
 			],
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 1
+				"stats.alignmentTendencies.moral.positive": 1
 			}
 		},
 		{
@@ -109,7 +109,7 @@
 			"key": "doesntPartyWithPossessions",
 			"stringify": "$(identity.pronouns.singular) doesn't like parting with $(identity.pronouns.possessive) money or possessions.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{

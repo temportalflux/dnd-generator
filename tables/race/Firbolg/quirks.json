@@ -6,7 +6,7 @@
 		{
 			"stringify": "$(identity.pronouns.singular) has been outcast for a murder $(identity.pronouns.singular) committed.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 2
+				"stats.alignmentTendencies.moral.negative": 2
 			}
 		},
 		{
@@ -42,7 +42,7 @@
 		{
 			"stringify": "$(identity.pronouns.singular) follows omens to determine $(identity.pronouns.possessive) daily actions.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 1
+				"stats.alignmentTendencies.moral.positive": 1
 			}
 		}
 	]

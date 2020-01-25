@@ -16,7 +16,7 @@
 			"weight": 2,
 			"stringify": "$(identity.pronouns.singular) $(frequency) challenges others to duels to the death.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			},
 			"children": [
 				{

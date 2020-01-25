@@ -18,35 +18,35 @@
 			"key": "actsFirst",
 			"stringify": "$(identity.pronouns.singular) would rather act than talk or think.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 1
+				"stats.alignmentTendencies.ethical.negative": 1
 			}
 		},
 		{
 			"key": "pondersProsAndCons",
 			"stringify": "$(identity.pronouns.singular) will ponder the pros and cons before making a decision.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": -1
+				"stats.alignmentTendencies.ethical.negative": -1
 			}
 		},
 		{
 			"key": "boredEasily",
 			"stringify": "$(identity.pronouns.singular) gets bored easily.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
 			"key": "variableMood",
 			"stringify": "$(identity.pronouns.singular) has a highly variable mood.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
 			"key": "bipolar",
 			"stringify": "$(identity.pronouns.singular) is bipolar.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3
 			}
 		},
 		{
@@ -89,7 +89,7 @@
 			"stringify": "$(identity.pronouns.singular) is always prepared.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": 1,
-				"stats.alignmentTendancies.ethical.negative": -1
+				"stats.alignmentTendencies.ethical.negative": -1
 			}
 		},
 		{
@@ -126,7 +126,7 @@
 			"key": "sarcastic",
 			"stringify": "$(identity.pronouns.singular) uses sarcasm and insults commonly.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{
@@ -157,15 +157,15 @@
 			"key": "selfish",
 			"stringify": "$(identity.pronouns.singular) is very selfish.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": -1,
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.positive": -1,
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{
 			"key": "prioritizesTheirNeeds",
 			"stringify": "$(identity.pronouns.singular) will always prioritize $(identity.pronouns.possessive) needs.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{
@@ -173,8 +173,8 @@
 			"stringify": "$(identity.pronouns.singular) will always prioritize the needs of other people, even to $(identity.pronouns.possessive) detriment.",
 			"modifiers": {
 				"stats.abilityScores.wisdom": -2,
-				"stats.alignmentTendancies.moral.positive": 2,
-				"stats.alignmentTendancies.moral.negative": -2
+				"stats.alignmentTendencies.moral.positive": 2,
+				"stats.alignmentTendencies.moral.negative": -2
 			}
 		},
 		{
@@ -193,73 +193,73 @@
 			"stringify": "$(identity.pronouns.singular) is always ready to help others.",
 			"modifiers": {
 				
-				"stats.alignmentTendancies.moral.positive": 2,
-				"stats.alignmentTendancies.moral.negative": -1
+				"stats.alignmentTendencies.moral.positive": 2,
+				"stats.alignmentTendencies.moral.negative": -1
 			}
 		},
 		{
 			"key": "polite",
 			"stringify": "$(identity.pronouns.singular) is polite and respectful.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 1
+				"stats.alignmentTendencies.ethical.positive": 1
 			}
 		},
 		{
 			"key": "pacifist",
 			"stringify": "$(identity.pronouns.singular) is a pacifist.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
 			"key": "kind",
 			"stringify": "$(identity.pronouns.singular) is kind and generous.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 2,
-				"stats.alignmentTendancies.moral.negative": -1
+				"stats.alignmentTendencies.moral.positive": 2,
+				"stats.alignmentTendencies.moral.negative": -1
 			}
 		},
 		{
 			"key": "holdsGrudges",
 			"stringify": "$(identity.pronouns.singular) easily holds grudges.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.negative": 1
+				"stats.alignmentTendencies.moral.negative": 1
 			}
 		},
 		{
 			"key": "benevolent",
 			"stringify": "$(identity.pronouns.singular) is very benevolent.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 1
+				"stats.alignmentTendencies.moral.positive": 1
 			}
 		},
 		{
 			"key": "easilyForgives",
 			"stringify": "$(identity.pronouns.singular) is quick to forgive.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 1
+				"stats.alignmentTendencies.moral.positive": 1
 			}
 		},
 		{
 			"key": "violent",
 			"stringify": "$(identity.pronouns.singular) is prone to violence.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
 			"key": "diplomatic",
 			"stringify": "$(identity.pronouns.singular) is a very good diplomat and always works towards resolution of conflict.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.moral.neutral": 2
 			}
 		},
 		{
 			"key": "diffusesTension",
 			"stringify": "$(identity.pronouns.singular) is very good at defusing tensions.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.neutral": 2
+				"stats.alignmentTendencies.moral.neutral": 2
 			}
 		},
 		{
@@ -270,16 +270,16 @@
 			"key": "playsFair",
 			"stringify": "$(identity.pronouns.singular) always plays fair.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.ethical.negative": -2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.ethical.negative": -2
 			}
 		},
 		{
 			"key": "hatesFairPlay",
 			"stringify": "$(identity.pronouns.singular) hates fair play.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2,
-				"stats.alignmentTendancies.ethical.negative": -2
+				"stats.alignmentTendencies.ethical.positive": 2,
+				"stats.alignmentTendencies.ethical.negative": -2
 			}
 		}
 	]

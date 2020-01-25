@@ -34,7 +34,7 @@
 			"key": "mindlessDestruction",
 			"stringify": "$(identity.pronouns.singular) seeks mindless destruction.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 3
+				"stats.alignmentTendencies.ethical.negative": 3
 			}
 		}
 	]

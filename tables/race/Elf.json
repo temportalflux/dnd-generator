@@ -11,8 +11,8 @@
 				"stats.abilityScores.intelligence": 2,
 				"stats.abilityScores.wisdom": 2,
 				"stats.abilityScores.charisma": 2,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
@@ -26,8 +26,8 @@
 				"stats.abilityScores.intelligence": 4,
 				"stats.abilityScores.wisdom": 4,
 				"stats.abilityScores.charisma": 2,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
@@ -41,8 +41,8 @@
 				"stats.abilityScores.intelligence": 2,
 				"stats.abilityScores.wisdom": 2,
 				"stats.abilityScores.charisma": 4,
-				"stats.alignmentTendancies.ethical.negative": 3,
-				"stats.alignmentTendancies.moral.neutral": 4
+				"stats.alignmentTendencies.ethical.negative": 3,
+				"stats.alignmentTendencies.moral.neutral": 4
 			},
 			"children": [
 				{

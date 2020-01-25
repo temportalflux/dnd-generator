@@ -4,7 +4,7 @@
 		"description.height",
 		"description.weight",
 
-		"stats.alignmentTendancies",
+		"stats.alignmentTendencies",
 		"personality.alignmentMoral",
 
 		"description.race",
@@ -56,7 +56,7 @@
 					"charisma": 9
 				}
 			},
-			"alignmentTendancies": {
+			"alignmentTendencies": {
 				"default": {
 					"ethical": {
 						"positive": "{roll:traits/alignment/tendancy}",

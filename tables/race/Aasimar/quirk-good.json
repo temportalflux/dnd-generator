@@ -4,7 +4,7 @@
 			"key": "spreadHope",
 			"stringify": "$(identity.pronouns.singular) seeks to spread compassion and hope.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
@@ -33,28 +33,28 @@
 			"key": "reformEvil",
 			"stringify": "$(identity.pronouns.singular) seeks to forgive and reform evil creatures.",
 			"modifiers": {
-				"stats.alignmentTendancies.moral.positive": 2
+				"stats.alignmentTendencies.moral.positive": 2
 			}
 		},
 		{
 			"key": "eradicateEvil",
 			"stringify": "$(identity.pronouns.singular) seeks to eradicate evil in all its forms.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
 			"key": "destroyFallen",
 			"stringify": "$(identity.pronouns.singular) seeks to destroy fallen aasimars.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.negative": 2
+				"stats.alignmentTendencies.ethical.negative": 2
 			}
 		},
 		{
 			"key": "punisher",
 			"stringify": "$(identity.pronouns.singular) seeks to punish wrongdoers.",
 			"modifiers": {
-				"stats.alignmentTendancies.ethical.positive": 2
+				"stats.alignmentTendencies.ethical.positive": 2
 			}
 		},
 		{

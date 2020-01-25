@@ -14,7 +14,7 @@
 			"description": "A lawyer. Often individuals but also form groups.",
 			"modifiers": {
 				"stats.abilityScores.charisma": 2,
-				"stats.alignmentTendancies.ethical.positive": 3
+				"stats.alignmentTendencies.ethical.positive": 3
 			}
 		},
 		{
