@@ -1,6 +1,7 @@
 {
   "name": "dnd-generator",
-  "version": "0.1.0",
+	"version": "0.1.0",
+	"versionPrefix": "beta",
   "description": "",
   "author": "temportalflux",
   "license": "MIT",
