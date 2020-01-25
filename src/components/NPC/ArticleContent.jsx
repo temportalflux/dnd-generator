@@ -131,18 +131,21 @@ export function ArticleContent({ usePlainText })
 		);
 	}
 	
+	const abilityScores = npc.getEntry('stats.abilityScores');
 	const strength = npc.getEntry('stats.abilityScores.strength');
 	const dexterity = npc.getEntry('stats.abilityScores.dexterity');
 	const constitution = npc.getEntry('stats.abilityScores.constitution');
 	const intelligence = npc.getEntry('stats.abilityScores.intelligence');
 	const wisdom = npc.getEntry('stats.abilityScores.wisdom');
 	const charisma = npc.getEntry('stats.abilityScores.charisma');
-	const ethicalPositive = npc.getEntry('stats.alignmentTendancies.ethical.positive');
-	const ethicalNeutral = npc.getEntry('stats.alignmentTendancies.ethical.neutral');
-	const ethicalNegative = npc.getEntry('stats.alignmentTendancies.ethical.negative');
-	const moralPositive = npc.getEntry('stats.alignmentTendancies.moral.positive');
-	const moralNeutral = npc.getEntry('stats.alignmentTendancies.moral.neutral');
-	const moralNegative = npc.getEntry('stats.alignmentTendancies.moral.negative');
+
+	const alignmentTendencies = npc.getEntry('stats.alignmentTendencies');
+	const ethicalPositive = npc.getEntry('stats.alignmentTendencies.ethical.positive');
+	const ethicalNeutral = npc.getEntry('stats.alignmentTendencies.ethical.neutral');
+	const ethicalNegative = npc.getEntry('stats.alignmentTendencies.ethical.negative');
+	const moralPositive = npc.getEntry('stats.alignmentTendencies.moral.positive');
+	const moralNeutral = npc.getEntry('stats.alignmentTendencies.moral.neutral');
+	const moralNegative = npc.getEntry('stats.alignmentTendencies.moral.negative');
 
 	const name = npc.getEntry('identity.name');
 	const surname = npc.getEntry('identity.surname');
@@ -324,23 +327,27 @@ export function ArticleContent({ usePlainText })
 				{quirkList}
 			</List>
 
-			{ relationshipStatus.isUsable() && <Header as='h1' content='Relations' />}
-			{ relationshipStatus.isUsable() && <span>
-				<b>Relationship Status:</b>&nbsp;{createEntryItem(relationshipStatus)}	
-			</span>}
+			{ relationshipStatus.isUsable() && <Header as='h1' content='Connections' />}
+			{ relationshipStatus.isUsable() && <List bulleted as='ul'>
+				<List.Item as='li'>
+					<b>Relationship Status:</b>&nbsp;{createEntryItem(relationshipStatus)}
+				</List.Item>
+			</List>}
 			
 			{ hooks.isUsable() && <Header as='h1' content='Hooks' /> }
 			{ hooks.isUsable() && <List bulleted as='ul'>
 				<List.Item as='li'>
 					{createEntryItem(hooks, toSentenceCase(hooks.toString()))}
 				</List.Item>
-			</List>
- 			}
+			</List>}
 
-			<Header as='h1' content='Stats' />
+			{ (abilityScores.isUsable() || alignmentTendencies.isUsable()) && 
+				<Header as='h1' content='Stats' />
+			}
 
-			<Header as='h2' content='Ability Scores' />
-			<Table striped textAlign='center'>
+			{ abilityScores.isUsable() && <Header as='h2' content='Ability Scores' /> }
+			{ abilityScores.isUsable() &&
+				<Table striped textAlign='center'>
 				<Table.Body>
 					<Table.Row>
 						<Table.Cell>Strength</Table.Cell>
@@ -368,27 +375,29 @@ export function ArticleContent({ usePlainText })
 					</Table.Row>
 				</Table.Body>
 			</Table>
-			
-			<Header as='h2' content='Alignment Tendencies' />
-			<Header as='h3' content='Ethical' />
-			<Table compact='very' size='small' striped textAlign='center'>
-				<Table.Body>
-					<Table.Row>
-						<Table.Cell>Lawful</Table.Cell>
-						<Table.Cell>{createEntryItem(ethicalPositive)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
-						<Table.Cell>Neutral</Table.Cell>
-						<Table.Cell>{createEntryItem(ethicalNeutral)}</Table.Cell>
-					</Table.Row>
-					<Table.Row>
-						<Table.Cell>Chaotic</Table.Cell>
-						<Table.Cell>{createEntryItem(ethicalNegative)}</Table.Cell>
-					</Table.Row>
-				</Table.Body>
-			</Table>
-			<Header as='h3' content='Moral' />
-			<Table compact='very' size='small' striped textAlign='center'>
+			}
+
+			{ alignmentTendencies.isUsable() && <div>
+				<Header as='h2' content='Alignment Tendencies' />
+				<Header as='h3' content='Ethical' />
+				<Table compact='very' size='small' striped textAlign='center'>
+					<Table.Body>
+						<Table.Row>
+							<Table.Cell>Lawful</Table.Cell>
+							<Table.Cell>{createEntryItem(ethicalPositive)}</Table.Cell>
+						</Table.Row>
+						<Table.Row>
+							<Table.Cell>Neutral</Table.Cell>
+							<Table.Cell>{createEntryItem(ethicalNeutral)}</Table.Cell>
+						</Table.Row>
+						<Table.Row>
+							<Table.Cell>Chaotic</Table.Cell>
+							<Table.Cell>{createEntryItem(ethicalNegative)}</Table.Cell>
+						</Table.Row>
+					</Table.Body>
+				</Table>
+				<Header as='h3' content='Moral' />
+				<Table compact='very' size='small' striped textAlign='center'>
 				<Table.Body>
 					<Table.Row>
 						<Table.Cell>Good</Table.Cell>
@@ -404,6 +413,7 @@ export function ArticleContent({ usePlainText })
 					</Table.Row>
 				</Table.Body>
 			</Table>
+			</div> }
 
 		</div>
 	);
