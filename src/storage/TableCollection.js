@@ -108,7 +108,6 @@ export default class TableCollection
 	loadTables()
 	{
 		this.tables = lodash.mapValues(loadItem('/', 'index').content, Table.from);
-		console.log(this.tables);
 		console.log('Missing Keys:', lodash.values(this.tables).reduce((accum, table) => {
 			const missingKeyDatum = {};
 			if (table.entriesWithoutKeys.length > 0)
