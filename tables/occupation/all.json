@@ -1,36 +1,47 @@
 {
 	"rows": [
 		{
+			"key": "Craftsperson",
 			"redirect": "occupation/Craftsperson"
 		},
 		{
+			"key": "Entertainer",
 			"redirect": "occupation/Entertainer"
 		},
 		{
+			"key": "Government",
 			"redirect": "occupation/Government"
 		},
 		{
+			"key": "Independent",
 			"redirect": "occupation/Independent"
 		},
 		{
+			"key": "Martial",
 			"redirect": "occupation/Martial"
 		},
 		{
+			"key": "Merchant",
 			"redirect": "occupation/Merchant"
 		},
 		{
+			"key": "Outlaw",
 			"redirect": "occupation/Outlaw"
 		},
 		{
+			"key": "PublicServant",
 			"redirect": "occupation/PublicServant"
 		},
 		{
+			"key": "Religious",
 			"redirect": "occupation/Religious"
 		},
 		{
+			"key": "Scholar",
 			"redirect": "occupation/Scholar"
 		},
 		{
+			"key": "Traveler",
 			"redirect": "occupation/Traveler"
 		}
 	]

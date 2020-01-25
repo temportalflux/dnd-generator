@@ -967,28 +967,28 @@
 		},
 		{
 			"weight": 2,
-			"key": "timeTraveller",
-			"stringify": "$(identity.pronouns.singular) $#pluralize(identity.pronouns,'is','are')# a time traveller from a distant past."
+			"key": "timeTraveler",
+			"stringify": "$(identity.pronouns.singular) $#pluralize(identity.pronouns,'is','are')# a time traveler from a distant past."
 		},
 		{
 			"weight": 2,
-			"key": "timeTravellerFindingDecendants",
-			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant past. $(identity.pronouns.singular) is obsessed with finding her descendants."
+			"key": "timeTravelerFindingDecendants",
+			"stringify": "$(identity.pronouns.singular) is a time traveler from a distant past. $(identity.pronouns.singular) is obsessed with finding her descendants."
 		},
 		{
 			"weight": 2,
-			"key": "timeTravellerTreasureObsessed",
-			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant past. $(identity.pronouns.singular) is obsessed with finding the treasure $(identity.prnouns.thirdPerson) buried thousands of years ago."
+			"key": "timeTravelerTreasureObsessed",
+			"stringify": "$(identity.pronouns.singular) is a time traveler from a distant past. $(identity.pronouns.singular) is obsessed with finding the treasure $(identity.prnouns.thirdPerson) buried thousands of years ago."
 		},
 		{
 			"weight": 2,
-			"key": "timeTravellerFutureSleep",
-			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant future. $(identity.pronouns.singular) needs help sleeping for a few thousand years."
+			"key": "timeTravelerFutureSleep",
+			"stringify": "$(identity.pronouns.singular) is a time traveler from a distant future. $(identity.pronouns.singular) needs help sleeping for a few thousand years."
 		},
 		{
 			"weight": 1,
-			"key": "timeTravellerAlterHistory",
-			"stringify": "$(identity.pronouns.singular) is a time traveller from a distant future. $(identity.pronouns.singular) is trying to alter the course of history."
+			"key": "timeTravelerAlterHistory",
+			"stringify": "$(identity.pronouns.singular) is a time traveler from a distant future. $(identity.pronouns.singular) is trying to alter the course of history."
 		},
 		{
 			"weight": 3,
