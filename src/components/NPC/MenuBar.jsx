@@ -2,6 +2,8 @@ import React from 'react';
 import { Header, Button, Icon, Popup, Menu, Dropdown } from 'semantic-ui-react';
 import {
 	getDisplayIconForMode,
+	getDisplayModeSwitchLabel,
+	getNextDisplayMode,
 } from './EDisplayModes';
 import NpcData from '../../storage/NpcData';
 import TableCollection from '../../storage/TableCollection';
@@ -25,7 +27,7 @@ export function MenuBar({
 					trigger={(
 						<Header>
 							<Icon name={getDisplayIconForMode(displayMode)} />
-							<Header.Content>NPC</Header.Content>
+							<Header.Content>NPC ({displayMode})</Header.Content>
 						</Header>
 					)}
 				/>
@@ -36,6 +38,11 @@ export function MenuBar({
 					<Dropdown.Menu>
 
 						<Dropdown.Header content='Control' />
+						<Dropdown.Item
+							icon={getDisplayIconForMode(getNextDisplayMode(displayMode))}
+							text={getDisplayModeSwitchLabel(displayMode)}
+							onClick={switchDisplayMode}
+						/>
 						<Dropdown.Item icon='repeat' text='Reroll NPC' onClick={NpcData.clear} />
 						<Dropdown.Item icon='filter' text='Clear All Filters' onClick={Filter.clear} />
 
