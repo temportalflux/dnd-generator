@@ -65,6 +65,10 @@ function InlineEntryItem({
 		<InlineEntryComponent
 			entry={entry}
 			getComponent={(e) => {
+				if (!e.hasValue() && !e.hasChildren())
+				{
+					return <span/>;
+				}
 				const renderedText = getRenderedText(text, e, globalData);
 				return (
 					<Popup
@@ -194,7 +198,7 @@ export function ArticleContent({ usePlainText })
 			<Header as='h1' content='Description' />
 			<List bulleted as='ul'>
 				<List.Item as='li'>
-					{createEntryItem(name)}{surname.hasValue() && createEntryItem(surname, (e) => ` ${e.toString()}`)}
+					{createEntryItem(name)}{createEntryItem(surname, (e) => ` ${e.toString()}`)}
 					&nbsp; is a &nbsp;
 					{createEntryItem(age)} year old &nbsp;
 					{createEntryItem(race)}
