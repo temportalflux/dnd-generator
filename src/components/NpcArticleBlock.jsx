@@ -70,12 +70,12 @@ export default class NpcArticleBlock extends React.Component
 		const intelligence = generator.getEntry('stats.abilityScores.intelligence');
 		const wisdom = generator.getEntry('stats.abilityScores.wisdom');
 		const charisma = generator.getEntry('stats.abilityScores.charisma');
-		const ethicalPositive = generator.getEntry('stats.alignmentTendancies.ethical.positive');
-		const ethicalNeutral = generator.getEntry('stats.alignmentTendancies.ethical.neutral');
-		const ethicalNegative = generator.getEntry('stats.alignmentTendancies.ethical.negative');
-		const moralPositive = generator.getEntry('stats.alignmentTendancies.moral.positive');
-		const moralNeutral = generator.getEntry('stats.alignmentTendancies.moral.neutral');
-		const moralNegative = generator.getEntry('stats.alignmentTendancies.moral.negative');
+		const ethicalPositive = generator.getEntry('stats.alignmentTendencies.ethical.positive');
+		const ethicalNeutral = generator.getEntry('stats.alignmentTendencies.ethical.neutral');
+		const ethicalNegative = generator.getEntry('stats.alignmentTendencies.ethical.negative');
+		const moralPositive = generator.getEntry('stats.alignmentTendencies.moral.positive');
+		const moralNeutral = generator.getEntry('stats.alignmentTendencies.moral.neutral');
+		const moralNegative = generator.getEntry('stats.alignmentTendencies.moral.negative');
 
 		const name = generator.getEntry('identity.name');
 		const surname = generator.getEntry('identity.surname');

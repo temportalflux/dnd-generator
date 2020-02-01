@@ -471,7 +471,7 @@ export default class GeneratedEntry
 	hasValue()
 	{
 		const generated = this.generated || {};
-		return generated.value !== undefined;
+		return generated.value !== undefined || generated.entry !== undefined;
 	}
 
 	getRawValue()

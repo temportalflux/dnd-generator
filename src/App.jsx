@@ -6,7 +6,7 @@ import shortid from 'shortid';
 import TableCollection from './storage/TableCollection';
 import { ViewContainer } from './view/ViewContainer';
 import { View } from './storage/Session';
-import NpcData from './storage/NpcData';
+//import NpcData from './storage/NpcData';
 
 function getRoute(view)
 {
@@ -18,7 +18,8 @@ export default function App()
 {
 	const refreshWith = React.useState(undefined)[1];
 
-	if (NpcData.getCurrentLinkData() !== undefined)
+	// TODO: Only route to NPC page if the url includes NPC data
+	if (true)//NpcData.getCurrentLinkData() !== undefined)
 	{
 		View.set("npc");
 	}
