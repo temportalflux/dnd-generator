@@ -5,7 +5,6 @@ import 'semantic-ui-css/semantic.min.css';
 import packageJson from '../package.json';
 import IDB from './storage/IDB';
 
-
 // https://www.npmjs.com/package/semver
 console.log('Versions:', {
 	react: React.version,
